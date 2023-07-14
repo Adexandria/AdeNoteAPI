@@ -5,7 +5,7 @@ namespace AdeNote.Infrastructure.Services
 {
     public interface IBookService 
     { 
-        Task<ActionResult> Add(BookCreateDTO createBook);
+        Task<ActionResult> Add(Guid userId,BookCreateDTO createBook);
         Task<ActionResult> Update(Guid bookId,Guid userId,BookUpdateDTO updateBook);
         Task<ActionResult> Remove(Guid bookId,Guid userId);
         Task<ActionResult<IEnumerable<BookDTO>>> GetAll(Guid userId);

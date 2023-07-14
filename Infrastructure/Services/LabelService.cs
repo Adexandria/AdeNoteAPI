@@ -71,7 +71,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public async Task<ActionResult> Update(Guid labelId, LabelUpdateDTO createLabel)
+        public async Task<ActionResult> Update(Guid labelId, LabelUpdateDTO updateLabel)
         {
             try
             {
@@ -82,7 +82,7 @@ namespace AdeNote.Infrastructure.Services
                 if (currentLabel == null)
                     return await Task.FromResult(ActionResult.Failed("label doesn't exist", (int)HttpStatusCode.NotFound));
 
-                var label = createLabel.Adapt<Label>();
+                var label = updateLabel.Adapt<Label>();
                 label.Id = labelId;
 
                 var commitStatus = await labelRepository.Update(label);

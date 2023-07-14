@@ -13,7 +13,7 @@ namespace AdeNote.Infrastructure.Services
         {
             bookRepository = _bookRepository;
         }
-        public async Task<ActionResult> Add(BookCreateDTO createBook)
+        public async Task<ActionResult> Add(Guid userId, BookCreateDTO createBook)
         {
             try
             {
