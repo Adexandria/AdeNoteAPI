@@ -8,14 +8,12 @@ namespace AdeNote.Controllers
 {
     [Route("api/{bookId}/pages")]
     [ApiController]
-    public class PageController : ControllerBase
+    public class PageController : BaseController
     {
         private readonly IPageService _pageService;
-        private readonly Guid CurrentUser;
-        public PageController(IPageService pageService, IUserIdentity userIdentity)
+        public PageController(IPageService pageService, IUserIdentity userIdentity) : base(userIdentity)
         {
             _pageService = pageService;
-            CurrentUser = userIdentity.UserId;
         }
 
         [HttpGet]

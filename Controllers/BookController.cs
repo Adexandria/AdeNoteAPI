@@ -10,14 +10,12 @@ namespace AdeNote.Controllers
     [Route("api/books")]
     [ApiController]
     [Authorize]
-    public class BookController : ControllerBase
+    public class BookController : BaseController
     {
         private readonly IBookService _bookService;
-        private readonly Guid CurrentUser;
-        public BookController(IBookService bookService, IUserIdentity userIdentity)
+        public BookController(IBookService bookService, IUserIdentity userIdentity) : base(userIdentity)
         {
             _bookService = bookService;
-            CurrentUser = userIdentity.UserId;
 
         }
         [HttpGet]

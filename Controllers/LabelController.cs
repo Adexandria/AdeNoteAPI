@@ -1,6 +1,5 @@
 ﻿using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Services;
-using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -10,13 +9,11 @@ namespace AdeNote.Controllers
     [Route("api/labels")]
     [ApiController]
     [Authorize]
-    public class LabelController : ControllerBase
+    public class LabelController : BaseController
     {
         private readonly ILabelService _labelService;
-        private readonly Guid CurrentUser;
-        public LabelController(ILabelService labelService, IUserIdentity userIdentity)
+        public LabelController(ILabelService labelService)
         {
-            CurrentUser = userIdentity.UserId;
             _labelService = labelService;
         }
 

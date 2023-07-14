@@ -7,6 +7,14 @@ namespace AdeNote.Controllers
 {
     public class BaseController : ControllerBase
     {
+        public BaseController()
+        {
+
+        }
+        public BaseController(IUserIdentity userIdentity)
+        {
+            CurrentUser = userIdentity.UserId;
+        }
         public BaseController(IContainer container, ITaskApplication application)
         {
             Container = container;
