@@ -43,7 +43,7 @@ namespace AdeNote.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateNote(CreateTaskDTO newNote)
+        public async Task<IActionResult> CreateNote(CreateNoteDTO newNote)
         {
             var taskCommand = new CreateTaskCommand()
             {
