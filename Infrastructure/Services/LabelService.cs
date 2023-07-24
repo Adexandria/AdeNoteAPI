@@ -40,11 +40,13 @@ namespace AdeNote.Infrastructure.Services
 
         public async Task<ActionResult<LabelDTO>> GetById(Guid labelId)
         {
-
            if (labelId == Guid.Empty)
-              return await Task.FromResult(ActionResult<LabelDTO>.Failed("Invalid id"));
+              return await Task.FromResult(ActionResult<LabelDTO>.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
             var currentLabel = await labelRepository.GetAsync(labelId);
+            if (currentLabel == null)
+                return await Task.FromResult(ActionResult<LabelDTO>.Failed("Label doesn't exist", (int)HttpStatusCode.NotFound));
+
             var currentLabelDTO = currentLabel.Adapt<LabelDTO>();
             return await Task.FromResult(ActionResult<LabelDTO>.SuccessfulOperation(currentLabelDTO));
         }
@@ -54,7 +56,7 @@ namespace AdeNote.Infrastructure.Services
             try
             {
                 if (labelId == Guid.Empty)
-                    return await Task.FromResult(ActionResult.Failed("Invalid id"));
+                    return await Task.FromResult(ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
                 var currentLabel = await labelRepository.GetAsync(labelId);
                 if(currentLabel == null)
@@ -77,7 +79,7 @@ namespace AdeNote.Infrastructure.Services
             try
             {
                 if (labelId == Guid.Empty)
-                    return await Task.FromResult(ActionResult.Failed("Invalid id"));
+                    return await Task.FromResult(ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
                 var currentLabel = await labelRepository.GetAsync(labelId);
                 if (currentLabel == null)

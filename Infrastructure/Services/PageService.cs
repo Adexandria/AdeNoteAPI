@@ -24,7 +24,7 @@ namespace AdeNote.Infrastructure.Services
             try
             {
                 if (bookId == Guid.Empty || userId == Guid.Empty)
-                    return await Task.FromResult(ActionResult.Failed("Invalid id"));
+                    return await Task.FromResult(ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
                 var currentBook = await bookRepository.GetAsync(bookId, userId);
                 if (currentBook == null)
@@ -49,7 +49,7 @@ namespace AdeNote.Infrastructure.Services
         public async Task<ActionResult<IEnumerable<PageDTO>>> GetAll(Guid bookId)
         {
             if (bookId == Guid.Empty)
-                return await Task.FromResult(ActionResult<IEnumerable<PageDTO>>.Failed("Invalid id"));
+                return await Task.FromResult(ActionResult<IEnumerable<PageDTO>>.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
             var currentBookPages = pageRepository.GetBookPages(bookId);
             var currentBookPagesDTO = currentBookPages.Adapt<IEnumerable<PageDTO>>(MappingService.PageLabelsConfig());
@@ -60,7 +60,7 @@ namespace AdeNote.Infrastructure.Services
         public async Task<ActionResult<PageDTO>> GetById(Guid bookId, Guid pageId)
         {
             if (bookId == Guid.Empty || pageId == Guid.Empty)
-                return await Task.FromResult(ActionResult<PageDTO>.Failed("Invalid id"));
+                return await Task.FromResult(ActionResult<PageDTO>.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
             var currentBookPage = await pageRepository.GetBookPage(bookId, pageId);
             if (currentBookPage == null)
@@ -75,7 +75,7 @@ namespace AdeNote.Infrastructure.Services
             try
             {
                 if (bookId == Guid.Empty || pageId == Guid.Empty || userId == Guid.Empty)
-                    return await Task.FromResult(ActionResult.Failed("Invalid id"));
+                    return await Task.FromResult(ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
                 var currentBook = await bookRepository.GetAsync(bookId, userId);
                 if (currentBook == null)
@@ -104,7 +104,7 @@ namespace AdeNote.Infrastructure.Services
             try
             {
                 if (bookId == Guid.Empty || pageId == Guid.Empty || userId == Guid.Empty)
-                    return await Task.FromResult(ActionResult.Failed("Invalid id"));
+                    return await Task.FromResult(ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
                 var currentBook = await bookRepository.GetAsync(bookId, userId);
                 if (currentBook == null)
@@ -132,6 +132,10 @@ namespace AdeNote.Infrastructure.Services
         }
         public async Task<ActionResult> AddLabels(Guid bookId,Guid userId,Guid pageId,List<string> Labels)
         {
+
+            if (bookId == Guid.Empty || pageId == Guid.Empty || userId == Guid.Empty)
+                return await Task.FromResult(ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
+
             var currentBook = await bookRepository.GetAsync(bookId, userId);
             if (currentBook == null)
                 return await Task.FromResult(ActionResult.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound));
@@ -163,7 +167,7 @@ namespace AdeNote.Infrastructure.Services
         public async Task<ActionResult> RemoveAllPageLabels(Guid bookId,Guid userId, Guid pageId)
         {
             if (bookId == Guid.Empty || pageId == Guid.Empty || userId == Guid.Empty)
-                return await Task.FromResult(ActionResult.Failed("Invalid id"));
+                return await Task.FromResult(ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
             var currentBook = await bookRepository.GetAsync(bookId, userId);
             if (currentBook == null)
@@ -187,7 +191,7 @@ namespace AdeNote.Infrastructure.Services
         public async Task<ActionResult> RemovePageLabel(Guid bookId, Guid userId, Guid pageId, string title)
         {
             if (bookId == Guid.Empty || pageId == Guid.Empty || userId == Guid.Empty)
-                return await Task.FromResult(ActionResult.Failed("Invalid id"));
+                return await Task.FromResult(ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
             var currentBook = await bookRepository.GetAsync(bookId, userId);
             if (currentBook == null)

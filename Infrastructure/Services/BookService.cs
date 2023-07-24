@@ -35,6 +35,9 @@ namespace AdeNote.Infrastructure.Services
 
         public async Task<ActionResult<IEnumerable<BookDTO>>> GetAll(Guid userId)
         {
+            if(userId == Guid.Empty)
+                return ActionResult<IEnumerable<BookDTO>>.Failed("Invalid id", (int)HttpStatusCode.BadRequest);
+
             var currentBooks = bookRepository.GetAll(userId);
             var currentBooksDTO = currentBooks.Adapt<IEnumerable<BookDTO>>(MappingService.BookConfig());
             return await Task.FromResult(ActionResult<IEnumerable<BookDTO>>.SuccessfulOperation(currentBooksDTO));
@@ -45,7 +48,7 @@ namespace AdeNote.Infrastructure.Services
             try
             {
                 if (bookId == Guid.Empty || userId == Guid.Empty)
-                    return ActionResult<BookDTO>.Failed("Invalid id");
+                    return ActionResult<BookDTO>.Failed("Invalid id",(int)HttpStatusCode.BadRequest);
 
                 var currentBook = await bookRepository.GetAsync(bookId,userId);
 
@@ -69,7 +72,7 @@ namespace AdeNote.Infrastructure.Services
             try
             {
                 if (bookId == Guid.Empty || userId == Guid.Empty)
-                    return await Task.FromResult(ActionResult.Failed("Invalid id"));
+                    return await Task.FromResult(ActionResult.Failed("Invalid id",(int)HttpStatusCode.BadRequest));
 
                 var currentBook = await bookRepository.GetAsync(bookId, userId);
 
@@ -95,7 +98,7 @@ namespace AdeNote.Infrastructure.Services
             try
             {
                 if (bookId == Guid.Empty || userId == Guid.Empty)
-                    return await Task.FromResult(ActionResult.Failed("Invalid id"));
+                    return await Task.FromResult(ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
                 var book = updateBook.Adapt<Book>();
                 book.Id = bookId;
