@@ -2,6 +2,7 @@
 using Autofac;
 using Microsoft.AspNetCore.Mvc;
 using TasksLibrary.Application.Commands.CreateUser;
+using TasksLibrary.Application.Commands.GenerateToken;
 using TasksLibrary.Application.Commands.Login;
 using TasksLibrary.Architecture.Application;
 
@@ -26,6 +27,18 @@ namespace AdeNote.Controllers
         public async Task<IActionResult> Login(LoginCommand command)
         {
             var response = await Application.ExecuteCommand<LoginCommand, LoginDTO>(Container, command);
+            return response.Response();
+        }
+
+        [HttpPost("token")]
+        public async Task<IActionResult> GetAccessToken(string token)
+        {
+            var command = new GenerateTokenCommand() 
+            { 
+                RefreshToken = token
+            };
+
+            var response = await Application.ExecuteCommand<GenerateTokenCommand, string>(Container, command);
             return response.Response();
         }
     }

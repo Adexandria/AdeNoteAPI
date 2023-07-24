@@ -14,30 +14,36 @@ namespace AdeNote.Infrastructure.Repository
         {
             var pageLabel = new LabelPage(pageId, labelId);
             await _db.LabelPage.AddAsync(pageLabel);
-            return await SaveChanges();
+            return await SaveChanges<LabelPage>();
 
         }
 
         public async Task<bool> DeleteLabelFromPage(LabelPage currentPageLabel)
         {
              _db.LabelPage.Remove(currentPageLabel);
-            return await SaveChanges();
+            return await SaveChanges<LabelPage>();
         }
 
         public async Task<bool> DeleteLabelsFromPage(IList<LabelPage> pageLabels)
         {
             _db.LabelPage.RemoveRange(pageLabels);
-            return await SaveChanges();
+            return await SaveChanges<LabelPage>();
         }
 
         public async Task<LabelPage> GetLabel(Guid pageId,Guid labelId)
         {
-           return await _db.LabelPage.Where(s=>s.PageId == pageId && s.LabelId == labelId).FirstOrDefaultAsync();
+           return await _db.LabelPage
+                .Where(s=>s.PageId == pageId && s.LabelId == labelId)
+                .AsNoTracking()
+                .FirstOrDefaultAsync();
         }
 
         public async Task<IList<LabelPage>> GetLabels(Guid pageId)
         {
-            return await _db.LabelPage.Where(s=>s.PageId == pageId).ToListAsync();
+            return await _db.LabelPage
+                .Where(s=>s.PageId == pageId)
+                .AsNoTracking()
+                .ToListAsync();
         }
     }
 }

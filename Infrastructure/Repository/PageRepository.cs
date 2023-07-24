@@ -14,38 +14,40 @@ namespace AdeNote.Infrastructure.Repository
         {
             entity.Id = Guid.NewGuid();
             await _db.Pages.AddAsync(entity);
-            return await SaveChanges();
+            return await SaveChanges<Page>();
         }
 
 
         public async Task<Page> GetBookPage(Guid bookId, Guid pageId)
         {
             return await _db.Pages.Include(s=>s.Book)
-                .Include(s=>s.Labels)
+                .Include(s=>s.Labels).AsNoTracking()
                 .FirstOrDefaultAsync(s => s.Id == pageId && s.BookId == bookId);
         }
 
         public IQueryable<Page> GetBookPages(Guid bookId)
         {
             return _db.Pages.Include(s => s.Book)
-                .Include(s => s.Labels).Where(s=>s.BookId == bookId);
+                .Include(s => s.Labels).Where(s=>s.BookId == bookId).AsNoTracking();
         }
 
         public async Task<bool> Remove(Page entity)
         {
             _db.Pages.Remove(entity);
-            return await SaveChanges();
+            return await SaveChanges<Page>();
         }
 
         public async Task<bool> Update(Page entity)
         {
-            var currentPage = await GetBookPage(entity.BookId,entity.Id);
+            var currentPage = await _db.Pages.Include(s => s.Book)
+                .Include(s => s.Labels)
+                .FirstOrDefaultAsync(s => s.Id == entity.Id && s.BookId == entity.BookId);
 
             _db.Entry(currentPage).CurrentValues.SetValues(entity);
 
             _db.Entry(currentPage).State = EntityState.Modified;
 
-            return await SaveChanges();
+            return await SaveChanges<Page>();
         }
     }
 }

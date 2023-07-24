@@ -26,7 +26,7 @@ namespace AdeNote.Infrastructure.Services
                 if (bookId == Guid.Empty || userId == Guid.Empty)
                     return await Task.FromResult(ActionResult.Failed("Invalid id"));
 
-                var currentBook = bookRepository.GetAsync(bookId, userId);
+                var currentBook = await bookRepository.GetAsync(bookId, userId);
                 if (currentBook == null)
                     return await Task.FromResult(ActionResult.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound));
 
@@ -77,7 +77,7 @@ namespace AdeNote.Infrastructure.Services
                 if (bookId == Guid.Empty || pageId == Guid.Empty || userId == Guid.Empty)
                     return await Task.FromResult(ActionResult.Failed("Invalid id"));
 
-                var currentBook = bookRepository.GetAsync(bookId, userId);
+                var currentBook = await bookRepository.GetAsync(bookId, userId);
                 if (currentBook == null)
                     return await Task.FromResult(ActionResult.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound));
 
@@ -165,7 +165,7 @@ namespace AdeNote.Infrastructure.Services
             if (bookId == Guid.Empty || pageId == Guid.Empty || userId == Guid.Empty)
                 return await Task.FromResult(ActionResult.Failed("Invalid id"));
 
-            var currentBook = bookRepository.GetAsync(bookId, userId);
+            var currentBook = await bookRepository.GetAsync(bookId, userId);
             if (currentBook == null)
                 return await Task.FromResult(ActionResult.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound));
 
@@ -189,7 +189,7 @@ namespace AdeNote.Infrastructure.Services
             if (bookId == Guid.Empty || pageId == Guid.Empty || userId == Guid.Empty)
                 return await Task.FromResult(ActionResult.Failed("Invalid id"));
 
-            var currentBook = bookRepository.GetAsync(bookId, userId);
+            var currentBook = await bookRepository.GetAsync(bookId, userId);
             if (currentBook == null)
                 return await Task.FromResult(ActionResult.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound));
 
