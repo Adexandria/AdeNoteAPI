@@ -2,6 +2,7 @@
 using AdeNote.Infrastructure.Services;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models.DTOs;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,7 +10,7 @@ namespace AdeNote.Controllers
 {
     [Route("api/books")]
     [ApiController]
-    [Authorize]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class BookController : BaseController
     {
         private readonly IBookService _bookService;

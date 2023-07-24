@@ -2,6 +2,7 @@
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models.DTOs;
 using Autofac;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TasksLibrary.Application.Commands.CreateTask;
@@ -15,7 +16,7 @@ namespace AdeNote.Controllers
 {
     [Route("api/notes")]
     [ApiController]
-    [Authorize]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class NoteController : BaseController
     {
         public NoteController(IContainer container, ITaskApplication application, IUserIdentity userIdentity) : base(container, application, userIdentity)
