@@ -1,4 +1,5 @@
-﻿using AdeNote.Infrastructure.Repository;
+﻿using AdeNote.Infrastructure.Extension;
+using AdeNote.Infrastructure.Repository;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
 using Mapster;
@@ -18,6 +19,7 @@ namespace AdeNote.Infrastructure.Services
             try
             {
                 var book = createBook.Adapt<Book>();
+                book.UserId  = userId;
                 var commitStatus = await bookRepository.Add(book);
                 if (!commitStatus)
                     return ActionResult.Failed("Failed to add new book");
@@ -34,7 +36,7 @@ namespace AdeNote.Infrastructure.Services
         public async Task<ActionResult<IEnumerable<BookDTO>>> GetAll(Guid userId)
         {
             var currentBooks = bookRepository.GetAll(userId);
-            var currentBooksDTO = currentBooks.Adapt<IEnumerable<BookDTO>>();
+            var currentBooksDTO = currentBooks.Adapt<IEnumerable<BookDTO>>(MappingService.BookConfig());
             return await Task.FromResult(ActionResult<IEnumerable<BookDTO>>.SuccessfulOperation(currentBooksDTO));
         }
 

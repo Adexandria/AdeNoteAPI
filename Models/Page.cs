@@ -14,14 +14,6 @@ namespace AdeNote.Models
             Title = title;
         }
 
-        public Page AddLabels(List<string> labels)
-        {
-            foreach (var item in labels)
-            {
-                Labels.Add(new Label(item));
-            }
-            return this;
-        }
         public string Title { get; set; }
         public string Content { get; set; }
 

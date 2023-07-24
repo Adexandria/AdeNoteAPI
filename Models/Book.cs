@@ -5,6 +5,10 @@ namespace AdeNote.Models
 {
     public class Book : BaseClass
     {
+        public Book()
+        {
+
+        }
         public Book(string title, string description)
         {
             Title = title;

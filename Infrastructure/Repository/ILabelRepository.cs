@@ -6,5 +6,6 @@ namespace AdeNote.Infrastructure.Repository
     {
         Task<Label> GetAsync(Guid id);
         IQueryable<Label> GetAll();
+        Task<Label> GetByNameAsync(string name);
     }
 }

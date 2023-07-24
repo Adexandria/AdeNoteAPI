@@ -2,6 +2,5 @@
 {
     public class PageUpdateDTO : PageCreateDTO
     {
-        public List<string> Labels { get; set; }
     }
 }

@@ -2,6 +2,9 @@
 {
     public class Label : BaseClass
     {
+        public Label()
+        {
+        }
         public Label(string title)
         {
             Title = title;

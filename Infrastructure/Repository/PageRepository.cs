@@ -43,6 +43,8 @@ namespace AdeNote.Infrastructure.Repository
 
             _db.Entry(currentPage).CurrentValues.SetValues(entity);
 
+            _db.Entry(currentPage).State = EntityState.Modified;
+
             return await SaveChanges();
         }
     }

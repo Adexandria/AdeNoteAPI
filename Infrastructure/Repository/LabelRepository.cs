@@ -27,6 +27,11 @@ namespace AdeNote.Infrastructure.Repository
             return await _db.Labels.FirstOrDefaultAsync(s => s.Id == id);
         }
 
+        public async Task<Label> GetByNameAsync(string name)
+        {
+            return await _db.Labels.FirstOrDefaultAsync(s => s.Title.Equals(name));
+        }
+
         public async Task<bool> Remove(Label entity)
         {
             _db.Remove(entity);

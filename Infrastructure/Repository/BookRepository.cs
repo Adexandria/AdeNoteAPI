@@ -43,6 +43,7 @@ namespace AdeNote.Infrastructure.Repository
             var currentBook = await GetAsync(entity.Id,entity.UserId);
 
             _db.Entry(currentBook).CurrentValues.SetValues(entity);
+            _db.Entry(currentBook).State = EntityState.Modified;
 
             return await SaveChanges();
 

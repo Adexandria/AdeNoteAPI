@@ -7,7 +7,7 @@ namespace AdeNote.Infrastructure.Utilities
         public UserIdentity(IHttpContextAccessor httpContext)
         {
             Guid.TryParse(httpContext.HttpContext?.User?.Claims
-                .FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value, out Guid id);
+                .FirstOrDefault(x => x.Type == "id")?.Value, out Guid id);
 
             UserId = id;
         }

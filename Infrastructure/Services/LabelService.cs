@@ -1,4 +1,5 @@
-﻿using AdeNote.Infrastructure.Repository;
+﻿using AdeNote.Infrastructure.Extension;
+using AdeNote.Infrastructure.Repository;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
 using Mapster;
@@ -9,7 +10,7 @@ namespace AdeNote.Infrastructure.Services
 {
     public class LabelService : ILabelService
     {
-        public LabelService(LabelRepository _labelRepository)
+        public LabelService(ILabelRepository _labelRepository)
         {
             labelRepository = _labelRepository;
         }
@@ -20,7 +21,7 @@ namespace AdeNote.Infrastructure.Services
                 var label = createLabel.Adapt<Label>();
                 var commitStatus = await labelRepository.Add(label);
                 if (!commitStatus)
-                    return ActionResult.Failed("Failed to update book");
+                    return ActionResult.Failed("Failed to add label");
 
                 return ActionResult.Successful();
             }
@@ -33,7 +34,7 @@ namespace AdeNote.Infrastructure.Services
         public async Task<ActionResult<IEnumerable<LabelDTO>>> GetAll()
         {
            var currentLabels = labelRepository.GetAll();
-           var currentLabelsDTO = currentLabels.Adapt<IEnumerable<LabelDTO>>();
+           var currentLabelsDTO = currentLabels.Adapt<IEnumerable<LabelDTO>>(MappingService.LabelConfig());
            return await Task.FromResult(ActionResult<IEnumerable<LabelDTO>>.SuccessfulOperation(currentLabelsDTO));
         }
 
@@ -61,7 +62,7 @@ namespace AdeNote.Infrastructure.Services
 
                 var commitStatus = await labelRepository.Remove(currentLabel);
                 if (!commitStatus)
-                    return ActionResult.Failed("Failed to update book");
+                    return ActionResult.Failed("Failed to remove label");
 
                 return ActionResult.Successful();
             }
@@ -87,7 +88,7 @@ namespace AdeNote.Infrastructure.Services
 
                 var commitStatus = await labelRepository.Update(label);
                 if (!commitStatus)
-                    return ActionResult.Failed("Failed to update book");
+                    return ActionResult.Failed("Failed to remove label");
 
                 return ActionResult.Successful();
             }
@@ -96,6 +97,6 @@ namespace AdeNote.Infrastructure.Services
                 return ActionResult.Failed(ex.Message);
             }
         }
-        private LabelRepository labelRepository;
+        private readonly ILabelRepository labelRepository;
     }
 }
