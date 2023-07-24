@@ -14,6 +14,7 @@ namespace AdeNote.Db
         public DbSet<Book> Books { get; set; }
         public DbSet<Page> Pages { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<LabelPage> LabelPage { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -23,14 +24,22 @@ namespace AdeNote.Db
                 .Property(x => x.UserId)
                 .HasColumnName("User_id");
 
+            modelBuilder.Entity<User>()
+                .Ignore("RefreshToken");
+
+            modelBuilder.Entity<User>()
+                .Ignore("AccessToken");
+
             modelBuilder.Entity<Book>()
                 .HasMany(s => s.Pages);
 
             modelBuilder.Entity<Page>()
-                .HasMany(s => s.Labels);
+                .HasMany(s => s.Labels)
+                .WithMany(s => s.Pages)
+                .UsingEntity<LabelPage>(
+                l => l.HasOne<Label>().WithMany().HasForeignKey(s => s.LabelId),
+                r=>r.HasOne<Page>().WithMany().HasForeignKey(s=>s.PageId));
 
-            modelBuilder.Entity<Label>()
-                .HasMany(s=>s.Pages);
 
         }
     }
