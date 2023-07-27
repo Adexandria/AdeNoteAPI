@@ -35,12 +35,12 @@ jobs:
     - name: Zip files
       uses: vimtor/action-zip@v1
       with:
-        files: /home/runner/work/AdeNoteAPI/Docs/html
+        files: /home/runner/work/AdeNoteAPI/AdeNoteAPI/Docs/html/html
         dest: docs.zip
     - name: upload pages artifact
       id: deployment
-      uses: actions/upload-pages-artifact@v2
+      uses: actions/deploy-pages@v2
       with:
-        name: docs.zip
+        artifact_name	: docs.zip
 
         
