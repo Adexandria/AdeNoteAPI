@@ -3,14 +3,33 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AdeNote.Infrastructure.Repository
 {
+    /// <summary>
+    /// Commits new and tracked changes in the objects
+    /// </summary>
     public class Repository
     {
+        /// <summary>
+        /// A constructor
+        /// </summary>
+        /// <param name="noteDb">Handles Transactions</param>
         public Repository(NoteDbContext noteDb)
         {
             _db = noteDb;
         }
+
+        /// <summary>
+        /// A property to handle transactions
+        /// </summary>
         protected readonly NoteDbContext _db;
 
+        /// <summary>
+        /// Save changes. \n
+        /// This will catch conflict exception 
+        /// and update the entity with the database entity
+        /// </summary>
+        /// <typeparam name="T">A generic type T</typeparam>
+        /// <returns>A boolean value</returns>
+        /// <exception cref="NotSupportedException">Thrown if the type is not supported</exception>
         protected async Task<bool> SaveChanges<T>() where T : class
         {
 
@@ -38,14 +57,9 @@ namespace AdeNote.Infrastructure.Repository
 
                             foreach (var property in proposedValues.Properties)
                             {
-                                var proposedValue = proposedValues[property];
                                 var databaseValue = databaseValues[property];
-
-                                // TODO: decide which value should be written to database
-                                // proposedValues[property] = <value to be saved>;
                             }
 
-                            // Refresh original values to bypass next concurrency check
                             entry.OriginalValues.SetValues(databaseValues);
                         }
                         else

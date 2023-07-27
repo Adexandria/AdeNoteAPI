@@ -13,10 +13,12 @@ using TasksLibrary.Architecture.Application;
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 
+// Gets the connection string from appsettings
 var connectionString = configuration.GetConnectionString("NotesDB");
+
+// Gets the token secret from appsettings
 var tokenSecret = configuration["TokenSecret"];
 // Add services to the container.
-
 var containerBuilder = new TaskContainerBuilder(connectionString);
 
 builder.Services.AddScoped<ITaskApplication, TaskApplication>();
