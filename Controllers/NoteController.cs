@@ -94,8 +94,12 @@ namespace AdeNote.Controllers
         /// <summary>
         /// Creates a new note
         /// </summary>
+        /// <remarks>
+        /// Sample request
+        /// 
+        ///             POST /notes
+        /// </remarks>
         /// <param name="newNote"></param>
-        /// <returns></returns>
         ///  <response code ="200"> Returns if Successful</response>
         ///  <response code ="500"> Returns if experiencing server issues</response>
         /// <response code ="401"> Returns if unauthorised</response>

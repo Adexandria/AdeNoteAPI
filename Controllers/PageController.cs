@@ -216,7 +216,7 @@ namespace AdeNote.Controllers
         /// <remarks>
         ///  Sample request:
         ///         
-        ///                 DELETE /20b1204e-fad5-4a90-a78e-bc3b988afd60/pages/20b1204e-fad5-4a90-a78e-bc3b988afd60/labels?title=Ef core
+        ///                 DELETE /20b1204e-fad5-4a90-a78e-bc3b988afd60/pages/20b1204e-fad5-4a90-a78e-bc3b988afd60/labels/search?title=Ef core
         /// </remarks>
         /// <param name="bookId">A book id</param>
         /// <param name="pageId">A page id</param>
@@ -233,7 +233,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
-        [HttpDelete("{pageId}/labels/title")]
+        [HttpDelete("{pageId}/labels/search")]
         public async Task<IActionResult> RemoveAllLabels(Guid bookId, Guid pageId, string title)
         {
             var response = await _pageService.RemovePageLabel(bookId, CurrentUser, pageId,title);
