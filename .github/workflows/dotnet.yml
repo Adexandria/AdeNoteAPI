@@ -19,25 +19,11 @@ jobs:
     runs-on: ubuntu-latest
    
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup Pages
-      uses: actions/configure-pages@v3
-    - name: Build with Jekyll
-      uses: actions/jekyll-build-pages@v1
-      with:
-        source: ./
-        destination: ./_site
-    - name: Build doxy
-      id: build_doxy
-      uses: mattnotmitt/doxygen-action@v1.9.5
-      with:
-         doxyfile-path: 'Docs/AdeNote_Configuration.config'
-         working-directory: '.'
     - name: Deploy to git pages
       id: deployment
       uses: DenverCoder1/doxygen-github-pages-action@v1
       with:
-        folder: Docs/html
+        folder: Docs
         github_token: ${{secrets.GITHUB_TOKEN}}
 
 
