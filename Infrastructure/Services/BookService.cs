@@ -8,12 +8,26 @@ using TasksLibrary.Utilities;
 
 namespace AdeNote.Infrastructure.Services
 {
+    /// <summary>
+    /// Implementation of the interface
+    /// </summary>
     public class BookService : IBookService
     {
+        /// <summary>
+        /// A Constructor
+        /// </summary>
+        /// <param name="_bookRepository">Handles the persisting and querying of book object</param>
         public BookService(IBookRepository _bookRepository)
         {
             bookRepository = _bookRepository;
         }
+
+        /// <summary>
+        /// Adds a new book
+        /// </summary>
+        /// <param name="userId">a user id</param>
+        /// <param name="createBook">an object to add a new book</param>
+        /// <returns>A custom action result</returns>
         public async Task<ActionResult> Add(Guid userId, BookCreateDTO createBook)
         {
             try
@@ -33,19 +47,33 @@ namespace AdeNote.Infrastructure.Services
           
         }
 
+        /// <summary>
+        /// Get all books
+        /// </summary>
+        /// <param name="userId">a user id</param>
+        /// <returns>A custom action result</returns>
         public async Task<ActionResult<IEnumerable<BookDTO>>> GetAll(Guid userId)
         {
+            if(userId == Guid.Empty)
+                return ActionResult<IEnumerable<BookDTO>>.Failed("Invalid id", (int)HttpStatusCode.BadRequest);
+
             var currentBooks = bookRepository.GetAll(userId);
             var currentBooksDTO = currentBooks.Adapt<IEnumerable<BookDTO>>(MappingService.BookConfig());
             return await Task.FromResult(ActionResult<IEnumerable<BookDTO>>.SuccessfulOperation(currentBooksDTO));
         }
 
+        /// <summary>
+        /// Get book by id
+        /// </summary>
+        /// <param name="bookId">A book id</param>
+        /// <param name="userId">a user id</param>
+        /// <returns>A custom action result</returns>
         public async Task<ActionResult<BookDTO>> GetById(Guid bookId,Guid userId)
         {
             try
             {
                 if (bookId == Guid.Empty || userId == Guid.Empty)
-                    return ActionResult<BookDTO>.Failed("Invalid id");
+                    return ActionResult<BookDTO>.Failed("Invalid id",(int)HttpStatusCode.BadRequest);
 
                 var currentBook = await bookRepository.GetAsync(bookId,userId);
 
@@ -64,12 +92,18 @@ namespace AdeNote.Infrastructure.Services
            
         }
 
+        /// <summary>
+        /// Deletes an existing book
+        /// </summary>
+        /// <param name="bookId">A book id</param>
+        /// <param name="userId">a user id</param>
+        /// <returns>A custom action result</returns>
         public async Task<ActionResult> Remove(Guid bookId, Guid userId)
         {
             try
             {
                 if (bookId == Guid.Empty || userId == Guid.Empty)
-                    return await Task.FromResult(ActionResult.Failed("Invalid id"));
+                    return await Task.FromResult(ActionResult.Failed("Invalid id",(int)HttpStatusCode.BadRequest));
 
                 var currentBook = await bookRepository.GetAsync(bookId, userId);
 
@@ -90,12 +124,19 @@ namespace AdeNote.Infrastructure.Services
             
         }
 
+        /// <summary>
+        /// Updates an existing book
+        /// </summary>
+        /// <param name="bookId">A book id</param>
+        /// <param name="userId">a user id</param>
+        /// <param name="updateBook">An object to update a book</param>
+        /// <returns>A custom action result</returns>
         public async Task<ActionResult> Update(Guid bookId, Guid userId,BookUpdateDTO updateBook)
         {
             try
             {
                 if (bookId == Guid.Empty || userId == Guid.Empty)
-                    return await Task.FromResult(ActionResult.Failed("Invalid id"));
+                    return await Task.FromResult(ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
                 var book = updateBook.Adapt<Book>();
                 book.Id = bookId;
