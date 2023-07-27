@@ -47,7 +47,6 @@ namespace AdeNote.Controllers
         ///  <response code ="200"> Returns if Successful</response>
         /// <response code ="401"> Returns if unauthorised</response>
         /// <response code ="404"> Returns if Not found</response>
-        [Consumes("application/json")]
         [Produces("application/json")]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<List<NoteDTO>>), StatusCodes.Status200OK)]
@@ -102,7 +101,6 @@ namespace AdeNote.Controllers
         /// <response code ="401"> Returns if unauthorised</response>
         /// <response code ="404"> Returns if not found</response>
         [Consumes("application/json")]
-        [Produces("application/json")]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<List<NoteDTO>>), StatusCodes.Status200OK)]
@@ -139,7 +137,6 @@ namespace AdeNote.Controllers
         ///  <response code ="500"> Returns if experiencing server issues</response>
         /// <response code ="401"> Returns if unauthorised</response>
         [Consumes("application/json")]
-        [Produces("application/json")]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<List<NoteDTO>>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
@@ -163,11 +160,9 @@ namespace AdeNote.Controllers
         /// <response code ="404"> Returns if not found</response>
         /// <response code ="500"> Returns if experiencing server issues</response>
         /// <response code ="401"> Returns if unauthorised</response>
-        [Consumes("application/json")]
-        [Produces("application/json")]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<List<NoteDTO>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpDelete("{noteId}")]
         public async Task<IActionResult> DeleteNote(Guid noteId)

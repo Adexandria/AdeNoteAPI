@@ -96,6 +96,11 @@ namespace AdeNote.Controllers
         /// <summary>
         /// Gets access token using refresh token
         /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// 
+        ///             POST /authentication/token
+        /// </remarks>
         /// <param name="token">a refresh token</param>
         /// <returns>An access token</returns>
         /// <response code ="200"> Returns if logged in successfully</response>
@@ -103,7 +108,7 @@ namespace AdeNote.Controllers
         /// <response code ="500"> Returns if experiencing server issues</response>
         /// <response code ="401"> Returns if unauthorised</response>
         /// <response code ="404"> Returns if user can't be found</response>
-        /// <returns>A name and email</returns>
+        /// <returns>Access token</returns>
         [Consumes("application/json")]
         [Produces("application/json")]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
