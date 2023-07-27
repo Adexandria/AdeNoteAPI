@@ -39,7 +39,6 @@ jobs:
    runs-on: ubuntu-latest
    needs: Build
    steps:
-    - uses: actions/checkout@v3
     - name: Deploy to git pages
       id: deployment
       uses: JamesIves/github-pages-deploy-action@v4
