@@ -24,7 +24,9 @@ jobs:
       uses: DenverCoder1/doxygen-github-pages-action@v1
       with:
         folder: Docs/html
+        config_file: Docs/AdeNote_Configuration.config
         github_token: ${{secrets.GITHUB_TOKEN}}
+        branch: gh-pages
 
 
         
