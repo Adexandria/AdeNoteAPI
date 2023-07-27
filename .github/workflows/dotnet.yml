@@ -7,7 +7,7 @@ on:
   push:
     branches: [ "master" ]
 permissions:
-  contents: readandwrite
+  contents: write
   pages: write
   id-token: write
 
