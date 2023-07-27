@@ -38,7 +38,7 @@ jobs:
       uses: DenverCoder1/doxygen-github-pages-action@v1
       with:
         folder: Docs/html
-        github_token: ${{secrets.DEPLOY_PAGE_TOKEN}}
+        github_token: ${{secrets.GITHUB_TOKEN}}
 
 
         
