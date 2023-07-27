@@ -35,9 +35,10 @@ jobs:
          working-directory: '.'
     - name: Deploy to git pages
       id: deployment
-      uses: JamesIves/github-pages-deploy-action@v4
+      uses: DenverCoder1/doxygen-github-pages-action@v1
       with:
         folder: Docs/html
+        github_token: ${{secrets.DEPLOY_PAGE_TOKEN}}
 
 
         
