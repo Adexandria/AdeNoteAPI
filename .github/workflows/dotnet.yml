@@ -8,6 +8,8 @@ on:
     branches: [ "master" ]
   pull_request:
      branches: [ "master" ]
+permissions:
+  contents: write
 
 jobs:
   Build_Deploy_Docs:
@@ -17,7 +19,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build doxy
+      id: build_doxy
       uses: mattnotmitt/doxygen-action@v1.9.5
       with:
          doxyfile-path: 'Docs/AdeNote_Configuration.config'
          working-directory: '.'
+    - name: Deploy to git pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: Docs/html
