@@ -14,7 +14,7 @@ permissions:
 jobs:
   Build:
     environment:
-      name: adenote-wiki
+      name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
    
@@ -32,11 +32,14 @@ jobs:
       with:
          doxyfile-path: 'Docs/AdeNote_Configuration.config'
          working-directory: '.'
-    - name: Deploy to git pages
-      id: deployment
-      uses: JamesIves/github-pages-deploy-action@v4
+    - name: Zip files
+      uses: montudor/action-zip@v1
       with:
-        folder: Docs/html
-        token: ${{ secrets.DEPLOY_PAGE_TOKEN }}
+        args: zip -qq -r docs.zip Docs/html
+    - name: upload pages artifact
+      id: deployment
+      uses: actions/upload-pages-artifact@v2
+      with:
+        name: docs.zip
 
         
