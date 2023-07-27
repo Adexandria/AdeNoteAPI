@@ -19,5 +19,5 @@ jobs:
     - name: Build doxy
       uses: mattnotmitt/doxygen-action@v1.9.5
       with:
-         doxyfile-path: 'docs'
+         doxyfile-path: 'Docs/AdeNote_Configuration.config'
          additional-packages: font-fira-code
