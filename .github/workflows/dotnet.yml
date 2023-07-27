@@ -25,12 +25,7 @@ jobs:
       with:
         source: ./
         destination: ./_site
-    - name: Build doxy
-      id: build_doxy
-      uses: mattnotmitt/doxygen-action@v1.9.5
-      with:
-         doxyfile-path: 'Docs/AdeNote_Configuration.config'
-         working-directory: '.'
+
          
   Deploy:
    environment:
@@ -39,9 +34,14 @@ jobs:
    runs-on: ubuntu-latest
    needs: Build
    steps:
+    - name: Build doxy
+      uses: mattnotmitt/doxygen-action@v1.9.5
+      with:
+         doxyfile-path: 'Docs/AdeNote_Configuration.config'
+         working-directory: '.'
     - name: Deploy to git pages
       id: deployment
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: Docs/html
-        GITHUB_TOKEN: ${{ secrets.DEPLOY_PAGE_TOKEN }}
+        token: ${{ secrets.DEPLOY_PAGE_TOKEN }}
