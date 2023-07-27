@@ -20,4 +20,4 @@ jobs:
       uses: mattnotmitt/doxygen-action@v1.9.5
       with:
          doxyfile-path: 'Docs/AdeNote_Configuration.config'
-         working-directory: '/home/runner/work/AdeNoteAPI/AdeNoteAPI'
+         working-directory: 'home/runner/work/AdeNoteAPI/AdeNoteAPI'
