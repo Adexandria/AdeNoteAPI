@@ -13,9 +13,7 @@ permissions:
 
 jobs:
   Build:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    
     runs-on: ubuntu-latest
    
     steps:
@@ -33,6 +31,14 @@ jobs:
       with:
          doxyfile-path: 'Docs/AdeNote_Configuration.config'
          working-directory: '.'
+         
+  Deploy:
+   environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+   runs-on: ubuntu-latest
+   steps:
+    - uses: actions/checkout@v3
     - name: Deploy to git pages
       id: deployment
       uses: JamesIves/github-pages-deploy-action@v4
