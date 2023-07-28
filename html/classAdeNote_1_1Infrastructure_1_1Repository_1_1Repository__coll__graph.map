@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Repository.Repository" name="AdeNote.Infrastructure.Repository.Repository">
+<area shape="rect" id="node1" title="Commits new and tracked changes in the objects" alt="" coords="5,171,252,212"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Db_1_1NoteDbContext.html" title="Handles the transactions made to the database" alt="" coords="27,81,231,108"/>
+<area shape="rect" id="node3" title=" " alt="" coords="83,5,174,32"/>
+</map>
