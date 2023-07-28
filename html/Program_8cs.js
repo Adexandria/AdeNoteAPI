@@ -6,7 +6,6 @@ var Program_8cs =
     [ "AddDbContext< NoteDbContext >", "Program_8cs.html#ad383931ac699cc34078df0532f159279", null ],
     [ "AddEndpointsApiExplorer", "Program_8cs.html#a0d7859f9cad50e8e9fdf015100780e07", null ],
     [ "AddHttpContextAccessor", "Program_8cs.html#a0651b1cc6b2ec2a500b3fbaaaba6ac6c", null ],
-    [ "AddScoped", "Program_8cs.html#ad79ea20deae4011ad9c7f5f53db98a00", null ],
     [ "AddScoped< IBookRepository, BookRepository >", "Program_8cs.html#a5f040d4e1443d370b24e389935c6000c", null ],
     [ "AddScoped< IBookService, BookService >", "Program_8cs.html#a2b6f75db7150ed7ba5a016bd2311c8b9", null ],
     [ "AddScoped< ILabelPageRepository, LabelPageRepository >", "Program_8cs.html#a616f9b8986aaed1a3e00753d1ee948bc", null ],
@@ -17,7 +16,9 @@ var Program_8cs =
     [ "AddScoped< ITaskApplication, TaskApplication >", "Program_8cs.html#aba0e603c190e6793038a88459cb159ec", null ],
     [ "AddScoped< IUserIdentity, UserIdentity >", "Program_8cs.html#a593dcece7e88799b44223cbf77baf6cf", null ],
     [ "AddSwaggerGen", "Program_8cs.html#af26aa1eb8f74024fc739862a3b711f57", null ],
+    [ "AddTransient", "Program_8cs.html#a3531d607429385619f17e7b9983095e0", null ],
     [ "AddVersionedApiExplorer", "Program_8cs.html#a7e9516f964e2ac48d7166a1c132b7723", null ],
+    [ "BuildMigration", "Program_8cs.html#a5373b4119ee6dbc1f9857c8f0bd00dd0", null ],
     [ "ConfigureOptions< SwaggerOptions >", "Program_8cs.html#a73f3690588f4876843046269be482027", null ],
     [ "MapControllers", "Program_8cs.html#a9e2ee3170aa6279b68eefd1651f7d96c", null ],
     [ "Run", "Program_8cs.html#aaa3dbf02e269c3ef7e8546d290c6b3dd", null ],
@@ -31,6 +32,6 @@ var Program_8cs =
     [ "builder", "Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5", null ],
     [ "configuration", "Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e", null ],
     [ "connectionString", "Program_8cs.html#a067cdd5f0fed6b2598fae7de8607e7da", null ],
-    [ "container", "Program_8cs.html#a88e6efb757b9907baa46a5755484f2bd", null ],
+    [ "containerBuilder", "Program_8cs.html#acd0ff6ed70abd1e3e3c201c52f0db425", null ],
     [ "tokenSecret", "Program_8cs.html#adb71d22b23118555670835ec58716126", null ]
 ];

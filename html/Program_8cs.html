@@ -91,12 +91,14 @@ $(document).ready(function(){initNavTree('Program_8cs.html',''); initResizable()
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a5373b4119ee6dbc1f9857c8f0bd00dd0"><td class="memItemLeft" align="right" valign="top">containerBuilder.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a5373b4119ee6dbc1f9857c8f0bd00dd0">BuildMigration</a> ()</td></tr>
+<tr class="separator:a5373b4119ee6dbc1f9857c8f0bd00dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba0e603c190e6793038a88459cb159ec"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#aba0e603c190e6793038a88459cb159ec">AddScoped&lt; ITaskApplication, TaskApplication &gt;</a> ()</td></tr>
 <tr class="separator:aba0e603c190e6793038a88459cb159ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a593dcece7e88799b44223cbf77baf6cf"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a593dcece7e88799b44223cbf77baf6cf">AddScoped&lt; IUserIdentity, UserIdentity &gt;</a> ()</td></tr>
 <tr class="separator:a593dcece7e88799b44223cbf77baf6cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad79ea20deae4011ad9c7f5f53db98a00"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ad79ea20deae4011ad9c7f5f53db98a00">AddScoped</a> ((o)=&gt; container.Build())</td></tr>
-<tr class="separator:ad79ea20deae4011ad9c7f5f53db98a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3531d607429385619f17e7b9983095e0"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a3531d607429385619f17e7b9983095e0">AddTransient</a> ((o)=&gt; containerBuilder.SetUpDepedencies().Build())</td></tr>
+<tr class="separator:a3531d607429385619f17e7b9983095e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0651b1cc6b2ec2a500b3fbaaaba6ac6c"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a0651b1cc6b2ec2a500b3fbaaaba6ac6c">AddHttpContextAccessor</a> ()</td></tr>
 <tr class="separator:a0651b1cc6b2ec2a500b3fbaaaba6ac6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d93252ec77847afcaad9fa1c113a728"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a8d93252ec77847afcaad9fa1c113a728">AddControllers</a> (options=&gt; options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes=true)</td></tr>
@@ -154,8 +156,8 @@ Variables</h2></td></tr>
 <tr class="separator:a067cdd5f0fed6b2598fae7de8607e7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb71d22b23118555670835ec58716126"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#adb71d22b23118555670835ec58716126">tokenSecret</a> = <a class="el" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[&quot;TokenSecret&quot;]</td></tr>
 <tr class="separator:adb71d22b23118555670835ec58716126"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88e6efb757b9907baa46a5755484f2bd"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a88e6efb757b9907baa46a5755484f2bd">container</a> = new TaskContainerBuilder(<a class="el" href="Program_8cs.html#a067cdd5f0fed6b2598fae7de8607e7da">connectionString</a>)</td></tr>
-<tr class="separator:a88e6efb757b9907baa46a5755484f2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd0ff6ed70abd1e3e3c201c52f0db425"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#acd0ff6ed70abd1e3e3c201c52f0db425">containerBuilder</a> = new TaskContainerBuilder(<a class="el" href="Program_8cs.html#a067cdd5f0fed6b2598fae7de8607e7da">connectionString</a>)</td></tr>
+<tr class="separator:acd0ff6ed70abd1e3e3c201c52f0db425"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b225fcb720e4d5ed2bbf60e28a25e6d"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> = builder.Build()</td></tr>
 <tr class="separator:a7b225fcb720e4d5ed2bbf60e28a25e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a782126e2912cbab686bec7799115e3"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a0a782126e2912cbab686bec7799115e3">apiVersionDescriptionProvider</a> = app.Services.GetRequiredService&lt;IApiVersionDescriptionProvider&gt;()</td></tr>
@@ -298,34 +300,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ad79ea20deae4011ad9c7f5f53db98a00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad79ea20deae4011ad9c7f5f53db98a00">&#9670;&nbsp;</a></span>AddScoped()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">builder.Services. AddScoped </td>
-          <td>(</td>
-          <td class="paramtype">(o)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">container.&#160;</td>
-          <td class="paramname"><em>Build</em>()&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a5f040d4e1443d370b24e389935c6000c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5f040d4e1443d370b24e389935c6000c">&#9670;&nbsp;</a></span>AddScoped&lt; IBookRepository, BookRepository &gt;()</h2>
 
@@ -333,7 +307,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#ad79ea20deae4011ad9c7f5f53db98a00">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html">IBookRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html">BookRepository</a> &gt; </td>
+          <td class="memname">builder.Services. AddScoped&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html">IBookRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html">BookRepository</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -350,7 +324,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#ad79ea20deae4011ad9c7f5f53db98a00">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html">IBookService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html">BookService</a> &gt; </td>
+          <td class="memname">builder.Services. AddScoped&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html">IBookService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html">BookService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -367,7 +341,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#ad79ea20deae4011ad9c7f5f53db98a00">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html">ILabelPageRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html">LabelPageRepository</a> &gt; </td>
+          <td class="memname">builder.Services. AddScoped&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html">ILabelPageRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html">LabelPageRepository</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -384,7 +358,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#ad79ea20deae4011ad9c7f5f53db98a00">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html">ILabelRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository.html">LabelRepository</a> &gt; </td>
+          <td class="memname">builder.Services. AddScoped&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html">ILabelRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository.html">LabelRepository</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -401,7 +375,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#ad79ea20deae4011ad9c7f5f53db98a00">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html">ILabelService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html">LabelService</a> &gt; </td>
+          <td class="memname">builder.Services. AddScoped&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html">ILabelService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html">LabelService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -418,7 +392,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#ad79ea20deae4011ad9c7f5f53db98a00">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html">IPageRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html">PageRepository</a> &gt; </td>
+          <td class="memname">builder.Services. AddScoped&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html">IPageRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html">PageRepository</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -435,7 +409,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#ad79ea20deae4011ad9c7f5f53db98a00">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html">IPageService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html">PageService</a> &gt; </td>
+          <td class="memname">builder.Services. AddScoped&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html">IPageService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html">PageService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -452,7 +426,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#ad79ea20deae4011ad9c7f5f53db98a00">AddScoped</a>&lt; ITaskApplication, TaskApplication &gt; </td>
+          <td class="memname">builder.Services. AddScoped&lt; ITaskApplication, TaskApplication &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -469,7 +443,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#ad79ea20deae4011ad9c7f5f53db98a00">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html">IUserIdentity</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdentity.html">UserIdentity</a> &gt; </td>
+          <td class="memname">builder.Services. AddScoped&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html">IUserIdentity</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdentity.html">UserIdentity</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -507,6 +481,34 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a3531d607429385619f17e7b9983095e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3531d607429385619f17e7b9983095e0">&#9670;&nbsp;</a></span>AddTransient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">builder.Services. AddTransient </td>
+          <td>(</td>
+          <td class="paramtype">(o)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">containerBuilder.&#160;</td>
+          <td class="paramname"><em>SetUpDepedencies</em>).Build(&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7e9516f964e2ac48d7166a1c132b7723"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e9516f964e2ac48d7166a1c132b7723">&#9670;&nbsp;</a></span>AddVersionedApiExplorer()</h2>
 
@@ -529,6 +531,23 @@ Variables</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5373b4119ee6dbc1f9857c8f0bd00dd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5373b4119ee6dbc1f9857c8f0bd00dd0">&#9670;&nbsp;</a></span>BuildMigration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">containerBuilder. BuildMigration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -753,14 +772,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a88e6efb757b9907baa46a5755484f2bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88e6efb757b9907baa46a5755484f2bd">&#9670;&nbsp;</a></span>container</h2>
+<a id="acd0ff6ed70abd1e3e3c201c52f0db425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd0ff6ed70abd1e3e3c201c52f0db425">&#9670;&nbsp;</a></span>containerBuilder</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">var container = new TaskContainerBuilder(<a class="el" href="Program_8cs.html#a067cdd5f0fed6b2598fae7de8607e7da">connectionString</a>)</td>
+          <td class="memname">var containerBuilder = new TaskContainerBuilder(<a class="el" href="Program_8cs.html#a067cdd5f0fed6b2598fae7de8607e7da">connectionString</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">

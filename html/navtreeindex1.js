@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO.html#aa637de29a2af728b81947b6f898476a4":[2,0,0,4,0,4,1],
 "classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO.html":[2,0,0,4,0,5],
 "classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO.html#aba6ff2be73b30e3ff22215d996baeebf":[2,0,0,4,0,5,0],
 "classAdeNote_1_1Models_1_1DTOs_1_1LabelDTO.html":[2,0,0,4,0,6],
