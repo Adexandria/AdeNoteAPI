@@ -6,7 +6,7 @@ var Program_8cs =
     [ "AddDbContext< NoteDbContext >", "Program_8cs.html#ad383931ac699cc34078df0532f159279", null ],
     [ "AddEndpointsApiExplorer", "Program_8cs.html#a0d7859f9cad50e8e9fdf015100780e07", null ],
     [ "AddHttpContextAccessor", "Program_8cs.html#a0651b1cc6b2ec2a500b3fbaaaba6ac6c", null ],
-    [ "AddScoped", "Program_8cs.html#ac20cc7062481291d4124e91daa855b12", null ],
+    [ "AddScoped", "Program_8cs.html#aa69961a43de768e10c202d7b7893be55", null ],
     [ "AddScoped< IBookRepository, BookRepository >", "Program_8cs.html#a5f040d4e1443d370b24e389935c6000c", null ],
     [ "AddScoped< IBookService, BookService >", "Program_8cs.html#a2b6f75db7150ed7ba5a016bd2311c8b9", null ],
     [ "AddScoped< ILabelPageRepository, LabelPageRepository >", "Program_8cs.html#a616f9b8986aaed1a3e00753d1ee948bc", null ],
@@ -31,6 +31,6 @@ var Program_8cs =
     [ "builder", "Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5", null ],
     [ "configuration", "Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e", null ],
     [ "connectionString", "Program_8cs.html#a067cdd5f0fed6b2598fae7de8607e7da", null ],
-    [ "containerBuilder", "Program_8cs.html#acd0ff6ed70abd1e3e3c201c52f0db425", null ],
+    [ "container", "Program_8cs.html#a88e6efb757b9907baa46a5755484f2bd", null ],
     [ "tokenSecret", "Program_8cs.html#adb71d22b23118555670835ec58716126", null ]
 ];
