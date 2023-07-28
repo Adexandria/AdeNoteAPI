@@ -25,7 +25,17 @@
 var NAVTREE =
 [
   [ "AdeNote API", "index.html", [
-    [ "AdeNote API", "md_README.html", null ],
+    [ "Introduction", "md_README.html", [
+      [ "AdeNote API", "md_README.html#autotoc_md1", [
+        [ "Packages", "md_README.html#autotoc_md2", null ],
+        [ "Architecture", "md_README.html#autotoc_md3", [
+          [ "Infrastucture", "md_README.html#autotoc_md4", null ],
+          [ "Db", "md_README.html#autotoc_md5", null ],
+          [ "Models", "md_README.html#autotoc_md6", null ]
+        ] ],
+        [ "Visit Documentation", "md_README.html#autotoc_md7", null ]
+      ] ]
+    ] ],
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ]
     ] ],
