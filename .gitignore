@@ -214,6 +214,10 @@ csx/
 ecf/
 rcf/
 
+
+# Code Folder
+html/
+
 # Windows Store app package directories and files
 AppPackages/
 BundleArtifacts/
