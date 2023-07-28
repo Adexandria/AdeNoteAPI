@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['swaggeroptions_2ecs_310',['SwaggerOptions.cs',['../SwaggerOptions_8cs.html',1,'']]]
+  ['useridentity_2ecs_302',['UserIdentity.cs',['../UserIdentity_8cs.html',1,'']]]
 ];

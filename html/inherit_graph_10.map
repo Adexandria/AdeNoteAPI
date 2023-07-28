@@ -1,4 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,13,128,39"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html" title=" " alt="" coords="176,5,380,47"/>
+<area shape="rect" id="node1" href="$classAdeNote_1_1Models_1_1BaseClass.html" title="A base class that includes the id" alt="" coords="5,56,205,83"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Models_1_1Book.html" title="A book object" alt="" coords="254,5,421,32"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Models_1_1Label.html" title="A label model" alt="" coords="253,56,421,83"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Models_1_1Page.html" title="Page model" alt="" coords="255,107,419,133"/>
 </map>

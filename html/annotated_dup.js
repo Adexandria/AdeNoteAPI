@@ -13,9 +13,6 @@ var annotated_dup =
         [ "NoteDbContext", "classAdeNote_1_1Db_1_1NoteDbContext.html", "classAdeNote_1_1Db_1_1NoteDbContext" ]
       ] ],
       [ "Infrastructure", "namespaceAdeNote_1_1Infrastructure.html", [
-        [ "Extension", "namespaceAdeNote_1_1Infrastructure_1_1Extension.html", [
-          [ "SwaggerOptions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions" ]
-        ] ],
         [ "Repository", "namespaceAdeNote_1_1Infrastructure_1_1Repository.html", [
           [ "BookRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository" ],
           [ "IBookRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository" ],

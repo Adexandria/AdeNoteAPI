@@ -1,5 +1,5 @@
 <map id="AdeNote.Controllers.NoteController" name="AdeNote.Controllers.NoteController">
-<area shape="rect" id="node1" title="Handles note management." alt="" coords="5,155,193,196"/>
+<area shape="rect" id="node1" title="Note Management:" alt="" coords="5,155,193,196"/>
 <area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1BaseController.html" title="A base controller" alt="" coords="40,80,159,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="40,5,159,32"/>
 </map>

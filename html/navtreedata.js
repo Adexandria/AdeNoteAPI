@@ -53,7 +53,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "20230714100310__FirstMigration_8Designer_8cs.html",
-"classAdeNote_1_1Models_1_1Label.html#ab1d5b4c19dcfcfa3e81b399c26add58d"
+"classAdeNote_1_1Models_1_1Page.html#a12bf967e9ddbb43d80f638c633c5d61a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
