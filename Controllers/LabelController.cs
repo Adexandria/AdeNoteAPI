@@ -9,9 +9,13 @@ namespace AdeNote.Controllers
 {
     /// <summary>
     /// Handles creating, updating and deleting a label
+    /// 
+    /// 
+    /// Supports version 1.0
     /// </summary>
-    [Route("api/labels")]
+    [Route("api/v{version:apiVersion}/labels")]
     [ApiController]
+    [ApiVersion("1.0")]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class LabelController : BaseController
     {
