@@ -15,7 +15,7 @@ jobs:
   Build:
     environment:
       name: github-pages
-      url: 'https://adeola-aderibigbe.github.io/AdeNoteAPI/'
+      url: 'https://adeola-aderibigbe.github.io/AdeNoteAPI/html'
     runs-on: ubuntu-latest
    
     steps:
