@@ -1,8 +1,11 @@
 using AdeNote.Db;
+using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Services;
 using AdeNote.Infrastructure.Utilities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -27,7 +30,22 @@ builder.Services.AddScoped((o) => containerBuilder.Build());
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+builder.Services.AddApiVersioning(c =>
+{
+    c.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
+    c.AssumeDefaultVersionWhenUnspecified = true;
+    c.ReportApiVersions = true;
+    c.ApiVersionReader = ApiVersionReader.Combine(new UrlSegmentApiVersionReader());
+});
+
+builder.Services.AddVersionedApiExplorer(setup =>
+{
+    setup.GroupNameFormat = "'v'VVV";
+    setup.SubstituteApiVersionInUrl = true;
+});
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.ConfigureOptions<SwaggerOptions>();
 builder.Services.AddSwaggerGen(c =>
 {
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
@@ -82,8 +100,18 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+var apiVersionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+
 app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwaggerUI(setupAction =>
+{
+    foreach (var description in apiVersionDescriptionProvider.ApiVersionDescriptions.Reverse())
+    {
+        setupAction.SwaggerEndpoint(
+                       $"/swagger/{description.GroupName}/swagger.json",
+                       description.GroupName.ToUpperInvariant());
+    }
+});
 
 app.UseHttpsRedirection();
 

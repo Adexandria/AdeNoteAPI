@@ -15,12 +15,13 @@ using TasksLibrary.Architecture.Application;
 namespace AdeNote.Controllers
 {
     /// <summary>
-    /// Note Management: 
-    /// - Create a note
-    /// - Update a note
-    /// - Delete a note
+    /// Handles note management.
+    /// 
+    /// 
+    /// Supports version 1
     /// </summary>
-    [Route("api/notes")]
+    [Route("api/v{version:apiVersion}/notes")]
+    [ApiVersion("1.0")]
     [ApiController]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class NoteController : BaseController

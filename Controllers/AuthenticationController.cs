@@ -9,9 +9,13 @@ using TasksLibrary.Architecture.Application;
 namespace AdeNote.Controllers
 {
     /// <summary>
-    /// This handles the authentication
+    /// This handles the authentication.
+    /// 
+    /// 
+    /// Supports version 1.0
     /// </summary>
-    [Route("api/authentication")]
+    [Route("api/v{version:apiVersion}/authentication")]
+    [ApiVersion("1.0")]
     [ApiController]
     public class AuthenticationController : BaseController
     {

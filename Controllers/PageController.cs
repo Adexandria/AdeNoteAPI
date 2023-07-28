@@ -10,9 +10,12 @@ using Microsoft.AspNetCore.Mvc;
 namespace AdeNote.Controllers
 {
     /// <summary>
-    /// Handles the page management for a particular book
+    /// Handles the page management for a particular book.
+    /// 
+    /// Supports version 1
     /// </summary>
-    [Route("api/{bookId}/pages")]
+    [Route("api/v{version:apiVersion}/{bookId}/pages")]
+    [ApiVersion("1.0")]
     [ApiController]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class PageController : BaseController

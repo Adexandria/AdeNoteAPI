@@ -11,9 +11,12 @@ namespace AdeNote.Controllers
     /// <summary>
     /// Handles all the end points for book.
     /// User can create,update,fetch and delete books
+    /// 
+    /// Supports 1.0
     /// </summary>
-    [Route("api/books")]
+    [Route("api/v{version:apiVersion}/books")]
     [ApiController]
+    [ApiVersion("1.0")]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class BookController : BaseController
     {
