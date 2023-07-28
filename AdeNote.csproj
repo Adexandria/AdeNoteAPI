@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Docs\html\" />
+    <Folder Include="Docs\documentation\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 
