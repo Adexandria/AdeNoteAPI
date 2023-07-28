@@ -6,10 +6,9 @@ name: .NET
 on:
   push:
     branches: [ "master" ]
-permissions:
-  contents: write
-  pages: write
-  id-token: write
+    paths-ignore:
+     - 'README.md'
+     - '.gitignore'
 
 jobs:
   Build:
