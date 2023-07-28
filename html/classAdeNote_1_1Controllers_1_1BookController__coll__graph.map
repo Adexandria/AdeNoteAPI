@@ -1,5 +1,6 @@
 <map id="AdeNote.Controllers.BookController" name="AdeNote.Controllers.BookController">
-<area shape="rect" id="node1" title="Handles all the end points for book. User can create,update,fetch and delete books" alt="" coords="5,155,196,196"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1BaseController.html" title="A base controller" alt="" coords="41,80,160,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="41,5,160,32"/>
+<area shape="rect" id="node1" title="Handles all the end points for book. User can create,update,fetch and delete books" alt="" coords="119,185,309,227"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1BaseController.html" title="A base controller" alt="" coords="5,89,124,115"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,124,32"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html" title="An interface that interacts with the controller" alt="" coords="148,81,381,123"/>
 </map>

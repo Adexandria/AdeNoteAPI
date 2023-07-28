@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "AdeNote.Infrastructure.Extension.ActionResultExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension.html", null ],
     [ "AdeNote.Models.BaseClass", "classAdeNote_1_1Models_1_1BaseClass.html", [
       [ "AdeNote.Models.Book", "classAdeNote_1_1Models_1_1Book.html", null ],
       [ "AdeNote.Models.Label", "classAdeNote_1_1Models_1_1Label.html", null ],
@@ -26,6 +27,9 @@ var hierarchy =
     ] ],
     [ "AdeNote.Infrastructure.Services.IBookService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html", [
       [ "AdeNote.Infrastructure.Services.BookService", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html", null ]
+    ] ],
+    [ "IConfigureNamedOptions", null, [
+      [ "AdeNote.Infrastructure.Extension.SwaggerOptions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Repository.ILabelPageRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html", [
       [ "AdeNote.Infrastructure.Repository.LabelPageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html", null ]
@@ -59,6 +63,7 @@ var hierarchy =
     [ "AdeNote.Models.DTOs.LabelDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelDTO.html", null ],
     [ "AdeNote.Models.LabelPage", "classAdeNote_1_1Models_1_1LabelPage.html", null ],
     [ "AdeNote.Models.DTOs.LabelUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelUpdateDTO.html", null ],
+    [ "AdeNote.Infrastructure.Extension.MappingService", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html", null ],
     [ "Migration", null, [
       [ "AdeNote.Migrations.FirstMigration", "classAdeNote_1_1Migrations_1_1FirstMigration.html", null ]
     ] ],

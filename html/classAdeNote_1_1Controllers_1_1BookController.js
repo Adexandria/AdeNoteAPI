@@ -5,5 +5,6 @@ var classAdeNote_1_1Controllers_1_1BookController =
     [ "DeleteBook", "classAdeNote_1_1Controllers_1_1BookController.html#a346c0ed0eb0403993ca48c0b18406547", null ],
     [ "GetAllBooks", "classAdeNote_1_1Controllers_1_1BookController.html#ad906923347f5e4793921d7fbb7d96cf1", null ],
     [ "GetBook", "classAdeNote_1_1Controllers_1_1BookController.html#a84ebe72dc37af1f6c2ac1e2380a8b99d", null ],
-    [ "UpdateBook", "classAdeNote_1_1Controllers_1_1BookController.html#ac416cf6575ac5f33786c68feeda5c620", null ]
+    [ "UpdateBook", "classAdeNote_1_1Controllers_1_1BookController.html#ac416cf6575ac5f33786c68feeda5c620", null ],
+    [ "_bookService", "classAdeNote_1_1Controllers_1_1BookController.html#a9da5edd79a294871b3847554c326a438", null ]
 ];

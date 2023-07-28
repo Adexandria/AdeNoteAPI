@@ -1,4 +1,6 @@
 <map id="AdeNote.Infrastructure.Services.BookService" name="AdeNote.Infrastructure.Services.BookService">
-<area shape="rect" id="node1" title="Implementation of the interface" alt="" coords="5,80,239,121"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html" title="An interface that interacts with the controller" alt="" coords="69,5,175,32"/>
+<area shape="rect" id="node1" title="Implementation of the interface" alt="" coords="5,185,239,227"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html" title="An interface that interacts with the controller" alt="" coords="47,89,154,115"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html" title="An interface that includes the behaviour of a book object" alt="" coords="179,81,425,123"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="223,5,381,32"/>
 </map>

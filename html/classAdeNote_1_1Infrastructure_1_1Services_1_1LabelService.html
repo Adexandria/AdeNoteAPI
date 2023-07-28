@@ -83,6 +83,7 @@ $(document).ready(function(){initNavTree('classAdeNote_1_1Infrastructure_1_1Serv
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AdeNote.Infrastructure.Services.LabelService Class Reference</div>  </div>
@@ -105,8 +106,10 @@ Collaboration diagram for AdeNote.Infrastructure.Services.LabelService:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService__coll__graph.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8LabelService_coll__map" alt="Collaboration graph"/></div>
 <map name="aAdeNote_8Infrastructure_8Services_8LabelService_coll__map" id="aAdeNote_8Infrastructure_8Services_8LabelService_coll__map">
-<area shape="rect" title="An implementaion of the interface" alt="" coords="5,80,239,121"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html" title="An interface to interact with the controller" alt="" coords="67,5,177,32"/>
+<area shape="rect" title="An implementaion of the interface" alt="" coords="5,185,239,227"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html" title="An interface to interact with the controller" alt="" coords="46,89,155,115"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html" title="An interface that includes label object" alt="" coords="180,81,427,123"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="223,5,384,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -130,6 +133,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a40c4b3ff821053124c01b2f95badae7b"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a40c4b3ff821053124c01b2f95badae7b">Update</a> (Guid labelId, <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1LabelUpdateDTO.html">LabelUpdateDTO</a> updateLabel)</td></tr>
 <tr class="memdesc:a40c4b3ff821053124c01b2f95badae7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates an existing label  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a40c4b3ff821053124c01b2f95badae7b">More...</a><br /></td></tr>
 <tr class="separator:a40c4b3ff821053124c01b2f95badae7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a6c432354c0c4fc5e5feafeb764b2a2ab"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html">ILabelRepository</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a6c432354c0c4fc5e5feafeb764b2a2ab">labelRepository</a></td></tr>
+<tr class="separator:a6c432354c0c4fc5e5feafeb764b2a2ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An implementaion of the interface </p>
@@ -223,8 +231,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService_aae41517f5fe2de71126b0dbb87327217_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1LabelService_aae41517f5fe2de71126b0dbb87327217_cgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1LabelService_aae41517f5fe2de71126b0dbb87327217_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1LabelService_aae41517f5fe2de71126b0dbb87327217_cgraph">
-<area shape="rect" title="Gets all the labels" alt="" coords="5,5,239,47"/>
+<area shape="rect" title="Gets all the labels" alt="" coords="5,39,239,80"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html#aeba9062b1d7bcc970a725ac84bdd3266" title="Get all labels" alt="" coords="287,5,533,47"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a7ce8136a67a485e2bc49104d093afbc8" title="Maps from label to label dto" alt="" coords="289,71,531,112"/>
 </map>
 </div>
 
@@ -354,6 +363,29 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#ae451c2bb0462a873a4e0f8c0d3a9b721" title="Updates an existing object" alt="" coords="287,71,533,112"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6c432354c0c4fc5e5feafeb764b2a2ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c432354c0c4fc5e5feafeb764b2a2ab">&#9670;&nbsp;</a></span>labelRepository</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html">ILabelRepository</a> AdeNote.Infrastructure.Services.LabelService.labelRepository</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

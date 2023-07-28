@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "AdeNote API", "index.html", [
+    [ "AdeNote API", "md_README.html", null ],
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ]
     ] ],
@@ -53,7 +54,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "20230714100310__FirstMigration_8Designer_8cs.html",
-"classAdeNote_1_1Models_1_1Page.html#a12bf967e9ddbb43d80f638c633c5d61a"
+"classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

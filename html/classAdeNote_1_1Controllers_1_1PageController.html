@@ -83,20 +83,21 @@ $(document).ready(function(){initNavTree('classAdeNote_1_1Controllers_1_1PageCon
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classAdeNote_1_1Controllers_1_1PageController-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AdeNote.Controllers.PageController Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Handles the page management for a particular book  
+<p>Handles the page management for a particular book.  
  <a href="classAdeNote_1_1Controllers_1_1PageController.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for AdeNote.Controllers.PageController:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController__inherit__graph.png" border="0" usemap="#aAdeNote_8Controllers_8PageController_inherit__map" alt="Inheritance graph"/></div>
 <map name="aAdeNote_8Controllers_8PageController_inherit__map" id="aAdeNote_8Controllers_8PageController_inherit__map">
-<area shape="rect" title="Handles the page management for a particular book" alt="" coords="5,155,193,196"/>
+<area shape="rect" title="Handles the page management for a particular book." alt="" coords="5,155,193,196"/>
 <area shape="rect" href="classAdeNote_1_1Controllers_1_1BaseController.html" title="A base controller" alt="" coords="40,80,159,107"/>
 <area shape="rect" title=" " alt="" coords="40,5,159,32"/>
 </map>
@@ -106,9 +107,10 @@ Collaboration diagram for AdeNote.Controllers.PageController:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController__coll__graph.png" border="0" usemap="#aAdeNote_8Controllers_8PageController_coll__map" alt="Collaboration graph"/></div>
 <map name="aAdeNote_8Controllers_8PageController_coll__map" id="aAdeNote_8Controllers_8PageController_coll__map">
-<area shape="rect" title="Handles the page management for a particular book" alt="" coords="5,155,193,196"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1BaseController.html" title="A base controller" alt="" coords="40,80,159,107"/>
-<area shape="rect" title=" " alt="" coords="40,5,159,32"/>
+<area shape="rect" title="Handles the page management for a particular book." alt="" coords="120,185,308,227"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1BaseController.html" title="A base controller" alt="" coords="5,89,124,115"/>
+<area shape="rect" title=" " alt="" coords="5,5,124,32"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html" title="An interface to interact with the controller" alt="" coords="148,81,381,123"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -155,6 +157,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a10ffa77ca1549febc7c453b62596afa0 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor  <a href="classAdeNote_1_1Controllers_1_1BaseController.html#a10ffa77ca1549febc7c453b62596afa0">More...</a><br /></td></tr>
 <tr class="separator:a10ffa77ca1549febc7c453b62596afa0 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7b831ca3bb21b0be51bc35e4223914c9"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html">IPageService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a7b831ca3bb21b0be51bc35e4223914c9">_pageService</a></td></tr>
+<tr class="separator:a7b831ca3bb21b0be51bc35e4223914c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header properties_classAdeNote_1_1Controllers_1_1BaseController"><td colspan="2" onclick="javascript:toggleInherit('properties_classAdeNote_1_1Controllers_1_1BaseController')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html">AdeNote.Controllers.BaseController</a></td></tr>
@@ -169,7 +176,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ab92db4bb308835ee42511fc9360df49e inherit properties_classAdeNote_1_1Controllers_1_1BaseController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Handles the page management for a particular book </p>
+<div class="textblock"><p>Handles the page management for a particular book. </p>
+<p>Supports version 1</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a63ae06b7f1ace77fa83bd57f648603f7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a63ae06b7f1ace77fa83bd57f648603f7">&#9670;&nbsp;</a></span>PageController()</h2>
@@ -257,6 +265,15 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_a730027769b9579899ce4bee387d9d490_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_a730027769b9579899ce4bee387d9d490_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_a730027769b9579899ce4bee387d9d490_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_a730027769b9579899ce4bee387d9d490_cgraph">
+<area shape="rect" title="Adds labels to a page" alt="" coords="5,5,207,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#ab970e173dc1fae8223cd3a67ecd52899" title="Adds labels to a page" alt="" coords="255,5,488,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -300,6 +317,15 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_a00bdd8459e3826b3be99eae9a509c2dc_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_a00bdd8459e3826b3be99eae9a509c2dc_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_a00bdd8459e3826b3be99eae9a509c2dc_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_a00bdd8459e3826b3be99eae9a509c2dc_cgraph">
+<area shape="rect" title="Creates a single page in a book" alt="" coords="5,5,193,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#a2fcbd64ead6115d7d321bb9e80245a04" title="Adds a new page to a book" alt="" coords="241,5,475,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -339,6 +365,15 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_a70171d82a1a1790e832f5aa2fb1cb29a_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_a70171d82a1a1790e832f5aa2fb1cb29a_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_a70171d82a1a1790e832f5aa2fb1cb29a_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_a70171d82a1a1790e832f5aa2fb1cb29a_cgraph">
+<area shape="rect" title="Removes a page froma book" alt="" coords="5,5,193,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#a54987cc9723fe39eed075064aaad4f1c" title="Removes a particular page" alt="" coords="241,5,475,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -368,6 +403,15 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A list of pages</dd></dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_ae2ec824762a4cd73de383794e18ce42d_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_ae2ec824762a4cd73de383794e18ce42d_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_ae2ec824762a4cd73de383794e18ce42d_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_ae2ec824762a4cd73de383794e18ce42d_cgraph">
+<area shape="rect" title="Fetches all pages in a book" alt="" coords="5,5,193,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#ae55fcbe5cf4b78adbb156349ff9ec364" title="Gets all pages in a book" alt="" coords="241,5,475,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -408,6 +452,15 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A single page</dd></dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_ab9fcb5ca8d81b964429ea8e66ab2db96_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_ab9fcb5ca8d81b964429ea8e66ab2db96_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_ab9fcb5ca8d81b964429ea8e66ab2db96_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_ab9fcb5ca8d81b964429ea8e66ab2db96_cgraph">
+<area shape="rect" title="fetches a single page in a book" alt="" coords="5,5,193,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#a3152a7a9e2da4f40d574ba4165f049dc" title="Get a page by id" alt="" coords="241,5,475,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -447,6 +500,15 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_ada613737fb6fd1fd68ce7471bb05071f_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_ada613737fb6fd1fd68ce7471bb05071f_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_ada613737fb6fd1fd68ce7471bb05071f_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_ada613737fb6fd1fd68ce7471bb05071f_cgraph">
+<area shape="rect" title="Removes all label from a page" alt="" coords="5,5,208,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#ab0c3b7a21d1e94b3b80308b234a81e6c" title="Removes all labels from a page" alt="" coords="256,5,509,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -493,6 +555,15 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_ae32594f99c42b8cd87c566443ad63cb9_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_ae32594f99c42b8cd87c566443ad63cb9_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_ae32594f99c42b8cd87c566443ad63cb9_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_ae32594f99c42b8cd87c566443ad63cb9_cgraph">
+<area shape="rect" title="Removes a single label from a page" alt="" coords="5,5,208,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#a337fdb877913e6ee0fa797fb991dd703" title="Removes a particular label from a page" alt="" coords="256,5,489,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -543,6 +614,38 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_a38b75f41f108e3b429b8ff1721a139e2_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_a38b75f41f108e3b429b8ff1721a139e2_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_a38b75f41f108e3b429b8ff1721a139e2_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_a38b75f41f108e3b429b8ff1721a139e2_cgraph">
+<area shape="rect" title="Updates an existing page" alt="" coords="5,5,193,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#a5b83fba99fa29067e304ee2ffaf16480" title="Updates an existing page" alt="" coords="241,5,475,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7b831ca3bb21b0be51bc35e4223914c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b831ca3bb21b0be51bc35e4223914c9">&#9670;&nbsp;</a></span>_pageService</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html">IPageService</a> AdeNote.Controllers.PageController._pageService</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

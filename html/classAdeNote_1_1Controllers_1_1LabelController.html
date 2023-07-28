@@ -83,6 +83,7 @@ $(document).ready(function(){initNavTree('classAdeNote_1_1Controllers_1_1LabelCo
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classAdeNote_1_1Controllers_1_1LabelController-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AdeNote.Controllers.LabelController Class Reference</div>  </div>
@@ -106,9 +107,10 @@ Collaboration diagram for AdeNote.Controllers.LabelController:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Controllers_1_1LabelController__coll__graph.png" border="0" usemap="#aAdeNote_8Controllers_8LabelController_coll__map" alt="Collaboration graph"/></div>
 <map name="aAdeNote_8Controllers_8LabelController_coll__map" id="aAdeNote_8Controllers_8LabelController_coll__map">
-<area shape="rect" title="Handles creating, updating and deleting a label" alt="" coords="5,155,197,196"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1BaseController.html" title="A base controller" alt="" coords="42,80,161,107"/>
-<area shape="rect" title=" " alt="" coords="42,5,161,32"/>
+<area shape="rect" title="Handles creating, updating and deleting a label" alt="" coords="118,185,310,227"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1BaseController.html" title="A base controller" alt="" coords="5,89,124,115"/>
+<area shape="rect" title=" " alt="" coords="5,5,124,32"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html" title="An interface to interact with the controller" alt="" coords="148,81,381,123"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -146,6 +148,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a10ffa77ca1549febc7c453b62596afa0 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor  <a href="classAdeNote_1_1Controllers_1_1BaseController.html#a10ffa77ca1549febc7c453b62596afa0">More...</a><br /></td></tr>
 <tr class="separator:a10ffa77ca1549febc7c453b62596afa0 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a63b45460628d0f1bdd1da238b8bc074f"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html">ILabelService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1LabelController.html#a63b45460628d0f1bdd1da238b8bc074f">_labelService</a></td></tr>
+<tr class="separator:a63b45460628d0f1bdd1da238b8bc074f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header properties_classAdeNote_1_1Controllers_1_1BaseController"><td colspan="2" onclick="javascript:toggleInherit('properties_classAdeNote_1_1Controllers_1_1BaseController')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html">AdeNote.Controllers.BaseController</a></td></tr>
@@ -161,6 +168,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles creating, updating and deleting a label </p>
+<p>Supports version 1.0</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a54c498c9b651fc8d5bbee40b7b66fede"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a54c498c9b651fc8d5bbee40b7b66fede">&#9670;&nbsp;</a></span>LabelController()</h2>
@@ -217,6 +225,15 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1LabelController_ac6e2bc544e337c91697eb50c26a3ec71_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1LabelController_ac6e2bc544e337c91697eb50c26a3ec71_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1LabelController_ac6e2bc544e337c91697eb50c26a3ec71_cgraph" id="aclassAdeNote_1_1Controllers_1_1LabelController_ac6e2bc544e337c91697eb50c26a3ec71_cgraph">
+<area shape="rect" title="Creates a new label" alt="" coords="5,5,197,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html#a7c1ccd9bed77499dc0e14b00325f1a99" title="Adds new label" alt="" coords="245,5,479,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -245,6 +262,15 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; &lt;response code ="404"&gt; Returns if not found&lt;/response&gt; </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1LabelController_a428900bcc5f2eb07f06afca53e1d0334_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1LabelController_a428900bcc5f2eb07f06afca53e1d0334_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1LabelController_a428900bcc5f2eb07f06afca53e1d0334_cgraph" id="aclassAdeNote_1_1Controllers_1_1LabelController_a428900bcc5f2eb07f06afca53e1d0334_cgraph">
+<area shape="rect" title="Deletes an existing label" alt="" coords="5,5,197,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html#a1abf5e4f07a1c78333fc88797f94f3a4" title="Removes an existing label" alt="" coords="245,5,479,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -267,6 +293,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Sample request: </p><pre class="fragment">    GET /labels
 </pre> <dl class="section return"><dt>Returns</dt><dd>A list of labels</dd></dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1LabelController_af7f09b63fc909d025b044a473bd13805_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1LabelController_af7f09b63fc909d025b044a473bd13805_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1LabelController_af7f09b63fc909d025b044a473bd13805_cgraph" id="aclassAdeNote_1_1Controllers_1_1LabelController_af7f09b63fc909d025b044a473bd13805_cgraph">
+<area shape="rect" title="Fetches all label" alt="" coords="5,5,197,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html#a48ce1e3fed9c72167d77f493d04f9862" title="Gets all the labels" alt="" coords="245,5,479,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -296,6 +331,15 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A single label</dd></dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; &lt;response code ="404"&gt; Returns if found&lt;/response&gt; </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1LabelController_a41ba61f45dc45dc58315a28b3beeaf30_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1LabelController_a41ba61f45dc45dc58315a28b3beeaf30_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1LabelController_a41ba61f45dc45dc58315a28b3beeaf30_cgraph" id="aclassAdeNote_1_1Controllers_1_1LabelController_a41ba61f45dc45dc58315a28b3beeaf30_cgraph">
+<area shape="rect" title="Gets a single label" alt="" coords="5,5,197,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html#a9f1e56cbbbfdfd106aa6f5f4077455ae" title="Gets a particular label by id" alt="" coords="245,5,479,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -338,6 +382,38 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1LabelController_a646716d0ff2fe7d704ad27ac6cfbb752_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1LabelController_a646716d0ff2fe7d704ad27ac6cfbb752_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1LabelController_a646716d0ff2fe7d704ad27ac6cfbb752_cgraph" id="aclassAdeNote_1_1Controllers_1_1LabelController_a646716d0ff2fe7d704ad27ac6cfbb752_cgraph">
+<area shape="rect" title="Updates an existing label" alt="" coords="5,5,197,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html#af95088b5c0652dc85eb31cf032f4072a" title="Updates an existing label" alt="" coords="245,5,479,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a63b45460628d0f1bdd1da238b8bc074f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63b45460628d0f1bdd1da238b8bc074f">&#9670;&nbsp;</a></span>_labelService</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html">ILabelService</a> AdeNote.Controllers.LabelController._labelService</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -8,5 +8,9 @@ var classAdeNote_1_1Infrastructure_1_1Services_1_1PageService =
     [ "Remove", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a89eb05e7a610ce4b752bc8ce7ba72257", null ],
     [ "RemoveAllPageLabels", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#ab59d69b440d5472b6a1eda53a8c1c311", null ],
     [ "RemovePageLabel", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#aad077b7f369d3f503d4a4d603867410f", null ],
-    [ "Update", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a808f63b17b96a3eb2a6ded93ae78de91", null ]
+    [ "Update", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a808f63b17b96a3eb2a6ded93ae78de91", null ],
+    [ "bookRepository", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a779bc367032a808bb3ff1021bfbd7810", null ],
+    [ "labelPageRepository", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a6f8b03e75087cb7d0e0927e151234929", null ],
+    [ "labelRepository", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#ad16bb7ed4d13a6c99e26e6e9155e219a", null ],
+    [ "pageRepository", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#acefead1dca403f18249df2d015a6d3af", null ]
 ];
