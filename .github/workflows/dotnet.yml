@@ -9,6 +9,8 @@ on:
     paths-ignore:
      - 'README.md'
      - '.gitignore'
+permissions:
+   contents: write
 
 jobs:
   Build:
