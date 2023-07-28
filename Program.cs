@@ -22,11 +22,13 @@ var connectionString = configuration.GetConnectionString("NotesDB");
 // Gets the token secret from appsettings
 var tokenSecret = configuration["TokenSecret"];
 // Add services to the container.
-var container = new TaskContainerBuilder(connectionString);
+var containerBuilder = new TaskContainerBuilder(connectionString);
+
+containerBuilder.BuildMigration();
 
 builder.Services.AddScoped<ITaskApplication, TaskApplication>();
 builder.Services.AddScoped<IUserIdentity, UserIdentity>();
-builder.Services.AddScoped((o) => container.Build());
+builder.Services.AddTransient((o) => containerBuilder.SetUpDepedencies().Build());
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -26,7 +26,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-    <PackageReference Include="TasksLibrary" Version="1.1.0" />
+    <PackageReference Include="TasksLibrary" Version="1.1.1" />
   </ItemGroup>
 
   <ItemGroup>
