@@ -27,6 +27,9 @@ var hierarchy =
     [ "AdeNote.Infrastructure.Services.IBookService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html", [
       [ "AdeNote.Infrastructure.Services.BookService", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html", null ]
     ] ],
+    [ "IConfigureNamedOptions", null, [
+      [ "AdeNote.Infrastructure.Extension.SwaggerOptions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html", null ]
+    ] ],
     [ "AdeNote.Infrastructure.Repository.ILabelPageRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html", [
       [ "AdeNote.Infrastructure.Repository.LabelPageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html", null ]
     ] ],
