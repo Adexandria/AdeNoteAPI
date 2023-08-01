@@ -10,7 +10,7 @@ on:
      - 'README.md'
 env:
     staging-url : 'https://adenoteapi.azurewebsites.net/'
-    output_path: 'bin/Release/net6.0/publish/'
+    output_path: 'AdeNote.API/bin/Release/net6.0/publish/'
     azure_web_name: 'AdeNoteAPI'
     artifact_name: adenote_artifact
 jobs:
