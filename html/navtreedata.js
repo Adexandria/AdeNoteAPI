@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "EHSAT", "index.html", [
+  [ "AdeNote API", "index.html", [
     [ "Introduction", "md_README.html", [
       [ "AdeNote API", "md_README.html#autotoc_md1", [
         [ "Packages", "md_README.html#autotoc_md2", null ],
