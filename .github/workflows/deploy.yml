@@ -6,6 +6,8 @@ name: Deploy to azure
 on:
   push:
     branches: [ "master" ]
+    paths-ignore:
+     - 'README.md'
 env:
     staging-url : 'https://adenoteapi.azurewebsites.net/'
     output_path: 'bin/Release/net6.0/publish/'

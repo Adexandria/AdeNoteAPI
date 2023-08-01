@@ -1,4 +1,6 @@
-# AdeNote API
+# Introduction
+
+## AdeNote API
 This is a note management system API. It provides user with secured access to notes and also offers a to-do list feature.
 
 ![Git-Pages](https://github.com/Adeola-Aderibigbe/AdeNoteAPI/actions/workflows/dotnet.yml/badge.svg)              ![Git-Pages](https://github.com/Adeola-Aderibigbe/AdeNoteAPI/actions/workflows/build.yml/badge.svg)
@@ -20,3 +22,6 @@ This layer contains data abstraction layer to connnect to an external database. 
 
 #### Models
 This layer contains all the business logic or domain of the application. It also include the Data transfer object used to interact with the users.
+
+### Visit Documentation
+[Swagger Documentation](https://adenoteapi.azurewebsites.net/swagger/index.html)
