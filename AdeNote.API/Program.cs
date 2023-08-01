@@ -21,6 +21,7 @@ var connectionString = configuration.GetConnectionString("NotesDB");
 
 // Gets the token secret from appsettings
 var tokenSecret = configuration["TokenSecret"];
+
 // Add services to the container.
 var containerBuilder = new TaskContainerBuilder(connectionString);
 
