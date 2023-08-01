@@ -8,6 +8,7 @@ on:
     branches: [ "master" ]
     paths-ignore:
      - 'README.md'
+     - 'AdeNote_Configuration.config'
 env:
     staging-url : 'https://adenoteapi.azurewebsites.net/'
     output_path: 'AdeNote.API/bin/Release/net6.0/publish/'
