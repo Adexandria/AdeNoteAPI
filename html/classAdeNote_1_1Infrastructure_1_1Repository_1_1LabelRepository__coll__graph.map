@@ -1,8 +1,0 @@
-<map id="AdeNote.Infrastructure.Repository.LabelRepository" name="AdeNote.Infrastructure.Repository.LabelRepository">
-<area shape="rect" id="node1" title="Handles persisting and querying for Label objects" alt="" coords="95,247,341,288"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title="Commits new and tracked changes in the objects" alt="" coords="105,171,197,197"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Db_1_1NoteDbContext.html" title="Handles the transactions made to the database" alt="" coords="5,81,209,108"/>
-<area shape="rect" id="node4" title=" " alt="" coords="62,5,153,32"/>
-<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html" title="An interface that includes label object" alt="" coords="239,171,370,197"/>
-<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="233,81,395,108"/>
-</map>

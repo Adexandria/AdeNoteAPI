@@ -1,7 +1,0 @@
-<map id="AdeNote.Infrastructure.Repository.LabelPageRepository" name="AdeNote.Infrastructure.Repository.LabelPageRepository">
-<area shape="rect" id="node1" title="Handles persisting and querying for page labels." alt="" coords="60,247,307,288"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title="Commits new and tracked changes in the objects" alt="" coords="61,171,153,197"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Db_1_1NoteDbContext.html" title="Handles the transactions made to the database" alt="" coords="5,81,209,108"/>
-<area shape="rect" id="node4" title=" " alt="" coords="62,5,153,32"/>
-<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html" title="An Interface that includes the behaviour of the page labels object" alt="" coords="178,171,341,197"/>
-</map>

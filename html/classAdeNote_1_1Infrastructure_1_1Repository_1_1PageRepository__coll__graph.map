@@ -1,8 +1,0 @@
-<map id="AdeNote.Infrastructure.Repository.PageRepository" name="AdeNote.Infrastructure.Repository.PageRepository">
-<area shape="rect" id="node1" title="Handles persisting and querying for page object" alt="" coords="95,247,341,288"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title="Commits new and tracked changes in the objects" alt="" coords="107,171,199,197"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Db_1_1NoteDbContext.html" title="Handles the transactions made to the database" alt="" coords="5,81,209,108"/>
-<area shape="rect" id="node4" title=" " alt="" coords="62,5,153,32"/>
-<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html" title="An interface to handles page object" alt="" coords="240,171,367,197"/>
-<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="234,81,391,108"/>
-</map>
