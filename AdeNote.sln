@@ -5,7 +5,12 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdeNote.Tests", "AdeNote.Tests\AdeNote.Tests.csproj", "{DFBD5D43-49DF-4205-98DC-3B7A08B4FB45}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdeNote", "AdeNote.API\AdeNote.csproj", "{83F24B0E-BDF1-4A65-8BAA-4D792E60CB1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdeNote", "AdeNote.API\AdeNote.csproj", "{44B880B3-2514-4565-89FD-E095E247E476}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{2B7AA170-0B2B-45DA-90AB-63A383AFEFF6}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\AdeNote_Configuration.config = Docs\AdeNote_Configuration.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +22,10 @@ Global
 		{DFBD5D43-49DF-4205-98DC-3B7A08B4FB45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFBD5D43-49DF-4205-98DC-3B7A08B4FB45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFBD5D43-49DF-4205-98DC-3B7A08B4FB45}.Release|Any CPU.Build.0 = Release|Any CPU
-		{83F24B0E-BDF1-4A65-8BAA-4D792E60CB1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{83F24B0E-BDF1-4A65-8BAA-4D792E60CB1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{83F24B0E-BDF1-4A65-8BAA-4D792E60CB1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{83F24B0E-BDF1-4A65-8BAA-4D792E60CB1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44B880B3-2514-4565-89FD-E095E247E476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44B880B3-2514-4565-89FD-E095E247E476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44B880B3-2514-4565-89FD-E095E247E476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44B880B3-2514-4565-89FD-E095E247E476}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
