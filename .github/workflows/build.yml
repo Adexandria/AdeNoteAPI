@@ -22,3 +22,5 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build AdeNote.API/AdeNote.csproj --no-restore
+    - name: run test
+      run: dotnet test AdeNote.Tests/AdeNote.Tests.csproj --no-restore
