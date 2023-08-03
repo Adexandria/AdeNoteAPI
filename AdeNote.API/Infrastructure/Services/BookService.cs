@@ -16,6 +16,13 @@ namespace AdeNote.Infrastructure.Services
         /// <summary>
         /// A Constructor
         /// </summary>
+        protected BookService()
+        {
+
+        }
+        /// <summary>
+        /// A Constructor
+        /// </summary>
         /// <param name="_bookRepository">Handles the persisting and querying of book object</param>
         public BookService(IBookRepository _bookRepository)
         {
@@ -160,6 +167,6 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        private readonly IBookRepository bookRepository;
+        public IBookRepository bookRepository { get; set; }
     }
 }

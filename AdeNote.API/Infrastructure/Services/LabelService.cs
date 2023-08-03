@@ -17,6 +17,13 @@ namespace AdeNote.Infrastructure.Services
         /// <summary>
         /// A constructor
         /// </summary>
+        protected LabelService()
+        {
+
+        }
+        /// <summary>
+        /// A constructor
+        /// </summary>
         /// <param name="_labelRepository">Handles persisting and querying</param>
         public LabelService(ILabelRepository _labelRepository)
         {
@@ -124,7 +131,7 @@ namespace AdeNote.Infrastructure.Services
 
                 var commitStatus = await labelRepository.Update(label);
                 if (!commitStatus)
-                    return ActionResult.Failed("Failed to remove label");
+                    return ActionResult.Failed("Failed to update label");
 
                 return ActionResult.Successful();
             }
@@ -133,6 +140,6 @@ namespace AdeNote.Infrastructure.Services
                 return ActionResult.Failed(ex.Message);
             }
         }
-        private readonly ILabelRepository labelRepository;
+        public ILabelRepository labelRepository { get; set; }
     }
 }

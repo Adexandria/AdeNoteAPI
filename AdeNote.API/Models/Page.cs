@@ -13,6 +13,7 @@ namespace AdeNote.Models
         public Page()
         {
             Title = "Untitled page";
+            Labels = new List<Label>();
         }
 
 
@@ -23,6 +24,7 @@ namespace AdeNote.Models
         public Page(string title)
         {
             Title = title;
+            Labels = new List<Label>();
         }
 
         /// <summary>
