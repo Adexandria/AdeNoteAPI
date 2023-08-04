@@ -13,7 +13,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <param name="bookId">A book id</param>
         /// <param name="userId">A user id</param>
         /// <returns>A book object</returns>
-        Task<Book> GetAsync(Guid bookId, Guid userId);
+       Task<Book> GetAsync(Guid bookId, Guid userId);
 
         /// <summary>
         /// Get all books that belong to a user

@@ -16,6 +16,13 @@ namespace AdeNote.Infrastructure.Services
         /// <summary>
         /// A constructor
         /// </summary>
+        protected PageService()
+        {
+
+        }
+        /// <summary>
+        /// A constructor
+        /// </summary>
         /// <param name="_pageRepository">>Handles persisting and querying pages</param>
         /// <param name="_bookRepository">>Handles persisting and querying books</param>
         /// <param name="_labelRepository">>Handles persisting and querying labels</param>
@@ -122,7 +129,7 @@ namespace AdeNote.Infrastructure.Services
 
                 var commitStatus = await pageRepository.Remove(currentBookPage);
                 if (!commitStatus)
-                    return ActionResult.Failed("Failed to delete a page");
+                    return ActionResult.Failed("Failed to delete page");
 
                 return ActionResult.Successful();
             }
@@ -203,8 +210,12 @@ namespace AdeNote.Infrastructure.Services
                     if (currentLabel == null)
                         return ActionResult.Failed("Label doesn't exist", (int)HttpStatusCode.NotFound);
 
-                    if (currentBookPage.Labels.Contains(currentLabel))
-                        return ActionResult.Failed("Label has been added", (int)HttpStatusCode.BadRequest);
+                    if (currentBookPage.Labels != null )
+                        if (currentBookPage.Labels.Any(s=>s.Title == currentLabel.Title))
+                        {
+                            return ActionResult.Failed("Label has been added", (int)HttpStatusCode.BadRequest);
+
+                        }
 
                     var status = await labelPageRepository.AddLabelToPage(pageId, currentLabel.Id);
                     if (!status)
@@ -237,8 +248,8 @@ namespace AdeNote.Infrastructure.Services
                 return await Task.FromResult(ActionResult.Failed("page doesn't exist", (int)HttpStatusCode.NotFound));
 
             var pageLabels = await labelPageRepository.GetLabels(pageId);
-            if(pageLabels == null)
-                return ActionResult.Failed("Labels doesn't exist for this page", (int) HttpStatusCode.NotFound);
+            if(!pageLabels.Any())
+                return ActionResult.Failed("Labels doesn't exist in this page", (int) HttpStatusCode.NotFound);
 
             var commitStatus = await labelPageRepository.DeleteLabelsFromPage(pageLabels);
             if (!commitStatus)
@@ -270,22 +281,24 @@ namespace AdeNote.Infrastructure.Services
 
             var currentLabel = currentBookPage.Labels.Where(s=>s.Title == title).Select(s=>s.Id).FirstOrDefault();
             if(currentLabel == Guid.Empty)
-                return await Task.FromResult(ActionResult.Failed("label doesn't exist in this page", (int)HttpStatusCode.NotFound));
+                return await Task.FromResult(ActionResult.Failed("Label doesn't exist in this page", (int)HttpStatusCode.NotFound));
 
             var currentLabelPage = await labelPageRepository.GetLabel(pageId, currentLabel);
+            if(currentLabelPage == null)
+                return ActionResult.Failed("Label doesn't exist in this page", (int)HttpStatusCode.NotFound);
 
             var commitStatus = await labelPageRepository.DeleteLabelFromPage(currentLabelPage);
 
             if (!commitStatus)
-                return ActionResult.Failed("Failed to update page");
+                return ActionResult.Failed("Failed to delete label");
 
             return ActionResult.Successful();
         }
 
-        private IPageRepository pageRepository;
-        private IBookRepository bookRepository;
-        private ILabelRepository labelRepository;
-        private ILabelPageRepository labelPageRepository;
+        public IPageRepository pageRepository;
+        public IBookRepository bookRepository;
+        public ILabelRepository labelRepository;
+        public ILabelPageRepository labelPageRepository;
 
     }
 }

@@ -12,6 +12,13 @@ namespace AdeNote.Infrastructure.Repository
         /// <summary>
         /// A constructor
         /// </summary>
+        public PageRepository()
+        {
+
+        }
+        /// <summary>
+        /// A constructor
+        /// </summary>
         /// <param name="noteDb">Handles transaction</param>
         public PageRepository(NoteDbContext noteDb) : base(noteDb)
         {
@@ -25,7 +32,7 @@ namespace AdeNote.Infrastructure.Repository
         public async Task<bool> Add(Page entity)
         {
             entity.Id = Guid.NewGuid();
-            await _db.Pages.AddAsync(entity);
+            await Db.Pages.AddAsync(entity);
             return await SaveChanges<Page>();
         }
 
@@ -37,7 +44,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>a page object</returns>
         public async Task<Page> GetBookPage(Guid bookId, Guid pageId)
         {
-            return await _db.Pages.Include(s=>s.Book)
+            return await Db.Pages.Include(s=>s.Book)
                 .Include(s=>s.Labels).AsNoTracking()
                 .FirstOrDefaultAsync(s => s.Id == pageId && s.BookId == bookId);
         }
@@ -49,7 +56,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>A list of pages</returns>
         public IQueryable<Page> GetBookPages(Guid bookId)
         {
-            return _db.Pages.Include(s => s.Book)
+            return Db.Pages.Include(s => s.Book)
                 .Include(s => s.Labels).Where(s=>s.BookId == bookId).AsNoTracking();
         }
 
@@ -60,7 +67,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>a boolean value</returns>
         public async Task<bool> Remove(Page entity)
         {
-            _db.Pages.Remove(entity);
+            Db.Pages.Remove(entity);
             return await SaveChanges<Page>();
         }
 
@@ -71,13 +78,13 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>a boolean value</returns>
         public async Task<bool> Update(Page entity)
         {
-            var currentPage = await _db.Pages.Include(s => s.Book)
+            var currentPage = await Db.Pages.Include(s => s.Book)
                 .Include(s => s.Labels)
                 .FirstOrDefaultAsync(s => s.Id == entity.Id && s.BookId == entity.BookId);
 
-            _db.Entry(currentPage).CurrentValues.SetValues(entity);
+            Db.Entry(currentPage).CurrentValues.SetValues(entity);
 
-            _db.Entry(currentPage).State = EntityState.Modified;
+            Db.Entry(currentPage).State = EntityState.Modified;
 
             return await SaveChanges<Page>();
         }
