@@ -30,7 +30,7 @@ jobs:
       uses: im-open/code-coverage-report-generator@4.9.2  
       with:
         reports: "AdeNote.Tests/TestResults/**/coverage.cobertura.xml"
-        targetdir: "AdeNote.API"
+        targetdir: "Docs/html/coverage"
         format: markdown
         title: 'AdeNote Code Coverage'
         tag: '${{ github.workflow}}_${{ github.run_id }}'
