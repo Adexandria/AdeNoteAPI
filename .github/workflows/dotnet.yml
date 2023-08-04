@@ -37,12 +37,9 @@ jobs:
         filefilters: '-Startup.cs;-Program.cs;-*.cshtml'
         toolpath: 'reportgeneratortool'
     - name: Deploy to gh-page
-      uses: fireaz/push-git-subdirectory-as-branch@develop
-      env:
-       REPO: self
-       BRANCH: 'gh-pages'
-       FOLDER: html/coverage
-       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: github/branch-deploy@v1.1.0
+      with:
+       stable_branch: gh-pages
     - name: Deploy to git pages
       id: deployment
       uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
