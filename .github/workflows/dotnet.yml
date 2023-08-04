@@ -40,11 +40,10 @@ jobs:
         filefilters: '-Startup.cs;-Program.cs;-*.cshtml'
         toolpath: 'reportgeneratortool'
     - name: Deploy to gh-page
-      uses: github/branch-deploy@v1.1.0
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-       trigger: ".deploy gh-pages" 
-       stable_branch: gh-pages
-       noop_trigger: ".noop"
+       folder: Docs/html/coverage
+       branch: gh-pages
     - name: Deploy to git pages
       id: deployment
       uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
