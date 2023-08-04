@@ -7,7 +7,7 @@ using Moq;
 namespace AdeNote.Tests.Services
 {
     [TestFixture]
-    public class LabelServiceTests : TestHelpher<LabelService,ILabelRepository,LabelCreateDTO,LabelUpdateDTO>
+    public class LabelServiceTests : ServiceTestHelpher<LabelService,ILabelRepository,LabelCreateDTO,LabelUpdateDTO>
     {
         [SetUp]
         protected override void Setup()

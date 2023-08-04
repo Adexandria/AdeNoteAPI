@@ -7,7 +7,7 @@ using Moq;
 namespace AdeNote.Tests.Services
 {
     [TestFixture]
-    public class PageServiceTests :TestHelpher<PageService,IPageRepository,PageCreateDTO,PageUpdateDTO>
+    public class PageServiceTests :ServiceTestHelpher<PageService,IPageRepository,PageCreateDTO,PageUpdateDTO>
     {
         [SetUp]
         protected override void Setup()

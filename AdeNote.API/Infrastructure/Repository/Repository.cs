@@ -9,18 +9,25 @@ namespace AdeNote.Infrastructure.Repository
     public class Repository
     {
         /// <summary>
+        /// A Constructor
+        /// </summary>
+        public Repository()
+        {
+
+        }
+        /// <summary>
         /// A constructor
         /// </summary>
         /// <param name="noteDb">Handles Transactions</param>
         public Repository(NoteDbContext noteDb)
         {
-            _db = noteDb;
+            Db = noteDb;
         }
 
         /// <summary>
         /// A property to handle transactions
         /// </summary>
-        protected readonly NoteDbContext _db;
+        public NoteDbContext Db { get; set; }
 
         /// <summary>
         /// Save changes. \n
@@ -30,7 +37,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <typeparam name="T">A generic type T</typeparam>
         /// <returns>A boolean value</returns>
         /// <exception cref="NotSupportedException">Thrown if the type is not supported</exception>
-        protected async Task<bool> SaveChanges<T>() where T : class
+        public virtual async Task<bool> SaveChanges<T>() where T : class
         {
 
             var saved = false;
@@ -38,7 +45,7 @@ namespace AdeNote.Infrastructure.Repository
             {
                 try
                 {
-                    int commitedResult = await _db.SaveChangesAsync();
+                    int commitedResult = await Db.SaveChangesAsync();
                     if (commitedResult == 0)
                     {
                         saved = false;

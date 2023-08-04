@@ -10,6 +10,13 @@ namespace AdeNote.Infrastructure.Repository
     public class LabelPageRepository : Repository, ILabelPageRepository
     {
         /// <summary>
+        /// A Constructor
+        /// </summary>
+        protected LabelPageRepository()
+        {
+
+        }
+        /// <summary>
         /// A constructor
         /// </summary>
         /// <param name="db">Handles Transactions</param>
@@ -27,7 +34,7 @@ namespace AdeNote.Infrastructure.Repository
         public async Task<bool> AddLabelToPage(Guid pageId, Guid labelId)
         {
             var pageLabel = new LabelPage(pageId, labelId);
-            await _db.LabelPage.AddAsync(pageLabel);
+            await Db.LabelPage.AddAsync(pageLabel);
             return await SaveChanges<LabelPage>();
 
         }
@@ -39,7 +46,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>A boolean value</returns>
         public async Task<bool> DeleteLabelFromPage(LabelPage currentPageLabel)
         {
-             _db.LabelPage.Remove(currentPageLabel);
+             Db.LabelPage.Remove(currentPageLabel);
             return await SaveChanges<LabelPage>();
         }
 
@@ -50,7 +57,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>A boolean value</returns>
         public async Task<bool> DeleteLabelsFromPage(IList<LabelPage> pageLabels)
         {
-            _db.LabelPage.RemoveRange(pageLabels);
+            Db.LabelPage.RemoveRange(pageLabels);
             return await SaveChanges<LabelPage>();
         }
 
@@ -62,7 +69,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>A page label</returns>
         public async Task<LabelPage> GetLabel(Guid pageId,Guid labelId)
         {
-           return await _db.LabelPage
+           return await Db.LabelPage
                 .Where(s=>s.PageId == pageId && s.LabelId == labelId)
                 .AsNoTracking()
                 .FirstOrDefaultAsync();
@@ -75,7 +82,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>a list of page label</returns>
         public async Task<IList<LabelPage>> GetLabels(Guid pageId)
         {
-            return await _db.LabelPage
+            return await Db.LabelPage
                 .Where(s=>s.PageId == pageId)
                 .AsNoTracking()
                 .ToListAsync();

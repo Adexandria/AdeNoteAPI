@@ -4,7 +4,7 @@ using Moq;
 
 namespace AdeNote.Tests
 {
-    public class TestHelpher<TService,TRepo,TModel,TUpdateModel> where TService : class 
+    public class ServiceTestHelpher<TService,TRepo,TModel,TUpdateModel> where TService : class 
         where TRepo : class
         where TModel : class
         where TUpdateModel : class

@@ -10,6 +10,14 @@ namespace AdeNote.Infrastructure.Repository
     public class LabelRepository : Repository, ILabelRepository
     {
         /// <summary>
+        /// A Constructor
+        /// </summary>
+        protected LabelRepository()
+        {
+
+        }
+        
+        /// <summary>
         /// A constructor
         /// </summary>
         /// <param name="noteDb">Handles transaction</param>
@@ -24,7 +32,7 @@ namespace AdeNote.Infrastructure.Repository
         public async Task<bool> Add(Label entity)
         {
             entity.Id = Guid.NewGuid();
-            await _db.Labels.AddAsync(entity);
+            await Db.Labels.AddAsync(entity);
             return await SaveChanges<Label>();
         }
 
@@ -34,7 +42,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>A list of labels</returns>
         public IQueryable<Label> GetAll()
         {
-            return _db.Labels.OrderBy(s=>s.Id);
+            return Db.Labels.OrderBy(s=>s.Id);
         }
 
         /// <summary>
@@ -44,7 +52,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>boolean value</returns>
         public async Task<Label> GetAsync(Guid id)
         {
-            return await _db.Labels.AsNoTracking().FirstOrDefaultAsync(s => s.Id == id);
+            return await Db.Labels.AsNoTracking().FirstOrDefaultAsync(s => s.Id == id);
         }
         /// <summary>
         /// Gets a label by name
@@ -53,7 +61,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>Label</returns>
         public async Task<Label> GetByNameAsync(string name)
         {
-            return await _db.Labels.AsNoTracking().FirstOrDefaultAsync(s => s.Title.Equals(name));
+            return await Db.Labels.AsNoTracking().FirstOrDefaultAsync(s => s.Title.Equals(name));
         }
 
         /// <summary>
@@ -63,7 +71,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>a boolean value</returns>
         public async Task<bool> Remove(Label entity)
         {
-            _db.Remove(entity);
+            Db.Remove(entity);
             return await SaveChanges<Label>();
         }
 
@@ -74,10 +82,12 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>a boolean value</returns>
         public async Task<bool> Update(Label entity)
         {
-            var currentLabel = await  _db.Labels
+            var currentLabel = await  Db.Labels
                 .FirstOrDefaultAsync(s => s.Id == entity.Id);
 
-            _db.Entry(currentLabel).CurrentValues.SetValues(entity);
+            Db.Entry(currentLabel).CurrentValues.SetValues(entity);
+
+            Db.Entry(currentLabel).State = EntityState.Modified;
 
             return await SaveChanges<Label>();
         }

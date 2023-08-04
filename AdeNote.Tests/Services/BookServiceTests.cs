@@ -7,7 +7,7 @@ using Moq;
 namespace AdeNote.Tests.Services
 {
     [TestFixture]
-    public class BookServiceTests : TestHelpher<BookService,IBookRepository,BookCreateDTO,BookUpdateDTO>
+    public class BookServiceTests : ServiceTestHelpher<BookService,IBookRepository,BookCreateDTO,BookUpdateDTO>
     {
 
         protected override void Setup()

@@ -12,6 +12,13 @@ namespace AdeNote.Infrastructure.Repository
         /// <summary>
         /// A Constructor
         /// </summary>
+        public BookRepository()
+        {
+
+        }
+        /// <summary>
+        /// A Constructor
+        /// </summary>
         /// <param name="noteDb">Handles the transactions</param>
         public BookRepository(NoteDbContext noteDb) : base(noteDb)
         {
@@ -25,7 +32,7 @@ namespace AdeNote.Infrastructure.Repository
         public async Task<bool> Add(Book entity)
         {
            entity.Id = Guid.NewGuid();
-           await _db.Books.AddAsync(entity);
+           await Db.Books.AddAsync(entity);
            return await SaveChanges<Book>();
         }
 
@@ -36,7 +43,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>A list of books</returns>
         public IQueryable<Book> GetAll(Guid userId)
         {
-            return _db.Books.Where(s=>s.UserId == userId)
+            return Db.Books.Where(s=>s.UserId == userId)
                 .Include(s=>s.Pages)
                 .Include(s=>s.User)
                 .AsNoTracking();
@@ -50,10 +57,12 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>Book object</returns>
         public async Task<Book> GetAsync(Guid bookId, Guid userId)
         {
-            return await _db.Books
+            var book = Db.Books.Where(s => s.UserId == userId)
                 .Include(s => s.Pages)
-                .Include(s => s.User).AsNoTracking()
-                .FirstOrDefaultAsync(s => s.Id == bookId && s.UserId == userId);
+                .Include(s => s.User)
+                .AsNoTracking();
+
+            return await book.FirstOrDefaultAsync();
         }
 
         /// <summary>
@@ -63,7 +72,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>a boolean value</returns>
         public async Task<bool> Remove(Book entity)
         {
-            _db.Books.Remove(entity);
+            Db.Books.Remove(entity);
             return await SaveChanges<Book>();
         }
 
@@ -74,12 +83,12 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>a boolean value</returns>
         public async Task<bool> Update(Book entity)
         {
-            var currentBook = await _db.Books
+            var currentBook = await Db.Books
                 .FirstOrDefaultAsync(s => s.Id == entity.Id && s.UserId == entity.UserId);
 
-            _db.Entry(currentBook).CurrentValues.SetValues(entity);
+            Db.Entry(currentBook).CurrentValues.SetValues(entity);
 
-            _db.Entry(currentBook).State = EntityState.Modified;
+            Db.Entry(currentBook).State = EntityState.Modified;
 
             return await SaveChanges<Book>();
 
