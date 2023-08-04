@@ -84,8 +84,7 @@ $(document).ready(function(){initNavTree('classAdeNote_1_1Infrastructure_1_1Repo
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AdeNote.Infrastructure.Repository.Repository Class Reference</div>  </div>
@@ -106,43 +105,54 @@ Inheritance diagram for AdeNote.Infrastructure.Repository.Repository:</div>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html" title="Handles persisting and querying for page object" alt="" coords="300,201,547,243"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for AdeNote.Infrastructure.Repository.Repository:</div>
-<div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository__coll__graph.png" border="0" usemap="#aAdeNote_8Infrastructure_8Repository_8Repository_coll__map" alt="Collaboration graph"/></div>
-<map name="aAdeNote_8Infrastructure_8Repository_8Repository_coll__map" id="aAdeNote_8Infrastructure_8Repository_8Repository_coll__map">
-<area shape="rect" title="Commits new and tracked changes in the objects" alt="" coords="5,171,252,212"/>
-<area shape="rect" href="classAdeNote_1_1Db_1_1NoteDbContext.html" title="Handles the transactions made to the database" alt="" coords="27,81,231,108"/>
-<area shape="rect" title=" " alt="" coords="83,5,174,32"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a2ddc57a8ea6406004338aa04d236cb74"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html#a2ddc57a8ea6406004338aa04d236cb74">Repository</a> ()</td></tr>
+<tr class="memdesc:a2ddc57a8ea6406004338aa04d236cb74"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Constructor  <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html#a2ddc57a8ea6406004338aa04d236cb74">More...</a><br /></td></tr>
+<tr class="separator:a2ddc57a8ea6406004338aa04d236cb74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fb2b2b6115c322e26f610dad8e06122"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html#a1fb2b2b6115c322e26f610dad8e06122">Repository</a> (<a class="el" href="classAdeNote_1_1Db_1_1NoteDbContext.html">NoteDbContext</a> noteDb)</td></tr>
 <tr class="memdesc:a1fb2b2b6115c322e26f610dad8e06122"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor  <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html#a1fb2b2b6115c322e26f610dad8e06122">More...</a><br /></td></tr>
 <tr class="separator:a1fb2b2b6115c322e26f610dad8e06122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d14aaace42b9c678dfd801a7ea63f4"><td class="memItemLeft" align="right" valign="top">virtual async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html#ac4d14aaace42b9c678dfd801a7ea63f4">SaveChanges&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:ac4d14aaace42b9c678dfd801a7ea63f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save changes. <br  />
+This will catch conflict exception and update the entity with the database entity  <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html#ac4d14aaace42b9c678dfd801a7ea63f4">More...</a><br /></td></tr>
+<tr class="separator:ac4d14aaace42b9c678dfd801a7ea63f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:adda2b21a2ac0a06d799acfd61859b092"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html#adda2b21a2ac0a06d799acfd61859b092">SaveChanges&lt; T &gt;</a> ()</td></tr>
-<tr class="memdesc:adda2b21a2ac0a06d799acfd61859b092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save changes. <br  />
-This will catch conflict exception and update the entity with the database entity  <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html#adda2b21a2ac0a06d799acfd61859b092">More...</a><br /></td></tr>
-<tr class="separator:adda2b21a2ac0a06d799acfd61859b092"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a5d8a14253351ed352f5dd362bbbf0b55"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="classAdeNote_1_1Db_1_1NoteDbContext.html">NoteDbContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html#a5d8a14253351ed352f5dd362bbbf0b55">_db</a></td></tr>
-<tr class="memdesc:a5d8a14253351ed352f5dd362bbbf0b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">A property to handle transactions  <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html#a5d8a14253351ed352f5dd362bbbf0b55">More...</a><br /></td></tr>
-<tr class="separator:a5d8a14253351ed352f5dd362bbbf0b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a84cd61ec2d4dc5472e65f173a2fc4bb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAdeNote_1_1Db_1_1NoteDbContext.html">NoteDbContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html#a84cd61ec2d4dc5472e65f173a2fc4bb1">Db</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a84cd61ec2d4dc5472e65f173a2fc4bb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">A property to handle transactions  <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html#a84cd61ec2d4dc5472e65f173a2fc4bb1">More...</a><br /></td></tr>
+<tr class="separator:a84cd61ec2d4dc5472e65f173a2fc4bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Commits new and tracked changes in the objects </p>
 
 <p class="definition">Definition at line <a class="el" href="Repository_8cs_source.html#l00009">9</a> of file <a class="el" href="Repository_8cs_source.html">Repository.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2ddc57a8ea6406004338aa04d236cb74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ddc57a8ea6406004338aa04d236cb74">&#9670;&nbsp;</a></span>Repository() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AdeNote.Infrastructure.Repository.Repository.Repository </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A Constructor </p>
+
+<p class="definition">Definition at line <a class="el" href="Repository_8cs_source.html#l00014">14</a> of file <a class="el" href="Repository_8cs_source.html">Repository.cs</a>.</p>
+
+</div>
+</div>
 <a id="a1fb2b2b6115c322e26f610dad8e06122"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fb2b2b6115c322e26f610dad8e06122">&#9670;&nbsp;</a></span>Repository()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fb2b2b6115c322e26f610dad8e06122">&#9670;&nbsp;</a></span>Repository() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,13 +175,13 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Repository_8cs_source.html#l00015">15</a> of file <a class="el" href="Repository_8cs_source.html">Repository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Repository_8cs_source.html#l00022">22</a> of file <a class="el" href="Repository_8cs_source.html">Repository.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="adda2b21a2ac0a06d799acfd61859b092"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adda2b21a2ac0a06d799acfd61859b092">&#9670;&nbsp;</a></span>SaveChanges&lt; T &gt;()</h2>
+<a id="ac4d14aaace42b9c678dfd801a7ea63f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4d14aaace42b9c678dfd801a7ea63f4">&#9670;&nbsp;</a></span>SaveChanges&lt; T &gt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -180,7 +190,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">async Task&lt;bool&gt; AdeNote.Infrastructure.Repository.Repository.SaveChanges&lt; T &gt; </td>
+          <td class="memname">virtual async Task&lt;bool&gt; AdeNote.Infrastructure.Repository.Repository.SaveChanges&lt; T &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -188,7 +198,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -217,13 +227,13 @@ This will catch conflict exception and update the entity with the database entit
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="Repository_8cs_source.html#l00033">33</a> of file <a class="el" href="Repository_8cs_source.html">Repository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Repository_8cs_source.html#l00040">40</a> of file <a class="el" href="Repository_8cs_source.html">Repository.cs</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a5d8a14253351ed352f5dd362bbbf0b55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d8a14253351ed352f5dd362bbbf0b55">&#9670;&nbsp;</a></span>_db</h2>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a84cd61ec2d4dc5472e65f173a2fc4bb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84cd61ec2d4dc5472e65f173a2fc4bb1">&#9670;&nbsp;</a></span>Db</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -232,19 +242,19 @@ This will catch conflict exception and update the entity with the database entit
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly <a class="el" href="classAdeNote_1_1Db_1_1NoteDbContext.html">NoteDbContext</a> AdeNote.Infrastructure.Repository.Repository._db</td>
+          <td class="memname"><a class="el" href="classAdeNote_1_1Db_1_1NoteDbContext.html">NoteDbContext</a> AdeNote.Infrastructure.Repository.Repository.Db</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>A property to handle transactions </p>
 
-<p class="definition">Definition at line <a class="el" href="Repository_8cs_source.html#l00023">23</a> of file <a class="el" href="Repository_8cs_source.html">Repository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Repository_8cs_source.html#l00030">30</a> of file <a class="el" href="Repository_8cs_source.html">Repository.cs</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,6 @@
 var classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository =
 [
+    [ "PageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html#a20934c5140f938e26055d9c278dfdb97", null ],
     [ "PageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html#a2a9820c58bbd93047ee21adcaa1f4efd", null ],
     [ "Add", "classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html#a42750209edd53c43513238d9b6dd1afa", null ],
     [ "GetBookPage", "classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html#a60547333c42ee1aa87e15a5fa0bf6adc", null ],

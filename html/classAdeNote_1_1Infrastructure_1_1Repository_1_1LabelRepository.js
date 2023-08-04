@@ -1,5 +1,6 @@
 var classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository =
 [
+    [ "LabelRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository.html#af3fc377bf7880c8c87f2098da44740b8", null ],
     [ "LabelRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository.html#a5624454b0016504bfad1aa0d198be2c7", null ],
     [ "Add", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository.html#afb6d8aa63feb5bb774e480bd04415f5e", null ],
     [ "GetAll", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository.html#a86e807d2d404308cd84793b6a24b8b32", null ],
