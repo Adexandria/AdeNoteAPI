@@ -19,6 +19,23 @@ jobs:
     runs-on: ubuntu-latest
    
     steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x  
+    - name: build test coverage xml
+      run: dotnet test AdeNote.Tests/AdeNote.Tests.csproj --collect:"XPlat Code Coverage"
+    - name: Generate code coverage report
+      uses: im-open/code-coverage-report-generator@4.9.2  
+      with:
+        reports: "AdeNote.Tests/TestResults/**/coverage.cobertura.xml"
+        targetdir: "AdeNote.API"
+        format: markdown
+        title: 'AdeNote Code Coverage'
+        tag: '${{ github.workflow}}_${{ github.run_id }}'
+        filefilters: '-Startup.cs;-Program.cs;-*.cshtml'
+        toolpath: 'reportgeneratortool'
     - name: Deploy to git pages
       id: deployment
       uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
