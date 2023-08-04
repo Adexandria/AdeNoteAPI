@@ -44,6 +44,7 @@ jobs:
       with:
        trigger: ".deploy gh-pages" 
        stable_branch: gh-pages
+       noop_trigger: ".noop"
     - name: Deploy to git pages
       id: deployment
       uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
