@@ -9,7 +9,10 @@ on:
     paths-ignore:
      - '.gitignore'
 permissions:
-   contents: write
+  pull-requests: write
+  deployments: write
+  contents: write
+  checks: read
 
 jobs:
   Build:
@@ -39,6 +42,7 @@ jobs:
     - name: Deploy to gh-page
       uses: github/branch-deploy@v1.1.0
       with:
+       trigger: ".deploy gh-pages" 
        stable_branch: gh-pages
     - name: Deploy to git pages
       id: deployment
