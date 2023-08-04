@@ -1,4 +1,0 @@
-<map id="AdeNote.Controllers.PageController.RemoveAllLabels" name="AdeNote.Controllers.PageController.RemoveAllLabels">
-<area shape="rect" id="node1" title="Removes a single label from a page" alt="" coords="5,5,208,47"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#a337fdb877913e6ee0fa797fb991dd703" title="Removes a particular label from a page" alt="" coords="256,5,489,47"/>
-</map>

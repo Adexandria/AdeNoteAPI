@@ -1,9 +1,0 @@
-<map id="AdeNote.Infrastructure.Repository.IPageRepository.GetBookPage" name="AdeNote.Infrastructure.Repository.IPageRepository.GetBookPage">
-<area shape="rect" id="node1" title="Gets an individual page from a particular book" alt="" coords="303,169,549,211"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#abf09a31621901923997d15a1fc293d1b" title="Adds labels to a page" alt="" coords="13,5,247,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a60b79eecf54573abebec1bb834262a7e" title="Get a page by id" alt="" coords="13,71,247,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a89eb05e7a610ce4b752bc8ce7ba72257" title="Removes a particular page" alt="" coords="13,136,247,177"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#ab59d69b440d5472b6a1eda53a8c1c311" title="Removes all labels from a page" alt="" coords="5,201,255,243"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#aad077b7f369d3f503d4a4d603867410f" title="Removes a particular label from a page" alt="" coords="13,267,247,308"/>
-<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a808f63b17b96a3eb2a6ded93ae78de91" title="Updates an existing page" alt="" coords="13,332,247,373"/>
-</map>
