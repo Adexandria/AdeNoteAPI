@@ -47,7 +47,6 @@ jobs:
         file_pattern: 'Docs/coverage/*.html Docs/coverage/*.svg Docs/coverage/*.js Docs/coverage/*.css'
         push_options: '--force'
         commit_options: '--no-verify --signoff'
-        
     - name: Deploy to git pages
       id: deployment
       uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
