@@ -45,7 +45,7 @@ jobs:
          git config --global user.email 'adeola.aderibigbe@cyphercrescent.com'
          git add Docs/coverage/* .
          git commit -a -m "Add recent code coverage"
-         git push gh-pages --force
+         git push origin gh-pages --force
     - name: Deploy to git pages
       id: deployment
       uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
