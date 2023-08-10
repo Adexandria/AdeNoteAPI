@@ -44,7 +44,7 @@ jobs:
       with:
         commit_message: Add recent code coverage
         branch: gh-pages
-        file_pattern: 'Docs/html/*.html Docs/html/*.svg Docs/html/*.js Docs/html/*.css'
+        file_pattern: 'Docs/coverage/*.html Docs/coverage/*.svg Docs/coverage/*.js Docs/coverage/*.css'
  
     - name: Deploy to git pages
       id: deployment
