@@ -44,7 +44,7 @@ jobs:
       with:
        add: 'Docs/coverage'
        message: 'Add recent code coverage'
-       push: origin gh-pages --force
+       push: origin gh-pages --set-upstream
  
     - name: Deploy to git pages
       id: deployment
