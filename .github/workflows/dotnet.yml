@@ -40,11 +40,11 @@ jobs:
         filefilters: '-Startup.cs;-Program.cs;'
         toolpath: 'reportgeneratortool'
     - name: Deploy code coverage to gh-page
-      uses: EndBug/add-and-commit@v4
+      uses: stefanzweifel/git-auto-commit-action@v4
       with:
-       add: 'Docs/coverage'
-       message: 'Add recent code coverage'
-       push: gh-pages --set-upstream
+        commit_message: Add recent code coverage
+        branch: gh-pages
+        file_pattern: 'Docs/html/*.html Docs/html/*.svg Docs/html/*.js Docs/html/*.css'
  
     - name: Deploy to git pages
       id: deployment
