@@ -40,13 +40,12 @@ jobs:
         filefilters: '-Startup.cs;-Program.cs;'
         toolpath: 'reportgeneratortool'
     - name: Deploy code coverage to gh-page
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: Add recent code coverage
-        branch: gh-pages
-        file_pattern: 'Docs/coverage/*.html Docs/coverage/*.svg Docs/coverage/*.js Docs/coverage/*.css'
-        push_options: '--force'
-        commit_options: '--no-verify --signoff'
+      run: |
+         git config --global user.name 'Adeola.Aderibigbe'
+         git config --global user.email 'adeola.aderibigbe@cyphercrescent.com'
+         git add Docs/coverage/* .
+         git commit -a -m "Add recent code coverage"
+         git push gh-pages --force
     - name: Deploy to git pages
       id: deployment
       uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
