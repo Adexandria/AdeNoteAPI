@@ -45,7 +45,8 @@ jobs:
          git config --global user.email 'adeola.aderibigbe@cyphercrescent.com'
          git add Docs/coverage/* .
          git commit -a -m "Add recent code coverage"
-         git push https://github.com/Adeola-Aderibigbe/AdeNoteAPI gh-pages --force
+         git checkout -b gh-pages
+         git push 
     - name: Deploy to git pages
       id: deployment
       uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
