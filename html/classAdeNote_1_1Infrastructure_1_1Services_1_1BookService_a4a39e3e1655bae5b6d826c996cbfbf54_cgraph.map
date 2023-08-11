@@ -1,4 +1,0 @@
-<map id="AdeNote.Infrastructure.Services.BookService.GetById" name="AdeNote.Infrastructure.Services.BookService.GetById">
-<area shape="rect" id="node1" title="Get book by id" alt="" coords="5,5,239,47"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#ace07f2fb2416ddcbebef9cdb4b02af5c" title="Get a particular book that belongs to a user" alt="" coords="287,5,533,47"/>
-</map>

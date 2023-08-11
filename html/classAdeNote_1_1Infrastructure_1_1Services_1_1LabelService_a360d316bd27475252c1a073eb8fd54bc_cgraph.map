@@ -1,5 +1,0 @@
-<map id="AdeNote.Infrastructure.Services.LabelService.Remove" name="AdeNote.Infrastructure.Services.LabelService.Remove">
-<area shape="rect" id="node1" title="Removes an existing label" alt="" coords="5,39,239,80"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html#a9de585103eca6bffa77efb54f67dcd22" title="Get a particular label" alt="" coords="287,5,533,47"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#aa09992933cc1efc25ff9ba7ed29d601a" title="Remove an existing object" alt="" coords="287,71,533,112"/>
-</map>
