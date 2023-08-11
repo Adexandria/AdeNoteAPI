@@ -48,10 +48,11 @@ jobs:
          git add Docs/coverage/*.js
          git add Docs/coverage/*.svg
          git commit -a -m "Add recent code coverage"
-         git checkout -b gh-pages
-         git config pull.rebase false
-         git pull origin gh-pages --allow-unrelated-histories
-         git push
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
     - name: Deploy to git pages
       id: deployment
       uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
