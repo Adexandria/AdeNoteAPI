@@ -55,6 +55,8 @@ jobs:
          git add Docs/coverage/*.css
          git add Docs/coverage/*.js
          git add Docs/coverage/*.svg
+         git add Docs/coverage/*.md
+         git add Docs/coverage/*.htm
          git commit -m "Add recent code coverage"
          git checkout gh-pages
          git config pull.rebase false 
