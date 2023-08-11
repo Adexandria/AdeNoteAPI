@@ -56,7 +56,6 @@ jobs:
          git add Docs/coverage/*.js
          git add Docs/coverage/*.svg
          git commit -a -m "Add recent code coverage"
-         git checkout gh-pages
          git config pull.rebase false 
          git pull origin gh-pages --allow-unrelated-histories
          git push --set-upstream origin gh-pages
