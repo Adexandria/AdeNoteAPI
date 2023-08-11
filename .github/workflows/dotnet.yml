@@ -60,7 +60,6 @@ jobs:
          git commit -m "Add recent code coverage"
          git config pull.rebase false 
          git checkout -b docs-deploy
-         git pull origin gh-pages --allow-unrelated-histories
          git push origin docs-deploy:gh-pages
 
          
