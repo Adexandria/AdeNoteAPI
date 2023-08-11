@@ -9,6 +9,7 @@ on:
     paths-ignore:
      - 'README.md'
      - 'Docs/AdeNote_Configuration.config'
+     - 'dotnet.yml'
 env:
     staging-url : 'https://adenoteapi.azurewebsites.net/'
     output_path: 'AdeNote.API/bin/Release/net6.0/publish/'
