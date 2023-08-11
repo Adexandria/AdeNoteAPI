@@ -1,4 +1,0 @@
-<map id="AdeNote.Controllers.LabelController.GetLabel" name="AdeNote.Controllers.LabelController.GetLabel">
-<area shape="rect" id="node1" title="Gets a single label" alt="" coords="5,5,197,47"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html#a9f1e56cbbbfdfd106aa6f5f4077455ae" title="Gets a particular label by id" alt="" coords="245,5,479,47"/>
-</map>
