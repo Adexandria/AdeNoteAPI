@@ -47,6 +47,7 @@ jobs:
          git commit -a -m "Add recent code coverage"
          git checkout -b gh-pages
          git config pull.rebase false
+         git pull origin gh-pages
          git push --set-upstream origin gh-pages 
     - name: Deploy to git pages
       id: deployment
