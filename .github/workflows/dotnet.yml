@@ -39,11 +39,12 @@ jobs:
         tag: '${{ github.workflow}}_${{ github.run_id }}'
         filefilters: '-Startup.cs;-Program.cs;'
         toolpath: 'reportgeneratortool'
-    - name: Build doxygen documentation
+    - name: Build doxy
+      id: build_doxy
       uses: mattnotmitt/doxygen-action@v1.9.5
       with:
-       working-directory: 'AdeNote.API'
-       doxyfile-path: 'Docs/html'
+         doxyfile-path: 'Docs/AdeNote_Configuration.config'
+         working-directory: 'AdeNote.API'
     - name: add and commit code coverage to gh-page
       run: |
          git config --global user.name 'Adeola.Aderibigbe'
