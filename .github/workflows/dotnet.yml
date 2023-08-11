@@ -40,20 +40,23 @@ jobs:
         filefilters: '-Startup.cs;-Program.cs;'
         toolpath: 'reportgeneratortool'
     - name: Deploy code coverage to gh-page
-      uses: EndBug/add-and-commit@v4
-      with:
-       add: 'Docs/coverage'
-       message: 'Add recent code coverage'
-       push: origin gh-pages --set-upstream
- 
-    - name: Deploy to git pages
-      id: deployment
-      uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
-      with:
-        folder: Docs/html
-        config_file: Docs/AdeNote_Configuration.config
-        github_token: ${{secrets.GITHUB_TOKEN}}
-        branch: gh-pages
+      run: |
+         git config --global user.name 'Adeola.Aderibigbe'
+         git config --global user.email 'adeola.aderibigbe@cyphercrescent.com'
+         git add Docs/coverage/*.html
+         git add Docs/coverage/*.css
+         git add Docs/coverage/*.js
+         git add Docs/coverage/*.svg
+         git commit -a -m "Add recent code coverage"
+         git config pull.rebase false 
+         git pull origin gh-pages --allow-unrelated-histories
+         git subtree add --prefix=coverage https://github.com/Adeola-Aderibigbe/AdeNoteAPI gh-pages
+         git subtree push --prefix=coverage https://github.com/Adeola-Aderibigbe/AdeNoteAPI gh-pages
+         
+         
 
+  
+ 
+   
 
         
