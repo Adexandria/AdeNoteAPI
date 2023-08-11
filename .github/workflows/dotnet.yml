@@ -29,8 +29,8 @@ jobs:
         dotnet-version: 6.0.x  
     - name: Deploy subtree
       run: |
-        git subtree add --prefix coverage && git commit -m "Add sub tree"
-        git subtree push --prefix coverage origin gh-pages
+        git subtree add --prefix=coverage https://github.com/Adeola-Aderibigbe/AdeNoteAPI gh-pages
+        git subtree push --prefix=coverage https://github.com/Adeola-Aderibigbe/AdeNoteAPI gh-pages
     - name: Deploy to git pages
       id: deployment
       uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
