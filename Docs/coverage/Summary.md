@@ -1,7 +1,7 @@
 ﻿# Summary
 |||
 |:---|:---|
-| Generated on: | 08/10/2023 - 15:27:01 |
+| Generated on: | 08/11/2023 - 08:06:49 |
 | Parser: | CoberturaParser |
 | Assemblies: | 1 |
 | Classes: | 38 |
@@ -14,7 +14,7 @@
 | Covered branches: | 130 |
 | Total branches: | 166 |
 | Branch coverage: | 78.3% (130 of 166) |
-| Tag: | Deploy documentation_5823057203 |
+| Tag: | Deploy documentation_5830321303 |
 
 |**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|
