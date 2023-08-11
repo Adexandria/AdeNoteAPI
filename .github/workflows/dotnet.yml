@@ -43,7 +43,10 @@ jobs:
       run: |
          git config --global user.name 'Adeola.Aderibigbe'
          git config --global user.email 'adeola.aderibigbe@cyphercrescent.com'
-         git add Docs/coverage/* .
+         git add Docs/coverage/*.html
+         git add Docs/coverage/*.css
+         git add Docs/coverage/*.js
+         git add Docs/coverage/*.svg
          git commit -a -m "Add recent code coverage"
          git checkout -b gh-pages
          git config pull.rebase false
