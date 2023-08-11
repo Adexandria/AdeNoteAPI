@@ -29,7 +29,7 @@ jobs:
         dotnet-version: 6.0.x  
     - name: Deploy subtree
       run: |
-        git subtree add --prefix Docs/coverage 'Add sub tree'
+        git subtree add --prefix coverage Add sub tree
          git push --set-upstream origin gh-pages && git subtree push --prefix coverage origin gh-pages
     - name: Deploy to git pages
       id: deployment
@@ -62,7 +62,7 @@ jobs:
          git commit -a -m "Add recent code coverage"
          git config pull.rebase false 
          git pull origin gh-pages --allow-unrelated-histories
-         git subtree push --prefix Docs/coverage origin gh-pages
+         git subtree push --prefix coverage origin gh-pages
          
 
   
