@@ -59,11 +59,7 @@ jobs:
          git checkout gh-pages
          git config pull.rebase false 
          git pull origin gh-pages --allow-unrelated-histories
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: gh-pages
+         git push --set-upstream origin gh-pages
    
 
 
