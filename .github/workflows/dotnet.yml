@@ -35,6 +35,7 @@ jobs:
         config_file: Docs/AdeNote_Configuration.config
         github_token: ${{secrets.GITHUB_TOKEN}}
         branch: gh-pages
+    - uses: actions/checkout@v3 
     - name: build test coverage xml
       run: dotnet test AdeNote.Tests/AdeNote.Tests.csproj --collect:"XPlat Code Coverage"
     - name: Generate code coverage report
