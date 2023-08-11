@@ -29,6 +29,8 @@ jobs:
         dotnet-version: 6.0.x  
     - name: Deploy subtree
       run: |
+        git config --global user.name 'Adeola.Aderibigbe'
+        git config --global user.email 'adeola.aderibigbe@cyphercrescent.com'
         git subtree add --prefix=coverage https://github.com/Adeola-Aderibigbe/AdeNoteAPI gh-pages
         git subtree push --prefix=coverage https://github.com/Adeola-Aderibigbe/AdeNoteAPI gh-pages
     - name: Deploy to git pages
