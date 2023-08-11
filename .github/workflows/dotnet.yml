@@ -51,7 +51,7 @@ jobs:
       run: |
          git config --global user.name 'Adeola.Aderibigbe'
          git config --global user.email 'adeola.aderibigbe@cyphercrescent.com'
-         git subtree add coverage
+         git subtree add --prefix coverage
          git add Docs/coverage/*.html
          git add Docs/coverage/*.css
          git add Docs/coverage/*.js
