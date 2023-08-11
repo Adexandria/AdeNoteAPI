@@ -50,8 +50,7 @@ jobs:
          git commit -a -m "Add recent code coverage"
          git config pull.rebase false 
          git pull origin gh-pages --allow-unrelated-histories
-         git subtree add --prefix=coverage origin gh-pages
-         git subtree push --prefix=coverage origin gh-pages
+         git push --set-upstream origin gh-pages
          
          
 
