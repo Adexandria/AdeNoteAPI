@@ -27,8 +27,6 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x  
-    - name: build test coverage xml
-      run: dotnet test AdeNote.Tests/AdeNote.Tests.csproj --collect:"XPlat Code Coverage"
     - name: Deploy to git pages
       id: deployment
       uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
@@ -37,6 +35,8 @@ jobs:
         config_file: Docs/AdeNote_Configuration.config
         github_token: ${{secrets.GITHUB_TOKEN}}
         branch: gh-pages
+    - name: build test coverage xml
+      run: dotnet test AdeNote.Tests/AdeNote.Tests.csproj --collect:"XPlat Code Coverage"
     - name: Generate code coverage report
       uses: im-open/code-coverage-report-generator@4.9.2  
       with:
