@@ -39,11 +39,15 @@ jobs:
         tag: '${{ github.workflow}}_${{ github.run_id }}'
         filefilters: '-Startup.cs;-Program.cs;'
         toolpath: 'reportgeneratortool'
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: 'Code/coverage'  
-        branch: gh-pages
+    - name: Deploy code coverage
+      uses: jigglycrumb/action-deploy-workspace-to-repo@v2.2
+      env:
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+          SRC_FOLDER: Code/coverage
+          DEST_OWNER: Adeola-Aderibigbe
+          DEST_REPO: https://github.com/Adeola-Aderibigbe/AdeNoteAPI
+          DEST_BRANCH: gh-pages
+          DEST_FOLDER: Docs/coverage
     - name: Deploy to git pages
       id: deployment
       uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
