@@ -1,0 +1,4 @@
+<map id="AdeNote.Infrastructure.Services.BookService.Add" name="AdeNote.Infrastructure.Services.BookService.Add">
+<area shape="rect" id="node1" title="Adds a new book" alt="" coords="5,5,239,47"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#af7cfac5b470f7e8886c0335122bdd817" title="Saves a new entity" alt="" coords="287,5,533,47"/>
+</map>
