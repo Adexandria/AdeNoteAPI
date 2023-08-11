@@ -33,12 +33,17 @@ jobs:
       uses: im-open/code-coverage-report-generator@4.9.2  
       with:
         reports: "AdeNote.Tests/TestResults/**/coverage.cobertura.xml"
-        targetdir: "Docs/html/coverage"
+        targetdir: "Docs/coverage"
         reporttypes: 'Html;MarkdownSummary'
         title: 'AdeNote Code Coverage'
         tag: '${{ github.workflow}}_${{ github.run_id }}'
         filefilters: '-Startup.cs;-Program.cs;'
         toolpath: 'reportgeneratortool'
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: 'Docs/coverage'  
+        branch: gh-pages
     - name: Deploy to git pages
       id: deployment
       uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
