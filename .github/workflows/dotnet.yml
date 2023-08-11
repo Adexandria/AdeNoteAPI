@@ -39,12 +39,14 @@ jobs:
         tag: '${{ github.workflow}}_${{ github.run_id }}'
         filefilters: '-Startup.cs;-Program.cs;'
         toolpath: 'reportgeneratortool'
-    - name: Build doxy
-      id: build_doxy
-      uses: mattnotmitt/doxygen-action@v1.9.5
+    - name: Deploy to git pages
+      id: deployment
+      uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
       with:
-         doxyfile-path: 'Docs/AdeNote_Configuration.config'
-         working-directory: 'AdeNote.API'
+        folder: Docs/html
+        config_file: Docs/AdeNote_Configuration.config
+        github_token: ${{secrets.GITHUB_TOKEN}}
+        branch: gh-pages
     - name: add and commit code coverage to gh-page
       run: |
          git config --global user.name 'Adeola.Aderibigbe'
@@ -53,7 +55,6 @@ jobs:
          git add Docs/coverage/*.css
          git add Docs/coverage/*.js
          git add Docs/coverage/*.svg
-         git add Docs/html/* .
          git commit -a -m "Add recent code coverage"
          git merge --no-ff
          git config pull.rebase true 
