@@ -27,6 +27,14 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x  
+    - name: Deploy to git pages
+      id: deployment
+      uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
+      with:
+        folder: Docs/html
+        config_file: Docs/AdeNote_Configuration.config
+        github_token: ${{secrets.GITHUB_TOKEN}}
+        branch: gh-pages
     - name: build test coverage xml
       run: dotnet test AdeNote.Tests/AdeNote.Tests.csproj --collect:"XPlat Code Coverage"
     - name: Generate code coverage report
@@ -44,19 +52,10 @@ jobs:
       env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
           SRC_FOLDER: Code/coverage
-          DEST_OWNER: Adeola-Aderibigbe
-          DEST_REPO: https://github.com/Adeola-Aderibigbe/AdeNoteAPI
           DEST_BRANCH: gh-pages
           DEST_FOLDER: Docs/coverage
-    - name: Deploy to git pages
-      id: deployment
-      uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
-      with:
-        folder: Docs/html
-        config_file: Docs/AdeNote_Configuration.config
-        github_token: ${{secrets.GITHUB_TOKEN}}
-        branch: gh-pages
-        DEST_PREDEPLOY_CLEANUP: "rm bundle* && rm index.html"
+          DEST_PREDEPLOY_CLEANUP: "rm bundle* && rm index.html"
+
   
  
    
