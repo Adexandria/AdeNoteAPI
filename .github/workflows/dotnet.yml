@@ -33,7 +33,7 @@ jobs:
       uses: im-open/code-coverage-report-generator@4.9.2  
       with:
         reports: "AdeNote.Tests/TestResults/**/coverage.cobertura.xml"
-        targetdir: "Docs/coverage"
+        targetdir: "Code/coverage"
         reporttypes: 'Html;MarkdownSummary'
         title: 'AdeNote Code Coverage'
         tag: '${{ github.workflow}}_${{ github.run_id }}'
@@ -42,7 +42,7 @@ jobs:
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        folder: 'Docs/coverage'  
+        folder: 'Code/coverage'  
         branch: gh-pages
     - name: Deploy to git pages
       id: deployment
