@@ -56,6 +56,7 @@ jobs:
         config_file: Docs/AdeNote_Configuration.config
         github_token: ${{secrets.GITHUB_TOKEN}}
         branch: gh-pages
+        DEST_PREDEPLOY_CLEANUP: "rm bundle* && rm index.html"
   
  
    
