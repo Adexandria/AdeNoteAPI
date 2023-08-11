@@ -49,6 +49,7 @@ jobs:
          git add Docs/coverage/*.svg
          git commit -a -m "Add recent code coverage"
          git merge --no-ff
+         git config pull.rebase true 
          git pull origin gh-pages --allow-unrelated-histories
     - name: Push changes
       uses: ad-m/github-push-action@master
