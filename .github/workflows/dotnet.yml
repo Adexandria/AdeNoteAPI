@@ -41,7 +41,7 @@ jobs:
         toolpath: 'reportgeneratortool'
     - name: Deploy code coverage to gh-page
       run: |
-         git config --global user.name 'Adeola.Aderibigbe'
+         git config --global user.name 'Adeola-Aderibigbe'
          git config --global user.email 'adeola.aderibigbe@cyphercrescent.com'
          git add Docs/coverage/*.html
          git add Docs/coverage/*.css
@@ -50,8 +50,8 @@ jobs:
          git commit -a -m "Add recent code coverage"
          git config pull.rebase false 
          git pull origin gh-pages --allow-unrelated-histories
-         git subtree add --prefix=coverage https://github.com/Adeola-Aderibigbe/AdeNoteAPI gh-pages
-         git subtree push --prefix=coverage https://github.com/Adeola-Aderibigbe/AdeNoteAPI gh-pages
+         git subtree add --prefix=coverage origin gh-pages
+         git subtree push --prefix=coverage origin gh-pages
          
          
 
