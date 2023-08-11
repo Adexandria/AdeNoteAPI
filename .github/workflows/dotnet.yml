@@ -47,14 +47,18 @@ jobs:
         tag: '${{ github.workflow}}_${{ github.run_id }}'
         filefilters: '-Startup.cs;-Program.cs;'
         toolpath: 'reportgeneratortool'
-    - name: Deploy code coverage
-      uses: jigglycrumb/action-deploy-workspace-to-repo@v2.2
-      env:
-          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
-          SRC_FOLDER: Code/coverage
-          DEST_BRANCH: gh-pages
-          DEST_FOLDER: Docs/coverage
-          DEST_PREDEPLOY_CLEANUP: "rm bundle* && rm index.html"
+    - name: Deploy code coverage to gh-page
+      run: |
+         git config --global user.name 'Adeola.Aderibigbe'
+         git config --global user.email 'adeola.aderibigbe@cyphercrescent.com'
+         git add Docs/coverage/*.html
+         git add Docs/coverage/*.css
+         git add Docs/coverage/*.js
+         git add Docs/coverage/*.svg
+         git commit -a -m "Add recent code coverage"
+         git config pull.rebase false 
+         git pull origin gh-pages --allow-unrelated-histories
+         git subtree push --prefix coverage origin gh-pages
 
   
  
