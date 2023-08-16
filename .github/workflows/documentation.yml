@@ -49,7 +49,7 @@ jobs:
       run: |
          git config --global user.name 'Adeola.Aderibigbe'
          git config --global user.email 'adeola.aderibigbe@cyphercrescent.com'
-         git switch orgin/code-coverage
+         git switch code-coverage
          git add Docs/coverage/*.html
          git add Docs/coverage/*.css
          git add Docs/coverage/*.js
