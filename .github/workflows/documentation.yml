@@ -49,7 +49,7 @@ jobs:
       run: |
          git config --global user.name 'Adeola.Aderibigbe'
          git config --global user.email 'adeola.aderibigbe@cyphercrescent.com'
-         git switch code-coverage
+         git checkout --orphan docs-deploy
          git add Docs/coverage/*.html
          git add Docs/coverage/*.css
          git add Docs/coverage/*.js
@@ -59,4 +59,4 @@ jobs:
          git commit -m "Add recent code coverage"
          git config pull.rebase false 
          git pull origin gh-pages --allow-unrelated-histories
-         git push origin code-coverage:gh-pages
+         git push origin docs-deploy:gh-pages
