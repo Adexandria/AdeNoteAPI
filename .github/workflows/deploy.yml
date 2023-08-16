@@ -1,0 +1,56 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: Deploy to azure
+
+on:
+  push:
+    branches: [ "master" ]
+    paths-ignore:
+     - 'README.md'
+     - 'Docs/AdeNote_Configuration.config'
+env:
+    staging-url : 'https://adenoteapi.azurewebsites.net/'
+    output_path: 'AdeNote.API/bin/Release/net6.0/publish/'
+    azure_web_name: 'AdeNoteAPI'
+    artifact_name: adenote_artifact
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+    - name: publish release
+      run: dotnet publish -c Release
+    - name: upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{env.artifact_name}}
+        path: '${{env.output_path}}'
+        if-no-files-found: error
+      
+  deploy:
+        needs: build
+        runs-on: ubuntu-latest
+        environment:
+            name: production
+            url: ${{env.staging-url}}
+        
+        steps:
+            - name: check out
+              uses: actions/checkout@v3
+            - name: download artifact
+              uses: actions/download-artifact@v2
+              with:
+                 name: ${{env.artifact_name}}
+            - name: Deploy to azure
+              uses: azure/webapps-deploy@v2
+              with:
+                app-name: ${{env.azure_web_name}}
+                publish-profile: ${{ secrets.AzureAppService_PublishProfile}}
+                package: '.'

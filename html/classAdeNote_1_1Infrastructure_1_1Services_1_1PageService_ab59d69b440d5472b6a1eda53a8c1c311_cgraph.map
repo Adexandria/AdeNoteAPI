@@ -1,0 +1,7 @@
+<map id="AdeNote.Infrastructure.Services.PageService.RemoveAllPageLabels" name="AdeNote.Infrastructure.Services.PageService.RemoveAllPageLabels">
+<area shape="rect" id="node1" title="Removes all labels from a page" alt="" coords="5,104,255,145"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html#ace830e17d97b13554a82603e6e6c2fe3" title="Deletes labels from a page" alt="" coords="303,5,616,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#ace07f2fb2416ddcbebef9cdb4b02af5c" title="Get a particular book that belongs to a user" alt="" coords="336,71,583,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html#a542cf21f31bd5a1434a8c38ad9336bfa" title="Gets an individual page from a particular book" alt="" coords="336,136,583,177"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html#aae6856e5b78eee4cabab62db90e6fd0f" title="Gets all labels in a page" alt="" coords="336,201,583,243"/>
+</map>
