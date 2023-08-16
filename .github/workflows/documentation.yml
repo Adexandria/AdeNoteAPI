@@ -50,7 +50,7 @@ jobs:
          git config --global user.name 'Adeola.Aderibigbe'
          git config --global user.email 'adeola.aderibigbe@cyphercrescent.com'
          git checkout --orphan docs-deploy
-         git rm --cached -r 
+         git rm -rf .
          git add Docs/coverage/*.html
          git add Docs/coverage/*.css
          git add Docs/coverage/*.js
