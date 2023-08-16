@@ -1,10 +1,16 @@
 ﻿using AdeNote.Infrastructure.Extension;
+using AdeNote.Infrastructure.Services;
+using AdeNote.Infrastructure.Utilities;
 using Autofac;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TasksLibrary.Application.Commands.CreateUser;
 using TasksLibrary.Application.Commands.GenerateToken;
 using TasksLibrary.Application.Commands.Login;
 using TasksLibrary.Architecture.Application;
+using TasksLibrary.Models;
+using TasksLibrary.Models.Interfaces;
 
 namespace AdeNote.Controllers
 {
@@ -14,18 +20,26 @@ namespace AdeNote.Controllers
     /// 
     /// Supports version 1.0
     /// </summary>
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Route("api/v{version:apiVersion}/authentication")]
     [ApiVersion("1.0")]
     [ApiController]
     public class AuthenticationController : BaseController
     {
+        private IAuthService _authService;
+        private IUserService _userService;
+        private IAuthToken _authToken;
         /// <summary>
         /// This is the constructor
         /// </summary>
         /// <param name="container">A container that contains all the built dependencies</param>
         /// <param name="application">An interface used to interact with the layers</param>
-        public AuthenticationController(IContainer container, ITaskApplication application) : base(container, application)
+        public AuthenticationController(IContainer container, ITaskApplication application, IUserIdentity userIdentity,
+            IAuthService authService, IUserService userService) : base(container, application,userIdentity)
         {
+            _authService = authService;
+            _userService = userService;
+            _authToken = container.Resolve<IAuthToken>();
         }
 
         /// <summary>
@@ -51,6 +65,7 @@ namespace AdeNote.Controllers
         /// <response code ="500"> Returns if experiencing server issues</response>
         /// <response code ="401"> Returns if unauthorised</response>
         /// <returns>A name and email</returns>
+        [AllowAnonymous] 
         [Consumes("application/json")]
         [Produces("application/json")]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
@@ -83,6 +98,7 @@ namespace AdeNote.Controllers
         /// <response code ="500"> Returns if experiencing server issues</response>
         /// <response code ="401"> Returns if unauthorised</response>
         /// <returns>A name and email</returns>
+        [AllowAnonymous]
         [Consumes("application/json")]
         [Produces("application/json")]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
@@ -92,8 +108,24 @@ namespace AdeNote.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginCommand command)
         {
-            var response = await Application.ExecuteCommand<LoginCommand, LoginDTO>(Container, command);
-            return response.Response();
+            var loginResponse = await Application.ExecuteCommand<LoginCommand, LoginDTO>(Container, command);
+
+            var resultResponse = await _authService.IsAuthenticatorEnabled(loginResponse.Data.Email);
+
+            if(resultResponse.IsSuccessful && loginResponse.IsSuccessful)
+            {
+                var tokenResponse = _authService.GenerateMFAToken(command.Email);
+                Response.Cookies.Append("Multi-FactorToken", tokenResponse.Data, 
+                    new CookieOptions()
+                    {  
+                        Expires = DateTime.UtcNow.AddMinutes(5),
+                        Secure = true,
+                        SameSite = SameSiteMode.None
+                    });
+
+                return Ok("Proceed to enter otp from authenticator");
+            }
+            return loginResponse.Response();
         }
 
 
@@ -113,6 +145,7 @@ namespace AdeNote.Controllers
         /// <response code ="401"> Returns if unauthorised</response>
         /// <response code ="404"> Returns if user can't be found</response>
         /// <returns>Access token</returns>
+        [AllowAnonymous]
         [Consumes("application/json")]
         [Produces("application/json")]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
@@ -131,5 +164,55 @@ namespace AdeNote.Controllers
             var response = await Application.ExecuteCommand<GenerateTokenCommand, string>(Container, command);
             return response.Response();
         }
+
+
+        [HttpPost("two-factor-authentication")]
+        public async Task<IActionResult> SetUpGoogleAuthenticator()
+        {
+            var resultResponse = await _authService.IsAuthenticatorEnabled(CurrentUser);
+
+            if (resultResponse.IsSuccessful)
+                return new BadRequestObjectResult("User has set up two factor authentication");
+
+            var currentUserResponse = await _userService.FetchUserById(CurrentUser);
+
+            if (currentUserResponse.NotSuccessful)
+                return currentUserResponse.Response();
+
+            var response = await _authService.SetEmailAuthenticator(CurrentUser, currentUserResponse.Data.Email);
+
+            return response.Response();
+        }
+
+        [AllowAnonymous]
+        [HttpPost("two-factor-authentication/verify-key")]
+        public async Task<IActionResult> VerifyTOTP(string totp)
+        {
+            var token = Request.Cookies["Multi-FactorToken"];
+
+            var emailResponse = _authService.ReadEmailFromToken(token);
+            if(emailResponse.NotSuccessful)
+                return emailResponse.Response();
+
+            var response = _authService.VerifyEmailAuthenticator(emailResponse.Data, totp);
+            if(response.NotSuccessful)
+                return response.Response();
+
+            var currentUserId = await _userService.GetUserByEmail(emailResponse.Data);
+            var x = new User("", emailResponse.Data);
+            x.Id = currentUserId.Data;
+            var accessToken = _authToken.GenerateAccessToken(x);
+            return Ok(accessToken);
+           
+        }
+
+
+        [HttpGet("two-factor-authentication/key")]
+        public async Task<IActionResult> GetAuthenticatorQRCode()
+        {
+            var response = await _authService.GetUserQrCode(CurrentUser);
+            return response.Response();
+        }
+
     }
 }
