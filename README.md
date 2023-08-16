@@ -3,7 +3,7 @@
 ## AdeNote API
 This is a note management system API. It provides user with secured access to notes and also offers a to-do list feature.
 
-![Git-Pages](https://github.com/Adeola-Aderibigbe/AdeNoteAPI/actions/workflows/dotnet.yml/badge.svg)              ![Git-Pages](https://github.com/Adeola-Aderibigbe/AdeNoteAPI/actions/workflows/build.yml/badge.svg)       ![Git-Pages](https://github.com/Adeola-Aderibigbe/AdeNoteAPI/actions/workflows/deploy.yml/badge.svg)
+![Git-Pages](https://github.com/Adeola-Aderibigbe/AdeNoteAPI/actions/workflows/documentation.yml/badge.svg)              ![Git-Pages](https://github.com/Adeola-Aderibigbe/AdeNoteAPI/actions/workflows/build.yml/badge.svg)       ![Git-Pages](https://github.com/Adeola-Aderibigbe/AdeNoteAPI/actions/workflows/deploy.yml/badge.svg)
 
 ### Packages
 - Entity Framework core
