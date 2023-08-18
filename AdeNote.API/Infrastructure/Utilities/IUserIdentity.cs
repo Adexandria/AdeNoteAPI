@@ -9,5 +9,7 @@
         /// Stores the user id of the authenticated user
         /// </summary>
         public Guid UserId { get; set; }
+
+        public string Email { get; set; }
     }
 }

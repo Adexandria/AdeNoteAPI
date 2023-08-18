@@ -1,4 +1,5 @@
-﻿using AdeNote.Models;
+﻿using AdeNote.Infrastructure.Utilities;
+using AdeNote.Models;
 using Microsoft.EntityFrameworkCore;
 using TasksLibrary.Models;
 
@@ -54,6 +55,11 @@ namespace AdeNote.Db
         public DbSet<UserToken> UserTokens { get; set; }
 
         /// <summary>
+        /// Initialises refresh token objects
+        /// </summary>
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
+
+        /// <summary>
         /// An overriden method to handle the mapping of objects. \n
         /// It is also another way to set up the relationship or primary key
         /// </summary>
@@ -61,6 +67,11 @@ namespace AdeNote.Db
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
           base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<RefreshToken>()
+                .Property(s => s.UserId)
+                .HasConversion<UserIdConverter>()
+                .HasColumnName("User_id");
 
             modelBuilder.Entity<Book>()
                 .Property(x => x.UserId)

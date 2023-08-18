@@ -8,9 +8,11 @@ using Microsoft.AspNetCore.Mvc;
 using TasksLibrary.Application.Commands.CreateUser;
 using TasksLibrary.Application.Commands.GenerateToken;
 using TasksLibrary.Application.Commands.Login;
+using TasksLibrary.Application.Commands.VerifyToken;
 using TasksLibrary.Architecture.Application;
 using TasksLibrary.Models;
 using TasksLibrary.Models.Interfaces;
+using TasksLibrary.Services;
 
 namespace AdeNote.Controllers
 {
@@ -110,21 +112,22 @@ namespace AdeNote.Controllers
         {
             var loginResponse = await Application.ExecuteCommand<LoginCommand, LoginDTO>(Container, command);
 
-            var resultResponse = await _authService.IsAuthenticatorEnabled(loginResponse.Data.Email);
+            var resultResponse = await _authService.IsAuthenticatorEnabled(command.Email);
+
+            var userDetails = await Application.ExecuteCommand<VerifyTokenCommand, UserDTO>(Container,new VerifyTokenCommand()
+            {
+                AccessToken = loginResponse.Data.AccessToken
+            });
 
             if(resultResponse.IsSuccessful && loginResponse.IsSuccessful)
             {
-                var tokenResponse = _authService.GenerateMFAToken(command.Email);
-                Response.Cookies.Append("Multi-FactorToken", tokenResponse.Data, 
-                    new CookieOptions()
-                    {  
-                        Expires = DateTime.UtcNow.AddMinutes(5),
-                        Secure = true,
-                        SameSite = SameSiteMode.None
-                    });
-
+                var tokenResponse = _authService.GenerateMFAToken(userDetails.Data.UserId,command.Email,loginResponse.Data.RefreshToken);
+                AddToCookie("Multi-FactorToken", tokenResponse.Data, 2);
                 return Ok("Proceed to enter otp from authenticator");
             }
+
+            AddToCookie("AdeNote-RefreshToken", loginResponse.Data.RefreshToken, 6000);
+
             return loginResponse.Response();
         }
 
@@ -137,7 +140,6 @@ namespace AdeNote.Controllers
         /// 
         ///             POST /authentication/token
         /// </remarks>
-        /// <param name="token">a refresh token</param>
         /// <returns>An access token</returns>
         /// <response code ="200"> Returns if logged in successfully</response>
         /// <response code ="400"> Returns if experiencing client issues</response>
@@ -154,11 +156,17 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("token")]
-        public async Task<IActionResult> GetAccessToken(string token)
+        public async Task<IActionResult> GetAccessToken()
         {
+            var refreshToken = Request.Cookies["AdeNote-RefreshToken"];
+
+            var revokedResponse = await _authService.IsTokenRevoked(refreshToken);
+            if (revokedResponse.NotSuccessful)
+                return revokedResponse.Response();
+
             var command = new GenerateTokenCommand() 
             { 
-                RefreshToken = token
+                RefreshToken = refreshToken
             };
 
             var response = await Application.ExecuteCommand<GenerateTokenCommand, string>(Container, command);
@@ -190,20 +198,19 @@ namespace AdeNote.Controllers
         {
             var token = Request.Cookies["Multi-FactorToken"];
 
-            var emailResponse = _authService.ReadEmailFromToken(token);
-            if(emailResponse.NotSuccessful)
-                return emailResponse.Response();
+            var detailsResponse = _authService.ReadDetailsFromToken(token);
+            if(detailsResponse.NotSuccessful)
+                return detailsResponse.Response();
 
-            var response = _authService.VerifyEmailAuthenticator(emailResponse.Data, totp);
+            var response = _authService.VerifyEmailAuthenticator(detailsResponse.Data.Email, totp);
             if(response.NotSuccessful)
                 return response.Response();
 
-            var currentUserId = await _userService.GetUserByEmail(emailResponse.Data);
-            var x = new User("", emailResponse.Data);
-            x.Id = currentUserId.Data;
-            var accessToken = _authToken.GenerateAccessToken(x);
+            var accessToken = _authToken.GenerateAccessToken(detailsResponse.Data.UserId,detailsResponse.Data.Email);
+
+            AddToCookie("AdeNote-RefreshToken", detailsResponse.Data.RefreshToken, 600000);
+
             return Ok(accessToken);
-           
         }
 
 
@@ -214,5 +221,30 @@ namespace AdeNote.Controllers
             return response.Response();
         }
 
+
+        [HttpPost("sign-out")]
+        public async Task<IActionResult> SignOut()
+        {
+            var refreshToken = Request.Cookies["AdeNote-RefreshToken"];
+
+            var response = await _authService.RevokeRefreshToken(CurrentUser, refreshToken);
+
+            Response.Cookies.Delete("AdeNote-RefreshToken");
+
+            return response.Response();
+        }
+
+
+        [NonAction]
+        private void AddToCookie(string name,string data, double time)
+        {
+            Response.Cookies.Append(name, data,
+                  new CookieOptions()
+                  {
+                      Expires = DateTime.UtcNow.AddMinutes(time),
+                      Secure = true,
+                      SameSite = SameSiteMode.None
+                  });
+        }
     }
 }

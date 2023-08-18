@@ -1,6 +1,7 @@
 ﻿using AdeNote.Db;
 using AdeNote.Models;
 using Microsoft.EntityFrameworkCore;
+using TasksLibrary.Models;
 
 namespace AdeNote.Infrastructure.Repository
 {
@@ -34,10 +35,34 @@ namespace AdeNote.Infrastructure.Repository
                 .FirstOrDefaultAsync();
         }
 
+        public async Task<RefreshToken> GetRefreshToken(string refreshToken)
+        {
+            var refreshTokens = await Db.RefreshTokens.ToListAsync();
+
+            var currentRefreshToken = refreshTokens.FirstOrDefault(s=> s.Token == refreshToken);
+
+            return currentRefreshToken;
+        }
+
+        public async Task<RefreshToken> GetRefreshTokenByUserId(Guid userId, string refreshToken)
+        {
+            var refreshTokens = await Db.RefreshTokens.ToListAsync();
+
+            var currentRefreshToken = refreshTokens.FirstOrDefault(s => s.UserId.Id == userId && s.Token == refreshToken);
+
+            return currentRefreshToken;
+        }
+
         public async Task<bool> Remove(UserToken entity)
         {
             Db.UserTokens.Remove(entity);
             return await SaveChanges<UserToken>();
+        }
+
+        public async Task<bool> RevokeRefreshToken(RefreshToken refreshToken)
+        {
+            refreshToken.IsRevoked = true;
+            return await SaveChanges<RefreshToken>();
         }
 
         public async Task<bool> Update(UserToken entity)

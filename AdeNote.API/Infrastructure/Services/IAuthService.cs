@@ -1,4 +1,5 @@
 ﻿using AdeNote.Models.DTOs;
+using TasksLibrary.Models;
 using TasksLibrary.Utilities;
 
 namespace AdeNote.Infrastructure.Services
@@ -10,7 +11,9 @@ namespace AdeNote.Infrastructure.Services
         Task<ActionResult> IsAuthenticatorEnabled(string email);
         Task<ActionResult<AuthenticatorDTO>> SetEmailAuthenticator(Guid userId,string email);      
         ActionResult VerifyEmailAuthenticator(string email,string otp);
-        ActionResult<string> GenerateMFAToken(string email);
-        ActionResult<string> ReadEmailFromToken(string token);
+        ActionResult<string> GenerateMFAToken(Guid userId,string email,string refreshToken);
+        ActionResult<DetailsDTO> ReadDetailsFromToken(string token);
+        Task<ActionResult> RevokeRefreshToken(Guid userId, string refreshToken);
+        Task<ActionResult> IsTokenRevoked(string refreshToken);
     }
 }

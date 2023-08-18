@@ -50,6 +50,7 @@ namespace AdeNote.Controllers
             Container = container;
             Application = application;
             CurrentUser = userIdentity.UserId;
+            CurrentEmail = userIdentity.Email;
         }
         /// <summary>
         /// A container property that contains all the registered dependencies
@@ -65,5 +66,7 @@ namespace AdeNote.Controllers
         /// A guid property that hold the value of the current user id
         /// </summary>
         protected Guid CurrentUser { get; set;}
+
+        protected string CurrentEmail { get; set; }
     }
 }
