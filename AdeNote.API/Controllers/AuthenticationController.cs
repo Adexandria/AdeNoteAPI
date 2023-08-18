@@ -223,7 +223,7 @@ namespace AdeNote.Controllers
 
 
         [HttpPost("sign-out")]
-        public async Task<IActionResult> SignOut()
+        public async Task<IActionResult> LogOut()
         {
             var refreshToken = Request.Cookies["AdeNote-RefreshToken"];
 
