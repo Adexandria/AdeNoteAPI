@@ -27,7 +27,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <summary>
         /// Saves a new label
         /// </summary>
-        /// <param name="entity">A book object</param>
+        /// <param name="entity">A label object</param>
         /// <returns>a boolean value</returns>
         public async Task<bool> Add(Label entity)
         {

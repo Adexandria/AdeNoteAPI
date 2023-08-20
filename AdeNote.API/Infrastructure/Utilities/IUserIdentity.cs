@@ -10,6 +10,9 @@
         /// </summary>
         public Guid UserId { get; set; }
 
+        /// <summary>
+        /// Stores the email of the authenticated user
+        /// </summary>
         public string Email { get; set; }
     }
 }

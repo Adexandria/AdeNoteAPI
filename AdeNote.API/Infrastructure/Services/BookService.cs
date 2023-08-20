@@ -167,6 +167,9 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
+        /// <summary>
+        /// Handles the persisting and querying of book object
+        /// </summary>
         public IBookRepository bookRepository { get; set; }
     }
 }

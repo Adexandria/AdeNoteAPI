@@ -28,6 +28,9 @@ namespace AdeNote.Infrastructure.Utilities
         /// </summary>
         public Guid UserId { get; set; }
 
+        /// <summary>
+        /// Stores the user email of the authenticated user
+        /// </summary>
         public string Email { get; set; }
     }
 }

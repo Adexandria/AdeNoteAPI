@@ -4,13 +4,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AdeNote.Infrastructure.Repository
 {
-
+    /// <summary>
+    /// 
+    /// </summary>
     public class UserDetailRepository : Repository,IUserDetailRepository
     {
         public UserDetailRepository(NoteDbContext db) : base(db)
         {
 
         }
+        /// <summary>
+        /// Saves a new entity
+        /// </summary>
+        /// <param name="entity">A object</param>
+        /// <returns>a boolean value</returns>
         public async Task<bool> Add(UserDetail entity)
         {
            entity.Id = Guid.NewGuid();
@@ -18,6 +25,9 @@ namespace AdeNote.Infrastructure.Repository
            return await SaveChanges<UserDetail>();
         }
 
+        /// <summary>
+        /// An interface that includes the details of a user
+        /// </summary>
         public async Task<UserDetail> GetUserDetail(Guid userId)
         {
             return await Db.UserDetails.
@@ -25,12 +35,22 @@ namespace AdeNote.Infrastructure.Repository
                 .FirstOrDefaultAsync(x => x.UserId == userId);
         }
 
+        /// <summary>
+        /// Remove an existing object
+        /// </summary>
+        /// <param name="entity">A object</param>
+        /// <returns>a boolean value</returns>
         public async Task<bool> Remove(UserDetail entity)
         {
             Db.UserDetails.Remove(entity);
             return await SaveChanges<UserDetail>();
         }
 
+        /// <summary>
+        /// Updates an existing object
+        /// </summary>
+        /// <param name="entity">A object</param>
+        /// <returns>a boolean value</returns>
         public async Task<bool> Update(UserDetail entity)
         {
             var currentUserDetail = Db.UserDetails.Where(s=>s.UserId == entity.UserId).FirstOrDefault();

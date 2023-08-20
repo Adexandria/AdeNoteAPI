@@ -89,8 +89,6 @@ builder.Services.AddScoped<ILabelService, LabelService>();
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserDetailRepository, UserDetailRepository>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IBlobService, BlobService>();
 
 builder.Services.AddDbContext<NoteDbContext>(options => options
