@@ -1,6 +1,7 @@
 <map id="AdeNote.Infrastructure.Repository.IRepository.Remove" name="AdeNote.Infrastructure.Repository.IRepository.Remove">
-<area shape="rect" id="node1" title="Remove an existing object" alt="" coords="287,71,533,112"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#a34e8a74cd49c072981876f80509b7019" title="Deletes an existing book" alt="" coords="5,5,239,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a89eb05e7a610ce4b752bc8ce7ba72257" title="Removes a particular page" alt="" coords="5,71,239,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a360d316bd27475252c1a073eb8fd54bc" title="Removes an existing label" alt="" coords="5,136,239,177"/>
+<area shape="rect" id="node1" title="Remove an existing object" alt="" coords="287,104,533,145"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a7859b04addc0239dc19e7f2c26948c65" title="Disables Multi factor authentication for a particular user" alt="" coords="5,5,239,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#a34e8a74cd49c072981876f80509b7019" title="Deletes an existing book" alt="" coords="5,71,239,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a89eb05e7a610ce4b752bc8ce7ba72257" title="Removes a particular page" alt="" coords="5,136,239,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a360d316bd27475252c1a073eb8fd54bc" title="Removes an existing label" alt="" coords="5,201,239,243"/>
 </map>

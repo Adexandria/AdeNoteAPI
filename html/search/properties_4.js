@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['id_461',['Id',['../classAdeNote_1_1Models_1_1BaseClass.html#a5e1dd744938a11239b5fcd7cd1d7443d',1,'AdeNote.Models.BaseClass.Id()'],['../classAdeNote_1_1Models_1_1DTOs_1_1BookDTO.html#ae57c7eb3546d3d38541b284225ff6de0',1,'AdeNote.Models.DTOs.BookDTO.Id()'],['../classAdeNote_1_1Models_1_1DTOs_1_1BookPages.html#a3086f89c5f8f0715506981391c3c03ab',1,'AdeNote.Models.DTOs.BookPages.Id()'],['../classAdeNote_1_1Models_1_1DTOs_1_1LabelDTO.html#a29005f5091d9fecc55b7cba1e63a9679',1,'AdeNote.Models.DTOs.LabelDTO.Id()']]]
+  ['email_649',['Email',['../interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html#afd6575ac63c61e6be0f33db20f200d68',1,'AdeNote.Infrastructure.Utilities.IUserIdentity.Email()'],['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdentity.html#ad93105359331c36cf76b6d193274ab7d',1,'AdeNote.Infrastructure.Utilities.UserIdentity.Email()'],['../classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO.html#a41fb6fc5368d6aef5fef1d5af7d17a61',1,'AdeNote.Models.DTOs.DetailsDTO.Email()'],['../classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html#a4067a59992ccb08aa993a2cf2b258b23',1,'AdeNote.Models.DTOs.UserDTO.Email()']]]
 ];

@@ -1,7 +1,9 @@
 <map id="AdeNote.Infrastructure.Repository.Repository" name="AdeNote.Infrastructure.Repository.Repository">
-<area shape="rect" id="node1" title="Commits new and tracked changes in the objects" alt="" coords="5,104,252,145"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html" title="Handles the persisting and querying of Book objects" alt="" coords="300,5,547,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html" title="Handles persisting and querying for page labels." alt="" coords="300,71,547,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository.html" title="Handles persisting and querying for Label objects" alt="" coords="300,136,547,177"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html" title="Handles persisting and querying for page object" alt="" coords="300,201,547,243"/>
+<area shape="rect" id="node1" title="Commits new and tracked changes in the objects" alt="" coords="5,169,252,211"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html" title="Handles the authentication of the app" alt="" coords="300,5,547,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html" title="Handles the persisting and querying of Book objects" alt="" coords="300,71,547,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html" title="Handles persisting and querying for page labels." alt="" coords="300,136,547,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository.html" title="Handles persisting and querying for Label objects" alt="" coords="300,201,547,243"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html" title="Handles persisting and querying for page object" alt="" coords="300,267,547,308"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html" title=" " alt="" coords="300,332,547,373"/>
 </map>

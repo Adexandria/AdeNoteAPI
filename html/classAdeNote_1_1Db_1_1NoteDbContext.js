@@ -6,5 +6,8 @@ var classAdeNote_1_1Db_1_1NoteDbContext =
     [ "LabelPage", "classAdeNote_1_1Db_1_1NoteDbContext.html#ab87ae22cea895df7a57626ec3fcfc083", null ],
     [ "Labels", "classAdeNote_1_1Db_1_1NoteDbContext.html#a5337f5e16ca23614ebcd28bc990e47c4", null ],
     [ "Pages", "classAdeNote_1_1Db_1_1NoteDbContext.html#a27439d3eab69d1af06403bcda671f3d8", null ],
-    [ "Users", "classAdeNote_1_1Db_1_1NoteDbContext.html#a930d201fdb648b068bab2954cd9d0a08", null ]
+    [ "RefreshTokens", "classAdeNote_1_1Db_1_1NoteDbContext.html#a16fcb633257a4267ea3971bcf109fe9d", null ],
+    [ "UserDetails", "classAdeNote_1_1Db_1_1NoteDbContext.html#abb266acade535ccafafe79ee6b4de430", null ],
+    [ "Users", "classAdeNote_1_1Db_1_1NoteDbContext.html#a930d201fdb648b068bab2954cd9d0a08", null ],
+    [ "UserTokens", "classAdeNote_1_1Db_1_1NoteDbContext.html#afd765098415a8a18e28a660aa6bd6e81", null ]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['firstmigration_237',['FirstMigration',['../classAdeNote_1_1Migrations_1_1FirstMigration.html',1,'AdeNote::Migrations']]]
+  ['detailsdto_339',['DetailsDTO',['../classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO.html',1,'AdeNote::Models::DTOs']]]
 ];
