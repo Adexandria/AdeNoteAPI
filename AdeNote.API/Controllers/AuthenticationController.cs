@@ -29,6 +29,7 @@ namespace AdeNote.Controllers
     {
         private IAuthService _authService;
         private IAuthToken _authToken;
+        private IEmailService _emailService;
         /// <summary>
         /// This is the constructor
         /// </summary>
@@ -37,9 +38,10 @@ namespace AdeNote.Controllers
         /// <param name="authService">An authentication service </param>
         /// <param name="userIdentity">An interface that interacts with the user. This fetches the current user details</param>
         public AuthenticationController(IContainer container, ITaskApplication application, IUserIdentity userIdentity,
-            IAuthService authService) : base(container, application,userIdentity)
+            IAuthService authService, IEmailService emailService) : base(container, application,userIdentity)
         {
             _authService = authService;
+            _emailService = emailService;
             _authToken = container.Resolve<IAuthToken>();
         }
 
@@ -173,7 +175,7 @@ namespace AdeNote.Controllers
         }
 
         /// <summary>
-        /// Set up two factor authentication using authenticator app or sms
+        /// Set up two factor authentication using authenticator sms
         /// </summary>
         /// <remarks>
         /// Sample request: 
@@ -205,6 +207,44 @@ namespace AdeNote.Controllers
 
             return response.Response();
         }
+
+        /// <summary>
+        /// Set up two factor authentication using authenticator sms
+        /// </summary>
+        /// <remarks>
+        /// Sample request: 
+        /// 
+        ///             POST /authentication/add-phonenumber
+        ///             
+        /// </remarks>
+        /// <response code ="200"> Returns if two factor authenticator was successfully set up</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="404"> Returns if parameters not found</response>
+        /// <response code ="401"> Returns if unauthorised</response>
+        /// <returns>Authenticator key</returns>
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<AuthenticatorDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpPost("add-phonenumber")]
+        public async Task<IActionResult> AddPhoneNumber(string phoneNumber)
+        {
+            var resultResponse = await _authService.IsAuthenticatorEnabled(CurrentUser);
+
+            if (resultResponse.IsSuccessful)
+                return TasksLibrary.Utilities.ActionResult.Failed("User has set up two factor authentication").Response();
+
+            var response = await _authService.SetPhoneNumber(CurrentUser,phoneNumber);
+
+            if(response.NotSuccessful)
+                return response.Response();
+
+            return response.Response();
+        }
+
 
         /// <summary>
         /// Verify otp 

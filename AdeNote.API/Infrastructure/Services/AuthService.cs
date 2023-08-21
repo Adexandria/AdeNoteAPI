@@ -1,4 +1,5 @@
 ﻿using AdeNote.Infrastructure.Repository;
+using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
 using Google.Authenticator;
@@ -26,9 +27,13 @@ namespace AdeNote.Infrastructure.Services
         /// <param name="_authRepository">Handles the authentication</param>
         /// <param name="_blobService">Handles the cloud storage</param>
         /// <param name="_configuration">Reads the key/value pair from appsettings</param>
-        public AuthService(IAuthRepository _authRepository,IBlobService _blobService,IConfiguration _configuration)
+        public AuthService(IAuthRepository _authRepository,
+            IUserDetailRepository _userDetailRepository,
+            IBlobService _blobService,IConfiguration _configuration,ISmsService _smsService)
         {
             authRepository = _authRepository;
+            userDetailRepository = _userDetailRepository;
+            smsService = _smsService;
             key = _configuration["TwoFactorSecret"];
             blobService = _blobService;
             loginSecret = _configuration["LoginSecret"];
@@ -82,9 +87,82 @@ namespace AdeNote.Infrastructure.Services
             {
                 return ActionResult<AuthenticatorDTO>.Failed(ex.Message);
             }
-            
         }
-        
+
+        /// <summary>
+        /// Sets phone number verification
+        /// </summary>
+        /// <param name="userId">User id</param>
+        /// <param name="phoneNumber">phone number</param>
+        public async Task<ActionResult> SetPhoneNumber(Guid userId, string phoneNumber)
+        {
+            try
+            {
+                if (userId == Guid.Empty)
+                    return ActionResult.Failed("Invalid user id", StatusCodes.Status404NotFound);
+
+                if (string.IsNullOrEmpty(phoneNumber))
+                    return ActionResult.Failed("Invalid phone number", StatusCodes.Status404NotFound);
+
+                var userDetails = new UserDetail(userId, phoneNumber);
+
+                var result = await userDetailRepository.Add(userDetails);
+                if (!result)
+                    return ActionResult.Failed("Failed to set up sms authenticator", StatusCodes.Status400BadRequest);
+
+                var bytesKey = Encoding.UTF8.GetBytes($"{key}-{phoneNumber}");
+
+                var token = BitConverter.ToInt64(bytesKey, 0).ToString("D10")[..6];
+                var message = $"Enter your authentication code {token} to verify your phone number";
+
+                smsService.SendSms(new Sms(phoneNumber,message));
+
+                return ActionResult.Successful();
+            }
+            catch (Exception ex)
+            {
+                return ActionResult.Failed(ex.Message);
+            }
+          
+        }
+
+
+        public async Task<ActionResult> VerifyPhoneNumber(Guid userId, string token)
+        {
+            try
+            {
+                if (userId == Guid.Empty)
+                    return ActionResult.Failed("Invalid user id", StatusCodes.Status404NotFound);
+
+                if (string.IsNullOrEmpty(token))
+                    return ActionResult.Failed("Invalid phone number", StatusCodes.Status404NotFound);
+
+                var currentUserDetail = await userDetailRepository.GetUserDetail(userId);
+                if(currentUserDetail == null)
+                    return ActionResult.Failed("User details not found", StatusCodes.Status400BadRequest);
+
+
+                var bytesKey = Encoding.UTF8.GetBytes($"{key}-{currentUserDetail.Phonenumber}");
+
+                var generatedToken = BitConverter.ToInt64(bytesKey, 0).ToString("D10")[..6];
+
+                if(generatedToken != token)
+                    return ActionResult.Failed("Invalid token", StatusCodes.Status400BadRequest);
+
+                currentUserDetail.VerifyPhoneNumber();
+
+                var result = await userDetailRepository.Update(currentUserDetail);
+                if(!result)
+                    return ActionResult.Failed("Failed to verify phonenumber", StatusCodes.Status400BadRequest);
+
+                return ActionResult.Successful();
+            }
+            catch (Exception ex)
+            {
+                return ActionResult.Failed(ex.Message);
+            }
+        }
+
         /// <summary>
         /// Verifies authenticator otp
         /// </summary>
@@ -329,8 +407,12 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
+     
+
         public string key;
         public IAuthRepository authRepository;
+        public IUserDetailRepository userDetailRepository;
+        public ISmsService smsService;
         public IBlobService blobService;
         public string loginSecret;
         public TwoFactorAuthenticator TwoFactorAuthenticator;

@@ -90,6 +90,7 @@ builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserDetailRepository, UserDetailRepository>();
 builder.Services.AddScoped<IBlobService, BlobService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 builder.Services.AddDbContext<NoteDbContext>(options => options
 .UseSqlServer(connectionString));

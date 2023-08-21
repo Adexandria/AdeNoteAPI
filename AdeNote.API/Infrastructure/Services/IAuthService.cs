@@ -21,11 +21,13 @@ namespace AdeNote.Infrastructure.Services
         /// </summary>
         /// <param name="userId">User id</param>
         Task<ActionResult> IsAuthenticatorEnabled(Guid userId);
+
         /// <summary>
         /// Checks if MFA has been enabled for the user
         /// </summary>
         /// <param name="email">Email of the user</param>
         Task<ActionResult> IsAuthenticatorEnabled(string email);
+
         /// <summary>
         /// Sets up MFA using authenticator app
         /// </summary>
@@ -33,7 +35,24 @@ namespace AdeNote.Infrastructure.Services
         /// <param name="email">Email of the user</param>
         /// <returns>Manual key and qr code</returns>
         Task<ActionResult<AuthenticatorDTO>> SetAuthenticator(Guid userId,string email);      
-        
+
+        /// <summary>
+        /// Sets up phone number
+        /// </summary>
+        /// <param name="userId">User id</param>
+        /// <param name="phoneNumber">phone number</param>
+        Task<ActionResult> SetPhoneNumber(Guid userId,string phoneNumber);
+
+
+        /// <summary>
+        /// Sets up phone number
+        /// </summary>
+        /// <param name="userId">User id</param>
+        /// <param name="token">phone number verification token</param>
+        Task<ActionResult> VerifyPhoneNumber(Guid userId, string token);
+
+        //check if phonenumber added has been verified before user can send verification code
+
         /// <summary>
         /// Verifies authenticator otp
         /// </summary>
