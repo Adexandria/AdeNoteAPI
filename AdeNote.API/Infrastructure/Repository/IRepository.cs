@@ -11,21 +11,21 @@ namespace AdeNote.Infrastructure.Repository
         /// <summary>
         /// Saves a new entity
         /// </summary>
-        /// <param name="entity">A book object</param>
+        /// <param name="entity">A object</param>
         /// <returns>a boolean value</returns>
         Task<bool> Add(T entity);
 
         /// <summary>
         /// Updates an existing object
         /// </summary>
-        /// <param name="entity">A book object</param>
+        /// <param name="entity">A object</param>
         /// <returns>a boolean value</returns>
         Task<bool> Update(T entity);
 
         /// <summary>
         /// Remove an existing object
         /// </summary>
-        /// <param name="entity">A book object</param>
+        /// <param name="entity">A object</param>
         /// <returns>a boolean value</returns>
         Task<bool> Remove(T entity);
 

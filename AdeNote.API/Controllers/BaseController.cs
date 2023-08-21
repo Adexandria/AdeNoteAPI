@@ -33,23 +33,13 @@ namespace AdeNote.Controllers
         /// </summary>
         /// <param name="container">A container that contains all the built dependencies</param>
         /// <param name="application">An interface used to interact with the layers</param>
-        public BaseController(IContainer container, ITaskApplication application)
-        {
-            Container = container;
-            Application = application;
-        }
-
-        /// <summary>
-        /// A constructor
-        /// </summary>
-        /// <param name="container">A container that contains all the built dependencies</param>
-        /// <param name="application">An interface used to interact with the layers</param>
         /// <param name="userIdentity">An interface that interacts with the user. This fetches the current user details</param>
         public BaseController(IContainer container,ITaskApplication application, IUserIdentity userIdentity)
         {
             Container = container;
             Application = application;
             CurrentUser = userIdentity.UserId;
+            CurrentEmail = userIdentity.Email;
         }
         /// <summary>
         /// A container property that contains all the registered dependencies
@@ -65,5 +55,7 @@ namespace AdeNote.Controllers
         /// A guid property that hold the value of the current user id
         /// </summary>
         protected Guid CurrentUser { get; set;}
+
+        protected string CurrentEmail { get; set; }
     }
 }

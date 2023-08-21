@@ -1,5 +1,7 @@
 ﻿
 
+using System.Security.Claims;
+
 namespace AdeNote.Infrastructure.Utilities
 {
     /// <summary>
@@ -17,11 +19,18 @@ namespace AdeNote.Infrastructure.Utilities
                 .FirstOrDefault(x => x.Type == "id")?.Value, out Guid id);
 
             UserId = id;
+
+            Email = httpContext.HttpContext?.User?.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
         }
 
         /// <summary>
         /// Stores the user id of the authenticated user
         /// </summary>
         public Guid UserId { get; set; }
+
+        /// <summary>
+        /// Stores the user email of the authenticated user
+        /// </summary>
+        public string Email { get; set; }
     }
 }

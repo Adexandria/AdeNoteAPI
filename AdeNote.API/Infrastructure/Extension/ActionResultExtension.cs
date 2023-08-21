@@ -3,7 +3,6 @@ using System.Net;
 
 namespace AdeNote.Infrastructure.Extension
 {
-
     /// <summary>
     /// This extension for the custom action result
     /// </summary>
