@@ -1,0 +1,4 @@
+<map id="AdeNote.Models.UserToken.SetAuthenticatorKey" name="AdeNote.Models.UserToken.SetAuthenticatorKey">
+<area shape="rect" id="node1" title="Set the authenticator key" alt="" coords="287,5,491,47"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ab3d8cce57115793a8568081c7ebec059" title="Sets up MFA using authenticator app" alt="" coords="5,5,239,47"/>
+</map>

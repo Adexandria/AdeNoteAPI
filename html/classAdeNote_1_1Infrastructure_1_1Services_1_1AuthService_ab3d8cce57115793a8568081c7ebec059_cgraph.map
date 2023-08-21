@@ -1,0 +1,6 @@
+<map id="AdeNote.Infrastructure.Services.AuthService.SetAuthenticator" name="AdeNote.Infrastructure.Services.AuthService.SetAuthenticator">
+<area shape="rect" id="node1" title="Sets up MFA using authenticator app" alt="" coords="5,71,239,112"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#af7cfac5b470f7e8886c0335122bdd817" title="Saves a new entity" alt="" coords="287,5,533,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Models_1_1UserToken.html#a4f471f95ed68b7070c266e8813d7dee7" title="Set the authenticator key" alt="" coords="308,71,512,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html#a2812f257404da2b4e1491ae4eccd9e16" title="Uploads image" alt="" coords="293,136,527,177"/>
+</map>
