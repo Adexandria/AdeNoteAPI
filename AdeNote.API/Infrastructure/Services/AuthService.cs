@@ -16,6 +16,13 @@ namespace AdeNote.Infrastructure.Services
         /// <summary>
         /// A constructor
         /// </summary>
+        public AuthService()
+        {
+            TwoFactorAuthenticator = new TwoFactorAuthenticator();
+        }
+        /// <summary>
+        /// A constructor
+        /// </summary>
         /// <param name="_authRepository">Handles the authentication</param>
         /// <param name="_blobService">Handles the cloud storage</param>
         /// <param name="_configuration">Reads the key/value pair from appsettings</param>
@@ -25,6 +32,7 @@ namespace AdeNote.Infrastructure.Services
             key = _configuration["TwoFactorSecret"];
             blobService = _blobService;
             loginSecret = _configuration["LoginSecret"];
+            TwoFactorAuthenticator = new TwoFactorAuthenticator();
         }
         /// <summary>
         /// Sets up MFA using authenticator app
@@ -44,7 +52,7 @@ namespace AdeNote.Infrastructure.Services
 
                 byte[] accountKey = Encoding.ASCII.GetBytes($"{key}-{email}");
 
-                var authenticator = new TwoFactorAuthenticator()
+                var authenticator = TwoFactorAuthenticator
                     .GenerateSetupCode("AdeNote", email, accountKey);
 
                 var qrCode = authenticator.QrCodeSetupImageUrl.Split(',')[1];
@@ -93,8 +101,7 @@ namespace AdeNote.Infrastructure.Services
                     return ActionResult<string>.Failed("Invalid otp", StatusCodes.Status404NotFound);
 
                 byte[] accountKey = Encoding.ASCII.GetBytes($"{key}-{email}");
-                var authenticator = new TwoFactorAuthenticator();
-                var result = authenticator
+                var result = TwoFactorAuthenticator
                     .ValidateTwoFactorPIN(accountKey, otp);
                 if (!result)
                     return ActionResult.Failed("Invalid otp", StatusCodes.Status400BadRequest);
@@ -170,7 +177,7 @@ namespace AdeNote.Infrastructure.Services
                 if (userId == Guid.Empty)
                     return ActionResult<string>.Failed("Invalid user id", StatusCodes.Status404NotFound);
 
-                if (string.IsNullOrEmpty(email) && string.IsNullOrEmpty(refreshToken))
+                if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(refreshToken))
                     return ActionResult<string>.Failed("Invalid email or refresh token",StatusCodes.Status400BadRequest);
 
                 var encodedToken = Encoding.UTF8.GetBytes($"{loginSecret}-{email}-{userId:N}-{refreshToken}");
@@ -225,7 +232,7 @@ namespace AdeNote.Infrastructure.Services
         {
             try
             {
-                if (string.IsNullOrEmpty(email))
+               if (string.IsNullOrEmpty(email))
                     return ActionResult<AuthenticatorDTO>.Failed("Invalid email", StatusCodes.Status404NotFound);
 
                 var userAuthenticator = await authRepository.GetAuthenticationType(email);
@@ -295,9 +302,10 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        private readonly string key;
-        private IAuthRepository authRepository;
-        private readonly IBlobService blobService;
-        private readonly string loginSecret;
+        public string key;
+        public IAuthRepository authRepository;
+        public IBlobService blobService;
+        public string loginSecret;
+        public TwoFactorAuthenticator TwoFactorAuthenticator;
     }
 }

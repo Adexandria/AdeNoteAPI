@@ -63,11 +63,12 @@ namespace AdeNote.Tests.Repositories
             Assert.That(response, Is.EqualTo(true));
         }
 
-        [Test,Ignore("Not wo")]
+        [Test,Ignore("Not working")]
         public async Task ShouldUpdatePageSuccessfully()
         {
             //Act
-            var response = await Repo.Update(_pages.FirstOrDefault());
+            var currentPage = await Repo.GetBookPage(new Guid("fa00ce8a-2418-4c24-aebd-2e10e3d6866c"), new Guid("f1f49b59-d026-4c3f-b898-1844e6cd55eb"));
+            var response = await Repo.Update(currentPage);
 
             //Assert
             Assert.That(response, Is.EqualTo(true));
