@@ -11,9 +11,7 @@ using TasksLibrary.Application.Commands.GenerateToken;
 using TasksLibrary.Application.Commands.Login;
 using TasksLibrary.Application.Commands.VerifyToken;
 using TasksLibrary.Architecture.Application;
-using TasksLibrary.Models;
 using TasksLibrary.Models.Interfaces;
-using TasksLibrary.Services;
 
 namespace AdeNote.Controllers
 {
@@ -123,11 +121,11 @@ namespace AdeNote.Controllers
             if(resultResponse.IsSuccessful && loginResponse.IsSuccessful)
             {
                 var tokenResponse = _authService.GenerateMFAToken(userDetails.Data.UserId,command.Email,loginResponse.Data.RefreshToken);
-                AddToCookie("Multi-FactorToken", tokenResponse.Data, 2);
+                AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(2));
                 return Ok("Proceed to enter otp from authenticator");
             }
 
-            AddToCookie("AdeNote-RefreshToken", loginResponse.Data.RefreshToken, 6000);
+            AddToCookie("AdeNote-RefreshToken", loginResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
 
             return loginResponse.Response();
         }
@@ -183,6 +181,11 @@ namespace AdeNote.Controllers
         ///             POST /authentication/two-factor-authentication
         ///             
         /// </remarks>
+        /// <response code ="200"> Returns if two factor authenticator was successfully set up</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="404"> Returns if parameters not found</response>
+        /// <response code ="401"> Returns if unauthorised</response>
         /// <returns>Authenticator key</returns>
         [Produces("application/json")]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
@@ -212,6 +215,11 @@ namespace AdeNote.Controllers
         ///                 POST /authentication/two-factor-authentication/verify-key
         /// </remarks>
         /// <param name="totp">Timed based one time password</param>
+        /// <response code ="200"> Returns if one time password was verified correctly</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="404"> Returns if parameters not found</response>
+        /// <response code ="401"> Returns if unauthorised</response> 
         /// <returns>Access token</returns>
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
@@ -220,7 +228,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [AllowAnonymous]
         [HttpPost("two-factor-authentication/verify-key")]
-        public async Task<IActionResult> VerifyTOTP(string totp)
+        public IActionResult VerifyTOTP(string totp)
         {
             var token = Request.Cookies["Multi-FactorToken"];
 
@@ -234,7 +242,7 @@ namespace AdeNote.Controllers
 
             var accessToken = _authToken.GenerateAccessToken(detailsResponse.Data.UserId,detailsResponse.Data.Email);
 
-            AddToCookie("AdeNote-RefreshToken", detailsResponse.Data.RefreshToken, 600000);
+            AddToCookie("AdeNote-RefreshToken", detailsResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
 
             return Ok(accessToken);
         }
@@ -248,6 +256,11 @@ namespace AdeNote.Controllers
         ///     
         ///             GET /authentication/two-factor-authentication/key
         /// </remarks>
+        /// <response code ="200"> Returns if two factor authenticator was enabled for the user</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="404"> Returns if parameters not found</response>
+        /// <response code ="401"> Returns if unauthorised</response> 
         /// <returns>qr ucode url</returns>
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
@@ -270,6 +283,11 @@ namespace AdeNote.Controllers
         /// 
         ///             POST /authentication/sign-out
         /// </remarks>
+        /// <response code ="200"> Returns if user was logged out successfully</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="404"> Returns if parameters not found</response>
+        /// <response code ="401"> Returns if unauthorised</response> 
         /// <returns>Action result</returns>
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
@@ -289,13 +307,19 @@ namespace AdeNote.Controllers
         }
 
 
+        /// <summary>
+        /// Add data to cookie
+        /// </summary>
+        /// <param name="name">Name of the cookie</param>
+        /// <param name="data">Data to display</param>
+        /// <param name="time">Time left for the cookie to expire</param>
         [NonAction]
-        private void AddToCookie(string name,string data, double time)
+        private void AddToCookie(string name,string data, DateTime time)
         {
             Response.Cookies.Append(name, data,
                   new CookieOptions()
                   {
-                      Expires = DateTime.UtcNow.AddMinutes(time),
+                      Expires = time,
                       Secure = true,
                       SameSite = SameSiteMode.None
                   });
