@@ -69,5 +69,11 @@ namespace AdeNote.Infrastructure.Services
         /// </summary>
         /// <param name="refreshToken">Refresh token</param>
         Task<ActionResult> IsTokenRevoked(string refreshToken);
+
+        /// <summary>
+        /// Disable authentication for a user
+        /// </summary>
+        /// <param name="userId">User id</param>
+        Task<ActionResult> DisableUserMFA(Guid userId);
     }
 }

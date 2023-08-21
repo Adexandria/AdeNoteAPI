@@ -302,6 +302,33 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
+        /// <summary>
+        /// Disables Multi factor authentication for a particular user
+        /// </summary>
+        /// <param name="userId">User id</param>
+        public async Task<ActionResult> DisableUserMFA(Guid userId)
+        {
+            try
+            {
+                if (userId == Guid.Empty)
+                    return ActionResult<string>.Failed("Invalid user id", StatusCodes.Status404NotFound);
+
+                var authenticationType = await authRepository.GetAuthenticationType(userId);
+                if(authenticationType == null)
+                    return ActionResult.Failed("MFA isn't enabled for user", StatusCodes.Status400BadRequest);
+
+               var result =  await authRepository.Remove(authenticationType);
+                if(!result)
+                    return ActionResult.Failed("Failed to remove user token", StatusCodes.Status400BadRequest);
+
+                return ActionResult.Successful();
+            }
+            catch (Exception ex)
+            {
+                return ActionResult.Failed(ex.Message);
+            }
+        }
+
         public string key;
         public IAuthRepository authRepository;
         public IBlobService blobService;

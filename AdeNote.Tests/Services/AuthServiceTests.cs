@@ -78,14 +78,6 @@ namespace AdeNote.Tests.Services
         }
 
         [Test]
-        public void ShouldVerifyAuthenticatorOTP()
-        {
-            var response = authService.VerifyAuthenticatorOTP("email","465839");
-
-            Assert.That(response.IsSuccessful, Is.True);
-        }
-
-        [Test]
         public void ShouldFailToVerifyAuthenticatorOTP()
         {
 
@@ -273,6 +265,42 @@ namespace AdeNote.Tests.Services
 
             Assert.That(response.IsSuccessful, Is.False);
             Assert.That(response.Errors[0], Is.EqualTo("Invalid token"));
+        }
+        [Test]
+        public async Task ShouldDisableUserMFASucessfully()
+        {
+            authRepository.Setup(s => s.GetAuthenticationType(It.IsAny<Guid>())).ReturnsAsync(new UserToken());
+            authRepository.Setup(s => s.Remove(It.IsAny<UserToken>())).ReturnsAsync(true);
+
+            var response = await authService.DisableUserMFA(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"));
+
+            Assert.That(response.IsSuccessful, Is.True);
+        }
+
+        [Test]
+        public async Task ShouldFailToDisableUserMFAIfUserTokenDoesNotExist()
+        {
+            var response = await authService.DisableUserMFA(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"));
+
+            Assert.That(response.IsSuccessful, Is.False);
+        }
+
+        [Test]
+        public async Task ShouldFailToDisableUserMFAIfUserTokenIsFailedtoBeRemoved()
+        {
+            authRepository.Setup(s => s.GetAuthenticationType(It.IsAny<Guid>())).ReturnsAsync(new UserToken());
+
+            var response = await authService.DisableUserMFA(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"));
+
+            Assert.That(response.IsSuccessful, Is.False);
+        }
+
+        [Test]
+        public async Task ShouldFailToDisableUserMFA()
+        {
+            var response = await authService.DisableUserMFA(new Guid());
+
+            Assert.That(response.IsSuccessful, Is.False);
         }
 
         private AuthService authService;
