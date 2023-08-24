@@ -39,11 +39,6 @@ namespace AdeNote.Infrastructure.Repository
             return await SaveChanges<UserToken>();
         }
 
-        public async Task<string> GenerateMFALoginToken(string email)
-        {
-            throw new NotImplementedException();
-        }
-
         /// <summary>
         /// Gets the authentication type of a user using user Id
         /// </summary>

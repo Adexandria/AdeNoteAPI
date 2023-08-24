@@ -27,9 +27,12 @@ namespace AdeNote.Infrastructure.Services
         /// <param name="_authRepository">Handles the authentication</param>
         /// <param name="_blobService">Handles the cloud storage</param>
         /// <param name="_configuration">Reads the key/value pair from appsettings</param>
+        /// <param name="_smsService"> A sms service used to send message via sms</param>
+        /// <param name="_userDetailRepository">Handles the details of a user</param>
         public AuthService(IAuthRepository _authRepository,
             IUserDetailRepository _userDetailRepository,
-            IBlobService _blobService,IConfiguration _configuration,ISmsService _smsService)
+            IBlobService _blobService,IConfiguration _configuration,
+            ISmsService _smsService)
         {
             authRepository = _authRepository;
             userDetailRepository = _userDetailRepository;
@@ -39,8 +42,9 @@ namespace AdeNote.Infrastructure.Services
             loginSecret = _configuration["LoginSecret"];
             TwoFactorAuthenticator = new TwoFactorAuthenticator();
         }
+
         /// <summary>
-        /// Sets up MFA using authenticator app
+        /// Sets up MFA using google authenticator app
         /// </summary>
         /// <param name="userId">User id</param>
         /// <param name="email">Email of the user</param>
@@ -112,7 +116,7 @@ namespace AdeNote.Infrastructure.Services
 
                 var bytesKey = Encoding.UTF8.GetBytes($"{key}-{phoneNumber}");
 
-                var token = BitConverter.ToInt64(bytesKey, 0).ToString("D10")[..6];
+                var token = BitConverter.ToInt16(bytesKey, 0).ToString();
                 var message = $"Enter your authentication code {token} to verify your phone number";
 
                 smsService.SendSms(new Sms(phoneNumber,message));
@@ -126,7 +130,37 @@ namespace AdeNote.Infrastructure.Services
           
         }
 
+        /// <summary>
+        /// Checks if a phone number has been verified
+        /// </summary>
+        /// <param name="userId">User id</param>
+        /// <returns>boolean value</returns>
+        public async Task<ActionResult<bool>> IsPhoneNumberVerified(Guid userId)
+        {
+            try
+            {
+                if (userId == Guid.Empty)
+                    return ActionResult<bool>.Failed("Invalid user id", StatusCodes.Status404NotFound);
 
+                var isVerified = await userDetailRepository.IsPhoneNumberVerified(userId);
+
+                if (!isVerified.HasValue)
+                    return ActionResult<bool>.Failed("user details doesn't exist", StatusCodes.Status400BadRequest);
+
+                return ActionResult<bool>.SuccessfulOperation(isVerified.Value);
+            }
+            catch (Exception ex)
+            {
+                return ActionResult < bool>.Failed(ex.Message);
+            }
+            
+        }
+
+        /// <summary>
+        /// Sets up phone number
+        /// </summary>
+        /// <param name="userId">User id</param>
+        /// <param name="token">phone number verification token</param>
         public async Task<ActionResult> VerifyPhoneNumber(Guid userId, string token)
         {
             try
@@ -144,7 +178,7 @@ namespace AdeNote.Infrastructure.Services
 
                 var bytesKey = Encoding.UTF8.GetBytes($"{key}-{currentUserDetail.Phonenumber}");
 
-                var generatedToken = BitConverter.ToInt64(bytesKey, 0).ToString("D10")[..6];
+                var generatedToken = BitConverter.ToInt16(bytesKey, 0).ToString();
 
                 if(generatedToken != token)
                     return ActionResult.Failed("Invalid token", StatusCodes.Status400BadRequest);
@@ -154,6 +188,66 @@ namespace AdeNote.Infrastructure.Services
                 var result = await userDetailRepository.Update(currentUserDetail);
                 if(!result)
                     return ActionResult.Failed("Failed to verify phonenumber", StatusCodes.Status400BadRequest);
+
+                return ActionResult.Successful();
+            }
+            catch (Exception ex)
+            {
+                return ActionResult.Failed(ex.Message);
+            }
+        }
+
+
+        /// <summary>
+        /// Sets up MFA using sms authentication 
+        /// </summary>
+        /// <param name="userId">User id</param>
+        public async Task<ActionResult> SetSmsAuthenticator(Guid userId)
+        {
+            try
+            {
+                if (userId == Guid.Empty)
+                    return ActionResult.Failed("Invalid user id", StatusCodes.Status404NotFound);
+
+                var userToken = new UserToken(MFAType.Sms, userId);
+
+                var result = await authRepository.Add(userToken);
+                if (!result)
+                    return ActionResult.Failed("failed to set up two factor authentication", StatusCodes.Status400BadRequest);
+
+                return ActionResult.Successful();
+            }
+            catch (Exception ex)
+            {
+                return ActionResult.Failed(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Sends otp to phone number 
+        /// </summary>
+        /// <param name="userId">User id</param>
+        public async Task<ActionResult> SendSmsOTP(Guid userId)
+        {
+            try
+            {
+                if (userId == Guid.Empty)
+                    return ActionResult.Failed("Invalid user id", StatusCodes.Status404NotFound);
+
+                var currentUserDetail = await userDetailRepository.GetUserDetail(userId);
+                if (currentUserDetail == null)
+                    return ActionResult.Failed("User details not found", StatusCodes.Status400BadRequest);
+
+                byte[] accountKey = Encoding.ASCII.GetBytes($"{key}-{currentUserDetail.Phonenumber}");
+
+                var authenticator = TwoFactorAuthenticator
+                 .GenerateSetupCode("AdeNote", currentUserDetail.User.Email, accountKey);
+
+                var generatedToken = TwoFactorAuthenticator.GetCurrentPIN(accountKey, DateTime.UtcNow.AddMinutes(3));
+
+                var message = $"Hello, your AdeNote secure code is {generatedToken}. DO NOT SHARE this with anyone. Only valid for 3 minutes";
+
+                smsService.SendSms(new Sms(currentUserDetail.Phonenumber, message));
 
                 return ActionResult.Successful();
             }
@@ -327,7 +421,7 @@ namespace AdeNote.Infrastructure.Services
         }
         
         /// <summary>
-        /// Revoke existing refresh token
+        /// Revokes existing refresh token
         /// </summary>
         /// <param name="userId">User id</param>
         /// <param name="refreshToken">Refresh token</param>
@@ -356,7 +450,7 @@ namespace AdeNote.Infrastructure.Services
         }
 
         /// <summary>
-        /// Check if refresh token is revoked
+        /// Checks if refresh token is revoked
         /// </summary>
         /// <param name="refreshToken">Refresh token</param>
         public async Task<ActionResult> IsTokenRevoked(string refreshToken)
@@ -407,14 +501,39 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-     
-
+        /// <summary>
+        /// Two factor authentication secret key
+        /// </summary>
         public string key;
+
+        /// <summary>
+        /// Handles the authentication
+        /// </summary>
         public IAuthRepository authRepository;
+
+        /// <summary>
+        /// Handles the details of a user
+        /// </summary>
         public IUserDetailRepository userDetailRepository;
+
+        /// <summary>
+        /// A sms service used to send message via sms
+        /// </summary>
         public ISmsService smsService;
+
+        /// <summary>
+        ///  Handles the cloud storage
+        /// </summary>
         public IBlobService blobService;
+
+        /// <summary>
+        /// Secret to generate multifactor token
+        /// </summary>
         public string loginSecret;
+
+        /// <summary>
+        /// Object used to generate and set up two factor authentication
+        /// </summary>
         public TwoFactorAuthenticator TwoFactorAuthenticator;
     }
 }

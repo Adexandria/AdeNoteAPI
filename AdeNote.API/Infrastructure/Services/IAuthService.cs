@@ -29,12 +29,18 @@ namespace AdeNote.Infrastructure.Services
         Task<ActionResult> IsAuthenticatorEnabled(string email);
 
         /// <summary>
-        /// Sets up MFA using authenticator app
+        /// Sets up MFA using google authenticator app
         /// </summary>
         /// <param name="userId">User id</param>
         /// <param name="email">Email of the user</param>
         /// <returns>Manual key and qr code</returns>
-        Task<ActionResult<AuthenticatorDTO>> SetAuthenticator(Guid userId,string email);      
+        Task<ActionResult<AuthenticatorDTO>> SetAuthenticator(Guid userId,string email);
+
+        /// <summary>
+        /// Sets up MFA using sms authentication 
+        /// </summary>
+        /// <param name="userId">User id</param>
+        Task<ActionResult> SetSmsAuthenticator(Guid userId);
 
         /// <summary>
         /// Sets up phone number
@@ -51,7 +57,19 @@ namespace AdeNote.Infrastructure.Services
         /// <param name="token">phone number verification token</param>
         Task<ActionResult> VerifyPhoneNumber(Guid userId, string token);
 
-        //check if phonenumber added has been verified before user can send verification code
+
+        /// <summary>
+        /// Checks if a phone number has been verified
+        /// </summary>
+        /// <param name="userId">User id</param>
+        /// <returns>bool</returns>
+        Task<ActionResult<bool>> IsPhoneNumberVerified(Guid userId);
+
+        /// <summary>
+        /// Sends otp to phone number 
+        /// </summary>
+        /// <param name="userId">User id</param>
+        Task<ActionResult> SendSmsOTP(Guid userId);
 
         /// <summary>
         /// Verifies authenticator otp
@@ -77,20 +95,20 @@ namespace AdeNote.Infrastructure.Services
         ActionResult<DetailsDTO> ReadDetailsFromToken(string token);
 
         /// <summary>
-        /// Revoke existing refresh token
+        /// Revokes existing refresh token
         /// </summary>
         /// <param name="userId">User id</param>
         /// <param name="refreshToken">Refresh token</param>
         Task<ActionResult> RevokeRefreshToken(Guid userId, string refreshToken);
 
         /// <summary>
-        /// Check if refresh token is revoked
+        /// Checks if refresh token is revoked
         /// </summary>
         /// <param name="refreshToken">Refresh token</param>
         Task<ActionResult> IsTokenRevoked(string refreshToken);
 
         /// <summary>
-        /// Disable authentication for a user
+        /// Disables authentication for a user
         /// </summary>
         /// <param name="userId">User id</param>
         Task<ActionResult> DisableUserMFA(Guid userId);

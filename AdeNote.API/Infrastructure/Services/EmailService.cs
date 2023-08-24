@@ -6,11 +6,11 @@ namespace AdeNote.Infrastructure.Services
 {
     public class EmailService : IEmailService
     {
-        public EmailService(IConfiguration config, ILogger log)
+        public EmailService(IConfiguration config, ILoggerFactory loggerFactory)
         {
             emailConfig = config.GetSection("EmailConfiguration")
                 .Get<EmailConfiguration>();
-            logger = log;   
+            logger = loggerFactory.CreateLogger(typeof(EmailService));   
         }
         public void SendMessage<T>(T email) where T : Email
         {

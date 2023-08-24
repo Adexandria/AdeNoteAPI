@@ -1,26 +1,43 @@
 ﻿using AdeNote.Infrastructure.Utilities;
-using Azure.Communication.Sms;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
 
 namespace AdeNote.Infrastructure.Services
-{
+{ 
+    /// <summary>
+    ///  A sms service used to send message via sms
+    /// </summary>
     public class SmsService : ISmsService
     {
-        public SmsService(IConfiguration config,ILogger log)
+        /// <summary>
+        /// A Constructor
+        /// </summary>
+        /// <param name="config">Reads the key/value pair from appsettings</param>
+        /// <param name="loggerFactory">A factory used to create logs</param>
+        public SmsService(IConfiguration config,ILoggerFactory loggerFactory)
         {
-            connectionString = config["CommunicationKey"];
-            logger = log;
+            _smsConfig = config.GetSection("TwilioConfiguration").Get<SmsConfiguration>();
+            _logger = loggerFactory.CreateLogger(typeof(SmsService));
         }
+
+        /// <summary>
+        /// Sends sms
+        /// </summary>
+        /// <param name="sms">An object that includes the phonenumber and message</param>
         public void SendSms(Sms sms)
         {
             new Thread(async () =>
             {
-                SmsClient smsClient = new(connectionString);
-                var response = await smsClient.SendAsync("+23408129812808",sms.PhoneNumber,sms.Message);
-                logger.LogInformation($"Sms sent Status code: {response.Value.Successful} at {DateTime.UtcNow} " +
-                    $"Error Message:{response.Value.ErrorMessage}");
+                TwilioClient.Init(_smsConfig.AccountKey, _smsConfig.AccountSecret);
+                var message = await MessageResource.CreateAsync(body: sms.Message,
+                    from: new PhoneNumber(_smsConfig.PhoneNumber),
+                    to: new PhoneNumber(sms.PhoneNumber));
+                _logger.LogInformation($"Sms sent status: {message.Status} at {message.DateSent}" +
+                    $" Error: {message.ErrorMessage}");
             }).Start();
         }
-        private string connectionString;
-        private ILogger logger;
+        private readonly SmsConfiguration _smsConfig;
+        private readonly ILogger _logger;
     }
 }

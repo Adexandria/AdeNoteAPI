@@ -31,8 +31,22 @@ namespace AdeNote.Infrastructure.Repository
         public async Task<UserDetail> GetUserDetail(Guid userId)
         {
             return await Db.UserDetails.
-                AsNoTracking()
+                AsNoTracking().Include(s=>s.User)
                 .FirstOrDefaultAsync(x => x.UserId == userId);
+        }
+
+        /// <summary>
+        /// Checks if user's phone number has been verified
+        /// </summary>
+        /// <param name="userId">User id</param>
+        /// <returns>A boolean value</returns>
+        public async Task<bool?> IsPhoneNumberVerified(Guid userId)
+        {
+            var userDetail = await Db.UserDetails.
+                 AsNoTracking()
+                 .FirstOrDefaultAsync(x => x.UserId == userId);
+
+            return userDetail?.IsPhoneNumberVerified;
         }
 
         /// <summary>

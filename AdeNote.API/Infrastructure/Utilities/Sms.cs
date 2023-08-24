@@ -4,7 +4,7 @@
     {
         public Sms(string phoneNumber, string message)
         {
-            PhoneNumber = phoneNumber;
+            PhoneNumber =$"+234{phoneNumber}";
             Message = message;
         }
         public string PhoneNumber { get; set; }

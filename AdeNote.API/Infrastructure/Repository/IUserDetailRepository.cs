@@ -3,7 +3,7 @@
 namespace AdeNote.Infrastructure.Repository
 {
     /// <summary>
-    /// An interface that includes the details of a user
+    /// Handles the details of a user
     /// </summary>
     public interface IUserDetailRepository : IRepository<UserDetail>
     {
@@ -13,5 +13,12 @@ namespace AdeNote.Infrastructure.Repository
         /// <param name="userId">User id</param>
         /// <returns>User detail object</returns>
         Task<UserDetail> GetUserDetail(Guid userId);
+
+        /// <summary>
+        /// Checks if user's phone number has been verified
+        /// </summary>
+        /// <param name="userId">User id</param>
+        /// <returns>A boolean value</returns>
+        Task<bool?> IsPhoneNumberVerified(Guid userId);
     }
 }
