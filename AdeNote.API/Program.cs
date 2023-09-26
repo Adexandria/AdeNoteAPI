@@ -31,6 +31,7 @@ builder.Services.AddScoped<ITaskApplication, TaskApplication>();
 builder.Services.AddScoped<IUserIdentity, UserIdentity>();
 builder.Services.AddTransient((o) => containerBuilder.SetUpDepedencies().Build());
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddLogging();
 builder.Services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
@@ -90,6 +91,8 @@ builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserDetailRepository, UserDetailRepository>();
 builder.Services.AddScoped<IBlobService, BlobService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<ISmsService, SmsService>();
 
 builder.Services.AddDbContext<NoteDbContext>(options => options
 .UseSqlServer(connectionString));

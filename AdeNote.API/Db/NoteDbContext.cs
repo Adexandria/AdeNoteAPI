@@ -82,7 +82,12 @@ namespace AdeNote.Db
                 .HasColumnName("User_id");
 
             modelBuilder.Entity<UserToken>()
-                .Property(x => x.UserId)
+                .Property(x => x.AuthenticatorKey)
+                .IsRequired(false);
+
+
+            modelBuilder.Entity<UserToken>()
+              .Property(x => x.UserId)
                 .HasColumnName("User_id");
 
             modelBuilder.Entity<User>()

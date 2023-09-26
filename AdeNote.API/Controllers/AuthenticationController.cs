@@ -29,6 +29,7 @@ namespace AdeNote.Controllers
     {
         private IAuthService _authService;
         private IAuthToken _authToken;
+        private IEmailService _emailService;
         /// <summary>
         /// This is the constructor
         /// </summary>
@@ -37,9 +38,10 @@ namespace AdeNote.Controllers
         /// <param name="authService">An authentication service </param>
         /// <param name="userIdentity">An interface that interacts with the user. This fetches the current user details</param>
         public AuthenticationController(IContainer container, ITaskApplication application, IUserIdentity userIdentity,
-            IAuthService authService) : base(container, application,userIdentity)
+            IAuthService authService, IEmailService emailService) : base(container, application,userIdentity)
         {
             _authService = authService;
+            _emailService = emailService;
             _authToken = container.Resolve<IAuthToken>();
         }
 
@@ -121,7 +123,7 @@ namespace AdeNote.Controllers
             if(resultResponse.IsSuccessful && loginResponse.IsSuccessful)
             {
                 var tokenResponse = _authService.GenerateMFAToken(userDetails.Data.UserId,command.Email,loginResponse.Data.RefreshToken);
-                AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(2));
+                AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(8));
                 return Ok("Proceed to enter otp from authenticator");
             }
 
@@ -173,12 +175,12 @@ namespace AdeNote.Controllers
         }
 
         /// <summary>
-        /// Set up two factor authentication using authenticator app or sms
+        /// Sets up two factor authentication using google authenticator app
         /// </summary>
         /// <remarks>
         /// Sample request: 
         /// 
-        ///             POST /authentication/two-factor-authentication
+        ///             POST /authentication/two-factor-authentication/app
         ///             
         /// </remarks>
         /// <response code ="200"> Returns if two factor authenticator was successfully set up</response>
@@ -193,13 +195,13 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<AuthenticatorDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
-        [HttpPost("two-factor-authentication")]
+        [HttpPost("two-factor-authentication/app")]
         public async Task<IActionResult> SetUpGoogleAuthenticator()
         {
             var resultResponse = await _authService.IsAuthenticatorEnabled(CurrentUser);
 
             if (resultResponse.IsSuccessful)
-                return TasksLibrary.Utilities.ActionResult.Failed("User has set up two factor authentication").Response();
+                return TasksLibrary.Utilities.ActionResult.Failed("User has set up two factor authentication", StatusCodes.Status400BadRequest).Response();
 
             var response = await _authService.SetAuthenticator(CurrentUser, CurrentEmail);
 
@@ -207,12 +209,223 @@ namespace AdeNote.Controllers
         }
 
         /// <summary>
-        /// Verify otp 
+        /// Sets up two factor authentication using sms
+        /// </summary>
+        /// <remarks>
+        /// Sample request: 
+        /// 
+        ///             POST /authentication/two-factor-authentication/sms
+        ///             
+        /// </remarks>
+        /// <response code ="200"> Returns if two factor authenticator was successfully set up</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="404"> Returns if parameters not found</response>
+        /// <response code ="401"> Returns if unauthorised</response>
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpPost("two-factor-authentication/sms")]
+        public async Task<IActionResult> SetUpSmsAuthenticator()
+        {
+            var resultResponse = await _authService.IsAuthenticatorEnabled(CurrentUser);
+
+            if (resultResponse.IsSuccessful)
+                return TasksLibrary.Utilities.ActionResult.Failed("User has set up two factor authentication", StatusCodes.Status400BadRequest).Response();
+
+            var verificationResponse = await _authService.IsPhoneNumberVerified(CurrentUser);
+
+            if (verificationResponse.NotSuccessful)
+                return resultResponse.Response();
+
+            if (!verificationResponse.Data)
+                return TasksLibrary.Utilities.ActionResult.Failed("Phone number has not been verified", StatusCodes.Status400BadRequest).Response();
+
+            var response = await _authService.SetSmsAuthenticator(CurrentUser);
+
+            return response.Response();
+        }
+
+        /// <summary>
+        /// Adds phone number
+        /// </summary>
+        /// <remarks>
+        /// Sample request: 
+        /// 
+        ///             POST /authentication/phonenumber
+        ///             
+        /// </remarks>
+        /// <param name="phoneNumber">User phone number</param>
+        /// <response code ="200"> Returns if phone number was added/response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="404"> Returns if parameters not found</response>
+        /// <response code ="401"> Returns if unauthorised</response>
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpPost("phonenumber")]
+        public async Task<IActionResult> AddPhoneNumber(string phoneNumber)
+        {
+            var response = await _authService.SetPhoneNumber(CurrentUser,phoneNumber);
+
+            return response.Response();
+        }
+
+        /// <summary>
+        /// Verifies phone number
+        /// </summary>
+        /// <remarks>
+        /// Sample request: 
+        /// 
+        ///             POST /authentication/verify-phonenumber
+        ///             
+        /// </remarks>
+        /// <param name="verificationCode">Verification code</param>
+        /// <response code ="200"> Returns if phone number was verified</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="404"> Returns if parameters not found</response>
+        /// <response code ="401"> Returns if unauthorised</response>
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpPost("verify-phonenumber")]
+        public async Task<IActionResult> VerifyPhoneNumber(string verificationCode)
+        {
+            var resultResponse = await _authService.IsPhoneNumberVerified(CurrentUser);
+
+            if(resultResponse.NotSuccessful)
+                return resultResponse.Response();
+
+            if (resultResponse.Data)
+                return TasksLibrary.Utilities.ActionResult.Failed("Phone number has been verified",StatusCodes.Status400BadRequest).Response();
+
+            var response = await _authService.VerifyPhoneNumber(CurrentUser,verificationCode);
+
+            return response.Response();
+        }
+
+        /// <summary>
+        /// Sends one time password via sms
+        /// </summary>
+        /// <remarks>
+        /// Sample request: 
+        /// 
+        ///             POST /two-factor-authentication/sms/send-code
+        ///             
+        /// </remarks>
+        /// <response code ="200"> Returns if code was sent</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="404"> Returns if parameters not found</response>
+        /// <response code ="401"> Returns if unauthorised</response>
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [AllowAnonymous]
+        [HttpPost("two-factor-authentication/sms/send-code")]
+        public async Task<IActionResult> SendOTP()
+        {
+            var token = Request.Cookies["Multi-FactorToken"];
+
+            var detailsResponse = _authService.ReadDetailsFromToken(token);
+            if (detailsResponse.NotSuccessful)
+                return detailsResponse.Response();
+
+            var resultResponse = await _authService.IsAuthenticatorEnabled(detailsResponse.Data.UserId);
+
+            if (!resultResponse.IsSuccessful)
+                return TasksLibrary.Utilities.ActionResult.Failed("User has not set up two factor authentication", StatusCodes.Status400BadRequest).Response();
+
+            var verificationResponse = await _authService.IsPhoneNumberVerified(detailsResponse.Data.UserId);
+
+            if (verificationResponse.NotSuccessful)
+                return verificationResponse.Response();
+
+            if (!verificationResponse.Data)
+                return TasksLibrary.Utilities.ActionResult.Failed("Phone number has not been verified", StatusCodes.Status400BadRequest).Response();
+
+            var response = await _authService.SendSmsOTP(detailsResponse.Data.UserId);
+
+            return response.Response();
+        }
+
+
+        /// <summary>
+        /// Verifies sms code
+        /// </summary>
+        /// <remarks>
+        /// Sample request: 
+        /// 
+        ///             POST /two-factor-authentication/sms/verify-code
+        ///             
+        /// </remarks>
+        /// <response code ="200"> Returns if verification code was successfully verified</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="404"> Returns if parameters not found</response>
+        /// <response code ="401"> Returns if unauthorised</response>
+        /// <returns>Access token</returns>
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [AllowAnonymous]
+        [HttpPost("two-factor-authentication/sms/verify-code")]
+        public async Task<IActionResult> VerifySmsOTP(string otp)
+        {
+            var token = Request.Cookies["Multi-FactorToken"];
+
+            var detailsResponse = _authService.ReadDetailsFromToken(token);
+            if (detailsResponse.NotSuccessful)
+                return detailsResponse.Response();
+
+            var resultResponse = await _authService.IsAuthenticatorEnabled(detailsResponse.Data.UserId);
+
+            if (!resultResponse.IsSuccessful)
+                return TasksLibrary.Utilities.ActionResult.Failed("User has not set up two factor authentication", StatusCodes.Status400BadRequest).Response();
+
+            var verificationResponse = await _authService.IsPhoneNumberVerified(detailsResponse.Data.UserId);
+
+            if (verificationResponse.NotSuccessful)
+                return verificationResponse.Response();
+
+            if (!verificationResponse.Data)
+                return TasksLibrary.Utilities.ActionResult.Failed("Phone number has not been verified", StatusCodes.Status400BadRequest).Response();
+
+            var response =  _authService.VerifyAuthenticatorOTP(detailsResponse.Data.Email, otp);
+            if (response.NotSuccessful)
+                return response.Response();
+
+            var accessToken = _authToken.GenerateAccessToken(detailsResponse.Data.UserId, detailsResponse.Data.Email);
+
+            AddToCookie("AdeNote-RefreshToken", detailsResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
+
+            return TasksLibrary.Utilities.ActionResult<string>.SuccessfulOperation(accessToken).Response();
+        }
+
+        /// <summary>
+        /// Verifies time based One time password
         /// </summary>
         /// <remarks>
         /// Sample request:
         /// 
-        ///                 POST /authentication/two-factor-authentication/verify-key
+        ///                 POST /authentication/two-factor-authentication/app/verify-code
         /// </remarks>
         /// <param name="totp">Timed based one time password</param>
         /// <response code ="200"> Returns if one time password was verified correctly</response>
@@ -227,7 +440,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [AllowAnonymous]
-        [HttpPost("two-factor-authentication/verify-key")]
+        [HttpPost("two-factor-authentication/app/verify-code")]
         public IActionResult VerifyTOTP(string totp)
         {
             var token = Request.Cookies["Multi-FactorToken"];
@@ -249,25 +462,25 @@ namespace AdeNote.Controllers
 
 
         /// <summary>
-        /// Get existing qr code
+        /// Gets existing qr code
         /// </summary>
         /// <remarks>
         /// Sample request
         ///     
-        ///             GET /authentication/two-factor-authentication/key
+        ///             GET /authentication/two-factor-authentication/app/qr-code
         /// </remarks>
-        /// <response code ="200"> Returns if two factor authenticator was enabled for the user</response>
+        /// <response code ="200"> Returns if google two factor authenticator was enabled for the user</response>
         /// <response code ="400"> Returns if experiencing client issues</response>
         /// <response code ="500"> Returns if experiencing server issues</response>
         /// <response code ="404"> Returns if parameters not found</response>
         /// <response code ="401"> Returns if unauthorised</response> 
-        /// <returns>qr ucode url</returns>
+        /// <returns>Qr ucode url</returns>
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
-        [HttpGet("two-factor-authentication/key")]
+        [HttpGet("two-factor-authentication/app/qr-code")]
         public async Task<IActionResult> GetAuthenticatorQRCode()
         {
             var response = await _authService.GetUserQrCode(CurrentUser);
@@ -307,7 +520,7 @@ namespace AdeNote.Controllers
         }
 
         /// <summary>
-        /// Removes google authenticator
+        /// Removes google or sms authenticator 
         /// </summary>
         /// <remarks>
         /// Sample request:

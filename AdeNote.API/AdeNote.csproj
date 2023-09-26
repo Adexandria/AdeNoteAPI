@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <UserSecretsId>3929d7e8-6c67-461e-b29e-491c5f3d9eae</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,8 +29,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="RestSharp" Version="110.2.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     <PackageReference Include="TasksLibrary" Version="1.1.3" />
+    <PackageReference Include="Twilio.AspNet.Core" Version="8.0.2" />
   </ItemGroup>
 
 </Project>

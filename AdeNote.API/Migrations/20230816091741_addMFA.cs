@@ -39,7 +39,7 @@ namespace AdeNote.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IsMFAEnabled = table.Column<bool>(type: "bit", nullable: false),
                     AuthenticationType = table.Column<int>(type: "int", nullable: false),
-                    AuthenticatorKey = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AuthenticatorKey = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     User_id = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
