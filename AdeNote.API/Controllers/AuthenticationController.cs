@@ -239,7 +239,7 @@ namespace AdeNote.Controllers
             var verificationResponse = await _authService.IsPhoneNumberVerified(CurrentUser);
 
             if (verificationResponse.NotSuccessful)
-                return resultResponse.Response();
+                return verificationResponse.Response();
 
             if (!verificationResponse.Data)
                 return TasksLibrary.Utilities.ActionResult.Failed("Phone number has not been verified", StatusCodes.Status400BadRequest).Response();
@@ -358,7 +358,7 @@ namespace AdeNote.Controllers
             if (!verificationResponse.Data)
                 return TasksLibrary.Utilities.ActionResult.Failed("Phone number has not been verified", StatusCodes.Status400BadRequest).Response();
 
-            var response = await _authService.SendSmsOTP(detailsResponse.Data.UserId);
+            var response = await _authService.SendSmsOTP(detailsResponse.Data.UserId,detailsResponse.Data.Email);
 
             return response.Response();
         }

@@ -1,13 +1,8 @@
 ﻿using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Services;
 using AdeNote.Models;
-using Google.Authenticator;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace AdeNote.Tests.Services
 {
@@ -20,8 +15,12 @@ namespace AdeNote.Tests.Services
             authRepository = new Mock<IAuthRepository>();
             blobService = new Mock<IBlobService>();
             authService = new Mock<AuthService>().Object;
+            userDetailRepository = new Mock<IUserDetailRepository>();
+            smsService = new Mock<ISmsService>();
             authService.authRepository = authRepository.Object;
             authService.blobService = blobService.Object;
+            authService.smsService = smsService.Object;
+            authService.userDetailRepository = userDetailRepository.Object;
             authService.key = "testKey";
             authService.loginSecret = "testLoginSecret";
         }
@@ -303,8 +302,28 @@ namespace AdeNote.Tests.Services
             Assert.That(response.IsSuccessful, Is.False);
         }
 
+        [Test]
+        public async Task ShouldSetPhoneNumberSuccessfully()
+        {
+            userDetailRepository.Setup(s => s.Add(It.IsAny<UserDetail>())).ReturnsAsync(true);
+
+            var response = await authService.SetPhoneNumber(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"), "0000000000");
+
+            Assert.That(response.IsSuccessful, Is.True);
+        }
+        [Test]
+        public async Task ShouldFailToSetPhoneNumber()
+        {
+            var response = await authService.SetPhoneNumber(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"), "0000000000");
+
+            Assert.That(response.IsSuccessful, Is.False);
+        }
+
+
         private AuthService authService;
         private Mock<IAuthRepository> authRepository;
+        private Mock<IUserDetailRepository> userDetailRepository;
+        private Mock<ISmsService> smsService;
         private  Mock<IBlobService> blobService;
     }
 }

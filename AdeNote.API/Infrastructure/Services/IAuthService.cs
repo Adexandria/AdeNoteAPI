@@ -69,7 +69,7 @@ namespace AdeNote.Infrastructure.Services
         /// Sends otp to phone number 
         /// </summary>
         /// <param name="userId">User id</param>
-        Task<ActionResult> SendSmsOTP(Guid userId);
+        Task<ActionResult> SendSmsOTP(Guid userId,string email);
 
         /// <summary>
         /// Verifies authenticator otp
