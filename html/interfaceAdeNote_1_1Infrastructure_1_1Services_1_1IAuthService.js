@@ -9,7 +9,7 @@ var interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService =
     [ "IsTokenRevoked", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8a632c08a9d83d1cd741bc30ac554855", null ],
     [ "ReadDetailsFromToken", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8278027fb07f272ad08d4cb0b50ec659", null ],
     [ "RevokeRefreshToken", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a40e66c23ed8be8b77aa68a85a3e9f31d", null ],
-    [ "SendSmsOTP", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#ac1e8d232ee22c6c28be9fe88dbdd1ac1", null ],
+    [ "SendSmsOTP", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a450048a2665575559a9d2c4d3d4d4e0d", null ],
     [ "SetAuthenticator", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#ae3c515f59107f454452f2be174b2e00f", null ],
     [ "SetPhoneNumber", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a5bfedca5a816cc4c024d4852887fe189", null ],
     [ "SetSmsAuthenticator", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8e029bac287e94a02f291647721758a6", null ],

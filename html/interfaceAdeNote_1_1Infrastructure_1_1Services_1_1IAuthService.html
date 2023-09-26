@@ -128,9 +128,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa118fdd01bdd808ecff4e19bfb78d10a"><td class="memItemLeft" align="right" valign="top">Task&lt; ActionResult&lt; bool &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aa118fdd01bdd808ecff4e19bfb78d10a">IsPhoneNumberVerified</a> (Guid userId)</td></tr>
 <tr class="memdesc:aa118fdd01bdd808ecff4e19bfb78d10a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a phone number has been verified  <a href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aa118fdd01bdd808ecff4e19bfb78d10a">More...</a><br /></td></tr>
 <tr class="separator:aa118fdd01bdd808ecff4e19bfb78d10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1e8d232ee22c6c28be9fe88dbdd1ac1"><td class="memItemLeft" align="right" valign="top">Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#ac1e8d232ee22c6c28be9fe88dbdd1ac1">SendSmsOTP</a> (Guid userId)</td></tr>
-<tr class="memdesc:ac1e8d232ee22c6c28be9fe88dbdd1ac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends otp to phone number  <a href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#ac1e8d232ee22c6c28be9fe88dbdd1ac1">More...</a><br /></td></tr>
-<tr class="separator:ac1e8d232ee22c6c28be9fe88dbdd1ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a450048a2665575559a9d2c4d3d4d4e0d"><td class="memItemLeft" align="right" valign="top">Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a450048a2665575559a9d2c4d3d4d4e0d">SendSmsOTP</a> (Guid userId, string email)</td></tr>
+<tr class="memdesc:a450048a2665575559a9d2c4d3d4d4e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends otp to phone number  <a href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a450048a2665575559a9d2c4d3d4d4e0d">More...</a><br /></td></tr>
+<tr class="separator:a450048a2665575559a9d2c4d3d4d4e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af732dc7da9b94c239d866efc66e7334d"><td class="memItemLeft" align="right" valign="top">ActionResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#af732dc7da9b94c239d866efc66e7334d">VerifyAuthenticatorOTP</a> (string email, string otp)</td></tr>
 <tr class="memdesc:af732dc7da9b94c239d866efc66e7334d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies authenticator otp  <a href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#af732dc7da9b94c239d866efc66e7334d">More...</a><br /></td></tr>
 <tr class="separator:af732dc7da9b94c239d866efc66e7334d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -521,8 +521,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ac1e8d232ee22c6c28be9fe88dbdd1ac1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1e8d232ee22c6c28be9fe88dbdd1ac1">&#9670;&nbsp;</a></span>SendSmsOTP()</h2>
+<a id="a450048a2665575559a9d2c4d3d4d4e0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a450048a2665575559a9d2c4d3d4d4e0d">&#9670;&nbsp;</a></span>SendSmsOTP()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -531,8 +531,18 @@ Here is the caller graph for this function:</div>
           <td class="memname">Task&lt;ActionResult&gt; AdeNote.Infrastructure.Services.IAuthService.SendSmsOTP </td>
           <td>(</td>
           <td class="paramtype">Guid&#160;</td>
-          <td class="paramname"><em>userId</em></td><td>)</td>
+          <td class="paramname"><em>userId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>email</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -545,12 +555,12 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a27bd0833a5c9a76e2bdbe362cff84bdd">AdeNote.Infrastructure.Services.AuthService</a>.</p>
+<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a099b8ec9cff96487575c63801b7329b6">AdeNote.Infrastructure.Services.AuthService</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_ac1e8d232ee22c6c28be9fe88dbdd1ac1_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_ac1e8d232ee22c6c28be9fe88dbdd1ac1_icgraph" alt=""/></div>
-<map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_ac1e8d232ee22c6c28be9fe88dbdd1ac1_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_ac1e8d232ee22c6c28be9fe88dbdd1ac1_icgraph">
+<div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a450048a2665575559a9d2c4d3d4d4e0d_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a450048a2665575559a9d2c4d3d4d4e0d_icgraph" alt=""/></div>
+<map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a450048a2665575559a9d2c4d3d4d4e0d_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a450048a2665575559a9d2c4d3d4d4e0d_icgraph">
 <area shape="rect" title="Sends otp to phone number" alt="" coords="305,5,539,47"/>
 <area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3b1635ec52b83ce1ff5a6f008130a66c" title="Sends one time password via sms" alt="" coords="5,5,257,47"/>
 </map>

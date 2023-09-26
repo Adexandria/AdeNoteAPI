@@ -141,9 +141,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9c23471931d83f34211055e94d40264d"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a9c23471931d83f34211055e94d40264d">SetSmsAuthenticator</a> (Guid userId)</td></tr>
 <tr class="memdesc:a9c23471931d83f34211055e94d40264d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up MFA using sms authentication  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a9c23471931d83f34211055e94d40264d">More...</a><br /></td></tr>
 <tr class="separator:a9c23471931d83f34211055e94d40264d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27bd0833a5c9a76e2bdbe362cff84bdd"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a27bd0833a5c9a76e2bdbe362cff84bdd">SendSmsOTP</a> (Guid userId)</td></tr>
-<tr class="memdesc:a27bd0833a5c9a76e2bdbe362cff84bdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends otp to phone number  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a27bd0833a5c9a76e2bdbe362cff84bdd">More...</a><br /></td></tr>
-<tr class="separator:a27bd0833a5c9a76e2bdbe362cff84bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a099b8ec9cff96487575c63801b7329b6"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a099b8ec9cff96487575c63801b7329b6">SendSmsOTP</a> (Guid userId, string email)</td></tr>
+<tr class="memdesc:a099b8ec9cff96487575c63801b7329b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends otp to phone number  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a099b8ec9cff96487575c63801b7329b6">More...</a><br /></td></tr>
+<tr class="separator:a099b8ec9cff96487575c63801b7329b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d2bea8f60ea1e908d615bba177d939e"><td class="memItemLeft" align="right" valign="top">ActionResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a0d2bea8f60ea1e908d615bba177d939e">VerifyAuthenticatorOTP</a> (string email, string otp)</td></tr>
 <tr class="memdesc:a0d2bea8f60ea1e908d615bba177d939e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies authenticator otp  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a0d2bea8f60ea1e908d615bba177d939e">More...</a><br /></td></tr>
 <tr class="separator:a0d2bea8f60ea1e908d615bba177d939e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -651,8 +651,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a27bd0833a5c9a76e2bdbe362cff84bdd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27bd0833a5c9a76e2bdbe362cff84bdd">&#9670;&nbsp;</a></span>SendSmsOTP()</h2>
+<a id="a099b8ec9cff96487575c63801b7329b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a099b8ec9cff96487575c63801b7329b6">&#9670;&nbsp;</a></span>SendSmsOTP()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -661,8 +661,18 @@ Here is the call graph for this function:</div>
           <td class="memname">async Task&lt;ActionResult&gt; AdeNote.Infrastructure.Services.AuthService.SendSmsOTP </td>
           <td>(</td>
           <td class="paramtype">Guid&#160;</td>
-          <td class="paramname"><em>userId</em></td><td>)</td>
+          <td class="paramname"><em>userId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>email</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -675,14 +685,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#ac1e8d232ee22c6c28be9fe88dbdd1ac1">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a450048a2665575559a9d2c4d3d4d4e0d">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00230">230</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a27bd0833a5c9a76e2bdbe362cff84bdd_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a27bd0833a5c9a76e2bdbe362cff84bdd_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a27bd0833a5c9a76e2bdbe362cff84bdd_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a27bd0833a5c9a76e2bdbe362cff84bdd_cgraph">
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a099b8ec9cff96487575c63801b7329b6_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a099b8ec9cff96487575c63801b7329b6_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a099b8ec9cff96487575c63801b7329b6_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a099b8ec9cff96487575c63801b7329b6_cgraph">
 <area shape="rect" title="Sends otp to phone number" alt="" coords="5,39,239,80"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html#a1e1183345e46d6a9f1faae4538f7151b" title="Get existings of a user" alt="" coords="287,5,545,47"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html#a176aad07e5b285362d6f833fa83397d0" title="Sends sms" alt="" coords="299,71,533,112"/>

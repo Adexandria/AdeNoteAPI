@@ -1,5 +1,5 @@
 <map id="AdeNote.Infrastructure.Repository.IUserDetailRepository.GetUserDetail" name="AdeNote.Infrastructure.Repository.IUserDetailRepository.GetUserDetail">
 <area shape="rect" id="node1" title="Get existings of a user" alt="" coords="287,39,545,80"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a27bd0833a5c9a76e2bdbe362cff84bdd" title="Sends otp to phone number" alt="" coords="5,5,239,47"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a099b8ec9cff96487575c63801b7329b6" title="Sends otp to phone number" alt="" coords="5,5,239,47"/>
 <area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#adc3b060ec80b625a45eaece17c3539d0" title="Sets up phone number" alt="" coords="5,71,239,112"/>
 </map>
