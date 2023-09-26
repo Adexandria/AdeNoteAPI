@@ -1,0 +1,20 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html" title="An Interface that includes the behaviour of the page labels object" alt="" coords="300,5,547,47"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html" title="Handles persisting and querying for page labels." alt="" coords="595,8,841,49"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,71,252,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html" title="An interface that includes the behaviour of a book object" alt="" coords="300,71,547,112"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html" title="Handles the persisting and querying of Book objects" alt="" coords="595,76,841,117"/>
+<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,136,252,177"/>
+<area shape="rect" id="node7" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html" title="An interface that includes label object" alt="" coords="300,136,547,177"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository.html" title="Handles persisting and querying for Label objects" alt="" coords="595,145,841,187"/>
+<area shape="rect" id="node9" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,267,252,308"/>
+<area shape="rect" id="node10" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html" title="An interface to handles page object" alt="" coords="300,267,547,308"/>
+<area shape="rect" id="node11" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html" title="Handles persisting and querying for page object" alt="" coords="595,243,841,284"/>
+<area shape="rect" id="node12" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,332,252,373"/>
+<area shape="rect" id="node13" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html" title="Handles the details of a user" alt="" coords="300,332,547,373"/>
+<area shape="rect" id="node14" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html" title=" " alt="" coords="595,316,841,357"/>
+<area shape="rect" id="node15" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,397,252,439"/>
+<area shape="rect" id="node16" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html" title="An interface that handles the authentication of an application" alt="" coords="300,397,547,439"/>
+<area shape="rect" id="node17" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html" title="Handles the authentication of the app" alt="" coords="595,381,841,423"/>
+<area shape="rect" id="node18" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title="Commits new and tracked changes in the objects" alt="" coords="300,201,547,243"/>
+</map>
