@@ -3,7 +3,6 @@ var classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository =
     [ "AuthRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html#a1203235f661f4923bec5aca160ea07c4", null ],
     [ "AuthRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html#aea1b0def732d54b388087c66a3ca7837", null ],
     [ "Add", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html#aa7fd121f77e312c5c11aceb4747942d6", null ],
-    [ "GenerateMFALoginToken", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html#a63e6adeac4b2030c718de5957f147558", null ],
     [ "GetAuthenticationType", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html#af34d5fec1312e3719ee9f2ff459c4fdc", null ],
     [ "GetAuthenticationType", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html#a0192e0070b8c3426eac3ec217565f05f", null ],
     [ "GetRefreshToken", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html#a884141450404346550b80531d2357a9a", null ],

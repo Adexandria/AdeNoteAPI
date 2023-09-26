@@ -1,4 +1,4 @@
 <map id="AdeNote.Infrastructure.Services.IAuthService.GetUserQrCode" name="AdeNote.Infrastructure.Services.IAuthService.GetUserQrCode">
 <area shape="rect" id="node1" title="Gets user&#39;s Qr code" alt="" coords="305,5,539,47"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a2b86a0cd3908cf74a3c8ffa9dc09ca40" title="Get existing qr code" alt="" coords="5,5,257,47"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a2b86a0cd3908cf74a3c8ffa9dc09ca40" title="Gets existing qr code" alt="" coords="5,5,257,47"/>
 </map>

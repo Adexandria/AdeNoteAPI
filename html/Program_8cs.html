@@ -104,6 +104,8 @@ Functions</h2></td></tr>
 <tr class="separator:a3531d607429385619f17e7b9983095e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0651b1cc6b2ec2a500b3fbaaaba6ac6c"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a0651b1cc6b2ec2a500b3fbaaaba6ac6c">AddHttpContextAccessor</a> ()</td></tr>
 <tr class="separator:a0651b1cc6b2ec2a500b3fbaaaba6ac6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7455608a0659f7cef3de2102d1e12196"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a7455608a0659f7cef3de2102d1e12196">AddLogging</a> ()</td></tr>
+<tr class="separator:a7455608a0659f7cef3de2102d1e12196"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d93252ec77847afcaad9fa1c113a728"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a8d93252ec77847afcaad9fa1c113a728">AddControllers</a> (options=&gt; options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes=true)</td></tr>
 <tr class="separator:a8d93252ec77847afcaad9fa1c113a728"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fc416bf54ce236c41c8a4850a3920f2"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a5fc416bf54ce236c41c8a4850a3920f2">AddApiVersioning</a> (c=&gt; { c.DefaultApiVersion=new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);c.AssumeDefaultVersionWhenUnspecified=true;c.ReportApiVersions=true;c.ApiVersionReader=ApiVersionReader.Combine(new UrlSegmentApiVersionReader());})</td></tr>
@@ -138,6 +140,10 @@ Functions</h2></td></tr>
 <tr class="separator:a473ec7d92eea3341b9fd2930e078441a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0114d4d38d6a8a33b7c1ad705761faa"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ad0114d4d38d6a8a33b7c1ad705761faa">AddScoped&lt; IBlobService, BlobService &gt;</a> ()</td></tr>
 <tr class="separator:ad0114d4d38d6a8a33b7c1ad705761faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a46da1865d06ba97b98d8399283432b"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a9a46da1865d06ba97b98d8399283432b">AddScoped&lt; IEmailService, EmailService &gt;</a> ()</td></tr>
+<tr class="separator:a9a46da1865d06ba97b98d8399283432b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae427ab01663d60e5aff4d14ec0a096f0"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ae427ab01663d60e5aff4d14ec0a096f0">AddScoped&lt; ISmsService, SmsService &gt;</a> ()</td></tr>
+<tr class="separator:ae427ab01663d60e5aff4d14ec0a096f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad383931ac699cc34078df0532f159279"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ad383931ac699cc34078df0532f159279">AddDbContext&lt; NoteDbContext &gt;</a> (options=&gt; options .UseSqlServer(<a class="el" href="Program_8cs.html#a067cdd5f0fed6b2598fae7de8607e7da">connectionString</a>))</td></tr>
 <tr class="separator:ad383931ac699cc34078df0532f159279"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b2bc4c41ab1f801b53d7330af1fdf7e"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a7b2bc4c41ab1f801b53d7330af1fdf7e">AddAuthentication</a> (JwtBearerDefaults.AuthenticationScheme) .AddJwtBearer(options</td></tr>
@@ -311,6 +317,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a7455608a0659f7cef3de2102d1e12196"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7455608a0659f7cef3de2102d1e12196">&#9670;&nbsp;</a></span>AddLogging()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">builder.Services. AddLogging </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab16ce314052ebbb14dce60b09bb3ef0c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab16ce314052ebbb14dce60b09bb3ef0c">&#9670;&nbsp;</a></span>AddScoped&lt; IAuthRepository, AuthRepository &gt;()</h2>
 
@@ -396,6 +419,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a9a46da1865d06ba97b98d8399283432b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a46da1865d06ba97b98d8399283432b">&#9670;&nbsp;</a></span>AddScoped&lt; IEmailService, EmailService &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">builder.Services. AddScoped&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html">IEmailService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1EmailService.html">EmailService</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a616f9b8986aaed1a3e00753d1ee948bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a616f9b8986aaed1a3e00753d1ee948bc">&#9670;&nbsp;</a></span>AddScoped&lt; ILabelPageRepository, LabelPageRepository &gt;()</h2>
 
@@ -472,6 +512,23 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">builder.Services. AddScoped&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html">IPageService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html">PageService</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae427ab01663d60e5aff4d14ec0a096f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae427ab01663d60e5aff4d14ec0a096f0">&#9670;&nbsp;</a></span>AddScoped&lt; ISmsService, SmsService &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">builder.Services. AddScoped&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html">ISmsService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html">SmsService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -793,7 +850,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00110">110</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00113">113</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -809,7 +866,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00107">107</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00110">110</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>

@@ -11,7 +11,7 @@
 <area shape="rect" id="node10" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html" title="An interface to handles page object" alt="" coords="300,267,547,308"/>
 <area shape="rect" id="node11" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html" title="Handles persisting and querying for page object" alt="" coords="595,243,841,284"/>
 <area shape="rect" id="node12" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,332,252,373"/>
-<area shape="rect" id="node13" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html" title="An interface that includes the details of a user" alt="" coords="300,332,547,373"/>
+<area shape="rect" id="node13" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html" title="Handles the details of a user" alt="" coords="300,332,547,373"/>
 <area shape="rect" id="node14" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html" title=" " alt="" coords="595,316,841,357"/>
 <area shape="rect" id="node15" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,397,252,439"/>
 <area shape="rect" id="node16" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html" title="An interface that handles the authentication of an application" alt="" coords="300,397,547,439"/>

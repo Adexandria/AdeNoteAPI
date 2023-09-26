@@ -30,6 +30,8 @@ var hierarchy =
       [ "AdeNote.Db.NoteDbContext", "classAdeNote_1_1Db_1_1NoteDbContext.html", null ]
     ] ],
     [ "AdeNote.Models.DTOs.DetailsDTO", "classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.EmailConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration.html", null ],
     [ "AdeNote.Infrastructure.Services.IAuthService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html", [
       [ "AdeNote.Infrastructure.Services.AuthService", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html", null ]
     ] ],
@@ -41,6 +43,9 @@ var hierarchy =
     ] ],
     [ "IConfigureNamedOptions", null, [
       [ "AdeNote.Infrastructure.Extension.SwaggerOptions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html", null ]
+    ] ],
+    [ "AdeNote.Infrastructure.Services.IEmailService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html", [
+      [ "AdeNote.Infrastructure.Services.EmailService", "classAdeNote_1_1Infrastructure_1_1Services_1_1EmailService.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Repository.ILabelPageRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html", [
       [ "AdeNote.Infrastructure.Repository.LabelPageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html", null ]
@@ -77,6 +82,9 @@ var hierarchy =
         [ "AdeNote.Infrastructure.Repository.AuthRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html", null ]
       ] ]
     ] ],
+    [ "AdeNote.Infrastructure.Services.ISmsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html", [
+      [ "AdeNote.Infrastructure.Services.SmsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html", null ]
+    ] ],
     [ "AdeNote.Infrastructure.Utilities.IUserIdentity", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html", [
       [ "AdeNote.Infrastructure.Utilities.UserIdentity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdentity.html", null ]
     ] ],
@@ -102,6 +110,8 @@ var hierarchy =
       [ "AdeNote.Infrastructure.Repository.PageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html", null ],
       [ "AdeNote.Infrastructure.Repository.UserDetailRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html", null ]
     ] ],
+    [ "AdeNote.Infrastructure.Utilities.Sms", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.SmsConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfiguration.html", null ],
     [ "AdeNote.Models.DTOs.UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", null ],
     [ "ValueConverter", null, [
       [ "AdeNote.Infrastructure.Utilities.UserIdConverter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdConverter.html", null ]

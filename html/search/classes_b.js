@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['swaggeroptions_380',['SwaggerOptions',['../classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html',1,'AdeNote::Infrastructure::Extension']]]
+  ['repository_430',['Repository',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html',1,'AdeNote::Infrastructure::Repository']]]
 ];

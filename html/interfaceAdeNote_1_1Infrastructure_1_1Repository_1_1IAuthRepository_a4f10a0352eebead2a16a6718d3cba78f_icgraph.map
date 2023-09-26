@@ -1,4 +1,4 @@
 <map id="AdeNote.Infrastructure.Repository.IAuthRepository.RevokeRefreshToken" name="AdeNote.Infrastructure.Repository.IAuthRepository.RevokeRefreshToken">
 <area shape="rect" id="node1" title="Revokes the existing refresh token" alt="" coords="292,5,555,47"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a17fd9d9222dccac856699707c0338f78" title="Revoke existing refresh token" alt="" coords="5,5,244,47"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a17fd9d9222dccac856699707c0338f78" title="Revokes existing refresh token" alt="" coords="5,5,244,47"/>
 </map>

@@ -99,7 +99,7 @@ Inheritance diagram for AdeNote.Infrastructure.Repository.UserDetailRepository:<
 <map name="aAdeNote_8Infrastructure_8Repository_8UserDetailRepository_inherit__map" id="aAdeNote_8Infrastructure_8Repository_8UserDetailRepository_inherit__map">
 <area shape="rect" title=" " alt="" coords="5,155,252,196"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title="Commits new and tracked changes in the objects" alt="" coords="7,80,99,107"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html" title="An interface that includes the details of a user" alt="" coords="123,80,289,107"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html" title="Handles the details of a user" alt="" coords="123,80,289,107"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="109,5,303,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -110,7 +110,7 @@ Collaboration diagram for AdeNote.Infrastructure.Repository.UserDetailRepository
 <map name="aAdeNote_8Infrastructure_8Repository_8UserDetailRepository_coll__map" id="aAdeNote_8Infrastructure_8Repository_8UserDetailRepository_coll__map">
 <area shape="rect" title=" " alt="" coords="5,155,252,196"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title="Commits new and tracked changes in the objects" alt="" coords="7,80,99,107"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html" title="An interface that includes the details of a user" alt="" coords="123,80,289,107"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html" title="Handles the details of a user" alt="" coords="123,80,289,107"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="109,5,303,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -125,6 +125,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aebb673fde054fd830087a9a402e8d3fc"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Models_1_1UserDetail.html">UserDetail</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html#aebb673fde054fd830087a9a402e8d3fc">GetUserDetail</a> (Guid userId)</td></tr>
 <tr class="memdesc:aebb673fde054fd830087a9a402e8d3fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface that includes the details of a user  <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html#aebb673fde054fd830087a9a402e8d3fc">More...</a><br /></td></tr>
 <tr class="separator:aebb673fde054fd830087a9a402e8d3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a268832fa333464f95ab857bde96ed947"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool?&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html#a268832fa333464f95ab857bde96ed947">IsPhoneNumberVerified</a> (Guid userId)</td></tr>
+<tr class="memdesc:a268832fa333464f95ab857bde96ed947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if user's phone number has been verified  <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html#a268832fa333464f95ab857bde96ed947">More...</a><br /></td></tr>
+<tr class="separator:a268832fa333464f95ab857bde96ed947"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4be8cc39f365858436e3243f4767d861"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html#a4be8cc39f365858436e3243f4767d861">Remove</a> (<a class="el" href="classAdeNote_1_1Models_1_1UserDetail.html">UserDetail</a> entity)</td></tr>
 <tr class="memdesc:a4be8cc39f365858436e3243f4767d861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an existing object  <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html#a4be8cc39f365858436e3243f4767d861">More...</a><br /></td></tr>
 <tr class="separator:a4be8cc39f365858436e3243f4767d861"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -238,6 +241,37 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a268832fa333464f95ab857bde96ed947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a268832fa333464f95ab857bde96ed947">&#9670;&nbsp;</a></span>IsPhoneNumberVerified()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;bool?&gt; AdeNote.Infrastructure.Repository.UserDetailRepository.IsPhoneNumberVerified </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>userId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if user's phone number has been verified </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userId</td><td>User id</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean value</dd></dl>
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html#aba59c3d014a2b05872072ad4a3f74505">AdeNote.Infrastructure.Repository.IUserDetailRepository</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="UserDetailRepository_8cs_source.html#l00043">43</a> of file <a class="el" href="UserDetailRepository_8cs_source.html">UserDetailRepository.cs</a>.</p>
+
+</div>
+</div>
 <a id="a4be8cc39f365858436e3243f4767d861"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4be8cc39f365858436e3243f4767d861">&#9670;&nbsp;</a></span>Remove()</h2>
 
@@ -263,7 +297,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a boolean value</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="UserDetailRepository_8cs_source.html#l00043">43</a> of file <a class="el" href="UserDetailRepository_8cs_source.html">UserDetailRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserDetailRepository_8cs_source.html#l00057">57</a> of file <a class="el" href="UserDetailRepository_8cs_source.html">UserDetailRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -292,7 +326,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a boolean value</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="UserDetailRepository_8cs_source.html#l00054">54</a> of file <a class="el" href="UserDetailRepository_8cs_source.html">UserDetailRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserDetailRepository_8cs_source.html#l00068">68</a> of file <a class="el" href="UserDetailRepository_8cs_source.html">UserDetailRepository.cs</a>.</p>
 
 </div>
 </div>

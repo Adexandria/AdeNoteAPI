@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Services.ISmsService.SendSms" name="AdeNote.Infrastructure.Services.ISmsService.SendSms">
+<area shape="rect" id="node1" title="Sends sms" alt="" coords="287,39,520,80"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a27bd0833a5c9a76e2bdbe362cff84bdd" title="Sends otp to phone number" alt="" coords="5,5,239,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ade8c2ac4d2e33a21d0874f275df7992e" title="Sets phone number verification" alt="" coords="5,71,239,112"/>
+</map>

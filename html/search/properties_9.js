@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['pageid_661',['PageId',['../classAdeNote_1_1Models_1_1LabelPage.html#af59c1c471ebb3f36f19c88cbc6fff98b',1,'AdeNote::Models::LabelPage']]],
-  ['pages_662',['Pages',['../classAdeNote_1_1Db_1_1NoteDbContext.html#a27439d3eab69d1af06403bcda671f3d8',1,'AdeNote.Db.NoteDbContext.Pages()'],['../classAdeNote_1_1Models_1_1Book.html#a19fb567c93b9cfd806ddbb2a4bfb4dd0',1,'AdeNote.Models.Book.Pages()'],['../classAdeNote_1_1Models_1_1Label.html#abd1695c2ddbd423af4502438b5771c45',1,'AdeNote.Models.Label.Pages()']]],
-  ['phonenumber_663',['Phonenumber',['../classAdeNote_1_1Models_1_1UserDetail.html#ae9ea9c79c83804bab09229165575bd9b',1,'AdeNote::Models::UserDetail']]]
+  ['manualkey_751',['ManualKey',['../classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html#a722998defab44d7432daf4b825894ad7',1,'AdeNote::Models::DTOs::AuthenticatorDTO']]],
+  ['message_752',['Message',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms.html#a8e33bc22332ad512a2c77c8a9aa59378',1,'AdeNote::Infrastructure::Utilities::Sms']]]
 ];

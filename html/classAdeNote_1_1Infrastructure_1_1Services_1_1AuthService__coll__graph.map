@@ -1,7 +1,10 @@
 <map id="AdeNote.Infrastructure.Services.AuthService" name="AdeNote.Infrastructure.Services.AuthService">
-<area shape="rect" id="node1" title="Implementation of the interface" alt="" coords="647,57,880,98"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html" title="An authentication interface that with the controller" alt="" coords="319,5,423,32"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html" title="An interface that includes the behaviour of cloud storage" alt="" coords="255,57,488,98"/>
-<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html" title="An interface that handles the authentication of an application" alt="" coords="248,122,495,163"/>
-<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,129,199,156"/>
+<area shape="rect" id="node1" title="Implementation of the interface" alt="" coords="685,122,919,163"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html" title="An authentication interface that with the controller" alt="" coords="321,5,425,32"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html" title="Handles the details of a user" alt="" coords="249,57,496,98"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,64,200,91"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html" title="An interface that includes the behaviour of cloud storage" alt="" coords="256,122,489,163"/>
+<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html" title="An interface that handles the authentication of an application" alt="" coords="249,187,496,229"/>
+<area shape="rect" id="node7" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="6,195,199,221"/>
+<area shape="rect" id="node8" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html" title="A sms service used to send message via sms" alt="" coords="256,253,489,294"/>
 </map>
