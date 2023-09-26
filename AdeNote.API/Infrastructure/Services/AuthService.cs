@@ -227,7 +227,7 @@ namespace AdeNote.Infrastructure.Services
         /// Sends otp to phone number 
         /// </summary>
         /// <param name="userId">User id</param>
-        public async Task<ActionResult> SendSmsOTP(Guid userId)
+        public async Task<ActionResult> SendSmsOTP(Guid userId,string email)
         {
             try
             {
@@ -238,7 +238,7 @@ namespace AdeNote.Infrastructure.Services
                 if (currentUserDetail == null)
                     return ActionResult.Failed("User details not found", StatusCodes.Status400BadRequest);
 
-                byte[] accountKey = Encoding.ASCII.GetBytes($"{key}-{currentUserDetail.Phonenumber}");
+                byte[] accountKey = Encoding.ASCII.GetBytes($"{key}-{email}");
 
                 var authenticator = TwoFactorAuthenticator
                  .GenerateSetupCode("AdeNote", currentUserDetail.User.Email, accountKey);
