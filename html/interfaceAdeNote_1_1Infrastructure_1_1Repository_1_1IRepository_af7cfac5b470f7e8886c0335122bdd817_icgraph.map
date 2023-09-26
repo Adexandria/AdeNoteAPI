@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Repository.IRepository.Add" name="AdeNote.Infrastructure.Repository.IRepository.Add">
+<area shape="rect" id="node1" title="Saves a new entity" alt="" coords="295,169,541,211"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#adf0cd7e7cf1020375687ff71625e3d9c" title="Adds a new page to a book" alt="" coords="9,5,243,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#a584ad969e74d5a1b9c68fb9fd0d0e2fc" title="Adds a new book" alt="" coords="9,71,243,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a9f61c6f1c39f12304640cb6441a2c8e3" title="Adds new label" alt="" coords="9,136,243,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ab3d8cce57115793a8568081c7ebec059" title="Sets up MFA using google authenticator app" alt="" coords="9,201,243,243"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ade8c2ac4d2e33a21d0874f275df7992e" title="Sets phone number verification" alt="" coords="9,267,243,308"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a9c23471931d83f34211055e94d40264d" title="Sets up MFA using sms authentication" alt="" coords="5,332,247,373"/>
+</map>
