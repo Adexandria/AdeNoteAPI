@@ -16,6 +16,7 @@ var Program_8cs =
     [ "AddScoped< ILabelPageRepository, LabelPageRepository >", "Program_8cs.html#a616f9b8986aaed1a3e00753d1ee948bc", null ],
     [ "AddScoped< ILabelRepository, LabelRepository >", "Program_8cs.html#a2e660771d63c88fe6a2cd46264d040cd", null ],
     [ "AddScoped< ILabelService, LabelService >", "Program_8cs.html#a1b625cc9c05d8bc13473c88bc2b1edbb", null ],
+    [ "AddScoped< INotificationService, NotificationService >", "Program_8cs.html#a0ab61fac1c51557b9a374ba875e29b04", null ],
     [ "AddScoped< IPageRepository, PageRepository >", "Program_8cs.html#a00ac9c48b5a31834e66e637670c16a22", null ],
     [ "AddScoped< IPageService, PageService >", "Program_8cs.html#a07bd73fc96935d6cab367e322a442cc2", null ],
     [ "AddScoped< ISmsService, SmsService >", "Program_8cs.html#ae427ab01663d60e5aff4d14ec0a096f0", null ],

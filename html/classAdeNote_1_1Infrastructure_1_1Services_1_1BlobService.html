@@ -122,6 +122,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af1dd32364c05126597ae4767112ac3ec"><td class="memItemLeft" align="right" valign="top">async Task&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#af1dd32364c05126597ae4767112ac3ec">UploadImage</a> (string fileName, Stream file)</td></tr>
 <tr class="memdesc:af1dd32364c05126597ae4767112ac3ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uploads image  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#af1dd32364c05126597ae4767112ac3ec">More...</a><br /></td></tr>
 <tr class="separator:af1dd32364c05126597ae4767112ac3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46d523c62a2b6ecd6eb204607667f2b5"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#a46d523c62a2b6ecd6eb204607667f2b5">DeleteImage</a> (string fileUrl)</td></tr>
+<tr class="memdesc:a46d523c62a2b6ecd6eb204607667f2b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes Image  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#a46d523c62a2b6ecd6eb204607667f2b5">More...</a><br /></td></tr>
+<tr class="separator:a46d523c62a2b6ecd6eb204607667f2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78907e246e7f73b4627f921f3974d1a6"><td class="memItemLeft" align="right" valign="top">async Task&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#a78907e246e7f73b4627f921f3974d1a6">DownloadImage</a> (string fileName)</td></tr>
+<tr class="memdesc:a78907e246e7f73b4627f921f3974d1a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Downloads image  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#a78907e246e7f73b4627f921f3974d1a6">More...</a><br /></td></tr>
+<tr class="separator:a78907e246e7f73b4627f921f3974d1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -131,6 +137,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a78c70c7b8f4ea14577aa300ecb3232a8"><td class="memItemLeft" align="right" valign="top">Uri&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#a78c70c7b8f4ea14577aa300ecb3232a8">GenerateBlobUri</a> (string fileName)</td></tr>
 <tr class="memdesc:a78c70c7b8f4ea14577aa300ecb3232a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates uri  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#a78c70c7b8f4ea14577aa300ecb3232a8">More...</a><br /></td></tr>
 <tr class="separator:a78c70c7b8f4ea14577aa300ecb3232a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92584cb474ebfc2c2776838cbe305cfa"><td class="memItemLeft" align="right" valign="top">Uri&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#a92584cb474ebfc2c2776838cbe305cfa">GenerateBlobHTMLUri</a> (string fileName)</td></tr>
+<tr class="memdesc:a92584cb474ebfc2c2776838cbe305cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates uri  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#a92584cb474ebfc2c2776838cbe305cfa">More...</a><br /></td></tr>
+<tr class="separator:a92584cb474ebfc2c2776838cbe305cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -140,7 +149,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles the implementation of cloud storage </p>
 
-<p class="definition">Definition at line <a class="el" href="BlobService_8cs_source.html#l00011">11</a> of file <a class="el" href="BlobService_8cs_source.html">BlobService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlobService_8cs_source.html#l00012">12</a> of file <a class="el" href="BlobService_8cs_source.html">BlobService.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab5557067c7ecebb78dffcdeed19624cc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5557067c7ecebb78dffcdeed19624cc">&#9670;&nbsp;</a></span>BlobService()</h2>
@@ -166,11 +175,138 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="BlobService_8cs_source.html#l00019">19</a> of file <a class="el" href="BlobService_8cs_source.html">BlobService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlobService_8cs_source.html#l00020">20</a> of file <a class="el" href="BlobService_8cs_source.html">BlobService.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a46d523c62a2b6ecd6eb204607667f2b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46d523c62a2b6ecd6eb204607667f2b5">&#9670;&nbsp;</a></span>DeleteImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;bool&gt; AdeNote.Infrastructure.Services.BlobService.DeleteImage </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>fileUrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deletes Image </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileUrl</td><td>file url</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if deleted</dd></dl>
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html#a10b096474ee9a0f12d70f5aed0b9dc8c">AdeNote.Infrastructure.Services.IBlobService</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="BlobService_8cs_source.html#l00080">80</a> of file <a class="el" href="BlobService_8cs_source.html">BlobService.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService_a46d523c62a2b6ecd6eb204607667f2b5_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1BlobService_a46d523c62a2b6ecd6eb204607667f2b5_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1BlobService_a46d523c62a2b6ecd6eb204607667f2b5_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1BlobService_a46d523c62a2b6ecd6eb204607667f2b5_cgraph">
+<area shape="rect" title="Deletes Image" alt="" coords="5,5,239,47"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#aa53600a0efdb5d21c9d69530b57b5421" title="Creates a shared key for the account" alt="" coords="287,5,573,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a78907e246e7f73b4627f921f3974d1a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78907e246e7f73b4627f921f3974d1a6">&#9670;&nbsp;</a></span>DownloadImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;string&gt; AdeNote.Infrastructure.Services.BlobService.DownloadImage </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>fileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Downloads image </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>file name</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Html content</dd></dl>
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html#ab333a0a1bbfee6d87de70f25528803c9">AdeNote.Infrastructure.Services.IBlobService</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="BlobService_8cs_source.html#l00092">92</a> of file <a class="el" href="BlobService_8cs_source.html">BlobService.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService_a78907e246e7f73b4627f921f3974d1a6_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1BlobService_a78907e246e7f73b4627f921f3974d1a6_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1BlobService_a78907e246e7f73b4627f921f3974d1a6_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1BlobService_a78907e246e7f73b4627f921f3974d1a6_cgraph">
+<area shape="rect" title="Downloads image" alt="" coords="5,39,239,80"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#a92584cb474ebfc2c2776838cbe305cfa" title="Generates uri" alt="" coords="306,5,554,47"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#aa53600a0efdb5d21c9d69530b57b5421" title="Creates a shared key for the account" alt="" coords="287,71,573,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a92584cb474ebfc2c2776838cbe305cfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92584cb474ebfc2c2776838cbe305cfa">&#9670;&nbsp;</a></span>GenerateBlobHTMLUri()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Uri AdeNote.Infrastructure.Services.BlobService.GenerateBlobHTMLUri </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>fileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generates uri </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>file name</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Uri</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="BlobService_8cs_source.html#l00070">70</a> of file <a class="el" href="BlobService_8cs_source.html">BlobService.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService_a92584cb474ebfc2c2776838cbe305cfa_icgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1BlobService_a92584cb474ebfc2c2776838cbe305cfa_icgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1BlobService_a92584cb474ebfc2c2776838cbe305cfa_icgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1BlobService_a92584cb474ebfc2c2776838cbe305cfa_icgraph">
+<area shape="rect" title="Generates uri" alt="" coords="287,5,535,47"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#a78907e246e7f73b4627f921f3974d1a6" title="Downloads image" alt="" coords="5,5,239,47"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a78c70c7b8f4ea14577aa300ecb3232a8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a78c70c7b8f4ea14577aa300ecb3232a8">&#9670;&nbsp;</a></span>GenerateBlobUri()</h2>
 
@@ -204,7 +340,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Uri</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BlobService_8cs_source.html#l00059">59</a> of file <a class="el" href="BlobService_8cs_source.html">BlobService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlobService_8cs_source.html#l00060">60</a> of file <a class="el" href="BlobService_8cs_source.html">BlobService.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -243,14 +379,16 @@ Here is the caller graph for this function:</div>
 <p>Creates a shared key for the account </p>
 <dl class="section return"><dt>Returns</dt><dd>StorageSharedKeyCredential</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BlobService_8cs_source.html#l00048">48</a> of file <a class="el" href="BlobService_8cs_source.html">BlobService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlobService_8cs_source.html#l00049">49</a> of file <a class="el" href="BlobService_8cs_source.html">BlobService.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService_aa53600a0efdb5d21c9d69530b57b5421_icgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1BlobService_aa53600a0efdb5d21c9d69530b57b5421_icgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1BlobService_aa53600a0efdb5d21c9d69530b57b5421_icgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1BlobService_aa53600a0efdb5d21c9d69530b57b5421_icgraph">
-<area shape="rect" title="Creates a shared key for the account" alt="" coords="287,5,573,47"/>
-<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#af1dd32364c05126597ae4767112ac3ec" title="Uploads image" alt="" coords="5,5,239,47"/>
+<area shape="rect" title="Creates a shared key for the account" alt="" coords="287,71,573,112"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#a46d523c62a2b6ecd6eb204607667f2b5" title="Deletes Image" alt="" coords="5,5,239,47"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#a78907e246e7f73b4627f921f3974d1a6" title="Downloads image" alt="" coords="5,71,239,112"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#af1dd32364c05126597ae4767112ac3ec" title="Uploads image" alt="" coords="5,136,239,177"/>
 </map>
 </div>
 
@@ -294,7 +432,7 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html#a2812f257404da2b4e1491ae4eccd9e16">AdeNote.Infrastructure.Services.IBlobService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BlobService_8cs_source.html#l00031">31</a> of file <a class="el" href="BlobService_8cs_source.html">BlobService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlobService_8cs_source.html#l00032">32</a> of file <a class="el" href="BlobService_8cs_source.html">BlobService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -329,7 +467,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BlobService_8cs_source.html#l00013">13</a> of file <a class="el" href="BlobService_8cs_source.html">BlobService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BlobService_8cs_source.html#l00014">14</a> of file <a class="el" href="BlobService_8cs_source.html">BlobService.cs</a>.</p>
 
 </div>
 </div>

@@ -3,12 +3,14 @@ var dir_ef5cfd776dbface43d78a691eb4c00b1 =
     [ "BlobConfiguration.cs", "BlobConfiguration_8cs.html", [
       [ "BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration" ]
     ] ],
+    [ "ContentType.cs", "ContentType_8cs.html", "ContentType_8cs" ],
     [ "Email.cs", "Email_8cs.html", [
       [ "Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email" ]
     ] ],
     [ "EmailConfiguration.cs", "EmailConfiguration_8cs.html", [
       [ "EmailConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration" ]
     ] ],
+    [ "EmailTemplate.cs", "EmailTemplate_8cs.html", "EmailTemplate_8cs" ],
     [ "IUserIdentity.cs", "IUserIdentity_8cs.html", [
       [ "IUserIdentity", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity" ]
     ] ],

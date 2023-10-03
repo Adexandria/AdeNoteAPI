@@ -1,6 +1,6 @@
 var classAdeNote_1_1Controllers_1_1AuthenticationController =
 [
-    [ "AuthenticationController", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#af26f3d6b2c4fc5cb7f979465e27edc35", null ],
+    [ "AuthenticationController", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a33c1859b972cbfb9f6fc0e53e37976b1", null ],
     [ "AddPhoneNumber", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a923f2d0cdf5a7252471aa3b94585579e", null ],
     [ "AddToCookie", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#aaf76f4e77c5e74af2928f3296f7828ed", null ],
     [ "GetAccessToken", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a48d8e946cb745f663395c743208b46d7", null ],
@@ -14,8 +14,8 @@ var classAdeNote_1_1Controllers_1_1AuthenticationController =
     [ "SignUp", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a02ae4c220712a1035142e8ebf52327a7", null ],
     [ "VerifyPhoneNumber", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a898afbb1083814447509b28d58923782", null ],
     [ "VerifySmsOTP", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#ac6e29dec9bd50a10a1629d70231b7fc4", null ],
-    [ "VerifyTOTP", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a4c8233c49c0f856b26c7fb88bcd86585", null ],
+    [ "VerifyTOTP", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#ab1fe105f9760c908a3b9782c2de84908", null ],
     [ "_authService", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a488e5fe4efb3b13ebeb7ff2827bc0b56", null ],
     [ "_authToken", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9c87d57c55698324efc557114849d855", null ],
-    [ "_emailService", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a239f5c0f301b0be3c3de618a0eeae69d", null ]
+    [ "_notificationService", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#abc5072e18fe7cdb6c4670464f8e4fe05", null ]
 ];

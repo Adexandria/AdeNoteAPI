@@ -9,9 +9,11 @@ var namespaceAdeNote_1_1Infrastructure_1_1Services =
     [ "IBookService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService" ],
     [ "IEmailService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService" ],
     [ "ILabelService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService" ],
+    [ "INotificationService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService" ],
     [ "IPageService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService" ],
     [ "ISmsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService" ],
     [ "LabelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService" ],
+    [ "NotificationService", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService" ],
     [ "PageService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService" ],
     [ "SmsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService" ]
 ];

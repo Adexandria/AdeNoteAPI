@@ -1,0 +1,6 @@
+<map id="AdeNote.Infrastructure.Services.NotificationService.SendNotification&lt; T &gt;" name="AdeNote.Infrastructure.Services.NotificationService.SendNotification&lt; T &gt;">
+<area shape="rect" id="node1" title="Send notification based on template type" alt="" coords="5,53,300,94"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html#a098879fcf380ec2cfbda5cb62d1b5437" title="Generates Personalised message using content template" alt="" coords="348,5,623,61"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html#ae1f9325d04f44e70ce5037da3421804f" title="Generates content template using template type" alt="" coords="355,85,615,141"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html#ab333a0a1bbfee6d87de70f25528803c9" title="Downloads image" alt="" coords="671,93,904,134"/>
+</map>

@@ -32,6 +32,7 @@ var hierarchy =
     [ "AdeNote.Models.DTOs.DetailsDTO", "classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO.html", null ],
     [ "AdeNote.Infrastructure.Utilities.Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email.html", null ],
     [ "AdeNote.Infrastructure.Utilities.EmailConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration.html", null ],
+    [ "AdeNote.Infrastructure.Extension.EnumExtensions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1EnumExtensions.html", null ],
     [ "AdeNote.Infrastructure.Services.IAuthService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html", [
       [ "AdeNote.Infrastructure.Services.AuthService", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html", null ]
     ] ],
@@ -52,6 +53,9 @@ var hierarchy =
     ] ],
     [ "AdeNote.Infrastructure.Services.ILabelService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html", [
       [ "AdeNote.Infrastructure.Services.LabelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html", null ]
+    ] ],
+    [ "AdeNote.Infrastructure.Services.INotificationService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html", [
+      [ "AdeNote.Infrastructure.Services.NotificationService", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Services.IPageService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html", [
       [ "AdeNote.Infrastructure.Services.PageService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html", null ]

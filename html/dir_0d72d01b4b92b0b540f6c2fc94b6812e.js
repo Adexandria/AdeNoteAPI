@@ -27,6 +27,9 @@ var dir_0d72d01b4b92b0b540f6c2fc94b6812e =
     [ "ILabelService.cs", "ILabelService_8cs.html", [
       [ "ILabelService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService" ]
     ] ],
+    [ "INotificationService.cs", "INotificationService_8cs.html", [
+      [ "INotificationService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService" ]
+    ] ],
     [ "IPageService.cs", "IPageService_8cs.html", [
       [ "IPageService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService" ]
     ] ],
@@ -35,6 +38,9 @@ var dir_0d72d01b4b92b0b540f6c2fc94b6812e =
     ] ],
     [ "LabelService.cs", "LabelService_8cs.html", [
       [ "LabelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService" ]
+    ] ],
+    [ "NotificationService.cs", "NotificationService_8cs.html", [
+      [ "NotificationService", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService" ]
     ] ],
     [ "PageService.cs", "PageService_8cs.html", [
       [ "PageService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService" ]
