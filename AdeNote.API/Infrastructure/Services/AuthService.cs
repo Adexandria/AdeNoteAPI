@@ -73,7 +73,7 @@ namespace AdeNote.Infrastructure.Services
                     Position = 0
                 };
 
-                var imageName = new Guid().ToString("N")[^4];
+                var imageName = Guid.NewGuid().ToString("N")[^4];
 
                 var url = await blobService.UploadImage($"qrCode{imageName}", memoryStream);
 
@@ -488,6 +488,13 @@ namespace AdeNote.Infrastructure.Services
                 var authenticationType = await authRepository.GetAuthenticationType(userId);
                 if(authenticationType == null)
                     return ActionResult.Failed("MFA isn't enabled for user", StatusCodes.Status400BadRequest);
+
+                if(authenticationType.AuthenticationType == MFAType.AuthenicationApp)
+                {
+                    var isDeleted = await blobService.DeleteImage(authenticationType.AuthenticatorKey);
+                    if (!isDeleted)
+                        return ActionResult.Failed("Failed to delete qr code");
+                }
 
                var result =  await authRepository.Remove(authenticationType);
                 if(!result)
