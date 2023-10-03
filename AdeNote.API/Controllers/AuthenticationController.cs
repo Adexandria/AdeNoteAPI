@@ -29,19 +29,20 @@ namespace AdeNote.Controllers
     {
         private IAuthService _authService;
         private IAuthToken _authToken;
-        private IEmailService _emailService;
+        private INotificationService _notificationService;
         /// <summary>
         /// This is the constructor
         /// </summary>
         /// <param name="container">A container that contains all the built dependencies</param>
         /// <param name="application">An interface used to interact with the layers</param>
         /// <param name="authService">An authentication service </param>
+        /// <param name="_notificationService">Handles Notification</param>
         /// <param name="userIdentity">An interface that interacts with the user. This fetches the current user details</param>
         public AuthenticationController(IContainer container, ITaskApplication application, IUserIdentity userIdentity,
-            IAuthService authService, IEmailService emailService) : base(container, application,userIdentity)
+            IAuthService authService, INotificationService notificationService) : base(container, application,userIdentity)
         {
             _authService = authService;
-            _emailService = emailService;
+            _notificationService = notificationService;
             _authToken = container.Resolve<IAuthToken>();
         }
 
@@ -126,8 +127,18 @@ namespace AdeNote.Controllers
                 AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(8));
                 return Ok("Proceed to enter otp from authenticator");
             }
-
-            AddToCookie("AdeNote-RefreshToken", loginResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
+            if (loginResponse.IsSuccessful)
+            {
+                var substitutions = new Dictionary<string, string>
+                {
+                    { "[Date]", DateTime.Now.ToLongDateString() },
+                    {"[Time]",DateTime.Now.ToLongTimeString() }
+                };
+                AddToCookie("AdeNote-RefreshToken", loginResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
+                await _notificationService.SendNotification(new Email(userDetails.Data.Email, "New login to AdeNote"), 
+                    EmailTemplate.LoginNotification, ContentType.html,substitutions);
+            }
+            
 
             return loginResponse.Response();
         }
@@ -414,6 +425,15 @@ namespace AdeNote.Controllers
 
             var accessToken = _authToken.GenerateAccessToken(detailsResponse.Data.UserId, detailsResponse.Data.Email);
 
+            var substitutions = new Dictionary<string, string>
+                {
+                    { "[Date]", DateTime.Now.ToLongDateString() },
+                    {"[Time]",DateTime.Now.ToLongTimeString() }
+                };
+
+            await _notificationService.SendNotification(new Email(detailsResponse.Data.Email, "New login to AdeNote"),
+                    EmailTemplate.LoginNotification, ContentType.html, substitutions);
+
             AddToCookie("AdeNote-RefreshToken", detailsResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
 
             return TasksLibrary.Utilities.ActionResult<string>.SuccessfulOperation(accessToken).Response();
@@ -441,7 +461,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [AllowAnonymous]
         [HttpPost("two-factor-authentication/app/verify-code")]
-        public IActionResult VerifyTOTP(string totp)
+        public async Task<IActionResult> VerifyTOTP(string totp)
         {
             var token = Request.Cookies["Multi-FactorToken"];
 
@@ -454,6 +474,15 @@ namespace AdeNote.Controllers
                 return response.Response();
 
             var accessToken = _authToken.GenerateAccessToken(detailsResponse.Data.UserId,detailsResponse.Data.Email);
+
+            var substitutions = new Dictionary<string, string>
+                {
+                    { "[Date]", DateTime.Now.ToLongDateString() },
+                    {"[Time]",DateTime.Now.ToLongTimeString() }
+                };
+
+            await _notificationService.SendNotification(new Email(detailsResponse.Data.Email, "New login to AdeNote"),
+                    EmailTemplate.LoginNotification, ContentType.html, substitutions);
 
             AddToCookie("AdeNote-RefreshToken", detailsResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
 

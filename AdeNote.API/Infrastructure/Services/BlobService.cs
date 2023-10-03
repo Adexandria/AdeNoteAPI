@@ -2,6 +2,7 @@
 using Azure.Storage;
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
+using System.Text;
 
 namespace AdeNote.Infrastructure.Services
 {
@@ -61,5 +62,46 @@ namespace AdeNote.Infrastructure.Services
             return new Uri($"https://{ _blobConfig.AccountName}.blob.core.windows.net/{ _blobConfig.Container}/{fileName}.png");
         }
 
+        /// <summary>
+        /// Generates uri 
+        /// </summary>
+        /// <param name="fileName">file name</param>
+        /// <returns>Uri</returns>
+        private Uri GenerateBlobHTMLUri(string fileName)
+        {
+            return new Uri($"https://{ _blobConfig.AccountName}.blob.core.windows.net/{ _blobConfig.Container}/{fileName}.html");
+        }
+
+        /// <summary>
+        /// Deletes Image
+        /// </summary>
+        /// <param name="fileUrl">file url</param>
+        /// <returns>True if deleted</returns>
+        public async Task<bool> DeleteImage(string fileUrl)
+        {
+            var storageCredentials = GenerateStorageCredentials();
+            var blobClient = new BlobClient(new Uri(fileUrl), storageCredentials);
+            return await blobClient.DeleteIfExistsAsync();
+        }
+
+        /// <summary>
+        /// Downloads image
+        /// </summary>
+        /// <param name="fileName">file name</param>
+        /// <returns>Html content</returns>
+        public async Task<string> DownloadImage(string fileName)
+        {
+            using var ms = new MemoryStream();
+            var blobUri = GenerateBlobHTMLUri(fileName);
+            var storageCredentials = GenerateStorageCredentials();
+            var blobClient = new BlobClient(blobUri, storageCredentials);
+
+            var response = await blobClient.DownloadToAsync(ms);
+            ms.Position = 0;
+            using var reader = new StreamReader(ms, Encoding.UTF8);
+            var data = reader.ReadToEnd();
+
+            return data;
+        }
     }
 }

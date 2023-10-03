@@ -12,5 +12,19 @@
         /// <param name="file">Image</param>
         /// <returns>a url</returns>
         Task<string> UploadImage(string fileName, Stream file);
+
+        /// <summary>
+        /// Deletes image
+        /// </summary>
+        /// <param name="fileUrl">File url</param>
+        /// <returns>True if deleted</returns>
+        Task<bool> DeleteImage(string fileUrl);
+
+        /// <summary>
+        /// Downloads image
+        /// </summary>
+        /// <param name="fileName">file name</param>
+        /// <returns>html</returns>
+        Task<string> DownloadImage(string fileName);
     }
 }

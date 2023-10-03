@@ -32,7 +32,7 @@ namespace AdeNote.Infrastructure.Services
                 {
                     request.AddParameter("text", email.PlainTextMessage);
                 }
-                else
+                if(string.IsNullOrEmpty(email.PlainTextMessage))
                 {
                     request.AddParameter("html", email.HtmlMessage);
                 }
