@@ -11,6 +11,10 @@ namespace AdeNote.Infrastructure.Utilities
         /// Template for email logic notification
         /// </summary>
         [Description("LoginNotification")]
-        LoginNotification
+        LoginNotification,
+
+        [Description("ResetTokenNotification")]
+        ResetTokenNotification
+
     }
 }

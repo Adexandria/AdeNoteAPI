@@ -12,15 +12,17 @@ using Microsoft.OpenApi.Models;
 using System.Reflection;
 using System.Text;
 using TasksLibrary.Architecture.Application;
+using TasksLibrary.Services;
+using UserRepository = AdeNote.Infrastructure.Repository.UserRepository;
 
 var builder = WebApplication.CreateBuilder(args);
-var configuration = builder.Configuration;
+var configuration = builder.Configuration.AddEnvironmentVariables().Build();
 
 // Gets the connection string from appsettings
-var connectionString = configuration.GetConnectionString("NotesDB");
+var connectionString = configuration.GetConnectionString("NotesDB") ?? configuration.GetValue<string>("NotesDB");
 
 // Gets the token secret from appsettings
-var tokenSecret = configuration["TokenSecret"];
+var tokenSecret = configuration["TokenSecret"] ?? configuration["AdeTokenSecret"];
 
 // Add services to the container.
 var containerBuilder = new TaskContainerBuilder(connectionString);
@@ -84,6 +86,7 @@ builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<ILabelRepository, LabelRepository>();
 builder.Services.AddScoped<IPageRepository, PageRepository>();
 builder.Services.AddScoped<ILabelPageRepository, LabelPageRepository>();
+builder.Services.AddScoped<IUser, UserRepository>();
 builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddScoped<IPageService, PageService>();
 builder.Services.AddScoped<ILabelService, LabelService>();
@@ -94,7 +97,9 @@ builder.Services.AddScoped<IBlobService, BlobService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<ISmsService, SmsService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
-
+builder.Services.AddScoped<IUserService,UserService>();
+builder.Services.AddScoped<AuthTokenRepository>();
+builder.Services.AddScoped<IPasswordManager,PasswordManager>();
 
 builder.Services.AddDbContext<NoteDbContext>(options => options
 .UseSqlServer(connectionString));

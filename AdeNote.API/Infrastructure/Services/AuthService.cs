@@ -2,8 +2,10 @@
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
+using Autofac;
 using Google.Authenticator;
 using System.Text;
+using TasksLibrary.Services;
 using TasksLibrary.Utilities;
 
 namespace AdeNote.Infrastructure.Services 
@@ -32,15 +34,18 @@ namespace AdeNote.Infrastructure.Services
         public AuthService(IAuthRepository _authRepository,
             IUserDetailRepository _userDetailRepository,
             IBlobService _blobService,IConfiguration _configuration,
-            ISmsService _smsService)
+            ISmsService _smsService,IContainer container,
+            IEmailService _emailService, AuthTokenRepository authTokenRepository)
         {
             authRepository = _authRepository;
             userDetailRepository = _userDetailRepository;
             smsService = _smsService;
-            key = _configuration["TwoFactorSecret"];
+            key = _configuration["TwoFactorSecret"] ?? _configuration.GetValue<string>("AdeTwoFactorSecret");
             blobService = _blobService;
-            loginSecret = _configuration["LoginSecret"];
+            loginSecret = _configuration["LoginSecret"] ?? _configuration.GetValue<string>("AdeLoginSecret");
             TwoFactorAuthenticator = new TwoFactorAuthenticator();
+            tokenRepository = authTokenRepository;
+            emailService = _emailService;
         }
 
         /// <summary>
@@ -508,6 +513,49 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
+        public ActionResult<string> GenerateResetToken(Guid userId, string email)
+        {
+            try
+            {
+                if (userId == Guid.Empty)
+                    return ActionResult<string>.Failed("Invalid user id", StatusCodes.Status404NotFound);
+
+                var token = tokenRepository.GenerateAccessToken(userId, email);
+
+                var newEmail = new Email(email, "Reset Token");
+
+                newEmail.SetHtmlContent(token);
+
+                emailService.SendMessage(newEmail);
+
+                return ActionResult<string>.SuccessfulOperation(token);
+            }
+            catch (Exception ex)
+            {
+                return ActionResult<string>.Failed(ex.Message);
+            }
+        }
+
+        public ActionResult VerifyResetToken(string token)
+        {
+            try
+            {
+                if(string.IsNullOrEmpty(token))
+                    return ActionResult.Failed("Invalid token", StatusCodes.Status404NotFound);
+
+                var userDTO = tokenRepository.VerifyToken(token);
+
+                if (userDTO == null)
+                    return ActionResult.Failed("Failed to verify token", StatusCodes.Status400BadRequest);
+
+                return ActionResult.Successful();
+            }
+            catch (Exception ex)
+            {
+                return ActionResult.Failed(ex.Message);
+            }
+        }
+
         /// <summary>
         /// Two factor authentication secret key
         /// </summary>
@@ -542,5 +590,9 @@ namespace AdeNote.Infrastructure.Services
         /// Object used to generate and set up two factor authentication
         /// </summary>
         public TwoFactorAuthenticator TwoFactorAuthenticator;
+
+        public AuthTokenRepository tokenRepository;
+       
+        public IEmailService emailService;
     }
 }

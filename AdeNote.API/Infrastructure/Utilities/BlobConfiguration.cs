@@ -5,6 +5,16 @@
     /// </summary>
     public class BlobConfiguration
     {
+        public BlobConfiguration()
+        {
+
+        }
+        public BlobConfiguration(string accountKey, string accountName, string container)
+        {
+            AccountKey = accountKey;
+            AccountName = accountName;
+            Container = container;
+        }
         /// <summary>
         /// Account key
         /// </summary>

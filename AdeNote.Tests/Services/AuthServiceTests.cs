@@ -29,7 +29,7 @@ namespace AdeNote.Tests.Services
         public async Task ShouldSetAuthenticatorSuccessfully()
         {
             //Arrange
-            blobService.Setup(s => s.UploadImage(It.IsAny<string>(), It.IsAny<Stream>())).ReturnsAsync("test-url");
+            blobService.Setup(s => s.UploadImage(It.IsAny<string>(), It.IsAny<Stream>(),Infrastructure.Utilities.MimeType.png)).ReturnsAsync("test-url");
             authRepository.Setup(s => s.Add(It.IsAny<UserToken>())).ReturnsAsync(true);
 
             //Act
@@ -43,7 +43,7 @@ namespace AdeNote.Tests.Services
         public async Task ShouldFailToSetAuthenticator()
         {
             //Arrange
-            blobService.Setup(s => s.UploadImage(It.IsAny<string>(), It.IsAny<Stream>())).ReturnsAsync("test-url");
+            blobService.Setup(s => s.UploadImage(It.IsAny<string>(), It.IsAny<Stream>(),Infrastructure.Utilities.MimeType.png)).ReturnsAsync("test-url");
 
             //Act
             var response = await authService.SetAuthenticator(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"), "email");

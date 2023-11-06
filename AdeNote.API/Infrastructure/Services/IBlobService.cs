@@ -1,4 +1,6 @@
-﻿namespace AdeNote.Infrastructure.Services
+﻿using AdeNote.Infrastructure.Utilities;
+
+namespace AdeNote.Infrastructure.Services
 {
     /// <summary>
     /// An interface that includes the behaviour of cloud storage
@@ -11,7 +13,7 @@
         /// <param name="fileName">Image name</param>
         /// <param name="file">Image</param>
         /// <returns>a url</returns>
-        Task<string> UploadImage(string fileName, Stream file);
+        Task<string> UploadImage(string fileName, Stream file,MimeType mimeType = MimeType.png);
 
         /// <summary>
         /// Deletes image
@@ -25,6 +27,6 @@
         /// </summary>
         /// <param name="fileName">file name</param>
         /// <returns>html</returns>
-        Task<string> DownloadImage(string fileName);
+        Task<string> DownloadImage(string fileName, MimeType mimeType = MimeType.html);
     }
 }

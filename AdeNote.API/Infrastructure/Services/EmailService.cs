@@ -8,8 +8,11 @@ namespace AdeNote.Infrastructure.Services
     {
         public EmailService(IConfiguration config, ILoggerFactory loggerFactory)
         {
-            emailConfig = config.GetSection("EmailConfiguration")
-                .Get<EmailConfiguration>();
+            emailConfig = new EmailConfiguration(
+                    config.GetValue<string>("AdeDomain"),
+                    config.GetValue<string>("AdeURL"), 
+                    config.GetValue<string>("AdeFrom"),
+                    config.GetValue<string>("AdeAPIKey"));
             logger = loggerFactory.CreateLogger(typeof(EmailService));   
         }
         public void SendMessage<T>(T email) where T : Email

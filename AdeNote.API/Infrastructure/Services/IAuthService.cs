@@ -69,6 +69,7 @@ namespace AdeNote.Infrastructure.Services
         /// Sends otp to phone number 
         /// </summary>
         /// <param name="userId">User id</param>
+        /// <param name="email">Email</param>
         Task<ActionResult> SendSmsOTP(Guid userId,string email);
 
         /// <summary>
@@ -112,5 +113,9 @@ namespace AdeNote.Infrastructure.Services
         /// </summary>
         /// <param name="userId">User id</param>
         Task<ActionResult> DisableUserMFA(Guid userId);
+
+        ActionResult<string> GenerateResetToken(Guid userId, string email);
+
+        ActionResult VerifyResetToken(string token);
     }
 }
