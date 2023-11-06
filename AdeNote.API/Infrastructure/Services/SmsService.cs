@@ -17,7 +17,10 @@ namespace AdeNote.Infrastructure.Services
         /// <param name="loggerFactory">A factory used to create logs</param>
         public SmsService(IConfiguration config,ILoggerFactory loggerFactory)
         {
-            _smsConfig = config.GetSection("TwilioConfiguration").Get<SmsConfiguration>();
+            _smsConfig = config.GetSection("TwilioConfiguration").Get<SmsConfiguration>() ?? 
+                new SmsConfiguration(config.GetValue<string>("AdeTAccountKey"), 
+                config.GetValue<string>("AdeAccountSecret"),
+                config.GetValue<string>("AdePhonenumber"));
             _logger = loggerFactory.CreateLogger(typeof(SmsService));
         }
 

@@ -5,6 +5,19 @@
     /// </summary>
     public class EmailConfiguration
     {
+
+        public EmailConfiguration()
+        {
+
+        }
+
+        public EmailConfiguration(string domain, string url, string from, string apikey)
+        {
+           Domain = domain;
+           URL = url;
+            From = from;
+            APIKey = apikey;
+        }
         /// <summary>
         /// Domain
         /// </summary>

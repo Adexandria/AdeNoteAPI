@@ -30,19 +30,21 @@ namespace AdeNote.Controllers
         private IAuthService _authService;
         private IAuthToken _authToken;
         private INotificationService _notificationService;
+        private readonly IUserService _userService;
         /// <summary>
         /// This is the constructor
         /// </summary>
         /// <param name="container">A container that contains all the built dependencies</param>
         /// <param name="application">An interface used to interact with the layers</param>
         /// <param name="authService">An authentication service </param>
-        /// <param name="_notificationService">Handles Notification</param>
+        /// <param name="notificationService">Handles Notification</param>
         /// <param name="userIdentity">An interface that interacts with the user. This fetches the current user details</param>
         public AuthenticationController(IContainer container, ITaskApplication application, IUserIdentity userIdentity,
-            IAuthService authService, INotificationService notificationService) : base(container, application,userIdentity)
+            IAuthService authService, INotificationService notificationService, IUserService userService) : base(container, application,userIdentity)
         {
             _authService = authService;
             _notificationService = notificationService;
+            _userService = userService;
             _authToken = container.Resolve<IAuthToken>();
         }
 
@@ -144,6 +146,92 @@ namespace AdeNote.Controllers
         }
 
 
+        /// <summary>
+        /// Change password
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// 
+        ///             POST /authentication/change-password
+        /// </remarks>
+        /// <param name="changePassword">A model to change password</param>
+        /// <response code ="200"> Returns if password was changed successfully</response>
+        /// <response code ="400"> Returns if experiencing client issues</response> 
+        /// <response code ="404"> Returns if user can't be found</response> 
+        /// <returns>Action result</returns>
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpPost("change-password")]
+        public async Task<IActionResult> ChangePassword(ChangePasswordDTO changePassword)
+        {
+            var response = await _userService.UpdateUserPassword(CurrentUser, changePassword.CurrentPassword, changePassword.Password);
+            return response.Response();
+        }
+
+        /// <summary>
+        /// Reset password
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// 
+        ///             POST /authentication/reset-password
+        /// </remarks>
+        /// <param name="password">New password</param>
+        /// <param name="token">A token to allow user to reset password</param>
+        /// <response code ="200"> Returns if password was changed successfully</response>
+        /// <response code ="400"> Returns if experiencing client issues</response> 
+        /// <response code ="404"> Returns if user can't be found</response> 
+        /// <returns>Action result</returns>
+        [AllowAnonymous]
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromBody]string password,[FromQuery] string token)
+        {
+            var tokenResponse = await _authService.VerifyResetToken(token);
+            if (tokenResponse.NotSuccessful)
+                return tokenResponse.Response();
+            var response = await _userService.ResetUserPassword(CurrentUser,password);
+            return response.Response();
+        }
+
+        /// <summary>
+        /// Generate token
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///     
+        ///             POST /authentication/generate-token
+        /// </remarks>
+        /// <param name="email">email of the user</param>
+        /// <response code ="200"> Returns if token was generated</response>
+        /// <response code ="404"> Returns if user can't be found</response>
+        /// <returns>Action result</returns>
+        [AllowAnonymous]
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [HttpPost("generate-token")]
+        public async Task<IActionResult> GenerateToken(string email)
+        {
+            var userResponse = await _userService.GetUser(email);
+            if(userResponse.NotSuccessful)
+                return userResponse.Response();
+            var response = await _authService.GenerateResetToken(userResponse.Data.Id, email);
+            return response.Response();
+        }
         /// <summary>
         /// Gets access token using refresh token
         /// </summary>
@@ -588,7 +676,8 @@ namespace AdeNote.Controllers
                   {
                       Expires = time,
                       Secure = true,
-                      SameSite = SameSiteMode.None
+                      SameSite = SameSiteMode.None,
+                      HttpOnly = true
                   });
         }
     }
