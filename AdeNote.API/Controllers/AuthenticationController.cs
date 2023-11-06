@@ -198,7 +198,7 @@ namespace AdeNote.Controllers
         [HttpPost("reset-password")]
         public async Task<IActionResult> ResetPassword([FromBody]string password,[FromQuery] string token)
         {
-            var tokenResponse = await _authService.VerifyResetToken(token);
+            var tokenResponse = _authService.VerifyResetToken(token);
             if (tokenResponse.NotSuccessful)
                 return tokenResponse.Response();
             var response = await _userService.ResetUserPassword(CurrentUser,password);
@@ -229,7 +229,7 @@ namespace AdeNote.Controllers
             var userResponse = await _userService.GetUser(email);
             if(userResponse.NotSuccessful)
                 return userResponse.Response();
-            var response = await _authService.GenerateResetToken(userResponse.Data.Id, email);
+            var response = _authService.GenerateResetToken(userResponse.Data.Id, email);
             return response.Response();
         }
         /// <summary>
