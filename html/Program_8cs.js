@@ -1,5 +1,6 @@
 var Program_8cs =
 [
+    [ "UserRepository", "Program_8cs.html#a2f9a91717f20b5913be7ca58a2ede393", null ],
     [ "AddApiVersioning", "Program_8cs.html#a5fc416bf54ce236c41c8a4850a3920f2", null ],
     [ "AddAuthentication", "Program_8cs.html#a7b2bc4c41ab1f801b53d7330af1fdf7e", null ],
     [ "AddControllers", "Program_8cs.html#a8d93252ec77847afcaad9fa1c113a728", null ],
@@ -7,6 +8,7 @@ var Program_8cs =
     [ "AddEndpointsApiExplorer", "Program_8cs.html#a0d7859f9cad50e8e9fdf015100780e07", null ],
     [ "AddHttpContextAccessor", "Program_8cs.html#a0651b1cc6b2ec2a500b3fbaaaba6ac6c", null ],
     [ "AddLogging", "Program_8cs.html#a7455608a0659f7cef3de2102d1e12196", null ],
+    [ "AddScoped< AuthTokenRepository >", "Program_8cs.html#a72be6d2355c991fbcb7d7a89deb2b755", null ],
     [ "AddScoped< IAuthRepository, AuthRepository >", "Program_8cs.html#ab16ce314052ebbb14dce60b09bb3ef0c", null ],
     [ "AddScoped< IAuthService, AuthService >", "Program_8cs.html#af28a70e4e3146d0106efbb9b60bf5e94", null ],
     [ "AddScoped< IBlobService, BlobService >", "Program_8cs.html#ad0114d4d38d6a8a33b7c1ad705761faa", null ],
@@ -19,10 +21,13 @@ var Program_8cs =
     [ "AddScoped< INotificationService, NotificationService >", "Program_8cs.html#a0ab61fac1c51557b9a374ba875e29b04", null ],
     [ "AddScoped< IPageRepository, PageRepository >", "Program_8cs.html#a00ac9c48b5a31834e66e637670c16a22", null ],
     [ "AddScoped< IPageService, PageService >", "Program_8cs.html#a07bd73fc96935d6cab367e322a442cc2", null ],
+    [ "AddScoped< IPasswordManager, PasswordManager >", "Program_8cs.html#a049c44fc90f82b87e0ede9d1974b0b02", null ],
     [ "AddScoped< ISmsService, SmsService >", "Program_8cs.html#ae427ab01663d60e5aff4d14ec0a096f0", null ],
     [ "AddScoped< ITaskApplication, TaskApplication >", "Program_8cs.html#aba0e603c190e6793038a88459cb159ec", null ],
+    [ "AddScoped< IUser, UserRepository >", "Program_8cs.html#aaf6713f58b9e715590d28ae24b567b35", null ],
     [ "AddScoped< IUserDetailRepository, UserDetailRepository >", "Program_8cs.html#a473ec7d92eea3341b9fd2930e078441a", null ],
     [ "AddScoped< IUserIdentity, UserIdentity >", "Program_8cs.html#a593dcece7e88799b44223cbf77baf6cf", null ],
+    [ "AddScoped< IUserService, UserService >", "Program_8cs.html#afe1a29a5ec8f2a434f1f355de71764d5", null ],
     [ "AddSwaggerGen", "Program_8cs.html#af26aa1eb8f74024fc739862a3b711f57", null ],
     [ "AddTransient", "Program_8cs.html#a3531d607429385619f17e7b9983095e0", null ],
     [ "AddVersionedApiExplorer", "Program_8cs.html#a7e9516f964e2ac48d7166a1c132b7723", null ],

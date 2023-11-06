@@ -48,7 +48,8 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ]
+        [ "Variables", "globals_vars.html", null ],
+        [ "Typedefs", "globals_type.html", null ]
       ] ]
     ] ]
   ] ]
@@ -57,8 +58,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "20230714100310__FirstMigration_8Designer_8cs.html",
-"classAdeNote_1_1Controllers_1_1LabelController.html#ac6e2bc544e337c91697eb50c26a3ec71",
-"classAdeNote_1_1Models_1_1DTOs_1_1BookPages.html"
+"classAdeNote_1_1Controllers_1_1AuthenticationController.html#ae6b07db1a75a979a32576fec4c3e4e33",
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms.html#acff4ed225a86bd7cde2fbd9671871a77",
+"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#a2fcbd64ead6115d7d321bb9e80245a04"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -24,6 +24,9 @@ var dir_e80960fda768349475d1d0f5c1db3c86 =
     [ "IRepository.cs", "IRepository_8cs.html", [
       [ "IRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository" ]
     ] ],
+    [ "IUser.cs", "IUser_8cs.html", [
+      [ "IUser", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser" ]
+    ] ],
     [ "IUserDetailRepository.cs", "IUserDetailRepository_8cs.html", [
       [ "IUserDetailRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository" ]
     ] ],
@@ -41,5 +44,8 @@ var dir_e80960fda768349475d1d0f5c1db3c86 =
     ] ],
     [ "UserDetailRepository.cs", "UserDetailRepository_8cs.html", [
       [ "UserDetailRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository" ]
+    ] ],
+    [ "UserRepository.cs", "UserRepository_8cs.html", [
+      [ "UserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository" ]
     ] ]
 ];

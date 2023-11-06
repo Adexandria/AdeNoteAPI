@@ -28,12 +28,14 @@ var annotated_dup =
           [ "ILabelRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository" ],
           [ "IPageRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository" ],
           [ "IRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository" ],
+          [ "IUser", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser" ],
           [ "IUserDetailRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository" ],
           [ "LabelPageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository" ],
           [ "LabelRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository" ],
           [ "PageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository" ],
           [ "Repository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository" ],
-          [ "UserDetailRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository" ]
+          [ "UserDetailRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository" ],
+          [ "UserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository" ]
         ] ],
         [ "Services", "namespaceAdeNote_1_1Infrastructure_1_1Services.html", [
           [ "AuthService", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService" ],
@@ -48,10 +50,12 @@ var annotated_dup =
           [ "INotificationService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService" ],
           [ "IPageService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService" ],
           [ "ISmsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService" ],
+          [ "IUserService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService" ],
           [ "LabelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService" ],
           [ "NotificationService", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService" ],
           [ "PageService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService" ],
-          [ "SmsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService" ]
+          [ "SmsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService" ],
+          [ "UserService", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService" ]
         ] ],
         [ "Utilities", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html", [
           [ "BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration" ],
@@ -76,6 +80,7 @@ var annotated_dup =
           [ "BookDTO", "classAdeNote_1_1Models_1_1DTOs_1_1BookDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1BookDTO" ],
           [ "BookPages", "classAdeNote_1_1Models_1_1DTOs_1_1BookPages.html", "classAdeNote_1_1Models_1_1DTOs_1_1BookPages" ],
           [ "BookUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1BookUpdateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1BookUpdateDTO" ],
+          [ "ChangePasswordDTO", "classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO" ],
           [ "CreateNoteDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO" ],
           [ "DetailsDTO", "classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO" ],
           [ "LabelCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO" ],

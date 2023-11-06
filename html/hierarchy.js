@@ -16,6 +16,7 @@ var hierarchy =
       [ "AdeNote.Models.DTOs.PageDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageDTO.html", null ]
     ] ],
     [ "AdeNote.Models.DTOs.BookUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1BookUpdateDTO.html", null ],
+    [ "AdeNote.Models.DTOs.ChangePasswordDTO", "classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO.html", null ],
     [ "ControllerBase", null, [
       [ "AdeNote.Controllers.BaseController", "classAdeNote_1_1Controllers_1_1BaseController.html", [
         [ "AdeNote.Controllers.AuthenticationController", "classAdeNote_1_1Controllers_1_1AuthenticationController.html", null ],
@@ -89,8 +90,14 @@ var hierarchy =
     [ "AdeNote.Infrastructure.Services.ISmsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html", [
       [ "AdeNote.Infrastructure.Services.SmsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html", null ]
     ] ],
+    [ "AdeNote.Infrastructure.Repository.IUser", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser.html", [
+      [ "AdeNote.Infrastructure.Repository.UserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html", null ]
+    ] ],
     [ "AdeNote.Infrastructure.Utilities.IUserIdentity", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html", [
       [ "AdeNote.Infrastructure.Utilities.UserIdentity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdentity.html", null ]
+    ] ],
+    [ "AdeNote.Infrastructure.Services.IUserService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html", [
+      [ "AdeNote.Infrastructure.Services.UserService", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html", null ]
     ] ],
     [ "AdeNote.Models.DTOs.LabelCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO.html", null ],
     [ "AdeNote.Models.DTOs.LabelDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelDTO.html", null ],
@@ -112,7 +119,8 @@ var hierarchy =
       [ "AdeNote.Infrastructure.Repository.LabelPageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html", null ],
       [ "AdeNote.Infrastructure.Repository.LabelRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository.html", null ],
       [ "AdeNote.Infrastructure.Repository.PageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html", null ],
-      [ "AdeNote.Infrastructure.Repository.UserDetailRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html", null ]
+      [ "AdeNote.Infrastructure.Repository.UserDetailRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html", null ],
+      [ "AdeNote.Infrastructure.Repository.UserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Utilities.Sms", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms.html", null ],
     [ "AdeNote.Infrastructure.Utilities.SmsConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfiguration.html", null ],

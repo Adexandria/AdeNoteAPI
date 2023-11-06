@@ -15,6 +15,9 @@ var dir_1f978ac47b9de0238fe08f2065b1e45b =
     [ "BookUpdateDTO.cs", "BookUpdateDTO_8cs.html", [
       [ "BookUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1BookUpdateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1BookUpdateDTO" ]
     ] ],
+    [ "ChangePasswordDTO.cs", "ChangePasswordDTO_8cs.html", [
+      [ "ChangePasswordDTO", "classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO" ]
+    ] ],
     [ "CreateNoteDTO.cs", "CreateNoteDTO_8cs.html", [
       [ "CreateNoteDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO" ]
     ] ],

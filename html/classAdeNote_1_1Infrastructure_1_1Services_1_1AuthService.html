@@ -107,7 +107,7 @@ Collaboration diagram for AdeNote.Infrastructure.Services.AuthService:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService__coll__graph.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8AuthService_coll__map" alt="Collaboration graph"/></div>
 <map name="aAdeNote_8Infrastructure_8Services_8AuthService_coll__map" id="aAdeNote_8Infrastructure_8Services_8AuthService_coll__map">
-<area shape="rect" title="Implementation of the interface" alt="" coords="685,122,919,163"/>
+<area shape="rect" title="Implementation of the interface" alt="" coords="685,146,919,187"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html" title="An authentication interface that with the controller" alt="" coords="321,5,425,32"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html" title="Handles the details of a user" alt="" coords="249,57,496,98"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,64,200,91"/>
@@ -115,6 +115,7 @@ Collaboration diagram for AdeNote.Infrastructure.Services.AuthService:</div>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html" title="An interface that handles the authentication of an application" alt="" coords="249,187,496,229"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="6,195,199,221"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html" title="A sms service used to send message via sms" alt="" coords="256,253,489,294"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html" title=" " alt="" coords="256,318,489,359"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -123,9 +124,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6002d39a96025cac144e6a9675ac5511"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a6002d39a96025cac144e6a9675ac5511">AuthService</a> ()</td></tr>
 <tr class="memdesc:a6002d39a96025cac144e6a9675ac5511"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a6002d39a96025cac144e6a9675ac5511">More...</a><br /></td></tr>
 <tr class="separator:a6002d39a96025cac144e6a9675ac5511"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96dd4216f2f8034c81cebb257c36604c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a96dd4216f2f8034c81cebb257c36604c">AuthService</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html">IAuthRepository</a> _authRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html">IUserDetailRepository</a> _userDetailRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html">IBlobService</a> _blobService, IConfiguration _configuration, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html">ISmsService</a> _smsService)</td></tr>
-<tr class="memdesc:a96dd4216f2f8034c81cebb257c36604c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a96dd4216f2f8034c81cebb257c36604c">More...</a><br /></td></tr>
-<tr class="separator:a96dd4216f2f8034c81cebb257c36604c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1b1b495a932dabff7fc62611c314d03"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ae1b1b495a932dabff7fc62611c314d03">AuthService</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html">IAuthRepository</a> _authRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html">IUserDetailRepository</a> _userDetailRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html">IBlobService</a> _blobService, IConfiguration _configuration, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html">ISmsService</a> _smsService, IContainer container, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html">IEmailService</a> _emailService, AuthTokenRepository authTokenRepository)</td></tr>
+<tr class="memdesc:ae1b1b495a932dabff7fc62611c314d03"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ae1b1b495a932dabff7fc62611c314d03">More...</a><br /></td></tr>
+<tr class="separator:ae1b1b495a932dabff7fc62611c314d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3d8cce57115793a8568081c7ebec059"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html">AuthenticatorDTO</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ab3d8cce57115793a8568081c7ebec059">SetAuthenticator</a> (Guid userId, string email)</td></tr>
 <tr class="memdesc:ab3d8cce57115793a8568081c7ebec059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up MFA using google authenticator app  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ab3d8cce57115793a8568081c7ebec059">More...</a><br /></td></tr>
 <tr class="separator:ab3d8cce57115793a8568081c7ebec059"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,6 +172,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7859b04addc0239dc19e7f2c26948c65"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a7859b04addc0239dc19e7f2c26948c65">DisableUserMFA</a> (Guid userId)</td></tr>
 <tr class="memdesc:a7859b04addc0239dc19e7f2c26948c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables Multi factor authentication for a particular user  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a7859b04addc0239dc19e7f2c26948c65">More...</a><br /></td></tr>
 <tr class="separator:a7859b04addc0239dc19e7f2c26948c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a684475bf8e37f3b4bd89752f908137d5"><td class="memItemLeft" align="right" valign="top">ActionResult&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a684475bf8e37f3b4bd89752f908137d5">GenerateResetToken</a> (Guid userId, string email)</td></tr>
+<tr class="separator:a684475bf8e37f3b4bd89752f908137d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17b8d04b770daeeb3dddc9c6c654aa56"><td class="memItemLeft" align="right" valign="top">ActionResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a17b8d04b770daeeb3dddc9c6c654aa56">VerifyResetToken</a> (string token)</td></tr>
+<tr class="separator:a17b8d04b770daeeb3dddc9c6c654aa56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -195,11 +200,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a029b308eb24f2cf2c12843305da8b230"><td class="memItemLeft" align="right" valign="top">TwoFactorAuthenticator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a029b308eb24f2cf2c12843305da8b230">TwoFactorAuthenticator</a></td></tr>
 <tr class="memdesc:a029b308eb24f2cf2c12843305da8b230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object used to generate and set up two factor authentication  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a029b308eb24f2cf2c12843305da8b230">More...</a><br /></td></tr>
 <tr class="separator:a029b308eb24f2cf2c12843305da8b230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1df097c44e1934e6708d53c78a67355c"><td class="memItemLeft" align="right" valign="top">AuthTokenRepository&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a1df097c44e1934e6708d53c78a67355c">tokenRepository</a></td></tr>
+<tr class="separator:a1df097c44e1934e6708d53c78a67355c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac988047e7a0c77e37838d152f858407d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html">IEmailService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ac988047e7a0c77e37838d152f858407d">emailService</a></td></tr>
+<tr class="separator:ac988047e7a0c77e37838d152f858407d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of the interface </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00015">15</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00017">17</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6002d39a96025cac144e6a9675ac5511"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6002d39a96025cac144e6a9675ac5511">&#9670;&nbsp;</a></span>AuthService() <span class="overload">[1/2]</span></h2>
@@ -218,12 +227,12 @@ Public Attributes</h2></td></tr>
 
 <p>A constructor </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00020">20</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00022">22</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
-<a id="a96dd4216f2f8034c81cebb257c36604c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96dd4216f2f8034c81cebb257c36604c">&#9670;&nbsp;</a></span>AuthService() <span class="overload">[2/2]</span></h2>
+<a id="ae1b1b495a932dabff7fc62611c314d03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1b1b495a932dabff7fc62611c314d03">&#9670;&nbsp;</a></span>AuthService() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -256,7 +265,25 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html">ISmsService</a>&#160;</td>
-          <td class="paramname"><em>_smsService</em>&#160;</td>
+          <td class="paramname"><em>_smsService</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IContainer&#160;</td>
+          <td class="paramname"><em>container</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html">IEmailService</a>&#160;</td>
+          <td class="paramname"><em>_emailService</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AuthTokenRepository&#160;</td>
+          <td class="paramname"><em>authTokenRepository</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -278,7 +305,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00032">32</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00034">34</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -309,7 +336,7 @@ Public Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a13e638232a86f7971f22c92466391299">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00481">481</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00486">486</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -369,7 +396,39 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a9204433e7435394f8074ea1939e8e273">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00345">345</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00350">350</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+
+</div>
+</div>
+<a id="a684475bf8e37f3b4bd89752f908137d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a684475bf8e37f3b4bd89752f908137d5">&#9670;&nbsp;</a></span>GenerateResetToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ActionResult&lt;string&gt; AdeNote.Infrastructure.Services.AuthService.GenerateResetToken </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>userId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>email</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a6b4b2555fd2a0c99b4ee4f71aa0a1467">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00516">516</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -400,7 +459,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a21e1eb6648b86c8f155f8b9e07b54c7f">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00294">294</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00299">299</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -439,7 +498,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a36d354e9f7aaad56ac5cc7b0c881e5be">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00318">318</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00323">323</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -478,7 +537,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a5409d350f55bb8bb9505bde715dae43e">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00403">403</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00408">408</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -518,7 +577,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aa118fdd01bdd808ecff4e19bfb78d10a">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00138">138</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00143">143</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -557,7 +616,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8a632c08a9d83d1cd741bc30ac554855">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00456">456</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00461">461</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -597,7 +656,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8278027fb07f272ad08d4cb0b50ec659">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00370">370</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00375">375</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -638,7 +697,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a40e66c23ed8be8b77aa68a85a3e9f31d">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00428">428</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00433">433</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -688,7 +747,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a450048a2665575559a9d2c4d3d4d4e0d">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00230">230</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00235">235</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -740,7 +799,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#ae3c515f59107f454452f2be174b2e00f">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00052">52</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00057">57</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -749,7 +808,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="Sets up MFA using google authenticator app" alt="" coords="5,71,239,112"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#af7cfac5b470f7e8886c0335122bdd817" title="Saves a new entity" alt="" coords="287,5,533,47"/>
 <area shape="rect" href="classAdeNote_1_1Models_1_1UserToken.html#a4f471f95ed68b7070c266e8813d7dee7" title="Set the authenticator key" alt="" coords="308,71,512,112"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html#a2812f257404da2b4e1491ae4eccd9e16" title="Uploads image" alt="" coords="293,136,527,177"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html#ac437423f3aff6fde40384c57b7722b0b" title="Uploads image" alt="" coords="293,136,527,177"/>
 </map>
 </div>
 
@@ -792,7 +851,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a5bfedca5a816cc4c024d4852887fe189">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00101">101</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00106">106</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -832,7 +891,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8e029bac287e94a02f291647721758a6">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00205">205</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00210">210</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -882,7 +941,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#af732dc7da9b94c239d866efc66e7334d">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00265">265</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00270">270</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -923,7 +982,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a821718637f3c6de0c7ffa1b45e6ca830">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00164">164</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00169">169</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -934,6 +993,28 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#ae451c2bb0462a873a4e0f8c0d3a9b721" title="Updates an existing object" alt="" coords="293,71,539,112"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a17b8d04b770daeeb3dddc9c6c654aa56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17b8d04b770daeeb3dddc9c6c654aa56">&#9670;&nbsp;</a></span>VerifyResetToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ActionResult AdeNote.Infrastructure.Services.AuthService.VerifyResetToken </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aa9b04aa3f51038e46192d2af326b46d4">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00539">539</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -952,7 +1033,7 @@ Here is the call graph for this function:</div>
 
 <p>Handles the authentication </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00519">519</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00567">567</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -970,7 +1051,23 @@ Here is the call graph for this function:</div>
 
 <p>Handles the cloud storage </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00534">534</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00582">582</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac988047e7a0c77e37838d152f858407d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac988047e7a0c77e37838d152f858407d">&#9670;&nbsp;</a></span>emailService</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html">IEmailService</a> AdeNote.Infrastructure.Services.AuthService.emailService</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00596">596</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -988,7 +1085,7 @@ Here is the call graph for this function:</div>
 
 <p>Two factor authentication secret key </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00514">514</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00562">562</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1006,7 +1103,7 @@ Here is the call graph for this function:</div>
 
 <p>Secret to generate multifactor token </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00539">539</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00587">587</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1024,7 +1121,23 @@ Here is the call graph for this function:</div>
 
 <p>A sms service used to send message via sms </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00529">529</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00577">577</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+
+</div>
+</div>
+<a id="a1df097c44e1934e6708d53c78a67355c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1df097c44e1934e6708d53c78a67355c">&#9670;&nbsp;</a></span>tokenRepository</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AuthTokenRepository AdeNote.Infrastructure.Services.AuthService.tokenRepository</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00594">594</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1042,7 +1155,7 @@ Here is the call graph for this function:</div>
 
 <p>Object used to generate and set up two factor authentication </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00544">544</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00592">592</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1060,7 +1173,7 @@ Here is the call graph for this function:</div>
 
 <p>Handles the details of a user </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00524">524</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00572">572</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>

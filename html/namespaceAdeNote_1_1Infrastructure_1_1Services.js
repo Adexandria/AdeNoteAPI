@@ -12,8 +12,10 @@ var namespaceAdeNote_1_1Infrastructure_1_1Services =
     [ "INotificationService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService" ],
     [ "IPageService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService" ],
     [ "ISmsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService" ],
+    [ "IUserService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService" ],
     [ "LabelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService" ],
     [ "NotificationService", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService" ],
     [ "PageService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService" ],
-    [ "SmsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService" ]
+    [ "SmsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService" ],
+    [ "UserService", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService" ]
 ];

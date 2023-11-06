@@ -10,6 +10,10 @@ var searchData=
   ['_5flogger_11',['_logger',['../classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html#aa7bb8092b5f828fd487c4341eb310b46',1,'AdeNote::Infrastructure::Services::SmsService']]],
   ['_5fnotificationservice_12',['_notificationService',['../classAdeNote_1_1Controllers_1_1AuthenticationController.html#abc5072e18fe7cdb6c4670464f8e4fe05',1,'AdeNote::Controllers::AuthenticationController']]],
   ['_5fpageservice_13',['_pageService',['../classAdeNote_1_1Controllers_1_1PageController.html#a7b831ca3bb21b0be51bc35e4223914c9',1,'AdeNote::Controllers::PageController']]],
-  ['_5fprovider_14',['_provider',['../classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html#a14be15528848cdb1bfd34626bc136b9c',1,'AdeNote::Infrastructure::Extension::SwaggerOptions']]],
-  ['_5fsmsconfig_15',['_smsConfig',['../classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html#a5b197dfbde90c3b29af8d6f217f773da',1,'AdeNote::Infrastructure::Services::SmsService']]]
+  ['_5fpasswordmanager_14',['_passwordManager',['../classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a9f9067593e374acb98bb22280c561349',1,'AdeNote::Infrastructure::Services::UserService']]],
+  ['_5fprovider_15',['_provider',['../classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html#a14be15528848cdb1bfd34626bc136b9c',1,'AdeNote::Infrastructure::Extension::SwaggerOptions']]],
+  ['_5fsmsconfig_16',['_smsConfig',['../classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html#a5b197dfbde90c3b29af8d6f217f773da',1,'AdeNote::Infrastructure::Services::SmsService']]],
+  ['_5fuserdb_17',['_userDb',['../classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a9da7a76e2176e247d9281acdf4609be1',1,'AdeNote::Infrastructure::Services::UserService']]],
+  ['_5fuserrepository_18',['_userRepository',['../classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a4067695afe2762ff058a8b18c39c7a49',1,'AdeNote::Infrastructure::Services::UserService']]],
+  ['_5fuserservice_19',['_userService',['../classAdeNote_1_1Controllers_1_1AuthenticationController.html#af8a19b56eed7f52e6578675e22e9b3a9',1,'AdeNote::Controllers::AuthenticationController']]]
 ];
