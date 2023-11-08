@@ -18,9 +18,9 @@ namespace AdeNote.Infrastructure.Services
         public SmsService(IConfiguration config,ILoggerFactory loggerFactory)
         {
             _smsConfig = config.GetSection("TwilioConfiguration").Get<SmsConfiguration>() ?? 
-                new SmsConfiguration(config.GetValue<string>("AdeTAccountKey"), 
-                config.GetValue<string>("AdeAccountSecret"),
-                config.GetValue<string>("AdePhonenumber"));
+                new SmsConfiguration(config.GetValue<string>("TwilioConfiguration__AccountKey"), 
+                config.GetValue<string>("TwilioConfiguration__AccountSecret"),
+                config.GetValue<string>("TwilioConfiguration__Phonenumber"));
             _logger = loggerFactory.CreateLogger(typeof(SmsService));
         }
 

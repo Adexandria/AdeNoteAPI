@@ -22,9 +22,9 @@ namespace AdeNote.Infrastructure.Services
         {
             _blobConfig = _configuration.GetSection("AzureStorageSecret")
                 .Get<BlobConfiguration>() ?? new BlobConfiguration(
-                    _configuration.GetValue<string>("AdeAccountKey"),
-                    _configuration.GetValue<string>("AdeAccountName"),
-                    _configuration.GetValue<string>("AdeContainer"));
+                    _configuration.GetValue<string>("AzureStorageSecret__AccountKey"),
+                    _configuration.GetValue<string>("AzureStorageSecret__AccountName"),
+                    _configuration.GetValue<string>("AzureStorageSecret__Container"));
         }
 
         /// <summary>

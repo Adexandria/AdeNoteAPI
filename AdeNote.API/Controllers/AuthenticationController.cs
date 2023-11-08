@@ -3,7 +3,6 @@ using AdeNote.Infrastructure.Services;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models.DTOs;
 using Autofac;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TasksLibrary.Application.Commands.CreateUser;
@@ -21,15 +20,15 @@ namespace AdeNote.Controllers
     /// 
     /// Supports version 1.0
     /// </summary>
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize]
     [Route("api/v{version:apiVersion}/authentication")]
     [ApiVersion("1.0")]
     [ApiController]
     public class AuthenticationController : BaseController
     {
-        private IAuthService _authService;
-        private IAuthToken _authToken;
-        private INotificationService _notificationService;
+        private readonly IAuthService _authService;
+        private readonly IAuthToken _authToken;
+        private readonly INotificationService _notificationService;
         private readonly IUserService _userService;
         /// <summary>
         /// This is the constructor
@@ -39,6 +38,7 @@ namespace AdeNote.Controllers
         /// <param name="authService">An authentication service </param>
         /// <param name="notificationService">Handles Notification</param>
         /// <param name="userIdentity">An interface that interacts with the user. This fetches the current user details</param>
+        /// <param name="userService">An interface that manages users</param>
         public AuthenticationController(IContainer container, ITaskApplication application, IUserIdentity userIdentity,
             IAuthService authService, INotificationService notificationService, IUserService userService) : base(container, application,userIdentity)
         {
@@ -133,14 +133,13 @@ namespace AdeNote.Controllers
             {
                 var substitutions = new Dictionary<string, string>
                 {
-                    { "[Date]", DateTime.Now.ToLongDateString() },
+                    {"[Date]", DateTime.Now.ToLongDateString() },
                     {"[Time]",DateTime.Now.ToLongTimeString() }
                 };
                 AddToCookie("AdeNote-RefreshToken", loginResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
                 await _notificationService.SendNotification(new Email(userDetails.Data.Email, "New login to AdeNote"), 
                     EmailTemplate.LoginNotification, ContentType.html,substitutions);
             }
-            
 
             return loginResponse.Response();
         }

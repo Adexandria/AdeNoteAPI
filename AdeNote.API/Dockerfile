@@ -26,12 +26,5 @@ COPY --from=build-env /app/out .
 # Expose port 80 to incoming requests
 EXPOSE 80
 
-# Specify the environment variable to connect to any port listening to port 80.
-ENV ASPNETCORE_URLS=http://+:80
-
-ENV "NotesDB"="Server=localhost\\SQLEXPRESS,1433;Database=Notes;User Id=sa;Password=Xandriaisalovelygirl4;Encrypt=True;TrustServerCertificate=True;"
-
-ENV "Deployment"="true"
-
 # Runs the application using project dll file.
 ENTRYPOINT ["dotnet", "AdeNote.dll"]

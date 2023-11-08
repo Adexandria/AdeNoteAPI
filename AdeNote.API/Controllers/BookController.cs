@@ -17,7 +17,7 @@ namespace AdeNote.Controllers
     [Route("api/v{version:apiVersion}/books")]
     [ApiController]
     [ApiVersion("1.0")]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize]
     public class BookController : BaseController
     {
         private readonly IBookService _bookService;
