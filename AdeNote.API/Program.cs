@@ -32,7 +32,7 @@ containerBuilder.BuildMigration();
 
 builder.Services.AddScoped<ITaskApplication, TaskApplication>();
 builder.Services.AddScoped<IUserIdentity, UserIdentity>();
-builder.Services.AddTransient((o) => containerBuilder.SetUpDepedencies().Build());
+builder.Services.AddTransient((o) => containerBuilder.SetUpDepedencies(tokenSecret).Build());
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddLogging();
 builder.Services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
