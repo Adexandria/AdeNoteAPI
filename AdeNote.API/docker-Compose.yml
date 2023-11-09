@@ -19,17 +19,17 @@ services:
       - ConnectionStrings__NotesDB=Server=host.docker.internal,1450;Database=master;User Id=sa;Password=Xandriaisalovelygirl4;TrustServerCertificate=True;Encrypt=False;
       - EmailConfiguration__Domain=sandbox361cfdcfadd74f4f88af2e45a6e128f8.mailgun.org
       - EmailConfiguration__From=<mailgun@sandbox361cfdcfadd74f4f88af2e45a6e128f8.mailgun.org>
-      - EmailConfiguration__APIKey=key-7cb401ab379fae797b88ec63ba3a4e13
+      - EmailConfiguration__APIKey=testing
       - EmailConfiguration__URL= https://api.mailgun.net/v3
-      - TwilioConfiguration__AccountKey=AC96ee1a49f1ce3d3445829d2a9cfdf4b0
-      - TwilioConfiguration__AccountSecret=c3f2564a2ba96e917beef0c4e02a64b2
-      - TwilioConfiguration__PhoneNumber=+12518108897
-      - TokenSecret=SecretKeyTaskApplication@1345
-      - TwoFactorSecret=SecretKeyTwoFactor@1345
-      - AzureStorageSecret__AccountKey=5bOAxAwE5T2QWye64tFxhhVq/08nWFk3dH0sQy9/U6Bv3E+CwBMaWGpUEmfy2duooofzSfCY1NXZ/NCdgEz9Lg==
+      - TwilioConfiguration__AccountKey=testing
+      - TwilioConfiguration__AccountSecret=testing
+      - TwilioConfiguration__PhoneNumber=testing
+      - TokenSecret=testing
+      - TwoFactorSecret=testing
+      - AzureStorageSecret__AccountKey=testing
       - AzureStorageSecret__AccountName=deola
       - AzureStorageSecret__Container=textimages
-      - LoginSecret=SecretLoginKey
+      - LoginSecret=testing
     depends_on:
       - db
     ports:
