@@ -2,7 +2,6 @@
 using AdeNote.Infrastructure.Services;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models.DTOs;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,7 +16,7 @@ namespace AdeNote.Controllers
     [Route("api/v{version:apiVersion}/{bookId}/pages")]
     [ApiVersion("1.0")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize]
     public class PageController : BaseController
     {
         private readonly IPageService _pageService;

@@ -1,7 +1,6 @@
 ﻿using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Services;
 using AdeNote.Models.DTOs;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,7 +15,7 @@ namespace AdeNote.Controllers
     [Route("api/v{version:apiVersion}/labels")]
     [ApiController]
     [ApiVersion("1.0")]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize]
     public class LabelController : BaseController
     {
         private readonly ILabelService _labelService;

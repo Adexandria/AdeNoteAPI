@@ -40,9 +40,9 @@ namespace AdeNote.Infrastructure.Services
             authRepository = _authRepository;
             userDetailRepository = _userDetailRepository;
             smsService = _smsService;
-            key = _configuration["TwoFactorSecret"] ?? _configuration.GetValue<string>("AdeTwoFactorSecret");
+            key = _configuration["TwoFactorSecret"];
             blobService = _blobService;
-            loginSecret = _configuration["LoginSecret"] ?? _configuration.GetValue<string>("AdeLoginSecret");
+            loginSecret = _configuration["LoginSecret"];
             TwoFactorAuthenticator = new TwoFactorAuthenticator();
             tokenRepository = authTokenRepository;
             emailService = _emailService;

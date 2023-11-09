@@ -4,6 +4,7 @@ using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Services;
 using AdeNote.Infrastructure.Utilities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
@@ -19,10 +20,10 @@ var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration.AddEnvironmentVariables().Build();
 
 // Gets the connection string from appsettings
-var connectionString = configuration.GetConnectionString("NotesDB") ?? configuration.GetValue<string>("NotesDB");
+var connectionString = configuration.GetConnectionString("NotesDB");
 
 // Gets the token secret from appsettings
-var tokenSecret = configuration["TokenSecret"] ?? configuration["AdeTokenSecret"];
+var tokenSecret = configuration["TokenSecret"];
 
 // Add services to the container.
 var containerBuilder = new TaskContainerBuilder(connectionString);
@@ -31,7 +32,7 @@ containerBuilder.BuildMigration();
 
 builder.Services.AddScoped<ITaskApplication, TaskApplication>();
 builder.Services.AddScoped<IUserIdentity, UserIdentity>();
-builder.Services.AddTransient((o) => containerBuilder.SetUpDepedencies().Build());
+builder.Services.AddTransient((o) => containerBuilder.SetUpDepedencies(tokenSecret).Build());
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddLogging();
 builder.Services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
@@ -59,7 +60,7 @@ builder.Services.AddSwaggerGen(c =>
         Name = "Authorization",
         Type = SecuritySchemeType.ApiKey,
         Scheme = "Bearer",
-        BearerFormat = "bearer",
+        BearerFormat = "JWT",
         In = ParameterLocation.Header,
         Description = "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 1safsfsdfdfd\"",
     });
@@ -114,10 +115,21 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenSecret))
                };
            });
+
+builder.Services.AddAuthorization(options =>
+{
+    options.DefaultPolicy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme)
+    .RequireAuthenticatedUser().Build();
+});
+
+builder.Services.BuildServiceProvider().CreateTables();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 var apiVersionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+
+
 
 app.UseSwagger();
 app.UseSwaggerUI(setupAction =>

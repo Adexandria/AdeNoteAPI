@@ -1,0 +1,36 @@
+﻿version: "3.8"
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports: //Add the port in the firewall
+      - 1450:1433
+    container_name: mssql1
+    environment:
+      - MSSQL_SA_PASSWORD=Xandriaisalovelygirl4
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Express
+
+  adenote-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__NotesDB=Server=host.docker.internal,1450;Database=master;User Id=sa;Password=Xandriaisalovelygirl4;TrustServerCertificate=True;Encrypt=False;
+      - EmailConfiguration__Domain=sandbox361cfdcfadd74f4f88af2e45a6e128f8.mailgun.org
+      - EmailConfiguration__From=<mailgun@sandbox361cfdcfadd74f4f88af2e45a6e128f8.mailgun.org>
+      - EmailConfiguration__APIKey=${EmailConfiguration}
+      - EmailConfiguration__URL= https://api.mailgun.net/v3
+      - TwilioConfiguration__AccountKey=${TwilioAccountKey}
+      - TwilioConfiguration__AccountSecret=${TwilioAccountSecret}
+      - TwilioConfiguration__PhoneNumber=${TwilioPhoneNumber}
+      - TokenSecret=${TokenSecret}
+      - TwoFactorSecret=${TwoFactorSecret}
+      - AzureStorageSecret__AccountKey=${AzureAccountKey}
+      - AzureStorageSecret__AccountName=deola
+      - AzureStorageSecret__Container=textimages
+      - LoginSecret=${LoginSecret}
+    depends_on:
+      - db
+    ports:
+     - 8000:80

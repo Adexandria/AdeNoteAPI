@@ -56,6 +56,9 @@ namespace AdeNote.Controllers
         /// </summary>
         protected Guid CurrentUser { get; set;}
 
+        /// <summary>
+        /// Email of the authenticated user
+        /// </summary>
         protected string CurrentEmail { get; set; }
     }
 }
