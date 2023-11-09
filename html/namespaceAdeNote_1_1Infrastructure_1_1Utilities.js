@@ -1,6 +1,7 @@
 var namespaceAdeNote_1_1Infrastructure_1_1Utilities =
 [
     [ "BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration" ],
+    [ "Database", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database" ],
     [ "Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email" ],
     [ "EmailConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration" ],
     [ "IUserIdentity", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity" ],

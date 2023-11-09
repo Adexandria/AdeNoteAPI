@@ -27,6 +27,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "AdeNote.Models.DTOs.CreateNoteDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.Database", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database.html", null ],
     [ "DbContext", null, [
       [ "AdeNote.Db.NoteDbContext", "classAdeNote_1_1Db_1_1NoteDbContext.html", null ]
     ] ],

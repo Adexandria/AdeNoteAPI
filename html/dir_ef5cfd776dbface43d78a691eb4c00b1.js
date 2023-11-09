@@ -4,6 +4,9 @@ var dir_ef5cfd776dbface43d78a691eb4c00b1 =
       [ "BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration" ]
     ] ],
     [ "ContentType.cs", "ContentType_8cs.html", "ContentType_8cs" ],
+    [ "Database.cs", "Database_8cs.html", [
+      [ "Database", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database" ]
+    ] ],
     [ "Email.cs", "Email_8cs.html", [
       [ "Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email" ]
     ] ],
