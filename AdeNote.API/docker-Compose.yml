@@ -2,7 +2,8 @@
 services:
   db:
     image: mcr.microsoft.com/mssql/server:2019-latest
-    ports: //Add the port in the firewall
+     ##Add the port in the firewall
+    ports:
       - 1450:1433
     container_name: mssql1
     environment:
@@ -19,7 +20,7 @@ services:
       - ConnectionStrings__NotesDB=Server=host.docker.internal,1450;Database=master;User Id=sa;Password=Xandriaisalovelygirl4;TrustServerCertificate=True;Encrypt=False;
       - EmailConfiguration__Domain=sandbox361cfdcfadd74f4f88af2e45a6e128f8.mailgun.org
       - EmailConfiguration__From=<mailgun@sandbox361cfdcfadd74f4f88af2e45a6e128f8.mailgun.org>
-      - EmailConfiguration__APIKey=${EmailConfiguration}
+      - EmailConfiguration__APIKey=${EmailAPIKey}
       - EmailConfiguration__URL= https://api.mailgun.net/v3
       - TwilioConfiguration__AccountKey=${TwilioAccountKey}
       - TwilioConfiguration__AccountSecret=${TwilioAccountSecret}
@@ -34,3 +35,4 @@ services:
       - db
     ports:
      - 8000:80
+
