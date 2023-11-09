@@ -1,0 +1,30 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master" ]
+    
+env:
+ image_name: adenoteapi_image
+ docker_registry: adeolaade/api_repository
+ 
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Login to docker hub
+      uses: docker/login-action@v3
+      with:
+         username: ${{DOCKER_USERNAME}}
+         password: ${{DOCKER_PASSWORD}}
+    - name: Build the Docker image
+      run: docker compose -f AdeNote.API/docker-Compose.yml -p adenote build
+    - name: Tag image
+      run: docker tag adenote-api ${{docker_registry}}:${{image_name}}
+    - name: Push image to registry
+      run: docker push ${{docker_registry}}:${{image_name}}
+      
