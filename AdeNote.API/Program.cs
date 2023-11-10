@@ -28,8 +28,6 @@ var tokenSecret = configuration["TokenSecret"];
 // Add services to the container.
 var containerBuilder = new TaskContainerBuilder(connectionString);
 
-containerBuilder.BuildMigration();
-
 builder.Services.AddScoped<ITaskApplication, TaskApplication>();
 builder.Services.AddScoped<IUserIdentity, UserIdentity>();
 builder.Services.AddTransient((o) => containerBuilder.SetUpDepedencies(tokenSecret).Build());
@@ -99,7 +97,7 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<ISmsService, SmsService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<IUserService,UserService>();
-builder.Services.AddScoped<AuthTokenRepository>();
+builder.Services.AddScoped((_)=> new AuthTokenRepository(tokenSecret));
 builder.Services.AddScoped<IPasswordManager,PasswordManager>();
 
 builder.Services.AddDbContext<NoteDbContext>(options => options
@@ -122,7 +120,7 @@ builder.Services.AddAuthorization(options =>
     .RequireAuthenticatedUser().Build();
 });
 
-builder.Services.BuildServiceProvider().CreateTables();
+builder.Services.BuildServiceProvider().CreateTables(containerBuilder);
 
 var app = builder.Build();
 

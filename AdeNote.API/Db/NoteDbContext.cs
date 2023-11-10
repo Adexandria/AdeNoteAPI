@@ -69,6 +69,7 @@ namespace AdeNote.Db
           base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<RefreshToken>()
+                .ToTable("RefreshTokens", t => t.ExcludeFromMigrations())
                 .Property(s => s.UserId)
                 .HasConversion<UserIdConverter>()
                 .HasColumnName("User_id");
@@ -85,18 +86,13 @@ namespace AdeNote.Db
                 .Property(x => x.AuthenticatorKey)
                 .IsRequired(false);
 
-
             modelBuilder.Entity<UserToken>()
               .Property(x => x.UserId)
                 .HasColumnName("User_id");
 
-            modelBuilder.Entity<User>()
-                .Ignore("Note");
-
-            modelBuilder.Entity<User>()
-                .Ignore("RefreshToken");
-
-            modelBuilder.Entity<User>()
+            modelBuilder.Entity<User>().ToTable("Users", (t => t.ExcludeFromMigrations()))
+                .Ignore("Notes")
+                .Ignore("RefreshToken")
                 .Ignore("AccessToken");
 
             modelBuilder.Entity<Book>()

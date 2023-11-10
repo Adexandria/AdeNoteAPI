@@ -31,7 +31,7 @@
     </PackageReference>
     <PackageReference Include="RestSharp" Version="110.2.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-    <PackageReference Include="TasksLibrary" Version="1.1.4" />
+    <PackageReference Include="TasksLibrary" Version="1.1.5" />
     <PackageReference Include="Twilio.AspNet.Core" Version="8.0.2" />
   </ItemGroup>
 
