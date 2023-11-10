@@ -1,6 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration.html#ab0e5b8574db658ce84639caed1d30a86":[1,0,0,2,3,3,3],
 "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration.html#ab0f9a8b05a86ab80b34469eba31dfeca":[1,0,0,2,3,3,5],
 "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration.html#ae6753c6ebcb0932e51e680c416615bdc":[1,0,0,2,3,3,1],
 "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms.html":[1,0,0,2,3,5],
@@ -249,5 +248,6 @@ var NAVTREEINDEX2 =
 "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html#a96323bb2b9d0674d8a66b1d66629a127":[1,0,0,2,2,7,0],
 "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html":[1,0,0,2,2,8],
 "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html#a1abf5e4f07a1c78333fc88797f94f3a4":[1,0,0,2,2,8,3],
-"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html#a48ce1e3fed9c72167d77f493d04f9862":[1,0,0,2,2,8,1]
+"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html#a48ce1e3fed9c72167d77f493d04f9862":[1,0,0,2,2,8,1],
+"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html#a7c1ccd9bed77499dc0e14b00325f1a99":[1,0,0,2,2,8,0]
 };

@@ -22,9 +22,9 @@ var searchData=
   ['bookpages_109',['BookPages',['../classAdeNote_1_1Models_1_1DTOs_1_1BookPages.html',1,'AdeNote.Models.DTOs.BookPages'],['../classAdeNote_1_1Models_1_1DTOs_1_1BookDTO.html#adbf342f65ce05f81b9d813eef6a0672a',1,'AdeNote.Models.DTOs.BookDTO.BookPages()']]],
   ['bookpages_2ecs_110',['BookPages.cs',['../BookPages_8cs.html',1,'']]],
   ['bookrepository_111',['BookRepository',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html',1,'AdeNote::Infrastructure::Repository']]],
-  ['bookrepository_112',['bookRepository',['../classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a779bc367032a808bb3ff1021bfbd7810',1,'AdeNote::Infrastructure::Services::PageService']]],
+  ['bookrepository_112',['bookRepository',['../classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#a9bc6b3725c27db881cc9183f6d200f71',1,'AdeNote::Infrastructure::Services::BookService']]],
   ['bookrepository_113',['BookRepository',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html#a95c8076638e51a3ddc4fa6c9c0350e9a',1,'AdeNote.Infrastructure.Repository.BookRepository.BookRepository(NoteDbContext noteDb)'],['../classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html#a47bc650a9b55606ec767a2dcecbda44e',1,'AdeNote.Infrastructure.Repository.BookRepository.BookRepository()']]],
-  ['bookrepository_114',['bookRepository',['../classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#a9bc6b3725c27db881cc9183f6d200f71',1,'AdeNote::Infrastructure::Services::BookService']]],
+  ['bookrepository_114',['bookRepository',['../classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a779bc367032a808bb3ff1021bfbd7810',1,'AdeNote::Infrastructure::Services::PageService']]],
   ['bookrepository_2ecs_115',['BookRepository.cs',['../BookRepository_8cs.html',1,'']]],
   ['books_116',['Books',['../classAdeNote_1_1Db_1_1NoteDbContext.html#a038bf9b9487eeba40e8b16b6768bd31b',1,'AdeNote::Db::NoteDbContext']]],
   ['bookservice_117',['BookService',['../classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html',1,'AdeNote.Infrastructure.Services.BookService'],['../classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#a1bafbafae8f53e419d1496d917e510db',1,'AdeNote.Infrastructure.Services.BookService.BookService()'],['../classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#a717104358b9d67a7ed0515ebaa5a8d74',1,'AdeNote.Infrastructure.Services.BookService.BookService(IBookRepository _bookRepository)']]],
@@ -32,8 +32,7 @@ var searchData=
   ['bookupdatedto_119',['BookUpdateDTO',['../classAdeNote_1_1Models_1_1DTOs_1_1BookUpdateDTO.html',1,'AdeNote::Models::DTOs']]],
   ['bookupdatedto_2ecs_120',['BookUpdateDTO.cs',['../BookUpdateDTO_8cs.html',1,'']]],
   ['builder_121',['builder',['../Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5',1,'Program.cs']]],
-  ['buildmigration_122',['BuildMigration',['../Program_8cs.html#a5373b4119ee6dbc1f9857c8f0bd00dd0',1,'Program.cs']]],
-  ['buildmodel_123',['BuildModel',['../classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html#aadf63f2258fc377d5d82f90a31be897e',1,'AdeNote::Migrations::NoteDbContextModelSnapshot']]],
-  ['buildserviceprovider_124',['BuildServiceProvider',['../Program_8cs.html#a38f49ee49c5c2c0301d0e343a3626fef',1,'Program.cs']]],
-  ['buildtargetmodel_125',['BuildTargetModel',['../classAdeNote_1_1Migrations_1_1FirstMigration.html#a533a1faa08f01f290979aba4f04e38ea',1,'AdeNote.Migrations.FirstMigration.BuildTargetModel()'],['../classAdeNote_1_1Migrations_1_1addMFA.html#a27846b849962f51f09e4c77465dde7cc',1,'AdeNote.Migrations.addMFA.BuildTargetModel()']]]
+  ['buildmodel_122',['BuildModel',['../classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html#aadf63f2258fc377d5d82f90a31be897e',1,'AdeNote::Migrations::NoteDbContextModelSnapshot']]],
+  ['buildserviceprovider_123',['BuildServiceProvider',['../Program_8cs.html#aa2d785d3c31b23c0dc58c93cfdca004b',1,'Program.cs']]],
+  ['buildtargetmodel_124',['BuildTargetModel',['../classAdeNote_1_1Migrations_1_1FirstMigration.html#a533a1faa08f01f290979aba4f04e38ea',1,'AdeNote.Migrations.FirstMigration.BuildTargetModel()'],['../classAdeNote_1_1Migrations_1_1addMFA.html#a27846b849962f51f09e4c77465dde7cc',1,'AdeNote.Migrations.addMFA.BuildTargetModel()']]]
 ];

@@ -19,7 +19,7 @@ var searchData=
   ['addlogging_36',['AddLogging',['../Program_8cs.html#a7455608a0659f7cef3de2102d1e12196',1,'Program.cs']]],
   ['addmfa_37',['addMFA',['../classAdeNote_1_1Migrations_1_1addMFA.html',1,'AdeNote::Migrations']]],
   ['addphonenumber_38',['AddPhoneNumber',['../classAdeNote_1_1Controllers_1_1AuthenticationController.html#a923f2d0cdf5a7252471aa3b94585579e',1,'AdeNote::Controllers::AuthenticationController']]],
-  ['addscoped_3c_20authtokenrepository_20_3e_39',['AddScoped&lt; AuthTokenRepository &gt;',['../Program_8cs.html#a72be6d2355c991fbcb7d7a89deb2b755',1,'Program.cs']]],
+  ['addscoped_39',['AddScoped',['../Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1',1,'Program.cs']]],
   ['addscoped_3c_20iauthrepository_2c_20authrepository_20_3e_40',['AddScoped&lt; IAuthRepository, AuthRepository &gt;',['../Program_8cs.html#ab16ce314052ebbb14dce60b09bb3ef0c',1,'Program.cs']]],
   ['addscoped_3c_20iauthservice_2c_20authservice_20_3e_41',['AddScoped&lt; IAuthService, AuthService &gt;',['../Program_8cs.html#af28a70e4e3146d0106efbb9b60bf5e94',1,'Program.cs']]],
   ['addscoped_3c_20iblobservice_2c_20blobservice_20_3e_42',['AddScoped&lt; IBlobService, BlobService &gt;',['../Program_8cs.html#ad0114d4d38d6a8a33b7c1ad705761faa',1,'Program.cs']]],
