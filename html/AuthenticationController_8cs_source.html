@@ -516,7 +516,7 @@ $(document).ready(function(){initNavTree('AuthenticationController_8cs_source.ht
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;        {</div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;            var loginResponse = <a class="code" href="classAdeNote_1_1Controllers_1_1BaseController.html#aef99db4cee20f16d0cc720c476b3b11d">Application</a>.ExecuteCommand&lt;LoginCommand, LoginDTO&gt;(<a class="code" href="classAdeNote_1_1Controllers_1_1BaseController.html#a6de792c0d243904fa6acea70bf524b97">Container</a>, command).Result;</div>
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160; </div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;            <span class="keywordflow">if</span> (!loginResponse.NotSuccessful)</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;            <span class="keywordflow">if</span> (loginResponse.NotSuccessful)</div>
 <div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;                <span class="keywordflow">return</span> loginResponse.Response();</div>
 <div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160; </div>
 <div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;            var resultResponse = <a class="code" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a6ce341dd97950a8ea49b662676d14c95">_authService</a>.<a class="code" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a36d354e9f7aaad56ac5cc7b0c881e5be">IsAuthenticatorEnabled</a>(command.Email).Result;</div>
