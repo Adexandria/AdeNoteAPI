@@ -1,9 +1,10 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,143,124,170"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1BaseController.html" title="A base controller" alt="" coords="172,136,361,177"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html" title="This handles the authentication." alt="" coords="409,5,661,47"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Controllers_1_1BookController.html" title="Handles all the end points for book. User can create,update,fetch and delete books" alt="" coords="440,71,631,112"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Controllers_1_1LabelController.html" title="Handles creating, updating and deleting a label" alt="" coords="439,136,631,177"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Controllers_1_1NoteController.html" title="Handles note management." alt="" coords="441,201,629,243"/>
-<area shape="rect" id="node7" href="$classAdeNote_1_1Controllers_1_1PageController.html" title="Handles the page management for a particular book." alt="" coords="441,267,629,308"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,177,124,203"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1BaseController.html" title="A base controller" alt="" coords="173,136,363,177"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Controllers_1_1ExcelController.html" title=" " alt="" coords="172,201,364,243"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html" title="This handles the authentication." alt="" coords="412,5,664,47"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Controllers_1_1BookController.html" title="Handles all the end points for book. User can create,update,fetch and delete books" alt="" coords="443,71,633,112"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Controllers_1_1LabelController.html" title="Handles creating, updating and deleting a label" alt="" coords="442,136,634,177"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Controllers_1_1NoteController.html" title="Handles note management." alt="" coords="444,201,632,243"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Controllers_1_1PageController.html" title="Handles the page management for a particular book." alt="" coords="444,267,632,308"/>
 </map>

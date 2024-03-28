@@ -9,6 +9,9 @@ var dir_3bdc45994b62d0923218a8948c0eb398 =
     [ "BookController.cs", "BookController_8cs.html", [
       [ "BookController", "classAdeNote_1_1Controllers_1_1BookController.html", "classAdeNote_1_1Controllers_1_1BookController" ]
     ] ],
+    [ "ExcelController.cs", "ExcelController_8cs.html", [
+      [ "ExcelController", "classAdeNote_1_1Controllers_1_1ExcelController.html", "classAdeNote_1_1Controllers_1_1ExcelController" ]
+    ] ],
     [ "LabelController.cs", "LabelController_8cs.html", [
       [ "LabelController", "classAdeNote_1_1Controllers_1_1LabelController.html", "classAdeNote_1_1Controllers_1_1LabelController" ]
     ] ],

@@ -1,10 +1,10 @@
 var classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService =
 [
     [ "AuthService", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a6002d39a96025cac144e6a9675ac5511", null ],
-    [ "AuthService", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ae1b1b495a932dabff7fc62611c314d03", null ],
+    [ "AuthService", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a8f50554851ac063643956ef241a3509a", null ],
     [ "DisableUserMFA", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a7859b04addc0239dc19e7f2c26948c65", null ],
     [ "GenerateMFAToken", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a7406a88b21c76907b292a2be3d69fbf9", null ],
-    [ "GenerateResetToken", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a684475bf8e37f3b4bd89752f908137d5", null ],
+    [ "GenerateResetToken", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a5b0cd81d29252be914d6bb1c172370d2", null ],
     [ "GetUserQrCode", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#afef6b990e73d38f9d85dd12ae50dc5fc", null ],
     [ "IsAuthenticatorEnabled", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#acb4bd6f384e5e5cf4a1163bc442e1da0", null ],
     [ "IsAuthenticatorEnabled", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ae964889322355888d56108d856fc847b", null ],
@@ -19,9 +19,9 @@ var classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService =
     [ "VerifyAuthenticatorOTP", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a0d2bea8f60ea1e908d615bba177d939e", null ],
     [ "VerifyPhoneNumber", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#adc3b060ec80b625a45eaece17c3539d0", null ],
     [ "VerifyResetToken", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a17b8d04b770daeeb3dddc9c6c654aa56", null ],
+    [ "_notificationService", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a11d597a02d2d058dda9b6a50c93dfd79", null ],
     [ "authRepository", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ae5087b913ad7829c0017b759dd87f29d", null ],
     [ "blobService", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a177274f63f1534e2d33ee94a0eac7140", null ],
-    [ "emailService", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ac988047e7a0c77e37838d152f858407d", null ],
     [ "key", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a25ba8456de534bd677c7c16880b5ff0f", null ],
     [ "loginSecret", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a8772a17371200516c02e29147d99f723", null ],
     [ "smsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a3d50d7a799a5c109363113bf0a7ab5a3", null ],

@@ -125,40 +125,39 @@ $(document).ready(function(){initNavTree('NoteDbContext_8cs_source.html',''); in
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                .Property(s =&gt; s.UserId)</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                .HasConversion&lt;<a class="code" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdConverter.html">UserIdConverter</a>&gt;()</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                .HasColumnName(<span class="stringliteral">&quot;User_id&quot;</span>);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            modelBuilder.Entity&lt;<a class="code" href="classAdeNote_1_1Models_1_1Book.html">Book</a>&gt;()</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                .Property(x =&gt; x.UserId)</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                .HasColumnName(<span class="stringliteral">&quot;User_id&quot;</span>);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            modelBuilder.Entity&lt;<a class="code" href="classAdeNote_1_1Models_1_1UserDetail.html">UserDetail</a>&gt;()</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                .Property(x =&gt; x.UserId)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                .HasColumnName(<span class="stringliteral">&quot;User_id&quot;</span>);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            modelBuilder.Entity&lt;<a class="code" href="classAdeNote_1_1Models_1_1UserToken.html">UserToken</a>&gt;()</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                .Property(x =&gt; x.AuthenticatorKey)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                .IsRequired(<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            modelBuilder.Entity&lt;<a class="code" href="classAdeNote_1_1Models_1_1UserToken.html">UserToken</a>&gt;()</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;              .Property(x =&gt; x.UserId)</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                .HasColumnName(<span class="stringliteral">&quot;User_id&quot;</span>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            modelBuilder.Entity&lt;User&gt;().ToTable(<span class="stringliteral">&quot;Users&quot;</span>, (t =&gt; t.ExcludeFromMigrations()))</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                .Ignore(<span class="stringliteral">&quot;Notes&quot;</span>)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                .Ignore(<span class="stringliteral">&quot;RefreshToken&quot;</span>)</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                .Ignore(<span class="stringliteral">&quot;AccessToken&quot;</span>);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            modelBuilder.Entity&lt;<a class="code" href="classAdeNote_1_1Models_1_1Book.html">Book</a>&gt;()</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                .HasMany(s =&gt; s.Pages);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            modelBuilder.Entity&lt;<a class="code" href="classAdeNote_1_1Models_1_1Page.html">Page</a>&gt;()</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                .HasMany(s =&gt; s.Labels)</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                .WithMany(s =&gt; s.Pages)</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                .UsingEntity&lt;<a class="code" href="classAdeNote_1_1Models_1_1LabelPage.html">LabelPage</a>&gt;(</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                l =&gt; l.HasOne&lt;<a class="code" href="classAdeNote_1_1Models_1_1Label.html">Label</a>&gt;().WithMany().HasForeignKey(s =&gt; s.LabelId),</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                r=&gt;r.HasOne&lt;<a class="code" href="classAdeNote_1_1Models_1_1Page.html">Page</a>&gt;().WithMany().HasForeignKey(s=&gt;s.PageId));</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            modelBuilder.Entity&lt;<a class="code" href="classAdeNote_1_1Models_1_1Book.html">Book</a>&gt;()</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                .Property(x =&gt; x.UserId)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                .HasColumnName(<span class="stringliteral">&quot;User_id&quot;</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            modelBuilder.Entity&lt;<a class="code" href="classAdeNote_1_1Models_1_1UserDetail.html">UserDetail</a>&gt;()</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                .Property(x =&gt; x.UserId)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                .HasColumnName(<span class="stringliteral">&quot;User_id&quot;</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            modelBuilder.Entity&lt;<a class="code" href="classAdeNote_1_1Models_1_1UserToken.html">UserToken</a>&gt;()</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                .Property(x =&gt; x.AuthenticatorKey)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                .IsRequired(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            modelBuilder.Entity&lt;<a class="code" href="classAdeNote_1_1Models_1_1UserToken.html">UserToken</a>&gt;()</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;              .Property(x =&gt; x.UserId)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                .HasColumnName(<span class="stringliteral">&quot;User_id&quot;</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            modelBuilder.Entity&lt;User&gt;().ToTable(<span class="stringliteral">&quot;Users&quot;</span>, (t =&gt; t.ExcludeFromMigrations()))</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                .Ignore(<span class="stringliteral">&quot;Notes&quot;</span>)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                .Ignore(<span class="stringliteral">&quot;RefreshToken&quot;</span>)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                .Ignore(<span class="stringliteral">&quot;AccessToken&quot;</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            modelBuilder.Entity&lt;<a class="code" href="classAdeNote_1_1Models_1_1Book.html">Book</a>&gt;()</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                .HasMany(s =&gt; s.Pages);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            modelBuilder.Entity&lt;<a class="code" href="classAdeNote_1_1Models_1_1Page.html">Page</a>&gt;()</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                .HasMany(s =&gt; s.Labels)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                .WithMany(s =&gt; s.Pages)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                .UsingEntity&lt;<a class="code" href="classAdeNote_1_1Models_1_1LabelPage.html">LabelPage</a>&gt;(</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                l =&gt; l.HasOne&lt;<a class="code" href="classAdeNote_1_1Models_1_1Label.html">Label</a>&gt;().WithMany().HasForeignKey(s =&gt; s.LabelId),</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                r=&gt;r.HasOne&lt;<a class="code" href="classAdeNote_1_1Models_1_1Page.html">Page</a>&gt;().WithMany().HasForeignKey(s=&gt;s.PageId));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
 <div class="ttc" id="aclassAdeNote_1_1Db_1_1NoteDbContext_html"><div class="ttname"><a href="classAdeNote_1_1Db_1_1NoteDbContext.html">AdeNote.Db.NoteDbContext</a></div><div class="ttdoc">Handles the transactions made to the database</div><div class="ttdef"><b>Definition:</b> <a href="NoteDbContext_8cs_source.html#l00011">NoteDbContext.cs:12</a></div></div>
 <div class="ttc" id="aclassAdeNote_1_1Db_1_1NoteDbContext_html_a038bf9b9487eeba40e8b16b6768bd31b"><div class="ttname"><a href="classAdeNote_1_1Db_1_1NoteDbContext.html#a038bf9b9487eeba40e8b16b6768bd31b">AdeNote.Db.NoteDbContext.Books</a></div><div class="ttdeci">DbSet&lt; Book &gt; Books</div><div class="ttdoc">Initialises the book objects</div><div class="ttdef"><b>Definition:</b> <a href="NoteDbContext_8cs_source.html#l00030">NoteDbContext.cs:30</a></div></div>
 <div class="ttc" id="aclassAdeNote_1_1Db_1_1NoteDbContext_html_a03ee37e55a6a8c10b0dbc1967c2762fd"><div class="ttname"><a href="classAdeNote_1_1Db_1_1NoteDbContext.html#a03ee37e55a6a8c10b0dbc1967c2762fd">AdeNote.Db.NoteDbContext.NoteDbContext</a></div><div class="ttdeci">NoteDbContext(DbContextOptions&lt; NoteDbContext &gt; options)</div><div class="ttdoc">A constructor</div><div class="ttdef"><b>Definition:</b> <a href="NoteDbContext_8cs_source.html#l00017">NoteDbContext.cs:17</a></div></div>
@@ -180,7 +179,7 @@ $(document).ready(function(){initNavTree('NoteDbContext_8cs_source.html',''); in
 <div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_1_1Utilities_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html">AdeNote.Infrastructure.Utilities</a></div><div class="ttdef"><b>Definition:</b> <a href="BlobConfiguration_8cs_source.html#l00001">BlobConfiguration.cs:2</a></div></div>
 <div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure.html">AdeNote.Infrastructure</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionResultExtension_8cs_source.html#l00004">ActionResultExtension.cs:5</a></div></div>
 <div class="ttc" id="anamespaceAdeNote_1_1Models_html"><div class="ttname"><a href="namespaceAdeNote_1_1Models.html">AdeNote.Models</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseClass_8cs_source.html#l00003">BaseClass.cs:4</a></div></div>
-<div class="ttc" id="anamespaceAdeNote_html"><div class="ttname"><a href="namespaceAdeNote.html">AdeNote</a></div><div class="ttdef"><b>Definition:</b> <a href="AuthenticationController_8cs_source.html#l00015">AuthenticationController.cs:16</a></div></div>
+<div class="ttc" id="anamespaceAdeNote_html"><div class="ttname"><a href="namespaceAdeNote.html">AdeNote</a></div><div class="ttdef"><b>Definition:</b> <a href="AuthenticationController_8cs_source.html#l00016">AuthenticationController.cs:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

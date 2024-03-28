@@ -107,6 +107,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a11ef7f2865e17aaa3dd49730e428671c"><td class="memItemLeft" align="right" valign="top">Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html#a11ef7f2865e17aaa3dd49730e428671c">Add</a> (Guid userId, <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1BookCreateDTO.html">BookCreateDTO</a> createBook)</td></tr>
 <tr class="memdesc:a11ef7f2865e17aaa3dd49730e428671c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new book  <a href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html#a11ef7f2865e17aaa3dd49730e428671c">More...</a><br /></td></tr>
 <tr class="separator:a11ef7f2865e17aaa3dd49730e428671c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a05b0bc4147189aea397bdd4a3d9c2d"><td class="memItemLeft" align="right" valign="top">Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html#a7a05b0bc4147189aea397bdd4a3d9c2d">Add</a> (Guid userId, IList&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1BookCreateDTO.html">BookCreateDTO</a> &gt; newBooks)</td></tr>
+<tr class="separator:a7a05b0bc4147189aea397bdd4a3d9c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fbbbff5c93ad402bf480d5bff56bd70"><td class="memItemLeft" align="right" valign="top">Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html#a2fbbbff5c93ad402bf480d5bff56bd70">Update</a> (Guid bookId, Guid userId, <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1BookUpdateDTO.html">BookUpdateDTO</a> updateBook)</td></tr>
 <tr class="memdesc:a2fbbbff5c93ad402bf480d5bff56bd70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates an existing book  <a href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html#a2fbbbff5c93ad402bf480d5bff56bd70">More...</a><br /></td></tr>
 <tr class="separator:a2fbbbff5c93ad402bf480d5bff56bd70"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,7 +128,7 @@ Public Member Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="IBookService_8cs_source.html#l00009">9</a> of file <a class="el" href="IBookService_8cs_source.html">IBookService.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a11ef7f2865e17aaa3dd49730e428671c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11ef7f2865e17aaa3dd49730e428671c">&#9670;&nbsp;</a></span>Add()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a11ef7f2865e17aaa3dd49730e428671c">&#9670;&nbsp;</a></span>Add() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,10 +169,41 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService_a11ef7f2865e17aaa3dd49730e428671c_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService_a11ef7f2865e17aaa3dd49730e428671c_icgraph" alt=""/></div>
 <map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService_a11ef7f2865e17aaa3dd49730e428671c_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService_a11ef7f2865e17aaa3dd49730e428671c_icgraph">
-<area shape="rect" title="Adds a new book" alt="" coords="244,5,477,47"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1BookController.html#a9cf66d0add6be7346f03e4f5abdb91a6" title="Adds a new book" alt="" coords="5,5,196,47"/>
+<area shape="rect" title="Adds a new book" alt="" coords="287,39,520,80"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1BookController.html#a9cf66d0add6be7346f03e4f5abdb91a6" title="Adds a new book" alt="" coords="27,5,217,47"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html#a6652e4676b3a7484987c2d0fea5b20bd" title=" " alt="" coords="5,71,239,112"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a7a05b0bc4147189aea397bdd4a3d9c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a05b0bc4147189aea397bdd4a3d9c2d">&#9670;&nbsp;</a></span>Add() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;ActionResult&gt; AdeNote.Infrastructure.Services.IBookService.Add </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>userId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IList&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1BookCreateDTO.html">BookCreateDTO</a> &gt;&#160;</td>
+          <td class="paramname"><em>newBooks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#ade4c3a8c635afce0f5bf2b1e19378143">AdeNote.Infrastructure.Services.BookService</a>.</p>
 
 </div>
 </div>
@@ -205,8 +238,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService_a4aea73feecfcdd8a59060cb1f64adba5_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService_a4aea73feecfcdd8a59060cb1f64adba5_icgraph" alt=""/></div>
 <map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService_a4aea73feecfcdd8a59060cb1f64adba5_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService_a4aea73feecfcdd8a59060cb1f64adba5_icgraph">
-<area shape="rect" title="Get all books" alt="" coords="244,5,477,47"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1BookController.html#ad906923347f5e4793921d7fbb7d96cf1" title="fetches all books" alt="" coords="5,5,196,47"/>
+<area shape="rect" title="Get all books" alt="" coords="287,39,520,80"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html#a45ad3289b55c804fbf971e0bfd1c358a" title=" " alt="" coords="5,5,239,47"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1BookController.html#ad906923347f5e4793921d7fbb7d96cf1" title="fetches all books" alt="" coords="27,71,217,112"/>
 </map>
 </div>
 

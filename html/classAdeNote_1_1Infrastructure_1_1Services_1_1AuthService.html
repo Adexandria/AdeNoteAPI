@@ -114,8 +114,8 @@ Collaboration diagram for AdeNote.Infrastructure.Services.AuthService:</div>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html" title="An interface that includes the behaviour of cloud storage" alt="" coords="256,122,489,163"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html" title="An interface that handles the authentication of an application" alt="" coords="249,187,496,229"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="6,195,199,221"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html" title="A sms service used to send message via sms" alt="" coords="256,253,489,294"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html" title=" " alt="" coords="256,318,489,359"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html" title="Manages the email notification using template" alt="" coords="256,253,489,294"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html" title="A sms service used to send message via sms" alt="" coords="256,318,489,359"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -124,9 +124,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6002d39a96025cac144e6a9675ac5511"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a6002d39a96025cac144e6a9675ac5511">AuthService</a> ()</td></tr>
 <tr class="memdesc:a6002d39a96025cac144e6a9675ac5511"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a6002d39a96025cac144e6a9675ac5511">More...</a><br /></td></tr>
 <tr class="separator:a6002d39a96025cac144e6a9675ac5511"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1b1b495a932dabff7fc62611c314d03"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ae1b1b495a932dabff7fc62611c314d03">AuthService</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html">IAuthRepository</a> _authRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html">IUserDetailRepository</a> _userDetailRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html">IBlobService</a> _blobService, IConfiguration _configuration, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html">ISmsService</a> _smsService, IContainer container, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html">IEmailService</a> _emailService, AuthTokenRepository authTokenRepository)</td></tr>
-<tr class="memdesc:ae1b1b495a932dabff7fc62611c314d03"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ae1b1b495a932dabff7fc62611c314d03">More...</a><br /></td></tr>
-<tr class="separator:ae1b1b495a932dabff7fc62611c314d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f50554851ac063643956ef241a3509a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a8f50554851ac063643956ef241a3509a">AuthService</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html">IAuthRepository</a> _authRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html">IUserDetailRepository</a> _userDetailRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html">IBlobService</a> _blobService, IConfiguration _configuration, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html">ISmsService</a> _smsService, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html">INotificationService</a> notificationService, AuthTokenRepository authTokenRepository)</td></tr>
+<tr class="memdesc:a8f50554851ac063643956ef241a3509a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a8f50554851ac063643956ef241a3509a">More...</a><br /></td></tr>
+<tr class="separator:a8f50554851ac063643956ef241a3509a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3d8cce57115793a8568081c7ebec059"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html">AuthenticatorDTO</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ab3d8cce57115793a8568081c7ebec059">SetAuthenticator</a> (Guid userId, string email)</td></tr>
 <tr class="memdesc:ab3d8cce57115793a8568081c7ebec059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up MFA using google authenticator app  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ab3d8cce57115793a8568081c7ebec059">More...</a><br /></td></tr>
 <tr class="separator:ab3d8cce57115793a8568081c7ebec059"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,8 +172,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7859b04addc0239dc19e7f2c26948c65"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a7859b04addc0239dc19e7f2c26948c65">DisableUserMFA</a> (Guid userId)</td></tr>
 <tr class="memdesc:a7859b04addc0239dc19e7f2c26948c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables Multi factor authentication for a particular user  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a7859b04addc0239dc19e7f2c26948c65">More...</a><br /></td></tr>
 <tr class="separator:a7859b04addc0239dc19e7f2c26948c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a684475bf8e37f3b4bd89752f908137d5"><td class="memItemLeft" align="right" valign="top">ActionResult&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a684475bf8e37f3b4bd89752f908137d5">GenerateResetToken</a> (Guid userId, string email)</td></tr>
-<tr class="separator:a684475bf8e37f3b4bd89752f908137d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b0cd81d29252be914d6bb1c172370d2"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a5b0cd81d29252be914d6bb1c172370d2">GenerateResetToken</a> (Guid userId, string email)</td></tr>
+<tr class="separator:a5b0cd81d29252be914d6bb1c172370d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17b8d04b770daeeb3dddc9c6c654aa56"><td class="memItemLeft" align="right" valign="top">ActionResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a17b8d04b770daeeb3dddc9c6c654aa56">VerifyResetToken</a> (string token)</td></tr>
 <tr class="separator:a17b8d04b770daeeb3dddc9c6c654aa56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -202,8 +202,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a029b308eb24f2cf2c12843305da8b230"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1df097c44e1934e6708d53c78a67355c"><td class="memItemLeft" align="right" valign="top">AuthTokenRepository&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a1df097c44e1934e6708d53c78a67355c">tokenRepository</a></td></tr>
 <tr class="separator:a1df097c44e1934e6708d53c78a67355c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac988047e7a0c77e37838d152f858407d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html">IEmailService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ac988047e7a0c77e37838d152f858407d">emailService</a></td></tr>
-<tr class="separator:ac988047e7a0c77e37838d152f858407d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11d597a02d2d058dda9b6a50c93dfd79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html">INotificationService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a11d597a02d2d058dda9b6a50c93dfd79">_notificationService</a></td></tr>
+<tr class="separator:a11d597a02d2d058dda9b6a50c93dfd79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of the interface </p>
@@ -231,8 +231,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae1b1b495a932dabff7fc62611c314d03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1b1b495a932dabff7fc62611c314d03">&#9670;&nbsp;</a></span>AuthService() <span class="overload">[2/2]</span></h2>
+<a id="a8f50554851ac063643956ef241a3509a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f50554851ac063643956ef241a3509a">&#9670;&nbsp;</a></span>AuthService() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,14 +270,8 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IContainer&#160;</td>
-          <td class="paramname"><em>container</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html">IEmailService</a>&#160;</td>
-          <td class="paramname"><em>_emailService</em>, </td>
+          <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html">INotificationService</a>&#160;</td>
+          <td class="paramname"><em>notificationService</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -400,14 +394,14 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a684475bf8e37f3b4bd89752f908137d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a684475bf8e37f3b4bd89752f908137d5">&#9670;&nbsp;</a></span>GenerateResetToken()</h2>
+<a id="a5b0cd81d29252be914d6bb1c172370d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b0cd81d29252be914d6bb1c172370d2">&#9670;&nbsp;</a></span>GenerateResetToken()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ActionResult&lt;string&gt; AdeNote.Infrastructure.Services.AuthService.GenerateResetToken </td>
+          <td class="memname">async Task&lt;ActionResult&lt;string&gt; &gt; AdeNote.Infrastructure.Services.AuthService.GenerateResetToken </td>
           <td>(</td>
           <td class="paramtype">Guid&#160;</td>
           <td class="paramname"><em>userId</em>, </td>
@@ -426,7 +420,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a6b4b2555fd2a0c99b4ee4f71aa0a1467">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aea767e3bba531744d9d345053ea70641">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00516">516</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
@@ -1014,11 +1008,27 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aa9b04aa3f51038e46192d2af326b46d4">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00539">539</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00541">541</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a11d597a02d2d058dda9b6a50c93dfd79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11d597a02d2d058dda9b6a50c93dfd79">&#9670;&nbsp;</a></span>_notificationService</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html">INotificationService</a> AdeNote.Infrastructure.Services.AuthService._notificationService</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00598">598</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+
+</div>
+</div>
 <a id="ae5087b913ad7829c0017b759dd87f29d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae5087b913ad7829c0017b759dd87f29d">&#9670;&nbsp;</a></span>authRepository</h2>
 
@@ -1033,7 +1043,7 @@ Here is the call graph for this function:</div>
 
 <p>Handles the authentication </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00567">567</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00569">569</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1051,23 +1061,7 @@ Here is the call graph for this function:</div>
 
 <p>Handles the cloud storage </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00582">582</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
-
-</div>
-</div>
-<a id="ac988047e7a0c77e37838d152f858407d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac988047e7a0c77e37838d152f858407d">&#9670;&nbsp;</a></span>emailService</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html">IEmailService</a> AdeNote.Infrastructure.Services.AuthService.emailService</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00596">596</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00584">584</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1085,7 +1079,7 @@ Here is the call graph for this function:</div>
 
 <p>Two factor authentication secret key </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00562">562</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00564">564</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1103,7 +1097,7 @@ Here is the call graph for this function:</div>
 
 <p>Secret to generate multifactor token </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00587">587</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00589">589</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1121,7 +1115,7 @@ Here is the call graph for this function:</div>
 
 <p>A sms service used to send message via sms </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00577">577</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00579">579</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1137,7 +1131,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00594">594</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00596">596</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1155,7 +1149,7 @@ Here is the call graph for this function:</div>
 
 <p>Object used to generate and set up two factor authentication </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00592">592</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00594">594</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1173,7 +1167,7 @@ Here is the call graph for this function:</div>
 
 <p>Handles the details of a user </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00572">572</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00574">574</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>

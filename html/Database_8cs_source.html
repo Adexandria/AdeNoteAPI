@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('Database_8cs_source.html',''); initRes
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            var databaseCreator = dbContext.GetService&lt;IRelationalDatabaseCreator&gt;();</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordflow">if</span> (databaseCreator.HasTables())</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordflow">if</span> (!databaseCreator.HasTables())</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                <a class="code" href="Program_8cs.html#acd0ff6ed70abd1e3e3c201c52f0db425">containerBuilder</a>.BuildMigration();</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                databaseCreator.CreateTables();</div>
@@ -109,13 +109,13 @@ $(document).ready(function(){initNavTree('Database_8cs_source.html',''); initRes
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="ttc" id="aProgram_8cs_html_acd0ff6ed70abd1e3e3c201c52f0db425"><div class="ttname"><a href="Program_8cs.html#acd0ff6ed70abd1e3e3c201c52f0db425">containerBuilder</a></div><div class="ttdeci">var containerBuilder</div><div class="ttdef"><b>Definition:</b> <a href="Program_8cs_source.html#l00029">Program.cs:29</a></div></div>
+<div class="ttc" id="aProgram_8cs_html_acd0ff6ed70abd1e3e3c201c52f0db425"><div class="ttname"><a href="Program_8cs.html#acd0ff6ed70abd1e3e3c201c52f0db425">containerBuilder</a></div><div class="ttdeci">var containerBuilder</div><div class="ttdef"><b>Definition:</b> <a href="Program_8cs_source.html#l00030">Program.cs:30</a></div></div>
 <div class="ttc" id="aclassAdeNote_1_1Db_1_1NoteDbContext_html"><div class="ttname"><a href="classAdeNote_1_1Db_1_1NoteDbContext.html">AdeNote.Db.NoteDbContext</a></div><div class="ttdoc">Handles the transactions made to the database</div><div class="ttdef"><b>Definition:</b> <a href="NoteDbContext_8cs_source.html#l00011">NoteDbContext.cs:12</a></div></div>
 <div class="ttc" id="aclassAdeNote_1_1Infrastructure_1_1Utilities_1_1Database_html"><div class="ttname"><a href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database.html">AdeNote.Infrastructure.Utilities.Database</a></div><div class="ttdef"><b>Definition:</b> <a href="Database_8cs_source.html#l00008">Database.cs:9</a></div></div>
 <div class="ttc" id="aclassAdeNote_1_1Infrastructure_1_1Utilities_1_1Database_html_ac00f5afd409094f27f4366466164a8ed"><div class="ttname"><a href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database.html#ac00f5afd409094f27f4366466164a8ed">AdeNote.Infrastructure.Utilities.Database.CreateTables</a></div><div class="ttdeci">static void CreateTables(this IServiceProvider provider, TaskContainerBuilder containerBuilder)</div><div class="ttdef"><b>Definition:</b> <a href="Database_8cs_source.html#l00010">Database.cs:10</a></div></div>
 <div class="ttc" id="anamespaceAdeNote_1_1Db_html"><div class="ttname"><a href="namespaceAdeNote_1_1Db.html">AdeNote.Db</a></div><div class="ttdef"><b>Definition:</b> <a href="NoteDbContext_8cs_source.html#l00006">NoteDbContext.cs:7</a></div></div>
 <div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_1_1Utilities_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html">AdeNote.Infrastructure.Utilities</a></div><div class="ttdef"><b>Definition:</b> <a href="BlobConfiguration_8cs_source.html#l00001">BlobConfiguration.cs:2</a></div></div>
-<div class="ttc" id="anamespaceAdeNote_html"><div class="ttname"><a href="namespaceAdeNote.html">AdeNote</a></div><div class="ttdef"><b>Definition:</b> <a href="AuthenticationController_8cs_source.html#l00015">AuthenticationController.cs:16</a></div></div>
+<div class="ttc" id="anamespaceAdeNote_html"><div class="ttname"><a href="namespaceAdeNote.html">AdeNote</a></div><div class="ttdef"><b>Definition:</b> <a href="AuthenticationController_8cs_source.html#l00016">AuthenticationController.cs:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -24,7 +24,8 @@ var hierarchy =
         [ "AdeNote.Controllers.LabelController", "classAdeNote_1_1Controllers_1_1LabelController.html", null ],
         [ "AdeNote.Controllers.NoteController", "classAdeNote_1_1Controllers_1_1NoteController.html", null ],
         [ "AdeNote.Controllers.PageController", "classAdeNote_1_1Controllers_1_1PageController.html", null ]
-      ] ]
+      ] ],
+      [ "AdeNote.Controllers.ExcelController", "classAdeNote_1_1Controllers_1_1ExcelController.html", null ]
     ] ],
     [ "AdeNote.Models.DTOs.CreateNoteDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO.html", null ],
     [ "AdeNote.Infrastructure.Utilities.Database", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database.html", null ],
@@ -50,12 +51,22 @@ var hierarchy =
     [ "AdeNote.Infrastructure.Services.IEmailService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html", [
       [ "AdeNote.Infrastructure.Services.EmailService", "classAdeNote_1_1Infrastructure_1_1Services_1_1EmailService.html", null ]
     ] ],
+    [ "IEntityExport", null, [
+      [ "AdeNote.Infrastructure.Utilities.ExportEntity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExportEntity.html", null ]
+    ] ],
+    [ "AdeNote.Infrastructure.Services.IExcel", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExcel.html", [
+      [ "AdeNote.Infrastructure.Services.ExcelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html", null ]
+    ] ],
+    [ "IImportSheet", null, [
+      [ "AdeNote.Infrastructure.Utilities.ImportSheet", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet.html", null ]
+    ] ],
     [ "AdeNote.Infrastructure.Repository.ILabelPageRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html", [
       [ "AdeNote.Infrastructure.Repository.LabelPageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Services.ILabelService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html", [
       [ "AdeNote.Infrastructure.Services.LabelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html", null ]
     ] ],
+    [ "AdeNote.Models.DTOs.ImportBookDto", "classAdeNote_1_1Models_1_1DTOs_1_1ImportBookDto.html", null ],
     [ "AdeNote.Infrastructure.Services.INotificationService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html", [
       [ "AdeNote.Infrastructure.Services.NotificationService", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html", null ]
     ] ],

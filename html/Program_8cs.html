@@ -158,12 +158,16 @@ Functions</h2></td></tr>
 <tr class="separator:a685cd6889432a4b5d84d66c0ae7df9b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a049c44fc90f82b87e0ede9d1974b0b02"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a049c44fc90f82b87e0ede9d1974b0b02">AddScoped&lt; IPasswordManager, PasswordManager &gt;</a> ()</td></tr>
 <tr class="separator:a049c44fc90f82b87e0ede9d1974b0b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cad9e4851b88551ca20788beba96b67"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a3cad9e4851b88551ca20788beba96b67">AddScoped&lt; IExcel, AdeNote.Infrastructure.Services.ExcelService &gt;</a> ()</td></tr>
+<tr class="separator:a3cad9e4851b88551ca20788beba96b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bfd26f3bb01ded72ccc4d64ed5e1d4b"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a4bfd26f3bb01ded72ccc4d64ed5e1d4b">AddSingleton</a> ((_)=&gt; new ExcelifyFactory().CreateService())</td></tr>
+<tr class="separator:a4bfd26f3bb01ded72ccc4d64ed5e1d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad383931ac699cc34078df0532f159279"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ad383931ac699cc34078df0532f159279">AddDbContext&lt; NoteDbContext &gt;</a> (options=&gt; options .UseSqlServer(<a class="el" href="Program_8cs.html#a067cdd5f0fed6b2598fae7de8607e7da">connectionString</a>))</td></tr>
 <tr class="separator:ad383931ac699cc34078df0532f159279"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b2bc4c41ab1f801b53d7330af1fdf7e"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a7b2bc4c41ab1f801b53d7330af1fdf7e">AddAuthentication</a> (JwtBearerDefaults.AuthenticationScheme) .AddJwtBearer(options</td></tr>
 <tr class="separator:a7b2bc4c41ab1f801b53d7330af1fdf7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af48d771caa1db5ac2c08d0e011827bdf"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#af48d771caa1db5ac2c08d0e011827bdf">AddAuthorization</a> (options=&gt; { options.DefaultPolicy=new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme) .RequireAuthenticatedUser().Build();})</td></tr>
-<tr class="separator:af48d771caa1db5ac2c08d0e011827bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8370f0b81a120f1fcc0be56199e40c05"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a8370f0b81a120f1fcc0be56199e40c05">AddAuthorization</a> (options=&gt; { options.DefaultPolicy=new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme) .RequireAuthenticatedUser().Build();options.AddPolicy(&quot;sso&quot;, new AuthorizationPolicyBuilder(&quot;SSO&quot;).RequireAuthenticatedUser().Build());})</td></tr>
+<tr class="separator:a8370f0b81a120f1fcc0be56199e40c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2d785d3c31b23c0dc58c93cfdca004b"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#aa2d785d3c31b23c0dc58c93cfdca004b">BuildServiceProvider</a> ().CreateTables(<a class="el" href="Program_8cs.html#acd0ff6ed70abd1e3e3c201c52f0db425">containerBuilder</a>)</td></tr>
 <tr class="separator:aa2d785d3c31b23c0dc58c93cfdca004b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a5cfe7fee09f478241b98af703affea"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a9a5cfe7fee09f478241b98af703affea">UseSwagger</a> ()</td></tr>
@@ -187,6 +191,8 @@ Variables</h2></td></tr>
 <tr class="separator:a2f78352277081c620fd4cf92a5ce15e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c05573df94c1c7e9a635ed02e41281e"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a> = builder.Configuration.AddEnvironmentVariables().Build()</td></tr>
 <tr class="separator:a1c05573df94c1c7e9a635ed02e41281e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad72aaf9e90f43ab189b485eadfd7af52"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ad72aaf9e90f43ab189b485eadfd7af52">azureAd</a> = configuration.GetSection(&quot;AzureAd&quot;)</td></tr>
+<tr class="separator:ad72aaf9e90f43ab189b485eadfd7af52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a067cdd5f0fed6b2598fae7de8607e7da"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a067cdd5f0fed6b2598fae7de8607e7da">connectionString</a> = configuration.GetConnectionString(&quot;NotesDB&quot;)</td></tr>
 <tr class="separator:a067cdd5f0fed6b2598fae7de8607e7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb71d22b23118555670835ec58716126"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#adb71d22b23118555670835ec58716126">tokenSecret</a> = <a class="el" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[&quot;TokenSecret&quot;]</td></tr>
@@ -211,7 +217,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00017">17</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00018">18</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -262,8 +268,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="af48d771caa1db5ac2c08d0e011827bdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af48d771caa1db5ac2c08d0e011827bdf">&#9670;&nbsp;</a></span>AddAuthorization()</h2>
+<a id="a8370f0b81a120f1fcc0be56199e40c05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8370f0b81a120f1fcc0be56199e40c05">&#9670;&nbsp;</a></span>AddAuthorization()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,7 +283,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">{ options.DefaultPolicy=new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme) .RequireAuthenticatedUser().Build();}&#160;</td>
+          <td class="paramtype">{ options.DefaultPolicy=new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme) .RequireAuthenticatedUser().Build();options.AddPolicy(&quot;sso&quot;, new AuthorizationPolicyBuilder(&quot;SSO&quot;).RequireAuthenticatedUser().Build());}&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -527,6 +533,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a3cad9e4851b88551ca20788beba96b67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cad9e4851b88551ca20788beba96b67">&#9670;&nbsp;</a></span>AddScoped&lt; IExcel, AdeNote.Infrastructure.Services.ExcelService &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExcel.html">IExcel</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html">AdeNote.Infrastructure.Services.ExcelService</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a616f9b8986aaed1a3e00753d1ee948bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a616f9b8986aaed1a3e00753d1ee948bc">&#9670;&nbsp;</a></span>AddScoped&lt; ILabelPageRepository, LabelPageRepository &gt;()</h2>
 
@@ -742,6 +765,34 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4bfd26f3bb01ded72ccc4d64ed5e1d4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bfd26f3bb01ded72ccc4d64ed5e1d4b">&#9670;&nbsp;</a></span>AddSingleton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">builder.Services. AddSingleton </td>
+          <td>(</td>
+          <td class="paramtype">(_)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">new &#160;</td>
+          <td class="paramname"><em>ExcelifyFactory</em>).CreateService(&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1009,7 +1060,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00128">128</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00149">149</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1025,7 +1076,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00125">125</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00146">146</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad72aaf9e90f43ab189b485eadfd7af52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad72aaf9e90f43ab189b485eadfd7af52">&#9670;&nbsp;</a></span>azureAd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var azureAd = configuration.GetSection(&quot;AzureAd&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00022">22</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1041,7 +1108,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00019">19</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00020">20</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1057,7 +1124,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00020">20</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00021">21</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1073,7 +1140,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00023">23</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00024">24</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1089,7 +1156,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00029">29</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00030">30</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1105,7 +1172,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00026">26</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00027">27</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>

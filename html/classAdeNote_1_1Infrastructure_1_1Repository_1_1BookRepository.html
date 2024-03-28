@@ -126,6 +126,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a810a4983f178aebf1ee2bf45313819bb"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html#a810a4983f178aebf1ee2bf45313819bb">Add</a> (<a class="el" href="classAdeNote_1_1Models_1_1Book.html">Book</a> entity)</td></tr>
 <tr class="memdesc:a810a4983f178aebf1ee2bf45313819bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves a new book  <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html#a810a4983f178aebf1ee2bf45313819bb">More...</a><br /></td></tr>
 <tr class="separator:a810a4983f178aebf1ee2bf45313819bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1eab7cffbb46827795c305ca90e9d3d"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html#af1eab7cffbb46827795c305ca90e9d3d">Add</a> (IEnumerable&lt; <a class="el" href="classAdeNote_1_1Models_1_1Book.html">Book</a> &gt; books)</td></tr>
+<tr class="separator:af1eab7cffbb46827795c305ca90e9d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dba3dfdf0d76e480dc36e8140720a33"><td class="memItemLeft" align="right" valign="top">IQueryable&lt; <a class="el" href="classAdeNote_1_1Models_1_1Book.html">Book</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html#a8dba3dfdf0d76e480dc36e8140720a33">GetAll</a> (Guid userId)</td></tr>
 <tr class="memdesc:a8dba3dfdf0d76e480dc36e8140720a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all books that belong to a user  <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html#a8dba3dfdf0d76e480dc36e8140720a33">More...</a><br /></td></tr>
 <tr class="separator:a8dba3dfdf0d76e480dc36e8140720a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,7 +172,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles the persisting and querying of Book objects </p>
 
-<p class="definition">Definition at line <a class="el" href="BookRepository_8cs_source.html#l00010">10</a> of file <a class="el" href="BookRepository_8cs_source.html">BookRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookRepository_8cs_source.html#l00011">11</a> of file <a class="el" href="BookRepository_8cs_source.html">BookRepository.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a47bc650a9b55606ec767a2dcecbda44e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a47bc650a9b55606ec767a2dcecbda44e">&#9670;&nbsp;</a></span>BookRepository() <span class="overload">[1/2]</span></h2>
@@ -189,7 +191,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>A Constructor </p>
 
-<p class="definition">Definition at line <a class="el" href="BookRepository_8cs_source.html#l00015">15</a> of file <a class="el" href="BookRepository_8cs_source.html">BookRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookRepository_8cs_source.html#l00016">16</a> of file <a class="el" href="BookRepository_8cs_source.html">BookRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -217,13 +219,13 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="BookRepository_8cs_source.html#l00023">23</a> of file <a class="el" href="BookRepository_8cs_source.html">BookRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookRepository_8cs_source.html#l00024">24</a> of file <a class="el" href="BookRepository_8cs_source.html">BookRepository.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a810a4983f178aebf1ee2bf45313819bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a810a4983f178aebf1ee2bf45313819bb">&#9670;&nbsp;</a></span>Add()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a810a4983f178aebf1ee2bf45313819bb">&#9670;&nbsp;</a></span>Add() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +249,29 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a boolean value</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BookRepository_8cs_source.html#l00032">32</a> of file <a class="el" href="BookRepository_8cs_source.html">BookRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookRepository_8cs_source.html#l00033">33</a> of file <a class="el" href="BookRepository_8cs_source.html">BookRepository.cs</a>.</p>
+
+</div>
+</div>
+<a id="af1eab7cffbb46827795c305ca90e9d3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1eab7cffbb46827795c305ca90e9d3d">&#9670;&nbsp;</a></span>Add() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;bool&gt; AdeNote.Infrastructure.Repository.BookRepository.Add </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; <a class="el" href="classAdeNote_1_1Models_1_1Book.html">Book</a> &gt;&#160;</td>
+          <td class="paramname"><em>books</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#abe1438c61f27c10033e8311dd50e1895">AdeNote.Infrastructure.Repository.IBookRepository</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="BookRepository_8cs_source.html#l00040">40</a> of file <a class="el" href="BookRepository_8cs_source.html">BookRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -278,7 +302,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#a78723e733a646d4c4307fcee749a94dc">AdeNote.Infrastructure.Repository.IBookRepository</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BookRepository_8cs_source.html#l00044">44</a> of file <a class="el" href="BookRepository_8cs_source.html">BookRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookRepository_8cs_source.html#l00051">51</a> of file <a class="el" href="BookRepository_8cs_source.html">BookRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -320,7 +344,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#ace07f2fb2416ddcbebef9cdb4b02af5c">AdeNote.Infrastructure.Repository.IBookRepository</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BookRepository_8cs_source.html#l00058">58</a> of file <a class="el" href="BookRepository_8cs_source.html">BookRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookRepository_8cs_source.html#l00065">65</a> of file <a class="el" href="BookRepository_8cs_source.html">BookRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -349,7 +373,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a boolean value</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BookRepository_8cs_source.html#l00073">73</a> of file <a class="el" href="BookRepository_8cs_source.html">BookRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookRepository_8cs_source.html#l00080">80</a> of file <a class="el" href="BookRepository_8cs_source.html">BookRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -378,7 +402,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a boolean value</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BookRepository_8cs_source.html#l00084">84</a> of file <a class="el" href="BookRepository_8cs_source.html">BookRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookRepository_8cs_source.html#l00091">91</a> of file <a class="el" href="BookRepository_8cs_source.html">BookRepository.cs</a>.</p>
 
 </div>
 </div>

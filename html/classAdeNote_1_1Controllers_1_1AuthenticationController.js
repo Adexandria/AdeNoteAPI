@@ -8,6 +8,7 @@ var classAdeNote_1_1Controllers_1_1AuthenticationController =
     [ "GetAccessToken", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a48d8e946cb745f663395c743208b46d7", null ],
     [ "GetAuthenticatorQRCode", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a2b86a0cd3908cf74a3c8ffa9dc09ca40", null ],
     [ "Login", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#ae6b07db1a75a979a32576fec4c3e4e33", null ],
+    [ "LoginSSO", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e", null ],
     [ "LogOut", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a33548495e59e636db9e907bd4d64fcc9", null ],
     [ "RemoveAuthenicator", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a2a42a287d029a6ed05c970bfc5b3cb88", null ],
     [ "ResetPassword", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#ac355a5462d55a447765c63b13431229b", null ],

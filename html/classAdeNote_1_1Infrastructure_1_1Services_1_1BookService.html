@@ -121,6 +121,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a584ad969e74d5a1b9c68fb9fd0d0e2fc"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#a584ad969e74d5a1b9c68fb9fd0d0e2fc">Add</a> (Guid userId, <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1BookCreateDTO.html">BookCreateDTO</a> createBook)</td></tr>
 <tr class="memdesc:a584ad969e74d5a1b9c68fb9fd0d0e2fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new book  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#a584ad969e74d5a1b9c68fb9fd0d0e2fc">More...</a><br /></td></tr>
 <tr class="separator:a584ad969e74d5a1b9c68fb9fd0d0e2fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade4c3a8c635afce0f5bf2b1e19378143"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#ade4c3a8c635afce0f5bf2b1e19378143">Add</a> (Guid userId, IList&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1BookCreateDTO.html">BookCreateDTO</a> &gt; newBooks)</td></tr>
+<tr class="separator:ade4c3a8c635afce0f5bf2b1e19378143"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0a361099dcb26981ae2e7cfac523b91"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult&lt; IEnumerable&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1BookDTO.html">BookDTO</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#ad0a361099dcb26981ae2e7cfac523b91">GetAll</a> (Guid userId)</td></tr>
 <tr class="memdesc:ad0a361099dcb26981ae2e7cfac523b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all books  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#ad0a361099dcb26981ae2e7cfac523b91">More...</a><br /></td></tr>
 <tr class="separator:ad0a361099dcb26981ae2e7cfac523b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,7 +151,7 @@ Properties</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of the interface </p>
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00014">14</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00016">16</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1bafbafae8f53e419d1496d917e510db"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1bafbafae8f53e419d1496d917e510db">&#9670;&nbsp;</a></span>BookService() <span class="overload">[1/2]</span></h2>
@@ -176,7 +178,7 @@ Properties</h2></td></tr>
 
 <p>A Constructor </p>
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00019">19</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00021">21</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 
 </div>
 </div>
@@ -204,13 +206,13 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00027">27</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00029">29</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a584ad969e74d5a1b9c68fb9fd0d0e2fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a584ad969e74d5a1b9c68fb9fd0d0e2fc">&#9670;&nbsp;</a></span>Add()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a584ad969e74d5a1b9c68fb9fd0d0e2fc">&#9670;&nbsp;</a></span>Add() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,14 +249,55 @@ Properties</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html#a11ef7f2865e17aaa3dd49730e428671c">AdeNote.Infrastructure.Services.IBookService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00038">38</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00040">40</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1BookService_a584ad969e74d5a1b9c68fb9fd0d0e2fc_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1BookService_a584ad969e74d5a1b9c68fb9fd0d0e2fc_cgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1BookService_a584ad969e74d5a1b9c68fb9fd0d0e2fc_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1BookService_a584ad969e74d5a1b9c68fb9fd0d0e2fc_cgraph">
 <area shape="rect" title="Adds a new book" alt="" coords="5,5,239,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#af7cfac5b470f7e8886c0335122bdd817" title="Saves a new entity" alt="" coords="287,5,533,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#abe1438c61f27c10033e8311dd50e1895" title=" " alt="" coords="287,5,533,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ade4c3a8c635afce0f5bf2b1e19378143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade4c3a8c635afce0f5bf2b1e19378143">&#9670;&nbsp;</a></span>Add() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;ActionResult&gt; AdeNote.Infrastructure.Services.BookService.Add </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>userId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IList&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1BookCreateDTO.html">BookCreateDTO</a> &gt;&#160;</td>
+          <td class="paramname"><em>newBooks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html#a7a05b0bc4147189aea397bdd4a3d9c2d">AdeNote.Infrastructure.Services.IBookService</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00059">59</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1BookService_ade4c3a8c635afce0f5bf2b1e19378143_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1BookService_ade4c3a8c635afce0f5bf2b1e19378143_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1BookService_ade4c3a8c635afce0f5bf2b1e19378143_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1BookService_ade4c3a8c635afce0f5bf2b1e19378143_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,239,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#abe1438c61f27c10033e8311dd50e1895" title=" " alt="" coords="287,5,533,47"/>
 </map>
 </div>
 
@@ -287,7 +330,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html#a4aea73feecfcdd8a59060cb1f64adba5">AdeNote.Infrastructure.Services.IBookService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00062">62</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00087">87</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -339,7 +382,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html#a966e430b8e8e4304ff20e7a7cf25c414">AdeNote.Infrastructure.Services.IBookService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00078">78</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00103">103</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -390,7 +433,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html#ae7bb852cf190841ea355fcf42096f132">AdeNote.Infrastructure.Services.IBookService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00108">108</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00133">133</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -449,7 +492,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html#a2fbbbff5c93ad402bf480d5bff56bd70">AdeNote.Infrastructure.Services.IBookService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00141">141</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00166">166</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -486,7 +529,7 @@ Here is the call graph for this function:</div>
 
 <p>Handles the persisting and querying of book object </p>
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00173">173</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00200">200</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 
 </div>
 </div>

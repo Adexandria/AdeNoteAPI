@@ -24,6 +24,9 @@ var dir_1f978ac47b9de0238fe08f2065b1e45b =
     [ "DetailsDTO.cs", "DetailsDTO_8cs.html", [
       [ "DetailsDTO", "classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO" ]
     ] ],
+    [ "ImportBookDto.cs", "ImportBookDto_8cs.html", [
+      [ "ImportBookDto", "classAdeNote_1_1Models_1_1DTOs_1_1ImportBookDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1ImportBookDto" ]
+    ] ],
     [ "LabelCreateDTO.cs", "LabelCreateDTO_8cs.html", [
       [ "LabelCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO" ]
     ] ],
