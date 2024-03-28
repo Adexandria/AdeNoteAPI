@@ -1,0 +1,5 @@
+<map id="AdeNote.Controllers.AuthenticationController.GenerateToken" name="AdeNote.Controllers.AuthenticationController.GenerateToken">
+<area shape="rect" id="node1" title="Generate token" alt="" coords="5,39,257,80"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aea767e3bba531744d9d345053ea70641" title=" " alt="" coords="305,5,548,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a03ab9a9318120aaf87ccc2e60a82e445" title=" " alt="" coords="310,71,543,112"/>
+</map>
