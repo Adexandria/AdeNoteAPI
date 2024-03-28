@@ -20,7 +20,7 @@ namespace AdeNote.Infrastructure.Services
             _smsConfig = config.GetSection("TwilioConfiguration").Get<SmsConfiguration>() ?? 
                 new SmsConfiguration(config.GetValue<string>("TwilioConfiguration__AccountKey"), 
                 config.GetValue<string>("TwilioConfiguration__AccountSecret"),
-                config.GetValue<string>("TwilioConfiguration__Phonenumber"));
+                config.GetValue<string>("TwilioConfiguration__PhoneNumber"));
             _logger = loggerFactory.CreateLogger(typeof(SmsService));
         }
 

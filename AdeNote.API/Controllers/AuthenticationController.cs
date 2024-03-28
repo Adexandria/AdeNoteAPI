@@ -697,7 +697,7 @@ namespace AdeNote.Controllers
         {
             var loginResponse = Application.ExecuteCommand<LoginCommand, LoginDTO>(Container, command).Result;
 
-            if (!loginResponse.NotSuccessful)
+            if (loginResponse.NotSuccessful)
                 return loginResponse.Response();
 
             var resultResponse = _authService.IsAuthenticatorEnabled(command.Email).Result;
