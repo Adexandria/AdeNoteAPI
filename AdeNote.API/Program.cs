@@ -3,6 +3,7 @@ using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Services;
 using AdeNote.Infrastructure.Utilities;
+using Excelify.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
@@ -18,7 +19,7 @@ using UserRepository = AdeNote.Infrastructure.Repository.UserRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration.AddEnvironmentVariables().Build();
-
+var azureAd = configuration.GetSection("AzureAd");
 // Gets the connection string from appsettings
 var connectionString = configuration.GetConnectionString("NotesDB");
 
@@ -99,6 +100,9 @@ builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<IUserService,UserService>();
 builder.Services.AddScoped((_)=> new AuthTokenRepository(tokenSecret));
 builder.Services.AddScoped<IPasswordManager,PasswordManager>();
+builder.Services.AddScoped<IExcel, AdeNote.Infrastructure.Services.ExcelService>();
+
+builder.Services.AddSingleton((_) => new ExcelifyFactory().CreateService());
 
 builder.Services.AddDbContext<NoteDbContext>(options => options
 .UseSqlServer(connectionString));
@@ -110,7 +114,22 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                    ValidateIssuer = false,
                    ValidateAudience = false,
                    ClockSkew = TimeSpan.Zero,
-                   IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenSecret))
+                   IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenSecret)),
+                   SaveSigninToken = true
+               };
+           }).AddJwtBearer("SSO", options =>
+           {
+               options.SaveToken = true;
+               options.MetadataAddress = "https://login.microsoftonline.com/organizations/v2.0/.well-known/openid-configuration";
+               options.TokenValidationParameters = new TokenValidationParameters()
+               {
+                   NameClaimType = "name",
+                   ValidAudience = azureAd.GetValue<string>("Audience"),
+                   ValidIssuer = $"{azureAd.GetValue<string>("Instance")}{azureAd.GetValue<string>("TenantId")}/v2.0",
+                   ValidateIssuer = true,
+                   ValidateAudience = true,
+                   ValidateIssuerSigningKey = true,
+                   ValidateLifetime = true
                };
            });
 
@@ -118,6 +137,8 @@ builder.Services.AddAuthorization(options =>
 {
     options.DefaultPolicy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme)
     .RequireAuthenticatedUser().Build();
+
+    options.AddPolicy("sso",new AuthorizationPolicyBuilder("SSO").RequireAuthenticatedUser().Build());
 });
 
 builder.Services.BuildServiceProvider().CreateTables(containerBuilder);

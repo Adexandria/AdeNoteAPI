@@ -114,7 +114,7 @@ namespace AdeNote.Infrastructure.Services
         /// <param name="userId">User id</param>
         Task<ActionResult> DisableUserMFA(Guid userId);
 
-        ActionResult<string> GenerateResetToken(Guid userId, string email);
+        Task<ActionResult<string>> GenerateResetToken(Guid userId, string email);
 
         ActionResult VerifyResetToken(string token);
     }

@@ -21,5 +21,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <param name="userId">A user id</param>
         /// <returns>a list of books</returns>
         IQueryable<Book> GetAll(Guid userId);
+
+        Task<bool> Add(IEnumerable<Book> books);
     }
 }

@@ -5,6 +5,7 @@ using AdeNote.Models.DTOs;
 using Autofac;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using TasksLibrary.Application.Commands.CreateUser;
 using TasksLibrary.Application.Commands.GenerateToken;
 using TasksLibrary.Application.Commands.Login;
@@ -137,13 +138,85 @@ namespace AdeNote.Controllers
                     {"[Time]",DateTime.Now.ToLongTimeString() }
                 };
                 AddToCookie("AdeNote-RefreshToken", loginResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
-                await _notificationService.SendNotification(new Email(userDetails.Data.Email, "New login to AdeNote"), 
-                    EmailTemplate.LoginNotification, ContentType.html,substitutions);
+               await _notificationService.SendNotification(new Email(userDetails.Data.Email, "New login to AdeNote"), 
+                   EmailTemplate.LoginNotification, ContentType.html,substitutions);
             }
 
             return loginResponse.Response();
         }
 
+
+
+        /// <summary>
+        /// Logins user
+        /// </summary>
+        /// <response code ="200"> Returns if logged in successfully</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="401"> Returns if unauthorised</response>
+        /// <returns>A name and email</returns>
+        [AllowAnonymous]
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpPost("sso")]
+        [Authorize("sso")]
+        public async Task<IActionResult> LoginSSO()
+        {
+            var userEmail = HttpContext.User.FindFirstValue(ClaimTypes.Email);
+
+            var name = HttpContext.User.FindFirstValue("name");
+
+            var isExist = await _userService.IsUserExist(userEmail);
+
+            if (isExist.IsSuccessful)
+            {
+                var command = new LoginCommand() 
+                { 
+                    Email = userEmail,
+                    Password = "firstName"
+                };
+
+                var loginResponse = await Application.ExecuteCommand<LoginCommand, LoginDTO>(Container, command);
+
+                var resultResponse = await _authService.IsAuthenticatorEnabled(command.Email);
+
+                var userDetails = await Application.ExecuteCommand<VerifyTokenCommand, TasksLibrary.Services.UserDTO>(Container, new VerifyTokenCommand()
+                {
+                    AccessToken = loginResponse.Data.AccessToken
+                });
+
+                if (resultResponse.IsSuccessful && loginResponse.IsSuccessful)
+                {
+                    var tokenResponse = _authService.GenerateMFAToken(userDetails.Data.UserId, command.Email, loginResponse.Data.RefreshToken);
+                    AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(8));
+                    return Ok("Proceed to enter otp from authenticator");
+                }
+                if (loginResponse.IsSuccessful)
+                {
+                    var substitutions = new Dictionary<string, string>
+                {
+                    {"[Date]", DateTime.Now.ToLongDateString() },
+                    {"[Time]",DateTime.Now.ToLongTimeString() }
+                };
+                    AddToCookie("AdeNote-RefreshToken", loginResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
+                    await _notificationService.SendNotification(new Email(userEmail, "New login to AdeNote"),
+                        EmailTemplate.LoginNotification, ContentType.html, substitutions);
+                }
+
+                return loginResponse.Response(); 
+            }
+            else
+            {
+                var response = await Application.ExecuteCommand<CreateUserCommand, CreateUserDTO>(Container, 
+                    new CreateUserCommand() { Email = userEmail, Name = name ,Password = "firstName" , ConfirmPassword = "firstName"});
+
+                return response.Response();
+            }
+        }
 
         /// <summary>
         /// Change password
@@ -228,7 +301,7 @@ namespace AdeNote.Controllers
             var userResponse = await _userService.GetUser(email);
             if(userResponse.NotSuccessful)
                 return userResponse.Response();
-            var response = _authService.GenerateResetToken(userResponse.Data.Id, email);
+            var response = await _authService.GenerateResetToken(userResponse.Data.Id, email);
             return response.Response();
         }
         /// <summary>

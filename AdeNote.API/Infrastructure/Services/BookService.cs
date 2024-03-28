@@ -3,6 +3,8 @@ using AdeNote.Infrastructure.Repository;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
 using Mapster;
+using NHibernate.Util;
+using System.Collections.Generic;
 using System.Net;
 using TasksLibrary.Utilities;
 
@@ -52,6 +54,29 @@ namespace AdeNote.Infrastructure.Services
                 
             }
           
+        }
+
+        public async Task<ActionResult> Add(Guid userId, IList<BookCreateDTO> newBooks)
+        {
+            try
+            {
+                var books = newBooks.Adapt<IEnumerable<Book>>().ToList();
+                for (int i = 0; i < books.Count(); i++)
+                {
+                    books[i].UserId = userId;
+                    books[i].Id = Guid.NewGuid();
+                }
+
+                var commitStatus = await bookRepository.Add(books);
+                if (!commitStatus)
+                    return ActionResult.Failed("Failed to add new book");
+                return ActionResult.Successful();
+            }
+            catch (Exception ex)
+            {
+                return ActionResult.Failed(ex.Message);
+
+            }
         }
 
         /// <summary>
@@ -166,6 +191,8 @@ namespace AdeNote.Infrastructure.Services
 
             }
         }
+
+       
 
         /// <summary>
         /// Handles the persisting and querying of book object

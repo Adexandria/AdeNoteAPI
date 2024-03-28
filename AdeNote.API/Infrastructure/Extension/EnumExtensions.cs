@@ -4,9 +4,9 @@ namespace AdeNote.Infrastructure.Extension
 {
     public static class EnumExtensions
     {
-        public static string GetDescription<T>(this T source) where T : Enum
+        public static string GetDescription(this Enum source) 
         {
-            var enumField = typeof(T).GetField(source.ToString());
+            var enumField = source.GetType().GetField(source.ToString());
             if(enumField == null)
                 return string.Empty;
            

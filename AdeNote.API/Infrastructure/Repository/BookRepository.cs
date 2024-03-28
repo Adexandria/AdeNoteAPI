@@ -1,6 +1,7 @@
 ﻿using AdeNote.Db;
 using AdeNote.Models;
 using Microsoft.EntityFrameworkCore;
+using NPOI.HSSF.Record.Chart;
 
 namespace AdeNote.Infrastructure.Repository
 {
@@ -34,6 +35,12 @@ namespace AdeNote.Infrastructure.Repository
            entity.Id = Guid.NewGuid();
            await Db.Books.AddAsync(entity);
            return await SaveChanges<Book>();
+        }
+
+        public async Task<bool> Add(IEnumerable<Book> books)
+        {
+            await Db.Books.AddRangeAsync(books);
+            return await SaveChanges<Book>();
         }
 
         /// <summary>
