@@ -12,6 +12,8 @@ namespace Excelify.Models
         [Description("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")]
         xlsx,
         [Description("application/vnd.ms-excel")]
-        xls
+        xls,
+        [Description("text/csv")]
+        csv
     }
 }

@@ -1,8 +1,10 @@
 ﻿using Excelify.Models;
 using Excelify.Services.Utility;
+using Microsoft.VisualBasic.FileIO;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using System.Data;
+using System.Text;
 
 namespace Excelify.Services.Extensions
 {
@@ -54,6 +56,23 @@ namespace Excelify.Services.Extensions
             return table;
         }
 
+        public static DataTable ExtractCsv(this IImportSheet excelSheet)
+        {
+            DataTable table = new();
+            using var parser = new TextFieldParser(excelSheet.File);
+            parser.SetDelimiters(",");
+            while (!parser.EndOfData)
+            {
+                string[] rows = parser.ReadFields();
+                if (rows.Length <= 0)
+                    continue;
+
+                table.Rows.Add(rows);
+            }
+
+            return table;
+        }
+
         private static void ExtractColumnValues(IRow row, int rowNumber ,int numberOfCells, List<string> rowList)
         {
             if(rowNumber < numberOfCells)
@@ -100,6 +119,26 @@ namespace Excelify.Services.Extensions
             return workBook;
         }
 
+
+        public static Stream CreateCsv<T>(this IEntityExport<T> dataExport, List<ExcelifyProperty> extractedAttributes)
+        {
+            var ms = new MemoryStream();
+            using var writer = new StreamWriter(ms);
+            foreach(var entity in dataExport.Entities)
+            {
+                var property = entity.GetType().GetProperties().Where(s => extractedAttributes.Any(m => m.PropertyName == s.Name))
+                    .FirstOrDefault();
+                if(property == null)
+                {
+                    continue;
+                }
+                var value = (string)property.GetValue(entity);
+                writer.Write(value);
+                writer.Write(',');
+            }
+
+
+        }
         public static void WriteToFile(this byte[] workbook, string path)
         {
             if(string.IsNullOrEmpty(path) || string.IsNullOrWhiteSpace(path))

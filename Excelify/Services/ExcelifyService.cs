@@ -9,26 +9,24 @@ namespace Excelify.Services
 {
     public class ExcelifyService : ExcelService
     {
-        public override void SetSheetName(int sheetName , string extensionType)
+        public override void SetSheetName(int sheetName)
         {
-            if(string.IsNullOrEmpty(extensionType))
-                throw new ArgumentNullException(nameof(extensionType),"Extension type can not be empty");
-
             if (sheetName < 0)
                 throw new ArgumentNullException(nameof(sheetName), "Invalid sheet name");
 
-
-            if(extensionType.Equals(ExtensionType.xls.GetDescription<DescriptionAttribute>()) ||
-                extensionType.Equals(ExtensionType.xlsx.GetDescription<DescriptionAttribute>()))
-            {
-                _sheetName = sheetName;
-                _excelifyMapper = new ExcelifyMapper();
-            }
-            else
-            {
-                throw new Exception("Invalid extension type", new Exception("Only xls and xlsx are accepted"));
-            }
+            _sheetName = sheetName;
+            _excelifyMapper = new ExcelifyMapper();
         }
+
+        public override bool CanImportSheet(string extensionType)
+        {
+            if (string.IsNullOrEmpty(extensionType))
+                throw new ArgumentNullException(nameof(extensionType), "Extension type can not be empty");
+
+            return extensionType.Equals(ExtensionType.xls.GetDescription<DescriptionAttribute>()) ||
+                extensionType.Equals(ExtensionType.xlsx.GetDescription<DescriptionAttribute>());
+        }
+
 
         public override DataTable ImportSheet(IImportSheet sheet)
         {
@@ -50,6 +48,9 @@ namespace Excelify.Services
 
         public override IList<T> ImportToEntity<T>(IImportSheet sheet, IExcelMapper excelifyMapper)
         {
+            if (sheet == null)
+                throw new ArgumentNullException(nameof(sheet), "sheet can not be null");
+
             if (excelifyMapper == null)
                 throw new ArgumentNullException(nameof(excelifyMapper), "Excel mapper can not be null");
 
@@ -86,6 +87,7 @@ namespace Excelify.Services
             return memoryStream;
         }
 
+       
         private int _sheetName; 
         private IExcelMapper _excelifyMapper;
     }

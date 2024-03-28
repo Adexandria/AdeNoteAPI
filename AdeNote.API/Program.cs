@@ -102,7 +102,7 @@ builder.Services.AddScoped((_)=> new AuthTokenRepository(tokenSecret));
 builder.Services.AddScoped<IPasswordManager,PasswordManager>();
 builder.Services.AddScoped<IExcel, AdeNote.Infrastructure.Services.ExcelService>();
 
-builder.Services.AddSingleton((_) => new ExcelifyFactory().CreateService());
+builder.Services.AddSingleton((_) => new ExcelifyFactory());
 
 builder.Services.AddDbContext<NoteDbContext>(options => options
 .UseSqlServer(connectionString));
@@ -169,3 +169,4 @@ app.UseAuthentication();
 app.MapControllers();
 
 app.Run();
+

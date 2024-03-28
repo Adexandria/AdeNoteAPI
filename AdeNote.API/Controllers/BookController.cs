@@ -94,13 +94,13 @@ namespace AdeNote.Controllers
         /// </summary>
         /// <param name="sheetName">The name of the sheet</param>
         /// <returns>Url</returns>
-        [HttpGet("export/{sheetName}")]
+        [HttpGet("export/{sheetName}?extension-type")]
         [Produces("application/json")]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<BookDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> ExportBooks(string sheetName = "Sheet1")
+        public async Task<IActionResult> ExportBooks(string sheetName = "Sheet1", string extensionType = "xlsx")
         {
            var response =  await _excelService.ExportEntities(sheetName, CurrentUser);
            return response.Response();

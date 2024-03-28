@@ -7,15 +7,16 @@ namespace AdeNote.Infrastructure.Services
 {
     public class ExcelService : IExcel
     {
-        public ExcelService(IExcelService excelService, IBookService bookService, IBlobService blobService)
+        public ExcelService(ExcelifyFactory excelifyFactory, IBookService bookService, IBlobService blobService)
         {
-            _excelService = excelService;
+             _excelifyFactory = excelifyFactory;
             _bookService = bookService;
             _blobService = blobService;
         }
-        public async Task<ActionResult<string>> ExportEntities(string sheetName,Guid userId)
+        public async Task<ActionResult<string>> ExportEntities(string sheetName,Guid userId, string extensionType)
         {
-
+            var excelService = _excelifyFactory.CreateService(extensionType);
+            
             try
             {
                 if (_bookService.GetAll(userId).Result.Data is IEnumerable<BookDTO> currentBooks)
@@ -26,7 +27,7 @@ namespace AdeNote.Infrastructure.Services
                         SheetName = sheetName
                     };
 
-                    var file = _excelService.ExportToStream(exportEntity);
+                    var file = excelService.ExportToStream(exportEntity);
 
                     var url = await _blobService.UploadImage("AdeNote", file, MimeType.xlsx);
 
@@ -45,26 +46,37 @@ namespace AdeNote.Infrastructure.Services
 
         public async Task<ActionResult> ImportEntities(ImportBookDto importBookDto)
         {
-            _excelService.SetSheetName(importBookDto.SheetName, importBookDto.ContentType);
+            var excelService = _excelifyFactory.CreateService(importBookDto.ContentType);
+
+            try
+            {
+                excelService.SetSheetName(importBookDto.SheetName);
+
+                var newBooks = excelService.ImportToEntity<BookCreateDTO>(new ImportSheet(importBookDto.File));
+
+                if (newBooks.Count < 0)
+                {
+                    return ActionResult.Failed("Cannot import empty sheet", StatusCodes.Status400BadRequest);
+                }
+
+                var response = await _bookService.Add(importBookDto.UserId, newBooks);
+
+
+                if (response.IsSuccessful)
+                {
+                    return ActionResult.Successful();
+                }
+
+                return ActionResult.Failed("Failed to add books",StatusCodes.Status400BadRequest);
+            }
+            catch (Exception )
+            {
+                return ActionResult.Failed("Failed to import");
+            }
             
-            var newBooks = _excelService.ImportToEntity<BookCreateDTO>(new ImportSheet(importBookDto.File));
-
-            if(newBooks.Count < 0) 
-            {
-                return ActionResult.Failed("Cannot import empty sheet", StatusCodes.Status400BadRequest);
-            }
-
-            var response = await _bookService.Add(importBookDto.UserId,newBooks);
-
-            if (response.IsSuccessful)
-            {
-                return ActionResult.Successful();
-            }
-
-            return ActionResult.Failed();
         }
 
-        private readonly IExcelService _excelService;
+        private readonly ExcelifyFactory _excelifyFactory;
 
         private readonly IBookService _bookService;
 
