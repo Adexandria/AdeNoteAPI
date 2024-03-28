@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Services.PageService.Add" name="AdeNote.Infrastructure.Services.PageService.Add">
+<area shape="rect" id="node1" title="Adds a new page to a book" alt="" coords="5,39,239,80"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#af7cfac5b470f7e8886c0335122bdd817" title="Saves a new entity" alt="" coords="287,5,533,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#ace07f2fb2416ddcbebef9cdb4b02af5c" title="Get a particular book that belongs to a user" alt="" coords="287,71,533,112"/>
+</map>
