@@ -51,7 +51,7 @@ var searchData=
   ['app_70',['app',['../Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d',1,'Program.cs']]],
   ['application_71',['Application',['../classAdeNote_1_1Controllers_1_1BaseController.html#aef99db4cee20f16d0cc720c476b3b11d',1,'AdeNote::Controllers::BaseController']]],
   ['authenicationapp_72',['AuthenicationApp',['../namespaceAdeNote_1_1Models.html#a59a9d6cd7df46cfb5727610aa214e751a4d7273be01c6c6e805b0c721b67bc410',1,'AdeNote::Models']]],
-  ['authenticationcontroller_73',['AuthenticationController',['../classAdeNote_1_1Controllers_1_1AuthenticationController.html',1,'AdeNote.Controllers.AuthenticationController'],['../classAdeNote_1_1Controllers_1_1AuthenticationController.html#a642e99e203bae9c4096d823636dbe259',1,'AdeNote.Controllers.AuthenticationController.AuthenticationController()']]],
+  ['authenticationcontroller_73',['AuthenticationController',['../classAdeNote_1_1Controllers_1_1AuthenticationController.html',1,'AdeNote.Controllers.AuthenticationController'],['../classAdeNote_1_1Controllers_1_1AuthenticationController.html#a085c6be2b6e289e67f83b89ec8095f9c',1,'AdeNote.Controllers.AuthenticationController.AuthenticationController()']]],
   ['authenticationcontroller_2ecs_74',['AuthenticationController.cs',['../AuthenticationController_8cs.html',1,'']]],
   ['authenticationtype_75',['AuthenticationType',['../classAdeNote_1_1Models_1_1UserToken.html#acdadfeeb3613c89abb75b294196012ea',1,'AdeNote::Models::UserToken']]],
   ['authenticatordto_76',['AuthenticatorDTO',['../classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html',1,'AdeNote.Models.DTOs.AuthenticatorDTO'],['../classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html#a32639c312d84922a987024b390bb8720',1,'AdeNote.Models.DTOs.AuthenticatorDTO.AuthenticatorDTO()']]],

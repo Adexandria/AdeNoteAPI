@@ -120,9 +120,9 @@ Collaboration diagram for AdeNote.Controllers.AuthenticationController:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a642e99e203bae9c4096d823636dbe259"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a642e99e203bae9c4096d823636dbe259">AuthenticationController</a> (IContainer container, ITaskApplication application, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html">IUserIdentity</a> userIdentity, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html">IAuthService</a> authService, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html">INotificationService</a> notificationService, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html">IUserService</a> userService)</td></tr>
-<tr class="memdesc:a642e99e203bae9c4096d823636dbe259"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the constructor  <a href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a642e99e203bae9c4096d823636dbe259">More...</a><br /></td></tr>
-<tr class="separator:a642e99e203bae9c4096d823636dbe259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a085c6be2b6e289e67f83b89ec8095f9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a085c6be2b6e289e67f83b89ec8095f9c">AuthenticationController</a> (IContainer container, ITaskApplication application, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html">IUserIdentity</a> userIdentity, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html">IAuthService</a> authService, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html">INotificationService</a> notificationService, AuthTokenRepository authToken, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html">IUserService</a> userService)</td></tr>
+<tr class="memdesc:a085c6be2b6e289e67f83b89ec8095f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the constructor  <a href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a085c6be2b6e289e67f83b89ec8095f9c">More...</a><br /></td></tr>
+<tr class="separator:a085c6be2b6e289e67f83b89ec8095f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02ae4c220712a1035142e8ebf52327a7"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a02ae4c220712a1035142e8ebf52327a7">SignUp</a> (CreateUserCommand command)</td></tr>
 <tr class="memdesc:a02ae4c220712a1035142e8ebf52327a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sign ups a new user  <a href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a02ae4c220712a1035142e8ebf52327a7">More...</a><br /></td></tr>
 <tr class="separator:a02ae4c220712a1035142e8ebf52327a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,10 +226,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>This handles the authentication. </p>
 <p>Supports version 1.0</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00028">28</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00029">29</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a642e99e203bae9c4096d823636dbe259"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a642e99e203bae9c4096d823636dbe259">&#9670;&nbsp;</a></span>AuthenticationController()</h2>
+<a id="a085c6be2b6e289e67f83b89ec8095f9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a085c6be2b6e289e67f83b89ec8095f9c">&#9670;&nbsp;</a></span>AuthenticationController()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -267,6 +267,12 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">AuthTokenRepository&#160;</td>
+          <td class="paramname"><em>authToken</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html">IUserService</a>&#160;</td>
           <td class="paramname"><em>userService</em>&#160;</td>
         </tr>
@@ -291,7 +297,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00043">43</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00044">44</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 
 </div>
 </div>
@@ -322,7 +328,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if phone number was added/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00385">385</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00386">386</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -385,7 +391,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00670">670</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00671">671</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -428,7 +434,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if password was changed successfully&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if user can't be found&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Action result</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00185">185</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00186">186</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -467,7 +473,7 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if token was generated&lt;/response&gt; &lt;response code ="404"&gt; Returns if user can't be found&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Action result</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00242">242</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00243">243</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -501,7 +507,7 @@ Here is the call graph for this function:</div>
 </pre> <dl class="section return"><dt>Returns</dt><dd>An access token</dd></dl>
 <p>&lt;response code ="200"&gt; Returns if logged in successfully&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; &lt;response code ="404"&gt; Returns if user can't be found&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Access token</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00274">274</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00275">275</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -533,7 +539,7 @@ Here is the call graph for this function:</div>
 <p>Sample request </p><pre class="fragment">        GET /authentication/two-factor-authentication/app/qr-code
 </pre> <p>&lt;response code ="200"&gt; Returns if google two factor authenticator was enabled for the user&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Qr ucode url</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00599">599</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00600">600</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -576,7 +582,7 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if logged in successfully&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>A name and email</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00116">116</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00117">117</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -611,7 +617,7 @@ Here is the call graph for this function:</div>
 <p>Logins user </p>
 <p>&lt;response code ="200"&gt; Returns if logged in successfully&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>A name and email</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00139">139</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00140">140</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -653,7 +659,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00696">696</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00697">697</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -698,7 +704,7 @@ Here is the caller graph for this function:</div>
 <p>Sample request </p><pre class="fragment">        POST /authentication/sign-out
 </pre> <p>&lt;response code ="200"&gt; Returns if user was logged out successfully&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Action result</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00626">626</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00627">627</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -732,7 +738,7 @@ Here is the call graph for this function:</div>
 <p>&lt;response code ="200"&gt; Returns if multifactor authentication was disabled successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00657">657</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00658">658</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -782,7 +788,7 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if password was changed successfully&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if user can't be found&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Action result</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00214">214</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00215">215</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -820,7 +826,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00683">683</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00684">684</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -856,7 +862,7 @@ Here is the caller graph for this function:</div>
 <p>Sample request: </p><pre class="fragment">        POST /two-factor-authentication/sms/send-code
 </pre> <p>&lt;response code ="200"&gt; Returns if code was sent&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00450">450</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00451">451</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -891,7 +897,7 @@ Here is the call graph for this function:</div>
 <p>Sample request: </p><pre class="fragment">        POST /authentication/two-factor-authentication/app
 </pre> <p>&lt;response code ="200"&gt; Returns if two factor authenticator was successfully set up&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Authenticator key</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00313">313</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00314">314</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -924,7 +930,7 @@ Here is the call graph for this function:</div>
 <p>Sample request: </p><pre class="fragment">        POST /authentication/two-factor-authentication/sms
 </pre> <p>&lt;response code ="200"&gt; Returns if two factor authenticator was successfully set up&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00346">346</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00347">347</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -973,7 +979,7 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if user was created&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>A name and email</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00083">83</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00084">84</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 
 </div>
 </div>
@@ -1003,7 +1009,7 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if phone number was verified&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00414">414</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00415">415</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1037,7 +1043,7 @@ Here is the call graph for this function:</div>
 <p>Sample request: </p><pre class="fragment">        POST /two-factor-authentication/sms/verify-code
 </pre> <p>&lt;response code ="200"&gt; Returns if verification code was successfully verified&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Access token</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00499">499</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00500">500</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1081,7 +1087,7 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if one time password was verified correctly&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Access token</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00557">557</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00558">558</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1118,7 +1124,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00030">30</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00031">31</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 
 </div>
 </div>
@@ -1142,7 +1148,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00031">31</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00032">32</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 
 </div>
 </div>
@@ -1166,7 +1172,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00032">32</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00033">33</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 
 </div>
 </div>
@@ -1190,7 +1196,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00033">33</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00034">34</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 
 </div>
 </div>
