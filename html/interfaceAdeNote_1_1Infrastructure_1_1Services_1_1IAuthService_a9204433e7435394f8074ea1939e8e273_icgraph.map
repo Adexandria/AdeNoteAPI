@@ -1,5 +1,6 @@
 <map id="AdeNote.Infrastructure.Services.IAuthService.GenerateMFAToken" name="AdeNote.Infrastructure.Services.IAuthService.GenerateMFAToken">
-<area shape="rect" id="node1" title="Generates token when trying to log in using MFA" alt="" coords="305,39,539,80"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#ae6b07db1a75a979a32576fec4c3e4e33" title="Logins user" alt="" coords="5,5,257,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,71,257,112"/>
+<area shape="rect" id="node1" title="Generates token when trying to log in using MFA" alt="" coords="605,39,839,80"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a004ca4183d5230aff26a3f3abd97bdaf" title=" " alt="" coords="305,39,557,80"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#af2a120ae9d49dd83e9463991244df4a6" title="Logins user" alt="" coords="5,5,257,47"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,71,257,112"/>
 </map>

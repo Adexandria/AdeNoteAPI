@@ -1,4 +1,0 @@
-<map id="AdeNote.Infrastructure.Services.AuthService.IsPhoneNumberVerified" name="AdeNote.Infrastructure.Services.AuthService.IsPhoneNumberVerified">
-<area shape="rect" id="node1" title="Checks if a phone number has been verified" alt="" coords="5,13,261,54"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html#aba59c3d014a2b05872072ad4a3f74505" title="Checks if user&#39;s phone number has been verified" alt="" coords="309,5,580,61"/>
-</map>
