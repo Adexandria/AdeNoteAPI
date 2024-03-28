@@ -34,8 +34,8 @@ namespace AdeNote.Infrastructure.Services
         public AuthService(IAuthRepository _authRepository,
             IUserDetailRepository _userDetailRepository,
             IBlobService _blobService,IConfiguration _configuration,
-            ISmsService _smsService,IContainer container,
-            IEmailService _emailService, AuthTokenRepository authTokenRepository)
+            ISmsService _smsService,
+            INotificationService notificationService,AuthTokenRepository authTokenRepository)
         {
             authRepository = _authRepository;
             userDetailRepository = _userDetailRepository;
@@ -45,7 +45,7 @@ namespace AdeNote.Infrastructure.Services
             loginSecret = _configuration["LoginSecret"];
             TwoFactorAuthenticator = new TwoFactorAuthenticator();
             tokenRepository = authTokenRepository;
-            emailService = _emailService;
+            _notificationService = notificationService;
         }
 
         /// <summary>
@@ -513,7 +513,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public ActionResult<string> GenerateResetToken(Guid userId, string email)
+        public async Task<ActionResult<string>> GenerateResetToken(Guid userId, string email)
         {
             try
             {
@@ -522,11 +522,13 @@ namespace AdeNote.Infrastructure.Services
 
                 var token = tokenRepository.GenerateAccessToken(userId, email);
 
-                var newEmail = new Email(email, "Reset Token");
+                var substitutions = new Dictionary<string, string>()
+                {
+                    {"[TOKEN]" , token }
+                };
 
-                newEmail.SetHtmlContent(token);
-
-                emailService.SendMessage(newEmail);
+                await _notificationService.SendNotification(new Email(email, "Password Reset Token"),
+                    EmailTemplate.ResetTokenNotification, ContentType.html, substitutions);
 
                 return ActionResult<string>.SuccessfulOperation(token);
             }
@@ -592,7 +594,7 @@ namespace AdeNote.Infrastructure.Services
         public TwoFactorAuthenticator TwoFactorAuthenticator;
 
         public AuthTokenRepository tokenRepository;
-       
-        public IEmailService emailService;
+
+        public INotificationService _notificationService;
     }
 }

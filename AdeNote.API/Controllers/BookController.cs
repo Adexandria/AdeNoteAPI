@@ -21,6 +21,7 @@ namespace AdeNote.Controllers
     public class BookController : BaseController
     {
         private readonly IBookService _bookService;
+        private readonly IExcel _excelService;
 
         /// <summary>
         /// A constructor
@@ -28,10 +29,10 @@ namespace AdeNote.Controllers
         /// <param name="bookService">An interface that interacts with the book tables</param>
         /// <param name="userIdentity">An interface that interacts with the user.
         /// This fetches the current user details</param>
-        public BookController(IBookService bookService, IUserIdentity userIdentity) : base(userIdentity)
+        public BookController(IBookService bookService, IUserIdentity userIdentity, IExcel excelService) : base(userIdentity)
         {
             _bookService = bookService;
-
+            _excelService = excelService;
         }
 
 
@@ -87,6 +88,50 @@ namespace AdeNote.Controllers
             var response = await _bookService.GetById(bookId, CurrentUser);
             return response.Response();
         }
+
+        /// <summary>
+        /// Exports books to excel sheets
+        /// </summary>
+        /// <param name="sheetName">The name of the sheet</param>
+        /// <returns>Url</returns>
+        [HttpGet("export/{sheetName}")]
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<BookDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        public async Task<IActionResult> ExportBooks(string sheetName = "Sheet1")
+        {
+           var response =  await _excelService.ExportEntities(sheetName, CurrentUser);
+           return response.Response();
+        }
+
+
+        /// <summary>
+        ///  Imports books into database
+        /// </summary>
+        /// <param name="bookSheet">Sheet to import</param>
+        /// <param name="sheetName">The name of the sheet</param>
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<BookDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpPost("import/{sheetName}")]
+        public async Task<IActionResult> ImportBooks(IFormFile bookSheet, int sheetName = 0)
+        {
+            var ms = new MemoryStream();
+            bookSheet?.CopyToAsync(ms);
+            ms.Position = 0;
+
+            var importBookDto = new ImportBookDto(sheetName, ms, bookSheet?.ContentType, CurrentUser);
+
+            var response = await _excelService.ImportEntities(importBookDto);
+
+            return response.Response();
+        }
+
+
 
         /// <summary>
         /// Adds a new book

@@ -73,7 +73,6 @@ namespace AdeNote.Db
                 .Property(s => s.UserId)
                 .HasConversion<UserIdConverter>()
                 .HasColumnName("User_id");
-
             modelBuilder.Entity<Book>()
                 .Property(x => x.UserId)
                 .HasColumnName("User_id");

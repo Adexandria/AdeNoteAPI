@@ -74,6 +74,15 @@ namespace AdeNote.Infrastructure.Services
             return ActionResult<User>.SuccessfulOperation(currentUser);
         }
 
+        public async Task<ActionResult> IsUserExist(string email)
+        {
+            var isExist = await _userDb.IsExist(email);
+            if (!isExist)
+                return ActionResult.Failed("User doesn't exist", StatusCodes.Status404NotFound);
+
+            return ActionResult.Successful();
+        }
+
         public readonly IUser _userRepository;
         public readonly IUserRepository _userDb;
         public readonly IPasswordManager _passwordManager;

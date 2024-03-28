@@ -10,5 +10,7 @@ namespace AdeNote.Infrastructure.Services
         Task<ActionResult> UpdateUserPassword(Guid userId, string currentPassword, string password);
 
         Task<ActionResult<User>> GetUser(string email);
+
+        Task<ActionResult> IsUserExist(string email);
     }
 }

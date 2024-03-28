@@ -13,7 +13,7 @@ namespace AdeNote.Infrastructure.Utilities
 
             var databaseCreator = dbContext.GetService<IRelationalDatabaseCreator>();
 
-            if (databaseCreator.HasTables())
+            if (!databaseCreator.HasTables())
             {
                 containerBuilder.BuildMigration();
                 databaseCreator.CreateTables();

@@ -16,6 +16,9 @@ namespace AdeNote.Infrastructure.Services
         /// <returns>A custom action result</returns>
         Task<ActionResult> Add(Guid userId,BookCreateDTO createBook);
 
+
+        Task<ActionResult> Add(Guid userId, IList<BookCreateDTO> newBooks);
+
         /// <summary>
         /// Updates an existing book
         /// </summary>

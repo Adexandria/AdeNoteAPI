@@ -7,6 +7,10 @@ namespace AdeNote.Infrastructure.Utilities
         [Description("image/png")]
         png,
         [Description("text/html")]
-        html
+        html,
+        [Description("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")]
+        xlsx,
+        [Description("application/vnd.ms-excel")]
+        xls
     }
 }
