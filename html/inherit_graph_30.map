@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classAdeNote_1_1Models_1_1BaseClass.html" title="A base class that includes the id" alt="" coords="5,107,205,133"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Models_1_1Book.html" title="A book object" alt="" coords="271,5,438,32"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Models_1_1Label.html" title="A label model" alt="" coords="271,56,439,83"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Models_1_1Page.html" title="Page model" alt="" coords="273,107,437,133"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Models_1_1UserDetail.html" title="User detail object" alt="" coords="253,157,456,184"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Models_1_1UserToken.html" title="A user token object" alt="" coords="255,208,455,235"/>
+</map>

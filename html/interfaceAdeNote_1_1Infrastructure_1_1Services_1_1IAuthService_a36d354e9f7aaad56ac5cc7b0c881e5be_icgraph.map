@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Services.IAuthService.IsAuthenticatorEnabled" name="AdeNote.Infrastructure.Services.IAuthService.IsAuthenticatorEnabled">
+<area shape="rect" id="node1" title="Checks if MFA has been enabled for the user using user id." alt="" coords="316,169,575,211"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#ae6b07db1a75a979a32576fec4c3e4e33" title="Logins user" alt="" coords="11,5,263,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="11,71,263,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3b1635ec52b83ce1ff5a6f008130a66c" title="Sends one time password via sms" alt="" coords="11,136,263,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#afcab0d745ea8985803931c8630630408" title="Sets up two factor authentication using google authenticator app" alt="" coords="5,201,268,243"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#ab30f6d5eec51e4622c4ddfd5aad4d2f6" title="Sets up two factor authentication using sms" alt="" coords="11,267,263,308"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#ac6e29dec9bd50a10a1629d70231b7fc4" title="Verifies sms code" alt="" coords="11,332,263,373"/>
+</map>
