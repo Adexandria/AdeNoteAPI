@@ -1,0 +1,8 @@
+<map id="AdeNote.Controllers.AuthenticationController.Login" name="AdeNote.Controllers.AuthenticationController.Login">
+<area shape="rect" id="node1" title="Logins user" alt="" coords="5,104,257,145"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a004ca4183d5230aff26a3f3abd97bdaf" title=" " alt="" coords="305,104,557,145"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#aaf76f4e77c5e74af2928f3296f7828ed" title="Add data to cookie" alt="" coords="609,5,861,47"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a9204433e7435394f8074ea1939e8e273" title="Generates token when trying to log in using MFA" alt="" coords="618,71,851,112"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a36d354e9f7aaad56ac5cc7b0c881e5be" title="Checks if MFA has been enabled for the user using user id." alt="" coords="605,136,864,177"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a5bc24a38f2a0d984148fd747b4d5c226" title=" " alt="" coords="609,201,861,243"/>
+</map>
