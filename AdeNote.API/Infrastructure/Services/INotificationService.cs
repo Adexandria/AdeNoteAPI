@@ -15,6 +15,6 @@ namespace AdeNote.Infrastructure.Services
         /// <param name="substitutions">User's details</param>
         /// <param name="template">Email template</param>
         /// <param name="contentType">Content type of message</param>
-       Task SendNotification<T>(T email, EmailTemplate template, ContentType contentType, Dictionary<string, string> substitutions = null) where T : Email;
+       void SendNotification<T>(T email, EmailTemplate template, ContentType contentType, Dictionary<string, string> substitutions = null) where T : Email;
     }
 }

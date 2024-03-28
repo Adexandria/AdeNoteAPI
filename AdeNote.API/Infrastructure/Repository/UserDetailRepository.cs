@@ -40,13 +40,13 @@ namespace AdeNote.Infrastructure.Repository
         /// </summary>
         /// <param name="userId">User id</param>
         /// <returns>A boolean value</returns>
-        public async Task<bool?> IsPhoneNumberVerified(Guid userId)
+        public async Task<bool> IsPhoneNumberVerified(Guid userId)
         {
-            var userDetail = await Db.UserDetails.
-                 AsNoTracking()
-                 .FirstOrDefaultAsync(x => x.UserId == userId);
+            var isPhoneNumberVerified  = await Db.UserDetails.
+                 AsNoTracking().Where(s=>s.UserId == userId)
+                 .Select(s=>s.IsPhoneNumberVerified).FirstOrDefaultAsync();
 
-            return userDetail?.IsPhoneNumberVerified;
+            return isPhoneNumberVerified;
         }
 
         /// <summary>

@@ -140,23 +140,23 @@ namespace AdeNote.Infrastructure.Services
         /// </summary>
         /// <param name="userId">User id</param>
         /// <returns>boolean value</returns>
-        public async Task<ActionResult<bool>> IsPhoneNumberVerified(Guid userId)
+        public async Task<ActionResult> IsPhoneNumberVerified(Guid userId)
         {
             try
             {
                 if (userId == Guid.Empty)
-                    return ActionResult<bool>.Failed("Invalid user id", StatusCodes.Status404NotFound);
+                    return ActionResult.Failed("Invalid user id", StatusCodes.Status404NotFound);
 
                 var isVerified = await userDetailRepository.IsPhoneNumberVerified(userId);
 
-                if (!isVerified.HasValue)
-                    return ActionResult<bool>.Failed("user details doesn't exist", StatusCodes.Status400BadRequest);
+                if (!isVerified)
+                    return ActionResult.Failed("Phone number has not been verified", StatusCodes.Status400BadRequest);
 
-                return ActionResult<bool>.SuccessfulOperation(isVerified.Value);
+                return ActionResult.Successful();
             }
             catch (Exception ex)
             {
-                return ActionResult < bool>.Failed(ex.Message);
+                return ActionResult.Failed(ex.Message);
             }
             
         }
@@ -272,12 +272,13 @@ namespace AdeNote.Infrastructure.Services
             try
             {
                 if (string.IsNullOrEmpty(email))
-                    return ActionResult<string>.Failed("Invalid email", StatusCodes.Status404NotFound);
+                    return ActionResult.Failed("Invalid email", StatusCodes.Status404NotFound);
 
                 if (string.IsNullOrEmpty(otp))
-                    return ActionResult<string>.Failed("Invalid otp", StatusCodes.Status404NotFound);
+                    return ActionResult.Failed("Invalid otp", StatusCodes.Status404NotFound);
 
                 byte[] accountKey = Encoding.ASCII.GetBytes($"{key}-{email}");
+
                 var result = TwoFactorAuthenticator
                     .ValidateTwoFactorPIN(accountKey, otp);
                 if (!result)
@@ -325,18 +326,18 @@ namespace AdeNote.Infrastructure.Services
             try
             {
                 if (userId == Guid.Empty)
-                    return ActionResult<string>.Failed("Invalid user id",StatusCodes.Status404NotFound);
+                    return ActionResult.Failed("Invalid user id",StatusCodes.Status404NotFound);
 
                 var userAuthenticator = await authRepository.GetAuthenticationType(userId);
 
                 if(userAuthenticator == null)
-                    return ActionResult<string>.Failed("No two factor enabled",StatusCodes.Status400BadRequest);
+                    return ActionResult.Failed("No two factor enabled",StatusCodes.Status400BadRequest);
 
                 return ActionResult.Successful();
             }
             catch (Exception ex)
             {
-                return ActionResult<string>.Failed(ex.Message);
+                return ActionResult.Failed(ex.Message);
             }
         }
         
@@ -527,7 +528,7 @@ namespace AdeNote.Infrastructure.Services
                     {"[TOKEN]" , token }
                 };
 
-                await _notificationService.SendNotification(new Email(email, "Password Reset Token"),
+                 _notificationService.SendNotification(new Email(email, "Password Reset Token"),
                     EmailTemplate.ResetTokenNotification, ContentType.html, substitutions);
 
                 return ActionResult<string>.SuccessfulOperation(token);

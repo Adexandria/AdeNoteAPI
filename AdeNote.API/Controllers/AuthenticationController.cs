@@ -113,36 +113,9 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("login")]
-        public async Task<IActionResult> Login(LoginCommand command)
+        public IActionResult Login(LoginCommand command)
         {
-            var loginResponse = await Application.ExecuteCommand<LoginCommand, LoginDTO>(Container, command);
-
-            var resultResponse = await _authService.IsAuthenticatorEnabled(command.Email);
-
-            var userDetails = await Application.ExecuteCommand<VerifyTokenCommand, TasksLibrary.Services.UserDTO>(Container,new VerifyTokenCommand()
-            {
-                AccessToken = loginResponse.Data.AccessToken
-            });
-
-            if(resultResponse.IsSuccessful && loginResponse.IsSuccessful)
-            {
-                var tokenResponse = _authService.GenerateMFAToken(userDetails.Data.UserId,command.Email,loginResponse.Data.RefreshToken);
-                AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(8));
-                return Ok("Proceed to enter otp from authenticator");
-            }
-            if (loginResponse.IsSuccessful)
-            {
-                var substitutions = new Dictionary<string, string>
-                {
-                    {"[Date]", DateTime.Now.ToLongDateString() },
-                    {"[Time]",DateTime.Now.ToLongTimeString() }
-                };
-                AddToCookie("AdeNote-RefreshToken", loginResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
-               await _notificationService.SendNotification(new Email(userDetails.Data.Email, "New login to AdeNote"), 
-                   EmailTemplate.LoginNotification, ContentType.html,substitutions);
-            }
-
-            return loginResponse.Response();
+            return LoginUser(command);
         }
 
 
@@ -171,50 +144,21 @@ namespace AdeNote.Controllers
 
             var isExist = await _userService.IsUserExist(userEmail);
 
-            if (isExist.IsSuccessful)
+            if (isExist.NotSuccessful)
             {
-                var command = new LoginCommand() 
-                { 
+                var response = await Application.ExecuteCommand<CreateUserCommand, CreateUserDTO>(Container,
+                    new CreateUserCommand() { Email = userEmail, Name = name, Password = "firstName", ConfirmPassword = "firstName" });
+
+                if (response.NotSuccessful)
+                    return response.Response();
+            }
+            var command = new LoginCommand() 
+            { 
                     Email = userEmail,
                     Password = "firstName"
-                };
+            };
 
-                var loginResponse = await Application.ExecuteCommand<LoginCommand, LoginDTO>(Container, command);
-
-                var resultResponse = await _authService.IsAuthenticatorEnabled(command.Email);
-
-                var userDetails = await Application.ExecuteCommand<VerifyTokenCommand, TasksLibrary.Services.UserDTO>(Container, new VerifyTokenCommand()
-                {
-                    AccessToken = loginResponse.Data.AccessToken
-                });
-
-                if (resultResponse.IsSuccessful && loginResponse.IsSuccessful)
-                {
-                    var tokenResponse = _authService.GenerateMFAToken(userDetails.Data.UserId, command.Email, loginResponse.Data.RefreshToken);
-                    AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(8));
-                    return Ok("Proceed to enter otp from authenticator");
-                }
-                if (loginResponse.IsSuccessful)
-                {
-                    var substitutions = new Dictionary<string, string>
-                {
-                    {"[Date]", DateTime.Now.ToLongDateString() },
-                    {"[Time]",DateTime.Now.ToLongTimeString() }
-                };
-                    AddToCookie("AdeNote-RefreshToken", loginResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
-                    await _notificationService.SendNotification(new Email(userEmail, "New login to AdeNote"),
-                        EmailTemplate.LoginNotification, ContentType.html, substitutions);
-                }
-
-                return loginResponse.Response(); 
-            }
-            else
-            {
-                var response = await Application.ExecuteCommand<CreateUserCommand, CreateUserDTO>(Container, 
-                    new CreateUserCommand() { Email = userEmail, Name = name ,Password = "firstName" , ConfirmPassword = "firstName"});
-
-                return response.Response();
-            }
+            return LoginUser(command);
         }
 
         /// <summary>
@@ -411,9 +355,6 @@ namespace AdeNote.Controllers
             if (verificationResponse.NotSuccessful)
                 return verificationResponse.Response();
 
-            if (!verificationResponse.Data)
-                return TasksLibrary.Utilities.ActionResult.Failed("Phone number has not been verified", StatusCodes.Status400BadRequest).Response();
-
             var response = await _authService.SetSmsAuthenticator(CurrentUser);
 
             return response.Response();
@@ -474,11 +415,10 @@ namespace AdeNote.Controllers
         {
             var resultResponse = await _authService.IsPhoneNumberVerified(CurrentUser);
 
-            if(resultResponse.NotSuccessful)
-                return resultResponse.Response();
-
-            if (resultResponse.Data)
-                return TasksLibrary.Utilities.ActionResult.Failed("Phone number has been verified",StatusCodes.Status400BadRequest).Response();
+            if(resultResponse.IsSuccessful)
+                return TasksLibrary.Utilities
+                    .ActionResult.Failed("Phone number is already verified",StatusCodes.Status400BadRequest)
+                    .Response();
 
             var response = await _authService.VerifyPhoneNumber(CurrentUser,verificationCode);
 
@@ -517,15 +457,14 @@ namespace AdeNote.Controllers
 
             var resultResponse = await _authService.IsAuthenticatorEnabled(detailsResponse.Data.UserId);
 
-            if (!resultResponse.IsSuccessful)
-                return TasksLibrary.Utilities.ActionResult.Failed("User has not set up two factor authentication", StatusCodes.Status400BadRequest).Response();
+            if (resultResponse.NotSuccessful)
+                return TasksLibrary.Utilities
+                    .ActionResult.Failed("User has not set up two factor authentication", StatusCodes.Status400BadRequest)
+                    .Response();
 
             var verificationResponse = await _authService.IsPhoneNumberVerified(detailsResponse.Data.UserId);
 
             if (verificationResponse.NotSuccessful)
-                return verificationResponse.Response();
-
-            if (!verificationResponse.Data)
                 return TasksLibrary.Utilities.ActionResult.Failed("Phone number has not been verified", StatusCodes.Status400BadRequest).Response();
 
             var response = await _authService.SendSmsOTP(detailsResponse.Data.UserId,detailsResponse.Data.Email);
@@ -567,31 +506,26 @@ namespace AdeNote.Controllers
 
             var resultResponse = await _authService.IsAuthenticatorEnabled(detailsResponse.Data.UserId);
 
-            if (!resultResponse.IsSuccessful)
-                return TasksLibrary.Utilities.ActionResult.Failed("User has not set up two factor authentication", StatusCodes.Status400BadRequest).Response();
+            if (resultResponse.NotSuccessful)
+                return TasksLibrary.Utilities
+                    .ActionResult.Failed("User has not set up two factor authentication", StatusCodes.Status400BadRequest)
+                    .Response();
 
             var verificationResponse = await _authService.IsPhoneNumberVerified(detailsResponse.Data.UserId);
 
             if (verificationResponse.NotSuccessful)
-                return verificationResponse.Response();
-
-            if (!verificationResponse.Data)
-                return TasksLibrary.Utilities.ActionResult.Failed("Phone number has not been verified", StatusCodes.Status400BadRequest).Response();
+                return TasksLibrary.Utilities
+                    .ActionResult.Failed("Phone number has not been verified", StatusCodes.Status400BadRequest)
+                    .Response();
 
             var response =  _authService.VerifyAuthenticatorOTP(detailsResponse.Data.Email, otp);
+
             if (response.NotSuccessful)
                 return response.Response();
 
             var accessToken = _authToken.GenerateAccessToken(detailsResponse.Data.UserId, detailsResponse.Data.Email);
 
-            var substitutions = new Dictionary<string, string>
-                {
-                    { "[Date]", DateTime.Now.ToLongDateString() },
-                    {"[Time]",DateTime.Now.ToLongTimeString() }
-                };
-
-            await _notificationService.SendNotification(new Email(detailsResponse.Data.Email, "New login to AdeNote"),
-                    EmailTemplate.LoginNotification, ContentType.html, substitutions);
+            SendNotification(detailsResponse.Data.Email);
 
             AddToCookie("AdeNote-RefreshToken", detailsResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
 
@@ -634,14 +568,7 @@ namespace AdeNote.Controllers
 
             var accessToken = _authToken.GenerateAccessToken(detailsResponse.Data.UserId,detailsResponse.Data.Email);
 
-            var substitutions = new Dictionary<string, string>
-                {
-                    { "[Date]", DateTime.Now.ToLongDateString() },
-                    {"[Time]",DateTime.Now.ToLongTimeString() }
-                };
-
-            await _notificationService.SendNotification(new Email(detailsResponse.Data.Email, "New login to AdeNote"),
-                    EmailTemplate.LoginNotification, ContentType.html, substitutions);
+            SendNotification(detailsResponse.Data.Email);
 
             AddToCookie("AdeNote-RefreshToken", detailsResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
 
@@ -750,6 +677,50 @@ namespace AdeNote.Controllers
                       SameSite = SameSiteMode.None,
                       HttpOnly = true
                   });
+        }
+
+        [NonAction]
+        private void SendNotification(string email)
+        {
+            var substitutions = new Dictionary<string, string>
+            {
+                 { "[Date]", DateTime.Now.ToLongDateString() },
+                {"[Time]",DateTime.Now.ToLongTimeString() }
+            };
+            _notificationService.SendNotification(new Email(email, "New login to AdeNote"),
+            EmailTemplate.LoginNotification, ContentType.html, substitutions);
+
+        }
+
+        [NonAction]
+        private IActionResult LoginUser(LoginCommand command)
+        {
+            var loginResponse = Application.ExecuteCommand<LoginCommand, LoginDTO>(Container, command).Result;
+
+            if (!loginResponse.NotSuccessful)
+                return loginResponse.Response();
+
+            var resultResponse = _authService.IsAuthenticatorEnabled(command.Email).Result;
+
+            var userDetails = Application.ExecuteCommand<VerifyTokenCommand, TasksLibrary.Services.UserDTO>(Container, new VerifyTokenCommand()
+            {
+                AccessToken = loginResponse.Data.AccessToken
+            }).Result;
+
+            if (resultResponse.IsSuccessful)
+            {
+                var tokenResponse = _authService.GenerateMFAToken(userDetails.Data.UserId, command.Email, loginResponse.Data.RefreshToken);
+
+                AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(8));
+
+                return Ok("Proceed to enter otp from authenticator");
+            }
+
+            SendNotification(userDetails.Data.Email);
+
+            AddToCookie("AdeNote-RefreshToken", loginResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
+
+            return loginResponse.Response();
         }
     }
 }

@@ -26,9 +26,9 @@ namespace AdeNote.Infrastructure.Services
         /// <param name="substitutions">User's details</param>
         /// <param name="template">Email template</param>
         /// <param name="contentType">Content type of message</param> 
-        public async Task SendNotification<T>(T email, EmailTemplate template, ContentType contentType, Dictionary<string, string> substitutions = null) where T : Email
+        public void SendNotification<T>(T email, EmailTemplate template, ContentType contentType, Dictionary<string, string> substitutions = null) where T : Email
         {
-            var contentTemplate = await GenerateContentTemplate(template);
+            var contentTemplate = GenerateContentTemplate(template);
             var content = substitutions == null ? contentTemplate : CreatePersonalisedMessage(substitutions, contentTemplate);
             if(contentType == ContentType.html)
             {
@@ -47,10 +47,10 @@ namespace AdeNote.Infrastructure.Services
         /// </summary>
         /// <param name="template">template type</param>
         /// <returns>Content</returns>
-        private async Task<string> GenerateContentTemplate(EmailTemplate template)
+        private string GenerateContentTemplate(EmailTemplate template)
         {
             var templateName = template.GetDescription();
-            var contentTemplate = await _blobService.DownloadImage(templateName);
+            var contentTemplate = _blobService.DownloadImage(templateName).Result;
             return contentTemplate;
         }
 

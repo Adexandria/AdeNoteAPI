@@ -63,7 +63,7 @@ namespace AdeNote.Infrastructure.Services
         /// </summary>
         /// <param name="userId">User id</param>
         /// <returns>bool</returns>
-        Task<ActionResult<bool>> IsPhoneNumberVerified(Guid userId);
+        Task<ActionResult> IsPhoneNumberVerified(Guid userId);
 
         /// <summary>
         /// Sends otp to phone number 
