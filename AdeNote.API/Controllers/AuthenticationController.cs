@@ -155,7 +155,6 @@ namespace AdeNote.Controllers
         /// <response code ="500"> Returns if experiencing server issues</response>
         /// <response code ="401"> Returns if unauthorised</response>
         /// <returns>A name and email</returns>
-        [AllowAnonymous]
         [Consumes("application/json")]
         [Produces("application/json")]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
