@@ -1,0 +1,4 @@
+<map id="AdeNote.Infrastructure.Services.AuthService.IsAuthenticatorEnabled" name="AdeNote.Infrastructure.Services.AuthService.IsAuthenticatorEnabled">
+<area shape="rect" id="node1" title="Checks if MFA has been enabled for the user" alt="" coords="5,5,260,47"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html#a643eeaa166fc802f26ed40569e04f381" title="Gets the authentication type of a user using user Id" alt="" coords="308,5,584,47"/>
+</map>
