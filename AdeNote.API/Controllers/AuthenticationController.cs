@@ -12,6 +12,7 @@ using TasksLibrary.Application.Commands.Login;
 using TasksLibrary.Application.Commands.VerifyToken;
 using TasksLibrary.Architecture.Application;
 using TasksLibrary.Models.Interfaces;
+using TasksLibrary.Services;
 
 namespace AdeNote.Controllers
 {
@@ -41,12 +42,12 @@ namespace AdeNote.Controllers
         /// <param name="userIdentity">An interface that interacts with the user. This fetches the current user details</param>
         /// <param name="userService">An interface that manages users</param>
         public AuthenticationController(IContainer container, ITaskApplication application, IUserIdentity userIdentity,
-            IAuthService authService, INotificationService notificationService, IUserService userService) : base(container, application,userIdentity)
+            IAuthService authService, INotificationService notificationService, AuthTokenRepository authToken,IUserService userService) : base(container, application,userIdentity)
         {
             _authService = authService;
             _notificationService = notificationService;
             _userService = userService;
-            _authToken = container.Resolve<IAuthToken>();
+            _authToken = authToken;
         }
 
         /// <summary>
