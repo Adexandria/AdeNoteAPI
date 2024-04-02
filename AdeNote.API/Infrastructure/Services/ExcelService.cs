@@ -49,7 +49,6 @@ namespace AdeNote.Infrastructure.Services
             }
             catch (Exception ex)
             {
-                var x = ex;
                 return ActionResult<string>.Failed("Failed to export");
             }
         }
@@ -101,9 +100,12 @@ namespace AdeNote.Infrastructure.Services
                         mimeType = MimeType.xlsx;
                         break;
                     case string when extensionType.Equals(MimeType.csv.GetDescription()):
+                        
+                        break;
+                    default:
                         mimeType = MimeType.csv;
                         break;
-                };
+                }
 
                 return mimeType;
 

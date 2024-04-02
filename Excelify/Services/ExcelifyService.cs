@@ -84,6 +84,6 @@ namespace Excelify.Services
             return memoryStream;
         }
 
-        private IExcelMapper _excelifyMapper;
+        private readonly IExcelMapper _excelifyMapper;
     }
 }

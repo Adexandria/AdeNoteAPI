@@ -68,6 +68,6 @@ namespace Excelify.Services
             return entities;
         }
 
-        private ExcelifyMapper _excelifyMapper;
+        private readonly ExcelifyMapper _excelifyMapper;
     }
 }

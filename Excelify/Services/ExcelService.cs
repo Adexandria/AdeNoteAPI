@@ -13,6 +13,5 @@ namespace Excelify.Services
         public abstract DataTable ImportToTable(IImportSheet sheet);
         public abstract IList<T> ImportToEntity<T>(IImportSheet sheet) where T : class;
         public abstract IList<T> ImportToEntity<T>(IImportSheet sheet, IExcelMapper excelifyMapper) where T : class;
-        //public abstract void SetSheetName(int sheetName);
     }
 }
