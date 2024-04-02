@@ -4,13 +4,13 @@ using Microsoft.VisualBasic.FileIO;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using System.Data;
-using System.Text;
+using System.Reflection;
 
 namespace Excelify.Services.Extensions
 {
     internal static class SheetExtension
     {
-        public static DataTable ExtractValues(this IImportSheet excelSheet, int _sheetName)
+        public static DataTable ExtractSheetValues(this IImportSheet excelSheet)
         {
             ISheet sheet;
 
@@ -23,7 +23,7 @@ namespace Excelify.Services.Extensions
                 MissingCellPolicy = MissingCellPolicy.RETURN_NULL_AND_BLANK
             };
 
-            sheet = workBook.GetSheetAt(_sheetName);
+            sheet = workBook.GetSheetAt(excelSheet.SheetName);
 
             IRow headerRow = sheet.GetRow(0);
 
@@ -56,41 +56,34 @@ namespace Excelify.Services.Extensions
             return table;
         }
 
-        public static DataTable ExtractCsv(this IImportSheet excelSheet)
+        public static DataTable ExtractCsvValues(this IImportSheet excelSheet)
         {
             DataTable table = new();
+
             using var parser = new TextFieldParser(excelSheet.File);
+
             parser.SetDelimiters(",");
+
+            var headers = parser.ReadFields() ?? throw new Exception("Sheet can not be empty");
+
+            foreach (string header in  headers)
+            {
+                table.Columns.Add(header);
+            }
+
             while (!parser.EndOfData)
             {
                 string[] rows = parser.ReadFields();
-                if (rows.Length <= 0)
+
+                if(rows.Length == 0)
+                {
                     continue;
+                }
 
                 table.Rows.Add(rows);
             }
 
             return table;
-        }
-
-        private static void ExtractColumnValues(IRow row, int rowNumber ,int numberOfCells, List<string> rowList)
-        {
-            if(rowNumber < numberOfCells)
-            {
-                var cell = row.GetCell(rowNumber);
-
-                if (cell == null)
-                {
-                    rowList.Add(null);
-                }
-                else
-                {
-                    rowList.Add(cell.ToString());
-                }
-
-                rowNumber++;
-                ExtractColumnValues(row, rowNumber , numberOfCells, rowList);
-            }
         }
 
         public static XSSFWorkbook CreateSheet<T>(this IEntityExport<T> dataExport, List<ExcelifyProperty> extractedAttributes)
@@ -119,36 +112,78 @@ namespace Excelify.Services.Extensions
             return workBook;
         }
 
-
-        public static Stream CreateCsv<T>(this IEntityExport<T> dataExport, List<ExcelifyProperty> extractedAttributes)
+        public static Stream CreateCsvSheet<T>(this IEntityExport<T> dataExport, List<ExcelifyProperty> extractedAttributes)
         {
-            var ms = new MemoryStream();
-            using var writer = new StreamWriter(ms);
-            foreach(var entity in dataExport.Entities)
-            {
-                var property = entity.GetType().GetProperties().Where(s => extractedAttributes.Any(m => m.PropertyName == s.Name))
-                    .FirstOrDefault();
-                if(property == null)
-                {
-                    continue;
-                }
-                var value = (string)property.GetValue(entity);
-                writer.Write(value);
-                writer.Write(',');
-            }
+            return WriteToCsv(dataExport, extractedAttributes);
+        } 
 
-
+        public static byte[] CreateCsvBytes<T>(this IEntityExport<T> dataExport, List<ExcelifyProperty> extractedAttributes)
+        {
+            var ms = WriteToCsv(dataExport, extractedAttributes);
+            return ms.ToArray();
         }
+
         public static void WriteToFile(this byte[] workbook, string path)
         {
-            if(string.IsNullOrEmpty(path) || string.IsNullOrWhiteSpace(path))
+            if (string.IsNullOrEmpty(path) || string.IsNullOrWhiteSpace(path))
             {
                 throw new ArgumentNullException(nameof(path), "File name can not be empty");
             }
 
             using var fileStream = new FileStream($"{path}.xlsx", FileMode.Create, FileAccess.Write);
 
-            fileStream.Write(workbook,0, workbook.Length);
+            fileStream.Write(workbook, 0, workbook.Length);
+        }
+
+        private static MemoryStream WriteToCsv<T>(IEntityExport<T> dataExport, List<ExcelifyProperty> extractedAttributes)
+        {
+            var ms = new MemoryStream();
+            using var writer = new StreamWriter(ms, null, -1, true);
+            for (int i = 0; i < extractedAttributes.Count; i++)
+            {
+                if (extractedAttributes[i].AttributeName is string value)
+                {
+                    if (i > 0)
+                    {
+                        writer.Write(',');
+                    }
+                    writer.Write(value);
+                }
+            }
+
+            writer.WriteLine();
+            for (int j = 0; j < dataExport.Entities.Count; j++)
+            {
+                var properties = dataExport.Entities[j].GetType().GetProperties();
+                var extractedProperties = properties.Where(s => extractedAttributes.Any(p => p.PropertyName == s.Name)).ToList();
+                if (properties == null)
+                {
+                    continue;
+                }
+                WriteToCsvColumns(writer, dataExport.Entities[j], extractedProperties);
+                writer.WriteLine();
+            }
+            writer.Close();
+            ms.Position = 0;
+            return ms;
+        }
+
+        private static void WriteToCsvColumns<T>(StreamWriter writer, T entity, List<PropertyInfo> propertyInfos, int left = 0)
+        {
+            if(left < propertyInfos.Count)
+            {
+                var value = propertyInfos[left].GetValue(entity);
+
+                if (left > 0)
+                {
+                    writer.Write(',');
+                }
+                writer.Write(value);
+
+                left++;
+
+                WriteToCsvColumns(writer, entity, propertyInfos, left);
+            }
         }
 
         private static void InsertValues<T>(ISheet sheet, IList<T> entities, string propertyName, int cellNumber, int rowNumber = 1)
@@ -205,6 +240,26 @@ namespace Excelify.Services.Extensions
                 rowNumber++;
 
                 InsertValues(sheet, entities, propertyName, cellNumber, rowNumber);
+            }
+        }
+
+        private static void ExtractColumnValues(IRow row, int rowNumber, int numberOfCells, List<string> rowList)
+        {
+            if (rowNumber < numberOfCells)
+            {
+                var cell = row.GetCell(rowNumber);
+
+                if (cell == null)
+                {
+                    rowList.Add(null);
+                }
+                else
+                {
+                    rowList.Add(cell.ToString());
+                }
+
+                rowNumber++;
+                ExtractColumnValues(row, rowNumber, numberOfCells, rowList);
             }
         }
     }

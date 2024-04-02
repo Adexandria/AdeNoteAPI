@@ -22,12 +22,13 @@ namespace Excelify.Services
         public IExcelService CreateService(string extensionType)
         {
             IExcelService excelService;
+
             try
             {
                var excelType = excelTypes.Where(s =>
                {
-                   var newExcelType = Activator.CreateInstance(s) as IExcelService;
-                   return newExcelType.CanImportSheet(extensionType);
+                  var newExcelType = Activator.CreateInstance(s) as IExcelService;
+                  return newExcelType.CanImportSheet(extensionType);
                }).FirstOrDefault() ?? throw new Exception("Excel service does not exist");
 
                excelService = Activator.CreateInstance(excelType) as IExcelService;
