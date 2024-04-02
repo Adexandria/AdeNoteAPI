@@ -7,22 +7,33 @@ using System.Data;
 
 namespace Excelify.Services
 {
-    public class ExcelifyService : ExcelService
+    public class CsvService : ExcelService
     {
-        public ExcelifyService()
+        public CsvService()
         {
             _excelifyMapper = new ExcelifyMapper();
         }
+
 
         public override bool CanImportSheet(string extensionType)
         {
             if (string.IsNullOrEmpty(extensionType))
                 throw new ArgumentNullException(nameof(extensionType), "Extension type can not be empty");
 
-            return extensionType.Equals(ExtensionType.xls.GetDescription<DescriptionAttribute>()) ||
-                extensionType.Equals(ExtensionType.xlsx.GetDescription<DescriptionAttribute>()) 
-                || extensionType.Equals(ExtensionType.xls.ToString()) 
-                || extensionType.Equals(ExtensionType.xlsx.ToString());
+           return ExtensionType.csv.ToString() == extensionType
+                || extensionType.Equals(ExtensionType.csv.GetDescription<DescriptionAttribute>());
+        }
+
+        public override byte[] ExportToBytes<T>(IEntityExport<T> dataExport)
+        {
+            var extractedAttributes = ExcelifyRecord.GetAttributeProperty<ExcelifyAttribute, T>();
+            return dataExport.CreateCsvBytes(extractedAttributes);
+        }
+
+        public override Stream ExportToStream<T>(IEntityExport<T> dataExport)
+        {
+            var extractedAttributes = ExcelifyRecord.GetAttributeProperty<ExcelifyAttribute, T>();
+            return dataExport.CreateCsvSheet(extractedAttributes);
         }
 
         public override DataTable ImportToTable(IImportSheet sheet)
@@ -30,7 +41,7 @@ namespace Excelify.Services
             if (sheet == null)
                 throw new ArgumentNullException(nameof(sheet), "sheet can not be null");
 
-            return sheet.ExtractSheetValues();
+            return sheet.ExtractCsvValues();
         }
 
         public override IList<T> ImportToEntity<T>(IImportSheet sheet)
@@ -38,9 +49,10 @@ namespace Excelify.Services
             if (sheet == null)
                 throw new ArgumentNullException(nameof(sheet), "sheet can not be null");
 
-            var extractedValues = sheet.ExtractSheetValues();
+            var extractedValues = sheet.ExtractCsvValues();
             var entities = _excelifyMapper.Map<T>(extractedValues.Rows.OfType<DataRow>()).Result;
             return entities;
+
         }
 
         public override IList<T> ImportToEntity<T>(IImportSheet sheet, IExcelMapper excelifyMapper)
@@ -48,42 +60,14 @@ namespace Excelify.Services
             if (sheet == null)
                 throw new ArgumentNullException(nameof(sheet), "sheet can not be null");
 
-            if (excelifyMapper == null)
+            if(excelifyMapper == null)
                 throw new ArgumentNullException(nameof(excelifyMapper), "Excel mapper can not be null");
 
-            var extractedValues = sheet.ExtractSheetValues();
+            var extractedValues = sheet.ExtractCsvValues();
             var entities = excelifyMapper.Map<T>(extractedValues.Rows.OfType<DataRow>()).Result;
             return entities;
         }
 
-        public override byte[] ExportToBytes<T>(IEntityExport<T> dataExport)
-        {
-            var extractedAttributes = ExcelifyRecord.GetAttributeProperty<ExcelifyAttribute, T>();
-
-            var excelSheet = dataExport.CreateSheet(extractedAttributes);
-
-            using var memoryStream = new MemoryStream();
-
-            excelSheet.Write(memoryStream);
-
-            return memoryStream.ToArray();
-        }
-
-        public override Stream ExportToStream<T>(IEntityExport<T> dataExport)
-        {
-            var extractedAttributes = ExcelifyRecord.GetAttributeProperty<ExcelifyAttribute, T>();
-
-            var excelSheet = dataExport.CreateSheet(extractedAttributes);
-
-            var memoryStream = new MemoryStream();
-
-            excelSheet.Write(memoryStream,true);
-
-            memoryStream.Position = 0;
-
-            return memoryStream;
-        }
-
-        private IExcelMapper _excelifyMapper;
+        private ExcelifyMapper _excelifyMapper;
     }
 }

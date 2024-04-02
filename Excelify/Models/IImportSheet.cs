@@ -9,5 +9,6 @@ namespace Excelify.Models
     public interface IImportSheet
     {
        Stream File { get; set; }
+       int SheetName { get; set; }
     }
 }

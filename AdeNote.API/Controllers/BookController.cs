@@ -93,16 +93,17 @@ namespace AdeNote.Controllers
         /// Exports books to excel sheets
         /// </summary>
         /// <param name="sheetName">The name of the sheet</param>
+        /// <param name="extensionType"></param>
         /// <returns>Url</returns>
-        [HttpGet("export/{sheetName}")]
+        [HttpGet("export")]
         [Produces("application/json")]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<BookDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> ExportBooks(string sheetName = "Sheet1")
+        public async Task<IActionResult> ExportBooks(string sheetName, string extensionType)
         {
-           var response =  await _excelService.ExportEntities(sheetName, CurrentUser);
+           var response =  await _excelService.ExportEntities(CurrentUser, extensionType, sheetName);
            return response.Response();
         }
 
@@ -117,7 +118,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<BookDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
-        [HttpPost("import/{sheetName}")]
+        [HttpPost("import")]
         public async Task<IActionResult> ImportBooks(IFormFile bookSheet, int sheetName = 0)
         {
             var ms = new MemoryStream();
