@@ -127,9 +127,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a84ebe72dc37af1f6c2ac1e2380a8b99d"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1BookController.html#a84ebe72dc37af1f6c2ac1e2380a8b99d">GetBook</a> (Guid bookId)</td></tr>
 <tr class="memdesc:a84ebe72dc37af1f6c2ac1e2380a8b99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetches a particular book  <a href="classAdeNote_1_1Controllers_1_1BookController.html#a84ebe72dc37af1f6c2ac1e2380a8b99d">More...</a><br /></td></tr>
 <tr class="separator:a84ebe72dc37af1f6c2ac1e2380a8b99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6713c032a7790c7a86fefe8ebaec61b9"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1BookController.html#a6713c032a7790c7a86fefe8ebaec61b9">ExportBooks</a> (string sheetName=&quot;Sheet1&quot;)</td></tr>
-<tr class="memdesc:a6713c032a7790c7a86fefe8ebaec61b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports books to excel sheets  <a href="classAdeNote_1_1Controllers_1_1BookController.html#a6713c032a7790c7a86fefe8ebaec61b9">More...</a><br /></td></tr>
-<tr class="separator:a6713c032a7790c7a86fefe8ebaec61b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b969dc1be8698fe8fe55254233e244c"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1BookController.html#a6b969dc1be8698fe8fe55254233e244c">ExportBooks</a> (string sheetName, string extensionType)</td></tr>
+<tr class="memdesc:a6b969dc1be8698fe8fe55254233e244c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports books to excel sheets  <a href="classAdeNote_1_1Controllers_1_1BookController.html#a6b969dc1be8698fe8fe55254233e244c">More...</a><br /></td></tr>
+<tr class="separator:a6b969dc1be8698fe8fe55254233e244c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a705305b7b6aff9184dc497815ae901ad"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1BookController.html#a705305b7b6aff9184dc497815ae901ad">ImportBooks</a> (IFormFile bookSheet, int sheetName=0)</td></tr>
 <tr class="memdesc:a705305b7b6aff9184dc497815ae901ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imports books into database  <a href="classAdeNote_1_1Controllers_1_1BookController.html#a705305b7b6aff9184dc497815ae901ad">More...</a><br /></td></tr>
 <tr class="separator:a705305b7b6aff9184dc497815ae901ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -258,7 +258,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if book was created&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="BookController_8cs_source.html#l00157">157</a> of file <a class="el" href="BookController_8cs_source.html">BookController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookController_8cs_source.html#l00158">158</a> of file <a class="el" href="BookController_8cs_source.html">BookController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -297,7 +297,7 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if book was deleted&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; &lt;response code ="404"&gt; Returns if book was not found&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="BookController_8cs_source.html#l00216">216</a> of file <a class="el" href="BookController_8cs_source.html">BookController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookController_8cs_source.html#l00217">217</a> of file <a class="el" href="BookController_8cs_source.html">BookController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -310,8 +310,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a6713c032a7790c7a86fefe8ebaec61b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6713c032a7790c7a86fefe8ebaec61b9">&#9670;&nbsp;</a></span>ExportBooks()</h2>
+<a id="a6b969dc1be8698fe8fe55254233e244c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b969dc1be8698fe8fe55254233e244c">&#9670;&nbsp;</a></span>ExportBooks()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -320,8 +320,18 @@ Here is the call graph for this function:</div>
           <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.BookController.ExportBooks </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>sheetName</em> = <code>&quot;Sheet1&quot;</code></td><td>)</td>
+          <td class="paramname"><em>sheetName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>extensionType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -330,19 +340,20 @@ Here is the call graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sheetName</td><td>The name of the sheet</td></tr>
+    <tr><td class="paramname">extensionType</td><td></td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Url</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BookController_8cs_source.html#l00103">103</a> of file <a class="el" href="BookController_8cs_source.html">BookController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookController_8cs_source.html#l00104">104</a> of file <a class="el" href="BookController_8cs_source.html">BookController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1BookController_a6713c032a7790c7a86fefe8ebaec61b9_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1BookController_a6713c032a7790c7a86fefe8ebaec61b9_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1BookController_a6713c032a7790c7a86fefe8ebaec61b9_cgraph" id="aclassAdeNote_1_1Controllers_1_1BookController_a6713c032a7790c7a86fefe8ebaec61b9_cgraph">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1BookController_a6b969dc1be8698fe8fe55254233e244c_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1BookController_a6b969dc1be8698fe8fe55254233e244c_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1BookController_a6b969dc1be8698fe8fe55254233e244c_cgraph" id="aclassAdeNote_1_1Controllers_1_1BookController_a6b969dc1be8698fe8fe55254233e244c_cgraph">
 <area shape="rect" title="Exports books to excel sheets" alt="" coords="5,5,196,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExcel.html#a9e3e61d3108291d6553598b5ae54efa7" title=" " alt="" coords="244,5,477,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExcel.html#ac2e98fd5e9f88b00e4c6fdc84f1e4f70" title=" " alt="" coords="244,5,477,47"/>
 </map>
 </div>
 
@@ -456,7 +467,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="BookController_8cs_source.html#l00121">121</a> of file <a class="el" href="BookController_8cs_source.html">BookController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookController_8cs_source.html#l00122">122</a> of file <a class="el" href="BookController_8cs_source.html">BookController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -510,7 +521,7 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if book was updated&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; &lt;response code ="404"&gt; Returns if book not found&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="BookController_8cs_source.html#l00189">189</a> of file <a class="el" href="BookController_8cs_source.html">BookController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookController_8cs_source.html#l00190">190</a> of file <a class="el" href="BookController_8cs_source.html">BookController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

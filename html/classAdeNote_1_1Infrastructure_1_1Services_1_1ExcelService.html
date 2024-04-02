@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('classAdeNote_1_1Infrastructure_1_1Serv
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -113,17 +114,22 @@ Collaboration diagram for AdeNote.Infrastructure.Services.ExcelService:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4c87cb2d55a6a2bb3ac399ebbf32a81d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html#a4c87cb2d55a6a2bb3ac399ebbf32a81d">ExcelService</a> (IExcelService excelService, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html">IBookService</a> bookService, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html">IBlobService</a> blobService)</td></tr>
-<tr class="separator:a4c87cb2d55a6a2bb3ac399ebbf32a81d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45ad3289b55c804fbf971e0bfd1c358a"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html#a45ad3289b55c804fbf971e0bfd1c358a">ExportEntities</a> (string sheetName, Guid userId)</td></tr>
-<tr class="separator:a45ad3289b55c804fbf971e0bfd1c358a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a612fde4ad977da18472f35fa644ec350"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html#a612fde4ad977da18472f35fa644ec350">ExcelService</a> (ExcelifyFactory excelifyFactory, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html">IBookService</a> bookService, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html">IBlobService</a> blobService)</td></tr>
+<tr class="separator:a612fde4ad977da18472f35fa644ec350"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83ffc592e71cadbed760f4c8319ae48e"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html#a83ffc592e71cadbed760f4c8319ae48e">ExportEntities</a> (Guid userId, string extensionType, string sheetName)</td></tr>
+<tr class="separator:a83ffc592e71cadbed760f4c8319ae48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6652e4676b3a7484987c2d0fea5b20bd"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html#a6652e4676b3a7484987c2d0fea5b20bd">ImportEntities</a> (<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1ImportBookDto.html">ImportBookDto</a> importBookDto)</td></tr>
 <tr class="separator:a6652e4676b3a7484987c2d0fea5b20bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a37fbe81d7bf5aff2002d043e0087217e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8">MimeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html#a37fbe81d7bf5aff2002d043e0087217e">GetMimeType</a> (string extensionType)</td></tr>
+<tr class="separator:a37fbe81d7bf5aff2002d043e0087217e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ad099e041d76e72fdad8b1ec7fb40d5ea"><td class="memItemLeft" align="right" valign="top">readonly IExcelService&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html#ad099e041d76e72fdad8b1ec7fb40d5ea">_excelService</a></td></tr>
-<tr class="separator:ad099e041d76e72fdad8b1ec7fb40d5ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac92d6c07b568c6c5afc670bfe8378b76"><td class="memItemLeft" align="right" valign="top">readonly ExcelifyFactory&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html#ac92d6c07b568c6c5afc670bfe8378b76">_excelifyFactory</a></td></tr>
+<tr class="separator:ac92d6c07b568c6c5afc670bfe8378b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee6721e72605334d58fb472cc25b3b1e"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html">IBookService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html#aee6721e72605334d58fb472cc25b3b1e">_bookService</a></td></tr>
 <tr class="separator:aee6721e72605334d58fb472cc25b3b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bfa9b032e0e32e62823eca8b3ef67f9"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html">IBlobService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html#a9bfa9b032e0e32e62823eca8b3ef67f9">_blobService</a></td></tr>
@@ -131,10 +137,10 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ExcelService_8cs_source.html#l00008">8</a> of file <a class="el" href="ExcelService_8cs_source.html">ExcelService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ExcelService_8cs_source.html#l00010">10</a> of file <a class="el" href="ExcelService_8cs_source.html">ExcelService.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4c87cb2d55a6a2bb3ac399ebbf32a81d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c87cb2d55a6a2bb3ac399ebbf32a81d">&#9670;&nbsp;</a></span>ExcelService()</h2>
+<a id="a612fde4ad977da18472f35fa644ec350"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a612fde4ad977da18472f35fa644ec350">&#9670;&nbsp;</a></span>ExcelService()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,8 +148,8 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">AdeNote.Infrastructure.Services.ExcelService.ExcelService </td>
           <td>(</td>
-          <td class="paramtype">IExcelService&#160;</td>
-          <td class="paramname"><em>excelService</em>, </td>
+          <td class="paramtype">ExcelifyFactory&#160;</td>
+          <td class="paramname"><em>excelifyFactory</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -165,13 +171,13 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelService_8cs_source.html#l00010">10</a> of file <a class="el" href="ExcelService_8cs_source.html">ExcelService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ExcelService_8cs_source.html#l00012">12</a> of file <a class="el" href="ExcelService_8cs_source.html">ExcelService.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a45ad3289b55c804fbf971e0bfd1c358a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45ad3289b55c804fbf971e0bfd1c358a">&#9670;&nbsp;</a></span>ExportEntities()</h2>
+<a id="a83ffc592e71cadbed760f4c8319ae48e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83ffc592e71cadbed760f4c8319ae48e">&#9670;&nbsp;</a></span>ExportEntities()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,14 +185,20 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">async Task&lt;ActionResult&lt;string&gt; &gt; AdeNote.Infrastructure.Services.ExcelService.ExportEntities </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>sheetName</em>, </td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>userId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Guid&#160;</td>
-          <td class="paramname"><em>userId</em>&#160;</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>extensionType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sheetName</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -196,17 +208,55 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExcel.html#a9e3e61d3108291d6553598b5ae54efa7">AdeNote.Infrastructure.Services.IExcel</a>.</p>
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExcel.html#ac2e98fd5e9f88b00e4c6fdc84f1e4f70">AdeNote.Infrastructure.Services.IExcel</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ExcelService_8cs_source.html#l00016">16</a> of file <a class="el" href="ExcelService_8cs_source.html">ExcelService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ExcelService_8cs_source.html#l00018">18</a> of file <a class="el" href="ExcelService_8cs_source.html">ExcelService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService_a45ad3289b55c804fbf971e0bfd1c358a_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService_a45ad3289b55c804fbf971e0bfd1c358a_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService_a45ad3289b55c804fbf971e0bfd1c358a_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService_a45ad3289b55c804fbf971e0bfd1c358a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,39,239,80"/>
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService_a83ffc592e71cadbed760f4c8319ae48e_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService_a83ffc592e71cadbed760f4c8319ae48e_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService_a83ffc592e71cadbed760f4c8319ae48e_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService_a83ffc592e71cadbed760f4c8319ae48e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,71,239,112"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html#a4aea73feecfcdd8a59060cb1f64adba5" title="Get all books" alt="" coords="287,5,520,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html#ac437423f3aff6fde40384c57b7722b0b" title="Uploads image" alt="" coords="287,71,520,112"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html#a37fbe81d7bf5aff2002d043e0087217e" title=" " alt="" coords="287,71,520,112"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html#ac437423f3aff6fde40384c57b7722b0b" title="Uploads image" alt="" coords="287,136,520,177"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a37fbe81d7bf5aff2002d043e0087217e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37fbe81d7bf5aff2002d043e0087217e">&#9670;&nbsp;</a></span>GetMimeType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8">MimeType</a> AdeNote.Infrastructure.Services.ExcelService.GetMimeType </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>extensionType</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ExcelService_8cs_source.html#l00087">87</a> of file <a class="el" href="ExcelService_8cs_source.html">ExcelService.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService_a37fbe81d7bf5aff2002d043e0087217e_icgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService_a37fbe81d7bf5aff2002d043e0087217e_icgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService_a37fbe81d7bf5aff2002d043e0087217e_icgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService_a37fbe81d7bf5aff2002d043e0087217e_icgraph">
+<area shape="rect" title=" " alt="" coords="287,5,520,47"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html#a83ffc592e71cadbed760f4c8319ae48e" title=" " alt="" coords="5,5,239,47"/>
 </map>
 </div>
 
@@ -230,7 +280,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExcel.html#a7115b2aced887a7f3c34e38c09e219a8">AdeNote.Infrastructure.Services.IExcel</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ExcelService_8cs_source.html#l00046">46</a> of file <a class="el" href="ExcelService_8cs_source.html">ExcelService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ExcelService_8cs_source.html#l00057">57</a> of file <a class="el" href="ExcelService_8cs_source.html">ExcelService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -264,7 +314,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelService_8cs_source.html#l00071">71</a> of file <a class="el" href="ExcelService_8cs_source.html">ExcelService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ExcelService_8cs_source.html#l00117">117</a> of file <a class="el" href="ExcelService_8cs_source.html">ExcelService.cs</a>.</p>
 
 </div>
 </div>
@@ -288,12 +338,12 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelService_8cs_source.html#l00069">69</a> of file <a class="el" href="ExcelService_8cs_source.html">ExcelService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ExcelService_8cs_source.html#l00115">115</a> of file <a class="el" href="ExcelService_8cs_source.html">ExcelService.cs</a>.</p>
 
 </div>
 </div>
-<a id="ad099e041d76e72fdad8b1ec7fb40d5ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad099e041d76e72fdad8b1ec7fb40d5ea">&#9670;&nbsp;</a></span>_excelService</h2>
+<a id="ac92d6c07b568c6c5afc670bfe8378b76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac92d6c07b568c6c5afc670bfe8378b76">&#9670;&nbsp;</a></span>_excelifyFactory</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -302,7 +352,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly IExcelService AdeNote.Infrastructure.Services.ExcelService._excelService</td>
+          <td class="memname">readonly ExcelifyFactory AdeNote.Infrastructure.Services.ExcelService._excelifyFactory</td>
         </tr>
       </table>
   </td>
@@ -312,7 +362,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelService_8cs_source.html#l00067">67</a> of file <a class="el" href="ExcelService_8cs_source.html">ExcelService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ExcelService_8cs_source.html#l00113">113</a> of file <a class="el" href="ExcelService_8cs_source.html">ExcelService.cs</a>.</p>
 
 </div>
 </div>

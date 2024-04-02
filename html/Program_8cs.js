@@ -30,7 +30,7 @@ var Program_8cs =
     [ "AddScoped< IUserDetailRepository, UserDetailRepository >", "Program_8cs.html#a473ec7d92eea3341b9fd2930e078441a", null ],
     [ "AddScoped< IUserIdentity, UserIdentity >", "Program_8cs.html#a593dcece7e88799b44223cbf77baf6cf", null ],
     [ "AddScoped< IUserService, UserService >", "Program_8cs.html#afe1a29a5ec8f2a434f1f355de71764d5", null ],
-    [ "AddSingleton", "Program_8cs.html#a4bfd26f3bb01ded72ccc4d64ed5e1d4b", null ],
+    [ "AddSingleton", "Program_8cs.html#a082f7551c9eee18ddd0aee67c85591a6", null ],
     [ "AddSwaggerGen", "Program_8cs.html#ab75edc3b5613643a6f0a45dff585da82", null ],
     [ "AddTransient", "Program_8cs.html#afe6b32dede42ac9dd3b353f5e40ba9c2", null ],
     [ "AddVersionedApiExplorer", "Program_8cs.html#a7e9516f964e2ac48d7166a1c132b7723", null ],

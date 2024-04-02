@@ -1,5 +1,0 @@
-<map id="AdeNote.Infrastructure.Services.ExcelService.ExportEntities" name="AdeNote.Infrastructure.Services.ExcelService.ExportEntities">
-<area shape="rect" id="node1" title=" " alt="" coords="5,39,239,80"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html#a4aea73feecfcdd8a59060cb1f64adba5" title="Get all books" alt="" coords="287,5,520,47"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html#ac437423f3aff6fde40384c57b7722b0b" title="Uploads image" alt="" coords="287,71,520,112"/>
-</map>
