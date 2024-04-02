@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Services.AuthService.SetPhoneNumber" name="AdeNote.Infrastructure.Services.AuthService.SetPhoneNumber">
+<area shape="rect" id="node1" title="Sets phone number verification" alt="" coords="5,39,239,80"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#af7cfac5b470f7e8886c0335122bdd817" title="Saves a new entity" alt="" coords="287,5,533,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html#a176aad07e5b285362d6f833fa83397d0" title="Sends sms" alt="" coords="293,71,527,112"/>
+</map>
