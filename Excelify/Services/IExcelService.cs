@@ -12,7 +12,6 @@ namespace Excelify.Services
         byte[] ExportToBytes<T>(IEntityExport<T> dataExport) where T : class;
         Stream ExportToStream<T>(IEntityExport<T> dataExport) where T : class;
         DataTable ImportToTable(IImportSheet sheet);
-       // void SetSheetName(int sheetName);
         bool CanImportSheet(string extensionType);
     }
 }
