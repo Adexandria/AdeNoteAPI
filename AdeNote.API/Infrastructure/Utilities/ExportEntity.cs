@@ -3,7 +3,7 @@ using Excelify.Models;
 
 namespace AdeNote.Infrastructure.Utilities
 {
-    public class ExportEntity : IEntityExport<BookDTO>
+    public class ExportEntity : ISheetExport<BookDTO>
     {
         public string SheetName { get; set ; }
         public IList<BookDTO> Entities { get; set ; }

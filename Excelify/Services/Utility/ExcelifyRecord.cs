@@ -14,6 +14,23 @@ namespace Excelify.Services.Utility
             {
                  throw new NullReferenceException(errorMessage);
             }
+            if (propertyInfo[0].GetCustomAttributes(false).FirstOrDefault() is TAttribute attribute)
+            {
+                return attribute.Description;
+            }
+            else
+            {
+                return value.ToString();
+            }
+        }
+
+        public static string GetDescription(this Enum value)
+        {
+            var propertyInfo = value.GetType().GetMember(value.ToString());
+            if (propertyInfo.Length == 0)
+            {
+                throw new NullReferenceException(errorMessage);
+            }
             if (propertyInfo[0].GetCustomAttributes(false).FirstOrDefault() is DescriptionAttribute attribute)
             {
                 return attribute.Description;

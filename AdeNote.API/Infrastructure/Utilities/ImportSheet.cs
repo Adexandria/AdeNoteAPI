@@ -2,7 +2,7 @@
 
 namespace AdeNote.Infrastructure.Utilities
 {
-    public class ImportSheet : IImportSheet
+    public class ImportSheet : ISheetImport
     {
         public ImportSheet(Stream file, int sheetName)
         {

@@ -2,7 +2,6 @@
 using Excelify.Services.Extensions;
 using Excelify.Services.Utility;
 using Excelify.Services.Utility.Attributes;
-using System.ComponentModel;
 using System.Data;
 
 namespace Excelify.Services
@@ -19,13 +18,13 @@ namespace Excelify.Services
             if (string.IsNullOrEmpty(extensionType))
                 throw new ArgumentNullException(nameof(extensionType), "Extension type can not be empty");
 
-            return extensionType.Equals(ExtensionType.xls.GetDescription<DescriptionAttribute>()) ||
-                extensionType.Equals(ExtensionType.xlsx.GetDescription<DescriptionAttribute>()) 
+            return extensionType.Equals(ExtensionType.xls.GetDescription()) ||
+                extensionType.Equals(ExtensionType.xlsx.GetDescription()) 
                 || extensionType.Equals(ExtensionType.xls.ToString()) 
                 || extensionType.Equals(ExtensionType.xlsx.ToString());
         }
 
-        public override DataTable ImportToTable(IImportSheet sheet)
+        public override DataTable ImportToTable(ISheetImport sheet)
         {
             if (sheet == null)
                 throw new ArgumentNullException(nameof(sheet), "sheet can not be null");
@@ -33,7 +32,7 @@ namespace Excelify.Services
             return sheet.ExtractSheetValues();
         }
 
-        public override IList<T> ImportToEntity<T>(IImportSheet sheet)
+        public override IList<T> ImportToEntity<T>(ISheetImport sheet)
         {
             if (sheet == null)
                 throw new ArgumentNullException(nameof(sheet), "sheet can not be null");
@@ -43,7 +42,7 @@ namespace Excelify.Services
             return entities;
         }
 
-        public override IList<T> ImportToEntity<T>(IImportSheet sheet, IExcelMapper excelifyMapper)
+        public override IList<T> ImportToEntity<T>(ISheetImport sheet, IExcelMapper excelifyMapper)
         {
             if (sheet == null)
                 throw new ArgumentNullException(nameof(sheet), "sheet can not be null");
@@ -56,7 +55,7 @@ namespace Excelify.Services
             return entities;
         }
 
-        public override byte[] ExportToBytes<T>(IEntityExport<T> dataExport)
+        public override byte[] ExportToBytes<T>(ISheetExport<T> dataExport)
         {
             var extractedAttributes = ExcelifyRecord.GetAttributeProperty<ExcelifyAttribute, T>();
 
@@ -69,7 +68,7 @@ namespace Excelify.Services
             return memoryStream.ToArray();
         }
 
-        public override Stream ExportToStream<T>(IEntityExport<T> dataExport)
+        public override Stream ExportToStream<T>(ISheetExport<T> dataExport)
         {
             var extractedAttributes = ExcelifyRecord.GetAttributeProperty<ExcelifyAttribute, T>();
 

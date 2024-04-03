@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace Excelify.Models
 {
+    /// <summary>
+    /// Specifies the extension type of the file
+    /// </summary>
     public enum ExtensionType
     {
         [Description("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")]
         xlsx,
+
         [Description("application/vnd.ms-excel")]
         xls,
+
         [Description("text/csv")]
         csv
     }
