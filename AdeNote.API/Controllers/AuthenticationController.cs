@@ -526,9 +526,11 @@ namespace AdeNote.Controllers
 
             var accessToken = _authToken.GenerateAccessToken(detailsResponse.Data.UserId, detailsResponse.Data.Email);
 
-            SendNotification(detailsResponse.Data.Email);
-
             AddToCookie("AdeNote-RefreshToken", detailsResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
+
+           // SendNotification(detailsResponse.Data.Email);
+
+            
 
             return TasksLibrary.Utilities.ActionResult<string>.SuccessfulOperation(accessToken).Response();
         }

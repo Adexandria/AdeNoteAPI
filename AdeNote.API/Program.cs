@@ -3,6 +3,7 @@ using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Services;
 using AdeNote.Infrastructure.Utilities;
+using DocBuilder.Services;
 using Excelify.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
@@ -101,6 +102,9 @@ builder.Services.AddScoped<IUserService,UserService>();
 builder.Services.AddScoped((_)=> new AuthTokenRepository(tokenSecret));
 builder.Services.AddScoped<IPasswordManager,PasswordManager>();
 builder.Services.AddScoped<IExcel, AdeNote.Infrastructure.Services.ExcelService>();
+builder.Services.AddScoped<IExportService, ExportService>();
+builder.Services.AddScoped<IWordService,WordService>();
+builder.Services.AddScoped((_) => DocFactory.CreateService());
 
 builder.Services.AddSingleton((_) => new ExcelifyFactory());
 

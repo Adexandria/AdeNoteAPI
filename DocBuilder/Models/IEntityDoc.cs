@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Excelify.Models
+namespace DocBuilder.Models
 {
-    public interface IImportSheet
+    public interface IEntityDoc<T>: IBaseDoc
     {
-       Stream File { get; set; }
-       int SheetName { get; set; }
+        public IList<T> Entities { get; set; }
     }
 }

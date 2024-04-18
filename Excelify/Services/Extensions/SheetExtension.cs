@@ -1,6 +1,7 @@
 ﻿using Excelify.Models;
 using Excelify.Services.Utility;
 using Microsoft.VisualBasic.FileIO;
+using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using System.Data;
@@ -8,21 +9,39 @@ using System.Reflection;
 
 namespace Excelify.Services.Extensions
 {
+    /// <summary>
+    /// Extensions method only available to excelify
+    /// </summary>
     internal static class SheetExtension
     {
-        public static DataTable ExtractSheetValues(this IImportSheet excelSheet)
+        /// <summary>
+        /// Extracts values from xls or xlsx sheet
+        /// </summary>
+        /// <param name="excelSheet">A model used to import sheet</param>
+        /// <returns>Extracted values in table format</returns>
+        public static DataTable ExtractSheetValues(this ISheetImport excelSheet,string extensionType)
         {
             ISheet sheet;
 
             DataTable table = new();
 
             List<string> rowList = new();
+            IWorkbook workBook;
 
-            XSSFWorkbook workBook = new(excelSheet.File)
+            if(ExtensionType.xls.ToString() == extensionType || ExtensionType.xls.GetDescription() == extensionType)
             {
-                MissingCellPolicy = MissingCellPolicy.RETURN_NULL_AND_BLANK
-            };
-
+                workBook = new HSSFWorkbook(excelSheet.File)
+                {
+                    MissingCellPolicy = MissingCellPolicy.RETURN_NULL_AND_BLANK
+                };
+            }
+            else
+            {
+                workBook = new XSSFWorkbook(excelSheet.File)
+                {
+                    MissingCellPolicy = MissingCellPolicy.RETURN_NULL_AND_BLANK
+                };
+            }
             sheet = workBook.GetSheetAt(excelSheet.SheetName);
 
             IRow headerRow = sheet.GetRow(0);
@@ -56,7 +75,13 @@ namespace Excelify.Services.Extensions
             return table;
         }
 
-        public static DataTable ExtractCsvValues(this IImportSheet excelSheet)
+        /// <summary>
+        /// Extracts values from csv sheet
+        /// </summary>
+        /// <param name="excelSheet">Excel sheet to extract values from</param>
+        /// <returns>Extracted values in table format</returns>
+        /// <exception cref="Exception"></exception>
+        public static DataTable ExtractCsvValues(this ISheetImport excelSheet)
         {
             DataTable table = new();
 
@@ -86,9 +111,25 @@ namespace Excelify.Services.Extensions
             return table;
         }
 
-        public static XSSFWorkbook CreateSheet<T>(this IEntityExport<T> dataExport, List<ExcelifyProperty> extractedAttributes)
+        /// <summary>
+        /// Create xlsx or xls sheet and insert values
+        /// </summary>
+        /// <typeparam name="T">Entity type</typeparam>
+        /// <param name="dataExport">Entities to export</param>
+        /// <param name="extractedAttributes">Properties to extract</param>
+        /// <returns>Workbook</returns>
+        public static IWorkbook CreateSheet<T>(this ISheetExport<T> dataExport, List<ExcelifyProperty> extractedAttributes,string extensionType)
         {
-            var workBook = new XSSFWorkbook();
+            IWorkbook workBook;
+
+            if (ExtensionType.xls.ToString() == extensionType || ExtensionType.xls.GetDescription() == extensionType)
+            {
+                workBook = new HSSFWorkbook();
+            }
+            else
+            {
+                workBook = new XSSFWorkbook();
+            }
             var workSheet = workBook.CreateSheet(dataExport.SheetName);
             var headerRow = workSheet.CreateRow(0);
             for (int i = 0; i < extractedAttributes.Count; i++)
@@ -98,7 +139,7 @@ namespace Excelify.Services.Extensions
                     headerRow.CreateCell(value, CellType.String)
                        .SetCellValue(extractedAttributes[i].PropertyName);
                     InsertValues(workSheet, dataExport.Entities,
-                        extractedAttributes[i].PropertyName, i);
+                        extractedAttributes[i].PropertyName, value);
                 }
                 else
                 {
@@ -107,22 +148,44 @@ namespace Excelify.Services.Extensions
                     InsertValues(workSheet, dataExport.Entities,
                        extractedAttributes[i].PropertyName, i);
                 }
+
+                workSheet.AutoSizeColumn(i);
             }
 
             return workBook;
         }
 
-        public static Stream CreateCsvSheet<T>(this IEntityExport<T> dataExport, List<ExcelifyProperty> extractedAttributes)
+        /// <summary>
+        /// Creates Csv sheet and insert values
+        /// </summary>
+        /// <typeparam name="T">Entity type</typeparam>
+        /// <param name="dataExport">Entities to export</param>
+        /// <param name="extractedAttributes">Properties to extract</param>
+        /// <returns>Stream of inserted data</returns>
+        public static Stream CreateCsvSheet<T>(this ISheetExport<T> dataExport, List<ExcelifyProperty> extractedAttributes)
         {
             return WriteToCsv(dataExport, extractedAttributes);
-        } 
+        }
 
-        public static byte[] CreateCsvBytes<T>(this IEntityExport<T> dataExport, List<ExcelifyProperty> extractedAttributes)
+        /// <summary>
+        /// Creates Csv sheet and insert values
+        /// </summary>
+        /// <typeparam name="T">Entity type</typeparam>
+        /// <param name="dataExport">Entities to export</param>
+        /// <param name="extractedAttributes">Properties to extract</param>
+        /// <returns>bytes array of data</returns>
+        public static byte[] CreateCsvBytes<T>(this ISheetExport<T> dataExport, List<ExcelifyProperty> extractedAttributes)
         {
             var ms = WriteToCsv(dataExport, extractedAttributes);
             return ms.ToArray();
         }
 
+        /// <summary>
+        /// Writes byte array of data to file
+        /// </summary>
+        /// <param name="workbook">Values to write</param>
+        /// <param name="path">Path to staore file</param>
+        /// <exception cref="ArgumentNullException"></exception>
         public static void WriteToFile(this byte[] workbook, string path)
         {
             if (string.IsNullOrEmpty(path) || string.IsNullOrWhiteSpace(path))
@@ -135,7 +198,14 @@ namespace Excelify.Services.Extensions
             fileStream.Write(workbook, 0, workbook.Length);
         }
 
-        private static MemoryStream WriteToCsv<T>(IEntityExport<T> dataExport, List<ExcelifyProperty> extractedAttributes)
+        /// <summary>
+        /// Insert values into csv format
+        /// </summary>
+        /// <typeparam name="T">Entity type</typeparam>
+        /// <param name="dataExport">Entities to export</param>
+        /// <param name="extractedAttributes">Properties to extract</param>
+        /// <returns>Strean of data</returns>
+        private static MemoryStream WriteToCsv<T>(ISheetExport<T> dataExport, List<ExcelifyProperty> extractedAttributes)
         {
             var ms = new MemoryStream();
             using var writer = new StreamWriter(ms, null, -1, true);
@@ -168,6 +238,14 @@ namespace Excelify.Services.Extensions
             return ms;
         }
 
+        /// <summary>
+        /// Insert values into csv columns
+        /// </summary>
+        /// <typeparam name="T">Type of entity</typeparam>
+        /// <param name="writer">Writes data into stream</param>
+        /// <param name="entity">Enity to extract values from</param>
+        /// <param name="propertyInfos">Property of entity</param>
+        /// <param name="left">number of interation</param>
         private static void WriteToCsvColumns<T>(StreamWriter writer, T entity, List<PropertyInfo> propertyInfos, int left = 0)
         {
             if(left < propertyInfos.Count)
@@ -186,63 +264,81 @@ namespace Excelify.Services.Extensions
             }
         }
 
-        private static void InsertValues<T>(ISheet sheet, IList<T> entities, string propertyName, int cellNumber, int rowNumber = 1)
+
+        /// <summary>
+        /// Insert values into xlsx or xls sheet
+        /// </summary>
+        /// <typeparam name="T">Type of entity</typeparam>
+        /// <param name="sheet">Sheet to insert into</param>
+        /// <param name="entities">Entities to extract values from</param>
+        /// <param name="propertyName">Name of the propery to extract</param>
+        /// <param name="columnNumber">Current column number</param>
+        /// <param name="rowNumber">Current row number</param>
+        private static void InsertValues<T>(ISheet sheet, IList<T> entities, string propertyName, int columnNumber, int rowNumber = 1)
         {
             if (rowNumber <= entities.Count)
             {
-                var column = sheet.GetRow(rowNumber) ?? sheet.CreateRow(rowNumber);
+                var row = sheet.GetRow(rowNumber) ?? sheet.CreateRow(rowNumber);
                 var entity = entities[rowNumber - 1];
                 var property = entity?.GetType().GetProperty(propertyName);
                 if (property == null)
                 {
                     return;
                 }
-                var row = column.CreateCell(cellNumber);
+                var column = row.CreateCell(columnNumber);
 
                 switch (property.PropertyType )
                 {
                     case Type when property.PropertyType == typeof(int) :
 
-                        row.SetCellType(CellType.Numeric);
-                            row.SetCellValue((int)property.GetValue(entity));
+                        column.SetCellType(CellType.Numeric);
+                        column.SetCellValue((int)property.GetValue(entity));
                     break;
 
                     case Type when property.PropertyType == typeof(double):
-                        row.SetCellType(CellType.Numeric);
-                         row.SetCellValue((double)property.GetValue(entity));
+                        column.SetCellType(CellType.Numeric);
+                         column.SetCellValue((double)property.GetValue(entity));
                     break;
 
                     case Type when property.PropertyType == typeof(DateTime):
                         var value = (DateTime)property.GetValue(entity);
 
-                        row.SetCellType(CellType.String);
-                            row.SetCellValue(value.ToString());
+                        column.SetCellType(CellType.String);
+                            column.SetCellValue(value.ToString());
                         break;
 
                     case Type when property.PropertyType == typeof(bool):
-                        row.SetCellType(CellType.Boolean);
-                             row.SetCellValue((bool)property.GetValue(entity));
+                        column.SetCellType(CellType.Boolean);
+                             column.SetCellValue((bool)property.GetValue(entity));
                         break;
 
                     case Type when property.PropertyType == typeof(Guid):
                          var guid = (Guid)property.GetValue(entity);
 
-                        row.SetCellType(CellType.String);
-                        row.SetCellValue(guid.ToString("N"));
+                        column.SetCellType(CellType.String);
+                        column.SetCellValue(guid.ToString("N"));
                     break;
 
                     default:
-                        row.SetCellType(CellType.String);
-                        row.SetCellValue((string)property.GetValue(entity));
+                        column.SetCellType(CellType.String);
+                        column.SetCellValue((string)property.GetValue(entity));
                         break;
                 }
-
+                sheet.AutoSizeColumn(columnNumber);
+               
                 rowNumber++;
 
-                InsertValues(sheet, entities, propertyName, cellNumber, rowNumber);
+                InsertValues(sheet, entities, propertyName, columnNumber, rowNumber);
             }
         }
 
+        /// <summary>
+        /// Extract column values from row
+        /// </summary>
+        /// <param name="row">Current row to extract</param>
+        /// <param name="rowNumber">Current row number</param>
+        /// <param name="numberOfCells">Number of cells</param>
+        /// <param name="rowList">List of extracted rows</param>
         private static void ExtractColumnValues(IRow row, int rowNumber, int numberOfCells, List<string> rowList)
         {
             if (rowNumber < numberOfCells)

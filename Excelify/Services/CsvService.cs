@@ -21,22 +21,22 @@ namespace Excelify.Services
                 throw new ArgumentNullException(nameof(extensionType), "Extension type can not be empty");
 
            return ExtensionType.csv.ToString() == extensionType
-                || extensionType.Equals(ExtensionType.csv.GetDescription<DescriptionAttribute>());
+                || extensionType.Equals(ExtensionType.csv.GetDescription());
         }
 
-        public override byte[] ExportToBytes<T>(IEntityExport<T> dataExport)
+        public override byte[] ExportToBytes<T>(ISheetExport<T> dataExport)
         {
             var extractedAttributes = ExcelifyRecord.GetAttributeProperty<ExcelifyAttribute, T>();
             return dataExport.CreateCsvBytes(extractedAttributes);
         }
 
-        public override Stream ExportToStream<T>(IEntityExport<T> dataExport)
+        public override Stream ExportToStream<T>(ISheetExport<T> dataExport)
         {
             var extractedAttributes = ExcelifyRecord.GetAttributeProperty<ExcelifyAttribute, T>();
             return dataExport.CreateCsvSheet(extractedAttributes);
         }
 
-        public override DataTable ImportToTable(IImportSheet sheet)
+        public override DataTable ImportToTable(ISheetImport sheet)
         {
             if (sheet == null)
                 throw new ArgumentNullException(nameof(sheet), "sheet can not be null");
@@ -44,7 +44,7 @@ namespace Excelify.Services
             return sheet.ExtractCsvValues();
         }
 
-        public override IList<T> ImportToEntity<T>(IImportSheet sheet)
+        public override IList<T> ImportToEntity<T>(ISheetImport sheet)
         {
             if (sheet == null)
                 throw new ArgumentNullException(nameof(sheet), "sheet can not be null");
@@ -55,7 +55,7 @@ namespace Excelify.Services
 
         }
 
-        public override IList<T> ImportToEntity<T>(IImportSheet sheet, IExcelMapper excelifyMapper)
+        public override IList<T> ImportToEntity<T>(ISheetImport sheet, IExcelMapper excelifyMapper)
         {
             if (sheet == null)
                 throw new ArgumentNullException(nameof(sheet), "sheet can not be null");

@@ -28,5 +28,12 @@ namespace AdeNote.Infrastructure.Services
         /// <param name="fileName">file name</param>
         /// <returns>html</returns>
         Task<string> DownloadImage(string fileName, MimeType mimeType = MimeType.html);
+
+        /// <summary>
+        /// Downloads image
+        /// </summary>
+        /// <param name="fileName">file name</param>
+        /// <returns>html</returns>
+        Task<Stream> DownloadStream(string fileName, MimeType mimeType = MimeType.html);
     }
 }
