@@ -51,14 +51,14 @@ var hierarchy =
     [ "AdeNote.Infrastructure.Services.IEmailService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html", [
       [ "AdeNote.Infrastructure.Services.EmailService", "classAdeNote_1_1Infrastructure_1_1Services_1_1EmailService.html", null ]
     ] ],
-    [ "IEntityExport", null, [
-      [ "AdeNote.Infrastructure.Utilities.ExportEntity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExportEntity.html", null ]
+    [ "IEntityDoc", null, [
+      [ "AdeNote.Infrastructure.Utilities.EntityDoc< T >", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Services.IExcel", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExcel.html", [
       [ "AdeNote.Infrastructure.Services.ExcelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html", null ]
     ] ],
-    [ "IImportSheet", null, [
-      [ "AdeNote.Infrastructure.Utilities.ImportSheet", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet.html", null ]
+    [ "AdeNote.Infrastructure.Services.IExportService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExportService.html", [
+      [ "AdeNote.Infrastructure.Services.ExportService", "classAdeNote_1_1Infrastructure_1_1Services_1_1ExportService.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Repository.ILabelPageRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html", [
       [ "AdeNote.Infrastructure.Repository.LabelPageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html", null ]
@@ -99,6 +99,12 @@ var hierarchy =
         [ "AdeNote.Infrastructure.Repository.AuthRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html", null ]
       ] ]
     ] ],
+    [ "ISheetExport", null, [
+      [ "AdeNote.Infrastructure.Utilities.ExportEntity< T >", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExportEntity.html", null ]
+    ] ],
+    [ "ISheetImport", null, [
+      [ "AdeNote.Infrastructure.Utilities.ImportSheet", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet.html", null ]
+    ] ],
     [ "AdeNote.Infrastructure.Services.ISmsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html", [
       [ "AdeNote.Infrastructure.Services.SmsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html", null ]
     ] ],
@@ -110,6 +116,9 @@ var hierarchy =
     ] ],
     [ "AdeNote.Infrastructure.Services.IUserService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html", [
       [ "AdeNote.Infrastructure.Services.UserService", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html", null ]
+    ] ],
+    [ "AdeNote.Infrastructure.Services.IWordService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService.html", [
+      [ "AdeNote.Infrastructure.Services.WordService", "classAdeNote_1_1Infrastructure_1_1Services_1_1WordService.html", null ]
     ] ],
     [ "AdeNote.Models.DTOs.LabelCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO.html", null ],
     [ "AdeNote.Models.DTOs.LabelDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelDTO.html", null ],

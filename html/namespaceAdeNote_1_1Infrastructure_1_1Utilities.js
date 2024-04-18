@@ -4,6 +4,7 @@ var namespaceAdeNote_1_1Infrastructure_1_1Utilities =
     [ "Database", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database" ],
     [ "Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email" ],
     [ "EmailConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration" ],
+    [ "EntityDoc", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc" ],
     [ "ExportEntity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExportEntity.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExportEntity" ],
     [ "ImportSheet", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet" ],
     [ "IUserIdentity", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity" ],
@@ -24,6 +25,7 @@ var namespaceAdeNote_1_1Infrastructure_1_1Utilities =
       [ "html", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8afc35fdc70d5fc69d269883a822c7a53e", null ],
       [ "xlsx", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8abf3e2924dcba1c52da01b5eda1111b2b", null ],
       [ "xls", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8a018e2a13e58c535167ed37cf44316005", null ],
-      [ "csv", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8a628cb5675ff524f3e719b7aa2e88fe3f", null ]
+      [ "csv", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8a628cb5675ff524f3e719b7aa2e88fe3f", null ],
+      [ "docx", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8a0bbe36a9d5e37a03354db0aa6a94dd29", null ]
     ] ]
 ];

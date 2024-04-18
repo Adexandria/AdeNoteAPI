@@ -160,6 +160,12 @@ Functions</h2></td></tr>
 <tr class="separator:a049c44fc90f82b87e0ede9d1974b0b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cad9e4851b88551ca20788beba96b67"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a3cad9e4851b88551ca20788beba96b67">AddScoped&lt; IExcel, AdeNote.Infrastructure.Services.ExcelService &gt;</a> ()</td></tr>
 <tr class="separator:a3cad9e4851b88551ca20788beba96b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b4eaa1116a4ab8cdb1e3978353768ad"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a6b4eaa1116a4ab8cdb1e3978353768ad">AddScoped&lt; IExportService, ExportService &gt;</a> ()</td></tr>
+<tr class="separator:a6b4eaa1116a4ab8cdb1e3978353768ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a673eaa738d33f4152f6ad2fec6372729"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a673eaa738d33f4152f6ad2fec6372729">AddScoped&lt; IWordService, WordService &gt;</a> ()</td></tr>
+<tr class="separator:a673eaa738d33f4152f6ad2fec6372729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e2334791dff2a8a90d0d567fcbf0f5c"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a> ((_)=&gt; DocFactory.CreateService())</td></tr>
+<tr class="separator:a8e2334791dff2a8a90d0d567fcbf0f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a082f7551c9eee18ddd0aee67c85591a6"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a082f7551c9eee18ddd0aee67c85591a6">AddSingleton</a> ((_)=&gt; new ExcelifyFactory())</td></tr>
 <tr class="separator:a082f7551c9eee18ddd0aee67c85591a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad383931ac699cc34078df0532f159279"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ad383931ac699cc34078df0532f159279">AddDbContext&lt; NoteDbContext &gt;</a> (options=&gt; options .UseSqlServer(<a class="el" href="Program_8cs.html#a067cdd5f0fed6b2598fae7de8607e7da">connectionString</a>))</td></tr>
@@ -217,7 +223,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00018">18</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00019">19</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -403,8 +409,36 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a8e2334791dff2a8a90d0d567fcbf0f5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e2334791dff2a8a90d0d567fcbf0f5c">&#9670;&nbsp;</a></span>AddScoped() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">builder.Services. AddScoped </td>
+          <td>(</td>
+          <td class="paramtype">(_)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DocFactory.&#160;</td>
+          <td class="paramname"><em>CreateService</em>()&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a685cd6889432a4b5d84d66c0ae7df9b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a685cd6889432a4b5d84d66c0ae7df9b1">&#9670;&nbsp;</a></span>AddScoped()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a685cd6889432a4b5d84d66c0ae7df9b1">&#9670;&nbsp;</a></span>AddScoped() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -438,7 +472,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html">IAuthRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html">AuthRepository</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html">IAuthRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html">AuthRepository</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -455,7 +489,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html">IAuthService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html">AuthService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html">IAuthService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html">AuthService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -472,7 +506,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html">IBlobService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html">BlobService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html">IBlobService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html">BlobService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -489,7 +523,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html">IBookRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html">BookRepository</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html">IBookRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html">BookRepository</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -506,7 +540,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html">IBookService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html">BookService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html">IBookService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html">BookService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -523,7 +557,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html">IEmailService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1EmailService.html">EmailService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html">IEmailService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1EmailService.html">EmailService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -540,7 +574,24 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExcel.html">IExcel</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html">AdeNote.Infrastructure.Services.ExcelService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExcel.html">IExcel</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html">AdeNote.Infrastructure.Services.ExcelService</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b4eaa1116a4ab8cdb1e3978353768ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b4eaa1116a4ab8cdb1e3978353768ad">&#9670;&nbsp;</a></span>AddScoped&lt; IExportService, ExportService &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExportService.html">IExportService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExportService.html">ExportService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -557,7 +608,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html">ILabelPageRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html">LabelPageRepository</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html">ILabelPageRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html">LabelPageRepository</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -574,7 +625,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html">ILabelRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository.html">LabelRepository</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html">ILabelRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository.html">LabelRepository</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -591,7 +642,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html">ILabelService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html">LabelService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html">ILabelService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html">LabelService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -608,7 +659,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html">INotificationService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html">NotificationService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html">INotificationService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html">NotificationService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -625,7 +676,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html">IPageRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html">PageRepository</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html">IPageRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html">PageRepository</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -642,7 +693,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html">IPageService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html">PageService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html">IPageService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html">PageService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -659,7 +710,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; IPasswordManager, PasswordManager &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; IPasswordManager, PasswordManager &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -676,7 +727,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html">ISmsService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html">SmsService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html">ISmsService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html">SmsService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -693,7 +744,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; ITaskApplication, TaskApplication &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; ITaskApplication, TaskApplication &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -710,7 +761,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser.html">IUser</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html">UserRepository</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser.html">IUser</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html">UserRepository</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -727,7 +778,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html">IUserDetailRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html">UserDetailRepository</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html">IUserDetailRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html">UserDetailRepository</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -744,7 +795,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html">IUserIdentity</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdentity.html">UserIdentity</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html">IUserIdentity</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdentity.html">UserIdentity</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -761,7 +812,24 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html">IUserService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html">UserService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html">IUserService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html">UserService</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a673eaa738d33f4152f6ad2fec6372729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a673eaa738d33f4152f6ad2fec6372729">&#9670;&nbsp;</a></span>AddScoped&lt; IWordService, WordService &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService.html">IWordService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1WordService.html">WordService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1060,7 +1128,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00149">149</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00153">153</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1076,7 +1144,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00146">146</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00150">150</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1092,7 +1160,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00022">22</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00023">23</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1108,7 +1176,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00020">20</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00021">21</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1124,7 +1192,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00021">21</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00022">22</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1140,7 +1208,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00024">24</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00025">25</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1156,7 +1224,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00030">30</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00031">31</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1172,7 +1240,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00027">27</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00028">28</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>

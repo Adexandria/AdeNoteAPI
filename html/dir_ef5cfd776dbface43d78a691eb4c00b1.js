@@ -14,6 +14,9 @@ var dir_ef5cfd776dbface43d78a691eb4c00b1 =
       [ "EmailConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration" ]
     ] ],
     [ "EmailTemplate.cs", "EmailTemplate_8cs.html", "EmailTemplate_8cs" ],
+    [ "EntityDoc.cs", "EntityDoc_8cs.html", [
+      [ "EntityDoc", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc" ]
+    ] ],
     [ "ExportEntity.cs", "ExportEntity_8cs.html", [
       [ "ExportEntity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExportEntity.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExportEntity" ]
     ] ],

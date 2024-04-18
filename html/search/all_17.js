@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['xls_460',['xls',['../namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8a018e2a13e58c535167ed37cf44316005',1,'AdeNote::Infrastructure::Utilities']]],
-  ['xlsx_461',['xlsx',['../namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8abf3e2924dcba1c52da01b5eda1111b2b',1,'AdeNote::Infrastructure::Utilities']]]
+  ['wordservice_475',['WordService',['../classAdeNote_1_1Infrastructure_1_1Services_1_1WordService.html',1,'AdeNote.Infrastructure.Services.WordService'],['../classAdeNote_1_1Infrastructure_1_1Services_1_1WordService.html#abd484832e7daaad695200424cdacade0',1,'AdeNote.Infrastructure.Services.WordService.WordService()']]],
+  ['wordservice_2ecs_476',['WordService.cs',['../WordService_8cs.html',1,'']]]
 ];
