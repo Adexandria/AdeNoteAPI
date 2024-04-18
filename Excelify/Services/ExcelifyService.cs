@@ -18,6 +18,8 @@ namespace Excelify.Services
             if (string.IsNullOrEmpty(extensionType))
                 throw new ArgumentNullException(nameof(extensionType), "Extension type can not be empty");
 
+            _extensionType = extensionType;
+
             return extensionType.Equals(ExtensionType.xls.GetDescription()) ||
                 extensionType.Equals(ExtensionType.xlsx.GetDescription()) 
                 || extensionType.Equals(ExtensionType.xls.ToString()) 
@@ -29,7 +31,7 @@ namespace Excelify.Services
             if (sheet == null)
                 throw new ArgumentNullException(nameof(sheet), "sheet can not be null");
 
-            return sheet.ExtractSheetValues();
+            return sheet.ExtractSheetValues(_extensionType);
         }
 
         public override IList<T> ImportToEntity<T>(ISheetImport sheet)
@@ -37,7 +39,7 @@ namespace Excelify.Services
             if (sheet == null)
                 throw new ArgumentNullException(nameof(sheet), "sheet can not be null");
 
-            var extractedValues = sheet.ExtractSheetValues();
+            var extractedValues = sheet.ExtractSheetValues(_extensionType);
             var entities = _excelifyMapper.Map<T>(extractedValues.Rows.OfType<DataRow>()).Result;
             return entities;
         }
@@ -50,7 +52,7 @@ namespace Excelify.Services
             if (excelifyMapper == null)
                 throw new ArgumentNullException(nameof(excelifyMapper), "Excel mapper can not be null");
 
-            var extractedValues = sheet.ExtractSheetValues();
+            var extractedValues = sheet.ExtractSheetValues(_extensionType);
             var entities = excelifyMapper.Map<T>(extractedValues.Rows.OfType<DataRow>()).Result;
             return entities;
         }
@@ -59,7 +61,7 @@ namespace Excelify.Services
         {
             var extractedAttributes = ExcelifyRecord.GetAttributeProperty<ExcelifyAttribute, T>();
 
-            var excelSheet = dataExport.CreateSheet(extractedAttributes);
+            var excelSheet = dataExport.CreateSheet(extractedAttributes,_extensionType);
 
             using var memoryStream = new MemoryStream();
 
@@ -72,7 +74,7 @@ namespace Excelify.Services
         {
             var extractedAttributes = ExcelifyRecord.GetAttributeProperty<ExcelifyAttribute, T>();
 
-            var excelSheet = dataExport.CreateSheet(extractedAttributes);
+            var excelSheet = dataExport.CreateSheet(extractedAttributes, _extensionType);
 
             var memoryStream = new MemoryStream();
 
@@ -84,5 +86,6 @@ namespace Excelify.Services
         }
 
         private readonly IExcelMapper _excelifyMapper;
+        private string _extensionType;
     }
 }

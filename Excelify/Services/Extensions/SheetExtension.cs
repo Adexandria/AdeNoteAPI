@@ -1,6 +1,7 @@
 ﻿using Excelify.Models;
 using Excelify.Services.Utility;
 using Microsoft.VisualBasic.FileIO;
+using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using System.Data;
@@ -18,19 +19,29 @@ namespace Excelify.Services.Extensions
         /// </summary>
         /// <param name="excelSheet">A model used to import sheet</param>
         /// <returns>Extracted values in table format</returns>
-        public static DataTable ExtractSheetValues(this ISheetImport excelSheet)
+        public static DataTable ExtractSheetValues(this ISheetImport excelSheet,string extensionType)
         {
             ISheet sheet;
 
             DataTable table = new();
 
             List<string> rowList = new();
+            IWorkbook workBook;
 
-            XSSFWorkbook workBook = new(excelSheet.File)
+            if(ExtensionType.xls.ToString() == extensionType || ExtensionType.xls.GetDescription() == extensionType)
             {
-                MissingCellPolicy = MissingCellPolicy.RETURN_NULL_AND_BLANK
-            };
-
+                workBook = new HSSFWorkbook(excelSheet.File)
+                {
+                    MissingCellPolicy = MissingCellPolicy.RETURN_NULL_AND_BLANK
+                };
+            }
+            else
+            {
+                workBook = new XSSFWorkbook(excelSheet.File)
+                {
+                    MissingCellPolicy = MissingCellPolicy.RETURN_NULL_AND_BLANK
+                };
+            }
             sheet = workBook.GetSheetAt(excelSheet.SheetName);
 
             IRow headerRow = sheet.GetRow(0);
@@ -107,9 +118,18 @@ namespace Excelify.Services.Extensions
         /// <param name="dataExport">Entities to export</param>
         /// <param name="extractedAttributes">Properties to extract</param>
         /// <returns>Workbook</returns>
-        public static XSSFWorkbook CreateSheet<T>(this ISheetExport<T> dataExport, List<ExcelifyProperty> extractedAttributes)
+        public static IWorkbook CreateSheet<T>(this ISheetExport<T> dataExport, List<ExcelifyProperty> extractedAttributes,string extensionType)
         {
-            var workBook = new XSSFWorkbook();
+            IWorkbook workBook;
+
+            if (ExtensionType.xls.ToString() == extensionType || ExtensionType.xls.GetDescription() == extensionType)
+            {
+                workBook = new HSSFWorkbook();
+            }
+            else
+            {
+                workBook = new XSSFWorkbook();
+            }
             var workSheet = workBook.CreateSheet(dataExport.SheetName);
             var headerRow = workSheet.CreateRow(0);
             for (int i = 0; i < extractedAttributes.Count; i++)
@@ -119,7 +139,7 @@ namespace Excelify.Services.Extensions
                     headerRow.CreateCell(value, CellType.String)
                        .SetCellValue(extractedAttributes[i].PropertyName);
                     InsertValues(workSheet, dataExport.Entities,
-                        extractedAttributes[i].PropertyName, i);
+                        extractedAttributes[i].PropertyName, value);
                 }
                 else
                 {
@@ -128,6 +148,8 @@ namespace Excelify.Services.Extensions
                     InsertValues(workSheet, dataExport.Entities,
                        extractedAttributes[i].PropertyName, i);
                 }
+
+                workSheet.AutoSizeColumn(i);
             }
 
             return workBook;
@@ -302,7 +324,8 @@ namespace Excelify.Services.Extensions
                         column.SetCellValue((string)property.GetValue(entity));
                         break;
                 }
-
+                sheet.AutoSizeColumn(columnNumber);
+               
                 rowNumber++;
 
                 InsertValues(sheet, entities, propertyName, columnNumber, rowNumber);
