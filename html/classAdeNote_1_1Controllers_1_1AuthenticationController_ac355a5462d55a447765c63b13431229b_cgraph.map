@@ -1,0 +1,5 @@
+<map id="AdeNote.Controllers.AuthenticationController.ResetPassword" name="AdeNote.Controllers.AuthenticationController.ResetPassword">
+<area shape="rect" id="node1" title="Reset password" alt="" coords="5,39,257,80"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a965ee83c4fe0cf6fd8499c8d40d908f3" title=" " alt="" coords="305,5,541,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aa9b04aa3f51038e46192d2af326b46d4" title=" " alt="" coords="307,71,540,112"/>
+</map>

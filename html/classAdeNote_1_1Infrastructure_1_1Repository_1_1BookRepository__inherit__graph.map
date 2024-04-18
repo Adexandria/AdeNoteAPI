@@ -1,0 +1,6 @@
+<map id="AdeNote.Infrastructure.Repository.BookRepository" name="AdeNote.Infrastructure.Repository.BookRepository">
+<area shape="rect" id="node1" title="Handles the persisting and querying of Book objects" alt="" coords="5,155,252,196"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title="Commits new and tracked changes in the objects" alt="" coords="16,80,108,107"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html" title="An interface that includes the behaviour of a book object" alt="" coords="132,80,261,107"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="117,5,276,32"/>
+</map>
