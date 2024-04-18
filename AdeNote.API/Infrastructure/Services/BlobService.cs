@@ -100,5 +100,24 @@ namespace AdeNote.Infrastructure.Services
 
             return data;
         }
+
+        /// <summary>
+        /// Downloads image
+        /// </summary>
+        /// <param name="fileName">file name</param>
+        /// <param name="mimeType">mime type of the file</param>
+        /// <returns>Html content</returns>
+        public async Task<Stream> DownloadStream(string fileName, MimeType mimeType)
+        {
+            var ms = new MemoryStream();
+            var blobUri = GenerateBlobUri(fileName, mimeType);
+            var storageCredentials = GenerateStorageCredentials();
+            var blobClient = new BlobClient(blobUri, storageCredentials);
+
+            await blobClient.DownloadToAsync(ms);
+
+            ms.Position = 0;
+            return ms;
+        }
     }
 }

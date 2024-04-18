@@ -1,55 +1,42 @@
-﻿using AdeNote.Infrastructure.Extension;
-using AdeNote.Infrastructure.Utilities;
+﻿using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models.DTOs;
 using Excelify.Services;
-using Microsoft.AspNetCore.Mvc.Versioning;
 using TasksLibrary.Utilities;
 
 namespace AdeNote.Infrastructure.Services
 {
     public class ExcelService : IExcel
     {
-        public ExcelService(ExcelifyFactory excelifyFactory, IBookService bookService, IBlobService blobService)
+        public ExcelService(ExcelifyFactory excelifyFactory, IBookService bookService)
         {
              _excelifyFactory = excelifyFactory;
             _bookService = bookService;
-            _blobService = blobService;
         }
-        public async Task<ActionResult<string>> ExportEntities(Guid userId, string extensionType,string sheetName)
+        public Stream ExportEntities<T>(string extensionType,string name,IEnumerable<T> entities) where T : class
         {
             var excelService = _excelifyFactory.CreateService(extensionType);
-            
+            Stream file;
             try
             {
-                if(excelService is ExcelifyService && string.IsNullOrEmpty(sheetName))
+                if(excelService is ExcelifyService && string.IsNullOrEmpty(name))
                 {
                     throw new ArgumentException("Sheet name is invalid");
                 }
 
-                if (_bookService.GetAll(userId).Result.Data is IEnumerable<BookDTO> currentBooks)
+                var exportEntity = new ExportEntity<T>()
                 {
-                    var exportEntity = new ExportEntity()
-                    {
-                        Entities = currentBooks.ToList(),
-                        SheetName = sheetName
-                    };
+                  Entities = entities.ToList(),
+                  SheetName = name
+                };
 
-                    var mime = GetMimeType(extensionType);
+                file = excelService.ExportToStream(exportEntity);
 
-                    var file = excelService.ExportToStream(exportEntity);
+                return file;
 
-                    var url = await _blobService.UploadImage("AdeNote", file, mime);
-
-                    return ActionResult<string>.SuccessfulOperation(url);
-                }
-                else
-                {
-                    return ActionResult<string>.Failed("Unable to export", StatusCodes.Status400BadRequest);
-                }
             }
-            catch (Exception ex)
+            catch (Exception ex )
             {
-                return ActionResult<string>.Failed("Failed to export");
+                throw new Exception(ex.Message,ex);
             }
         }
 
@@ -74,48 +61,16 @@ namespace AdeNote.Infrastructure.Services
                     return ActionResult.Successful();
                 }
 
-                return ActionResult.Failed("Failed to add books",StatusCodes.Status400BadRequest);
+                return ActionResult.Failed("Failed to add books", StatusCodes.Status400BadRequest);
             }
-            catch (Exception )
+            catch (Exception)
             {
                 return ActionResult.Failed("Failed to import");
-            }
-            
-        }
-
-        private MimeType GetMimeType(string extensionType)
-        {
-            if (Enum.TryParse(extensionType, true, out MimeType mimeType)) 
-            {
-                return mimeType;
-            }
-            else
-            {
-                switch(extensionType)
-                {
-                    case string when extensionType.Equals(MimeType.xls.GetDescription()):
-                        mimeType = MimeType.xls;
-                        break;
-                    case string when extensionType.Equals(MimeType.xlsx.GetDescription()):
-                        mimeType = MimeType.xlsx;
-                        break;
-                    case string when extensionType.Equals(MimeType.csv.GetDescription()):
-                        
-                        break;
-                    default:
-                        mimeType = MimeType.csv;
-                        break;
-                }
-
-                return mimeType;
-
             }
         }
 
         private readonly ExcelifyFactory _excelifyFactory;
 
         private readonly IBookService _bookService;
-
-        private readonly IBlobService _blobService;
     }
 }

@@ -7,6 +7,6 @@ namespace AdeNote.Infrastructure.Services
     {
         Task<ActionResult> ImportEntities(ImportBookDto importBookDto);
 
-        Task<ActionResult<string>> ExportEntities(Guid userId, string extensionType, string sheetName);
+        Stream ExportEntities<T>(string extensionType, string name, IEnumerable<T> entities) where T : class;
     }
 }

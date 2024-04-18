@@ -12,7 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{2B7AA170-0
 		Docs\AdeNote_Configuration.config = Docs\AdeNote_Configuration.config
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excelify", "Excelify\Excelify.csproj", "{71D46663-13B0-4C51-8765-00B38645C7BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excelify", "Excelify\Excelify.csproj", "{71D46663-13B0-4C51-8765-00B38645C7BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocBuilder", "DocBuilder\DocBuilder.csproj", "{FBF678ED-6D9C-462A-9D71-D57AE3F024E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{71D46663-13B0-4C51-8765-00B38645C7BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71D46663-13B0-4C51-8765-00B38645C7BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71D46663-13B0-4C51-8765-00B38645C7BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBF678ED-6D9C-462A-9D71-D57AE3F024E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBF678ED-6D9C-462A-9D71-D57AE3F024E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBF678ED-6D9C-462A-9D71-D57AE3F024E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBF678ED-6D9C-462A-9D71-D57AE3F024E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

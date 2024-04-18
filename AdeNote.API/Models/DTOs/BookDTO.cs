@@ -1,4 +1,5 @@
-﻿using Excelify.Services.Utility.Attributes;
+﻿using DocBuilder.Services.Utility.Attributes;
+using Excelify.Services.Utility.Attributes;
 
 namespace AdeNote.Models.DTOs
 {
@@ -12,6 +13,7 @@ namespace AdeNote.Models.DTOs
         /// Id of the book
         /// </summary>
         [Excelify("id")]
+        [DocRecord("id")]
         public Guid Id { get; set; }
 
 
@@ -19,6 +21,7 @@ namespace AdeNote.Models.DTOs
         /// Title of the book
         /// </summary>
         [Excelify("title")]
+        [DocRecord("title")]
         public string Title { get; set; }
 
 
@@ -26,6 +29,7 @@ namespace AdeNote.Models.DTOs
         /// Description of the book
         /// </summary>
         [Excelify("description")]
+        [DocRecord("description")]
         public string Description { get; set; }
 
         /// <summary>

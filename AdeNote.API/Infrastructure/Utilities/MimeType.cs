@@ -13,6 +13,8 @@ namespace AdeNote.Infrastructure.Utilities
         [Description("application/vnd.ms-excel")]
         xls,
         [Description("text/csv")]
-        csv
+        csv,
+        [Description("application/vnd.openxmlformats-officedocument.wordprocessingml.document")]
+        docx
     }
 }

@@ -2,7 +2,6 @@
 using AdeNote.Infrastructure.Services;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models.DTOs;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +20,7 @@ namespace AdeNote.Controllers
     public class BookController : BaseController
     {
         private readonly IBookService _bookService;
+        private readonly IExportService _exportService;
         private readonly IExcel _excelService;
 
         /// <summary>
@@ -29,9 +29,10 @@ namespace AdeNote.Controllers
         /// <param name="bookService">An interface that interacts with the book tables</param>
         /// <param name="userIdentity">An interface that interacts with the user.
         /// This fetches the current user details</param>
-        public BookController(IBookService bookService, IUserIdentity userIdentity, IExcel excelService) : base(userIdentity)
+        public BookController(IBookService bookService, IUserIdentity userIdentity, IExportService exportService, IExcel excelService) : base(userIdentity)
         {
             _bookService = bookService;
+            _exportService = exportService;
             _excelService = excelService;
         }
 
@@ -103,8 +104,12 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> ExportBooks(string sheetName, string extensionType)
         {
-           var response =  await _excelService.ExportEntities(CurrentUser, extensionType, sheetName);
-           return response.Response();
+            var bookResponse = await _bookService.GetAll(CurrentUser);
+            if (bookResponse.NotSuccessful)
+                return bookResponse.Response();
+
+            var response =  await _exportService.ExportEntities(extensionType, sheetName,bookResponse.Data);
+            return response.Response();
         }
 
 

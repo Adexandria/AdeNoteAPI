@@ -36,6 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DocBuilder\DocBuilder.csproj" />
     <ProjectReference Include="..\Excelify\Excelify.csproj" />
   </ItemGroup>
 
