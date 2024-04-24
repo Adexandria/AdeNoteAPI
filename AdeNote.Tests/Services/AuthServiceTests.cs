@@ -110,9 +110,9 @@ namespace AdeNote.Tests.Services
         [Test]
         public async Task ShouldCheckIfAuthenticatorEnabledSuccessfully()
         {
-            authRepository.Setup(s => s.GetAuthenticationType(It.IsAny<Guid>())).ReturnsAsync(new UserToken());
+            authRepository.Setup(s => s.GetAuthenticationType(It.IsAny<Guid>())).ReturnsAsync(new UserToken() { AuthenticationType = MFAType.sms});
 
-            var response = await authService.IsAuthenticatorEnabled(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"));
+            var response = await authService.IsAuthenticatorEnabled(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"), MFAType.sms);
 
             Assert.That(response.IsSuccessful, Is.True);
         }
@@ -121,7 +121,7 @@ namespace AdeNote.Tests.Services
         [TestCase("00000000-0000-0000-0000-000000000000", "Invalid user id")]
         public async Task ShouldFailToCheckIfAuthenticatorEnabled(Guid userId, string error)
         {
-            var response = await authService.IsAuthenticatorEnabled(userId);
+            var response = await authService.IsAuthenticatorEnabled(userId, MFAType.sms);
 
             Assert.That(response.IsSuccessful, Is.False);
             Assert.That(response.Errors[0], Is.EqualTo(error));
