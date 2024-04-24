@@ -662,6 +662,64 @@ namespace AdeNote.Controllers
             return response.Response();
         }
 
+
+        /// <summary>
+        /// Generates token to removes google or sms authenticator 
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// 
+        ///                 DELETE authentication/two-factor-authentication
+        /// </remarks>
+        /// <returns>Action result</returns>
+        /// <response code ="200"> Returns if multifactor authentication was disabled successful</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="404"> Returns if parameters not found</response>
+        /// <response code ="401"> Returns if unauthorised</response> 
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [AllowAnonymous]
+        [HttpGet("two-factor-authentication/recovery")]
+        public async Task<IActionResult> GenerateMFARemovalToken(string email)
+        {
+            var response = await _authService.GenerateMFAToken(email);
+            return response.Response();
+        }
+
+
+
+        /// <summary>
+        /// Removes google or sms authenticator using token
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// 
+        ///                 DELETE authentication/two-factor-authentication/verify-token
+        /// </remarks>
+        /// <returns>Action result</returns>
+        /// <response code ="200"> Returns if multifactor authentication was disabled successful</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="404"> Returns if parameters not found</response>
+        /// <response code ="401"> Returns if unauthorised</response> 
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [AllowAnonymous]
+        [HttpDelete("two-factor-authentication/verify-token")]
+        public async Task<IActionResult> RemoveAuthenicator([FromBody] string token)
+        {
+            var response = await _authService.DisableUserMFA(token);
+            return response.Response();
+        }
+
+
         /// <summary>
         /// Add data to cookie
         /// </summary>

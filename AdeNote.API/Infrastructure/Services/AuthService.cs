@@ -2,9 +2,9 @@
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
-using Autofac;
 using Google.Authenticator;
 using System.Text;
+using TasksLibrary.Models;
 using TasksLibrary.Services;
 using TasksLibrary.Utilities;
 
@@ -431,7 +431,32 @@ namespace AdeNote.Infrastructure.Services
                 return ActionResult<string>.Failed(ex.Message);
             }
         }
-        
+
+        public async Task<ActionResult<string>> GenerateMFAToken(string email)
+        {
+            if (string.IsNullOrEmpty(email))
+                return ActionResult<string>.Failed("Invalid email", StatusCodes.Status404NotFound);
+
+            var userAuthenticator = await authRepository.GetAuthenticationType(email);
+
+            if (userAuthenticator == null)
+                return ActionResult<string>.Failed("No email associated with a user", StatusCodes.Status400BadRequest);
+
+            var token = tokenRepository.GenerateAccessToken(userAuthenticator.UserId, email);
+
+            var substitutions = new Dictionary<string, string>()
+                {
+                    {"[Token]" , token }
+                };
+
+            _notificationService.SendNotification(new Email(email, "Multi-Factor Removal Token"),
+               EmailTemplate.MfaRmovalTokenNotification, ContentType.html, substitutions);
+
+            return ActionResult<string>.SuccessfulOperation(token);
+
+        }
+
+
         /// <summary>
         /// Revokes existing refresh token
         /// </summary>
@@ -520,6 +545,36 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
+
+        public async Task<ActionResult> DisableUserMFA(string token)
+        {
+            if (string.IsNullOrEmpty(token))
+                return ActionResult.Failed("Invalid token", StatusCodes.Status404NotFound);
+
+            var userDTO = tokenRepository.VerifyToken(token);
+
+            if (userDTO == null)
+                return ActionResult.Failed("Failed to verify token", StatusCodes.Status400BadRequest);
+
+            var authenticationType = await authRepository.GetAuthenticationType(userDTO.UserId);
+            if (authenticationType == null)
+                return ActionResult.Failed("MFA isn't enabled for user", StatusCodes.Status400BadRequest);
+
+            if (authenticationType.AuthenticationType == MFAType.google)
+            {
+                var isDeleted = await blobService.DeleteImage(authenticationType.AuthenticatorKey);
+                if (!isDeleted)
+                    return ActionResult.Failed("Failed to delete qr code");
+            }
+
+            var result = await authRepository.Remove(authenticationType);
+
+            if (!result)
+                return ActionResult.Failed("Failed to remove user token", StatusCodes.Status400BadRequest);
+
+            return ActionResult.Successful();
+        }
+
         public async Task<ActionResult<string>> GenerateResetToken(Guid userId, string email)
         {
             try
@@ -585,6 +640,7 @@ namespace AdeNote.Infrastructure.Services
                 return ActionResult<string>.Failed(ex.Message);
             }
         }
+
 
         /// <summary>
         /// Two factor authentication secret key
