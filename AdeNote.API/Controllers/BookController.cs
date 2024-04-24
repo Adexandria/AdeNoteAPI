@@ -102,7 +102,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<BookDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> ExportBooks(string sheetName, string extensionType)
+        public async Task<IActionResult> ExportBooks(string extensionType, string sheetName = "Adenote")
         {
             var bookResponse = await _bookService.GetAll(CurrentUser);
             if (bookResponse.NotSuccessful)
