@@ -1,7 +1,9 @@
 var interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService =
 [
     [ "DisableUserMFA", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a13e638232a86f7971f22c92466391299", null ],
+    [ "DisableUserMFA", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aacc053d60148ae97730156897feda292", null ],
     [ "GenerateMFAToken", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a9204433e7435394f8074ea1939e8e273", null ],
+    [ "GenerateMFAToken", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a777010bf07284b344981579b32dbd0ff", null ],
     [ "GenerateResetToken", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aea767e3bba531744d9d345053ea70641", null ],
     [ "GetUserQrCode", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a21e1eb6648b86c8f155f8b9e07b54c7f", null ],
     [ "IsAuthenticatorEnabled", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a45852fee82689b63764fd0575047c33b", null ],

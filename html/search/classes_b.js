@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['repository_563',['Repository',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html',1,'AdeNote::Infrastructure::Repository']]]
+  ['repository_567',['Repository',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html',1,'AdeNote::Infrastructure::Repository']]]
 ];

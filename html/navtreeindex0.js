@@ -61,6 +61,7 @@ var NAVTREEINDEX0 =
 "EmailService_8cs_source.html":[2,0,0,2,2,3],
 "EmailTemplate_8cs.html":[2,0,0,2,3,5],
 "EmailTemplate_8cs.html#aa7c8e05335ad88c8592fb2211f072980":[2,0,0,2,3,5,0],
+"EmailTemplate_8cs.html#aa7c8e05335ad88c8592fb2211f072980a3e61c33408ef4ada24bfb44694a10e78":[2,0,0,2,3,5,0,2],
 "EmailTemplate_8cs.html#aa7c8e05335ad88c8592fb2211f072980a5b7b8884265ce19d4d4bbac9e180cdb4":[2,0,0,2,3,5,0,1],
 "EmailTemplate_8cs.html#aa7c8e05335ad88c8592fb2211f072980a87b5b89994555b4260f7b28d27c87e7e":[2,0,0,2,3,5,0,0],
 "EmailTemplate_8cs_source.html":[2,0,0,2,3,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "SwaggerOptions_8cs.html":[2,0,0,2,0,3],
 "SwaggerOptions_8cs_source.html":[2,0,0,2,0,3],
 "UserDTO_8cs.html":[2,0,0,4,0,15],
-"UserDTO_8cs_source.html":[2,0,0,4,0,15],
-"UserDetailRepository_8cs.html":[2,0,0,2,1,14]
+"UserDTO_8cs_source.html":[2,0,0,4,0,15]
 };
