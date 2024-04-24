@@ -151,18 +151,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afef6b990e73d38f9d85dd12ae50dc5fc"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#afef6b990e73d38f9d85dd12ae50dc5fc">GetUserQrCode</a> (Guid userId)</td></tr>
 <tr class="memdesc:afef6b990e73d38f9d85dd12ae50dc5fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets user's Qr code  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#afef6b990e73d38f9d85dd12ae50dc5fc">More...</a><br /></td></tr>
 <tr class="separator:afef6b990e73d38f9d85dd12ae50dc5fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb4bd6f384e5e5cf4a1163bc442e1da0"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#acb4bd6f384e5e5cf4a1163bc442e1da0">IsAuthenticatorEnabled</a> (Guid userId)</td></tr>
-<tr class="memdesc:acb4bd6f384e5e5cf4a1163bc442e1da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if MFA has been enabled for the user using user id.  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#acb4bd6f384e5e5cf4a1163bc442e1da0">More...</a><br /></td></tr>
-<tr class="separator:acb4bd6f384e5e5cf4a1163bc442e1da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e87ff8d517e48bcef9329f04fada941"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a3e87ff8d517e48bcef9329f04fada941">IsAuthenticatorEnabled</a> (Guid userId, <a class="el" href="namespaceAdeNote_1_1Models.html#a59a9d6cd7df46cfb5727610aa214e751">MFAType</a> authenticatorType)</td></tr>
+<tr class="memdesc:a3e87ff8d517e48bcef9329f04fada941"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if MFA has been enabled for the user using user id.  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a3e87ff8d517e48bcef9329f04fada941">More...</a><br /></td></tr>
+<tr class="separator:a3e87ff8d517e48bcef9329f04fada941"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7406a88b21c76907b292a2be3d69fbf9"><td class="memItemLeft" align="right" valign="top">ActionResult&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a7406a88b21c76907b292a2be3d69fbf9">GenerateMFAToken</a> (Guid userId, string email, string refreshToken)</td></tr>
 <tr class="memdesc:a7406a88b21c76907b292a2be3d69fbf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates token when trying to log in using MFA  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a7406a88b21c76907b292a2be3d69fbf9">More...</a><br /></td></tr>
 <tr class="separator:a7406a88b21c76907b292a2be3d69fbf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a604d1ac3f35f8e0c23e8536faba99929"><td class="memItemLeft" align="right" valign="top">ActionResult&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO.html">DetailsDTO</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a604d1ac3f35f8e0c23e8536faba99929">ReadDetailsFromToken</a> (string token)</td></tr>
 <tr class="memdesc:a604d1ac3f35f8e0c23e8536faba99929"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the user details from the token  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a604d1ac3f35f8e0c23e8536faba99929">More...</a><br /></td></tr>
 <tr class="separator:a604d1ac3f35f8e0c23e8536faba99929"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae964889322355888d56108d856fc847b"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ae964889322355888d56108d856fc847b">IsAuthenticatorEnabled</a> (string email)</td></tr>
-<tr class="memdesc:ae964889322355888d56108d856fc847b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if MFA has been enabled for the user  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ae964889322355888d56108d856fc847b">More...</a><br /></td></tr>
-<tr class="separator:ae964889322355888d56108d856fc847b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a091ab4663efa0da11d61aa37d78b872b"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a091ab4663efa0da11d61aa37d78b872b">IsAuthenticatorEnabled</a> (string email, <a class="el" href="namespaceAdeNote_1_1Models.html#a59a9d6cd7df46cfb5727610aa214e751">MFAType</a> authenticatorType)</td></tr>
+<tr class="memdesc:a091ab4663efa0da11d61aa37d78b872b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if MFA has been enabled for the user  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a091ab4663efa0da11d61aa37d78b872b">More...</a><br /></td></tr>
+<tr class="separator:a091ab4663efa0da11d61aa37d78b872b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17fd9d9222dccac856699707c0338f78"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a17fd9d9222dccac856699707c0338f78">RevokeRefreshToken</a> (Guid userId, string refreshToken)</td></tr>
 <tr class="memdesc:a17fd9d9222dccac856699707c0338f78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revokes existing refresh token  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a17fd9d9222dccac856699707c0338f78">More...</a><br /></td></tr>
 <tr class="separator:a17fd9d9222dccac856699707c0338f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,6 +176,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5b0cd81d29252be914d6bb1c172370d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17b8d04b770daeeb3dddc9c6c654aa56"><td class="memItemLeft" align="right" valign="top">ActionResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a17b8d04b770daeeb3dddc9c6c654aa56">VerifyResetToken</a> (string token)</td></tr>
 <tr class="separator:a17b8d04b770daeeb3dddc9c6c654aa56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16abf13b8dbcb063bd07ade0b5ade4c2"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a16abf13b8dbcb063bd07ade0b5ade4c2">IsAuthenticatorEnabled</a> (string email)</td></tr>
+<tr class="memdesc:a16abf13b8dbcb063bd07ade0b5ade4c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if MFA has been enabled for the user using user id.  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a16abf13b8dbcb063bd07ade0b5ade4c2">More...</a><br /></td></tr>
+<tr class="separator:a16abf13b8dbcb063bd07ade0b5ade4c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -330,7 +333,7 @@ Public Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a13e638232a86f7971f22c92466391299">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00487">487</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00493">493</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -390,7 +393,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a9204433e7435394f8074ea1939e8e273">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00351">351</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00354">354</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -422,7 +425,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aea767e3bba531744d9d345053ea70641">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00517">517</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00523">523</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -466,8 +469,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="acb4bd6f384e5e5cf4a1163bc442e1da0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb4bd6f384e5e5cf4a1163bc442e1da0">&#9670;&nbsp;</a></span>IsAuthenticatorEnabled() <span class="overload">[1/2]</span></h2>
+<a id="a3e87ff8d517e48bcef9329f04fada941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e87ff8d517e48bcef9329f04fada941">&#9670;&nbsp;</a></span>IsAuthenticatorEnabled() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -476,8 +479,18 @@ Here is the call graph for this function:</div>
           <td class="memname">async Task&lt;ActionResult&gt; AdeNote.Infrastructure.Services.AuthService.IsAuthenticatorEnabled </td>
           <td>(</td>
           <td class="paramtype">Guid&#160;</td>
-          <td class="paramname"><em>userId</em></td><td>)</td>
+          <td class="paramname"><em>userId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="namespaceAdeNote_1_1Models.html#a59a9d6cd7df46cfb5727610aa214e751">MFAType</a>&#160;</td>
+          <td class="paramname"><em>authenticatorType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -490,14 +503,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a36d354e9f7aaad56ac5cc7b0c881e5be">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a45852fee82689b63764fd0575047c33b">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00324">324</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_acb4bd6f384e5e5cf4a1163bc442e1da0_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_acb4bd6f384e5e5cf4a1163bc442e1da0_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_acb4bd6f384e5e5cf4a1163bc442e1da0_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_acb4bd6f384e5e5cf4a1163bc442e1da0_cgraph">
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a3e87ff8d517e48bcef9329f04fada941_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a3e87ff8d517e48bcef9329f04fada941_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a3e87ff8d517e48bcef9329f04fada941_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a3e87ff8d517e48bcef9329f04fada941_cgraph">
 <area shape="rect" title="Checks if MFA has been enabled for the user using user id." alt="" coords="5,5,260,47"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html#a643eeaa166fc802f26ed40569e04f381" title="Gets the authentication type of a user using user Id" alt="" coords="308,5,584,47"/>
 </map>
@@ -505,8 +518,47 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ae964889322355888d56108d856fc847b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae964889322355888d56108d856fc847b">&#9670;&nbsp;</a></span>IsAuthenticatorEnabled() <span class="overload">[2/2]</span></h2>
+<a id="a16abf13b8dbcb063bd07ade0b5ade4c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16abf13b8dbcb063bd07ade0b5ade4c2">&#9670;&nbsp;</a></span>IsAuthenticatorEnabled() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;ActionResult&lt;string&gt; &gt; AdeNote.Infrastructure.Services.AuthService.IsAuthenticatorEnabled </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>email</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if MFA has been enabled for the user using user id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>Email of the user</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a597da2feeb46e66d1069f097333b6d87">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00568">568</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a16abf13b8dbcb063bd07ade0b5ade4c2_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a16abf13b8dbcb063bd07ade0b5ade4c2_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a16abf13b8dbcb063bd07ade0b5ade4c2_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a16abf13b8dbcb063bd07ade0b5ade4c2_cgraph">
+<area shape="rect" title="Checks if MFA has been enabled for the user using user id." alt="" coords="5,5,260,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html#a643eeaa166fc802f26ed40569e04f381" title="Gets the authentication type of a user using user Id" alt="" coords="308,5,584,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a091ab4663efa0da11d61aa37d78b872b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a091ab4663efa0da11d61aa37d78b872b">&#9670;&nbsp;</a></span>IsAuthenticatorEnabled() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -515,8 +567,18 @@ Here is the call graph for this function:</div>
           <td class="memname">async Task&lt;ActionResult&gt; AdeNote.Infrastructure.Services.AuthService.IsAuthenticatorEnabled </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>email</em></td><td>)</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="namespaceAdeNote_1_1Models.html#a59a9d6cd7df46cfb5727610aa214e751">MFAType</a>&#160;</td>
+          <td class="paramname"><em>authenticatorType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -529,14 +591,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a5409d350f55bb8bb9505bde715dae43e">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a4b891cbf906be1490d8c7d47e59785d5">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00409">409</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00412">412</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_ae964889322355888d56108d856fc847b_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_ae964889322355888d56108d856fc847b_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_ae964889322355888d56108d856fc847b_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_ae964889322355888d56108d856fc847b_cgraph">
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a091ab4663efa0da11d61aa37d78b872b_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a091ab4663efa0da11d61aa37d78b872b_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a091ab4663efa0da11d61aa37d78b872b_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1AuthService_a091ab4663efa0da11d61aa37d78b872b_cgraph">
 <area shape="rect" title="Checks if MFA has been enabled for the user" alt="" coords="5,5,260,47"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html#a643eeaa166fc802f26ed40569e04f381" title="Gets the authentication type of a user using user Id" alt="" coords="308,5,584,47"/>
 </map>
@@ -610,7 +672,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8a632c08a9d83d1cd741bc30ac554855">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00462">462</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00468">468</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -650,7 +712,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8278027fb07f272ad08d4cb0b50ec659">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00376">376</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00379">379</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -691,7 +753,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a40e66c23ed8be8b77aa68a85a3e9f31d">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00434">434</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00440">440</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1008,7 +1070,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aa9b04aa3f51038e46192d2af326b46d4">AdeNote.Infrastructure.Services.IAuthService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00542">542</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00548">548</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1025,7 +1087,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00599">599</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00626">626</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1043,7 +1105,7 @@ Here is the call graph for this function:</div>
 
 <p>Handles the authentication </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00570">570</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00597">597</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1061,7 +1123,7 @@ Here is the call graph for this function:</div>
 
 <p>Handles the cloud storage </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00585">585</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00612">612</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1079,7 +1141,7 @@ Here is the call graph for this function:</div>
 
 <p>Two factor authentication secret key </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00565">565</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00592">592</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1097,7 +1159,7 @@ Here is the call graph for this function:</div>
 
 <p>Secret to generate multifactor token </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00590">590</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00617">617</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1115,7 +1177,7 @@ Here is the call graph for this function:</div>
 
 <p>A sms service used to send message via sms </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00580">580</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00607">607</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1131,7 +1193,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00597">597</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00624">624</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1149,7 +1211,7 @@ Here is the call graph for this function:</div>
 
 <p>Object used to generate and set up two factor authentication </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00595">595</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00622">622</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
@@ -1167,7 +1229,7 @@ Here is the call graph for this function:</div>
 
 <p>Handles the details of a user </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00575">575</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthService_8cs_source.html#l00602">602</a> of file <a class="el" href="AuthService_8cs_source.html">AuthService.cs</a>.</p>
 
 </div>
 </div>
