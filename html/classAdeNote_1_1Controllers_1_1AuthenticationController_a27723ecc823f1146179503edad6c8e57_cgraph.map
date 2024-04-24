@@ -1,0 +1,4 @@
+<map id="AdeNote.Controllers.AuthenticationController.GenerateMFARemovalToken" name="AdeNote.Controllers.AuthenticationController.GenerateMFARemovalToken">
+<area shape="rect" id="node1" title="Generates token to removes google or sms authenticator" alt="" coords="5,5,276,47"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a777010bf07284b344981579b32dbd0ff" title=" " alt="" coords="324,5,557,47"/>
+</map>

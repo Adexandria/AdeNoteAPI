@@ -1,0 +1,6 @@
+<map id="AdeNote.Infrastructure.Services.AuthService.DisableUserMFA" name="AdeNote.Infrastructure.Services.AuthService.DisableUserMFA">
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,239,112"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html#a10b096474ee9a0f12d70f5aed0b9dc8c" title="Deletes image" alt="" coords="308,5,541,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html#a643eeaa166fc802f26ed40569e04f381" title="Gets the authentication type of a user using user Id" alt="" coords="287,71,563,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#aa09992933cc1efc25ff9ba7ed29d601a" title="Remove an existing object" alt="" coords="301,136,548,177"/>
+</map>

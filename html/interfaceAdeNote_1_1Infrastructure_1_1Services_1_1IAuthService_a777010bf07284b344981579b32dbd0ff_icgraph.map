@@ -1,0 +1,7 @@
+<map id="AdeNote.Infrastructure.Services.IAuthService.GenerateMFAToken" name="AdeNote.Infrastructure.Services.IAuthService.GenerateMFAToken">
+<area shape="rect" id="node1" title=" " alt="" coords="624,39,857,80"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a27723ecc823f1146179503edad6c8e57" title="Generates token to removes google or sms authenticator" alt="" coords="305,5,576,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a004ca4183d5230aff26a3f3abd97bdaf" title=" " alt="" coords="315,71,567,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#af2a120ae9d49dd83e9463991244df4a6" title="Logins user" alt="" coords="5,37,257,79"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,103,257,144"/>
+</map>
