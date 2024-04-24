@@ -4,6 +4,7 @@ namespace AdeNote.Infrastructure.Utilities
 {
     public enum MimeType
     {
+        none,
         [Description("image/png")]
         png,
         [Description("text/html")]

@@ -1,6 +1,7 @@
 ﻿using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Services;
 using AdeNote.Infrastructure.Utilities;
+using AdeNote.Models;
 using AdeNote.Models.DTOs;
 using Autofac;
 using Microsoft.AspNetCore.Authorization;
@@ -313,7 +314,7 @@ namespace AdeNote.Controllers
         [HttpPost("two-factor-authentication/app")]
         public async Task<IActionResult> SetUpGoogleAuthenticator()
         {
-            var resultResponse = await _authService.IsAuthenticatorEnabled(CurrentUser);
+            var resultResponse = await _authService.IsAuthenticatorEnabled(CurrentUser, MFAType.google);
 
             if (resultResponse.IsSuccessful)
                 return TasksLibrary.Utilities.ActionResult.Failed("User has set up two factor authentication", StatusCodes.Status400BadRequest).Response();
@@ -346,7 +347,7 @@ namespace AdeNote.Controllers
         [HttpPost("two-factor-authentication/sms")]
         public async Task<IActionResult> SetUpSmsAuthenticator()
         {
-            var resultResponse = await _authService.IsAuthenticatorEnabled(CurrentUser);
+            var resultResponse = await _authService.IsAuthenticatorEnabled(CurrentUser, MFAType.sms);
 
             if (resultResponse.IsSuccessful)
                 return TasksLibrary.Utilities.ActionResult.Failed("User has set up two factor authentication", StatusCodes.Status400BadRequest).Response();
@@ -456,7 +457,7 @@ namespace AdeNote.Controllers
             if (detailsResponse.NotSuccessful)
                 return detailsResponse.Response();
 
-            var resultResponse = await _authService.IsAuthenticatorEnabled(detailsResponse.Data.UserId);
+            var resultResponse = await _authService.IsAuthenticatorEnabled(detailsResponse.Data.UserId, MFAType.sms);
 
             if (resultResponse.NotSuccessful)
                 return TasksLibrary.Utilities
@@ -505,7 +506,7 @@ namespace AdeNote.Controllers
             if (detailsResponse.NotSuccessful)
                 return detailsResponse.Response();
 
-            var resultResponse = await _authService.IsAuthenticatorEnabled(detailsResponse.Data.UserId);
+            var resultResponse = await _authService.IsAuthenticatorEnabled(detailsResponse.Data.UserId, MFAType.sms);
 
             if (resultResponse.NotSuccessful)
                 return TasksLibrary.Utilities
@@ -528,9 +529,7 @@ namespace AdeNote.Controllers
 
             AddToCookie("AdeNote-RefreshToken", detailsResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
 
-           // SendNotification(detailsResponse.Data.Email);
-
-            
+            SendNotification(detailsResponse.Data.Email);
 
             return TasksLibrary.Utilities.ActionResult<string>.SuccessfulOperation(accessToken).Response();
         }
@@ -716,7 +715,7 @@ namespace AdeNote.Controllers
 
                 AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(8));
 
-                return Ok("Proceed to enter otp from authenticator");
+                return Ok($"Proceed to enter otp from {resultResponse.Data} authenticator");
             }
 
             SendNotification(userDetails.Data.Email);

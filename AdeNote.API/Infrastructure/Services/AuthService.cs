@@ -82,7 +82,7 @@ namespace AdeNote.Infrastructure.Services
 
                 var url = await blobService.UploadImage($"qrCode{imageName}", memoryStream);
 
-                var userToken = new UserToken(MFAType.AuthenicationApp, userId).SetAuthenticatorKey(url);
+                var userToken = new UserToken(MFAType.google, userId).SetAuthenticatorKey(url);
 
                 var result = await authRepository.Add(userToken);
                 if (!result)
@@ -214,7 +214,7 @@ namespace AdeNote.Infrastructure.Services
                 if (userId == Guid.Empty)
                     return ActionResult.Failed("Invalid user id", StatusCodes.Status404NotFound);
 
-                var userToken = new UserToken(MFAType.Sms, userId);
+                var userToken = new UserToken(MFAType.sms, userId);
 
                 var result = await authRepository.Add(userToken);
                 if (!result)
@@ -321,7 +321,7 @@ namespace AdeNote.Infrastructure.Services
         /// Checks if MFA has been enabled for the user using user id.
         /// </summary>
         /// <param name="userId">User id</param>
-        public async Task<ActionResult> IsAuthenticatorEnabled(Guid userId)
+        public async Task<ActionResult> IsAuthenticatorEnabled(Guid userId, MFAType authenticatorType)
         {
             try
             {
@@ -332,6 +332,9 @@ namespace AdeNote.Infrastructure.Services
 
                 if(userAuthenticator == null)
                     return ActionResult.Failed("No two factor enabled",StatusCodes.Status400BadRequest);
+
+                if (userAuthenticator.AuthenticationType != authenticatorType)
+                    return ActionResult<string>.Failed("Invalid authenticator type", StatusCodes.Status400BadRequest);
 
                 return ActionResult.Successful();
             }
@@ -406,7 +409,7 @@ namespace AdeNote.Infrastructure.Services
         /// Checks if MFA has been enabled for the user
         /// </summary>
         /// <param name="email">Email of the user</param>
-        public async Task<ActionResult> IsAuthenticatorEnabled(string email)
+        public async Task<ActionResult> IsAuthenticatorEnabled(string email, MFAType authenticatorType)
         {
             try
             {
@@ -417,6 +420,9 @@ namespace AdeNote.Infrastructure.Services
 
                 if (userAuthenticator == null)
                     return ActionResult<string>.Failed("No two factor enabled", StatusCodes.Status400BadRequest);
+
+                if (userAuthenticator.AuthenticationType != authenticatorType)
+                    return ActionResult<string>.Failed("Invalid authenticator type", StatusCodes.Status400BadRequest);
 
                 return ActionResult.Successful();
             }
@@ -495,7 +501,7 @@ namespace AdeNote.Infrastructure.Services
                 if(authenticationType == null)
                     return ActionResult.Failed("MFA isn't enabled for user", StatusCodes.Status400BadRequest);
 
-                if(authenticationType.AuthenticationType == MFAType.AuthenicationApp)
+                if(authenticationType.AuthenticationType == MFAType.google)
                 {
                     var isDeleted = await blobService.DeleteImage(authenticationType.AuthenticatorKey);
                     if (!isDeleted)
@@ -556,6 +562,27 @@ namespace AdeNote.Infrastructure.Services
             catch (Exception ex)
             {
                 return ActionResult.Failed(ex.Message);
+            }
+        }
+
+        public async Task<ActionResult<string>> IsAuthenticatorEnabled(string email)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(email))
+                    return ActionResult<string>.Failed("Invalid email", StatusCodes.Status404NotFound);
+
+                var userAuthenticator = await authRepository.GetAuthenticationType(email);
+
+                if (userAuthenticator == null)
+                    return ActionResult<string>.Failed("No two factor enabled", StatusCodes.Status400BadRequest);
+
+
+                return ActionResult<string>.SuccessfulOperation(userAuthenticator.AuthenticationType.ToString());
+            }
+            catch (Exception ex)
+            {
+                return ActionResult<string>.Failed(ex.Message);
             }
         }
 

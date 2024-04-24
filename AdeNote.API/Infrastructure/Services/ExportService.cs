@@ -1,6 +1,7 @@
 ﻿using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Utilities;
 using Excelify.Services;
+using System.Net;
 using TasksLibrary.Utilities;
 
 namespace AdeNote.Infrastructure.Services
@@ -22,9 +23,16 @@ namespace AdeNote.Infrastructure.Services
         {
             try
             {
+                var mime = GetMimeType(extensionType);
+
+                if(mime == MimeType.none)
+                {
+                    return ActionResult<string>.Failed("Unsupported mime type", StatusCodes.Status400BadRequest);
+                }
+
                 Stream file;
 
-                if (extensionType == MimeType.docx.ToString())
+                if (mime == MimeType.docx)
                 {
                     var template = await _blobService.DownloadStream("AdenoteLetterHead", MimeType.docx);
                     file = _wordService.ExportToWord(name, entities,template);
@@ -33,8 +41,6 @@ namespace AdeNote.Infrastructure.Services
                 {
                     file = _excelService.ExportEntities(extensionType, name, entities);
                 }
-
-                var mime = GetMimeType(extensionType);
 
                 var url = await _blobService.UploadImage(name, file, mime);
 
@@ -64,9 +70,10 @@ namespace AdeNote.Infrastructure.Services
                         mimeType = MimeType.xlsx;
                         break;
                     case string when extensionType.Equals(MimeType.csv.GetDescription()):
+                        mimeType = MimeType.csv;
                         break;
                     default:
-                        mimeType = MimeType.csv;
+                        mimeType = MimeType.none;
                         break;
                 }
 

@@ -8,10 +8,10 @@
         /// <summary>
         /// Sms
         /// </summary>
-        Sms,
+        sms,
         /// <summary>
         /// Authentication application like google
         /// </summary>
-        AuthenicationApp
+        google
     }
 }

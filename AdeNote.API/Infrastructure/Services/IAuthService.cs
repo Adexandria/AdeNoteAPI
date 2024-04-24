@@ -1,5 +1,5 @@
-﻿using AdeNote.Models.DTOs;
-using TasksLibrary.Models;
+﻿using AdeNote.Models;
+using AdeNote.Models.DTOs;
 using TasksLibrary.Utilities;
 
 namespace AdeNote.Infrastructure.Services
@@ -16,17 +16,26 @@ namespace AdeNote.Infrastructure.Services
         /// <returns>Qr code url</returns>
         Task<ActionResult<string>> GetUserQrCode(Guid userId);
 
+
+        /// <summary>
+        /// Checks if MFA has been enabled for the user using user id.
+        /// </summary>
+        /// <param name="email">Email of the user</param>
+        Task<ActionResult<string>> IsAuthenticatorEnabled(string email);
+
         /// <summary>
         /// Checks if MFA has been enabled for the user using user id.
         /// </summary>
         /// <param name="userId">User id</param>
-        Task<ActionResult> IsAuthenticatorEnabled(Guid userId);
+        /// <param name="authenticatorType">Sms or google authenticator</param>
+        Task<ActionResult> IsAuthenticatorEnabled(Guid userId, MFAType authenticatorType);
 
         /// <summary>
         /// Checks if MFA has been enabled for the user
         /// </summary>
         /// <param name="email">Email of the user</param>
-        Task<ActionResult> IsAuthenticatorEnabled(string email);
+        /// <param name="authenticatorType">Sms or google authenticator</param>
+        Task<ActionResult> IsAuthenticatorEnabled(string email, MFAType authenticatorType);
 
         /// <summary>
         /// Sets up MFA using google authenticator app
