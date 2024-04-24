@@ -24,4 +24,4 @@ This layer contains data abstraction layer to connnect to an external database. 
 This layer contains all the business logic or domain of the application. It also include the Data transfer object used to interact with the users.
 
 ### Visit Documentation
-[Swagger Documentation](https://adenoteapi.azurewebsites.net/swagger/index.html)
+[Swagger Documentation](https://adenote.azurewebsites.net/swagger/index.html)
