@@ -1,0 +1,7 @@
+<map id="AdeNote.Controllers.AuthenticationController.SendOTP" name="AdeNote.Controllers.AuthenticationController.SendOTP">
+<area shape="rect" id="node1" title="Sends one time password via sms" alt="" coords="5,104,257,145"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a597da2feeb46e66d1069f097333b6d87" title="Checks if MFA has been enabled for the user using user id." alt="" coords="306,5,565,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a84c70bfd6bb4b8de6058be1579ceb436" title="Checks if a phone number has been verified" alt="" coords="305,71,565,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8278027fb07f272ad08d4cb0b50ec659" title="Reads the user details from the token" alt="" coords="307,136,564,177"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a450048a2665575559a9d2c4d3d4d4e0d" title="Sends otp to phone number" alt="" coords="319,201,552,243"/>
+</map>
