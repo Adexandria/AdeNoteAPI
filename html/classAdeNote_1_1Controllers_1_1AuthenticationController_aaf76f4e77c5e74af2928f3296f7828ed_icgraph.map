@@ -1,0 +1,8 @@
+<map id="AdeNote.Controllers.AuthenticationController.AddToCookie" name="AdeNote.Controllers.AuthenticationController.AddToCookie">
+<area shape="rect" id="node1" title="Add data to cookie" alt="" coords="605,103,857,144"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a004ca4183d5230aff26a3f3abd97bdaf" title=" " alt="" coords="305,37,557,79"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#ac6e29dec9bd50a10a1629d70231b7fc4" title="Verifies sms code" alt="" coords="305,103,557,144"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#ab1fe105f9760c908a3b9782c2de84908" title="Verifies time based One time password" alt="" coords="305,168,557,209"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#af2a120ae9d49dd83e9463991244df4a6" title="Logins user" alt="" coords="5,5,257,47"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,71,257,112"/>
+</map>
