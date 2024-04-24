@@ -683,7 +683,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [AllowAnonymous]
-        [HttpGet("two-factor-authentication")]
+        [HttpGet("two-factor-authentication/recovery")]
         public async Task<IActionResult> GenerateMFARemovalToken(string email)
         {
             var response = await _authService.GenerateMFAToken(email);
