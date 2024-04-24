@@ -37,6 +37,9 @@ namespace AdeNote.Infrastructure.Services
         /// <param name="authenticatorType">Sms or google authenticator</param>
         Task<ActionResult> IsAuthenticatorEnabled(string email, MFAType authenticatorType);
 
+
+        Task<ActionResult<string>> GenerateMFAToken(string email);
+
         /// <summary>
         /// Sets up MFA using google authenticator app
         /// </summary>
@@ -122,6 +125,8 @@ namespace AdeNote.Infrastructure.Services
         /// </summary>
         /// <param name="userId">User id</param>
         Task<ActionResult> DisableUserMFA(Guid userId);
+
+        Task<ActionResult> DisableUserMFA(string token);
 
         Task<ActionResult<string>> GenerateResetToken(Guid userId, string email);
 

@@ -14,7 +14,10 @@ namespace AdeNote.Infrastructure.Utilities
         LoginNotification,
 
         [Description("ResetTokenNotification")]
-        ResetTokenNotification
+        ResetTokenNotification,
+
+        [Description("MFAToken")]
+        MfaRmovalTokenNotification,
 
     }
 }
