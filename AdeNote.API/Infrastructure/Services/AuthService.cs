@@ -450,7 +450,7 @@ namespace AdeNote.Infrastructure.Services
                 };
 
             _notificationService.SendNotification(new Email(email, "Multi-Factor Removal Token"),
-               EmailTemplate.MfaRmovalTokenNotification, ContentType.html, substitutions);
+               EmailTemplate.MfaRemovalTokenNotification, ContentType.html, substitutions);
 
             return ActionResult<string>.SuccessfulOperation(token);
 
