@@ -16,7 +16,6 @@ namespace AdeNote.Controllers
     /// 
     /// Supports version 1.0
     /// </summary>
-    [Authorize]
     [Route("api/v{version:apiVersion}/authentication")]
     [ApiVersion("1.0")]
     [ApiController]
@@ -171,6 +170,7 @@ namespace AdeNote.Controllers
         /// <returns>Action result</returns>
         [Consumes("application/json")]
         [Produces("application/json")]
+        [Authorize]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
@@ -295,6 +295,7 @@ namespace AdeNote.Controllers
         /// <response code ="401"> Returns if unauthorised</response>
         /// <returns>Authenticator key</returns>
         [Produces("application/json")]
+        [Authorize]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<AuthenticatorDTO>), StatusCodes.Status200OK)]
@@ -328,6 +329,7 @@ namespace AdeNote.Controllers
         /// <response code ="404"> Returns if parameters not found</response>
         /// <response code ="401"> Returns if unauthorised</response>
         [Produces("application/json")]
+        [Authorize]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
@@ -367,6 +369,7 @@ namespace AdeNote.Controllers
         /// <response code ="404"> Returns if parameters not found</response>
         /// <response code ="401"> Returns if unauthorised</response>
         [Produces("application/json")]
+        [Authorize]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
@@ -396,6 +399,7 @@ namespace AdeNote.Controllers
         /// <response code ="404"> Returns if parameters not found</response>
         /// <response code ="401"> Returns if unauthorised</response>
         [Produces("application/json")]
+        [Authorize]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
@@ -621,6 +625,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [Authorize]
         [HttpGet("two-factor-authentication/app/qr-code")]
         public async Task<IActionResult> GetAuthenticatorQRCode()
         {
@@ -648,6 +653,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [AllowAnonymous]
         [HttpPost("sign-out")]
         public async Task<IActionResult> LogOut()
         {
@@ -679,6 +685,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [Authorize]
         [HttpDelete("two-factor-authentication")]
         public async Task<IActionResult> RemoveAuthenicator()
         {
