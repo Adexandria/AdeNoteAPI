@@ -1,13 +1,12 @@
 ﻿using AdeNote.Db;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
-using TasksLibrary.Architecture.Application;
 
 namespace AdeNote.Infrastructure.Utilities
 {
     public static class Database
     {
-        public static void CreateTables(this IServiceProvider provider, TaskContainerBuilder containerBuilder)
+        public static void CreateTables(this IServiceProvider provider)
         {
             var dbContext = provider.GetService<NoteDbContext>() ?? throw new NullReferenceException("Unregistered service");
 
@@ -15,7 +14,6 @@ namespace AdeNote.Infrastructure.Utilities
 
             if (!databaseCreator.HasTables())
             {
-                containerBuilder.BuildMigration();
                 databaseCreator.CreateTables();
             }
         }

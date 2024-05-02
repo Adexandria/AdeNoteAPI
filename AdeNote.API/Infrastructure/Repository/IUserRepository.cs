@@ -2,17 +2,18 @@
 
 namespace AdeNote.Infrastructure.Repository
 {
-    /// <summary>
-    /// Handles the details of a user
-    /// </summary>
-    public interface IUserDetailRepository : IRepository<UserDetail>
+    public interface IUserRepository: IRepository<User>
     {
+        Task<User> GetUserByEmail(string email);
+        bool IsExist(string email);
+        Task<User> AuthenticateUser(string email, string password, AuthType authType);
+
         /// <summary>
         /// Get existings of a user
         /// </summary>
         /// <param name="userId">User id</param>
         /// <returns>User detail object</returns>
-        Task<UserDetail> GetUserDetail(Guid userId);
+        Task<User> GetUser(Guid userId);
 
         /// <summary>
         /// Checks if user's phone number has been verified

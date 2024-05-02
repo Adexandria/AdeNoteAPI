@@ -12,15 +12,13 @@ namespace AdeNote.Tests.Services
         [SetUp]
         public void SetUp()
         {
-            authRepository = new Mock<IAuthRepository>();
             blobService = new Mock<IBlobService>();
             authService = new Mock<AuthService>().Object;
-            userDetailRepository = new Mock<IUserDetailRepository>();
+            userRepository = new Mock<IUserRepository>();
             smsService = new Mock<ISmsService>();
-            authService.authRepository = authRepository.Object;
             authService.blobService = blobService.Object;
             authService.smsService = smsService.Object;
-            authService.userDetailRepository = userDetailRepository.Object;
+            authService.userRepository = userRepository.Object;
             authService.key = "testKey";
             authService.loginSecret = "testLoginSecret";
         }
@@ -30,7 +28,7 @@ namespace AdeNote.Tests.Services
         {
             //Arrange
             blobService.Setup(s => s.UploadImage(It.IsAny<string>(), It.IsAny<Stream>(),Infrastructure.Utilities.MimeType.png)).ReturnsAsync("test-url");
-            authRepository.Setup(s => s.Add(It.IsAny<UserToken>())).ReturnsAsync(true);
+            userRepository.Setup(s => s.Add(It.IsAny<User>())).ReturnsAsync(true);
 
             //Act
             var response = await authService.SetAuthenticator(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"), "email");
@@ -89,7 +87,7 @@ namespace AdeNote.Tests.Services
         [Test]
         public async Task ShouldGetQrCodeSuccessfully()
         {
-            authRepository.Setup(s => s.GetAuthenticationType(It.IsAny<Guid>())).ReturnsAsync(new UserToken());
+            userRepository.Setup(s => s.GetUser(It.IsAny<Guid>())).ReturnsAsync(new User("first", "lastname", "test@gmail",AuthType.local) { TwoFactorType = 2 });
 
             var response = await authService.GetUserQrCode(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"));
 
@@ -110,7 +108,7 @@ namespace AdeNote.Tests.Services
         [Test]
         public async Task ShouldCheckIfAuthenticatorEnabledSuccessfully()
         {
-            authRepository.Setup(s => s.GetAuthenticationType(It.IsAny<Guid>())).ReturnsAsync(new UserToken() { AuthenticationType = MFAType.sms});
+            userRepository.Setup(s => s.GetUser(It.IsAny<Guid>())).ReturnsAsync(new User("first", "lastname", "test@gmail", AuthType.local) { TwoFactorType = 2});
 
             var response = await authService.IsAuthenticatorEnabled(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"), MFAType.sms);
 
@@ -187,7 +185,7 @@ namespace AdeNote.Tests.Services
         [Test]
         public async Task ShouldCheckIfAuthenticatorEnabledSuccessfullyUsingEmail()
         {
-            authRepository.Setup(s => s.GetAuthenticationType(It.IsAny<string>())).ReturnsAsync(new UserToken());
+            userRepository.Setup(s => s.GetUserByEmail(It.IsAny<string>())).ReturnsAsync(new User("first", "lastname", "test@gmail", AuthType.local));
 
             var response = await authService.IsAuthenticatorEnabled("email");
 
@@ -207,8 +205,6 @@ namespace AdeNote.Tests.Services
         [Test]
         public async Task ShouldRevokeRefreshToken()
         {
-            authRepository.Setup(s=>s.GetRefreshTokenByUserId(It.IsAny<Guid>(),It.IsAny<string>())).ReturnsAsync(new TasksLibrary.Models.RefreshToken("refreshToken"
-                ,DateTime.UtcNow.AddDays(3),new TasksLibrary.Models.UserId(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"))));
 
             var response = await authService.RevokeRefreshToken(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"), "refreshToken");
 
@@ -237,8 +233,6 @@ namespace AdeNote.Tests.Services
         [Test]
         public async Task ShouldCheckIfTokenHasBeenRevoked()
         {
-            authRepository.Setup(s=>s.GetRefreshToken(It.IsAny<string>())).ReturnsAsync(new TasksLibrary.Models.RefreshToken("refreshToken"
-                , DateTime.UtcNow.AddDays(3), new TasksLibrary.Models.UserId(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"))));
 
             var response = await authService.IsTokenRevoked("Token");
 
@@ -268,8 +262,8 @@ namespace AdeNote.Tests.Services
         [Test]
         public async Task ShouldDisableUserMFASucessfully()
         {
-            authRepository.Setup(s => s.GetAuthenticationType(It.IsAny<Guid>())).ReturnsAsync(new UserToken());
-            authRepository.Setup(s => s.Remove(It.IsAny<UserToken>())).ReturnsAsync(true);
+            userRepository.Setup(s => s.GetUser(It.IsAny<Guid>())).ReturnsAsync(new User("first", "lastname", "test@gmail", AuthType.local));
+            userRepository.Setup(s => s.Remove(It.IsAny<User>())).ReturnsAsync(true);
 
             var response = await authService.DisableUserMFA(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"));
 
@@ -287,7 +281,7 @@ namespace AdeNote.Tests.Services
         [Test]
         public async Task ShouldFailToDisableUserMFAIfUserTokenIsFailedtoBeRemoved()
         {
-            authRepository.Setup(s => s.GetAuthenticationType(It.IsAny<Guid>())).ReturnsAsync(new UserToken());
+            userRepository.Setup(s => s.GetUser(It.IsAny<Guid>())).ReturnsAsync(new User("first","lastname","test@gmail", AuthType.local));
 
             var response = await authService.DisableUserMFA(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"));
 
@@ -305,7 +299,7 @@ namespace AdeNote.Tests.Services
         [Test]
         public async Task ShouldSetPhoneNumberSuccessfully()
         {
-            userDetailRepository.Setup(s => s.Add(It.IsAny<UserDetail>())).ReturnsAsync(true);
+            userRepository.Setup(s => s.Add(It.IsAny<User>())).ReturnsAsync(true);
 
             var response = await authService.SetPhoneNumber(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"), "0000000000");
 
@@ -319,10 +313,8 @@ namespace AdeNote.Tests.Services
             Assert.That(response.IsSuccessful, Is.False);
         }
 
-
+        private Mock<IUserRepository> userRepository;
         private AuthService authService;
-        private Mock<IAuthRepository> authRepository;
-        private Mock<IUserDetailRepository> userDetailRepository;
         private Mock<ISmsService> smsService;
         private  Mock<IBlobService> blobService;
     }

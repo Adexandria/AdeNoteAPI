@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,8 +13,18 @@ namespace AdeAuth.Services
 
         string GenerateRefreshToken(int tokenSize = 10);
 
-        IList<string> VerifyToken(string token, bool verifyParameter = false, params string[] claimTypes);
+        Dictionary<string,object> ReadToken(string token, bool verifyParameter = false, params string[] claimTypes);
 
-        void GetTokenEncryptionKey(string tokenKey);
+        string GenerateToken(byte[] encodedString);
+
+        int GenerateOTP(byte[] encodedString);
+
+        string[] ReadToken(string token, string delimiter = null);
+
+        bool VerifyOTP(byte[] encodedString, int otp);
+
+        bool VerifyOTP(byte[] encodedString, string otp);
+
+        void SetTokenEncryptionKey(string tokenKey);
     }
 }

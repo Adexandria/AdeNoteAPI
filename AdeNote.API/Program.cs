@@ -1,21 +1,20 @@
+using AdeAuth.Services;
 using AdeNote.Db;
 using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Services;
 using AdeNote.Infrastructure.Utilities;
+using Asp.Versioning;
+using Asp.Versioning.ApiExplorer;
 using DocBuilder.Services;
 using Excelify.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 using System.Text;
-using TasksLibrary.Architecture.Application;
-using TasksLibrary.Services;
 using UserRepository = AdeNote.Infrastructure.Repository.UserRepository;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,12 +26,7 @@ var connectionString = configuration.GetConnectionString("NotesDB");
 // Gets the token secret from appsettings
 var tokenSecret = configuration["TokenSecret"];
 
-// Add services to the container.
-var containerBuilder = new TaskContainerBuilder(connectionString);
-
-builder.Services.AddScoped<ITaskApplication, TaskApplication>();
 builder.Services.AddScoped<IUserIdentity, UserIdentity>();
-builder.Services.AddTransient((o) => containerBuilder.SetUpDepedencies(tokenSecret).Build());
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddLogging();
 builder.Services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
@@ -40,17 +34,16 @@ builder.Services.AddControllers(options => options.SuppressImplicitRequiredAttri
 
 builder.Services.AddApiVersioning(c =>
 {
-    c.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
+    c.DefaultApiVersion = new ApiVersion(1, 0);
     c.AssumeDefaultVersionWhenUnspecified = true;
     c.ReportApiVersions = true;
     c.ApiVersionReader = ApiVersionReader.Combine(new UrlSegmentApiVersionReader());
+}).AddApiExplorer(options =>
+{
+    options.GroupNameFormat = "'v'VVV";
+    options.SubstituteApiVersionInUrl = true;
 });
 
-builder.Services.AddVersionedApiExplorer(setup =>
-{
-    setup.GroupNameFormat = "'v'VVV";
-    setup.SubstituteApiVersionInUrl = true;
-});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.ConfigureOptions<SwaggerOptions>();
 builder.Services.AddSwaggerGen(c =>
@@ -87,24 +80,24 @@ builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<ILabelRepository, LabelRepository>();
 builder.Services.AddScoped<IPageRepository, PageRepository>();
 builder.Services.AddScoped<ILabelPageRepository, LabelPageRepository>();
-builder.Services.AddScoped<IUser, UserRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IRefreshTokenRepository,RefreshRepository>();
 builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddScoped<IPageService, PageService>();
 builder.Services.AddScoped<ILabelService, LabelService>();
-builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddScoped<IUserDetailRepository, UserDetailRepository>();
 builder.Services.AddScoped<IBlobService, BlobService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<ISmsService, SmsService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<IUserService,UserService>();
-builder.Services.AddScoped((_)=> new AuthTokenRepository(tokenSecret));
-builder.Services.AddScoped<IPasswordManager,PasswordManager>();
 builder.Services.AddScoped<IExcel, AdeNote.Infrastructure.Services.ExcelService>();
 builder.Services.AddScoped<IExportService, ExportService>();
 builder.Services.AddScoped<IWordService,WordService>();
 builder.Services.AddScoped((_) => DocFactory.CreateService());
+builder.Services.AddSingleton((_) => AuthFactory.CreateService().PasswordManager);
+builder.Services.AddSingleton((_) => AuthFactory.CreateService().TokenProvider);
+builder.Services.AddSingleton((_) => AuthFactory.CreateService().MfaService);
 
 builder.Services.AddSingleton((_) => new ExcelifyFactory());
 
@@ -145,7 +138,6 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("sso",new AuthorizationPolicyBuilder("SSO").RequireAuthenticatedUser().Build());
 });
 
-builder.Services.BuildServiceProvider().CreateTables(containerBuilder);
 
 var app = builder.Build();
 

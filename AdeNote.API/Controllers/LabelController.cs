@@ -1,6 +1,7 @@
 ﻿using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Services;
 using AdeNote.Models.DTOs;
+using Asp.Versioning;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -43,7 +44,7 @@ namespace AdeNote.Controllers
         /// <response code ="200"> Returns if Successful</response>
         /// <response code ="401"> Returns if unauthorised</response>
         [Produces("application/json")]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<IEnumerable<LabelDTO>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<IEnumerable<LabelDTO>>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpGet]
         public async Task<IActionResult> GetAllLabels()
@@ -68,9 +69,9 @@ namespace AdeNote.Controllers
         /// <response code ="404"> Returns if found</response>
         [Consumes("application/json")]
         [Produces("application/json")]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<LabelDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<LabelDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpGet("{labelId}")]
         public async Task<IActionResult> GetLabel(Guid labelId)
@@ -95,8 +96,8 @@ namespace AdeNote.Controllers
         /// <response code ="500"> Returns if experiencing server issues</response>
         /// <response code ="401"> Returns if unauthorised</response>
         [Consumes("application/json")]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost]
         public async Task<IActionResult> CreateLabel(LabelCreateDTO createLabel)
@@ -123,9 +124,9 @@ namespace AdeNote.Controllers
         /// <response code ="500"> Returns if experiencing server issues</response>
         /// <response code ="401"> Returns if unauthorised</response>
         [Consumes("application/json")]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPut("{labelId}")]
         public async Task<IActionResult> UpdateLabel(Guid labelId,LabelUpdateDTO updateLabel)
@@ -147,9 +148,9 @@ namespace AdeNote.Controllers
         /// <response code ="400"> Returns if experiencing client issues</response>
         /// <response code ="401"> Returns if unauthorised</response>
         /// <response code ="404"> Returns if not found</response>
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpDelete("{labelId}")]
         public async Task<IActionResult> DeleteLabel(Guid labelId)

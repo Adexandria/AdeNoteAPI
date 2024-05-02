@@ -16,8 +16,6 @@
          
         string PasswordHash { get; set; }
 
-        Guid RefreshToken { get; set; }
-
         string PhoneNumber { get; set; }
 
         bool PhoneNumberConfirmed { get; set; }

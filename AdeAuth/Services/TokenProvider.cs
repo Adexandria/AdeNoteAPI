@@ -7,7 +7,7 @@ namespace AdeAuth.Services
 {
      class TokenProvider : ITokenProvider
      {
-        public void GetTokenEncryptionKey(string tokenKey)
+        public void SetTokenEncryptionKey(string tokenKey)
         {
             _tokenKey = tokenKey 
              ?? throw new NullReferenceException("Invalid token key");
@@ -40,12 +40,12 @@ namespace AdeAuth.Services
             return token;
         }
 
-        public IList<string> VerifyToken(string token, bool verifyParamter, params string[] claimTypes)
+        public Dictionary<string, object> ReadToken(string token, bool verifyParamter, params string[] claimTypes)
         {
             TokenValidationParameters tokenValidationParameters = GetTokenValidationParameters(verifyParamter);
 
             JwtSecurityTokenHandler jwtSecurityTokenHandler = new();
-            List<string> claimValues = new();
+            Dictionary<string,object> claimValues = new();
 
             try
             {
@@ -59,7 +59,7 @@ namespace AdeAuth.Services
                     if(claimValue == null)
                         continue;
 
-                    claimValues.Add(claimValue);
+                    claimValues.Add(claimType,claimValue);
                 }
 
                 return claimValues;
@@ -70,6 +70,46 @@ namespace AdeAuth.Services
             }
         }
 
+        public string GenerateToken(byte[] encodedString)
+        {
+            return Convert.ToBase64String(encodedString);
+        }
+
+        public string[] ReadToken(string token, string delimiter)
+        {
+            if(string.IsNullOrEmpty(token) || string.IsNullOrWhiteSpace(delimiter))
+            {
+                throw new NullReferenceException("Token can not be empty");
+            }
+            var decodedToken = Convert.FromBase64String(token);
+
+            var details = Encoding.UTF8.GetString(decodedToken);
+
+            if (delimiter == null)
+            {
+                return new string[] { details };
+            }
+
+            return details.Split(delimiter); 
+        }
+
+
+        public int GenerateOTP(byte[] encodedString)
+        {
+            return BitConverter.ToInt16(encodedString, 0);
+        }
+
+        public bool VerifyOTP(byte[] encodedString, int otp)
+        {
+            var generatedOtp = GenerateOTP(encodedString);
+            return generatedOtp == otp;
+        }
+
+        public bool VerifyOTP(byte[] encodedString, string otp)
+        {
+            var generatedOtp = GenerateOTP(encodedString).ToString();
+            return generatedOtp == otp;
+        }
 
         private SecurityKey GetSymmetricSecurityKey()
         {
@@ -86,6 +126,8 @@ namespace AdeAuth.Services
                 IssuerSigningKey = GetSymmetricSecurityKey()
             };
         }
+
+     
 
         private string _tokenKey;
     }

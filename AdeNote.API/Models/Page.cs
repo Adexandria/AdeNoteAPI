@@ -40,7 +40,7 @@ namespace AdeNote.Models
         /// <summary>
         /// Id of the book
         /// </summary>
-        [ForeignKey("BookId")]
+        [ForeignKey("Book")]
         public Guid BookId { get; set; }
         
         /// <summary>
