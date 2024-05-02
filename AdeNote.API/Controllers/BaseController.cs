@@ -24,6 +24,7 @@ namespace AdeNote.Controllers
         public BaseController(IUserIdentity userIdentity)
         {
             CurrentUser = userIdentity.UserId;
+            CurrentEmail = userIdentity.Email;
         }
 
         /// <summary>

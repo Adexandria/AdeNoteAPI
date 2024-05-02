@@ -855,7 +855,9 @@ namespace AdeNote.Infrastructure.Services
                     return ActionResult.Failed("Invalid token" , StatusCodes.Status400BadRequest);
                 }
 
-                var user = await userRepository.GetUser((Guid)claims.GetValueOrDefault("id"));
+                var id = new Guid(claims.GetValueOrDefault("id").ToString());
+
+                var user = await userRepository.GetUser(id);
 
                 if(user == null)
                 {
