@@ -49,7 +49,7 @@ namespace AdeNote.Infrastructure.Repository
         public async Task<User> GetUserByEmail(string email)
         {
             var user = await Db.Users.
-                   AsNoTracking().Where(s => s.Email == email).FirstOrDefaultAsync();
+                   AsNoTracking().Include(s=>s.RefreshToken).Where(s => s.Email == email).FirstOrDefaultAsync();
 
             return user;
         }

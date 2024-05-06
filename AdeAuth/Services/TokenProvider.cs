@@ -13,7 +13,7 @@ namespace AdeAuth.Services
              ?? throw new NullReferenceException("Invalid token key");
         }
 
-        public string GenerateRefreshToken(int tokenSize)
+        public string GenerateToken(int tokenSize)
         {
             var randomNumber = new byte[tokenSize];
 

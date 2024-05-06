@@ -141,13 +141,17 @@ namespace AdeNote.Infrastructure.Services
 
         Task<ActionResult<string>> GenerateResetToken(Guid userId, string email);
 
-        ActionResult VerifyToken(string token);
+        ActionResult VerifyResetToken(string token);
 
         Task<ActionResult<string>> SignUser(CreateUserDTO newUser, AuthType authType = AuthType.local);
 
         Task<ActionTokenResult<UserDTO>> LoginUser(LoginDTO login, AuthType authType);
 
         Task<ActionResult<string>> GenerateAccessToken(string refreshToken);
+
         Task<ActionResult<string>> GenerateAccessToken(Guid userId, string email);
+
+        Task<ActionResult<string>> LoginUser(string email);
+        Task<ActionTokenResult<UserDTO>> VerifyPasswordlessToken(string token);
     }
 }

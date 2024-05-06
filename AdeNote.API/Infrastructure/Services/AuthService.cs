@@ -628,7 +628,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public ActionResult VerifyToken(string token)
+        public ActionResult VerifyResetToken(string token)
         {
             try
             {
@@ -709,10 +709,10 @@ namespace AdeNote.Infrastructure.Services
                     {"[Name]" , $"{ user.FirstName} {user.LastName}" }
                 };
 
-                _notificationService.SendNotification(new Email(user.Email, "Confirm email"),
-                    EmailTemplate.EmailConfirmationNotification, ContentType.html, substitutions);
+               // _notificationService.SendNotification(new Email(user.Email, "Confirm email"),
+                    //EmailTemplate.EmailConfirmationNotification, ContentType.html, substitutions);
 
-                return ActionResult<string>.SuccessfulOperation("Confirm email");
+                return ActionResult<string>.SuccessfulOperation(emailConfirmationToken);
 
             }
             catch (Exception ex)
@@ -757,18 +757,13 @@ namespace AdeNote.Infrastructure.Services
                 var accessToken = tokenProvider.GenerateToken(new Dictionary<string, object>() { { "id", authenticatedUser.Id.ToString("N") },
                 { ClaimTypes.Email,authenticatedUser.Email} }, 10);
 
-                var refreshToken = tokenProvider.GenerateRefreshToken();
+                var refreshToken = tokenProvider.GenerateToken();
 
                 var token = new RefreshToken(refreshToken, authenticatedUser.Id, DateTime.UtcNow.AddMonths(1));
 
                 var tokenResponse = await refreshTokenRepository.Add(token);
 
                 if (!tokenResponse)
-                    return ActionTokenResult<UserDTO>.Failed("Failed to login");
-
-                var result = await userRepository.Add(authenticatedUser);
-
-                if (!result)
                     return ActionTokenResult<UserDTO>.Failed("Failed to login");
 
                 return ActionTokenResult<UserDTO>.SuccessfulOperation(new UserDTO(authenticatedUser.Id,authenticatedUser.FirstName,
@@ -902,6 +897,87 @@ namespace AdeNote.Infrastructure.Services
             catch (Exception ex)
             {
                 return ActionResult<bool>.Failed(ex.Message);
+            }
+        }
+
+        public async Task<ActionResult<string>> LoginUser(string email)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(email) || string.IsNullOrWhiteSpace(email))
+                {
+                    return ActionResult<string>.Failed("Invalid email", StatusCodes.Status400BadRequest);
+                }
+
+                var user = await userRepository.GetUserByEmail(email);
+                if (user == null)
+                {
+                    return ActionResult<string>.Failed("Invalid email", StatusCodes.Status400BadRequest);
+                }
+
+                var token = tokenProvider.GenerateToken(new Dictionary<string, object>() { { ClaimTypes.Email, user.Email} }, 10);
+
+                /*var substitutions = new Dictionary<string, string>()
+                    {
+                    {"[Token]" , token }
+                    };
+
+                _notificationService.SendNotification(new Email(user.Email, "Login Passwordless"),
+                    EmailTemplate.EmailConfirmationNotification, ContentType.html, substitutions);*/
+
+                return ActionResult<string>.SuccessfulOperation(token);
+
+            }
+            catch (Exception ex)
+            {
+                return ActionResult<string>.Failed(ex.Message);
+            }
+        }
+
+        public async Task<ActionTokenResult<UserDTO>> VerifyPasswordlessToken(string token)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(token) || string.IsNullOrWhiteSpace(token))
+                {
+                    return ActionTokenResult<UserDTO>.Failed("Invalid token", StatusCodes.Status400BadRequest);
+                }
+
+                var claims = tokenProvider.ReadToken(token, false, ClaimTypes.Email);
+
+                if(claims.Count == 0 || claims.Count >= 2)
+                {
+                    return ActionTokenResult<UserDTO>.Failed("Invalid token", StatusCodes.Status400BadRequest);
+                }
+
+                var user = await userRepository.GetUserByEmail(claims.GetValueOrDefault(ClaimTypes.Email).ToString());
+
+                if(user.RefreshToken != null) 
+                {
+                    await refreshTokenRepository.Remove(user.RefreshToken);
+                }
+
+                var accessToken = tokenProvider.GenerateToken(new Dictionary<string, object>() { { "id", user.Id.ToString("N") },
+                    { ClaimTypes.Email, user.Email} }, 10);
+
+                var refreshToken = tokenProvider.GenerateToken();
+
+                var newRefreshToken = new RefreshToken(refreshToken,user.Id, DateTime.UtcNow.AddMonths(3));
+
+
+                var tokenResponse = await refreshTokenRepository.Add(newRefreshToken);
+
+                if (!tokenResponse)
+                    return ActionTokenResult<UserDTO>.Failed("Failed to login");
+
+
+                var authenticatedUser = new UserDTO(user.Id,user.FirstName,user.LastName,user.Email);
+
+                return ActionTokenResult<UserDTO>.SuccessfulOperation(authenticatedUser, accessToken, refreshToken);
+            }
+            catch (Exception ex)
+            {
+                return ActionTokenResult<UserDTO>.Failed(ex.Message);
             }
         }
 

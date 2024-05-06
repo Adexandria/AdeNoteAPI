@@ -4,7 +4,6 @@ namespace AdeNote.Infrastructure.Repository
 {
     public interface IRefreshTokenRepository :IRepository<RefreshToken>
     {
-        Task Delete(Guid entityId);
         Task<Guid> GetUserByRefreshToken(string refreshToken);
 
         /// <summary>

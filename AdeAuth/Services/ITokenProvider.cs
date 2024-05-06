@@ -11,7 +11,7 @@ namespace AdeAuth.Services
     {
         string GenerateToken(Dictionary<string, object> claims, int timeInMinutes = 5);
 
-        string GenerateRefreshToken(int tokenSize = 10);
+        string GenerateToken(int tokenSize = 10);
 
         Dictionary<string,object> ReadToken(string token, bool verifyParameter = false, params string[] claimTypes);
 

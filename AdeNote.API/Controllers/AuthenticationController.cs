@@ -107,6 +107,82 @@ namespace AdeNote.Controllers
         }
 
 
+        /// <summary>
+        /// Logins user using passwordless method
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///             
+        ///             POST /authentication/login/passwordless?email="email@gmail.com
+        ///             
+        ///  </remarks>
+        /// <response code ="200"> Returns if logged in successfully</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="401"> Returns if unauthorised</response>
+        /// <returns>A name and email</returns>
+        [AllowAnonymous]
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpPost("login/passwordless")]
+        public async Task<IActionResult> Login([FromQuery]string email)
+        {
+           var response = await _authService.LoginUser(email);
+           return response.Response();
+        }
+
+
+        /// <summary>
+        /// Logins user using passwordless method
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///             
+        ///             POST /authentication/login/passwordless/verify-token
+        ///             
+        ///  </remarks>
+        /// <response code ="200"> Returns if logged in successfully</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="401"> Returns if unauthorised</response>
+        /// <returns>A name and email</returns>
+        [AllowAnonymous]
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpPost("login/passwordless/verify-token")]
+        public async Task<IActionResult> VerifyPasswordlessToken([FromQuery] string token)
+        {
+            var response = await _authService.VerifyPasswordlessToken(token);
+
+            if (response.NotSuccessful)
+                return response.Response();
+
+            var resultResponse = _authService.IsAuthenticatorEnabled(response.Data.Email).Result;
+
+            if (resultResponse.Data != MFAType.none.ToString())
+            {
+                var tokenResponse = _authService.GenerateMFAToken(response.Data.UserId, response.Data.Email, response.RefreshToken);
+
+                AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(8));
+
+                return Ok($"Proceed to enter otp from {resultResponse.Data} authenticator");
+            }
+
+            /*  SendNotification(response.Data.Email);*/
+
+            AddToCookie("AdeNote-RefreshToken", response.RefreshToken, DateTime.UtcNow.AddMonths(2));
+
+            return response.Response();
+        }
+
 
         /// <summary>
         /// Logins user
@@ -189,7 +265,7 @@ namespace AdeNote.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///             POST /authentication/reset-password
+        ///             POST /authentication/password/verify-token
         /// </remarks>
         /// <param name="password">New password</param>
         /// <param name="token">A token to allow user to reset password</param>
@@ -208,7 +284,7 @@ namespace AdeNote.Controllers
         [HttpPost("reset-password")]
         public async Task<IActionResult> ResetPassword([FromBody]string password,[FromQuery] string token)
         {
-            var tokenResponse = _authService.VerifyToken(token);
+            var tokenResponse = _authService.VerifyResetToken(token);
             if (tokenResponse.NotSuccessful)
                 return tokenResponse.Response();
             var response = await _userService.ResetUserPassword(CurrentUser,password);
@@ -221,7 +297,7 @@ namespace AdeNote.Controllers
         /// <remarks>
         /// Sample request:
         ///     
-        ///             POST /authentication/generate-token
+        ///             POST /authentication/password/send-token
         /// </remarks>
         /// <param name="email">email of the user</param>
         /// <response code ="200"> Returns if token was generated</response>
@@ -234,7 +310,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [HttpPost("generate-token")]
-        public async Task<IActionResult> GenerateToken(string email)
+        public async Task<IActionResult> GenerateResetToken(string email)
         {
             var userResponse = await _userService.GetUser(email);
             if(userResponse.NotSuccessful)
@@ -804,7 +880,7 @@ namespace AdeNote.Controllers
                 return Ok($"Proceed to enter otp from {resultResponse.Data} authenticator");
             }
 
-            SendNotification(loginResponse.Data.Email);
+           // SendNotification(loginResponse.Data.Email);
 
             AddToCookie("AdeNote-RefreshToken", loginResponse.RefreshToken, DateTime.UtcNow.AddMonths(2));
 

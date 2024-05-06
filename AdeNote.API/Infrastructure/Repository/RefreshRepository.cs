@@ -18,15 +18,6 @@ namespace AdeNote.Infrastructure.Repository
             return await SaveChanges<RefreshToken>();
         }
 
-        public async Task Delete(Guid entityId)
-        {
-            var entity = await Db.RefreshTokens.Where(s=>s.Id == entityId).FirstOrDefaultAsync();
-            if (entity != null)
-            {
-                await Remove(entity);
-            }
-        }
-
         public async Task<RefreshToken> GetRefreshToken(string refreshToken)
         {
             var refreshTokens = await Db.RefreshTokens.ToListAsync();
