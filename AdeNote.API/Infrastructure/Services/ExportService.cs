@@ -1,8 +1,5 @@
 ﻿using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Utilities;
-using Excelify.Services;
-using System.Net;
-using TasksLibrary.Utilities;
 
 namespace AdeNote.Infrastructure.Services
 {

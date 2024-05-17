@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TasksLibrary.Models;
 
 namespace AdeNote.Infrastructure.Utilities
 {
@@ -11,7 +10,7 @@ namespace AdeNote.Infrastructure.Utilities
         /// <summary>
         /// A constructor
         /// </summary>
-        public UserIdConverter() : base(v=>v.Id,v=> new UserId(v))
+        public UserIdConverter() : base(v => v.Id,v => new UserId(v))
         {
 
         }

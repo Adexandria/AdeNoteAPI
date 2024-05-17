@@ -5,6 +5,7 @@
     /// </summary>
     public enum MFAType
     {
+        none,
         /// <summary>
         /// Sms
         /// </summary>

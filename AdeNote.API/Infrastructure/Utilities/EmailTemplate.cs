@@ -17,7 +17,10 @@ namespace AdeNote.Infrastructure.Utilities
         ResetTokenNotification,
 
         [Description("MFAToken")]
-        MfaRmovalTokenNotification,
+        MfaRemovalTokenNotification,
+
+        [Description("EmailConfirmation")]
+        EmailConfirmationNotification
 
     }
 }

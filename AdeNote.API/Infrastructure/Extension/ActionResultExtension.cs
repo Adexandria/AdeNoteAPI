@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AdeNote.Infrastructure.Utilities;
+using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace AdeNote.Infrastructure.Extension
@@ -13,7 +14,7 @@ namespace AdeNote.Infrastructure.Extension
         /// </summary>
         /// <param name="actionResult">A custom action result object</param>
         /// <returns>An interface of MVC Action result</returns>
-        public static IActionResult Response(this TasksLibrary.Utilities.ActionResult actionResult)
+        public static IActionResult Response(this Utilities.ActionResult actionResult)
         {
             var result = actionResult.StatusCode switch
             {

@@ -1,6 +1,6 @@
 ﻿
 
-using TasksLibrary.Utilities;
+using AdeNote.Infrastructure.Utilities;
 
 namespace AdeNote.Infrastructure.Services
 {

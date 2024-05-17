@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using TasksLibrary.Models;
 
 namespace AdeNote.Models
 {
@@ -55,7 +54,7 @@ namespace AdeNote.Models
         /// <summary>
         /// An id of the user
         /// </summary>
-        [ForeignKey("User_id")]
+        [ForeignKey("User")]
         public Guid UserId{ get; set; }
 
         /// <summary>

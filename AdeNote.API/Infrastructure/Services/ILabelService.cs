@@ -1,5 +1,6 @@
-﻿using AdeNote.Models.DTOs;
-using TasksLibrary.Utilities;
+﻿using AdeNote.Infrastructure.Utilities;
+using AdeNote.Models.DTOs;
+
 
 namespace AdeNote.Infrastructure.Services
 {

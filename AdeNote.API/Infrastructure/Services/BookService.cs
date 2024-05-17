@@ -1,12 +1,10 @@
 ﻿using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Repository;
+using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
 using Mapster;
-using NHibernate.Util;
-using System.Collections.Generic;
 using System.Net;
-using TasksLibrary.Utilities;
 
 namespace AdeNote.Infrastructure.Services
 {

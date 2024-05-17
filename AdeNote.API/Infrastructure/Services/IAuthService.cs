@@ -1,6 +1,6 @@
-﻿using AdeNote.Models;
+﻿using AdeNote.Infrastructure.Utilities;
+using AdeNote.Models;
 using AdeNote.Models.DTOs;
-using TasksLibrary.Utilities;
 
 namespace AdeNote.Infrastructure.Services
 {
@@ -9,6 +9,7 @@ namespace AdeNote.Infrastructure.Services
     /// </summary>
     public interface IAuthService
     {
+
         /// <summary>
         /// Gets user's Qr code
         /// </summary>
@@ -62,6 +63,9 @@ namespace AdeNote.Infrastructure.Services
         Task<ActionResult> SetPhoneNumber(Guid userId,string phoneNumber);
 
 
+        Task<ActionResult> ConfirmEmail(string verificationToken);
+
+
         /// <summary>
         /// Sets up phone number
         /// </summary>
@@ -76,6 +80,13 @@ namespace AdeNote.Infrastructure.Services
         /// <param name="userId">User id</param>
         /// <returns>bool</returns>
         Task<ActionResult> IsPhoneNumberVerified(Guid userId);
+
+        /// <summary>
+        /// Checks if a email has been verified
+        /// </summary>
+        /// <param name="userId">User id</param>
+        /// <returns>bool</returns>
+        Task<ActionResult<bool>> IsEmailVerified(Guid userId);
 
         /// <summary>
         /// Sends otp to phone number 
@@ -131,5 +142,16 @@ namespace AdeNote.Infrastructure.Services
         Task<ActionResult<string>> GenerateResetToken(Guid userId, string email);
 
         ActionResult VerifyResetToken(string token);
+
+        Task<ActionResult<string>> SignUser(CreateUserDTO newUser, AuthType authType = AuthType.local);
+
+        Task<ActionTokenResult<UserDTO>> LoginUser(LoginDTO login, AuthType authType);
+
+        Task<ActionResult<string>> GenerateAccessToken(string refreshToken);
+
+        Task<ActionResult<string>> GenerateAccessToken(Guid userId, string email);
+
+        Task<ActionResult<string>> LoginUser(string email);
+        Task<ActionTokenResult<UserDTO>> VerifyPasswordlessToken(string token);
     }
 }

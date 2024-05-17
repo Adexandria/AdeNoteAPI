@@ -3,17 +3,10 @@ using AdeNote.Infrastructure.Services;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
-using Autofac;
+using Asp.Versioning;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
-using TasksLibrary.Application.Commands.CreateUser;
-using TasksLibrary.Application.Commands.GenerateToken;
-using TasksLibrary.Application.Commands.Login;
-using TasksLibrary.Application.Commands.VerifyToken;
-using TasksLibrary.Architecture.Application;
-using TasksLibrary.Models.Interfaces;
-using TasksLibrary.Services;
 
 namespace AdeNote.Controllers
 {
@@ -23,32 +16,27 @@ namespace AdeNote.Controllers
     /// 
     /// Supports version 1.0
     /// </summary>
-    [Authorize]
     [Route("api/v{version:apiVersion}/authentication")]
     [ApiVersion("1.0")]
     [ApiController]
     public class AuthenticationController : BaseController
     {
         private readonly IAuthService _authService;
-        private readonly IAuthToken _authToken;
         private readonly INotificationService _notificationService;
         private readonly IUserService _userService;
         /// <summary>
         /// This is the constructor
         /// </summary>
-        /// <param name="container">A container that contains all the built dependencies</param>
-        /// <param name="application">An interface used to interact with the layers</param>
         /// <param name="authService">An authentication service </param>
         /// <param name="notificationService">Handles Notification</param>
         /// <param name="userIdentity">An interface that interacts with the user. This fetches the current user details</param>
         /// <param name="userService">An interface that manages users</param>
-        public AuthenticationController(IContainer container, ITaskApplication application, IUserIdentity userIdentity,
-            IAuthService authService, INotificationService notificationService, AuthTokenRepository authToken,IUserService userService) : base(container, application,userIdentity)
+        public AuthenticationController( IUserIdentity userIdentity,
+            IAuthService authService, INotificationService notificationService,IUserService userService) : base(userIdentity)
         {
             _authService = authService;
             _notificationService = notificationService;
             _userService = userService;
-            _authToken = authToken;
         }
 
         /// <summary>
@@ -68,7 +56,6 @@ namespace AdeNote.Controllers
         ///             }
         ///             
         /// </remarks>
-        /// <param name="command">An object to sign up new user</param>
         /// <response code ="200"> Returns if user was created</response>
         /// <response code ="400"> Returns if experiencing client issues</response>
         /// <response code ="500"> Returns if experiencing server issues</response>
@@ -77,14 +64,14 @@ namespace AdeNote.Controllers
         [AllowAnonymous] 
         [Consumes("application/json")]
         [Produces("application/json")]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<CreateUserDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<CreateUserDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("sign-up")]
-        public async Task<IActionResult> SignUp(CreateUserCommand command)
+        public async Task<IActionResult> SignUp(CreateUserDTO newUser)
         {
-            var response = await Application.ExecuteCommand<CreateUserCommand, CreateUserDTO>(Container, command);
+            var response = await _authService.SignUser(newUser);
             return response.Response();
         }
 
@@ -101,7 +88,6 @@ namespace AdeNote.Controllers
         ///                "password": "string"
         ///             }
         ///  </remarks>
-        /// <param name="command"></param>
         /// <response code ="200"> Returns if logged in successfully</response>
         /// <response code ="400"> Returns if experiencing client issues</response>
         /// <response code ="500"> Returns if experiencing server issues</response>
@@ -110,16 +96,92 @@ namespace AdeNote.Controllers
         [AllowAnonymous]
         [Consumes("application/json")]
         [Produces("application/json")]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("login")]
-        public IActionResult Login(LoginCommand command)
+        public IActionResult Login(LoginDTO login)
         {
-            return LoginUser(command);
+            return LoginUser(login, AuthType.local);
         }
 
+
+        /// <summary>
+        /// Logins user using passwordless method
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///             
+        ///             POST /authentication/login/passwordless?email="email@gmail.com
+        ///             
+        ///  </remarks>
+        /// <response code ="200"> Returns if logged in successfully</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="401"> Returns if unauthorised</response>
+        /// <returns>A name and email</returns>
+        [AllowAnonymous]
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpPost("login/passwordless")]
+        public async Task<IActionResult> Login([FromQuery]string email)
+        {
+           var response = await _authService.LoginUser(email);
+           return response.Response();
+        }
+
+
+        /// <summary>
+        /// Logins user using passwordless method
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///             
+        ///             POST /authentication/login/passwordless/verify-token
+        ///             
+        ///  </remarks>
+        /// <response code ="200"> Returns if logged in successfully</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="401"> Returns if unauthorised</response>
+        /// <returns>A name and email</returns>
+        [AllowAnonymous]
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpPost("login/passwordless/verify-token")]
+        public async Task<IActionResult> VerifyPasswordlessToken([FromQuery] string token)
+        {
+            var response = await _authService.VerifyPasswordlessToken(token);
+
+            if (response.NotSuccessful)
+                return response.Response();
+
+            var resultResponse = _authService.IsAuthenticatorEnabled(response.Data.Email).Result;
+
+            if (resultResponse.Data != MFAType.none.ToString())
+            {
+                var tokenResponse = _authService.GenerateMFAToken(response.Data.UserId, response.Data.Email, response.RefreshToken);
+
+                AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(8));
+
+                return Ok($"Proceed to enter otp from {resultResponse.Data} authenticator");
+            }
+
+            /*  SendNotification(response.Data.Email);*/
+
+            AddToCookie("AdeNote-RefreshToken", response.RefreshToken, DateTime.UtcNow.AddMonths(2));
+
+            return response.Response();
+        }
 
 
         /// <summary>
@@ -132,9 +194,9 @@ namespace AdeNote.Controllers
         /// <returns>A name and email</returns>
         [Consumes("application/json")]
         [Produces("application/json")]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("sso")]
         [Authorize("sso")]
@@ -144,23 +206,29 @@ namespace AdeNote.Controllers
 
             var name = HttpContext.User.FindFirstValue("name");
 
+            if (string.IsNullOrEmpty(name))
+            {
+                return Infrastructure.Utilities.ActionResult.Failed("Invalid token").Response();
+            }
+
+            var names = name.Split(' ');
+
             var isExist = await _userService.IsUserExist(userEmail);
 
             if (isExist.NotSuccessful)
             {
-                var response = await Application.ExecuteCommand<CreateUserCommand, CreateUserDTO>(Container,
-                    new CreateUserCommand() { Email = userEmail, Name = name, Password = "firstName", ConfirmPassword = "firstName" });
+                var response = await _authService.SignUser(new CreateUserDTO() { Email = userEmail , FirstName = names[0], LastName= names[1]},AuthType.microsoft);
 
                 if (response.NotSuccessful)
                     return response.Response();
             }
-            var command = new LoginCommand() 
-            { 
-                    Email = userEmail,
-                    Password = "firstName"
+            var loginUser = new LoginDTO()
+            {
+                Email = userEmail
             };
 
-            return LoginUser(command);
+
+            return LoginUser(loginUser, AuthType.microsoft);
         }
 
         /// <summary>
@@ -178,10 +246,11 @@ namespace AdeNote.Controllers
         /// <returns>Action result</returns>
         [Consumes("application/json")]
         [Produces("application/json")]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [Authorize]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("change-password")]
         public async Task<IActionResult> ChangePassword(ChangePasswordDTO changePassword)
@@ -196,7 +265,7 @@ namespace AdeNote.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///             POST /authentication/reset-password
+        ///             POST /authentication/password/verify-token
         /// </remarks>
         /// <param name="password">New password</param>
         /// <param name="token">A token to allow user to reset password</param>
@@ -207,10 +276,10 @@ namespace AdeNote.Controllers
         [AllowAnonymous]
         [Consumes("application/json")]
         [Produces("application/json")]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("reset-password")]
         public async Task<IActionResult> ResetPassword([FromBody]string password,[FromQuery] string token)
@@ -228,7 +297,7 @@ namespace AdeNote.Controllers
         /// <remarks>
         /// Sample request:
         ///     
-        ///             POST /authentication/generate-token
+        ///             POST /authentication/password/send-token
         /// </remarks>
         /// <param name="email">email of the user</param>
         /// <response code ="200"> Returns if token was generated</response>
@@ -237,11 +306,11 @@ namespace AdeNote.Controllers
         [AllowAnonymous]
         [Consumes("application/json")]
         [Produces("application/json")]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [HttpPost("generate-token")]
-        public async Task<IActionResult> GenerateToken(string email)
+        public async Task<IActionResult> GenerateResetToken(string email)
         {
             var userResponse = await _userService.GetUser(email);
             if(userResponse.NotSuccessful)
@@ -267,10 +336,10 @@ namespace AdeNote.Controllers
         [AllowAnonymous]
         [Consumes("application/json")]
         [Produces("application/json")]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("token")]
         public async Task<IActionResult> GetAccessToken()
@@ -281,12 +350,8 @@ namespace AdeNote.Controllers
             if (revokedResponse.NotSuccessful)
                 return revokedResponse.Response();
 
-            var command = new GenerateTokenCommand() 
-            { 
-                RefreshToken = refreshToken
-            };
 
-            var response = await Application.ExecuteCommand<GenerateTokenCommand, string>(Container, command);
+            var response = await _authService.GenerateAccessToken(refreshToken);
             return response.Response();
         }
 
@@ -306,10 +371,11 @@ namespace AdeNote.Controllers
         /// <response code ="401"> Returns if unauthorised</response>
         /// <returns>Authenticator key</returns>
         [Produces("application/json")]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<AuthenticatorDTO>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [Authorize]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<AuthenticatorDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("two-factor-authentication/app")]
         public async Task<IActionResult> SetUpGoogleAuthenticator()
@@ -317,7 +383,7 @@ namespace AdeNote.Controllers
             var resultResponse = await _authService.IsAuthenticatorEnabled(CurrentUser, MFAType.google);
 
             if (resultResponse.IsSuccessful)
-                return TasksLibrary.Utilities.ActionResult.Failed("User has set up two factor authentication", StatusCodes.Status400BadRequest).Response();
+                return Infrastructure.Utilities.ActionResult.Failed("User has set up two factor authentication", StatusCodes.Status400BadRequest).Response();
 
             var response = await _authService.SetAuthenticator(CurrentUser, CurrentEmail);
 
@@ -339,10 +405,11 @@ namespace AdeNote.Controllers
         /// <response code ="404"> Returns if parameters not found</response>
         /// <response code ="401"> Returns if unauthorised</response>
         [Produces("application/json")]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [Authorize]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("two-factor-authentication/sms")]
         public async Task<IActionResult> SetUpSmsAuthenticator()
@@ -350,7 +417,7 @@ namespace AdeNote.Controllers
             var resultResponse = await _authService.IsAuthenticatorEnabled(CurrentUser, MFAType.sms);
 
             if (resultResponse.IsSuccessful)
-                return TasksLibrary.Utilities.ActionResult.Failed("User has set up two factor authentication", StatusCodes.Status400BadRequest).Response();
+                return Infrastructure.Utilities.ActionResult.Failed("User has set up two factor authentication", StatusCodes.Status400BadRequest).Response();
 
             var verificationResponse = await _authService.IsPhoneNumberVerified(CurrentUser);
 
@@ -378,10 +445,11 @@ namespace AdeNote.Controllers
         /// <response code ="404"> Returns if parameters not found</response>
         /// <response code ="401"> Returns if unauthorised</response>
         [Produces("application/json")]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [Authorize]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("phonenumber")]
         public async Task<IActionResult> AddPhoneNumber(string phoneNumber)
@@ -407,10 +475,11 @@ namespace AdeNote.Controllers
         /// <response code ="404"> Returns if parameters not found</response>
         /// <response code ="401"> Returns if unauthorised</response>
         [Produces("application/json")]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [Authorize]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("verify-phonenumber")]
         public async Task<IActionResult> VerifyPhoneNumber(string verificationCode)
@@ -418,7 +487,7 @@ namespace AdeNote.Controllers
             var resultResponse = await _authService.IsPhoneNumberVerified(CurrentUser);
 
             if(resultResponse.IsSuccessful)
-                return TasksLibrary.Utilities
+                return Infrastructure.Utilities
                     .ActionResult.Failed("Phone number is already verified",StatusCodes.Status400BadRequest)
                     .Response();
 
@@ -426,6 +495,41 @@ namespace AdeNote.Controllers
 
             return response.Response();
         }
+
+        /// <summary>
+        /// Verifies email
+        /// </summary>
+        /// <remarks>
+        /// Sample request: 
+        /// 
+        ///             POST /authentication/verify-email
+        ///             
+        /// </remarks>
+        /// <param name="verificationToken">Verification code</param>
+        /// <response code ="200"> Returns if phone number was verified</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="404"> Returns if parameters not found</response>
+        /// <response code ="401"> Returns if unauthorised</response>
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpPost("verify-email")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Verifyemail(string verificationToken)
+        {
+
+            var response = await _authService.ConfirmEmail(verificationToken);
+
+            return response.Response();
+        }
+
+
+
+
 
         /// <summary>
         /// Sends one time password via sms
@@ -442,10 +546,10 @@ namespace AdeNote.Controllers
         /// <response code ="404"> Returns if parameters not found</response>
         /// <response code ="401"> Returns if unauthorised</response>
         [Produces("application/json")]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [AllowAnonymous]
         [HttpPost("two-factor-authentication/sms/send-code")]
@@ -460,14 +564,14 @@ namespace AdeNote.Controllers
             var resultResponse = await _authService.IsAuthenticatorEnabled(detailsResponse.Data.UserId, MFAType.sms);
 
             if (resultResponse.NotSuccessful)
-                return TasksLibrary.Utilities
+                return Infrastructure.Utilities
                     .ActionResult.Failed("User has not set up two factor authentication", StatusCodes.Status400BadRequest)
                     .Response();
 
             var verificationResponse = await _authService.IsPhoneNumberVerified(detailsResponse.Data.UserId);
 
             if (verificationResponse.NotSuccessful)
-                return TasksLibrary.Utilities.ActionResult.Failed("Phone number has not been verified", StatusCodes.Status400BadRequest).Response();
+                return Infrastructure.Utilities.ActionResult.Failed("Phone number has not been verified", StatusCodes.Status400BadRequest).Response();
 
             var response = await _authService.SendSmsOTP(detailsResponse.Data.UserId,detailsResponse.Data.Email);
 
@@ -491,10 +595,10 @@ namespace AdeNote.Controllers
         /// <response code ="401"> Returns if unauthorised</response>
         /// <returns>Access token</returns>
         [Produces("application/json")]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [AllowAnonymous]
         [HttpPost("two-factor-authentication/sms/verify-code")]
@@ -509,14 +613,14 @@ namespace AdeNote.Controllers
             var resultResponse = await _authService.IsAuthenticatorEnabled(detailsResponse.Data.UserId, MFAType.sms);
 
             if (resultResponse.NotSuccessful)
-                return TasksLibrary.Utilities
+                return Infrastructure.Utilities
                     .ActionResult.Failed("User has not set up two factor authentication", StatusCodes.Status400BadRequest)
                     .Response();
 
             var verificationResponse = await _authService.IsPhoneNumberVerified(detailsResponse.Data.UserId);
 
             if (verificationResponse.NotSuccessful)
-                return TasksLibrary.Utilities
+                return Infrastructure.Utilities
                     .ActionResult.Failed("Phone number has not been verified", StatusCodes.Status400BadRequest)
                     .Response();
 
@@ -525,13 +629,13 @@ namespace AdeNote.Controllers
             if (response.NotSuccessful)
                 return response.Response();
 
-            var accessToken = _authToken.GenerateAccessToken(detailsResponse.Data.UserId, detailsResponse.Data.Email);
+            var accessToken = await _authService.GenerateAccessToken(detailsResponse.Data.UserId, detailsResponse.Data.Email);
 
             AddToCookie("AdeNote-RefreshToken", detailsResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
 
             SendNotification(detailsResponse.Data.Email);
 
-            return TasksLibrary.Utilities.ActionResult<string>.SuccessfulOperation(accessToken).Response();
+            return Infrastructure.Utilities.ActionResult<string>.SuccessfulOperation(accessToken.Data).Response();
         }
 
         /// <summary>
@@ -549,10 +653,10 @@ namespace AdeNote.Controllers
         /// <response code ="404"> Returns if parameters not found</response>
         /// <response code ="401"> Returns if unauthorised</response> 
         /// <returns>Access token</returns>
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [AllowAnonymous]
         [HttpPost("two-factor-authentication/app/verify-code")]
@@ -568,7 +672,7 @@ namespace AdeNote.Controllers
             if(response.NotSuccessful)
                 return response.Response();
 
-            var accessToken = _authToken.GenerateAccessToken(detailsResponse.Data.UserId,detailsResponse.Data.Email);
+            var accessToken = await _authService.GenerateAccessToken(detailsResponse.Data.UserId, detailsResponse.Data.Email);
 
             SendNotification(detailsResponse.Data.Email);
 
@@ -592,11 +696,12 @@ namespace AdeNote.Controllers
         /// <response code ="404"> Returns if parameters not found</response>
         /// <response code ="401"> Returns if unauthorised</response> 
         /// <returns>Qr ucode url</returns>
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [Authorize]
         [HttpGet("two-factor-authentication/app/qr-code")]
         public async Task<IActionResult> GetAuthenticatorQRCode()
         {
@@ -619,11 +724,12 @@ namespace AdeNote.Controllers
         /// <response code ="404"> Returns if parameters not found</response>
         /// <response code ="401"> Returns if unauthorised</response> 
         /// <returns>Action result</returns>
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [AllowAnonymous]
         [HttpPost("sign-out")]
         public async Task<IActionResult> LogOut()
         {
@@ -650,11 +756,12 @@ namespace AdeNote.Controllers
         /// <response code ="500"> Returns if experiencing server issues</response>
         /// <response code ="404"> Returns if parameters not found</response>
         /// <response code ="401"> Returns if unauthorised</response> 
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [Authorize]
         [HttpDelete("two-factor-authentication")]
         public async Task<IActionResult> RemoveAuthenicator()
         {
@@ -677,10 +784,10 @@ namespace AdeNote.Controllers
         /// <response code ="500"> Returns if experiencing server issues</response>
         /// <response code ="404"> Returns if parameters not found</response>
         /// <response code ="401"> Returns if unauthorised</response> 
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [AllowAnonymous]
         [HttpGet("two-factor-authentication/recovery")]
@@ -706,10 +813,10 @@ namespace AdeNote.Controllers
         /// <response code ="500"> Returns if experiencing server issues</response>
         /// <response code ="404"> Returns if parameters not found</response>
         /// <response code ="401"> Returns if unauthorised</response> 
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(TasksLibrary.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [AllowAnonymous]
         [HttpDelete("two-factor-authentication/verify-token")]
@@ -718,6 +825,8 @@ namespace AdeNote.Controllers
             var response = await _authService.DisableUserMFA(token);
             return response.Response();
         }
+
+
 
 
         /// <summary>
@@ -753,32 +862,27 @@ namespace AdeNote.Controllers
         }
 
         [NonAction]
-        private IActionResult LoginUser(LoginCommand command)
+        private IActionResult LoginUser(LoginDTO login, AuthType authType)
         {
-            var loginResponse = Application.ExecuteCommand<LoginCommand, LoginDTO>(Container, command).Result;
+            var loginResponse = _authService.LoginUser(login, authType).Result;
 
             if (loginResponse.NotSuccessful)
                 return loginResponse.Response();
 
-            var resultResponse = _authService.IsAuthenticatorEnabled(command.Email).Result;
+            var resultResponse = _authService.IsAuthenticatorEnabled(login.Email).Result;
 
-            var userDetails = Application.ExecuteCommand<VerifyTokenCommand, TasksLibrary.Services.UserDTO>(Container, new VerifyTokenCommand()
+            if (resultResponse.Data != MFAType.none.ToString())
             {
-                AccessToken = loginResponse.Data.AccessToken
-            }).Result;
-
-            if (resultResponse.IsSuccessful)
-            {
-                var tokenResponse = _authService.GenerateMFAToken(userDetails.Data.UserId, command.Email, loginResponse.Data.RefreshToken);
+                var tokenResponse = _authService.GenerateMFAToken(loginResponse.Data.UserId, login.Email, loginResponse.RefreshToken);
 
                 AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(8));
 
                 return Ok($"Proceed to enter otp from {resultResponse.Data} authenticator");
             }
 
-            SendNotification(userDetails.Data.Email);
+           // SendNotification(loginResponse.Data.Email);
 
-            AddToCookie("AdeNote-RefreshToken", loginResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
+            AddToCookie("AdeNote-RefreshToken", loginResponse.RefreshToken, DateTime.UtcNow.AddMonths(2));
 
             return loginResponse.Response();
         }

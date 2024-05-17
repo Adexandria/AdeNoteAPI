@@ -25,7 +25,6 @@ namespace AdeNote.Migrations
             modelBuilder.Entity("AdeNote.Models.Book", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
@@ -37,12 +36,9 @@ namespace AdeNote.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnName("User_id");
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Books");
                 });
@@ -101,34 +97,34 @@ namespace AdeNote.Migrations
                     b.ToTable("Pages");
                 });
 
-            modelBuilder.Entity("AdeNote.Models.UserDetail", b =>
+            modelBuilder.Entity("AdeNote.Models.RefreshToken", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<bool>("IsEmailVerified")
+                    b.Property<DateTime>("ExpiryDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRevoked")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsPhoneNumberVerified")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Phonenumber")
+                    b.Property<string>("Token")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnName("User_id");
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId")
+                        .IsUnique();
 
-                    b.ToTable("UserDetails");
+                    b.ToTable("RefreshTokens");
                 });
 
-            modelBuilder.Entity("AdeNote.Models.UserToken", b =>
+            modelBuilder.Entity("AdeNote.Models.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -141,69 +137,42 @@ namespace AdeNote.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsMFAEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnName("User_id");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserTokens");
-                });
-
-            modelBuilder.Entity("TasksLibrary.Models.Note", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Modified")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Task")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Note");
-                });
-
-            modelBuilder.Entity("TasksLibrary.Models.User", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Salt")
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("TwoFactorType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -214,9 +183,9 @@ namespace AdeNote.Migrations
 
             modelBuilder.Entity("AdeNote.Models.Book", b =>
                 {
-                    b.HasOne("TasksLibrary.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
+                    b.HasOne("AdeNote.Models.User", "User")
+                        .WithMany("Books")
+                        .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -249,33 +218,11 @@ namespace AdeNote.Migrations
                     b.Navigation("Book");
                 });
 
-            modelBuilder.Entity("AdeNote.Models.UserDetail", b =>
+            modelBuilder.Entity("AdeNote.Models.RefreshToken", b =>
                 {
-                    b.HasOne("TasksLibrary.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("AdeNote.Models.UserToken", b =>
-                {
-                    b.HasOne("TasksLibrary.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("TasksLibrary.Models.Note", b =>
-                {
-                    b.HasOne("TasksLibrary.Models.User", "User")
-                        .WithMany("Notes")
-                        .HasForeignKey("UserId")
+                    b.HasOne("AdeNote.Models.User", "User")
+                        .WithOne("RefreshToken")
+                        .HasForeignKey("AdeNote.Models.RefreshToken", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -287,9 +234,12 @@ namespace AdeNote.Migrations
                     b.Navigation("Pages");
                 });
 
-            modelBuilder.Entity("TasksLibrary.Models.User", b =>
+            modelBuilder.Entity("AdeNote.Models.User", b =>
                 {
-                    b.Navigation("Notes");
+                    b.Navigation("Books");
+
+                    b.Navigation("RefreshToken")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
