@@ -1,6 +1,6 @@
 var namespaceAdeNote_1_1Migrations =
 [
-    [ "FirstMigration", "classAdeNote_1_1Migrations_1_1FirstMigration.html", "classAdeNote_1_1Migrations_1_1FirstMigration" ],
-    [ "addMFA", "classAdeNote_1_1Migrations_1_1addMFA.html", "classAdeNote_1_1Migrations_1_1addMFA" ],
+    [ "firstmigration", "classAdeNote_1_1Migrations_1_1firstmigration.html", "classAdeNote_1_1Migrations_1_1firstmigration" ],
+    [ "secondmigration", "classAdeNote_1_1Migrations_1_1secondmigration.html", "classAdeNote_1_1Migrations_1_1secondmigration" ],
     [ "NoteDbContextModelSnapshot", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot" ]
 ];

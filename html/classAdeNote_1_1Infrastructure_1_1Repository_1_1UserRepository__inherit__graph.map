@@ -1,5 +1,6 @@
 <map id="AdeNote.Infrastructure.Repository.UserRepository" name="AdeNote.Infrastructure.Repository.UserRepository">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,252,121"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title="Commits new and tracked changes in the objects" alt="" coords="33,5,125,32"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser.html" title=" " alt="" coords="150,5,206,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,155,252,196"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title="Commits new and tracked changes in the objects" alt="" coords="16,80,108,107"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html" title=" " alt="" coords="132,80,259,107"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="117,5,273,32"/>
 </map>

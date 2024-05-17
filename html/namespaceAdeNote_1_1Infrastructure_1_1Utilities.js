@@ -1,5 +1,7 @@
 var namespaceAdeNote_1_1Infrastructure_1_1Utilities =
 [
+    [ "ActionResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult" ],
+    [ "ActionTokenResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult" ],
     [ "BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration" ],
     [ "Database", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database" ],
     [ "Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email" ],
@@ -8,8 +10,10 @@ var namespaceAdeNote_1_1Infrastructure_1_1Utilities =
     [ "ExportEntity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExportEntity.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExportEntity" ],
     [ "ImportSheet", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet" ],
     [ "IUserIdentity", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity" ],
+    [ "PasswordAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PasswordAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PasswordAttribute" ],
     [ "Sms", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms" ],
     [ "SmsConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfiguration" ],
+    [ "UserId", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserId.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserId" ],
     [ "UserIdConverter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdConverter.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdConverter" ],
     [ "UserIdentity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdentity.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdentity" ],
     [ "ContentType", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a8b7d2f18ee1f790b13de05879712203c", [
@@ -19,7 +23,8 @@ var namespaceAdeNote_1_1Infrastructure_1_1Utilities =
     [ "EmailTemplate", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#aa7c8e05335ad88c8592fb2211f072980", [
       [ "LoginNotification", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#aa7c8e05335ad88c8592fb2211f072980a87b5b89994555b4260f7b28d27c87e7e", null ],
       [ "ResetTokenNotification", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#aa7c8e05335ad88c8592fb2211f072980a5b7b8884265ce19d4d4bbac9e180cdb4", null ],
-      [ "MfaRmovalTokenNotification", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#aa7c8e05335ad88c8592fb2211f072980a3e61c33408ef4ada24bfb44694a10e78", null ]
+      [ "MfaRemovalTokenNotification", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#aa7c8e05335ad88c8592fb2211f072980aadeb37997209b0964dcd082576394a8b", null ],
+      [ "EmailConfirmationNotification", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#aa7c8e05335ad88c8592fb2211f072980a0d50352249b36028bf80fda901528980", null ]
     ] ],
     [ "MimeType", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8", [
       [ "none", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8a334c4a4c42fdb79d7ebc3e73b517e6f8", null ],

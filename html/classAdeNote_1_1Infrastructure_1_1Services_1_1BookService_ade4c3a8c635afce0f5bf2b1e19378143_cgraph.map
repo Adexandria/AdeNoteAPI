@@ -1,4 +1,7 @@
 <map id="AdeNote.Infrastructure.Services.BookService.Add" name="AdeNote.Infrastructure.Services.BookService.Add">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,239,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,239,112"/>
 <area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#abe1438c61f27c10033e8311dd50e1895" title=" " alt="" coords="287,5,533,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="295,71,525,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#aba4773b458c4acbf09fba32e8835f14d" title=" " alt="" coords="295,136,525,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#afe65cff3843963cbe0282b07339e3e39" title=" " alt="" coords="581,136,811,177"/>
 </map>

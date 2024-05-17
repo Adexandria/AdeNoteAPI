@@ -1,6 +1,9 @@
 <map id="AdeNote.Infrastructure.Services.AuthService.DisableUserMFA" name="AdeNote.Infrastructure.Services.AuthService.DisableUserMFA">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,239,112"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html#a10b096474ee9a0f12d70f5aed0b9dc8c" title="Deletes image" alt="" coords="308,5,541,47"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html#a643eeaa166fc802f26ed40569e04f381" title="Gets the authentication type of a user using user Id" alt="" coords="287,71,563,112"/>
-<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#aa09992933cc1efc25ff9ba7ed29d601a" title="Remove an existing object" alt="" coords="301,136,548,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,136,239,177"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html#a10b096474ee9a0f12d70f5aed0b9dc8c" title="Deletes image" alt="" coords="293,5,527,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="295,71,525,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a2f9c93cf4ef3a74b15a0bf2b71cd21ad" title="Get existings of a user" alt="" coords="287,136,533,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#aba4773b458c4acbf09fba32e8835f14d" title=" " alt="" coords="295,201,525,243"/>
+<area shape="rect" id="node7" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#ae451c2bb0462a873a4e0f8c0d3a9b721" title="Updates an existing object" alt="" coords="287,267,533,308"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#afe65cff3843963cbe0282b07339e3e39" title=" " alt="" coords="581,201,811,243"/>
 </map>

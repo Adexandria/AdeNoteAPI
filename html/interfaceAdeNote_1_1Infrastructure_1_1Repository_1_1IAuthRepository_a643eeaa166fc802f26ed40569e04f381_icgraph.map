@@ -1,7 +1,0 @@
-<map id="AdeNote.Infrastructure.Repository.IAuthRepository.GetAuthenticationType" name="AdeNote.Infrastructure.Repository.IAuthRepository.GetAuthenticationType">
-<area shape="rect" id="node1" title="Gets the authentication type of a user using user Id" alt="" coords="308,104,584,145"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a7859b04addc0239dc19e7f2c26948c65" title="Disables Multi factor authentication for a particular user" alt="" coords="16,5,249,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#aaad9d0504bda031ad2e779f8c4b46bf1" title=" " alt="" coords="16,71,249,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#afef6b990e73d38f9d85dd12ae50dc5fc" title="Gets user&#39;s Qr code" alt="" coords="16,136,249,177"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a3e87ff8d517e48bcef9329f04fada941" title="Checks if MFA has been enabled for the user using user id." alt="" coords="5,201,260,243"/>
-</map>

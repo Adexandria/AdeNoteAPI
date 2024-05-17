@@ -100,22 +100,16 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aba0e603c190e6793038a88459cb159ec"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#aba0e603c190e6793038a88459cb159ec">AddScoped&lt; ITaskApplication, TaskApplication &gt;</a> ()</td></tr>
-<tr class="separator:aba0e603c190e6793038a88459cb159ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a593dcece7e88799b44223cbf77baf6cf"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a593dcece7e88799b44223cbf77baf6cf">AddScoped&lt; IUserIdentity, UserIdentity &gt;</a> ()</td></tr>
 <tr class="separator:a593dcece7e88799b44223cbf77baf6cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe6b32dede42ac9dd3b353f5e40ba9c2"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#afe6b32dede42ac9dd3b353f5e40ba9c2">AddTransient</a> ((o)=&gt; containerBuilder.SetUpDepedencies(<a class="el" href="Program_8cs.html#adb71d22b23118555670835ec58716126">tokenSecret</a>).Build())</td></tr>
-<tr class="separator:afe6b32dede42ac9dd3b353f5e40ba9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0651b1cc6b2ec2a500b3fbaaaba6ac6c"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a0651b1cc6b2ec2a500b3fbaaaba6ac6c">AddHttpContextAccessor</a> ()</td></tr>
 <tr class="separator:a0651b1cc6b2ec2a500b3fbaaaba6ac6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7455608a0659f7cef3de2102d1e12196"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a7455608a0659f7cef3de2102d1e12196">AddLogging</a> ()</td></tr>
 <tr class="separator:a7455608a0659f7cef3de2102d1e12196"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d93252ec77847afcaad9fa1c113a728"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a8d93252ec77847afcaad9fa1c113a728">AddControllers</a> (options=&gt; options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes=true)</td></tr>
 <tr class="separator:a8d93252ec77847afcaad9fa1c113a728"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fc416bf54ce236c41c8a4850a3920f2"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a5fc416bf54ce236c41c8a4850a3920f2">AddApiVersioning</a> (c=&gt; { c.DefaultApiVersion=new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);c.AssumeDefaultVersionWhenUnspecified=true;c.ReportApiVersions=true;c.ApiVersionReader=ApiVersionReader.Combine(new UrlSegmentApiVersionReader());})</td></tr>
-<tr class="separator:a5fc416bf54ce236c41c8a4850a3920f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e9516f964e2ac48d7166a1c132b7723"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a7e9516f964e2ac48d7166a1c132b7723">AddVersionedApiExplorer</a> (setup=&gt; { setup.GroupNameFormat=&quot;'v'VVV&quot;;setup.SubstituteApiVersionInUrl=true;})</td></tr>
-<tr class="separator:a7e9516f964e2ac48d7166a1c132b7723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40b2a77a8a01a818abec10d92c88cb4"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ae40b2a77a8a01a818abec10d92c88cb4">AddApiVersioning</a> (c=&gt; { c.DefaultApiVersion=new ApiVersion(1, 0);c.AssumeDefaultVersionWhenUnspecified=true;c.ReportApiVersions=true;c.ApiVersionReader=ApiVersionReader.Combine(new UrlSegmentApiVersionReader());}).AddApiExplorer(options</td></tr>
+<tr class="separator:ae40b2a77a8a01a818abec10d92c88cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d7859f9cad50e8e9fdf015100780e07"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a0d7859f9cad50e8e9fdf015100780e07">AddEndpointsApiExplorer</a> ()</td></tr>
 <tr class="separator:a0d7859f9cad50e8e9fdf015100780e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73f3690588f4876843046269be482027"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a73f3690588f4876843046269be482027">ConfigureOptions&lt; SwaggerOptions &gt;</a> ()</td></tr>
@@ -130,20 +124,18 @@ Functions</h2></td></tr>
 <tr class="separator:a00ac9c48b5a31834e66e637670c16a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a616f9b8986aaed1a3e00753d1ee948bc"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a616f9b8986aaed1a3e00753d1ee948bc">AddScoped&lt; ILabelPageRepository, LabelPageRepository &gt;</a> ()</td></tr>
 <tr class="separator:a616f9b8986aaed1a3e00753d1ee948bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf6713f58b9e715590d28ae24b567b35"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#aaf6713f58b9e715590d28ae24b567b35">AddScoped&lt; IUser, UserRepository &gt;</a> ()</td></tr>
-<tr class="separator:aaf6713f58b9e715590d28ae24b567b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9139f4d5b9d552d9e1ec835b32711c24"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a9139f4d5b9d552d9e1ec835b32711c24">AddScoped&lt; IUserRepository, UserRepository &gt;</a> ()</td></tr>
+<tr class="separator:a9139f4d5b9d552d9e1ec835b32711c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d01e39a31e08920320f7ddafc8cf966"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a6d01e39a31e08920320f7ddafc8cf966">AddScoped&lt; IRefreshTokenRepository, RefreshRepository &gt;</a> ()</td></tr>
+<tr class="separator:a6d01e39a31e08920320f7ddafc8cf966"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b6f75db7150ed7ba5a016bd2311c8b9"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a2b6f75db7150ed7ba5a016bd2311c8b9">AddScoped&lt; IBookService, BookService &gt;</a> ()</td></tr>
 <tr class="separator:a2b6f75db7150ed7ba5a016bd2311c8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07bd73fc96935d6cab367e322a442cc2"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a07bd73fc96935d6cab367e322a442cc2">AddScoped&lt; IPageService, PageService &gt;</a> ()</td></tr>
 <tr class="separator:a07bd73fc96935d6cab367e322a442cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b625cc9c05d8bc13473c88bc2b1edbb"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a1b625cc9c05d8bc13473c88bc2b1edbb">AddScoped&lt; ILabelService, LabelService &gt;</a> ()</td></tr>
 <tr class="separator:a1b625cc9c05d8bc13473c88bc2b1edbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab16ce314052ebbb14dce60b09bb3ef0c"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ab16ce314052ebbb14dce60b09bb3ef0c">AddScoped&lt; IAuthRepository, AuthRepository &gt;</a> ()</td></tr>
-<tr class="separator:ab16ce314052ebbb14dce60b09bb3ef0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af28a70e4e3146d0106efbb9b60bf5e94"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#af28a70e4e3146d0106efbb9b60bf5e94">AddScoped&lt; IAuthService, AuthService &gt;</a> ()</td></tr>
 <tr class="separator:af28a70e4e3146d0106efbb9b60bf5e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a473ec7d92eea3341b9fd2930e078441a"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a473ec7d92eea3341b9fd2930e078441a">AddScoped&lt; IUserDetailRepository, UserDetailRepository &gt;</a> ()</td></tr>
-<tr class="separator:a473ec7d92eea3341b9fd2930e078441a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0114d4d38d6a8a33b7c1ad705761faa"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ad0114d4d38d6a8a33b7c1ad705761faa">AddScoped&lt; IBlobService, BlobService &gt;</a> ()</td></tr>
 <tr class="separator:ad0114d4d38d6a8a33b7c1ad705761faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a46da1865d06ba97b98d8399283432b"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a9a46da1865d06ba97b98d8399283432b">AddScoped&lt; IEmailService, EmailService &gt;</a> ()</td></tr>
@@ -154,10 +146,6 @@ Functions</h2></td></tr>
 <tr class="separator:a0ab61fac1c51557b9a374ba875e29b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe1a29a5ec8f2a434f1f355de71764d5"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#afe1a29a5ec8f2a434f1f355de71764d5">AddScoped&lt; IUserService, UserService &gt;</a> ()</td></tr>
 <tr class="separator:afe1a29a5ec8f2a434f1f355de71764d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a685cd6889432a4b5d84d66c0ae7df9b1"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a685cd6889432a4b5d84d66c0ae7df9b1">AddScoped</a> ((_)=&gt; new AuthTokenRepository(<a class="el" href="Program_8cs.html#adb71d22b23118555670835ec58716126">tokenSecret</a>))</td></tr>
-<tr class="separator:a685cd6889432a4b5d84d66c0ae7df9b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a049c44fc90f82b87e0ede9d1974b0b02"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a049c44fc90f82b87e0ede9d1974b0b02">AddScoped&lt; IPasswordManager, PasswordManager &gt;</a> ()</td></tr>
-<tr class="separator:a049c44fc90f82b87e0ede9d1974b0b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cad9e4851b88551ca20788beba96b67"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a3cad9e4851b88551ca20788beba96b67">AddScoped&lt; IExcel, AdeNote.Infrastructure.Services.ExcelService &gt;</a> ()</td></tr>
 <tr class="separator:a3cad9e4851b88551ca20788beba96b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b4eaa1116a4ab8cdb1e3978353768ad"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a6b4eaa1116a4ab8cdb1e3978353768ad">AddScoped&lt; IExportService, ExportService &gt;</a> ()</td></tr>
@@ -166,6 +154,8 @@ Functions</h2></td></tr>
 <tr class="separator:a673eaa738d33f4152f6ad2fec6372729"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e2334791dff2a8a90d0d567fcbf0f5c"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a> ((_)=&gt; DocFactory.CreateService())</td></tr>
 <tr class="separator:a8e2334791dff2a8a90d0d567fcbf0f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3981764c656b0785b1ae83b3acbd0d3a"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a3981764c656b0785b1ae83b3acbd0d3a">AddSingleton</a> ((_)=&gt; AuthFactory.CreateService().PasswordManager)</td></tr>
+<tr class="separator:a3981764c656b0785b1ae83b3acbd0d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a082f7551c9eee18ddd0aee67c85591a6"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a082f7551c9eee18ddd0aee67c85591a6">AddSingleton</a> ((_)=&gt; new ExcelifyFactory())</td></tr>
 <tr class="separator:a082f7551c9eee18ddd0aee67c85591a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad383931ac699cc34078df0532f159279"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ad383931ac699cc34078df0532f159279">AddDbContext&lt; NoteDbContext &gt;</a> (options=&gt; options .UseSqlServer(<a class="el" href="Program_8cs.html#a067cdd5f0fed6b2598fae7de8607e7da">connectionString</a>))</td></tr>
@@ -174,8 +164,6 @@ Functions</h2></td></tr>
 <tr class="separator:a7b2bc4c41ab1f801b53d7330af1fdf7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8370f0b81a120f1fcc0be56199e40c05"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a8370f0b81a120f1fcc0be56199e40c05">AddAuthorization</a> (options=&gt; { options.DefaultPolicy=new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme) .RequireAuthenticatedUser().Build();options.AddPolicy(&quot;sso&quot;, new AuthorizationPolicyBuilder(&quot;SSO&quot;).RequireAuthenticatedUser().Build());})</td></tr>
 <tr class="separator:a8370f0b81a120f1fcc0be56199e40c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2d785d3c31b23c0dc58c93cfdca004b"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#aa2d785d3c31b23c0dc58c93cfdca004b">BuildServiceProvider</a> ().CreateTables(<a class="el" href="Program_8cs.html#acd0ff6ed70abd1e3e3c201c52f0db425">containerBuilder</a>)</td></tr>
-<tr class="separator:aa2d785d3c31b23c0dc58c93cfdca004b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a5cfe7fee09f478241b98af703affea"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a9a5cfe7fee09f478241b98af703affea">UseSwagger</a> ()</td></tr>
 <tr class="separator:a9a5cfe7fee09f478241b98af703affea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed8da194c8645afcc193177096881cd0"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#aed8da194c8645afcc193177096881cd0">UseSwaggerUI</a> (setupAction=&gt; { foreach(var description in apiVersionDescriptionProvider.ApiVersionDescriptions.Reverse()) { setupAction.SwaggerEndpoint($&quot;/swagger/{description.GroupName}/swagger.json&quot;, description.GroupName.ToUpperInvariant());} })</td></tr>
@@ -203,8 +191,6 @@ Variables</h2></td></tr>
 <tr class="separator:a067cdd5f0fed6b2598fae7de8607e7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb71d22b23118555670835ec58716126"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#adb71d22b23118555670835ec58716126">tokenSecret</a> = <a class="el" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>[&quot;TokenSecret&quot;]</td></tr>
 <tr class="separator:adb71d22b23118555670835ec58716126"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd0ff6ed70abd1e3e3c201c52f0db425"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#acd0ff6ed70abd1e3e3c201c52f0db425">containerBuilder</a> = new TaskContainerBuilder(<a class="el" href="Program_8cs.html#a067cdd5f0fed6b2598fae7de8607e7da">connectionString</a>)</td></tr>
-<tr class="separator:acd0ff6ed70abd1e3e3c201c52f0db425"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b225fcb720e4d5ed2bbf60e28a25e6d"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> = builder.Build()</td></tr>
 <tr class="separator:a7b225fcb720e4d5ed2bbf60e28a25e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a782126e2912cbab686bec7799115e3"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a0a782126e2912cbab686bec7799115e3">apiVersionDescriptionProvider</a> = app.Services.GetRequiredService&lt;IApiVersionDescriptionProvider&gt;()</td></tr>
@@ -223,13 +209,13 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00019">19</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00018">18</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a5fc416bf54ce236c41c8a4850a3920f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fc416bf54ce236c41c8a4850a3920f2">&#9670;&nbsp;</a></span>AddApiVersioning()</h2>
+<a id="ae40b2a77a8a01a818abec10d92c88cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae40b2a77a8a01a818abec10d92c88cb4">&#9670;&nbsp;</a></span>AddApiVersioning()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,7 +229,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">{ c.DefaultApiVersion=new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);c.AssumeDefaultVersionWhenUnspecified=true;c.ReportApiVersions=true;c.ApiVersionReader=ApiVersionReader.Combine(new UrlSegmentApiVersionReader());}&#160;</td>
+          <td class="paramtype">{ c.DefaultApiVersion=new ApiVersion(1, 0);c.AssumeDefaultVersionWhenUnspecified=true;c.ReportApiVersions=true;c.ApiVersionReader=ApiVersionReader.Combine(new UrlSegmentApiVersionReader());}&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -410,7 +396,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="a8e2334791dff2a8a90d0d567fcbf0f5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e2334791dff2a8a90d0d567fcbf0f5c">&#9670;&nbsp;</a></span>AddScoped() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e2334791dff2a8a90d0d567fcbf0f5c">&#9670;&nbsp;</a></span>AddScoped()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -431,51 +417,6 @@ Variables</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a685cd6889432a4b5d84d66c0ae7df9b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a685cd6889432a4b5d84d66c0ae7df9b1">&#9670;&nbsp;</a></span>AddScoped() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">builder.Services. AddScoped </td>
-          <td>(</td>
-          <td class="paramtype">(_)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">new &#160;</td>
-          <td class="paramname"><em>AuthTokenRepository</em>tokenSecret&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab16ce314052ebbb14dce60b09bb3ef0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab16ce314052ebbb14dce60b09bb3ef0c">&#9670;&nbsp;</a></span>AddScoped&lt; IAuthRepository, AuthRepository &gt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html">IAuthRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html">AuthRepository</a> &gt; </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -703,14 +644,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a049c44fc90f82b87e0ede9d1974b0b02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a049c44fc90f82b87e0ede9d1974b0b02">&#9670;&nbsp;</a></span>AddScoped&lt; IPasswordManager, PasswordManager &gt;()</h2>
+<a id="a6d01e39a31e08920320f7ddafc8cf966"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d01e39a31e08920320f7ddafc8cf966">&#9670;&nbsp;</a></span>AddScoped&lt; IRefreshTokenRepository, RefreshRepository &gt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; IPasswordManager, PasswordManager &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html">IRefreshTokenRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html">RefreshRepository</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -737,57 +678,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aba0e603c190e6793038a88459cb159ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba0e603c190e6793038a88459cb159ec">&#9670;&nbsp;</a></span>AddScoped&lt; ITaskApplication, TaskApplication &gt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; ITaskApplication, TaskApplication &gt; </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aaf6713f58b9e715590d28ae24b567b35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf6713f58b9e715590d28ae24b567b35">&#9670;&nbsp;</a></span>AddScoped&lt; IUser, UserRepository &gt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser.html">IUser</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html">UserRepository</a> &gt; </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a473ec7d92eea3341b9fd2930e078441a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a473ec7d92eea3341b9fd2930e078441a">&#9670;&nbsp;</a></span>AddScoped&lt; IUserDetailRepository, UserDetailRepository &gt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html">IUserDetailRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html">UserDetailRepository</a> &gt; </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a593dcece7e88799b44223cbf77baf6cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a593dcece7e88799b44223cbf77baf6cf">&#9670;&nbsp;</a></span>AddScoped&lt; IUserIdentity, UserIdentity &gt;()</h2>
 
@@ -796,6 +686,23 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html">IUserIdentity</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdentity.html">UserIdentity</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9139f4d5b9d552d9e1ec835b32711c24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9139f4d5b9d552d9e1ec835b32711c24">&#9670;&nbsp;</a></span>AddScoped&lt; IUserRepository, UserRepository &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html">IUserRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html">UserRepository</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -839,8 +746,36 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a3981764c656b0785b1ae83b3acbd0d3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3981764c656b0785b1ae83b3acbd0d3a">&#9670;&nbsp;</a></span>AddSingleton() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5">builder</a> Services AddSingleton </td>
+          <td>(</td>
+          <td class="paramtype">(_)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AuthFactory.CreateService().&#160;</td>
+          <td class="paramname"><em>PasswordManager</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a082f7551c9eee18ddd0aee67c85591a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a082f7551c9eee18ddd0aee67c85591a6">&#9670;&nbsp;</a></span>AddSingleton()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a082f7551c9eee18ddd0aee67c85591a6">&#9670;&nbsp;</a></span>AddSingleton() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -889,79 +824,6 @@ Variables</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afe6b32dede42ac9dd3b353f5e40ba9c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe6b32dede42ac9dd3b353f5e40ba9c2">&#9670;&nbsp;</a></span>AddTransient()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">builder.Services. AddTransient </td>
-          <td>(</td>
-          <td class="paramtype">(o)&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">containerBuilder.&#160;</td>
-          <td class="paramname"><em>SetUpDepedencies</em>tokenSecret).Build(&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7e9516f964e2ac48d7166a1c132b7723"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e9516f964e2ac48d7166a1c132b7723">&#9670;&nbsp;</a></span>AddVersionedApiExplorer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">builder.Services. AddVersionedApiExplorer </td>
-          <td>(</td>
-          <td class="paramtype">setup&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">{ setup.GroupNameFormat=&quot;'v'VVV&quot;;setup.SubstituteApiVersionInUrl=true;}&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa2d785d3c31b23c0dc58c93cfdca004b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2d785d3c31b23c0dc58c93cfdca004b">&#9670;&nbsp;</a></span>BuildServiceProvider()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">builder.Services. BuildServiceProvider </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1128,7 +990,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00153">153</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00145">145</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1144,7 +1006,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00150">150</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00142">142</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1160,7 +1022,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00023">23</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00022">22</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1176,7 +1038,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00021">21</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00020">20</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1192,7 +1054,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00022">22</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00021">21</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1208,23 +1070,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00025">25</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
-
-</div>
-</div>
-<a id="acd0ff6ed70abd1e3e3c201c52f0db425"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd0ff6ed70abd1e3e3c201c52f0db425">&#9670;&nbsp;</a></span>containerBuilder</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">var containerBuilder = new TaskContainerBuilder(<a class="el" href="Program_8cs.html#a067cdd5f0fed6b2598fae7de8607e7da">connectionString</a>)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00031">31</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00024">24</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1240,7 +1086,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00028">28</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00027">27</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>

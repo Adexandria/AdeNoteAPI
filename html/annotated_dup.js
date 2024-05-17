@@ -5,9 +5,7 @@ var annotated_dup =
         [ "AuthenticationController", "classAdeNote_1_1Controllers_1_1AuthenticationController.html", "classAdeNote_1_1Controllers_1_1AuthenticationController" ],
         [ "BaseController", "classAdeNote_1_1Controllers_1_1BaseController.html", "classAdeNote_1_1Controllers_1_1BaseController" ],
         [ "BookController", "classAdeNote_1_1Controllers_1_1BookController.html", "classAdeNote_1_1Controllers_1_1BookController" ],
-        [ "ExcelController", "classAdeNote_1_1Controllers_1_1ExcelController.html", "classAdeNote_1_1Controllers_1_1ExcelController" ],
         [ "LabelController", "classAdeNote_1_1Controllers_1_1LabelController.html", "classAdeNote_1_1Controllers_1_1LabelController" ],
-        [ "NoteController", "classAdeNote_1_1Controllers_1_1NoteController.html", "classAdeNote_1_1Controllers_1_1NoteController" ],
         [ "PageController", "classAdeNote_1_1Controllers_1_1PageController.html", "classAdeNote_1_1Controllers_1_1PageController" ]
       ] ],
       [ "Db", "namespaceAdeNote_1_1Db.html", [
@@ -21,21 +19,19 @@ var annotated_dup =
           [ "SwaggerOptions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions" ]
         ] ],
         [ "Repository", "namespaceAdeNote_1_1Infrastructure_1_1Repository.html", [
-          [ "AuthRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository" ],
           [ "BookRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository" ],
-          [ "IAuthRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository" ],
           [ "IBookRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository" ],
           [ "ILabelPageRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository" ],
           [ "ILabelRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository" ],
           [ "IPageRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository" ],
+          [ "IRefreshTokenRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository" ],
           [ "IRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository" ],
-          [ "IUser", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser" ],
-          [ "IUserDetailRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserDetailRepository" ],
+          [ "IUserRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository" ],
           [ "LabelPageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository" ],
           [ "LabelRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository" ],
           [ "PageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository" ],
+          [ "RefreshRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository" ],
           [ "Repository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository" ],
-          [ "UserDetailRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserDetailRepository" ],
           [ "UserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository" ]
         ] ],
         [ "Services", "namespaceAdeNote_1_1Infrastructure_1_1Services.html", [
@@ -65,6 +61,8 @@ var annotated_dup =
           [ "WordService", "classAdeNote_1_1Infrastructure_1_1Services_1_1WordService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1WordService" ]
         ] ],
         [ "Utilities", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html", [
+          [ "ActionResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult" ],
+          [ "ActionTokenResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult" ],
           [ "BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration" ],
           [ "Database", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database" ],
           [ "Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email" ],
@@ -73,15 +71,17 @@ var annotated_dup =
           [ "ExportEntity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExportEntity.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExportEntity" ],
           [ "ImportSheet", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet" ],
           [ "IUserIdentity", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity" ],
+          [ "PasswordAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PasswordAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PasswordAttribute" ],
           [ "Sms", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms" ],
           [ "SmsConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfiguration" ],
+          [ "UserId", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserId.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserId" ],
           [ "UserIdConverter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdConverter.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdConverter" ],
           [ "UserIdentity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdentity.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdentity" ]
         ] ]
       ] ],
       [ "Migrations", "namespaceAdeNote_1_1Migrations.html", [
-        [ "FirstMigration", "classAdeNote_1_1Migrations_1_1FirstMigration.html", "classAdeNote_1_1Migrations_1_1FirstMigration" ],
-        [ "addMFA", "classAdeNote_1_1Migrations_1_1addMFA.html", "classAdeNote_1_1Migrations_1_1addMFA" ],
+        [ "firstmigration", "classAdeNote_1_1Migrations_1_1firstmigration.html", "classAdeNote_1_1Migrations_1_1firstmigration" ],
+        [ "secondmigration", "classAdeNote_1_1Migrations_1_1secondmigration.html", "classAdeNote_1_1Migrations_1_1secondmigration" ],
         [ "NoteDbContextModelSnapshot", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot" ]
       ] ],
       [ "Models", "namespaceAdeNote_1_1Models.html", [
@@ -93,11 +93,13 @@ var annotated_dup =
           [ "BookUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1BookUpdateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1BookUpdateDTO" ],
           [ "ChangePasswordDTO", "classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO" ],
           [ "CreateNoteDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO" ],
+          [ "CreateUserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO" ],
           [ "DetailsDTO", "classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO" ],
           [ "ImportBookDto", "classAdeNote_1_1Models_1_1DTOs_1_1ImportBookDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1ImportBookDto" ],
           [ "LabelCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO" ],
           [ "LabelDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1LabelDTO" ],
           [ "LabelUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelUpdateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1LabelUpdateDTO" ],
+          [ "LoginDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LoginDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1LoginDTO" ],
           [ "PageCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO" ],
           [ "PageDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1PageDTO" ],
           [ "PageUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO" ],
@@ -108,8 +110,8 @@ var annotated_dup =
         [ "Label", "classAdeNote_1_1Models_1_1Label.html", "classAdeNote_1_1Models_1_1Label" ],
         [ "LabelPage", "classAdeNote_1_1Models_1_1LabelPage.html", "classAdeNote_1_1Models_1_1LabelPage" ],
         [ "Page", "classAdeNote_1_1Models_1_1Page.html", "classAdeNote_1_1Models_1_1Page" ],
-        [ "UserDetail", "classAdeNote_1_1Models_1_1UserDetail.html", "classAdeNote_1_1Models_1_1UserDetail" ],
-        [ "UserToken", "classAdeNote_1_1Models_1_1UserToken.html", "classAdeNote_1_1Models_1_1UserToken" ]
+        [ "RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", "classAdeNote_1_1Models_1_1RefreshToken" ],
+        [ "User", "classAdeNote_1_1Models_1_1User.html", "classAdeNote_1_1Models_1_1User" ]
       ] ]
     ] ]
 ];

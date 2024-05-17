@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['mfatype_948',['MFAType',['../namespaceAdeNote_1_1Models.html#a59a9d6cd7df46cfb5727610aa214e751',1,'AdeNote::Models']]],
-  ['mimetype_949',['MimeType',['../namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8',1,'AdeNote::Infrastructure::Utilities']]]
+  ['emailtemplate_972',['EmailTemplate',['../namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#aa7c8e05335ad88c8592fb2211f072980',1,'AdeNote::Infrastructure::Utilities']]]
 ];

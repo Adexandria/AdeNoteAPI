@@ -1,5 +1,8 @@
 <map id="AdeNote.Infrastructure.Services.AuthService.RevokeRefreshToken" name="AdeNote.Infrastructure.Services.AuthService.RevokeRefreshToken">
-<area shape="rect" id="node1" title="Revokes existing refresh token" alt="" coords="5,39,244,80"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html#ac39fbca27a839221dd279ed8b254fe05" title="Gets the refresh token of a user" alt="" coords="292,5,589,47"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IAuthRepository.html#a4f10a0352eebead2a16a6718d3cba78f" title="Revokes the existing refresh token" alt="" coords="309,71,572,112"/>
+<area shape="rect" id="node1" title="Revokes existing refresh token" alt="" coords="5,116,244,157"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="325,5,554,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html#aa52ce88ceb2190a9761c2e6727d58f4e" title="Gets the refresh token of a user" alt="" coords="292,71,587,127"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#aba4773b458c4acbf09fba32e8835f14d" title=" " alt="" coords="325,152,554,193"/>
+<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#ae451c2bb0462a873a4e0f8c0d3a9b721" title="Updates an existing object" alt="" coords="316,217,563,259"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#afe65cff3843963cbe0282b07339e3e39" title=" " alt="" coords="635,152,864,193"/>
 </map>

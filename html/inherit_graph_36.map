@@ -1,3 +1,10 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classAdeNote_1_1Models_1_1DTOs_1_1BookDTO.html" title="DTO to display the book" alt="" coords="5,5,239,32"/>
+<area shape="rect" id="node1" href="$classAdeNote_1_1Models_1_1BaseClass.html" title="A base class that includes the id" alt="" coords="5,107,205,133"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Models_1_1Book.html" title="A book object" alt="" coords="280,5,447,32"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Models_1_1Label.html" title="A label model" alt="" coords="279,56,447,83"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Models_1_1Page.html" title="Page model" alt="" coords="281,107,445,133"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Models_1_1RefreshToken.html" title=" " alt="" coords="253,157,473,184"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Models_1_1User.html" title=" " alt="" coords="282,208,445,235"/>
+<area shape="rect" id="node7" title=" " alt="" coords="41,208,170,235"/>
+<area shape="rect" id="node8" title=" " alt="" coords="49,157,162,184"/>
 </map>

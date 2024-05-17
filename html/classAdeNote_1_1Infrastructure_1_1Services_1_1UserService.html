@@ -104,9 +104,10 @@ Collaboration diagram for AdeNote.Infrastructure.Services.UserService:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService__coll__graph.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8UserService_coll__map" alt="Collaboration graph"/></div>
 <map name="aAdeNote_8Infrastructure_8Services_8UserService_coll__map" id="aAdeNote_8Infrastructure_8Services_8UserService_coll__map">
-<area shape="rect" title=" " alt="" coords="41,109,274,151"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html" title=" " alt="" coords="5,13,109,39"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser.html" title=" " alt="" coords="134,5,381,47"/>
+<area shape="rect" title=" " alt="" coords="5,185,239,227"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html" title=" " alt="" coords="49,89,153,115"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html" title=" " alt="" coords="177,81,424,123"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="223,5,379,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -114,29 +115,27 @@ Collaboration diagram for AdeNote.Infrastructure.Services.UserService:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9fd888dcb826dc65f56bcb1dda374525"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a9fd888dcb826dc65f56bcb1dda374525">UserService</a> ()</td></tr>
 <tr class="separator:a9fd888dcb826dc65f56bcb1dda374525"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39d50d91bff1c6802e31c3a70f41ad3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a39d50d91bff1c6802e31c3a70f41ad3e">UserService</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser.html">IUser</a> userRepository, IContainer container, IPasswordManager passwordManager)</td></tr>
-<tr class="separator:a39d50d91bff1c6802e31c3a70f41ad3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61abb1c47f09a5e85f4fec0aa211bbb8"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a61abb1c47f09a5e85f4fec0aa211bbb8">UpdateUserPassword</a> (Guid userId, string currentPassword, string password)</td></tr>
+<tr class="memitem:a8e4a91eb4c49221d51bde236090d86fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a8e4a91eb4c49221d51bde236090d86fa">UserService</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html">IUserRepository</a> userRepository, IPasswordManager passwordManager)</td></tr>
+<tr class="separator:a8e4a91eb4c49221d51bde236090d86fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61abb1c47f09a5e85f4fec0aa211bbb8"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a61abb1c47f09a5e85f4fec0aa211bbb8">UpdateUserPassword</a> (Guid userId, string currentPassword, string password)</td></tr>
 <tr class="separator:a61abb1c47f09a5e85f4fec0aa211bbb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc473178a62350e4bba60c5dd5d8aec9"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#abc473178a62350e4bba60c5dd5d8aec9">ResetUserPassword</a> (Guid userId, string password)</td></tr>
+<tr class="memitem:abc473178a62350e4bba60c5dd5d8aec9"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#abc473178a62350e4bba60c5dd5d8aec9">ResetUserPassword</a> (Guid userId, string password)</td></tr>
 <tr class="separator:abc473178a62350e4bba60c5dd5d8aec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dfc24278e11f725ebbba7d1e4b5d92d"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult&lt; User &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a4dfc24278e11f725ebbba7d1e4b5d92d">GetUser</a> (string email)</td></tr>
+<tr class="memitem:a4dfc24278e11f725ebbba7d1e4b5d92d"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; <a class="el" href="classAdeNote_1_1Models_1_1User.html">User</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a4dfc24278e11f725ebbba7d1e4b5d92d">GetUser</a> (string email)</td></tr>
 <tr class="separator:a4dfc24278e11f725ebbba7d1e4b5d92d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82dc47bbd1b5aa194a62b7a01adb060e"><td class="memItemLeft" align="right" valign="top">async Task&lt; ActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a82dc47bbd1b5aa194a62b7a01adb060e">IsUserExist</a> (string email)</td></tr>
+<tr class="memitem:a82dc47bbd1b5aa194a62b7a01adb060e"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a82dc47bbd1b5aa194a62b7a01adb060e">IsUserExist</a> (string email)</td></tr>
 <tr class="separator:a82dc47bbd1b5aa194a62b7a01adb060e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a4067695afe2762ff058a8b18c39c7a49"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser.html">IUser</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a4067695afe2762ff058a8b18c39c7a49">_userRepository</a></td></tr>
-<tr class="separator:a4067695afe2762ff058a8b18c39c7a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9da7a76e2176e247d9281acdf4609be1"><td class="memItemLeft" align="right" valign="top">readonly IUserRepository&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a9da7a76e2176e247d9281acdf4609be1">_userDb</a></td></tr>
-<tr class="separator:a9da7a76e2176e247d9281acdf4609be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a263e247d40741d99391da82f5eb9e998"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html">IUserRepository</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a263e247d40741d99391da82f5eb9e998">_userRepository</a></td></tr>
+<tr class="separator:a263e247d40741d99391da82f5eb9e998"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f9067593e374acb98bb22280c561349"><td class="memItemLeft" align="right" valign="top">readonly IPasswordManager&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a9f9067593e374acb98bb22280c561349">_passwordManager</a></td></tr>
 <tr class="separator:a9f9067593e374acb98bb22280c561349"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00010">10</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00009">9</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9fd888dcb826dc65f56bcb1dda374525"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9fd888dcb826dc65f56bcb1dda374525">&#9670;&nbsp;</a></span>UserService() <span class="overload">[1/2]</span></h2>
@@ -153,12 +152,12 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00012">12</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00011">11</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
 
 </div>
 </div>
-<a id="a39d50d91bff1c6802e31c3a70f41ad3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39d50d91bff1c6802e31c3a70f41ad3e">&#9670;&nbsp;</a></span>UserService() <span class="overload">[2/2]</span></h2>
+<a id="a8e4a91eb4c49221d51bde236090d86fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e4a91eb4c49221d51bde236090d86fa">&#9670;&nbsp;</a></span>UserService() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,14 +165,8 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">AdeNote.Infrastructure.Services.UserService.UserService </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser.html">IUser</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html">IUserRepository</a>&#160;</td>
           <td class="paramname"><em>userRepository</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">IContainer&#160;</td>
-          <td class="paramname"><em>container</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -189,7 +182,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00017">17</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00016">16</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
 
 </div>
 </div>
@@ -201,7 +194,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">async Task&lt;ActionResult&lt;User&gt; &gt; AdeNote.Infrastructure.Services.UserService.GetUser </td>
+          <td class="memname">async Task&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt;<a class="el" href="classAdeNote_1_1Models_1_1User.html">User</a>&gt; &gt; AdeNote.Infrastructure.Services.UserService.GetUser </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>email</em></td><td>)</td>
@@ -212,7 +205,18 @@ Public Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a03ab9a9318120aaf87ccc2e60a82e445">AdeNote.Infrastructure.Services.IUserService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00068">68</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00064">64</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService_a4dfc24278e11f725ebbba7d1e4b5d92d_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_a4dfc24278e11f725ebbba7d1e4b5d92d_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_a4dfc24278e11f725ebbba7d1e4b5d92d_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_a4dfc24278e11f725ebbba7d1e4b5d92d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,71,239,112"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="295,5,525,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#afcdbd770c4d741913a1942030b8ab65e" title=" " alt="" coords="287,71,533,112"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="289,136,531,177"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -223,7 +227,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">async Task&lt;ActionResult&gt; AdeNote.Infrastructure.Services.UserService.IsUserExist </td>
+          <td class="memname">async Task&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&gt; AdeNote.Infrastructure.Services.UserService.IsUserExist </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>email</em></td><td>)</td>
@@ -234,7 +238,19 @@ Public Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a6807bc22822cd81764378182854bda9d">AdeNote.Infrastructure.Services.IUserService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00077">77</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00073">73</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService_a82dc47bbd1b5aa194a62b7a01adb060e_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_a82dc47bbd1b5aa194a62b7a01adb060e_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_a82dc47bbd1b5aa194a62b7a01adb060e_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_a82dc47bbd1b5aa194a62b7a01adb060e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,71,239,112"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="295,5,525,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a8325a5a7a398ece0bf109379613d9bd4" title=" " alt="" coords="287,71,533,112"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#aba4773b458c4acbf09fba32e8835f14d" title=" " alt="" coords="295,136,525,177"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#afe65cff3843963cbe0282b07339e3e39" title=" " alt="" coords="581,136,811,177"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -245,7 +261,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">async Task&lt;ActionResult&gt; AdeNote.Infrastructure.Services.UserService.ResetUserPassword </td>
+          <td class="memname">async Task&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&gt; AdeNote.Infrastructure.Services.UserService.ResetUserPassword </td>
           <td>(</td>
           <td class="paramtype">Guid&#160;</td>
           <td class="paramname"><em>userId</em>, </td>
@@ -266,14 +282,18 @@ Public Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a965ee83c4fe0cf6fd8499c8d40d908f3">AdeNote.Infrastructure.Services.IUserService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00048">48</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00045">45</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService_abc473178a62350e4bba60c5dd5d8aec9_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_abc473178a62350e4bba60c5dd5d8aec9_cgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_abc473178a62350e4bba60c5dd5d8aec9_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_abc473178a62350e4bba60c5dd5d8aec9_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,239,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser.html#a9fed36290c3063114b4ef2f5d7852e28" title=" " alt="" coords="287,5,533,47"/>
+<area shape="rect" title=" " alt="" coords="5,104,239,145"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="295,5,525,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a2f9c93cf4ef3a74b15a0bf2b71cd21ad" title="Get existings of a user" alt="" coords="287,71,533,112"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#aba4773b458c4acbf09fba32e8835f14d" title=" " alt="" coords="295,136,525,177"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#ae451c2bb0462a873a4e0f8c0d3a9b721" title="Updates an existing object" alt="" coords="287,201,533,243"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#afe65cff3843963cbe0282b07339e3e39" title=" " alt="" coords="581,136,811,177"/>
 </map>
 </div>
 
@@ -286,7 +306,7 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">async Task&lt;ActionResult&gt; AdeNote.Infrastructure.Services.UserService.UpdateUserPassword </td>
+          <td class="memname">async Task&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&gt; AdeNote.Infrastructure.Services.UserService.UpdateUserPassword </td>
           <td>(</td>
           <td class="paramtype">Guid&#160;</td>
           <td class="paramname"><em>userId</em>, </td>
@@ -313,14 +333,18 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a405b0b24c7f646da2ec1ae4cf5b8174c">AdeNote.Infrastructure.Services.IUserService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00024">24</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00022">22</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService_a61abb1c47f09a5e85f4fec0aa211bbb8_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_a61abb1c47f09a5e85f4fec0aa211bbb8_cgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_a61abb1c47f09a5e85f4fec0aa211bbb8_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_a61abb1c47f09a5e85f4fec0aa211bbb8_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,248,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser.html#a9fed36290c3063114b4ef2f5d7852e28" title=" " alt="" coords="296,5,543,47"/>
+<area shape="rect" title=" " alt="" coords="5,104,248,145"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="305,5,534,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a2f9c93cf4ef3a74b15a0bf2b71cd21ad" title="Get existings of a user" alt="" coords="296,71,543,112"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#aba4773b458c4acbf09fba32e8835f14d" title=" " alt="" coords="305,136,534,177"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#ae451c2bb0462a873a4e0f8c0d3a9b721" title="Updates an existing object" alt="" coords="296,201,543,243"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#afe65cff3843963cbe0282b07339e3e39" title=" " alt="" coords="591,136,820,177"/>
 </map>
 </div>
 
@@ -339,39 +363,23 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00088">88</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00083">83</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
 
 </div>
 </div>
-<a id="a9da7a76e2176e247d9281acdf4609be1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9da7a76e2176e247d9281acdf4609be1">&#9670;&nbsp;</a></span>_userDb</h2>
+<a id="a263e247d40741d99391da82f5eb9e998"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a263e247d40741d99391da82f5eb9e998">&#9670;&nbsp;</a></span>_userRepository</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly IUserRepository AdeNote.Infrastructure.Services.UserService._userDb</td>
+          <td class="memname">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html">IUserRepository</a> AdeNote.Infrastructure.Services.UserService._userRepository</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00087">87</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
-
-</div>
-</div>
-<a id="a4067695afe2762ff058a8b18c39c7a49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4067695afe2762ff058a8b18c39c7a49">&#9670;&nbsp;</a></span>_userRepository</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUser.html">IUser</a> AdeNote.Infrastructure.Services.UserService._userRepository</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00086">86</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00082">82</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
 
 </div>
 </div>

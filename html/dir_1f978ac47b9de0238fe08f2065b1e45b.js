@@ -21,6 +21,9 @@ var dir_1f978ac47b9de0238fe08f2065b1e45b =
     [ "CreateNoteDTO.cs", "CreateNoteDTO_8cs.html", [
       [ "CreateNoteDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO" ]
     ] ],
+    [ "CreateUserDTO.cs", "CreateUserDTO_8cs.html", [
+      [ "CreateUserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO" ]
+    ] ],
     [ "DetailsDTO.cs", "DetailsDTO_8cs.html", [
       [ "DetailsDTO", "classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO" ]
     ] ],
@@ -35,6 +38,9 @@ var dir_1f978ac47b9de0238fe08f2065b1e45b =
     ] ],
     [ "LabelUpdateDTO.cs", "LabelUpdateDTO_8cs.html", [
       [ "LabelUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelUpdateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1LabelUpdateDTO" ]
+    ] ],
+    [ "LoginDTO.cs", "LoginDTO_8cs.html", [
+      [ "LoginDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LoginDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1LoginDTO" ]
     ] ],
     [ "PageCreateDTO.cs", "PageCreateDTO_8cs.html", [
       [ "PageCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO" ]

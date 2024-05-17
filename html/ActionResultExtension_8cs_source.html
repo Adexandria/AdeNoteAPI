@@ -86,34 +86,38 @@ $(document).ready(function(){initNavTree('ActionResultExtension_8cs_source.html'
 <div class="title">ActionResultExtension.cs</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="ActionResultExtension_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> Microsoft.AspNetCore.Mvc;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Net;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="namespaceAdeNote_1_1Infrastructure.html">    4</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Extension.html">AdeNote.Infrastructure.Extension</a></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension.html">    9</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="classAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension.html">ActionResultExtension</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension.html#aea63b5032e3a34c6e7db381d1ab44d2a">   16</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> IActionResult <a class="code" href="classAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension.html#aea63b5032e3a34c6e7db381d1ab44d2a">Response</a>(<span class="keyword">this</span> TasksLibrary.Utilities.ActionResult actionResult)</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            var result = actionResult.StatusCode <span class="keywordflow">switch</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                (int)HttpStatusCode.OK =&gt; <span class="keyword">new</span> OkObjectResult(actionResult),</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                (int)HttpStatusCode.BadRequest =&gt; <span class="keyword">new</span> BadRequestObjectResult(actionResult),</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                (int)HttpStatusCode.Unauthorized =&gt; <span class="keyword">new</span> UnauthorizedObjectResult(actionResult),</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                (int)HttpStatusCode.NotFound =&gt; <span class="keyword">new</span> NotFoundObjectResult(actionResult),</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                _ =&gt; <span class="keyword">new</span> ObjectResult(actionResult),</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            };</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">if</span> (actionResult.StatusCode == (<span class="keywordtype">int</span>)HttpStatusCode.InternalServerError)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                result.StatusCode = 500;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="ttc" id="aclassAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension_html"><div class="ttname"><a href="classAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension.html">AdeNote.Infrastructure.Extension.ActionResultExtension</a></div><div class="ttdoc">This extension for the custom action result</div><div class="ttdef"><b>Definition:</b> <a href="ActionResultExtension_8cs_source.html#l00009">ActionResultExtension.cs:10</a></div></div>
-<div class="ttc" id="aclassAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension_html_aea63b5032e3a34c6e7db381d1ab44d2a"><div class="ttname"><a href="classAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension.html#aea63b5032e3a34c6e7db381d1ab44d2a">AdeNote.Infrastructure.Extension.ActionResultExtension.Response</a></div><div class="ttdeci">static IActionResult Response(this TasksLibrary.Utilities.ActionResult actionResult)</div><div class="ttdoc">This maps the custom action result to mvc action result</div><div class="ttdef"><b>Definition:</b> <a href="ActionResultExtension_8cs_source.html#l00016">ActionResultExtension.cs:16</a></div></div>
-<div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_1_1Extension_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure_1_1Extension.html">AdeNote.Infrastructure.Extension</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionResultExtension_8cs_source.html#l00004">ActionResultExtension.cs:5</a></div></div>
+<a href="ActionResultExtension_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceAdeNote.html">AdeNote</a>.<a class="code" href="namespaceAdeNote_1_1Infrastructure.html">Infrastructure</a>.<a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html">Utilities</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> Microsoft.AspNetCore.Mvc;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> System.Net;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="namespaceAdeNote_1_1Infrastructure.html">    5</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Extension.html">AdeNote.Infrastructure.Extension</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension.html">   10</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="classAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension.html">ActionResultExtension</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension.html#a85ec7feb24ed3040030e0dd7354aeaa4">   17</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> IActionResult <a class="code" href="classAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension.html#a85ec7feb24ed3040030e0dd7354aeaa4">Response</a>(<span class="keyword">this</span> Utilities.ActionResult actionResult)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            var result = actionResult.StatusCode <span class="keywordflow">switch</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                (int)HttpStatusCode.OK =&gt; <span class="keyword">new</span> OkObjectResult(actionResult),</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                (int)HttpStatusCode.BadRequest =&gt; <span class="keyword">new</span> BadRequestObjectResult(actionResult),</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                (int)HttpStatusCode.Unauthorized =&gt; <span class="keyword">new</span> UnauthorizedObjectResult(actionResult),</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                (int)HttpStatusCode.NotFound =&gt; <span class="keyword">new</span> NotFoundObjectResult(actionResult),</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                _ =&gt; <span class="keyword">new</span> ObjectResult(actionResult),</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            };</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span> (actionResult.StatusCode == (<span class="keywordtype">int</span>)HttpStatusCode.InternalServerError)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                result.StatusCode = 500;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="ttc" id="aclassAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension_html"><div class="ttname"><a href="classAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension.html">AdeNote.Infrastructure.Extension.ActionResultExtension</a></div><div class="ttdoc">This extension for the custom action result</div><div class="ttdef"><b>Definition:</b> <a href="ActionResultExtension_8cs_source.html#l00010">ActionResultExtension.cs:11</a></div></div>
+<div class="ttc" id="aclassAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension_html_a85ec7feb24ed3040030e0dd7354aeaa4"><div class="ttname"><a href="classAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension.html#a85ec7feb24ed3040030e0dd7354aeaa4">AdeNote.Infrastructure.Extension.ActionResultExtension.Response</a></div><div class="ttdeci">static IActionResult Response(this Utilities.ActionResult actionResult)</div><div class="ttdoc">This maps the custom action result to mvc action result</div><div class="ttdef"><b>Definition:</b> <a href="ActionResultExtension_8cs_source.html#l00017">ActionResultExtension.cs:17</a></div></div>
+<div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_1_1Extension_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure_1_1Extension.html">AdeNote.Infrastructure.Extension</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionResultExtension_8cs_source.html#l00005">ActionResultExtension.cs:6</a></div></div>
+<div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_1_1Utilities_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html">AdeNote.Infrastructure.Utilities</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionResult_8cs_source.html#l00001">ActionResult.cs:2</a></div></div>
+<div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure.html">AdeNote.Infrastructure</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionResultExtension_8cs_source.html#l00005">ActionResultExtension.cs:6</a></div></div>
+<div class="ttc" id="anamespaceAdeNote_html"><div class="ttname"><a href="namespaceAdeNote.html">AdeNote</a></div><div class="ttdef"><b>Definition:</b> <a href="AuthenticationController_8cs_source.html#l00011">AuthenticationController.cs:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

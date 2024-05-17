@@ -1,6 +1,7 @@
 var dir_fab80d2647e49d0e675ea0809587eea2 =
 [
     [ "DTOs", "dir_1f978ac47b9de0238fe08f2065b1e45b.html", "dir_1f978ac47b9de0238fe08f2065b1e45b" ],
+    [ "AuthType.cs", "AuthType_8cs.html", "AuthType_8cs" ],
     [ "BaseClass.cs", "BaseClass_8cs.html", [
       [ "BaseClass", "classAdeNote_1_1Models_1_1BaseClass.html", "classAdeNote_1_1Models_1_1BaseClass" ]
     ] ],
@@ -17,10 +18,10 @@ var dir_fab80d2647e49d0e675ea0809587eea2 =
     [ "Page.cs", "Page_8cs.html", [
       [ "Page", "classAdeNote_1_1Models_1_1Page.html", "classAdeNote_1_1Models_1_1Page" ]
     ] ],
-    [ "UserDetail.cs", "UserDetail_8cs.html", [
-      [ "UserDetail", "classAdeNote_1_1Models_1_1UserDetail.html", "classAdeNote_1_1Models_1_1UserDetail" ]
+    [ "RefreshToken.cs", "RefreshToken_8cs.html", [
+      [ "RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", "classAdeNote_1_1Models_1_1RefreshToken" ]
     ] ],
-    [ "UserToken.cs", "UserToken_8cs.html", [
-      [ "UserToken", "classAdeNote_1_1Models_1_1UserToken.html", "classAdeNote_1_1Models_1_1UserToken" ]
+    [ "User.cs", "User_8cs.html", [
+      [ "User", "classAdeNote_1_1Models_1_1User.html", "classAdeNote_1_1Models_1_1User" ]
     ] ]
 ];
