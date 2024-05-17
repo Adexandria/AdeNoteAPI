@@ -993,7 +993,8 @@ namespace AdeNote.Infrastructure.Services
         public IUserRepository userRepository;
 
         public ITokenProvider tokenProvider;
-        private readonly IMfaService mfaService;
+
+        public  IMfaService mfaService;
 
         /// <summary>
         ///  Handles the cloud storage
@@ -1001,6 +1002,7 @@ namespace AdeNote.Infrastructure.Services
         public IBlobService blobService;
 
         public  IRefreshTokenRepository refreshTokenRepository;
+
         public IPasswordManager passwordManager;
 
         /// <summary>

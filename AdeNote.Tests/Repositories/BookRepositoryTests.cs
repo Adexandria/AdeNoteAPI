@@ -58,9 +58,10 @@ namespace AdeNote.Tests.Repositories
         {
             //Arrange
             AssumeSaveChangesSuccessfully();
+            obj.Id = new Guid("a557773f-f8c3-47af-a16f-d144dfc0c64b");
 
             //Act
-            var response = await Repo.Remove(obj);
+            var response = await Repo.Remove(books.FirstOrDefault());
 
             //Assert
             Assert.That(response, Is.EqualTo(true));
@@ -83,6 +84,7 @@ namespace AdeNote.Tests.Repositories
         {
             return new Book()
             {
+
               Description ="yes",
               Title = "yes",
               UserId = new Guid("6b9da688-9591-4e3c-bf8c-732dd3080866")

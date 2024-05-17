@@ -98,7 +98,6 @@ namespace AdeNote.Infrastructure.Repository
             Db.Entry(currentBook).State = EntityState.Modified;
 
             return await SaveChanges<Book>();
-
         }
     }
 }
