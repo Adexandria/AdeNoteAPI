@@ -1,0 +1,27 @@
+var namespaceAdeNote_1_1Infrastructure_1_1Services =
+[
+    [ "AuthService", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService" ],
+    [ "BlobService", "classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService" ],
+    [ "BookService", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookService" ],
+    [ "EmailService", "classAdeNote_1_1Infrastructure_1_1Services_1_1EmailService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1EmailService" ],
+    [ "ExcelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService" ],
+    [ "ExportService", "classAdeNote_1_1Infrastructure_1_1Services_1_1ExportService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1ExportService" ],
+    [ "IAuthService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService" ],
+    [ "IBlobService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService" ],
+    [ "IBookService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService" ],
+    [ "IEmailService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService" ],
+    [ "IExcel", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExcel.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExcel" ],
+    [ "IExportService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExportService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExportService" ],
+    [ "ILabelService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService" ],
+    [ "INotificationService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService" ],
+    [ "IPageService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService" ],
+    [ "ISmsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService" ],
+    [ "IUserService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService" ],
+    [ "IWordService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService" ],
+    [ "LabelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService" ],
+    [ "NotificationService", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService" ],
+    [ "PageService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService" ],
+    [ "SmsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService" ],
+    [ "UserService", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService" ],
+    [ "WordService", "classAdeNote_1_1Infrastructure_1_1Services_1_1WordService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1WordService" ]
+];

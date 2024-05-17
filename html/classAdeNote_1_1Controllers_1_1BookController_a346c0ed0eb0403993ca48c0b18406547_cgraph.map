@@ -1,0 +1,4 @@
+<map id="AdeNote.Controllers.BookController.DeleteBook" name="AdeNote.Controllers.BookController.DeleteBook">
+<area shape="rect" id="node1" title="Deletes an existing book" alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html#ae7bb852cf190841ea355fcf42096f132" title="Deletes an existing book" alt="" coords="244,5,477,47"/>
+</map>

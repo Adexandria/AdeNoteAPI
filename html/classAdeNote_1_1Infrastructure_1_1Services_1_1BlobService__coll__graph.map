@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Services.BlobService" name="AdeNote.Infrastructure.Services.BlobService">
+<area shape="rect" id="node1" title="Handles the implementation of cloud storage" alt="" coords="35,109,268,151"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html" title="An interface that includes the behaviour of cloud storage" alt="" coords="5,13,108,39"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html" title="Contains configuration for blob storage" alt="" coords="133,5,362,47"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="AdeNote.Infrastructure.Services.PageService.Update" name="AdeNote.Infrastructure.Services.PageService.Update">
+<area shape="rect" id="node1" title="Updates an existing page" alt="" coords="5,169,239,211"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="299,5,528,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#ace07f2fb2416ddcbebef9cdb4b02af5c" title="Get a particular book that belongs to a user" alt="" coords="290,71,537,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html#a542cf21f31bd5a1434a8c38ad9336bfa" title="Gets an individual page from a particular book" alt="" coords="290,136,537,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#aba4773b458c4acbf09fba32e8835f14d" title=" " alt="" coords="299,201,528,243"/>
+<area shape="rect" id="node7" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#ae451c2bb0462a873a4e0f8c0d3a9b721" title="Updates an existing object" alt="" coords="290,267,537,308"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a3ad7c16308d19a17c3372612b1febb1d" title="Maps from page update dto to page" alt="" coords="287,332,540,373"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#afe65cff3843963cbe0282b07339e3e39" title=" " alt="" coords="588,201,817,243"/>
+</map>
