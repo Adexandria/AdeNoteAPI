@@ -58,9 +58,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "20240430084252__firstmigration_8Designer_8cs.html",
-"SwaggerOptions_8cs.html",
-"classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a5fe94761f56ca52ec811be0e7cd2790b",
-"classAdeNote_1_1Models_1_1User.html#a8da387320f79a0c282f37916b31153e0"
+"Sms_8cs_source.html",
+"classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a40c4b3ff821053124c01b2f95badae7b",
+"classAdeNote_1_1Models_1_1User.html#a7cdb59cda6f0c31385dc02fa1d61c55b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

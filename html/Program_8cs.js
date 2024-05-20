@@ -33,6 +33,7 @@ var Program_8cs =
     [ "AddSingleton", "Program_8cs.html#a082f7551c9eee18ddd0aee67c85591a6", null ],
     [ "AddSwaggerGen", "Program_8cs.html#ab75edc3b5613643a6f0a45dff585da82", null ],
     [ "ConfigureOptions< SwaggerOptions >", "Program_8cs.html#a73f3690588f4876843046269be482027", null ],
+    [ "CreateTables", "Program_8cs.html#adb6157193705367034fb22c764061bbb", null ],
     [ "MapControllers", "Program_8cs.html#a9e2ee3170aa6279b68eefd1651f7d96c", null ],
     [ "Run", "Program_8cs.html#aaa3dbf02e269c3ef7e8546d290c6b3dd", null ],
     [ "UseAuthentication", "Program_8cs.html#a6435d8beeff4999dc0b0c6d60a86a4e2", null ],
