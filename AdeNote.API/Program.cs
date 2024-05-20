@@ -4,6 +4,8 @@ using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Services;
 using AdeNote.Infrastructure.Utilities;
+using AdeNote.Infrastructure.Utilities.AI;
+using AdeText;
 using Asp.Versioning;
 using Asp.Versioning.ApiExplorer;
 using DocBuilder.Services;
@@ -15,11 +17,11 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 using System.Text;
-using UserRepository = AdeNote.Infrastructure.Repository.UserRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration.AddEnvironmentVariables().Build();
 var azureAd = configuration.GetSection("AzureAd");
+var textClientConfiguration = configuration.GetSection("TextTranslationConfiguration").Get<TranslateConfiguration>();
 // Gets the connection string from appsettings
 var connectionString = configuration.GetConnectionString("NotesDB");
 
@@ -98,6 +100,7 @@ builder.Services.AddScoped((_) => DocFactory.CreateService());
 builder.Services.AddSingleton((_) => AuthFactory.CreateService().PasswordManager);
 builder.Services.AddSingleton((_) => AuthFactory.CreateService().TokenProvider);
 builder.Services.AddSingleton((_) => AuthFactory.CreateService().MfaService);
+builder.Services.AddSingleton((_) => AdeTextFactory.BuildClient(textClientConfiguration));
 
 builder.Services.AddSingleton((_) => new ExcelifyFactory());
 

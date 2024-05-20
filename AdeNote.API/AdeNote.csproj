@@ -33,6 +33,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AdeAuth\AdeAuth.csproj" />
+    <ProjectReference Include="..\AdeText\AdeText.csproj" />
     <ProjectReference Include="..\DocBuilder\DocBuilder.csproj" />
     <ProjectReference Include="..\Excelify\Excelify.csproj" />
   </ItemGroup>
