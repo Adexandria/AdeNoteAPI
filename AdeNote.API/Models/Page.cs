@@ -25,6 +25,8 @@ namespace AdeNote.Models
         {
             Title = title;
             Labels = new List<Label>();
+            Created = DateTime.UtcNow;
+            Modified = DateTime.UtcNow;
         }
 
         /// <summary>

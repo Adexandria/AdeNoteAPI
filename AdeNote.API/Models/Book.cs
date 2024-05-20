@@ -23,6 +23,8 @@ namespace AdeNote.Models
         {
             Title = title;
             Description = description;
+            Created = DateTime.UtcNow;
+            Modified = DateTime.UtcNow;
         }
 
         /// <summary>

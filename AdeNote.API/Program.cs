@@ -138,6 +138,7 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("sso",new AuthorizationPolicyBuilder("SSO").RequireAuthenticatedUser().Build());
 });
 
+builder.Services.CreateTables();
 
 var app = builder.Build();
 

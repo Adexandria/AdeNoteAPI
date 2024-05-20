@@ -6,9 +6,9 @@ namespace AdeNote.Infrastructure.Utilities
 {
     public static class Database
     {
-        public static void CreateTables(this IServiceProvider provider)
+        public static void CreateTables(this IServiceCollection services)
         {
-            var dbContext = provider.GetService<NoteDbContext>() ?? throw new NullReferenceException("Unregistered service");
+            var dbContext = services.BuildServiceProvider().GetService<NoteDbContext>() ?? throw new NullReferenceException("Unregistered service");
 
             var databaseCreator = dbContext.GetService<IRelationalDatabaseCreator>();
 

@@ -15,6 +15,8 @@ namespace AdeNote.Models
             LastName = lastName;
             Email = email;
             AuthenticationType = authType;
+            Created = DateTime.UtcNow;
+            Modified = DateTime.UtcNow;
         }
 
 
