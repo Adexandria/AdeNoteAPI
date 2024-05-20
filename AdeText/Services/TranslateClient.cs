@@ -80,11 +80,10 @@ namespace AdeText.Services
 
                     HttpResponseMessage response = client.Send(request);
 
-                    if (response.StatusCode != HttpStatusCode.OK && requestSent < retryConfiguration)
+                    if (response.StatusCode != HttpStatusCode.OK)
                     {
                         throw new Exception();
                     }
-
                     var content = response.Content.ReadAsStringAsync().Result;
 
                     var deserialiseContent = JsonSerializer.Deserialize<Dictionary<string, SupportedLanguage>>(content);
@@ -97,7 +96,10 @@ namespace AdeText.Services
                 {
                     Task.Delay(TimeSpan.FromSeconds(Math.Pow(3, requestSent))).Wait();
                     requestSent++;
-                    return GetSupportedTranslationLanguages;
+                    if(requestSent < retryConfiguration)
+                    {
+                        return GetSupportedTranslationLanguages;
+                    }
                 }
                 finally
                 {
@@ -123,7 +125,7 @@ namespace AdeText.Services
 
                 HttpResponseMessage response = await client.SendAsync(request);
 
-                if (response.StatusCode != HttpStatusCode.OK && requestSent < retryConfiguration)
+                if (response.StatusCode != HttpStatusCode.OK)
                 {
                     throw new Exception();
                 }
@@ -138,7 +140,10 @@ namespace AdeText.Services
             {
                 Task.Delay(TimeSpan.FromSeconds(Math.Pow(3, requestSent))).Wait();
                 requestSent++;
-                return await SendRequest<TConcrete>(requestBody, endpoint);
+                if (requestSent < retryConfiguration)
+                {
+                    return await SendRequest<TConcrete>(requestBody, endpoint);
+                }
             }
             finally
             {

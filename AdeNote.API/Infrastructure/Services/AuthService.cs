@@ -917,13 +917,13 @@ namespace AdeNote.Infrastructure.Services
 
                 var token = tokenProvider.GenerateToken(new Dictionary<string, object>() { { ClaimTypes.Email, user.Email} }, 10);
 
-                /*var substitutions = new Dictionary<string, string>()
+                var substitutions = new Dictionary<string, string>()
                     {
                     {"[Token]" , token }
                     };
 
                 _notificationService.SendNotification(new Email(user.Email, "Login Passwordless"),
-                    EmailTemplate.EmailConfirmationNotification, ContentType.html, substitutions);*/
+                    EmailTemplate.EmailConfirmationNotification, ContentType.html, substitutions);
 
                 return ActionResult<string>.SuccessfulOperation(token);
 
