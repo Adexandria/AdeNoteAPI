@@ -5,9 +5,9 @@ namespace AdeText
     public static class AdeTextFactory
     {
 
-        public static ITranslate BuildClient(ITranslateConfiguration configuration)
+        public static ITranslateClient BuildClient(ITranslateConfiguration configuration)
         {
-            return new Translate(configuration);
+            return new TranslateClient(configuration);
         }
     }
 }

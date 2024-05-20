@@ -1,10 +1,11 @@
 ﻿using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Utilities;
-using AdeNote.Infrastructure.Utilities.AI;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
+using AdeText.Models;
 using Mapster;
+using Microsoft.Extensions.Caching.Memory;
 using System.Net;
 
 namespace AdeNote.Infrastructure.Services
@@ -30,13 +31,14 @@ namespace AdeNote.Infrastructure.Services
         /// <param name="_labelPageRepository">>Handles persisting and querying page labels</param>
         public PageService(IPageRepository _pageRepository, 
             IBookRepository _bookRepository,ILabelRepository _labelRepository, ILabelPageRepository _labelPageRepository,
-            ITextTranslation _textTranslation)
+            ITextTranslation _textTranslation, IServiceProvider serviceProvider)
         {
             pageRepository = _pageRepository;
             bookRepository = _bookRepository;
             labelRepository = _labelRepository;
             labelPageRepository = _labelPageRepository;
             textTranslation = _textTranslation;
+            memoryCache = serviceProvider.GetRequiredService<IMemoryCache>();
         }
 
         /// <summary>
@@ -311,11 +313,15 @@ namespace AdeNote.Infrastructure.Services
             if (currentBookPage == null)
                 return await Task.FromResult(ActionResult<string>.Failed("page doesn't exist", (int)HttpStatusCode.NotFound));
 
-            var supportedLanguage = GetLanguage(translatedLanguage);
+            var supportedLanguages = GetSupportedLanguages();
 
-            if(supportedLanguage == "none")
+            var supportedLanguage = supportedLanguages.SupportedLanguages.Where(s => s.Value.Name == translatedLanguage)
+                .Select(s=>s.Key).FirstOrDefault();
+
+            if(supportedLanguage == null)
             {
-                return await Task.FromResult(ActionResult<string>.Failed("Failed to translate", (int)HttpStatusCode.NotFound));
+                return await Task.FromResult(ActionResult<string>
+                    .Failed("The language is not supported", StatusCodes.Status400BadRequest));
             }
 
             var translatedResponse = await textTranslation.TranslatePage(currentBookPage.Content, supportedLanguage);
@@ -323,33 +329,19 @@ namespace AdeNote.Infrastructure.Services
             return translatedResponse;
         }
 
-        private string GetLanguage(string language)
+
+        private ILanguage GetSupportedLanguages()
         {
-            if (Enum.TryParse(language, true, out Language supportedLanguage))
-            {
-                return supportedLanguage.ToString();
-            }
-            else
-            {
-                switch (language)
-                {
-                    case string when language.Equals(Language.en.GetDescription()):
-                        supportedLanguage = Language.en;
-                        break;
-                    case string when language.Equals(Language.de.GetDescription()):
-                        supportedLanguage = Language.en;
-                        break;
-                    default:
-                        supportedLanguage = Language.none;
-                        break;
-                }
+            var response = textTranslation.GetSupportedLanguages();
 
-                return supportedLanguage.ToString();
-
+            if (response.IsSuccessful)
+            {
+                return response.Data;
             }
+            return default;
         }
 
-
+        public IMemoryCache memoryCache;
         public ITextTranslation textTranslation;
         public IPageRepository pageRepository;
         public IBookRepository bookRepository;

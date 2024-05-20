@@ -101,7 +101,7 @@ builder.Services.AddSingleton((_) => AuthFactory.CreateService().PasswordManager
 builder.Services.AddSingleton((_) => AuthFactory.CreateService().TokenProvider);
 builder.Services.AddSingleton((_) => AuthFactory.CreateService().MfaService);
 builder.Services.AddSingleton((_) => AdeTextFactory.BuildClient(textClientConfiguration));
-
+builder.Services.AddMemoryCache();
 builder.Services.AddSingleton((_) => new ExcelifyFactory());
 
 builder.Services.AddDbContext<NoteDbContext>(options => options

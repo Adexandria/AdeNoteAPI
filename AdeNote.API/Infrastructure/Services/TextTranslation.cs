@@ -1,11 +1,12 @@
 ﻿using AdeNote.Infrastructure.Utilities;
+using AdeText.Models;
 using AdeText.Services;
 
 namespace AdeNote.Infrastructure.Services
 {
     public class TextTranslation : ITextTranslation
     {
-        public TextTranslation(ITranslate translateClient)
+        public TextTranslation(ITranslateClient translateClient)
         {
             _translateClient = translateClient;
         }
@@ -41,6 +42,25 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        private readonly ITranslate _translateClient;
+        public ActionResult<ILanguage> GetSupportedLanguages()
+        {
+            try
+            {
+                var supportedLanguages = _translateClient.GetSupportedTranslationLanguages;
+
+                if(supportedLanguages == null)
+                {
+                    return ActionResult<ILanguage>.Failed("Failed to get supported languages");
+                }
+
+                return ActionResult<ILanguage>.SuccessfulOperation(supportedLanguages);
+            }
+            catch (Exception ex)
+            {
+                return ActionResult<ILanguage>.Failed(ex.Message);
+            }
+        }
+
+        private readonly ITranslateClient _translateClient;
     }
 }

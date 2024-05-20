@@ -6,9 +6,9 @@ using System.Text.Json;
 
 namespace AdeText.Services
 {
-    internal class Translate : ITranslate
+    internal class TranslateClient : ITranslateClient
     {
-        public Translate(ITranslateConfiguration _configuration)
+        public TranslateClient(ITranslateConfiguration _configuration)
         {
             _key = _configuration.Key ?? throw new NullReferenceException(nameof(_configuration.Key));
             _endpoint = _configuration.Endpoint ?? throw new NullReferenceException(nameof(_configuration.Endpoint));
@@ -44,14 +44,13 @@ namespace AdeText.Services
             return await SendRequest<TranslateLanguage>(requestBody, endpoint);
         }
 
-
         public async Task<ITranslateLanguage> TranslateLanguage(string text, string[] tos, string from = null)
         {
             object[] body = new object[] { new { Text = text } };
 
             var requestBody = JsonSerializer.Serialize(body);
 
-            string endpoint = "/translate?api-version=3.0&";
+            string endpoint = "translate?api-version=3.0&";
 
             if (from != null)
             {
@@ -65,6 +64,49 @@ namespace AdeText.Services
 
             return await SendRequest<TranslateLanguage>(requestBody, endpoint);
         }
+
+
+
+        public ILanguage GetSupportedTranslationLanguages
+        {
+            get
+            {
+                try
+                {
+                    using var client = new HttpClient();
+                    using var request = new HttpRequestMessage();
+                    request.Method = HttpMethod.Post;
+                    request.RequestUri = new Uri(_endpoint + "languages?api-version=3.0&scope=translation");
+
+                    HttpResponseMessage response = client.Send(request);
+
+                    if (response.StatusCode != HttpStatusCode.OK && requestSent < retryConfiguration)
+                    {
+                        throw new Exception();
+                    }
+
+                    var content = response.Content.ReadAsStringAsync().Result;
+
+                    var deserialiseContent = JsonSerializer.Deserialize<Dictionary<string, SupportedLanguage>>(content);
+
+                    var etag = response.Headers.FirstOrDefault(s => s.Key == "ETag").Value.FirstOrDefault();
+
+                    return new Language(deserialiseContent,etag);
+                }
+                catch (Exception ex)
+                {
+                    Task.Delay(TimeSpan.FromSeconds(Math.Pow(3, requestSent))).Wait();
+                    requestSent++;
+                    return GetSupportedTranslationLanguages;
+                }
+                finally
+                {
+                    requestSent = 0;
+                }
+            }
+        }
+
+
 
         private async Task<TConcrete> SendRequest<TConcrete>(string requestBody, string endpoint) 
             where TConcrete : class
@@ -88,9 +130,9 @@ namespace AdeText.Services
 
                 var content = await response.Content.ReadAsStringAsync();
 
-                var detectLanguage = JsonSerializer.Deserialize<TConcrete>(content);
+                var deserialiseContent = JsonSerializer.Deserialize<TConcrete>(content);
 
-                return detectLanguage;
+                return deserialiseContent;
             }
             catch (Exception ex)
             {
@@ -111,5 +153,7 @@ namespace AdeText.Services
         private string _key;
         private string _endpoint;
         private string _location;
+
+       
     }
 }
