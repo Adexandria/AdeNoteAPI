@@ -100,6 +100,11 @@ namespace AdeText.Services
                     {
                         return GetSupportedTranslationLanguages;
                     }
+                    else
+                    {
+                        return default;
+                    }
+                    
                 }
                 finally
                 {
@@ -143,6 +148,10 @@ namespace AdeText.Services
                 if (requestSent < retryConfiguration)
                 {
                     return await SendRequest<TConcrete>(requestBody, endpoint);
+                }
+                else
+                {
+                    return default;
                 }
             }
             finally
