@@ -14,6 +14,8 @@ namespace AdeNote.Models
             Token = refreshToken;
             UserId = userId;
             ExpiryDate = expiryDate;
+            Created = DateTime.UtcNow;
+            Modified = DateTime.UtcNow;
         }
 
 

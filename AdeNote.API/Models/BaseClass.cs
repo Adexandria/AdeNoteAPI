@@ -12,5 +12,9 @@ namespace AdeNote.Models
         /// </summary>
         [Key]
         public Guid Id { get; set; }
+
+        public DateTime Created { get; set; }
+
+        public DateTime Modified { get; set; }
     }
 }

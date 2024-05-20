@@ -18,6 +18,8 @@
         public Label(string title)
         {
             Title = title;
+            Created = DateTime.UtcNow;
+            Modified = DateTime.UtcNow;
         }
         /// <summary>
         /// Title of the label
