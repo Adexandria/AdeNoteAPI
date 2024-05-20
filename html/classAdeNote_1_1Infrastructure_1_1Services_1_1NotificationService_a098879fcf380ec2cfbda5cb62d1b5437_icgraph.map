@@ -1,0 +1,4 @@
+<map id="AdeNote.Infrastructure.Services.NotificationService.CreatePersonalisedMessage" name="AdeNote.Infrastructure.Services.NotificationService.CreatePersonalisedMessage">
+<area shape="rect" id="node1" title="Generates Personalised message using content template" alt="" coords="348,5,623,61"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html#a080f6332dfe6dbd31fabbfe5d12631e6" title="Send notification based on template type" alt="" coords="5,13,300,54"/>
+</map>
