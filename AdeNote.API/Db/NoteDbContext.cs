@@ -41,6 +41,8 @@ namespace AdeNote.Db
 
         public DbSet<RefreshToken> RefreshTokens { get; set; }
 
+        public DbSet<HangfireUser> HangfireUsers {  get; set; } 
+
 
         /// <summary>
         /// An overriden method to handle the mapping of objects. \n
@@ -52,7 +54,7 @@ namespace AdeNote.Db
           base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Book>()
-                .HasOne(s=>s.User).WithMany(s=>s.Books).HasForeignKey(s=>s.Id);
+                .HasOne(s=>s.User).WithMany(s=>s.Books).HasForeignKey(s=>s.UserId);
 
             modelBuilder.Entity<RefreshToken>()
                 .HasOne(s => s.User).

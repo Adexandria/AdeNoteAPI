@@ -25,14 +25,14 @@ namespace AdeNote.Infrastructure.Services
             if (currentUser == null)
                 return ActionResult.Failed("User doesn't exist", StatusCodes.Status404NotFound);
 
-            var isVerified = _passwordManager.VerifyPassword(currentPassword,currentUser.PasswordHash);
+            var isVerified = _passwordManager.VerifyPassword(currentPassword,currentUser.PasswordHash, currentUser.Salt);
 
             if (!isVerified)
                 return ActionResult.Failed("Failed to verify", StatusCodes.Status400BadRequest);
 
-            var hashedPassword = _passwordManager.HashPassword(password);
+            var hashedPassword = _passwordManager.HashPassword(password,out string salt);
 
-            currentUser.PasswordHash = hashedPassword;
+           currentUser.SetPassword(hashedPassword, salt);
 
             var commitStatus = await _userRepository.Update(currentUser);
 
@@ -48,9 +48,9 @@ namespace AdeNote.Infrastructure.Services
             if (currentUser == null)
                 return ActionResult.Failed("User doesn't exist", StatusCodes.Status404NotFound);
 
-            var hashedPassword = _passwordManager.HashPassword(password);
+            var hashedPassword = _passwordManager.HashPassword(password, out string salt);
 
-            currentUser.PasswordHash = hashedPassword;
+            currentUser.SetPassword(hashedPassword, salt);
 
             var commitStatus = await _userRepository.Update(currentUser);
 

@@ -880,7 +880,7 @@ namespace AdeNote.Controllers
                 return Ok($"Proceed to enter otp from {resultResponse.Data} authenticator");
             }
 
-           // SendNotification(loginResponse.Data.Email);
+            SendNotification(loginResponse.Data.Email);
 
             AddToCookie("AdeNote-RefreshToken", loginResponse.RefreshToken, DateTime.UtcNow.AddMonths(2));
 

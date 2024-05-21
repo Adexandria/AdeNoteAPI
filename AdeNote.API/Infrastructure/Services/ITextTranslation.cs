@@ -7,6 +7,6 @@ namespace AdeNote.Infrastructure.Services
     {
         public Task<ActionResult<string>> TranslatePage(string pageContent, string translatedLanguage);
 
-        public ActionResult<ILanguage> GetSupportedLanguages();
+        public ActionResult<ILanguage> GetSupportedLanguages(string scope, string _etag = null);
     }
 }

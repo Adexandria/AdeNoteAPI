@@ -7,6 +7,6 @@ namespace AdeText.Services
         public Task<IDetectLanguage> DetectLanguage(string text);
         public Task<ITranslateLanguage> TranslateLanguage(string text, string to, string from = null);
         public Task<ITranslateLanguage> TranslateLanguage(string text, string[] to, string from = null);
-        public ILanguage GetSupportedTranslationLanguages { get; }
+        public ILanguage GetSupportedLanguages(string scope = "translation", string _etag = null);
     }
 }

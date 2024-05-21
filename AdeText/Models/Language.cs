@@ -13,6 +13,11 @@ namespace AdeText.Models
             SupportedLanguages = _supportedLanguages;
             ETag = _etag;
         }
+
+        public Language(string _etag)
+        {
+            ETag = _etag;
+        }
         public Dictionary<string, SupportedLanguage> SupportedLanguages { get; set; }
         public string ETag { get; set; }
     }

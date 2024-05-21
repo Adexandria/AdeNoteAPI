@@ -42,11 +42,11 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public ActionResult<ILanguage> GetSupportedLanguages()
+        public ActionResult<ILanguage> GetSupportedLanguages(string scope, string _etag)
         {
             try
             {
-                var supportedLanguages = _translateClient.GetSupportedTranslationLanguages;
+                var supportedLanguages = _translateClient.GetSupportedLanguages(scope,_etag);
 
                 if(supportedLanguages == null)
                 {

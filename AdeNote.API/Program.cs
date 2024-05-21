@@ -6,10 +6,12 @@ using AdeNote.Infrastructure.Services;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Infrastructure.Utilities.AI;
 using AdeText;
+using AdeText.Models;
 using Asp.Versioning;
 using Asp.Versioning.ApiExplorer;
 using DocBuilder.Services;
 using Excelify.Services;
+using Hangfire;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +24,7 @@ var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration.AddEnvironmentVariables().Build();
 var azureAd = configuration.GetSection("AzureAd");
 var textClientConfiguration = configuration.GetSection("TextTranslationConfiguration").Get<TranslateConfiguration>();
+var hangfireUserConfiguration = configuration.GetSection("HangfireUser").Get<HangFireUserConfiguration>();
 // Gets the connection string from appsettings
 var connectionString = configuration.GetConnectionString("NotesDB");
 
@@ -93,9 +96,11 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<ISmsService, SmsService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<IUserService,UserService>();
+builder.Services.AddScoped<IHangfireUserRepository, HangfireUserRepository>();
 builder.Services.AddScoped<IExcel, AdeNote.Infrastructure.Services.ExcelService>();
 builder.Services.AddScoped<IExportService, ExportService>();
 builder.Services.AddScoped<IWordService,WordService>();
+builder.Services.AddScoped<ITextTranslation, TextTranslation>();
 builder.Services.AddScoped((_) => DocFactory.CreateService());
 builder.Services.AddSingleton((_) => AuthFactory.CreateService().PasswordManager);
 builder.Services.AddSingleton((_) => AuthFactory.CreateService().TokenProvider);
@@ -103,7 +108,14 @@ builder.Services.AddSingleton((_) => AuthFactory.CreateService().MfaService);
 builder.Services.AddSingleton((_) => AdeTextFactory.BuildClient(textClientConfiguration));
 builder.Services.AddMemoryCache();
 builder.Services.AddSingleton((_) => new ExcelifyFactory());
+builder.Services.AddHangfire(config => config
+    .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
+    .UseSimpleAssemblyNameTypeSerializer()
+    .UseRecommendedSerializerSettings()
+    .UseSqlServerStorage(configuration.GetConnectionString("HangfireConnection")));
 
+builder.Services.AddHangfireServer();
+builder.Services.AddSingleton(LoggerFactory.Create(b => b.AddConsole()));
 builder.Services.AddDbContext<NoteDbContext>(options => options
 .UseSqlServer(connectionString));
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -142,7 +154,8 @@ builder.Services.AddAuthorization(options =>
 });
 
 builder.Services.CreateTables();
-
+builder.Services.SeedHangFireUser(hangfireUserConfiguration);
+new AdeNote.Infrastructure.Utilities.AI.Language(builder.Services.BuildServiceProvider()).GetLanguages();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -163,8 +176,18 @@ app.UseSwaggerUI(setupAction =>
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
 app.UseAuthentication();
+app.UseAuthorization();
+
+app.UseHangfireDashboard("/hangfire", new DashboardOptions 
+{ 
+  Authorization = new[] {
+      new DashboardAuthenticationFilter(builder.Services.BuildServiceProvider())
+  },
+  DashboardTitle = "AdeNote API",
+  DarkModeEnabled = true,
+});
+
 
 app.MapControllers();
 

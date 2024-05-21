@@ -4,6 +4,10 @@ namespace AdeNote.Infrastructure.Utilities.AI
 {
     public class TranslateConfiguration : ITranslateConfiguration
     {
+        public TranslateConfiguration()
+        {
+                
+        }
         public TranslateConfiguration(string key, string location, string endpoint, int retryConfiguration)
         {
             Key = key; 

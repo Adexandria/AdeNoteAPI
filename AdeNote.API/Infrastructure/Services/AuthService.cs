@@ -4,6 +4,7 @@ using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
 using Google.Authenticator;
+using System.Drawing;
 using System.Security.Claims;
 using System.Text;
 
@@ -686,9 +687,9 @@ namespace AdeNote.Infrastructure.Services
 
                 if (!string.IsNullOrEmpty(newUser.Password) || !string.IsNullOrWhiteSpace(newUser.Password))
                 {
-                    var hashedPassword = passwordManager.HashPassword(newUser.Password);
+                    var hashedPassword = passwordManager.HashPassword(newUser.Password, out string salt);
 
-                    user.SetPassword(hashedPassword);
+                    user.SetPassword(hashedPassword,salt);
                 }
                
 
@@ -709,8 +710,8 @@ namespace AdeNote.Infrastructure.Services
                     {"[Name]" , $"{ user.FirstName} {user.LastName}" }
                 };
 
-               // _notificationService.SendNotification(new Email(user.Email, "Confirm email"),
-                    //EmailTemplate.EmailConfirmationNotification, ContentType.html, substitutions);
+                _notificationService.SendNotification(new Email(user.Email, "Confirm email"),
+               EmailTemplate.EmailConfirmationNotification, ContentType.html, substitutions);
 
                 return ActionResult<string>.SuccessfulOperation(emailConfirmationToken);
 

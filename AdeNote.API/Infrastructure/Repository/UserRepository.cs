@@ -36,7 +36,7 @@ namespace AdeNote.Infrastructure.Repository
 
             if (user != null && user.AuthenticationType == AuthType.local)
             {
-                var isVerified = PasswordManager.VerifyPassword(password, user.PasswordHash);
+                var isVerified = PasswordManager.VerifyPassword(password, user.PasswordHash, user.Salt);
                 if (isVerified)
                 {
                     return user;

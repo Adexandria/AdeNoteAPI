@@ -7,6 +7,7 @@ using AdeText.Models;
 using Mapster;
 using Microsoft.Extensions.Caching.Memory;
 using System.Net;
+using System.Reflection;
 
 namespace AdeNote.Infrastructure.Services
 {
@@ -313,9 +314,11 @@ namespace AdeNote.Infrastructure.Services
             if (currentBookPage == null)
                 return await Task.FromResult(ActionResult<string>.Failed("page doesn't exist", (int)HttpStatusCode.NotFound));
 
-            var supportedLanguages = GetSupportedLanguages();
+            var supportedLanguages = memoryCache.Get("languages");
 
-            var supportedLanguage = supportedLanguages.SupportedLanguages.Where(s => s.Value.Name == translatedLanguage)
+            var languages = ObjectToDictionary(supportedLanguages);
+
+            var supportedLanguage = languages.Where(s => s.Value.Name == translatedLanguage)
                 .Select(s=>s.Key).FirstOrDefault();
 
             if(supportedLanguage == null)
@@ -328,17 +331,19 @@ namespace AdeNote.Infrastructure.Services
 
             return translatedResponse;
         }
-
-
-        private ILanguage GetSupportedLanguages()
+        private IDictionary<string, SupportedLanguage> ObjectToDictionary<T>(T item)
+     where T : class
         {
-            var response = textTranslation.GetSupportedLanguages();
-
-            if (response.IsSuccessful)
+            Type myObjectType = item.GetType();
+            IDictionary<string, SupportedLanguage> dict = new Dictionary<string, SupportedLanguage>();
+            var indexer = new object[0];
+            PropertyInfo[] properties = myObjectType.GetProperties();
+            foreach (var info in properties)
             {
-                return response.Data;
+                var value = info.GetValue(item, indexer) as SupportedLanguage;
+                dict.Add(info.Name, value);
             }
-            return default;
+            return dict;
         }
 
         public IMemoryCache memoryCache;

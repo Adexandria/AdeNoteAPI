@@ -1,4 +1,5 @@
 ﻿using AdeText.Models;
+using AdeText.Utilities;
 using System.Net;
 using System.Text;
 using System.Text.Json;
@@ -67,50 +68,65 @@ namespace AdeText.Services
 
 
 
-        public ILanguage GetSupportedTranslationLanguages
+        public ILanguage GetSupportedLanguages(string scope, string _etag)
         {
-            get
+            try
             {
-                try
+                var isScope = Enum.TryParse(scope, out Scope result);
+                if (!isScope)
                 {
-                    using var client = new HttpClient();
-                    using var request = new HttpRequestMessage();
-                    request.Method = HttpMethod.Post;
-                    request.RequestUri = new Uri(_endpoint + "languages?api-version=3.0&scope=translation");
-
-                    HttpResponseMessage response = client.Send(request);
-
-                    if (response.StatusCode != HttpStatusCode.OK)
-                    {
-                        throw new Exception();
-                    }
-                    var content = response.Content.ReadAsStringAsync().Result;
-
-                    var deserialiseContent = JsonSerializer.Deserialize<Dictionary<string, SupportedLanguage>>(content);
-
-                    var etag = response.Headers.FirstOrDefault(s => s.Key == "ETag").Value.FirstOrDefault();
-
-                    return new Language(deserialiseContent,etag);
+                    throw new NullReferenceException($"{scope} doesn't exist");
                 }
-                catch (Exception ex)
+                using var client = new HttpClient();
+                using var request = new HttpRequestMessage();
+                request.Method = HttpMethod.Get;
+                request.RequestUri = new Uri($"https://api.cognitive.microsofttranslator.com/languages?api-version=3.0&scope={scope}");
+
+                if(!string.IsNullOrEmpty(_etag))
                 {
-                    Task.Delay(TimeSpan.FromSeconds(Math.Pow(3, requestSent))).Wait();
-                    requestSent++;
-                    if(requestSent < retryConfiguration)
-                    {
-                        return GetSupportedTranslationLanguages;
-                    }
-                    else
-                    {
-                        return default;
-                    }
-                    
+                    request.Headers.IfNoneMatch
+                        .Add(new System.Net.Http.Headers.EntityTagHeaderValue(_etag));
                 }
-                finally
+
+                HttpResponseMessage response = client.Send(request);
+
+                if (response.StatusCode != HttpStatusCode.OK)
                 {
-                    requestSent = 0;
+                    throw new TranslationException(response.StatusCode);
                 }
+
+                if(response.StatusCode == HttpStatusCode.NotModified)
+                {
+                    return new Models.Language(_etag);
+                }
+                var content = response.Content.ReadAsStringAsync().Result;
+
+                var deserialiseContent = JsonSerializer.Deserialize<Root>(content, new JsonSerializerOptions() { });
+
+                var etag = response.Headers.FirstOrDefault(s => s.Key == "ETag").Value.FirstOrDefault();
+
+                return new Models.Language(deserialiseContent.SupportedLanguage.Languages, etag);
             }
+            catch (TranslationException ex)
+            {
+                Task.Delay(TimeSpan.FromSeconds(Math.Pow(3, requestSent))).Wait();
+                requestSent++;
+                if (requestSent < retryConfiguration && ex.StatusCode == HttpStatusCode.TooManyRequests 
+                    || ex.StatusCode == HttpStatusCode.ServiceUnavailable)
+                {
+                    return GetSupportedLanguages(scope, _etag);
+                }
+                else
+                {
+                    return default;
+                }
+
+            }
+            finally
+            {
+                requestSent = 0;
+            }
+
         }
 
 

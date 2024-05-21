@@ -8,15 +8,16 @@ namespace AdeAuth.Services
 {
     class PasswordManager : IPasswordManager
     {
-        public string HashPassword(string password)
+        public string HashPassword(string password, out string salt)
         {
-            var hash = BCrypt.Net.BCrypt.HashPassword(password);
+            salt = BCrypt.Net.BCrypt.GenerateSalt();
+            var hash = BCrypt.Net.BCrypt.HashPassword(password,salt);
             return hash;
         }
 
-        public bool VerifyPassword(string password, string currentPassword)
+        public bool VerifyPassword(string password, string currentPassword, string salt)
         {
-            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
+            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(password,salt);
             return currentPassword.Equals(hashedPassword);
         }
     }
