@@ -1,0 +1,4 @@
+<map id="AdeNote.Controllers.BookController.ExportBooks" name="AdeNote.Controllers.BookController.ExportBooks">
+<area shape="rect" id="node1" title="Exports books to excel sheets" alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html#a4aea73feecfcdd8a59060cb1f64adba5" title="Get all books" alt="" coords="244,5,477,47"/>
+</map>
