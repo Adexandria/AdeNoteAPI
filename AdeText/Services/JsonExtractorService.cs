@@ -58,16 +58,29 @@ namespace AdeText.Services
 
                 var currentNode = node.Value;
 
-                if (currentNode is not JsonObject)
+                string? extractedValue = string.Empty;
+
+                if(currentNode is not JsonObject)
                 {
                     continue;
                 }
 
-                var nodeValue = currentNode.AsObject()
-                        .FirstOrDefault(s => s.Key == "name")
-                        .Value;
+                var jsonObject = currentNode.AsObject();
 
-                var extractedValue = nodeValue.GetValue<string>();
+                var scripts = jsonObject["scripts"];
+
+                if(scripts is JsonArray jsonArray)
+                {
+                    var nodeValue = jsonArray[0]
+                        .AsObject()
+                        .FirstOrDefault(s => s.Key == "code").Value;
+
+                    extractedValue = nodeValue.GetValue<string>();
+                }
+                else
+                {
+                    extractedValue = jsonObject["name"]?.GetValue<string>();
+                }
 
                 if (string.IsNullOrEmpty(extractedValue))
                 {

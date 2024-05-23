@@ -8,9 +8,11 @@ namespace AdeText.Models
 {
     public class TextLanguage : ILanguage
     {
-        public TextLanguage(Dictionary<string, string> _supportedLanguages, string _etag)
+        public TextLanguage(Dictionary<string, string> _translationLanguages,
+            Dictionary<string,string> _transliterationLanguages,string _etag)
         {
-            SupportedLanguages = _supportedLanguages;
+            TranslationLanguages = _translationLanguages;
+            TransliterationLanguages = _transliterationLanguages;
             ETag = _etag;
         }
 
@@ -18,7 +20,8 @@ namespace AdeText.Models
         {
             ETag = _etag;
         }
-        public Dictionary<string, string> SupportedLanguages { get; set; }
+        public Dictionary<string, string> TranslationLanguages { get; set; }
+        public Dictionary<string, string> TransliterationLanguages { get; set; }
         public string ETag { get; set; }
     }
 }

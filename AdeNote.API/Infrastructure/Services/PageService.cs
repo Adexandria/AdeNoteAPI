@@ -316,39 +316,66 @@ namespace AdeNote.Infrastructure.Services
                 return await Task.FromResult(ActionResult<TranslationDto>.Failed("page doesn't exist", (int)HttpStatusCode.NotFound));
 
 
-            var languages = memoryCache.Get("languages") as Dictionary<string,string>;
+            var translationLanguages = memoryCache.Get("translation_languages") as Dictionary<string,string>;
 
-
-            if(languages == null)
+            var transliterationLanguages = memoryCache.Get("transliteration_languages") as Dictionary<string,string>;
+            
+            if(translationLanguages == null)
             {
-               var languagesResponse = textTranslation.GetSupportedLanguages("translation");
+               var languagesResponse = textTranslation.GetSupportedLanguages("translation","transliteration");
                 if (languagesResponse.NotSuccessful)
                 {
                     return await Task.FromResult(ActionResult<TranslationDto>
                     .Failed("Failed to fetch languages", StatusCodes.Status400BadRequest));
                 }
-                memoryCache.Set("languages", languagesResponse.Data.SupportedLanguages);
+                memoryCache.Set("translation_languages", languagesResponse.Data.TranslationLanguages);
+                memoryCache.Set("transliteration_languages", languagesResponse.Data.TransliterationLanguages);
                 memoryCache.Set("etag", languagesResponse.Data.ETag);
 
-                languages = languagesResponse.Data.SupportedLanguages;
-
+                translationLanguages = languagesResponse.Data.TranslationLanguages;
+                transliterationLanguages = languagesResponse.Data.TransliterationLanguages;
             }
 
-            var supportedLanguage = languages.FirstOrDefault(s=>s.Key.ToUpper() == translatedLanguage.ToUpper()).Value;
+            var translationLanguage = translationLanguages.FirstOrDefault(s=>s.Key.ToUpper() == translatedLanguage.ToUpper()).Value;
 
-            if(supportedLanguage == null)
+            if (translationLanguage == null)
             {
                 return await Task.FromResult(ActionResult<TranslationDto>
                     .Failed("The language is not supported", StatusCodes.Status400BadRequest));
             }
 
-            var translatedResponse = await textTranslation.TranslatePage(currentBookPage.Content, supportedLanguage);
 
-            var detectedLanguage = languages.FirstOrDefault(s => s.Value.ToUpper() == translatedResponse.Data[1].ToUpper()).Key ?? translatedResponse.Data[1];
+            var transliterationLanguage = transliterationLanguages.FirstOrDefault(s => s.Value.ToUpper() == translationLanguage.ToUpper()).Key;
 
-            translatedLanguage = languages.FirstOrDefault(s => s.Key.ToUpper() == translatedLanguage.ToUpper()).Key;
+            if (transliterationLanguage != null)
+            {
+                return await Task.FromResult(ActionResult<TranslationDto>
+                    .Failed("The language is not supported", StatusCodes.Status400BadRequest));
+            }
 
-            return ActionResult<TranslationDto>.SuccessfulOperation(new TranslationDto(currentBookPage.Content, translatedResponse.Data[0], detectedLanguage,translatedLanguage));
+            var translatedResponse = await textTranslation.TranslatePage(currentBookPage.Content, translationLanguage);
+
+            if (translatedResponse.NotSuccessful)
+            {
+                return await Task.FromResult(ActionResult<TranslationDto>
+                  .Failed("Failed to translate page", StatusCodes.Status400BadRequest));
+            }
+
+            var transliterationResponse = await textTranslation.TransliteratePage(currentBookPage.Content, translationLanguage, transliterationLanguage);
+
+            if(transliterationResponse.NotSuccessful)
+            {
+                return await Task.FromResult(ActionResult<TranslationDto>
+                 .Failed("Failed to translate page", StatusCodes.Status400BadRequest));
+            }
+
+            var detectedLanguage = translationLanguages.FirstOrDefault(s => s.Value.ToUpper() == translatedResponse.Data[1].ToUpper()).Key ?? translatedResponse.Data[1];
+
+            translatedLanguage = translationLanguages.FirstOrDefault(s => s.Key.ToUpper() == translatedLanguage.ToUpper()).Key;
+
+            return ActionResult<TranslationDto>.SuccessfulOperation(new TranslationDto(currentBookPage.Content, 
+                translatedResponse.Data[0], 
+                detectedLanguage,translatedLanguage, transliterationResponse.Data));
         }
 
         public IMemoryCache memoryCache;

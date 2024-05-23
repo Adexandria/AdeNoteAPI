@@ -49,11 +49,11 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public ActionResult<ILanguage> GetSupportedLanguages(string scope, string _etag)
+        public ActionResult<ILanguage> GetSupportedLanguages(string _etag, string firstScope, string secondScope)
         {
             try
             {
-                var supportedLanguages = _translateClient.GetSupportedLanguages(scope,_etag);
+                var supportedLanguages = _translateClient.GetSupportedLanguages(_etag, firstScope, secondScope  );
 
                 if(supportedLanguages == null)
                 {
@@ -65,6 +65,25 @@ namespace AdeNote.Infrastructure.Services
             catch (Exception ex)
             {
                 return ActionResult<ILanguage>.Failed(ex.Message);
+            }
+        }
+
+        public async Task<ActionResult<string>> TransliteratePage(string pageContent, string translatedLanguage, string transliteratedLanguage)
+        {
+            try
+            {
+                var transliteratedPage = await _translateClient.TransliterateLanguage(pageContent, translatedLanguage, transliteratedLanguage);
+
+                if (transliteratedPage == null)
+                {
+                    return ActionResult<string>.Failed("Failed to get supported languages");
+                }
+
+                return ActionResult<string>.SuccessfulOperation(transliteratedPage.Translations.FirstOrDefault().Text);
+            }
+            catch (Exception ex)
+            {
+                return ActionResult<string>.Failed(ex.Message);
             }
         }
 
