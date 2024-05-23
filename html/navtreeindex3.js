@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html#a722998defab44d7432daf4b825894ad7":[1,0,0,4,0,0,1],
 "classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html#a8a683869d367170a42af1751de52b2b2":[1,0,0,4,0,0,2],
 "classAdeNote_1_1Models_1_1DTOs_1_1BookCreateDTO.html":[1,0,0,4,0,1],
 "classAdeNote_1_1Models_1_1DTOs_1_1BookCreateDTO.html#a10a571a88dae872ef75ce30ab1b9aa6b":[1,0,0,4,0,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8a632c08a9d83d1cd741bc30ac554855":[1,0,0,2,2,6,14],
 "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8e029bac287e94a02f291647721758a6":[1,0,0,2,2,6,22],
 "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a9204433e7435394f8074ea1939e8e273":[1,0,0,2,2,6,5],
-"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a96561e50f238b7dbce50c5563f73646d":[1,0,0,2,2,6,3],
-"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aa9b04aa3f51038e46192d2af326b46d4":[1,0,0,2,2,6,27]
+"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a96561e50f238b7dbce50c5563f73646d":[1,0,0,2,2,6,3]
 };

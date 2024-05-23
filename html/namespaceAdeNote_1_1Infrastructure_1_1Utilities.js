@@ -27,7 +27,8 @@ var namespaceAdeNote_1_1Infrastructure_1_1Utilities =
       [ "LoginNotification", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#aa7c8e05335ad88c8592fb2211f072980a87b5b89994555b4260f7b28d27c87e7e", null ],
       [ "ResetTokenNotification", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#aa7c8e05335ad88c8592fb2211f072980a5b7b8884265ce19d4d4bbac9e180cdb4", null ],
       [ "MfaRemovalTokenNotification", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#aa7c8e05335ad88c8592fb2211f072980aadeb37997209b0964dcd082576394a8b", null ],
-      [ "EmailConfirmationNotification", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#aa7c8e05335ad88c8592fb2211f072980a0d50352249b36028bf80fda901528980", null ]
+      [ "EmailConfirmationNotification", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#aa7c8e05335ad88c8592fb2211f072980a0d50352249b36028bf80fda901528980", null ],
+      [ "PasswordlessNotification", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#aa7c8e05335ad88c8592fb2211f072980a3dbcaddbf945ee2160afe98597e1a345", null ]
     ] ],
     [ "MimeType", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8", [
       [ "none", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8a334c4a4c42fdb79d7ebc3e73b517e6f8", null ],
