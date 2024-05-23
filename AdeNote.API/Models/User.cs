@@ -69,6 +69,6 @@ namespace AdeNote.Models
         public bool LockoutEnabled { get; set; }
         public AuthType AuthenticationType { get; set; }
         public IList<Book> Books { get; set; } = new List<Book>();
-        public string Salt { get; set; }
+        public string? Salt { get; set; }
     }
 }

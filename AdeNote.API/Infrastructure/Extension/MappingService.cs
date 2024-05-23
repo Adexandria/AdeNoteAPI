@@ -37,7 +37,8 @@ namespace AdeNote.Infrastructure.Extension
         public static TypeAdapterConfig PageLabelsConfig()
         {
             return TypeAdapterConfig<Page, PageDTO>
-                .ForType().Map(d => d.Labels, s => s.Labels)
+                .ForType().Map(d => d.Labels,
+                s => s.Labels.Adapt<IList<LabelDTO>>(LabelConfig()))
                 .Config;
         }
 

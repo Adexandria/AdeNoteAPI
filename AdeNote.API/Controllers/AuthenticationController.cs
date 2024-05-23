@@ -176,7 +176,7 @@ namespace AdeNote.Controllers
                 return Ok($"Proceed to enter otp from {resultResponse.Data} authenticator");
             }
 
-            /*  SendNotification(response.Data.Email);*/
+           SendNotification(response.Data.Email);
 
             AddToCookie("AdeNote-RefreshToken", response.RefreshToken, DateTime.UtcNow.AddMonths(2));
 
@@ -853,8 +853,8 @@ namespace AdeNote.Controllers
         {
             var substitutions = new Dictionary<string, string>
             {
-                 { "[Date]", DateTime.Now.ToLongDateString() },
-                {"[Time]",DateTime.Now.ToLongTimeString() }
+                 { "[Date]", DateTime.UtcNow.ToLongDateString() },
+                {"[Time]",DateTime.UtcNow.ToLongTimeString() }
             };
             _notificationService.SendNotification(new Email(email, "New login to AdeNote"),
             EmailTemplate.LoginNotification, ContentType.html, substitutions);
