@@ -1,0 +1,10 @@
+<map id="AdeNote.Infrastructure.Services.PageService.AddLabels" name="AdeNote.Infrastructure.Services.PageService.AddLabels">
+<area shape="rect" id="node1" title="Adds labels to a page" alt="" coords="5,169,239,211"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html#a190208fb7d867443f6a7731231a9f00f" title="Adds label to a particular page" alt="" coords="287,5,556,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="307,71,536,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#ace07f2fb2416ddcbebef9cdb4b02af5c" title="Get a particular book that belongs to a user" alt="" coords="298,136,545,177"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html#a542cf21f31bd5a1434a8c38ad9336bfa" title="Gets an individual page from a particular book" alt="" coords="298,201,545,243"/>
+<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html#a39cfe96b5fa2ba2e3d965e8fb17035ed" title="Gets a label by name" alt="" coords="296,267,547,308"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#aba4773b458c4acbf09fba32e8835f14d" title=" " alt="" coords="307,332,536,373"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#afe65cff3843963cbe0282b07339e3e39" title=" " alt="" coords="604,332,833,373"/>
+</map>
