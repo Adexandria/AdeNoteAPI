@@ -9,7 +9,6 @@ namespace AdeText.Models
     internal enum Scope
     {
         translation,
-        transliteration,
-        dictionary
+        transliteration
     }
 }

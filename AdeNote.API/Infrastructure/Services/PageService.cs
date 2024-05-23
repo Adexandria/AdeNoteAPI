@@ -315,6 +315,7 @@ namespace AdeNote.Infrastructure.Services
             if (currentBookPage == null)
                 return await Task.FromResult(ActionResult<TranslationDto>.Failed("page doesn't exist", (int)HttpStatusCode.NotFound));
 
+
             var languages = memoryCache.Get("languages") as Dictionary<string,string>;
 
 

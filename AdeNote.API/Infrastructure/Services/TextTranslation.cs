@@ -27,6 +27,11 @@ namespace AdeNote.Infrastructure.Services
                     return ActionResult<string[]>.Failed($"Failed to translate to {translatedLanguage}");
                 }
 
+                if(detectedlanguage.Language == translatedLanguage)
+                {
+                    return ActionResult<string[]>.Failed($"Failed to translate to {translatedLanguage}, Text is already in this language");
+                }
+
                 var translatedText = await _translateClient.TranslateLanguage(pageContent, translatedLanguage, detectedlanguage.Language);
 
                 if(!translatedText.Translations.Any())
