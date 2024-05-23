@@ -943,7 +943,7 @@ namespace AdeNote.Infrastructure.Services
                     };
 
                 _notificationService.SendNotification(new Email(user.Email, "Login Passwordless"),
-                    EmailTemplate.EmailConfirmationNotification, ContentType.html, substitutions);
+                    EmailTemplate.PasswordlessNotification, ContentType.html, substitutions);
 
                 return ActionResult<string>.SuccessfulOperation(token);
 

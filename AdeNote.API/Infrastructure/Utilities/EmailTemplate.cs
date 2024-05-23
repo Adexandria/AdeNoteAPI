@@ -20,7 +20,10 @@ namespace AdeNote.Infrastructure.Utilities
         MfaRemovalTokenNotification,
 
         [Description("EmailConfirmation")]
-        EmailConfirmationNotification
+        EmailConfirmationNotification,
+
+        [Description("Passworrdless")]
+        PasswordlessNotification
 
     }
 }
