@@ -184,7 +184,7 @@ $(document).ready(function(){initNavTree('AuthenticationController_8cs_source.ht
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                <span class="keywordflow">return</span> Ok($<span class="stringliteral">&quot;Proceed to enter otp from {resultResponse.Data} authenticator&quot;</span>);</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            }</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="comment">/*  SendNotification(response.Data.Email);*/</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;           <a class="code" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a5bc24a38f2a0d984148fd747b4d5c226">SendNotification</a>(response.Data.Email);</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <a class="code" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#aaf76f4e77c5e74af2928f3296f7828ed">AddToCookie</a>(<span class="stringliteral">&quot;AdeNote-RefreshToken&quot;</span>, response.RefreshToken, DateTime.UtcNow.AddMonths(2));</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
@@ -605,8 +605,8 @@ $(document).ready(function(){initNavTree('AuthenticationController_8cs_source.ht
 <div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;        {</div>
 <div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;            var substitutions = <span class="keyword">new</span> Dictionary&lt;string, string&gt;</div>
 <div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;            {</div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;                 { <span class="stringliteral">&quot;[Date]&quot;</span>, DateTime.Now.ToLongDateString() },</div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;                {<span class="stringliteral">&quot;[Time]&quot;</span>,DateTime.Now.ToLongTimeString() }</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;                 { <span class="stringliteral">&quot;[Date]&quot;</span>, DateTime.UtcNow.ToLongDateString() },</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;                {<span class="stringliteral">&quot;[Time]&quot;</span>,DateTime.UtcNow.ToLongTimeString() }</div>
 <div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;            };</div>
 <div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;            <a class="code" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#aefc3a21a5502daff51340132ff6928d1">_notificationService</a>.SendNotification(<span class="keyword">new</span> <a class="code" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email.html">Email</a>(email, <span class="stringliteral">&quot;New login to AdeNote&quot;</span>),</div>
 <div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;            <a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#aa7c8e05335ad88c8592fb2211f072980">EmailTemplate</a>.LoginNotification, <a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a8b7d2f18ee1f790b13de05879712203c">ContentType</a>.html, substitutions);</div>

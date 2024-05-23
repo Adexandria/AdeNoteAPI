@@ -20,7 +20,7 @@ var classAdeNote_1_1Models_1_1User =
     [ "PhoneNumber", "classAdeNote_1_1Models_1_1User.html#a106f2b89a5d7da3cadb1e590ed677505", null ],
     [ "PhoneNumberConfirmed", "classAdeNote_1_1Models_1_1User.html#ad7b44de7a97e28a4e92a855f0cfbfe5d", null ],
     [ "RefreshToken", "classAdeNote_1_1Models_1_1User.html#a7894f4649c931ee1f2f82c9d5f958ce0", null ],
-    [ "Salt", "classAdeNote_1_1Models_1_1User.html#a392a7ad1203683fdd8e2586bee7618af", null ],
+    [ "Salt", "classAdeNote_1_1Models_1_1User.html#a06f04f85f2c84df53d9f64d411defbde", null ],
     [ "TwoFactorEnabled", "classAdeNote_1_1Models_1_1User.html#a7fdd6a0dbe0e155cb20ce4f07e8d7969", null ],
     [ "TwoFactorType", "classAdeNote_1_1Models_1_1User.html#a4dd8235d7c3a39f471a90d96e284fbe8", null ],
     [ "UserName", "classAdeNote_1_1Models_1_1User.html#aecc1995f304f59be0d6d3fa3af528d14", null ]

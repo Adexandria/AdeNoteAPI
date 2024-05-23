@@ -24,6 +24,12 @@ var dir_32be36d501ba1a8770c3dc10706dea49 =
     [ "20240521140907_add-salt.Designer.cs", "20240521140907__add-salt_8Designer_8cs.html", [
       [ "addsalt", "classAdeNote_1_1Migrations_1_1addsalt.html", "classAdeNote_1_1Migrations_1_1addsalt" ]
     ] ],
+    [ "20240523142928_salt-optional.cs", "20240523142928__salt-optional_8cs.html", [
+      [ "saltoptional", "classAdeNote_1_1Migrations_1_1saltoptional.html", "classAdeNote_1_1Migrations_1_1saltoptional" ]
+    ] ],
+    [ "20240523142928_salt-optional.Designer.cs", "20240523142928__salt-optional_8Designer_8cs.html", [
+      [ "saltoptional", "classAdeNote_1_1Migrations_1_1saltoptional.html", "classAdeNote_1_1Migrations_1_1saltoptional" ]
+    ] ],
     [ "NoteDbContextModelSnapshot.cs", "NoteDbContextModelSnapshot_8cs.html", [
       [ "NoteDbContextModelSnapshot", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot" ]
     ] ]

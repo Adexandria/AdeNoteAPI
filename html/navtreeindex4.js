@@ -1,5 +1,13 @@
 var NAVTREEINDEX4 =
 {
+"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aacc053d60148ae97730156897feda292":[1,0,0,2,2,6,2],
+"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#ac367eebcc028896241ebd0f32ab2ecaf":[1,0,0,2,2,6,4],
+"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#ae3c515f59107f454452f2be174b2e00f":[1,0,0,2,2,6,20],
+"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aea767e3bba531744d9d345053ea70641":[1,0,0,2,2,6,7],
+"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#af732dc7da9b94c239d866efc66e7334d":[1,0,0,2,2,6,24],
+"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html":[1,0,0,2,2,7],
+"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html#a10b096474ee9a0f12d70f5aed0b9dc8c":[1,0,0,2,2,7,0],
+"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html#a678b06decfe8d1303a9849cb8372a05a":[1,0,0,2,2,7,2],
 "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html#ac437423f3aff6fde40384c57b7722b0b":[1,0,0,2,2,7,3],
 "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html#aea856797942656284c30eca72e1c7b4e":[1,0,0,2,2,7,1],
 "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html":[1,0,0,2,2,8],

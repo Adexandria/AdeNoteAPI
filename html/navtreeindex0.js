@@ -16,6 +16,10 @@ var NAVTREEINDEX0 =
 "20240521140907__add-salt_8Designer_8cs_source.html":[2,0,0,3,7],
 "20240521140907__add-salt_8cs.html":[2,0,0,3,6],
 "20240521140907__add-salt_8cs_source.html":[2,0,0,3,6],
+"20240523142928__salt-optional_8Designer_8cs.html":[2,0,0,3,9],
+"20240523142928__salt-optional_8Designer_8cs_source.html":[2,0,0,3,9],
+"20240523142928__salt-optional_8cs.html":[2,0,0,3,8],
+"20240523142928__salt-optional_8cs_source.html":[2,0,0,3,8],
 "ActionResultExtension_8cs.html":[2,0,0,2,0,0],
 "ActionResultExtension_8cs_source.html":[2,0,0,2,0,0],
 "ActionResult_8cs.html":[2,0,0,2,3,1],
@@ -191,8 +195,8 @@ var NAVTREEINDEX0 =
 "MimeType_8cs.html#a5dbb47479f072858ae359006d49caee8abff139fa05ac583f685a523ab3d110a0":[2,0,0,2,3,14,0,1],
 "MimeType_8cs.html#a5dbb47479f072858ae359006d49caee8afc35fdc70d5fc69d269883a822c7a53e":[2,0,0,2,3,14,0,2],
 "MimeType_8cs_source.html":[2,0,0,2,3,14],
-"NoteDbContextModelSnapshot_8cs.html":[2,0,0,3,8],
-"NoteDbContextModelSnapshot_8cs_source.html":[2,0,0,3,8],
+"NoteDbContextModelSnapshot_8cs.html":[2,0,0,3,10],
+"NoteDbContextModelSnapshot_8cs_source.html":[2,0,0,3,10],
 "NoteDbContext_8cs.html":[2,0,0,1,0],
 "NoteDbContext_8cs_source.html":[2,0,0,1,0],
 "NotificationService_8cs.html":[2,0,0,2,2,20],
@@ -245,9 +249,5 @@ var NAVTREEINDEX0 =
 "Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d":[2,0,0,5,51],
 "Program_8cs.html#a7b2bc4c41ab1f801b53d7330af1fdf7e":[2,0,0,5,1],
 "Program_8cs.html#a8370f0b81a120f1fcc0be56199e40c05":[2,0,0,5,2],
-"Program_8cs.html#a8d93252ec77847afcaad9fa1c113a728":[2,0,0,5,3],
-"Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c":[2,0,0,5,11],
-"Program_8cs.html#a9139f4d5b9d552d9e1ec835b32711c24":[2,0,0,5,30],
-"Program_8cs.html#a937999ccf5bd85f696d3e3da745be7f1":[2,0,0,5,10],
-"Program_8cs.html#a9a46da1865d06ba97b98d8399283432b":[2,0,0,5,16]
+"Program_8cs.html#a8d93252ec77847afcaad9fa1c113a728":[2,0,0,5,3]
 };

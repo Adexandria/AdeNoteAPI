@@ -1,5 +1,7 @@
 <map id="AdeNote.Infrastructure.Services.PageService.GetById" name="AdeNote.Infrastructure.Services.PageService.GetById">
-<area shape="rect" id="node1" title="Get a page by id" alt="" coords="5,39,239,80"/>
+<area shape="rect" id="node1" title="Get a page by id" alt="" coords="5,71,239,112"/>
 <area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html#a542cf21f31bd5a1434a8c38ad9336bfa" title="Gets an individual page from a particular book" alt="" coords="287,5,533,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="289,71,531,112"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a19cfe3dca141406dbb673708f860d9ca" title="Maps from page to PageDTO" alt="" coords="288,71,532,112"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="289,136,531,177"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a7ce8136a67a485e2bc49104d093afbc8" title="Maps from label to label dto" alt="" coords="581,71,824,112"/>
 </map>

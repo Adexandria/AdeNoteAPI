@@ -155,6 +155,7 @@ var hierarchy =
     [ "Migration", null, [
       [ "AdeNote.Migrations.addsalt", "classAdeNote_1_1Migrations_1_1addsalt.html", null ],
       [ "AdeNote.Migrations.firstmigration", "classAdeNote_1_1Migrations_1_1firstmigration.html", null ],
+      [ "AdeNote.Migrations.saltoptional", "classAdeNote_1_1Migrations_1_1saltoptional.html", null ],
       [ "AdeNote.Migrations.secondmigration", "classAdeNote_1_1Migrations_1_1secondmigration.html", null ],
       [ "AdeNote.Migrations.setuptexttranslation", "classAdeNote_1_1Migrations_1_1setuptexttranslation.html", null ]
     ] ],
