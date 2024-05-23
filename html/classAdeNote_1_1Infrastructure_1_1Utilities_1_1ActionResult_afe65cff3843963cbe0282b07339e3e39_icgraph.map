@@ -1,0 +1,33 @@
+<map id="AdeNote.Infrastructure.Utilities.ActionResult.ActionResult" name="AdeNote.Infrastructure.Utilities.ActionResult.ActionResult">
+<area shape="rect" id="node1" title=" " alt="" coords="587,856,816,897"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#abfb053b06b48cc6606c4493ac49d93b1" title=" " alt="" coords="309,823,539,864"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#aba4773b458c4acbf09fba32e8835f14d" title=" " alt="" coords="309,888,539,929"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#adf0cd7e7cf1020375687ff71625e3d9c" title="Adds a new page to a book" alt="" coords="17,5,250,47"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#a584ad969e74d5a1b9c68fb9fd0d0e2fc" title="Adds a new book" alt="" coords="17,71,250,112"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a9f61c6f1c39f12304640cb6441a2c8e3" title="Adds new label" alt="" coords="17,136,250,177"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#abf09a31621901923997d15a1fc293d1b" title="Adds labels to a page" alt="" coords="17,201,250,243"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a372c9329dad519fa97967996fce98a29" title=" " alt="" coords="17,267,250,308"/>
+<area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a7859b04addc0239dc19e7f2c26948c65" title="Disables Multi factor authentication for a particular user" alt="" coords="17,332,250,373"/>
+<area shape="rect" id="node10" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html#a6652e4676b3a7484987c2d0fea5b20bd" title=" " alt="" coords="17,397,250,439"/>
+<area shape="rect" id="node11" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a3e87ff8d517e48bcef9329f04fada941" title="Checks if MFA has been enabled for the user using user id." alt="" coords="6,463,261,504"/>
+<area shape="rect" id="node12" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a984443dd77d59f4db3d8b4e78a55a7c3" title="Checks if a phone number has been verified" alt="" coords="5,528,261,569"/>
+<area shape="rect" id="node13" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a4e2fd9456feaeeb8f2d334fbcbad4fcf" title="Checks if refresh token is revoked" alt="" coords="17,593,250,635"/>
+<area shape="rect" id="node14" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a82dc47bbd1b5aa194a62b7a01adb060e" title=" " alt="" coords="17,659,250,700"/>
+<area shape="rect" id="node15" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#a34e8a74cd49c072981876f80509b7019" title="Deletes an existing book" alt="" coords="17,724,250,765"/>
+<area shape="rect" id="node16" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a89eb05e7a610ce4b752bc8ce7ba72257" title="Removes a particular page" alt="" coords="17,789,250,831"/>
+<area shape="rect" id="node17" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a360d316bd27475252c1a073eb8fd54bc" title="Removes an existing label" alt="" coords="17,855,250,896"/>
+<area shape="rect" id="node18" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#ab59d69b440d5472b6a1eda53a8c1c311" title="Removes all labels from a page" alt="" coords="9,920,258,961"/>
+<area shape="rect" id="node19" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#aad077b7f369d3f503d4a4d603867410f" title="Removes a particular label from a page" alt="" coords="17,985,250,1027"/>
+<area shape="rect" id="node20" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#abc473178a62350e4bba60c5dd5d8aec9" title=" " alt="" coords="17,1051,250,1092"/>
+<area shape="rect" id="node21" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a17fd9d9222dccac856699707c0338f78" title="Revokes existing refresh token" alt="" coords="14,1116,253,1157"/>
+<area shape="rect" id="node22" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a099b8ec9cff96487575c63801b7329b6" title="Sends otp to phone number" alt="" coords="17,1181,250,1223"/>
+<area shape="rect" id="node23" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ade8c2ac4d2e33a21d0874f275df7992e" title="Sets phone number verification" alt="" coords="17,1247,250,1288"/>
+<area shape="rect" id="node24" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a9c23471931d83f34211055e94d40264d" title="Sets up MFA using sms authentication" alt="" coords="13,1312,254,1353"/>
+<area shape="rect" id="node25" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#ae3e9a2095bdc23aa657f024473bfb434" title="Updates an existing book" alt="" coords="17,1377,250,1419"/>
+<area shape="rect" id="node26" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a808f63b17b96a3eb2a6ded93ae78de91" title="Updates an existing page" alt="" coords="17,1443,250,1484"/>
+<area shape="rect" id="node27" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a40c4b3ff821053124c01b2f95badae7b" title="Updates an existing label" alt="" coords="17,1508,250,1549"/>
+<area shape="rect" id="node28" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a61abb1c47f09a5e85f4fec0aa211bbb8" title=" " alt="" coords="12,1573,255,1615"/>
+<area shape="rect" id="node29" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a0d2bea8f60ea1e908d615bba177d939e" title="Verifies authenticator otp" alt="" coords="6,1639,261,1680"/>
+<area shape="rect" id="node30" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#adc3b060ec80b625a45eaece17c3539d0" title="Sets up phone number" alt="" coords="17,1704,250,1745"/>
+<area shape="rect" id="node31" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a17b8d04b770daeeb3dddc9c6c654aa56" title=" " alt="" coords="17,1769,250,1811"/>
+</map>
