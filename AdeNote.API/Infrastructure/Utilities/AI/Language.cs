@@ -15,8 +15,7 @@ namespace AdeNote.Infrastructure.Utilities.AI
         public void GetLanguages()
         {
             var backgroundClient = serviceProvider.GetRequiredService<IBackgroundJobClient>();
-            backgroundClient.Enqueue(() => Console.WriteLine("Setting up background service"));
-            BackgroundJob.Enqueue(() => GetSupportedLanaguages());
+            RecurringJob.AddOrUpdate("GetLanguages",() => GetSupportedLanaguages(), "0 12 * * *");
         }
 
        public async Task GetSupportedLanaguages()
