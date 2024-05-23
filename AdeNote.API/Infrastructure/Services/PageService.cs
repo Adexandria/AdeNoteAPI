@@ -1,6 +1,7 @@
 ﻿using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Utilities;
+using AdeNote.Infrastructure.Utilities.AI;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
 using AdeText.Models;
@@ -106,7 +107,7 @@ namespace AdeNote.Infrastructure.Services
             var currentBookPage = await pageRepository.GetBookPage(bookId, pageId);
             if (currentBookPage == null)
                 return await Task.FromResult(ActionResult<PageDTO>.Failed("page doesn't exist", (int)HttpStatusCode.NotFound));
-            var currentBookPageDTO = currentBookPage.Adapt<PageDTO>();
+            var currentBookPageDTO = currentBookPage.Adapt<PageDTO>(MappingService.PageLabelsConfig());
 
             return ActionResult<PageDTO>.SuccessfulOperation(currentBookPageDTO);
         }
@@ -316,8 +317,23 @@ namespace AdeNote.Infrastructure.Services
 
             var languages = memoryCache.Get("languages") as Dictionary<string,string>;
 
-            var supportedLanguage = languages.Where(s => s.Key == translatedLanguage)
-                .Select(s=>s.Value).FirstOrDefault();
+
+            if(languages == null)
+            {
+               var languagesResponse = textTranslation.GetSupportedLanguages("translation");
+                if (languagesResponse.NotSuccessful)
+                {
+                    return await Task.FromResult(ActionResult<TranslationDto>
+                    .Failed("Failed to fetch languages", StatusCodes.Status400BadRequest));
+                }
+                memoryCache.Set("languages", languagesResponse.Data.SupportedLanguages);
+                memoryCache.Set("etag", languagesResponse.Data.ETag);
+
+                languages = languagesResponse.Data.SupportedLanguages;
+
+            }
+
+            var supportedLanguage = languages.FirstOrDefault(s=>s.Key.ToUpper() == translatedLanguage.ToUpper()).Value;
 
             if(supportedLanguage == null)
             {
@@ -327,7 +343,11 @@ namespace AdeNote.Infrastructure.Services
 
             var translatedResponse = await textTranslation.TranslatePage(currentBookPage.Content, supportedLanguage);
 
-            return ActionResult<TranslationDto>.SuccessfulOperation(new TranslationDto(currentBookPage.Content, translatedResponse.Data[0], translatedResponse.Data[1],translatedLanguage));
+            var detectedLanguage = languages.FirstOrDefault(s => s.Value.ToUpper() == translatedResponse.Data[1].ToUpper()).Key ?? translatedResponse.Data[1];
+
+            translatedLanguage = languages.FirstOrDefault(s => s.Key.ToUpper() == translatedLanguage.ToUpper()).Key;
+
+            return ActionResult<TranslationDto>.SuccessfulOperation(new TranslationDto(currentBookPage.Content, translatedResponse.Data[0], detectedLanguage,translatedLanguage));
         }
 
         public IMemoryCache memoryCache;

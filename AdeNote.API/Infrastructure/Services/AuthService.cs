@@ -692,12 +692,20 @@ namespace AdeNote.Infrastructure.Services
                     user.SetPassword(hashedPassword,salt);
                 }
                
+                if(authType != AuthType.local)
+                {
+                    user.ConfirmEmailVerification();
+                }
 
                 var result = await userRepository.Add(user);
 
                 if (!result)
                     return ActionResult<string>.Failed("Failed to remove user token", StatusCodes.Status400BadRequest);
 
+                if(authType != AuthType.local)
+                {
+                    return ActionResult<string>.SuccessfulOperation("Successfully registered");
+                }
 
                 var claims = new Dictionary<string, object>() { { "id", user.Id.ToString("N") },
                 { ClaimTypes.Email,user.Email} };
@@ -912,6 +920,17 @@ namespace AdeNote.Infrastructure.Services
 
                 var user = await userRepository.GetUserByEmail(email);
                 if (user == null)
+                {
+                    return ActionResult<string>.Failed("Invalid email", StatusCodes.Status400BadRequest);
+                }
+
+                if (!user.EmailConfirmed)
+                {
+                    return ActionResult<string>.Failed("Confirm email", StatusCodes.Status400BadRequest);
+                }
+
+
+                if(user.AuthenticationType != AuthType.local)
                 {
                     return ActionResult<string>.Failed("Invalid email", StatusCodes.Status400BadRequest);
                 }

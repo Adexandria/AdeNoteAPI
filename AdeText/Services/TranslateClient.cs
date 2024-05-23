@@ -99,7 +99,7 @@ namespace AdeText.Services
 
                 if(response.StatusCode == HttpStatusCode.NotModified)
                 {
-                    return new Models.Language(_etag);
+                    return new Models.TextLanguage(_etag);
                 }
                 var content = response.Content.ReadAsStreamAsync().Result;
 
@@ -107,7 +107,7 @@ namespace AdeText.Services
 
                 var etag = response.Headers.FirstOrDefault(s => s.Key == "ETag").Value.FirstOrDefault();
 
-                return new Models.Language(deserialiseContent.SupportedLanguage.Languages, etag);
+                return new Models.TextLanguage(deserialiseContent.SupportedLanguage.Languages, etag);
             }
             catch (TranslationException ex)
             {

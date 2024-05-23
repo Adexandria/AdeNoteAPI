@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace AdeText.Models
 {
-    public class Language : ILanguage
+    public class TextLanguage : ILanguage
     {
-        public Language(Dictionary<string, string> _supportedLanguages, string _etag)
+        public TextLanguage(Dictionary<string, string> _supportedLanguages, string _etag)
         {
             SupportedLanguages = _supportedLanguages;
             ETag = _etag;
         }
 
-        public Language(string _etag)
+        public TextLanguage(string _etag)
         {
             ETag = _etag;
         }
