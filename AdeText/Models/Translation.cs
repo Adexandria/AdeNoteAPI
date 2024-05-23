@@ -3,7 +3,7 @@
 
 namespace AdeText.Models
 {
-    internal class Translation
+    public class Translation
     {
         [JsonPropertyName("text")]
         public string Text { get; set; }

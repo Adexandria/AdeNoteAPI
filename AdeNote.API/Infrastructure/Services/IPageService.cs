@@ -76,6 +76,6 @@ namespace AdeNote.Infrastructure.Services
         Task<ActionResult> RemovePageLabel(Guid bookId, Guid userId,Guid pageId, string title);
 
 
-        Task<ActionResult<string>> TranslatePage(Guid bookId, Guid userId, Guid pageId, string translatedLanguage);
+        Task<ActionResult<TranslationDto>> TranslatePage(Guid bookId, Guid userId, Guid pageId, string translatedLanguage);
     }
 }

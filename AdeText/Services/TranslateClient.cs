@@ -3,6 +3,7 @@ using AdeText.Utilities;
 using System.Net;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Nodes;
 
 
 namespace AdeText.Services
@@ -16,6 +17,7 @@ namespace AdeText.Services
             _location = _configuration.Location ?? throw new NullReferenceException(nameof(_configuration.Location));
             retryConfiguration = _configuration.RetryConfiguration  == 0 ? 3 : _configuration.RetryConfiguration;
             requestSent = 0;
+            _jsonExtractorService = new JsonExtractorService();
         }
         public async Task<IDetectLanguage> DetectLanguage(string text)
         {
@@ -99,9 +101,9 @@ namespace AdeText.Services
                 {
                     return new Models.Language(_etag);
                 }
-                var content = response.Content.ReadAsStringAsync().Result;
+                var content = response.Content.ReadAsStreamAsync().Result;
 
-                var deserialiseContent = JsonSerializer.Deserialize<Root>(content, new JsonSerializerOptions() { });
+                var deserialiseContent = _jsonExtractorService.ExtractJson<Root>(content);
 
                 var etag = response.Headers.FirstOrDefault(s => s.Key == "ETag").Value.FirstOrDefault();
 
@@ -153,7 +155,21 @@ namespace AdeText.Services
 
                 var content = await response.Content.ReadAsStringAsync();
 
-                var deserialiseContent = JsonSerializer.Deserialize<TConcrete>(content);
+                var jsonObject = JsonNode.Parse(content);
+
+                TConcrete deserialiseContent;
+
+                if (jsonObject is JsonArray)
+                {
+                    var jsonArray = jsonObject.AsArray();
+
+                    deserialiseContent = JsonSerializer.Deserialize<TConcrete>(jsonArray[0]);
+
+                }
+                else
+                {
+                    deserialiseContent = JsonSerializer.Deserialize<TConcrete>(content);
+                }
 
                 return deserialiseContent;
             }
@@ -183,7 +199,7 @@ namespace AdeText.Services
         private string _key;
         private string _endpoint;
         private string _location;
-
+        private readonly IJsonExtractorService _jsonExtractorService;
        
     }
 }

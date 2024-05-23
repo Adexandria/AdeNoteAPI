@@ -1,14 +1,10 @@
 ﻿using AdeText.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace AdeText.Utilities
 {
     internal class Language
     {
-        public Dictionary<string, SupportedLanguage> Languages {get; set;}
+        public Dictionary<string, string> Languages {get; set;}
     }
 }

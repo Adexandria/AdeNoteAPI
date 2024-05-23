@@ -25,7 +25,6 @@ namespace AdeNote.Migrations
             modelBuilder.Entity("AdeNote.Models.Book", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("Created")
@@ -47,9 +46,7 @@ namespace AdeNote.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Books");
+                    b.ToTable("Books", (string)null);
                 });
 
             modelBuilder.Entity("AdeNote.Models.HangfireUser", b =>
@@ -72,7 +69,7 @@ namespace AdeNote.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("HangfireUsers");
+                    b.ToTable("HangfireUsers", (string)null);
                 });
 
             modelBuilder.Entity("AdeNote.Models.Label", b =>
@@ -93,7 +90,7 @@ namespace AdeNote.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Labels");
+                    b.ToTable("Labels", (string)null);
                 });
 
             modelBuilder.Entity("AdeNote.Models.LabelPage", b =>
@@ -108,7 +105,7 @@ namespace AdeNote.Migrations
 
                     b.HasIndex("PageId");
 
-                    b.ToTable("LabelPage");
+                    b.ToTable("LabelPage", (string)null);
                 });
 
             modelBuilder.Entity("AdeNote.Models.Page", b =>
@@ -138,7 +135,7 @@ namespace AdeNote.Migrations
 
                     b.HasIndex("BookId");
 
-                    b.ToTable("Pages");
+                    b.ToTable("Pages", (string)null);
                 });
 
             modelBuilder.Entity("AdeNote.Models.RefreshToken", b =>
@@ -171,7 +168,7 @@ namespace AdeNote.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("RefreshTokens");
+                    b.ToTable("RefreshTokens", (string)null);
                 });
 
             modelBuilder.Entity("AdeNote.Models.User", b =>
@@ -234,14 +231,14 @@ namespace AdeNote.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("AdeNote.Models.Book", b =>
                 {
                     b.HasOne("AdeNote.Models.User", "User")
                         .WithMany("Books")
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

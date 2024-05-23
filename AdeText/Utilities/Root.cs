@@ -9,7 +9,7 @@ namespace AdeText.Utilities
 {
     internal class Root
     {
-        [JsonPropertyName("translation")]
+        [TranslationProperty("translation",typeof(Language))]
         public Language SupportedLanguage { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace AdeText.Models
 {
     public class Language : ILanguage
     {
-        public Language(Dictionary<string, SupportedLanguage> _supportedLanguages, string _etag)
+        public Language(Dictionary<string, string> _supportedLanguages, string _etag)
         {
             SupportedLanguages = _supportedLanguages;
             ETag = _etag;
@@ -18,7 +18,7 @@ namespace AdeText.Models
         {
             ETag = _etag;
         }
-        public Dictionary<string, SupportedLanguage> SupportedLanguages { get; set; }
+        public Dictionary<string, string> SupportedLanguages { get; set; }
         public string ETag { get; set; }
     }
 }

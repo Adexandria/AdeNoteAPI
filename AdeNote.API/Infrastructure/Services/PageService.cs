@@ -301,49 +301,33 @@ namespace AdeNote.Infrastructure.Services
             return ActionResult.Successful();
         }
 
-        public async Task<ActionResult<string>> TranslatePage(Guid bookId, Guid userId, Guid pageId, string translatedLanguage)
+        public async Task<ActionResult<TranslationDto>> TranslatePage(Guid bookId, Guid userId, Guid pageId, string translatedLanguage)
         {
             if (bookId == Guid.Empty || pageId == Guid.Empty || userId == Guid.Empty)
-                return await Task.FromResult(ActionResult<string>.Failed("Invalid id", StatusCodes.Status400BadRequest));
+                return await Task.FromResult(ActionResult<TranslationDto>.Failed("Invalid id", StatusCodes.Status400BadRequest));
 
             var currentBook = await bookRepository.GetAsync(bookId, userId);
             if (currentBook == null)
-                return await Task.FromResult(ActionResult<string>.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound));
+                return await Task.FromResult(ActionResult<TranslationDto>.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound));
 
             var currentBookPage = await pageRepository.GetBookPage(bookId, pageId);
             if (currentBookPage == null)
-                return await Task.FromResult(ActionResult<string>.Failed("page doesn't exist", (int)HttpStatusCode.NotFound));
+                return await Task.FromResult(ActionResult<TranslationDto>.Failed("page doesn't exist", (int)HttpStatusCode.NotFound));
 
-            var supportedLanguages = memoryCache.Get("languages");
+            var languages = memoryCache.Get("languages") as Dictionary<string,string>;
 
-            var languages = ObjectToDictionary(supportedLanguages);
-
-            var supportedLanguage = languages.Where(s => s.Value.Name == translatedLanguage)
-                .Select(s=>s.Key).FirstOrDefault();
+            var supportedLanguage = languages.Where(s => s.Key == translatedLanguage)
+                .Select(s=>s.Value).FirstOrDefault();
 
             if(supportedLanguage == null)
             {
-                return await Task.FromResult(ActionResult<string>
+                return await Task.FromResult(ActionResult<TranslationDto>
                     .Failed("The language is not supported", StatusCodes.Status400BadRequest));
             }
 
             var translatedResponse = await textTranslation.TranslatePage(currentBookPage.Content, supportedLanguage);
 
-            return translatedResponse;
-        }
-        private IDictionary<string, SupportedLanguage> ObjectToDictionary<T>(T item)
-     where T : class
-        {
-            Type myObjectType = item.GetType();
-            IDictionary<string, SupportedLanguage> dict = new Dictionary<string, SupportedLanguage>();
-            var indexer = new object[0];
-            PropertyInfo[] properties = myObjectType.GetProperties();
-            foreach (var info in properties)
-            {
-                var value = info.GetValue(item, indexer) as SupportedLanguage;
-                dict.Add(info.Name, value);
-            }
-            return dict;
+            return ActionResult<TranslationDto>.SuccessfulOperation(new TranslationDto(currentBookPage.Content, translatedResponse.Data[0], translatedResponse.Data[1],translatedLanguage));
         }
 
         public IMemoryCache memoryCache;
