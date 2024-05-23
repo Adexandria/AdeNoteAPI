@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['database_528',['Database',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database.html',1,'AdeNote::Infrastructure::Utilities']]],
-  ['detailsdto_529',['DetailsDTO',['../classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO.html',1,'AdeNote::Models::DTOs']]]
+  ['dashboardauthenticationfilter_594',['DashboardAuthenticationFilter',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter.html',1,'AdeNote::Infrastructure::Utilities']]],
+  ['database_595',['Database',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database.html',1,'AdeNote::Infrastructure::Utilities']]],
+  ['detailsdto_596',['DetailsDTO',['../classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO.html',1,'AdeNote::Models::DTOs']]]
 ];

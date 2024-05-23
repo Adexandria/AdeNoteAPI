@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['qrcodeurl_1048',['QRCodeUrl',['../classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html#a8a683869d367170a42af1751de52b2b2',1,'AdeNote::Models::DTOs::AuthenticatorDTO']]]
+  ['name_1165',['Name',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc.html#a4dd851b2bf8c0298eb9471fa159926ae',1,'AdeNote::Infrastructure::Utilities::EntityDoc']]],
+  ['notsuccessful_1166',['NotSuccessful',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#ae87e7ea139dd37401be8d3c6c110f3f1',1,'AdeNote::Infrastructure::Utilities::ActionResult']]]
 ];

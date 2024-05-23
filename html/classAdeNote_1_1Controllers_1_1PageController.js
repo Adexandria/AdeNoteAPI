@@ -8,6 +8,7 @@ var classAdeNote_1_1Controllers_1_1PageController =
     [ "GetPage", "classAdeNote_1_1Controllers_1_1PageController.html#ab9fcb5ca8d81b964429ea8e66ab2db96", null ],
     [ "RemoveAllLabels", "classAdeNote_1_1Controllers_1_1PageController.html#ada613737fb6fd1fd68ce7471bb05071f", null ],
     [ "RemoveAllLabels", "classAdeNote_1_1Controllers_1_1PageController.html#ae32594f99c42b8cd87c566443ad63cb9", null ],
+    [ "TranslatePage", "classAdeNote_1_1Controllers_1_1PageController.html#a605829cd43c240b69d34c1b21c214290", null ],
     [ "UpdatePage", "classAdeNote_1_1Controllers_1_1PageController.html#a38b75f41f108e3b429b8ff1721a139e2", null ],
     [ "_pageService", "classAdeNote_1_1Controllers_1_1PageController.html#a7b831ca3bb21b0be51bc35e4223914c9", null ]
 ];

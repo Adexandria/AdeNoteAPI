@@ -7,7 +7,7 @@ var classAdeNote_1_1Models_1_1User =
     [ "DisableTwoFactor", "classAdeNote_1_1Models_1_1User.html#ae1158620c8c888ca1f21a5589f0e8830", null ],
     [ "EnableLockOut", "classAdeNote_1_1Models_1_1User.html#ac9667b061c77ff57965417251cdb5da8", null ],
     [ "EnableTwoFactor", "classAdeNote_1_1Models_1_1User.html#ac5f85ea7c5fa54941edb9b03aeaafa47", null ],
-    [ "SetPassword", "classAdeNote_1_1Models_1_1User.html#a507d16cf8bbf5f7486a8614a90db3f4a", null ],
+    [ "SetPassword", "classAdeNote_1_1Models_1_1User.html#ae4a3729d9e9ec55b75c8a14805ad0e46", null ],
     [ "AuthenticationType", "classAdeNote_1_1Models_1_1User.html#a07e374fce6ad2a78ad7a351f5cdd9b7e", null ],
     [ "AuthenticatorKey", "classAdeNote_1_1Models_1_1User.html#a7cdb59cda6f0c31385dc02fa1d61c55b", null ],
     [ "Books", "classAdeNote_1_1Models_1_1User.html#a0abb3b38ddb288c5087f1579ec157181", null ],
@@ -20,6 +20,7 @@ var classAdeNote_1_1Models_1_1User =
     [ "PhoneNumber", "classAdeNote_1_1Models_1_1User.html#a106f2b89a5d7da3cadb1e590ed677505", null ],
     [ "PhoneNumberConfirmed", "classAdeNote_1_1Models_1_1User.html#ad7b44de7a97e28a4e92a855f0cfbfe5d", null ],
     [ "RefreshToken", "classAdeNote_1_1Models_1_1User.html#a7894f4649c931ee1f2f82c9d5f958ce0", null ],
+    [ "Salt", "classAdeNote_1_1Models_1_1User.html#a392a7ad1203683fdd8e2586bee7618af", null ],
     [ "TwoFactorEnabled", "classAdeNote_1_1Models_1_1User.html#a7fdd6a0dbe0e155cb20ce4f07e8d7969", null ],
     [ "TwoFactorType", "classAdeNote_1_1Models_1_1User.html#a4dd8235d7c3a39f471a90d96e284fbe8", null ],
     [ "UserName", "classAdeNote_1_1Models_1_1User.html#aecc1995f304f59be0d6d3fa3af528d14", null ]

@@ -144,6 +144,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a70171d82a1a1790e832f5aa2fb1cb29a"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a70171d82a1a1790e832f5aa2fb1cb29a">DeletePage</a> (Guid bookId, Guid pageId)</td></tr>
 <tr class="memdesc:a70171d82a1a1790e832f5aa2fb1cb29a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a page froma book  <a href="classAdeNote_1_1Controllers_1_1PageController.html#a70171d82a1a1790e832f5aa2fb1cb29a">More...</a><br /></td></tr>
 <tr class="separator:a70171d82a1a1790e832f5aa2fb1cb29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a605829cd43c240b69d34c1b21c214290"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a605829cd43c240b69d34c1b21c214290">TranslatePage</a> (Guid bookId, Guid pageId, string to)</td></tr>
+<tr class="memdesc:a605829cd43c240b69d34c1b21c214290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translates page to another language  <a href="classAdeNote_1_1Controllers_1_1PageController.html#a605829cd43c240b69d34c1b21c214290">More...</a><br /></td></tr>
+<tr class="separator:a605829cd43c240b69d34c1b21c214290"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAdeNote_1_1Controllers_1_1BaseController')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html">AdeNote.Controllers.BaseController</a></td></tr>
 <tr class="memitem:a5f361e89da9d1716605fb2c9a0dab893 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html#a5f361e89da9d1716605fb2c9a0dab893">BaseController</a> ()</td></tr>
 <tr class="memdesc:a5f361e89da9d1716605fb2c9a0dab893 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="mdescLeft">&#160;</td><td class="mdescRight">A parameterless constructor  <a href="classAdeNote_1_1Controllers_1_1BaseController.html#a5f361e89da9d1716605fb2c9a0dab893">More...</a><br /></td></tr>
@@ -572,6 +575,63 @@ Here is the call graph for this function:</div>
 <map name="aclassAdeNote_1_1Controllers_1_1PageController_ae32594f99c42b8cd87c566443ad63cb9_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_ae32594f99c42b8cd87c566443ad63cb9_cgraph">
 <area shape="rect" title="Removes a single label from a page" alt="" coords="5,5,208,47"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#a337fdb877913e6ee0fa797fb991dd703" title="Removes a particular label from a page" alt="" coords="256,5,489,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a605829cd43c240b69d34c1b21c214290"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a605829cd43c240b69d34c1b21c214290">&#9670;&nbsp;</a></span>TranslatePage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.PageController.TranslatePage </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>bookId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>pageId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Translates page to another language </p>
+<p>Sample request: </p><pre class="fragment">           POST /20b1204e-fad5-4a90-a78e-bc3b988afd60/pages/20b1204e-fad5-4a90-a78e-bc3b988afd60/translate?to=de
+</pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bookId</td><td>A book id</td></tr>
+    <tr><td class="paramname">pageId</td><td>A page id</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt;param name="to"?&gt;Tranlated language</p>
+<p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
+
+<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00302">302</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_a605829cd43c240b69d34c1b21c214290_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_a605829cd43c240b69d34c1b21c214290_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_a605829cd43c240b69d34c1b21c214290_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_a605829cd43c240b69d34c1b21c214290_cgraph">
+<area shape="rect" title="Translates page to another language" alt="" coords="5,5,193,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#a68b2d5fa34625b2d973059d77ce033ba" title=" " alt="" coords="241,5,475,47"/>
 </map>
 </div>
 

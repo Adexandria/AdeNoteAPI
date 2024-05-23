@@ -1,7 +1,9 @@
 var namespaceAdeNote_1_1Infrastructure_1_1Repository =
 [
     [ "BookRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository" ],
+    [ "HangfireUserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1HangfireUserRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1HangfireUserRepository" ],
     [ "IBookRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository" ],
+    [ "IHangfireUserRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IHangfireUserRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IHangfireUserRepository" ],
     [ "ILabelPageRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository" ],
     [ "ILabelRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository" ],
     [ "IPageRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository" ],

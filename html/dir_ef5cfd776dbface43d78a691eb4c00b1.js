@@ -1,5 +1,6 @@
 var dir_ef5cfd776dbface43d78a691eb4c00b1 =
 [
+    [ "AI", "dir_8cc2629b561c8e5be742c96c0ee7626b.html", "dir_8cc2629b561c8e5be742c96c0ee7626b" ],
     [ "ActionResult.cs", "ActionResult_8cs.html", [
       [ "ActionResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult" ],
       [ "ActionTokenResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult" ]
@@ -8,6 +9,9 @@ var dir_ef5cfd776dbface43d78a691eb4c00b1 =
       [ "BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration" ]
     ] ],
     [ "ContentType.cs", "ContentType_8cs.html", "ContentType_8cs" ],
+    [ "DashboardAuthenticationFilter.cs", "DashboardAuthenticationFilter_8cs.html", [
+      [ "DashboardAuthenticationFilter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter" ]
+    ] ],
     [ "Database.cs", "Database_8cs.html", [
       [ "Database", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database" ]
     ] ],
@@ -23,6 +27,9 @@ var dir_ef5cfd776dbface43d78a691eb4c00b1 =
     ] ],
     [ "ExportEntity.cs", "ExportEntity_8cs.html", [
       [ "ExportEntity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExportEntity.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExportEntity" ]
+    ] ],
+    [ "HangFireUserConfiguration.cs", "HangFireUserConfiguration_8cs.html", [
+      [ "HangFireUserConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HangFireUserConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HangFireUserConfiguration" ]
     ] ],
     [ "ImportSheet.cs", "ImportSheet_8cs.html", [
       [ "ImportSheet", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet" ]

@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['container_1006',['Container',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html#a81f40492b98387032c6f6f19f4b74407',1,'AdeNote::Infrastructure::Utilities::BlobConfiguration']]],
-  ['content_1007',['Content',['../classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO.html#a0d6cbf5e965da95bb2c046223e74d661',1,'AdeNote.Models.DTOs.PageCreateDTO.Content()'],['../classAdeNote_1_1Models_1_1DTOs_1_1PageDTO.html#a25b463e12e0351788faf91f9f8ef0d9b',1,'AdeNote.Models.DTOs.PageDTO.Content()'],['../classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO.html#a351c1ccd713c93a3152563c311272f17',1,'AdeNote.Models.DTOs.PageUpdateDTO.Content()'],['../classAdeNote_1_1Models_1_1Page.html#a3d0f36303cdeeaadbe951161ecd4e866',1,'AdeNote.Models.Page.Content()']]],
-  ['contenttype_1008',['ContentType',['../classAdeNote_1_1Models_1_1DTOs_1_1ImportBookDto.html#af6961bcf223cd095d069c74ded2eba42',1,'AdeNote::Models::DTOs::ImportBookDto']]],
-  ['created_1009',['Created',['../classAdeNote_1_1Models_1_1BaseClass.html#aa4c858bada3808bdddbbea45dc077ca9',1,'AdeNote::Models::BaseClass']]],
-  ['currentemail_1010',['CurrentEmail',['../classAdeNote_1_1Controllers_1_1BaseController.html#a10662b34dd1d5b08022f3a572f548825',1,'AdeNote::Controllers::BaseController']]],
-  ['currentpassword_1011',['CurrentPassword',['../classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO.html#a0ef822bc55f634c40732de202400f3c4',1,'AdeNote::Models::DTOs::ChangePasswordDTO']]],
-  ['currentuser_1012',['CurrentUser',['../classAdeNote_1_1Controllers_1_1BaseController.html#ab92db4bb308835ee42511fc9360df49e',1,'AdeNote::Controllers::BaseController']]]
+  ['book_1122',['Book',['../classAdeNote_1_1Models_1_1Page.html#aa9156793efb701002ec454d909ef67ec',1,'AdeNote::Models::Page']]],
+  ['bookid_1123',['BookId',['../classAdeNote_1_1Models_1_1Page.html#a12bf967e9ddbb43d80f638c633c5d61a',1,'AdeNote::Models::Page']]],
+  ['bookpages_1124',['BookPages',['../classAdeNote_1_1Models_1_1DTOs_1_1BookDTO.html#adbf342f65ce05f81b9d813eef6a0672a',1,'AdeNote::Models::DTOs::BookDTO']]],
+  ['bookrepository_1125',['bookRepository',['../classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#a9bc6b3725c27db881cc9183f6d200f71',1,'AdeNote::Infrastructure::Services::BookService']]],
+  ['books_1126',['Books',['../classAdeNote_1_1Db_1_1NoteDbContext.html#a038bf9b9487eeba40e8b16b6768bd31b',1,'AdeNote.Db.NoteDbContext.Books()'],['../classAdeNote_1_1Models_1_1User.html#a0abb3b38ddb288c5087f1579ec157181',1,'AdeNote.Models.User.Books()']]]
 ];

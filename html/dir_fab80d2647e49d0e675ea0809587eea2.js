@@ -8,6 +8,12 @@ var dir_fab80d2647e49d0e675ea0809587eea2 =
     [ "Book.cs", "Book_8cs.html", [
       [ "Book", "classAdeNote_1_1Models_1_1Book.html", "classAdeNote_1_1Models_1_1Book" ]
     ] ],
+    [ "HangfireUser.cs", "HangfireUser_8cs.html", [
+      [ "HangfireUser", "classAdeNote_1_1Models_1_1HangfireUser.html", "classAdeNote_1_1Models_1_1HangfireUser" ]
+    ] ],
+    [ "IBaseEnity.cs", "IBaseEnity_8cs.html", [
+      [ "BaseEntity", "classAdeNote_1_1Models_1_1BaseEntity.html", "classAdeNote_1_1Models_1_1BaseEntity" ]
+    ] ],
     [ "Label.cs", "Label_8cs.html", [
       [ "Label", "classAdeNote_1_1Models_1_1Label.html", "classAdeNote_1_1Models_1_1Label" ]
     ] ],

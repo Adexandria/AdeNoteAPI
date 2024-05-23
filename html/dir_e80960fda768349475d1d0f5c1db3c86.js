@@ -3,8 +3,14 @@ var dir_e80960fda768349475d1d0f5c1db3c86 =
     [ "BookRepository.cs", "BookRepository_8cs.html", [
       [ "BookRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository" ]
     ] ],
+    [ "HangfireUserRepository.cs", "HangfireUserRepository_8cs.html", [
+      [ "HangfireUserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1HangfireUserRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1HangfireUserRepository" ]
+    ] ],
     [ "IBookRepository.cs", "IBookRepository_8cs.html", [
       [ "IBookRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository" ]
+    ] ],
+    [ "IHangfireUserRepository.cs", "IHangfireUserRepository_8cs.html", [
+      [ "IHangfireUserRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IHangfireUserRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IHangfireUserRepository" ]
     ] ],
     [ "ILabelPageRepository.cs", "ILabelPageRepository_8cs.html", [
       [ "ILabelPageRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository" ]

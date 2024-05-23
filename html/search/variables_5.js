@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['key_958',['key',['../classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a25ba8456de534bd677c7c16880b5ff0f',1,'AdeNote::Infrastructure::Services::AuthService']]]
+  ['hangfireuserconfiguration_1074',['hangfireUserConfiguration',['../Program_8cs.html#ab3165920b37228f7b5918f55b3721a2e',1,'Program.cs']]]
 ];
