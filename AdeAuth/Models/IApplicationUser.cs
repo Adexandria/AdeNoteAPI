@@ -13,6 +13,8 @@
         string Email { get; set; }
 
         bool EmailConfirmed { get; set; }
+
+        string Salt {  get; set; }
          
         string PasswordHash { get; set; }
 

@@ -269,8 +269,41 @@ namespace AdeNote.Controllers
         [HttpDelete("{pageId}")]
         public async Task<IActionResult> DeletePage(Guid bookId, Guid pageId)
         {
-            var response = await _pageService.Remove(bookId,CurrentUser,pageId);
+            Infrastructure.Utilities.ActionResult response = await _pageService.Remove(bookId,CurrentUser,pageId);
             return response.Response();
         }
+
+
+
+        /// <summary>
+        /// Translates page to another language
+        /// </summary>
+        /// <remarks>
+        ///  Sample request:
+        ///         
+        ///                 POST /20b1204e-fad5-4a90-a78e-bc3b988afd60/pages/20b1204e-fad5-4a90-a78e-bc3b988afd60/translate?to=de
+        /// </remarks>
+        /// <param name="bookId">A book id</param>
+        /// <param name="pageId">A page id</param>
+        /// <param name="to"?>Tranlated language</param>
+        ///  <response code ="200"> Returns if Successful</response>
+        ///  <response code ="400"> Returns if experiencing client issues</response>
+        ///  <response code ="500"> Returns if experiencing server issues</response>
+        ///  <response code ="404"> Returns if not found</response>
+        /// <response code ="401"> Returns if unauthorised</response>
+        [Produces("application/json")]
+        [Consumes("application/json")]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpPost("{pageId}/translate")]
+        public async Task<IActionResult> TranslatePage(Guid bookId, Guid pageId, string to)
+        {
+            var response = await _pageService.TranslatePage(bookId, CurrentUser, pageId,to);
+            return response.Response();
+        }
+
     }
 }

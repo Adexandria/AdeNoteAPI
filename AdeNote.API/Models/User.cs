@@ -15,8 +15,6 @@ namespace AdeNote.Models
             LastName = lastName;
             Email = email;
             AuthenticationType = authType;
-            Created = DateTime.UtcNow;
-            Modified = DateTime.UtcNow;
         }
 
 
@@ -34,9 +32,10 @@ namespace AdeNote.Models
             AuthenticatorKey = null;
         }
 
-        public void SetPassword(string hashPassword)
+        public void SetPassword(string hashPassword, string salt)
         {
             PasswordHash = hashPassword;
+            Salt = salt;
         }
 
         public void ConfirmEmailVerification()
@@ -70,5 +69,6 @@ namespace AdeNote.Models
         public bool LockoutEnabled { get; set; }
         public AuthType AuthenticationType { get; set; }
         public IList<Book> Books { get; set; } = new List<Book>();
+        public string Salt { get; set; }
     }
 }

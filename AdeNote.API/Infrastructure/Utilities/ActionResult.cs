@@ -1,4 +1,6 @@
-﻿namespace AdeNote.Infrastructure.Utilities
+﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+
+namespace AdeNote.Infrastructure.Utilities
 {
     public class ActionResult<T> : ActionResult 
     {
@@ -16,6 +18,7 @@
 
             };
         }
+
         public static ActionResult<T> Failed(string error)
         {
             return new ActionResult<T>()

@@ -4,6 +4,7 @@ using AdeNote.Db;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AdeNote.Migrations
 {
     [DbContext(typeof(NoteDbContext))]
-    partial class NoteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240521140907_add-salt")]
+    partial class addsalt
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,7 +49,7 @@ namespace AdeNote.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Books", (string)null);
+                    b.ToTable("Books");
                 });
 
             modelBuilder.Entity("AdeNote.Models.HangfireUser", b =>
@@ -69,7 +72,7 @@ namespace AdeNote.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("HangfireUsers", (string)null);
+                    b.ToTable("HangfireUsers");
                 });
 
             modelBuilder.Entity("AdeNote.Models.Label", b =>
@@ -90,7 +93,7 @@ namespace AdeNote.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Labels", (string)null);
+                    b.ToTable("Labels");
                 });
 
             modelBuilder.Entity("AdeNote.Models.LabelPage", b =>
@@ -105,7 +108,7 @@ namespace AdeNote.Migrations
 
                     b.HasIndex("PageId");
 
-                    b.ToTable("LabelPage", (string)null);
+                    b.ToTable("LabelPage");
                 });
 
             modelBuilder.Entity("AdeNote.Models.Page", b =>
@@ -135,7 +138,7 @@ namespace AdeNote.Migrations
 
                     b.HasIndex("BookId");
 
-                    b.ToTable("Pages", (string)null);
+                    b.ToTable("Pages");
                 });
 
             modelBuilder.Entity("AdeNote.Models.RefreshToken", b =>
@@ -168,7 +171,7 @@ namespace AdeNote.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("RefreshTokens", (string)null);
+                    b.ToTable("RefreshTokens");
                 });
 
             modelBuilder.Entity("AdeNote.Models.User", b =>
@@ -231,7 +234,7 @@ namespace AdeNote.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("AdeNote.Models.Book", b =>

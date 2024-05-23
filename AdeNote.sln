@@ -18,6 +18,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocBuilder", "DocBuilder\Do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdeAuth", "AdeAuth\AdeAuth.csproj", "{38D542D8-3B0E-4982-AB14-7F198350D4E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdeText", "AdeText\AdeText.csproj", "{17E117D6-16FE-4293-9BFA-59A3B99F82F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{38D542D8-3B0E-4982-AB14-7F198350D4E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38D542D8-3B0E-4982-AB14-7F198350D4E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38D542D8-3B0E-4982-AB14-7F198350D4E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17E117D6-16FE-4293-9BFA-59A3B99F82F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17E117D6-16FE-4293-9BFA-59A3B99F82F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17E117D6-16FE-4293-9BFA-59A3B99F82F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17E117D6-16FE-4293-9BFA-59A3B99F82F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

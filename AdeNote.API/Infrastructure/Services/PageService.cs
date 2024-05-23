@@ -3,8 +3,11 @@ using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
+using AdeText.Models;
 using Mapster;
+using Microsoft.Extensions.Caching.Memory;
 using System.Net;
+using System.Reflection;
 
 namespace AdeNote.Infrastructure.Services
 {
@@ -27,13 +30,16 @@ namespace AdeNote.Infrastructure.Services
         /// <param name="_bookRepository">>Handles persisting and querying books</param>
         /// <param name="_labelRepository">>Handles persisting and querying labels</param>
         /// <param name="_labelPageRepository">>Handles persisting and querying page labels</param>
-        public PageService(IPageRepository _pageRepository, IBookRepository _bookRepository,ILabelRepository _labelRepository, ILabelPageRepository _labelPageRepository)
+        public PageService(IPageRepository _pageRepository, 
+            IBookRepository _bookRepository,ILabelRepository _labelRepository, ILabelPageRepository _labelPageRepository,
+            ITextTranslation _textTranslation, IServiceProvider serviceProvider)
         {
             pageRepository = _pageRepository;
             bookRepository = _bookRepository;
             labelRepository = _labelRepository;
             labelPageRepository = _labelPageRepository;
-            
+            textTranslation = _textTranslation;
+            memoryCache = serviceProvider.GetRequiredService<IMemoryCache>();
         }
 
         /// <summary>
@@ -295,6 +301,37 @@ namespace AdeNote.Infrastructure.Services
             return ActionResult.Successful();
         }
 
+        public async Task<ActionResult<TranslationDto>> TranslatePage(Guid bookId, Guid userId, Guid pageId, string translatedLanguage)
+        {
+            if (bookId == Guid.Empty || pageId == Guid.Empty || userId == Guid.Empty)
+                return await Task.FromResult(ActionResult<TranslationDto>.Failed("Invalid id", StatusCodes.Status400BadRequest));
+
+            var currentBook = await bookRepository.GetAsync(bookId, userId);
+            if (currentBook == null)
+                return await Task.FromResult(ActionResult<TranslationDto>.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound));
+
+            var currentBookPage = await pageRepository.GetBookPage(bookId, pageId);
+            if (currentBookPage == null)
+                return await Task.FromResult(ActionResult<TranslationDto>.Failed("page doesn't exist", (int)HttpStatusCode.NotFound));
+
+            var languages = memoryCache.Get("languages") as Dictionary<string,string>;
+
+            var supportedLanguage = languages.Where(s => s.Key == translatedLanguage)
+                .Select(s=>s.Value).FirstOrDefault();
+
+            if(supportedLanguage == null)
+            {
+                return await Task.FromResult(ActionResult<TranslationDto>
+                    .Failed("The language is not supported", StatusCodes.Status400BadRequest));
+            }
+
+            var translatedResponse = await textTranslation.TranslatePage(currentBookPage.Content, supportedLanguage);
+
+            return ActionResult<TranslationDto>.SuccessfulOperation(new TranslationDto(currentBookPage.Content, translatedResponse.Data[0], translatedResponse.Data[1],translatedLanguage));
+        }
+
+        public IMemoryCache memoryCache;
+        public ITextTranslation textTranslation;
         public IPageRepository pageRepository;
         public IBookRepository bookRepository;
         public ILabelRepository labelRepository;
