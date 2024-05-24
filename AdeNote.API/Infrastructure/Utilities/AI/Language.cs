@@ -36,18 +36,19 @@ namespace AdeNote.Infrastructure.Utilities.AI
 
                 if (string.IsNullOrEmpty(etag))
                 {
-                    response = textTranslation.GetSupportedLanguages("translation");
+                    response = textTranslation.GetSupportedLanguages("translation", "transliteration");
                 }
                 else
                 {
-                    response = textTranslation.GetSupportedLanguages("translation", etag);
+                    response = textTranslation.GetSupportedLanguages("translation", "transliteration", etag);
                 }
 
                 if (response.IsSuccessful)
                 {
                     logger.LogInformation("All languages updated successfully");
                     memoryCache.Set("etag", response.Data.ETag);
-                    memoryCache.Set("languages", response.Data.SupportedLanguages);
+                    memoryCache.Set("translation_languages", response.Data.TranslationLanguages);
+                    memoryCache.Set("transliteration_languages", response.Data.TransliterationLanguages);
                     return;
                 }
 

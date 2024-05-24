@@ -27,6 +27,11 @@ namespace AdeNote.Infrastructure.Services
                     return ActionResult<string[]>.Failed($"Failed to translate to {translatedLanguage}");
                 }
 
+                if(detectedlanguage.Language == translatedLanguage)
+                {
+                    return ActionResult<string[]>.Failed($"Failed to translate to {translatedLanguage}, Text is already in this language");
+                }
+
                 var translatedText = await _translateClient.TranslateLanguage(pageContent, translatedLanguage, detectedlanguage.Language);
 
                 if(!translatedText.Translations.Any())
@@ -44,11 +49,11 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public ActionResult<ILanguage> GetSupportedLanguages(string scope, string _etag)
+        public ActionResult<ILanguage> GetSupportedLanguages(string firstScope, string secondScope, string _etag)
         {
             try
             {
-                var supportedLanguages = _translateClient.GetSupportedLanguages(scope,_etag);
+                var supportedLanguages = _translateClient.GetSupportedLanguages(new[] { firstScope, secondScope }, _etag);
 
                 if(supportedLanguages == null)
                 {
@@ -60,6 +65,25 @@ namespace AdeNote.Infrastructure.Services
             catch (Exception ex)
             {
                 return ActionResult<ILanguage>.Failed(ex.Message);
+            }
+        }
+
+        public async Task<ActionResult<string>> TransliteratePage(string pageContent, string translatedLanguage, string transliteratedLanguage)
+        {
+            try
+            {
+                var transliteratedPage = await _translateClient.TransliterateLanguage(pageContent, translatedLanguage, transliteratedLanguage);
+
+                if (transliteratedPage == null)
+                {
+                    return ActionResult<string>.Failed("Failed to get supported languages");
+                }
+
+                return ActionResult<string>.SuccessfulOperation(transliteratedPage.Text);
+            }
+            catch (Exception ex)
+            {
+                return ActionResult<string>.Failed(ex.Message);
             }
         }
 

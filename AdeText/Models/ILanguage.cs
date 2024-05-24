@@ -8,7 +8,10 @@ namespace AdeText.Models
 {
     public interface ILanguage
     {
-        public Dictionary<string, string> SupportedLanguages { get; set; }
+        public Dictionary<string, string> TranslationLanguages { get; set; }
+
+        public Dictionary<string, string> TransliterationLanguages { get; set; }
+
         public string ETag { get; set; }
     }
 }

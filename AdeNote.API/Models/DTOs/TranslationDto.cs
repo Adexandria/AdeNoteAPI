@@ -2,17 +2,33 @@
 {
     public class TranslationDto
     {
-        public TranslationDto(string originalText, 
-            string translatedText, string originalLanguage,string translationLanaguage)
+        public TranslationDto(string originalText,
+            string translatedText, string originalLanguage,
+            string translationLanaguage, string transliteratedPage)
         {
-            OriginalText = originalText;
-            TranslatedText = translatedText;
+            OriginalPage = originalText;
+            TranslatedPage = translatedText;
             OriginalLanguage = originalLanguage;
-            TranslationLanguage = translationLanaguage; 
+            TransliteratedPage = transliteratedPage;
+            TranslationLanguage = translationLanaguage;
+
         }
-        public string OriginalText { get; }
+
+
+        public TranslationDto(string originalText,
+            string translatedText, string originalLanguage,
+            string translationLanaguage)
+        {
+            OriginalPage = originalText;
+            TranslatedPage = translatedText;
+            OriginalLanguage = originalLanguage;
+            TranslationLanguage = translationLanaguage;
+
+        }
+        public string OriginalPage { get; }
         public string OriginalLanguage { get; }
-        public string TranslatedText { get; }
+        public string TranslatedPage { get; }
+        public string TransliteratedPage { get; }
         public string TranslationLanguage { get; }
     }
 }

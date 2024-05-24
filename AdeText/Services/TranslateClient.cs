@@ -69,20 +69,39 @@ namespace AdeText.Services
         }
 
 
+        public async Task<Translation> TransliterateLanguage(string text, string toLanguage, string fromScript)
+        {
+            object[] body = new object[] { new { Text = text } };
 
-        public ILanguage GetSupportedLanguages(string scope, string _etag)
+            var requestBody = JsonSerializer.Serialize(body);
+
+            string endpoint = $"transliterate?api-version=3.0" +
+                $"&language={toLanguage}&fromScript={fromScript}&toScript=Latn";
+
+            return await SendRequest<Translation>(requestBody, endpoint);
+        }
+
+
+        public ILanguage GetSupportedLanguages(string[] scopes, string _etag = null)
         {
             try
             {
-                var isScope = Enum.TryParse(scope, out Scope result);
-                if (!isScope)
+                for(int i = 0; i < scopes.Length; i++)
                 {
-                    throw new NullReferenceException($"{scope} doesn't exist");
+                    if(i == 2)
+                    {
+                        break;
+                    }
+                    var isScope = Enum.TryParse(scopes[i], out Scope result);
+                    if (!isScope)
+                    {
+                        throw new Exception("Invalid scope");
+                    }
                 }
                 using var client = new HttpClient();
                 using var request = new HttpRequestMessage();
                 request.Method = HttpMethod.Get;
-                request.RequestUri = new Uri($"https://api.cognitive.microsofttranslator.com/languages?api-version=3.0&scope={scope}");
+                request.RequestUri = new Uri(_endpoint + $"languages?api-version=3.0&scope={scopes[0]},{scopes[1]}");
 
                 if(!string.IsNullOrEmpty(_etag))
                 {
@@ -99,7 +118,7 @@ namespace AdeText.Services
 
                 if(response.StatusCode == HttpStatusCode.NotModified)
                 {
-                    return new Models.TextLanguage(_etag);
+                    return new TextLanguage(_etag);
                 }
                 var content = response.Content.ReadAsStreamAsync().Result;
 
@@ -107,7 +126,8 @@ namespace AdeText.Services
 
                 var etag = response.Headers.FirstOrDefault(s => s.Key == "ETag").Value.FirstOrDefault();
 
-                return new Models.TextLanguage(deserialiseContent.SupportedLanguage.Languages, etag);
+                return new TextLanguage(deserialiseContent.TranslationLanguage.Languages, 
+                    deserialiseContent.TransliterationLanguage.Languages, etag);
             }
             catch (TranslationException ex)
             {
@@ -116,7 +136,7 @@ namespace AdeText.Services
                 if (requestSent < retryConfiguration && ex.StatusCode == HttpStatusCode.TooManyRequests 
                     || ex.StatusCode == HttpStatusCode.ServiceUnavailable)
                 {
-                    return GetSupportedLanguages(scope, _etag);
+                    return GetSupportedLanguages(scopes,_etag);
                 }
                 else
                 {
@@ -192,7 +212,7 @@ namespace AdeText.Services
             }
         }
 
-     
+       
 
         private int requestSent;
         private int retryConfiguration;

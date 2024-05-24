@@ -10,6 +10,9 @@ namespace AdeText.Utilities
     internal class Root
     {
         [TranslationProperty("translation",typeof(Language))]
-        public Language SupportedLanguage { get; set; }
+        public Language TranslationLanguage { get; set; }
+
+        [TranslationProperty("transliteration", typeof(Language))]
+        public Language TransliterationLanguage { get; set; }
     }
 }
