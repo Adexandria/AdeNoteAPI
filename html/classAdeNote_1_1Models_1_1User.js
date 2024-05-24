@@ -1,0 +1,27 @@
+var classAdeNote_1_1Models_1_1User =
+[
+    [ "User", "classAdeNote_1_1Models_1_1User.html#a8da387320f79a0c282f37916b31153e0", null ],
+    [ "User", "classAdeNote_1_1Models_1_1User.html#ad6a8489c09deaa6aa8efea2b55c04a39", null ],
+    [ "ConfirmEmailVerification", "classAdeNote_1_1Models_1_1User.html#a9f4df5b45e25f4b1df03ecd7cbf4a569", null ],
+    [ "ConfirmPhoneNumberVerification", "classAdeNote_1_1Models_1_1User.html#a7eccfd1ba9278a879df37c88bfb6c851", null ],
+    [ "DisableTwoFactor", "classAdeNote_1_1Models_1_1User.html#ae1158620c8c888ca1f21a5589f0e8830", null ],
+    [ "EnableLockOut", "classAdeNote_1_1Models_1_1User.html#ac9667b061c77ff57965417251cdb5da8", null ],
+    [ "EnableTwoFactor", "classAdeNote_1_1Models_1_1User.html#ac5f85ea7c5fa54941edb9b03aeaafa47", null ],
+    [ "SetPassword", "classAdeNote_1_1Models_1_1User.html#ae4a3729d9e9ec55b75c8a14805ad0e46", null ],
+    [ "AuthenticationType", "classAdeNote_1_1Models_1_1User.html#a07e374fce6ad2a78ad7a351f5cdd9b7e", null ],
+    [ "AuthenticatorKey", "classAdeNote_1_1Models_1_1User.html#a7cdb59cda6f0c31385dc02fa1d61c55b", null ],
+    [ "Books", "classAdeNote_1_1Models_1_1User.html#a0abb3b38ddb288c5087f1579ec157181", null ],
+    [ "Email", "classAdeNote_1_1Models_1_1User.html#a9c8bf36f9b3e7593668957185257f24a", null ],
+    [ "EmailConfirmed", "classAdeNote_1_1Models_1_1User.html#a2770dcba3cb9190faeb72c6380868378", null ],
+    [ "FirstName", "classAdeNote_1_1Models_1_1User.html#af73d9dc50e9d30a52a03073d5fc5e733", null ],
+    [ "LastName", "classAdeNote_1_1Models_1_1User.html#a99463110aa8b8006702040cf1032c106", null ],
+    [ "LockoutEnabled", "classAdeNote_1_1Models_1_1User.html#a9c7ddf187cd26deed291a6f8f88b6881", null ],
+    [ "PasswordHash", "classAdeNote_1_1Models_1_1User.html#ad6608b9635d2bc397bbbfa6eda475608", null ],
+    [ "PhoneNumber", "classAdeNote_1_1Models_1_1User.html#a106f2b89a5d7da3cadb1e590ed677505", null ],
+    [ "PhoneNumberConfirmed", "classAdeNote_1_1Models_1_1User.html#ad7b44de7a97e28a4e92a855f0cfbfe5d", null ],
+    [ "RefreshToken", "classAdeNote_1_1Models_1_1User.html#a7894f4649c931ee1f2f82c9d5f958ce0", null ],
+    [ "Salt", "classAdeNote_1_1Models_1_1User.html#a06f04f85f2c84df53d9f64d411defbde", null ],
+    [ "TwoFactorEnabled", "classAdeNote_1_1Models_1_1User.html#a7fdd6a0dbe0e155cb20ce4f07e8d7969", null ],
+    [ "TwoFactorType", "classAdeNote_1_1Models_1_1User.html#a4dd8235d7c3a39f471a90d96e284fbe8", null ],
+    [ "UserName", "classAdeNote_1_1Models_1_1User.html#aecc1995f304f59be0d6d3fa3af528d14", null ]
+];
