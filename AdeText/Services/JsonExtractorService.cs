@@ -13,6 +13,7 @@ namespace AdeText.Services
             where T: class, new() 
         {
             T model = new();
+            var data = JsonNode.Parse(json).AsObject();
             try
             {
                 foreach (var property in typeof(T).GetProperties())
@@ -20,8 +21,6 @@ namespace AdeText.Services
                     object value;
                     var attribute = property.GetCustomAttribute<TranslationPropertyAttribute>()
                         ?? throw new Exception("Invalid attribute");
-
-                    var data = JsonNode.Parse(json).AsObject();
 
                     var jsonNode = data.FirstOrDefault(s => s.Key == attribute?.Name).Value;
 
@@ -87,6 +86,11 @@ namespace AdeText.Services
                     continue;
                 }
 
+
+                if (languages.ContainsKey(extractedValue))
+                {
+                    continue;
+                }
                 languages.Add(extractedValue, nodeKey);
             }
 

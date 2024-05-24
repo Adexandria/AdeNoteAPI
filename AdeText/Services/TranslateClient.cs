@@ -69,7 +69,7 @@ namespace AdeText.Services
         }
 
 
-        public async Task<ITranslateLanguage> TransliterateLanguage(string text, string toLanguage, string fromScript)
+        public async Task<Translation> TransliterateLanguage(string text, string toLanguage, string fromScript)
         {
             object[] body = new object[] { new { Text = text } };
 
@@ -78,11 +78,11 @@ namespace AdeText.Services
             string endpoint = $"transliterate?api-version=3.0" +
                 $"&language={toLanguage}&fromScript={fromScript}&toScript=Latn";
 
-            return await SendRequest<TranslateLanguage>(requestBody, endpoint);
+            return await SendRequest<Translation>(requestBody, endpoint);
         }
 
 
-        public ILanguage GetSupportedLanguages(string _etag, params string[] scopes)
+        public ILanguage GetSupportedLanguages(string[] scopes, string _etag = null)
         {
             try
             {
@@ -136,7 +136,7 @@ namespace AdeText.Services
                 if (requestSent < retryConfiguration && ex.StatusCode == HttpStatusCode.TooManyRequests 
                     || ex.StatusCode == HttpStatusCode.ServiceUnavailable)
                 {
-                    return GetSupportedLanguages(_etag, scopes);
+                    return GetSupportedLanguages(scopes,_etag);
                 }
                 else
                 {

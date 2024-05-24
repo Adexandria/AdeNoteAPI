@@ -2,7 +2,7 @@
 {
     public class TranslationDto
     {
-        public TranslationDto(string originalText, 
+        public TranslationDto(string originalText,
             string translatedText, string originalLanguage,
             string translationLanaguage, string transliteratedPage)
         {
@@ -10,7 +10,19 @@
             TranslatedPage = translatedText;
             OriginalLanguage = originalLanguage;
             TransliteratedPage = transliteratedPage;
-            TranslationLanguage = translationLanaguage; 
+            TranslationLanguage = translationLanaguage;
+
+        }
+
+
+        public TranslationDto(string originalText,
+            string translatedText, string originalLanguage,
+            string translationLanaguage)
+        {
+            OriginalPage = originalText;
+            TranslatedPage = translatedText;
+            OriginalLanguage = originalLanguage;
+            TranslationLanguage = translationLanaguage;
 
         }
         public string OriginalPage { get; }

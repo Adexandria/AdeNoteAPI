@@ -49,11 +49,11 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public ActionResult<ILanguage> GetSupportedLanguages(string _etag, string firstScope, string secondScope)
+        public ActionResult<ILanguage> GetSupportedLanguages(string firstScope, string secondScope, string _etag)
         {
             try
             {
-                var supportedLanguages = _translateClient.GetSupportedLanguages(_etag, firstScope, secondScope  );
+                var supportedLanguages = _translateClient.GetSupportedLanguages(new[] { firstScope, secondScope }, _etag);
 
                 if(supportedLanguages == null)
                 {
@@ -79,7 +79,7 @@ namespace AdeNote.Infrastructure.Services
                     return ActionResult<string>.Failed("Failed to get supported languages");
                 }
 
-                return ActionResult<string>.SuccessfulOperation(transliteratedPage.Translations.FirstOrDefault().Text);
+                return ActionResult<string>.SuccessfulOperation(transliteratedPage.Text);
             }
             catch (Exception ex)
             {

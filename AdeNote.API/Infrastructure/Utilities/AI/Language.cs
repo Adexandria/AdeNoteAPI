@@ -36,7 +36,7 @@ namespace AdeNote.Infrastructure.Utilities.AI
 
                 if (string.IsNullOrEmpty(etag))
                 {
-                    response = textTranslation.GetSupportedLanguages("translation","transliteration");
+                    response = textTranslation.GetSupportedLanguages("translation", "transliteration");
                 }
                 else
                 {
