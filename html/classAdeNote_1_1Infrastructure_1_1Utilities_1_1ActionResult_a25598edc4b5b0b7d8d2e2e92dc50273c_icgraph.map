@@ -1,12 +1,12 @@
 <map id="AdeNote.Infrastructure.Utilities.ActionResult.SuccessfulOperation" name="AdeNote.Infrastructure.Utilities.ActionResult.SuccessfulOperation">
-<area shape="rect" id="node1" title=" " alt="" coords="336,528,577,569"/>
+<area shape="rect" id="node1" title=" " alt="" coords="336,561,577,603"/>
 <area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ExportService.html#aa0489cebb16796e37e2b839ce5b07139" title=" " alt="" coords="24,5,269,47"/>
 <area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ad7579cc8fc732ca6093b991c5375f815" title=" " alt="" coords="23,71,270,112"/>
 <area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a7406a88b21c76907b292a2be3d69fbf9" title="Generates token when trying to log in using MFA" alt="" coords="30,136,263,177"/>
 <area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a5b0cd81d29252be914d6bb1c172370d2" title=" " alt="" coords="27,201,266,243"/>
 <area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a60b79eecf54573abebec1bb834262a7e" title="Get a page by id" alt="" coords="30,267,263,308"/>
 <area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#a4a39e3e1655bae5b6d826c996cbfbf54" title="Get book by id" alt="" coords="30,332,263,373"/>
-<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#a70c83f84da33fa4f02f8518fd85f8e6c" title=" " alt="" coords="5,397,288,439"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#ad7de78e15cad7e4f0fa7dced1f8610ad" title=" " alt="" coords="5,397,288,439"/>
 <area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a4dfc24278e11f725ebbba7d1e4b5d92d" title=" " alt="" coords="30,463,263,504"/>
 <area shape="rect" id="node10" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#afef6b990e73d38f9d85dd12ae50dc5fc" title="Gets user&#39;s Qr code" alt="" coords="30,528,263,569"/>
 <area shape="rect" id="node11" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a16abf13b8dbcb063bd07ade0b5ade4c2" title="Checks if MFA has been enabled for the user using user id." alt="" coords="19,593,274,635"/>
@@ -17,4 +17,5 @@
 <area shape="rect" id="node16" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ac75e841135019bf4c25c5e34b2408482" title=" " alt="" coords="30,920,263,961"/>
 <area shape="rect" id="node17" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a7b8959a9d6f1d10503e62660315e16f0" title=" " alt="" coords="30,985,263,1027"/>
 <area shape="rect" id="node18" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#a3db38ef573b5277034275e2dc2fb3290" title=" " alt="" coords="30,1051,263,1092"/>
+<area shape="rect" id="node19" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#a417ad3e989cda5a5d99fe6b8278b6934" title=" " alt="" coords="29,1116,265,1157"/>
 </map>

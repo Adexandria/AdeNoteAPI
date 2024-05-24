@@ -59,8 +59,8 @@ var NAVTREEINDEX =
 "20240430084252__firstmigration_8Designer_8cs.html",
 "Program_8cs.html#a8d93252ec77847afcaad9fa1c113a728",
 "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a9c23471931d83f34211055e94d40264d",
-"classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html#a722998defab44d7432daf4b825894ad7",
-"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aa9b04aa3f51038e46192d2af326b46d4"
+"classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html#a32639c312d84922a987024b390bb8720",
+"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8e029bac287e94a02f291647721758a6"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

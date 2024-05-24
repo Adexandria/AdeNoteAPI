@@ -1,5 +1,5 @@
 <map id="AdeNote.Infrastructure.Utilities.ActionResult.Failed" name="AdeNote.Infrastructure.Utilities.ActionResult.Failed">
-<area shape="rect" id="node1" title=" " alt="" coords="336,1377,565,1419"/>
+<area shape="rect" id="node1" title=" " alt="" coords="336,1411,565,1452"/>
 <area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#adf0cd7e7cf1020375687ff71625e3d9c" title="Adds a new page to a book" alt="" coords="30,5,263,47"/>
 <area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#a584ad969e74d5a1b9c68fb9fd0d0e2fc" title="Adds a new book" alt="" coords="30,71,263,112"/>
 <area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a9f61c6f1c39f12304640cb6441a2c8e3" title="Adds new label" alt="" coords="30,136,263,177"/>
@@ -12,7 +12,7 @@
 <area shape="rect" id="node11" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a5b0cd81d29252be914d6bb1c172370d2" title=" " alt="" coords="27,593,266,635"/>
 <area shape="rect" id="node12" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#ad0a361099dcb26981ae2e7cfac523b91" title="Get all books" alt="" coords="30,659,263,700"/>
 <area shape="rect" id="node13" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#a4a39e3e1655bae5b6d826c996cbfbf54" title="Get book by id" alt="" coords="30,724,263,765"/>
-<area shape="rect" id="node14" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#a70c83f84da33fa4f02f8518fd85f8e6c" title=" " alt="" coords="5,789,288,831"/>
+<area shape="rect" id="node14" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#ad7de78e15cad7e4f0fa7dced1f8610ad" title=" " alt="" coords="5,789,288,831"/>
 <area shape="rect" id="node15" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a4dfc24278e11f725ebbba7d1e4b5d92d" title=" " alt="" coords="30,855,263,896"/>
 <area shape="rect" id="node16" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#afef6b990e73d38f9d85dd12ae50dc5fc" title="Gets user&#39;s Qr code" alt="" coords="30,920,263,961"/>
 <area shape="rect" id="node17" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html#a6652e4676b3a7484987c2d0fea5b20bd" title=" " alt="" coords="30,985,263,1027"/>
@@ -36,11 +36,12 @@
 <area shape="rect" id="node35" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a9c23471931d83f34211055e94d40264d" title="Sets up MFA using sms authentication" alt="" coords="26,2161,267,2203"/>
 <area shape="rect" id="node36" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ac75e841135019bf4c25c5e34b2408482" title=" " alt="" coords="30,2227,263,2268"/>
 <area shape="rect" id="node37" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#a3db38ef573b5277034275e2dc2fb3290" title=" " alt="" coords="30,2292,263,2333"/>
-<area shape="rect" id="node38" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#ae3e9a2095bdc23aa657f024473bfb434" title="Updates an existing book" alt="" coords="30,2357,263,2399"/>
-<area shape="rect" id="node39" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a808f63b17b96a3eb2a6ded93ae78de91" title="Updates an existing page" alt="" coords="30,2423,263,2464"/>
-<area shape="rect" id="node40" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a40c4b3ff821053124c01b2f95badae7b" title="Updates an existing label" alt="" coords="30,2488,263,2529"/>
-<area shape="rect" id="node41" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a61abb1c47f09a5e85f4fec0aa211bbb8" title=" " alt="" coords="25,2553,268,2595"/>
-<area shape="rect" id="node42" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a0d2bea8f60ea1e908d615bba177d939e" title="Verifies authenticator otp" alt="" coords="19,2619,274,2660"/>
-<area shape="rect" id="node43" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#adc3b060ec80b625a45eaece17c3539d0" title="Sets up phone number" alt="" coords="30,2684,263,2725"/>
-<area shape="rect" id="node44" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a17b8d04b770daeeb3dddc9c6c654aa56" title=" " alt="" coords="30,2749,263,2791"/>
+<area shape="rect" id="node38" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#a417ad3e989cda5a5d99fe6b8278b6934" title=" " alt="" coords="29,2357,265,2399"/>
+<area shape="rect" id="node39" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#ae3e9a2095bdc23aa657f024473bfb434" title="Updates an existing book" alt="" coords="30,2423,263,2464"/>
+<area shape="rect" id="node40" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a808f63b17b96a3eb2a6ded93ae78de91" title="Updates an existing page" alt="" coords="30,2488,263,2529"/>
+<area shape="rect" id="node41" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a40c4b3ff821053124c01b2f95badae7b" title="Updates an existing label" alt="" coords="30,2553,263,2595"/>
+<area shape="rect" id="node42" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a61abb1c47f09a5e85f4fec0aa211bbb8" title=" " alt="" coords="25,2619,268,2660"/>
+<area shape="rect" id="node43" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a0d2bea8f60ea1e908d615bba177d939e" title="Verifies authenticator otp" alt="" coords="19,2684,274,2725"/>
+<area shape="rect" id="node44" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#adc3b060ec80b625a45eaece17c3539d0" title="Sets up phone number" alt="" coords="30,2749,263,2791"/>
+<area shape="rect" id="node45" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a17b8d04b770daeeb3dddc9c6c654aa56" title=" " alt="" coords="30,2815,263,2856"/>
 </map>

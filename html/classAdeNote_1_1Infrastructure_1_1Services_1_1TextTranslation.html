@@ -115,8 +115,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a42d2bc6b391cd9ec87e146212630adfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3db38ef573b5277034275e2dc2fb3290"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; string[]&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#a3db38ef573b5277034275e2dc2fb3290">TranslatePage</a> (string pageContent, string translatedLanguage)</td></tr>
 <tr class="separator:a3db38ef573b5277034275e2dc2fb3290"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70c83f84da33fa4f02f8518fd85f8e6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; ILanguage &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#a70c83f84da33fa4f02f8518fd85f8e6c">GetSupportedLanguages</a> (string scope, string _etag)</td></tr>
-<tr class="separator:a70c83f84da33fa4f02f8518fd85f8e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7de78e15cad7e4f0fa7dced1f8610ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; ILanguage &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#ad7de78e15cad7e4f0fa7dced1f8610ad">GetSupportedLanguages</a> (string firstScope, string secondScope, string _etag)</td></tr>
+<tr class="separator:ad7de78e15cad7e4f0fa7dced1f8610ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a417ad3e989cda5a5d99fe6b8278b6934"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#a417ad3e989cda5a5d99fe6b8278b6934">TransliteratePage</a> (string pageContent, string translatedLanguage, string transliteratedLanguage)</td></tr>
+<tr class="separator:a417ad3e989cda5a5d99fe6b8278b6934"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -148,8 +150,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a70c83f84da33fa4f02f8518fd85f8e6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70c83f84da33fa4f02f8518fd85f8e6c">&#9670;&nbsp;</a></span>GetSupportedLanguages()</h2>
+<a id="ad7de78e15cad7e4f0fa7dced1f8610ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7de78e15cad7e4f0fa7dced1f8610ad">&#9670;&nbsp;</a></span>GetSupportedLanguages()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -158,7 +160,13 @@ Private Attributes</h2></td></tr>
           <td class="memname"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt;ILanguage&gt; AdeNote.Infrastructure.Services.TextTranslation.GetSupportedLanguages </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>scope</em>, </td>
+          <td class="paramname"><em>firstScope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>secondScope</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -174,14 +182,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation.html#a5fcfda76a41ad4499a9ba2845b7fb575">AdeNote.Infrastructure.Services.ITextTranslation</a>.</p>
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation.html#a7f0bb9dc577c9643de5625eb836f27c0">AdeNote.Infrastructure.Services.ITextTranslation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TextTranslation_8cs_source.html#l00047">47</a> of file <a class="el" href="TextTranslation_8cs_source.html">TextTranslation.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TextTranslation_8cs_source.html#l00052">52</a> of file <a class="el" href="TextTranslation_8cs_source.html">TextTranslation.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation_a70c83f84da33fa4f02f8518fd85f8e6c_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation_a70c83f84da33fa4f02f8518fd85f8e6c_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation_a70c83f84da33fa4f02f8518fd85f8e6c_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation_a70c83f84da33fa4f02f8518fd85f8e6c_cgraph">
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation_ad7de78e15cad7e4f0fa7dced1f8610ad_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation_ad7de78e15cad7e4f0fa7dced1f8610ad_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation_ad7de78e15cad7e4f0fa7dced1f8610ad_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation_ad7de78e15cad7e4f0fa7dced1f8610ad_cgraph">
 <area shape="rect" title=" " alt="" coords="5,39,288,80"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="342,5,571,47"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="336,71,577,112"/>
@@ -232,6 +240,54 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a417ad3e989cda5a5d99fe6b8278b6934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a417ad3e989cda5a5d99fe6b8278b6934">&#9670;&nbsp;</a></span>TransliteratePage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt;string&gt; &gt; AdeNote.Infrastructure.Services.TextTranslation.TransliteratePage </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>pageContent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>translatedLanguage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>transliteratedLanguage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation.html#ae08153e8037ccfe5b0c66699021deb02">AdeNote.Infrastructure.Services.ITextTranslation</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="TextTranslation_8cs_source.html#l00071">71</a> of file <a class="el" href="TextTranslation_8cs_source.html">TextTranslation.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation_a417ad3e989cda5a5d99fe6b8278b6934_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation_a417ad3e989cda5a5d99fe6b8278b6934_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation_a417ad3e989cda5a5d99fe6b8278b6934_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation_a417ad3e989cda5a5d99fe6b8278b6934_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,241,80"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="295,5,525,47"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="289,71,531,112"/>
+</map>
+</div>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a9c19a5ee4348cdd09d6069059b716f1c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c19a5ee4348cdd09d6069059b716f1c">&#9670;&nbsp;</a></span>_translateClient</h2>
@@ -253,7 +309,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TextTranslation_8cs_source.html#l00066">66</a> of file <a class="el" href="TextTranslation_8cs_source.html">TextTranslation.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TextTranslation_8cs_source.html#l00090">90</a> of file <a class="el" href="TextTranslation_8cs_source.html">TextTranslation.cs</a>.</p>
 
 </div>
 </div>

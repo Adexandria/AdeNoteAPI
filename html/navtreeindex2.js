@@ -91,9 +91,10 @@ var NAVTREEINDEX2 =
 "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html#ab01faaa205cf413b163f875e49a0c234":[1,0,0,2,2,22,0],
 "classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html":[1,0,0,2,2,23],
 "classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#a3db38ef573b5277034275e2dc2fb3290":[1,0,0,2,2,23,2],
+"classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#a417ad3e989cda5a5d99fe6b8278b6934":[1,0,0,2,2,23,3],
 "classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#a42d2bc6b391cd9ec87e146212630adfd":[1,0,0,2,2,23,0],
-"classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#a70c83f84da33fa4f02f8518fd85f8e6c":[1,0,0,2,2,23,1],
-"classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#a9c19a5ee4348cdd09d6069059b716f1c":[1,0,0,2,2,23,3],
+"classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#a9c19a5ee4348cdd09d6069059b716f1c":[1,0,0,2,2,23,4],
+"classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#ad7de78e15cad7e4f0fa7dced1f8610ad":[1,0,0,2,2,23,1],
 "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html":[1,0,0,2,2,24],
 "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a263e247d40741d99391da82f5eb9e998":[1,0,0,2,2,24,7],
 "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a4dfc24278e11f725ebbba7d1e4b5d92d":[1,0,0,2,2,24,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "classAdeNote_1_1Models_1_1Book.html#ab5a7a5cf70bbe854f40d2c912cd0599f":[1,0,0,4,2,5],
 "classAdeNote_1_1Models_1_1Book.html#ac1efc3e3bdf314d809fa2f22043b8ad0":[1,0,0,4,2,3],
 "classAdeNote_1_1Models_1_1Book.html#ad958bfb0a1087799de500ec01646372a":[1,0,0,4,2,0],
-"classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html":[1,0,0,4,0,0],
-"classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html#a32639c312d84922a987024b390bb8720":[1,0,0,4,0,0,0]
+"classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html":[1,0,0,4,0,0]
 };

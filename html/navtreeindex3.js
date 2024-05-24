@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html#a32639c312d84922a987024b390bb8720":[1,0,0,4,0,0,0],
 "classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html#a722998defab44d7432daf4b825894ad7":[1,0,0,4,0,0,1],
 "classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html#a8a683869d367170a42af1751de52b2b2":[1,0,0,4,0,0,2],
 "classAdeNote_1_1Models_1_1DTOs_1_1BookCreateDTO.html":[1,0,0,4,0,1],
@@ -59,11 +60,13 @@ var NAVTREEINDEX3 =
 "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO.html#a351c1ccd713c93a3152563c311272f17":[1,0,0,4,0,16,0],
 "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO.html#a6c57ea15026c4227cbeef78711ccc0ae":[1,0,0,4,0,16,1],
 "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html":[1,0,0,4,0,17],
-"classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html#a129edc874ed4365ae9cc6cb4ca92e1b3":[1,0,0,4,0,17,2],
-"classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html#a37d45118a56c44869d11da178c0a47f2":[1,0,0,4,0,17,3],
-"classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html#a9efec6ed2d73135a95af0c3abea6580e":[1,0,0,4,0,17,4],
-"classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html#ad95d1cb2e22dfe30a4b2783024040669":[1,0,0,4,0,17,0],
-"classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html#adb4d7fac29d58ea5720ca6b4559dd9e3":[1,0,0,4,0,17,1],
+"classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html#a02f17394cc7f0e32d4238155639cc0a5":[1,0,0,4,0,17,6],
+"classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html#a69af061eafb534d02157f923a1e5892c":[1,0,0,4,0,17,4],
+"classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html#a8ffb25e615b32430a80622af4929f722":[1,0,0,4,0,17,0],
+"classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html#a9efec6ed2d73135a95af0c3abea6580e":[1,0,0,4,0,17,5],
+"classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html#ad95d1cb2e22dfe30a4b2783024040669":[1,0,0,4,0,17,1],
+"classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html#adb4d7fac29d58ea5720ca6b4559dd9e3":[1,0,0,4,0,17,2],
+"classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html#afc1f37478eb2bccb4096628d78a9ccc6":[1,0,0,4,0,17,3],
 "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html":[1,0,0,4,0,18],
 "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html#a20ed5dfc4aca178834a00a0537128b30":[1,0,0,4,0,18,4],
 "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html#a4067a59992ccb08aa993a2cf2b258b23":[1,0,0,4,0,18,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX3 =
 "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a845b6fbfeac2b1b4deb3ca289a5eeb55":[1,0,0,2,2,6,23],
 "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a84c70bfd6bb4b8de6058be1579ceb436":[1,0,0,2,2,6,13],
 "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a863d643dcf603fdcdc1d5e85fa14b8d8":[1,0,0,2,2,6,12],
-"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8a632c08a9d83d1cd741bc30ac554855":[1,0,0,2,2,6,14],
-"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8e029bac287e94a02f291647721758a6":[1,0,0,2,2,6,22],
-"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a9204433e7435394f8074ea1939e8e273":[1,0,0,2,2,6,5],
-"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a96561e50f238b7dbce50c5563f73646d":[1,0,0,2,2,6,3]
+"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8a632c08a9d83d1cd741bc30ac554855":[1,0,0,2,2,6,14]
 };
