@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+﻿
 
 namespace AdeNote.Infrastructure.Utilities
 {
@@ -13,9 +13,7 @@ namespace AdeNote.Infrastructure.Utilities
                 Data = data,
                 StatusCode = 200,
                 IsSuccessful = true,
-                NotSuccessful = false,
-                Errors = new List<string>()
-
+                NotSuccessful = false
             };
         }
 
@@ -30,7 +28,6 @@ namespace AdeNote.Infrastructure.Utilities
                 {
                     error
                 }
-
             };
         }
         public static ActionResult<T> Failed()
@@ -39,9 +36,7 @@ namespace AdeNote.Infrastructure.Utilities
             {
                 StatusCode = 500,
                 IsSuccessful = false,
-                NotSuccessful = true,
-                Errors = new List<string>()
-
+                NotSuccessful = true
             };
         }
         public static ActionResult<T> Failed(string error, int code)
@@ -81,7 +76,7 @@ namespace AdeNote.Infrastructure.Utilities
         {
             if (errors == null)
                 return this;
-            Errors.AddRange(errors);
+            Errors = errors;
             return this;
         }
     }
@@ -100,9 +95,7 @@ namespace AdeNote.Infrastructure.Utilities
                 RefreshToken = refreshToken,
                 StatusCode = 200,
                 IsSuccessful = true,
-                NotSuccessful = false,
-                Errors = new List<string>()
-
+                NotSuccessful = false
             };
         }
         public static ActionTokenResult<T> Failed(string error)
@@ -116,7 +109,6 @@ namespace AdeNote.Infrastructure.Utilities
                 {
                     error
                 }
-
             };
         }
         public static ActionTokenResult<T> Failed(string error, int code)
@@ -130,7 +122,6 @@ namespace AdeNote.Infrastructure.Utilities
                 {
                     error
                 }
-
             };
         }
 
@@ -144,18 +135,17 @@ namespace AdeNote.Infrastructure.Utilities
 
         }
         public int StatusCode { get; set; }
-        public List<string> Errors { get; set; }
+        public List<string> Errors { get; set; } = new List<string>();
         public bool IsSuccessful { get; set; } = false;
         public bool NotSuccessful { get; set; } = false;
 
-        public static ActionResult Successful()
+        public static ActionResult SuccessfulOperation()
         {
             return new ActionResult()
             {
                 StatusCode = 200,
                 IsSuccessful = true,
-                NotSuccessful = false,
-                Errors = new List<string>()
+                NotSuccessful = false
             };
         }
         public static ActionResult Failed(string error)
@@ -169,7 +159,6 @@ namespace AdeNote.Infrastructure.Utilities
                 {
                     error
                 }
-
             };
         }
 
@@ -179,9 +168,7 @@ namespace AdeNote.Infrastructure.Utilities
             {
                 StatusCode = 500,
                 IsSuccessful = false,
-                NotSuccessful = true,
-                Errors = new List<string>()
-
+                NotSuccessful = true
             };
         }
         public static ActionResult Failed(string error,int code)
@@ -195,7 +182,6 @@ namespace AdeNote.Infrastructure.Utilities
                 {
                     error
                 }
-
             };
         }
 
@@ -209,10 +195,8 @@ namespace AdeNote.Infrastructure.Utilities
         {
             if (errors == null)
                 return this;
-            Errors.AddRange(errors);
+            Errors = errors;
             return this;
         }
-
     }
-
 }

@@ -58,7 +58,7 @@ namespace AdeNote.Infrastructure.Services
 
                 if (response.IsSuccessful)
                 {
-                    return ActionResult.Successful();
+                    return ActionResult.SuccessfulOperation();
                 }
 
                 return ActionResult.Failed("Failed to add books", StatusCodes.Status400BadRequest);

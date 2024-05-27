@@ -39,7 +39,7 @@ namespace AdeNote.Infrastructure.Services
             if(!commitStatus)
                return ActionResult.Failed("Failed to update password", StatusCodes.Status400BadRequest);
 
-            return ActionResult.Successful();
+            return ActionResult.SuccessfulOperation();
         }
 
         public async Task<ActionResult> ResetUserPassword(Guid userId,string password)
@@ -57,7 +57,7 @@ namespace AdeNote.Infrastructure.Services
             if (!commitStatus)
                 return ActionResult.Failed("Failed to update password", StatusCodes.Status400BadRequest);
 
-            return ActionResult.Successful();
+            return ActionResult.SuccessfulOperation();
 
         }
 
@@ -76,7 +76,7 @@ namespace AdeNote.Infrastructure.Services
             if (!isExist)
                 return ActionResult.Failed("User doesn't exist", StatusCodes.Status404NotFound);
 
-            return ActionResult.Successful();
+            return ActionResult.SuccessfulOperation();
         }
 
         public readonly IUserRepository _userRepository;

@@ -44,7 +44,7 @@ namespace AdeNote.Infrastructure.Services
                 var commitStatus = await bookRepository.Add(book);
                 if (!commitStatus)
                     return ActionResult.Failed("Failed to add new book");
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -68,7 +68,7 @@ namespace AdeNote.Infrastructure.Services
                 var commitStatus = await bookRepository.Add(books);
                 if (!commitStatus)
                     return ActionResult.Failed("Failed to add new book");
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -144,7 +144,7 @@ namespace AdeNote.Infrastructure.Services
                 if (!commitStatus)
                     return ActionResult.Failed("Failed to delete book");
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -181,7 +181,7 @@ namespace AdeNote.Infrastructure.Services
                 if (!commitStatus)
                     return ActionResult.Failed("Failed to update book");
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
