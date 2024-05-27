@@ -13,7 +13,7 @@ var classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult =
     [ "Failed", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#abfb053b06b48cc6606c4493ac49d93b1", null ],
     [ "Failed", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a857cdd298cdd608b28a8390d97d6a683", null ],
     [ "Failed", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#ae8ed6adb2ba8b246c3e3614f3617b25a", null ],
-    [ "Successful", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#aba4773b458c4acbf09fba32e8835f14d", null ],
+    [ "SuccessfulOperation", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#acb05659a2bd859dd876f8c79fe5c9065", null ],
     [ "SuccessfulOperation", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c", null ],
     [ "Data", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#ab1e89f1ac3388df30e43cee10e75dda1", null ],
     [ "Errors", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#aae73396770d2500af3a911c63925f41b", null ],

@@ -25,12 +25,13 @@ var searchData=
   ['useridentity_2ecs_552',['UserIdentity.cs',['../UserIdentity_8cs.html',1,'']]],
   ['username_553',['UserName',['../classAdeNote_1_1Models_1_1User.html#aecc1995f304f59be0d6d3fa3af528d14',1,'AdeNote::Models::User']]],
   ['username_554',['Username',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1HangFireUserConfiguration.html#affcbb7c4d40441729791bfe185a87c3e',1,'AdeNote.Infrastructure.Utilities.HangFireUserConfiguration.Username()'],['../classAdeNote_1_1Models_1_1HangfireUser.html#ac17c41ffdf09205ffc7074f1487a4948',1,'AdeNote.Models.HangfireUser.Username()']]],
-  ['userrepository_555',['UserRepository',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html',1,'AdeNote.Infrastructure.Repository.UserRepository'],['../classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#a8d87b8f8175c26afdd18731a582c73da',1,'AdeNote.Infrastructure.Repository.UserRepository.UserRepository()']]],
+  ['userrepository_555',['UserRepository',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html',1,'AdeNote::Infrastructure::Repository']]],
   ['userrepository_556',['userRepository',['../classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a470d5fe5e34bafed6c2dd41c6a7ed66b',1,'AdeNote::Infrastructure::Services::AuthService']]],
-  ['userrepository_2ecs_557',['UserRepository.cs',['../UserRepository_8cs.html',1,'']]],
-  ['users_558',['Users',['../classAdeNote_1_1Db_1_1NoteDbContext.html#a930d201fdb648b068bab2954cd9d0a08',1,'AdeNote::Db::NoteDbContext']]],
-  ['userservice_559',['UserService',['../classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html',1,'AdeNote.Infrastructure.Services.UserService'],['../classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a9fd888dcb826dc65f56bcb1dda374525',1,'AdeNote.Infrastructure.Services.UserService.UserService()'],['../classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a8e4a91eb4c49221d51bde236090d86fa',1,'AdeNote.Infrastructure.Services.UserService.UserService(IUserRepository userRepository, IPasswordManager passwordManager)']]],
-  ['userservice_2ecs_560',['UserService.cs',['../UserService_8cs.html',1,'']]],
-  ['useswagger_561',['UseSwagger',['../Program_8cs.html#a9a5cfe7fee09f478241b98af703affea',1,'Program.cs']]],
-  ['useswaggerui_562',['UseSwaggerUI',['../Program_8cs.html#aed8da194c8645afcc193177096881cd0',1,'Program.cs']]]
+  ['userrepository_557',['UserRepository',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#a8d87b8f8175c26afdd18731a582c73da',1,'AdeNote::Infrastructure::Repository::UserRepository']]],
+  ['userrepository_2ecs_558',['UserRepository.cs',['../UserRepository_8cs.html',1,'']]],
+  ['users_559',['Users',['../classAdeNote_1_1Db_1_1NoteDbContext.html#a930d201fdb648b068bab2954cd9d0a08',1,'AdeNote::Db::NoteDbContext']]],
+  ['userservice_560',['UserService',['../classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html',1,'AdeNote.Infrastructure.Services.UserService'],['../classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a9fd888dcb826dc65f56bcb1dda374525',1,'AdeNote.Infrastructure.Services.UserService.UserService()'],['../classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a8e4a91eb4c49221d51bde236090d86fa',1,'AdeNote.Infrastructure.Services.UserService.UserService(IUserRepository userRepository, IPasswordManager passwordManager)']]],
+  ['userservice_2ecs_561',['UserService.cs',['../UserService_8cs.html',1,'']]],
+  ['useswagger_562',['UseSwagger',['../Program_8cs.html#a9a5cfe7fee09f478241b98af703affea',1,'Program.cs']]],
+  ['useswaggerui_563',['UseSwaggerUI',['../Program_8cs.html#aed8da194c8645afcc193177096881cd0',1,'Program.cs']]]
 ];
