@@ -44,7 +44,7 @@ namespace AdeNote.Infrastructure.Services
                 if (!commitStatus)
                     return ActionResult.Failed("Failed to add label");
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -101,7 +101,7 @@ namespace AdeNote.Infrastructure.Services
                 if (!commitStatus)
                     return ActionResult.Failed("Failed to remove label");
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -133,7 +133,7 @@ namespace AdeNote.Infrastructure.Services
                 if (!commitStatus)
                     return ActionResult.Failed("Failed to update label");
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {

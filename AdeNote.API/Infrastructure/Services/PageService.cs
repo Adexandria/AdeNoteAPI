@@ -69,7 +69,7 @@ namespace AdeNote.Infrastructure.Services
                 if (!commitStatus)
                     return ActionResult.Failed("Failed to add page");
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -138,7 +138,7 @@ namespace AdeNote.Infrastructure.Services
                 if (!commitStatus)
                     return ActionResult.Failed("Failed to delete page");
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -179,7 +179,7 @@ namespace AdeNote.Infrastructure.Services
                 if (!commitStatus)
                     return ActionResult.Failed("Failed to update page");
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -231,7 +231,7 @@ namespace AdeNote.Infrastructure.Services
 
             }
 
-            return ActionResult.Successful();
+            return ActionResult.SuccessfulOperation();
         }
 
         /// <summary>
@@ -262,7 +262,7 @@ namespace AdeNote.Infrastructure.Services
             if (!commitStatus)
                 return ActionResult.Failed("Failed to delete labels");
 
-            return ActionResult.Successful();
+            return ActionResult.SuccessfulOperation();
         }
 
         /// <summary>
@@ -299,7 +299,7 @@ namespace AdeNote.Infrastructure.Services
             if (!commitStatus)
                 return ActionResult.Failed("Failed to delete label");
 
-            return ActionResult.Successful();
+            return ActionResult.SuccessfulOperation();
         }
 
         public async Task<ActionResult<TranslationDto>> TranslatePage(Guid bookId, Guid userId, Guid pageId, string translatedLanguage)

@@ -5,12 +5,10 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
 WORKDIR /app
 
 # Copy the only the project file then run dotnet restore
-COPY *.csproj ./ 
+COPY ./ .
 
 RUN dotnet restore
 
-# Copy the rest of the source files and run dotnet publish 
-COPY  . ./
 
 RUN  dotnet publish -c Release -o out
 

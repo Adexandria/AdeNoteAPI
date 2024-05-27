@@ -143,7 +143,7 @@ namespace AdeNote.Infrastructure.Services
 
                 smsService.SendSms(new Sms(phoneNumber,message));
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -169,7 +169,7 @@ namespace AdeNote.Infrastructure.Services
                 if (!isVerified)
                     return ActionResult.Failed("Phone number has not been verified", StatusCodes.Status400BadRequest);
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -208,7 +208,7 @@ namespace AdeNote.Infrastructure.Services
                 if(!result)
                     return ActionResult.Failed("Failed to verify phonenumber", StatusCodes.Status400BadRequest);
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -239,7 +239,7 @@ namespace AdeNote.Infrastructure.Services
                 if (!result)
                     return ActionResult.Failed("failed to set up two factor authentication", StatusCodes.Status400BadRequest);
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -272,7 +272,7 @@ namespace AdeNote.Infrastructure.Services
 
                 smsService.SendSms(new Sms(currentUser.PhoneNumber, message));
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -302,7 +302,7 @@ namespace AdeNote.Infrastructure.Services
                 if (!result)
                     return ActionResult.Failed("Invalid otp", StatusCodes.Status400BadRequest);
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -354,7 +354,7 @@ namespace AdeNote.Infrastructure.Services
                 if (userAuthenticator.TwoFactorType != (int)authenticatorType)
                     return ActionResult<string>.Failed("Invalid authenticator type", StatusCodes.Status400BadRequest);
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -440,7 +440,7 @@ namespace AdeNote.Infrastructure.Services
                 if (userAuthenticator.TwoFactorType != (int)authenticatorType)
                     return ActionResult<string>.Failed("Invalid authenticator type", StatusCodes.Status400BadRequest);
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -503,7 +503,7 @@ namespace AdeNote.Infrastructure.Services
                     return ActionResult.Failed("Failed too revoke refresh token");
                 }
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -528,7 +528,7 @@ namespace AdeNote.Infrastructure.Services
                 if (currentRefreshToken == null || currentRefreshToken.IsRevoked)
                     return ActionResult.Failed("Invalid token", StatusCodes.Status400BadRequest);
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -563,7 +563,7 @@ namespace AdeNote.Infrastructure.Services
                 if(!result)
                     return ActionResult.Failed("Failed to remove user token", StatusCodes.Status400BadRequest);
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -600,7 +600,7 @@ namespace AdeNote.Infrastructure.Services
             if (!result)
                 return ActionResult.Failed("Failed to remove user token", StatusCodes.Status400BadRequest);
 
-            return ActionResult.Successful();
+            return ActionResult.SuccessfulOperation();
         }
 
         public async Task<ActionResult<string>> GenerateResetToken(Guid userId, string email)
@@ -641,7 +641,7 @@ namespace AdeNote.Infrastructure.Services
                 if (userDTO == null)
                     return ActionResult.Failed("Failed to verify token", StatusCodes.Status400BadRequest);
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
@@ -882,7 +882,7 @@ namespace AdeNote.Infrastructure.Services
                     return ActionResult.Failed("Failed to confirm email");
                 }
 
-                return ActionResult.Successful();
+                return ActionResult.SuccessfulOperation();
             }
             catch (Exception ex)
             {
