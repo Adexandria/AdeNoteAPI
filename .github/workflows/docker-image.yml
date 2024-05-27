@@ -22,7 +22,7 @@ jobs:
          username: ${{secrets.DOCKER_USERNAME}}
          password: ${{secrets.DOCKER_PASSWORD}}
     - name: Build the Docker image
-      run: docker compose -f AdeNote.API/docker-Compose.yml -p adenote build
+      run: docker compose -f docker-Compose.yml -p adenote build
     - name: Tag image
       run: docker tag adenote-api ${{env.docker_registry}}:${{env.image_name}}
     - name: Push image to registry
