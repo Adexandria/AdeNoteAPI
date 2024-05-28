@@ -2,6 +2,7 @@
 
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
+using AdeNote.Models.DTOs;
 
 namespace AdeNote.Infrastructure.Services
 {
@@ -12,6 +13,8 @@ namespace AdeNote.Infrastructure.Services
         Task<ActionResult> UpdateUserPassword(Guid userId, string currentPassword, string password);
 
         Task<ActionResult<User>> GetUser(string email);
+
+        ActionResult<StatisticsDto> GetStatistics();
 
         Task<ActionResult> IsUserExist(string email);
     }

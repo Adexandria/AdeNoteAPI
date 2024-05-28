@@ -48,5 +48,34 @@ namespace AdeNote.Infrastructure.Utilities
                 hangfireUserRepository.Add(hangfireUser);
             }
         }
+
+        public static void SeedSuperAdmin(this IServiceCollection services, DefaultConfiguration config)
+        {
+            if (config == null)
+            {
+                throw new ArgumentNullException(nameof(config));
+            }
+
+            var serviceProvider = services.BuildServiceProvider();
+
+            var passwordManager = serviceProvider.GetService<IPasswordManager>()
+                ?? throw new NullReferenceException("Unregistered service");
+
+            var userRepository = serviceProvider.GetService<IUserRepository>()
+               ?? throw new NullReferenceException("Unregistered service");
+
+            if(!userRepository.IsExist(config.Email))
+            { 
+                var user = new User(config.FirstName, config.LastName, config.Email, AuthType.local, Role.SuperAdmin);
+
+                user.ConfirmEmailVerification();
+
+                var hashedPassword = passwordManager.HashPassword(config.Password, out string salt);
+
+                user.SetPassword(hashedPassword,salt);
+
+                userRepository.Add(user);
+            }
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace AdeNote.Controllers
     [Route("api/v{version:apiVersion}/labels")]
     [ApiController]
     [ApiVersion("1.0")]
-    [Authorize]
+    [Authorize("User")]
     public class LabelController : BaseController
     {
         private readonly ILabelService _labelService;

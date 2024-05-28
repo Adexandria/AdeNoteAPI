@@ -60,6 +60,10 @@ namespace AdeNote.Db
                 .HasOne(s => s.User).
                 WithOne(s => s.RefreshToken).HasForeignKey("RefreshToken","UserId");
 
+            modelBuilder.Entity<User>()
+                .Property(s => s.Role)
+                .HasDefaultValue(Role.User);
+
             modelBuilder.Entity<Book>()
                 .HasMany(s => s.Pages);
 

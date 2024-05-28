@@ -17,7 +17,7 @@ namespace AdeNote.Controllers
     [Route("api/v{version:apiVersion}/{bookId}/pages")]
     [ApiVersion("1.0")]
     [ApiController]
-    [Authorize]
+    [Authorize(Policy = "User")]
     public class PageController : BaseController
     {
         private readonly IPageService _pageService;

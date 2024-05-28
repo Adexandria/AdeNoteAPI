@@ -719,7 +719,7 @@ namespace AdeNote.Infrastructure.Services
                 };
 
                 _notificationService.SendNotification(new Email(user.Email, "Confirm email"),
-               EmailTemplate.EmailConfirmationNotification, ContentType.html, substitutions);
+                EmailTemplate.EmailConfirmationNotification, ContentType.html, substitutions);
 
                 return ActionResult<string>.SuccessfulOperation(emailConfirmationToken);
 
@@ -744,7 +744,7 @@ namespace AdeNote.Infrastructure.Services
                 if (!authenticatedUser.EmailConfirmed)
                 {
                     var claims = new Dictionary<string, object>() { { "id", authenticatedUser.Id.ToString("N") },
-                    { ClaimTypes.Email,authenticatedUser.Email} };
+                    { ClaimTypes.Email,authenticatedUser.Email} , { ClaimTypes.Role, authenticatedUser.Role.ToString()} };
                     var emailConfirmationToken = tokenProvider.GenerateToken(claims, 30);
 
                     var substitutions = new Dictionary<string, string>()
@@ -803,7 +803,7 @@ namespace AdeNote.Infrastructure.Services
                 }
 
                 var accessToken = tokenProvider.GenerateToken(new Dictionary<string, object>() { { "id", user.Id.ToString("N") },
-                { ClaimTypes.Email, user.Email} }, 10);
+                { ClaimTypes.Email, user.Email}, { ClaimTypes.Role , user.Role.ToString()} }, 10);
 
                 return ActionResult<string>.SuccessfulOperation(accessToken);
             }
@@ -833,7 +833,7 @@ namespace AdeNote.Infrastructure.Services
                 }
 
                 var accessToken = tokenProvider.GenerateToken(new Dictionary<string, object>() { { "id", user.Id.ToString("N") },
-                { ClaimTypes.Email, user.Email} }, 10);
+                { ClaimTypes.Email, user.Email} ,{ ClaimTypes.Role , user.Role.ToString()} } , 10);
 
                 return ActionResult<string>.SuccessfulOperation(accessToken);
             }

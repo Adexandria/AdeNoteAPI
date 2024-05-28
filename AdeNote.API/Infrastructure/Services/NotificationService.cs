@@ -29,6 +29,12 @@ namespace AdeNote.Infrastructure.Services
         public void SendNotification<T>(T email, EmailTemplate template, ContentType contentType, Dictionary<string, string> substitutions = null) where T : Email
         {
             var contentTemplate = GenerateContentTemplate(template);
+
+            if (string.IsNullOrEmpty(contentTemplate))
+            {
+                return;
+            }
+
             var content = substitutions == null ? contentTemplate : CreatePersonalisedMessage(substitutions, contentTemplate);
             if(contentType == ContentType.html)
             {

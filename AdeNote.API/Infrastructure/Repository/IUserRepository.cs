@@ -21,5 +21,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <param name="userId">User id</param>
         /// <returns>A boolean value</returns>
         Task<bool> IsPhoneNumberVerified(Guid userId);
+
+        int GetNumberOfUsers();
     }
 }

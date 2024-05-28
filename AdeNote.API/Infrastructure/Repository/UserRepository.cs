@@ -93,6 +93,13 @@ namespace AdeNote.Infrastructure.Repository
             return Db.Users.Any(s => s.Email == email);
         }
 
+        public int GetNumberOfUsers()
+        {
+            var noOfUsers = Db.Users.Where(s => s.Role == Role.User).Count();
+
+            return noOfUsers;
+        }
+
         public readonly IPasswordManager PasswordManager; 
     }
 }

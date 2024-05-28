@@ -5,6 +5,7 @@ using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Services;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Infrastructure.Utilities.AI;
+using AdeNote.Models;
 using AdeText;
 using AdeText.Models;
 using Asp.Versioning;
@@ -25,8 +26,10 @@ var configuration = builder.Configuration.AddEnvironmentVariables().Build();
 var azureAd = configuration.GetSection("AzureAd");
 var textClientConfiguration = configuration.GetSection("TextTranslationConfiguration").Get<TranslateConfiguration>();
 var hangfireUserConfiguration = configuration.GetSection("HangfireUser").Get<HangFireUserConfiguration>();
+var defaultConfiguration = configuration.GetSection("DefaultConfiguration").Get<DefaultConfiguration>();
 // Gets the connection string from appsettings
 var connectionString = configuration.GetConnectionString("NotesDB");
+
 
 // Gets the token secret from appsettings
 var tokenSecret = configuration["TokenSecret"];
@@ -101,6 +104,8 @@ builder.Services.AddScoped<IExcel, AdeNote.Infrastructure.Services.ExcelService>
 builder.Services.AddScoped<IExportService, ExportService>();
 builder.Services.AddScoped<IWordService,WordService>();
 builder.Services.AddScoped<ITextTranslation, TextTranslation>();
+builder.Services.AddScoped<IAuthorizationHandler,RoleRequirementHandler>();
+builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped((_) => DocFactory.CreateService());
 builder.Services.AddSingleton((_) => AuthFactory.CreateService().PasswordManager);
 builder.Services.AddSingleton((_) => AuthFactory.CreateService().TokenProvider);
@@ -147,15 +152,27 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddAuthorization(options =>
 {
-    options.DefaultPolicy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme)
-    .RequireAuthenticatedUser().Build();
+    options.AddPolicy("User", policy =>
+    {
+        policy.AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme);
+        policy.Requirements.Add(new RoleRequirement(Role.User));
+    });
+
+    options.AddPolicy("Owner", policy =>
+    {
+        policy.AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme);
+        policy.AddRequirements(new RoleRequirement(Role.Admin,Role.SuperAdmin));
+    });
 
     options.AddPolicy("sso",new AuthorizationPolicyBuilder("SSO").RequireAuthenticatedUser().Build());
 });
 
 builder.Services.CreateTables();
 builder.Services.SeedHangFireUser(hangfireUserConfiguration);
-new AdeNote.Infrastructure.Utilities.AI.Language(builder.Services.BuildServiceProvider()).GetLanguages();
+builder.Services.SeedSuperAdmin(defaultConfiguration);
+
+new Language(builder.Services.BuildServiceProvider()).GetLanguages();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -186,6 +203,7 @@ app.UseHangfireDashboard("/hangfire", new DashboardOptions
   },
   DashboardTitle = "AdeNote API",
   DarkModeEnabled = true,
+  FaviconPath = "icon/download.ico"
 });
 
 
