@@ -1,0 +1,8 @@
+<map id="AdeNote.Infrastructure.Services.AuthService.VerifyPasswordlessToken" name="AdeNote.Infrastructure.Services.AuthService.VerifyPasswordlessToken">
+<area shape="rect" id="node1" title=" " alt="" coords="5,136,271,177"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#af7cfac5b470f7e8886c0335122bdd817" title="Saves a new entity" alt="" coords="335,5,581,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html#abb3c34371d11ab0bd97e489cfcaeeabd" title=" " alt="" coords="343,71,573,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#afcdbd770c4d741913a1942030b8ab65e" title=" " alt="" coords="335,136,581,177"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#aa09992933cc1efc25ff9ba7ed29d601a" title="Remove an existing object" alt="" coords="335,201,581,243"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html#abb8e7898d77e0b0d8720c212a2837134" title=" " alt="" coords="319,267,597,308"/>
+</map>

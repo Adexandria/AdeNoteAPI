@@ -1,0 +1,8 @@
+<map id="AdeNote.Infrastructure.Repository.IRepository.Add" name="AdeNote.Infrastructure.Repository.IRepository.Add">
+<area shape="rect" id="node1" title="Saves a new entity" alt="" coords="319,136,565,177"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#adf0cd7e7cf1020375687ff71625e3d9c" title="Adds a new page to a book" alt="" coords="21,5,255,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a9f61c6f1c39f12304640cb6441a2c8e3" title="Adds new label" alt="" coords="21,71,255,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a3bd7b05400162bb100bfa9f9872d425f" title=" " alt="" coords="21,136,255,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#aa247a2a76c980363f6647cf09786d192" title=" " alt="" coords="21,201,255,243"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a910b406a1cf910a11a2dd1e8ec01425f" title=" " alt="" coords="5,267,271,308"/>
+</map>

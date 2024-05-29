@@ -1,0 +1,6 @@
+<map id="AdeNote.Infrastructure.Services.PageService.GetAll" name="AdeNote.Infrastructure.Services.PageService.GetAll">
+<area shape="rect" id="node1" title="Gets all pages in a book" alt="" coords="5,39,239,80"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html#af12c7811453eefdcd880cb85bf86ae8c" title="Gets all pages from a book" alt="" coords="287,5,533,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a19cfe3dca141406dbb673708f860d9ca" title="Maps from page to PageDTO" alt="" coords="288,71,532,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a7ce8136a67a485e2bc49104d093afbc8" title="Maps from label to label dto" alt="" coords="581,71,824,112"/>
+</map>
