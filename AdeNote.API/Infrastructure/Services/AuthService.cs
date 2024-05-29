@@ -672,7 +672,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public async Task<ActionResult<string>> SignUser(CreateUserDTO newUser, AuthType authType)
+        public async Task<ActionResult<string>> SignUser(CreateUserDTO newUser, AuthType authType, Role role)
         {
             try
             {
@@ -682,7 +682,7 @@ namespace AdeNote.Infrastructure.Services
                     return ActionResult<string>.Failed("Email is associated with a user", StatusCodes.Status400BadRequest);
                 }
 
-                var user = new User(newUser.FirstName, newUser.LastName, newUser.Email,authType);
+                var user = new User(newUser.FirstName, newUser.LastName, newUser.Email,authType,role);
 
 
                 if (!string.IsNullOrEmpty(newUser.Password) || !string.IsNullOrWhiteSpace(newUser.Password))

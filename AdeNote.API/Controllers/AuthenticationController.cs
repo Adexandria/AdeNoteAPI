@@ -108,7 +108,7 @@ namespace AdeNote.Controllers
         [Authorize("Owner")]
         public async Task<IActionResult> AdminSignUp(CreateUserDTO newUser)
         {
-            var response = await _authService.SignUser(newUser);
+            var response = await _authService.SignUser(newUser, role: Role.Admin);
             return response.Response();
         }
 

@@ -143,7 +143,7 @@ namespace AdeNote.Infrastructure.Services
 
         ActionResult VerifyResetToken(string token);
 
-        Task<ActionResult<string>> SignUser(CreateUserDTO newUser, AuthType authType = AuthType.local);
+        Task<ActionResult<string>> SignUser(CreateUserDTO newUser, AuthType authType = AuthType.local, Role role = Role.User);
 
         Task<ActionTokenResult<UserDTO>> LoginUser(LoginDTO login, AuthType authType);
 
