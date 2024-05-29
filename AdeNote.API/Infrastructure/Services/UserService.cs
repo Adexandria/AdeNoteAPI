@@ -2,6 +2,7 @@
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
+using AdeNote.Models.DTOs;
 
 
 namespace AdeNote.Infrastructure.Services
@@ -18,6 +19,15 @@ namespace AdeNote.Infrastructure.Services
             _userRepository = userRepository;
             _passwordManager = passwordManager;
         }
+
+
+        public ActionResult<StatisticsDto> GetStatistics()
+        {
+            var noOfUsers = _userRepository.GetNumberOfUsers();
+
+            return ActionResult<StatisticsDto>.SuccessfulOperation( new StatisticsDto() { NumberOfUsers = noOfUsers });
+        }
+
 
         public async Task<ActionResult> UpdateUserPassword(Guid userId, string currentPassword,string password)
         {

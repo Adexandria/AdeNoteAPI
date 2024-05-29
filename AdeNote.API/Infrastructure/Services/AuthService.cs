@@ -672,7 +672,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public async Task<ActionResult<string>> SignUser(CreateUserDTO newUser, AuthType authType)
+        public async Task<ActionResult<string>> SignUser(CreateUserDTO newUser, AuthType authType, Role role)
         {
             try
             {
@@ -682,7 +682,7 @@ namespace AdeNote.Infrastructure.Services
                     return ActionResult<string>.Failed("Email is associated with a user", StatusCodes.Status400BadRequest);
                 }
 
-                var user = new User(newUser.FirstName, newUser.LastName, newUser.Email,authType);
+                var user = new User(newUser.FirstName, newUser.LastName, newUser.Email,authType,role);
 
 
                 if (!string.IsNullOrEmpty(newUser.Password) || !string.IsNullOrWhiteSpace(newUser.Password))
@@ -719,7 +719,7 @@ namespace AdeNote.Infrastructure.Services
                 };
 
                 _notificationService.SendNotification(new Email(user.Email, "Confirm email"),
-               EmailTemplate.EmailConfirmationNotification, ContentType.html, substitutions);
+                EmailTemplate.EmailConfirmationNotification, ContentType.html, substitutions);
 
                 return ActionResult<string>.SuccessfulOperation(emailConfirmationToken);
 
@@ -744,7 +744,7 @@ namespace AdeNote.Infrastructure.Services
                 if (!authenticatedUser.EmailConfirmed)
                 {
                     var claims = new Dictionary<string, object>() { { "id", authenticatedUser.Id.ToString("N") },
-                    { ClaimTypes.Email,authenticatedUser.Email} };
+                    { ClaimTypes.Email,authenticatedUser.Email} , { ClaimTypes.Role, authenticatedUser.Role.ToString()} };
                     var emailConfirmationToken = tokenProvider.GenerateToken(claims, 30);
 
                     var substitutions = new Dictionary<string, string>()
@@ -803,7 +803,7 @@ namespace AdeNote.Infrastructure.Services
                 }
 
                 var accessToken = tokenProvider.GenerateToken(new Dictionary<string, object>() { { "id", user.Id.ToString("N") },
-                { ClaimTypes.Email, user.Email} }, 10);
+                { ClaimTypes.Email, user.Email}, { ClaimTypes.Role , user.Role.ToString()} }, 10);
 
                 return ActionResult<string>.SuccessfulOperation(accessToken);
             }
@@ -833,7 +833,7 @@ namespace AdeNote.Infrastructure.Services
                 }
 
                 var accessToken = tokenProvider.GenerateToken(new Dictionary<string, object>() { { "id", user.Id.ToString("N") },
-                { ClaimTypes.Email, user.Email} }, 10);
+                { ClaimTypes.Email, user.Email} ,{ ClaimTypes.Role , user.Role.ToString()} } , 10);
 
                 return ActionResult<string>.SuccessfulOperation(accessToken);
             }

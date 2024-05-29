@@ -1,6 +1,4 @@
 ﻿using AdeAuth.Models;
-using RestSharp.Authenticators.OAuth;
-using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace AdeNote.Models
@@ -15,9 +13,17 @@ namespace AdeNote.Models
             LastName = lastName;
             Email = email;
             AuthenticationType = authType;
+            Role = Role.User;
         }
 
-
+        public User(string firstName, string lastName, string email, AuthType authType, Role role)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Email = email;
+            AuthenticationType = authType;
+            Role = role;
+        }
         public void EnableTwoFactor(MFAType twoFactorType, string authenticatorKey = null)
         {
             TwoFactorEnabled = true;
@@ -70,5 +76,6 @@ namespace AdeNote.Models
         public AuthType AuthenticationType { get; set; }
         public IList<Book> Books { get; set; } = new List<Book>();
         public string? Salt { get; set; }
+        public Role Role { get; set; }
     }
 }
