@@ -89,6 +89,15 @@ namespace AdeNote.Infrastructure.Services
             return ActionResult.SuccessfulOperation();
         }
 
+        public async Task<ActionResult<UserDTO>> GetUser(Guid userId)
+        {
+            var currentUser = await _userRepository.GetUser(userId);
+            if (currentUser == null)
+                return ActionResult<UserDTO>.Failed("User doesn't exist", StatusCodes.Status404NotFound);
+
+            return ActionResult<UserDTO>.SuccessfulOperation(new UserDTO(userId, currentUser.FirstName,currentUser.LastName, currentUser.Email, currentUser.RecoveryCode.Codes));
+        }
+
         public readonly IUserRepository _userRepository;
         public readonly IPasswordManager _passwordManager;
     }

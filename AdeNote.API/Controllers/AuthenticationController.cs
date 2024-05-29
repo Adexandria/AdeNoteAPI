@@ -137,7 +137,7 @@ namespace AdeNote.Controllers
         [Produces("application/json")]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("login")]
         public IActionResult Login(LoginDTO login)
@@ -170,7 +170,7 @@ namespace AdeNote.Controllers
         [HttpPost("login/passwordless")]
         public async Task<IActionResult> Login([FromQuery]string email)
         {
-           var response = await _authService.LoginUser(email);
+           var response = await _authService.LoginUserPasswordless(email);
            return response.Response();
         }
 

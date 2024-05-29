@@ -1,6 +1,4 @@
-﻿
-
-using AdeNote.Infrastructure.Utilities;
+﻿using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
 
@@ -15,6 +13,8 @@ namespace AdeNote.Infrastructure.Services
         Task<ActionResult<User>> GetUser(string email);
 
         ActionResult<StatisticsDto> GetStatistics();
+
+        Task<ActionResult<UserDTO>> GetUser(Guid userId);
 
         Task<ActionResult> IsUserExist(string email);
     }

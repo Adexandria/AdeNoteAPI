@@ -734,11 +734,18 @@ namespace AdeNote.Infrastructure.Services
         {
             try
             {
+
                 var authenticatedUser = await userRepository.AuthenticateUser(login.Email, login.Password, authType);
 
                 if (authenticatedUser == null)
                 {
                     return ActionTokenResult<UserDTO>.Failed("Invalid email/password", StatusCodes.Status400BadRequest);
+                }
+
+                if(authenticatedUser.LockoutEnabled) 
+                {
+                    return ActionTokenResult<UserDTO>.Failed("Account has been disable. Please contact admin");
+
                 }
 
                 if (!authenticatedUser.EmailConfirmed)
@@ -758,6 +765,8 @@ namespace AdeNote.Infrastructure.Services
                     return ActionTokenResult<UserDTO>.Failed("Confirm email", StatusCodes.Status400BadRequest);
                 }
 
+                var isFirstTimeLogin = authenticatedUser.RefreshToken == null;
+
                 if (authenticatedUser.RefreshToken != null)
                 {
                     var refreshTokenResult = await refreshTokenRepository.Remove(authenticatedUser.RefreshToken);
@@ -776,7 +785,7 @@ namespace AdeNote.Infrastructure.Services
                     return ActionTokenResult<UserDTO>.Failed("Failed to login");
 
                 return ActionTokenResult<UserDTO>.SuccessfulOperation(new UserDTO(authenticatedUser.Id,authenticatedUser.FirstName,
-                    authenticatedUser.LastName, authenticatedUser.Email),accessToken,refreshToken);
+                    authenticatedUser.LastName, authenticatedUser.Email, isFirstTimeLogin ? authenticatedUser.RecoveryCode.Codes : null),accessToken,refreshToken);
             }
             catch (Exception ex)
             {
@@ -909,7 +918,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public async Task<ActionResult<string>> LoginUser(string email)
+        public async Task<ActionResult<string>> LoginUserPasswordless(string email)
         {
             try
             {
@@ -922,6 +931,11 @@ namespace AdeNote.Infrastructure.Services
                 if (user == null)
                 {
                     return ActionResult<string>.Failed("Invalid email", StatusCodes.Status400BadRequest);
+                }
+
+                if (user.LockoutEnabled)
+                {
+                    return ActionResult<string>.Failed("Account has been locked. Please contact admin", StatusCodes.Status400BadRequest);
                 }
 
                 if (!user.EmailConfirmed)
@@ -972,7 +986,19 @@ namespace AdeNote.Infrastructure.Services
 
                 var user = await userRepository.GetUserByEmail(claims.GetValueOrDefault(ClaimTypes.Email).ToString());
 
-                if(user.RefreshToken != null) 
+                if(user == null)
+                {
+                    return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
+                }
+
+                if (user.LockoutEnabled)
+                {
+                    return ActionTokenResult<UserDTO>.Failed("Account has been locked. Please contact admin", StatusCodes.Status400BadRequest);
+                }
+
+                var isFirstTimeLogin = user.RefreshToken == null;
+
+                if (user.RefreshToken != null) 
                 {
                     await refreshTokenRepository.Remove(user.RefreshToken);
                 }
@@ -991,7 +1017,7 @@ namespace AdeNote.Infrastructure.Services
                     return ActionTokenResult<UserDTO>.Failed("Failed to login");
 
 
-                var authenticatedUser = new UserDTO(user.Id,user.FirstName,user.LastName,user.Email);
+                var authenticatedUser = new UserDTO(user.Id,user.FirstName,user.LastName,user.Email, isFirstTimeLogin ? user.RecoveryCode.Codes : null);
 
                 return ActionTokenResult<UserDTO>.SuccessfulOperation(authenticatedUser, accessToken, refreshToken);
             }

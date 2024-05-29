@@ -90,6 +90,8 @@ builder.Services.AddScoped<IPageRepository, PageRepository>();
 builder.Services.AddScoped<ILabelPageRepository, LabelPageRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRefreshTokenRepository,RefreshRepository>();
+builder.Services.AddScoped<ITicketRepository,TicketRepository>();
+builder.Services.AddScoped<ITicketService,TicketService>();
 builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddScoped<IPageService, PageService>();
 builder.Services.AddScoped<ILabelService, LabelService>();
@@ -203,7 +205,8 @@ app.UseHangfireDashboard("/hangfire", new DashboardOptions
   },
   DashboardTitle = "AdeNote API",
   DarkModeEnabled = true,
-  FaviconPath = "icon/download.ico"
+  FaviconPath = "icon/download.ico",
+  AppPath = "swagger/index.html"
 });
 
 

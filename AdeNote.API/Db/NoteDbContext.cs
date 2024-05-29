@@ -34,6 +34,8 @@ namespace AdeNote.Db
 
         public DbSet<User> Users { get; set; }
 
+        public DbSet<Ticket> Tickets { get; set; }
+
         /// <summary>
         /// Initialises the label page objects
         /// </summary>
@@ -66,6 +68,19 @@ namespace AdeNote.Db
 
             modelBuilder.Entity<Book>()
                 .HasMany(s => s.Pages);
+
+
+            modelBuilder.Entity<Ticket>()
+                .HasOne(s=>s.User)
+                .WithMany(s => s.Tickets).HasForeignKey(s=>s.Issuer);
+
+
+
+            modelBuilder.Entity<User>()
+                .HasOne(s => s.RecoveryCode)
+                .WithOne(s => s.User)
+                .HasForeignKey("RecoveryCode", "UserId");
+
 
             modelBuilder.Entity<Page>()
                 .HasMany(s => s.Labels)

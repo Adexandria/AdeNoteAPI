@@ -60,6 +60,12 @@ namespace AdeNote.Models
         }
 
 
+        public void CreateRecoveryCodes()
+        {
+            RecoveryCode = new RecoveryCode(Id);
+        }
+
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string? UserName { get; set; }
@@ -76,6 +82,8 @@ namespace AdeNote.Models
         public AuthType AuthenticationType { get; set; }
         public IList<Book> Books { get; set; } = new List<Book>();
         public string? Salt { get; set; }
+        public RecoveryCode RecoveryCode { get; set; }
         public Role Role { get; set; }
+        public IList<Ticket> Tickets { get; set; } = new List<Ticket>();
     }
 }

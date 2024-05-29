@@ -46,12 +46,13 @@ namespace AdeNote.Infrastructure.Extension
         {
             var info = new OpenApiInfo()
             {
-                Title = "Ade note API",
+                Title = "AdeNote API",
                 Version = versionDescription.ApiVersion.ToString(),
                 Contact = new OpenApiContact()
                 {
                     Email = "adeolaaderibigbe09@gmail.com",
                     Name = "Adeola Aderibigbe Wuraola"
+
                 },
                 Description = "This is a simple note API"
             };
