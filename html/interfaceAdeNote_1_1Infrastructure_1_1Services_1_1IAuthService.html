@@ -165,8 +165,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aea767e3bba531744d9d345053ea70641"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9b04aa3f51038e46192d2af326b46d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aa9b04aa3f51038e46192d2af326b46d4">VerifyResetToken</a> (string token)</td></tr>
 <tr class="separator:aa9b04aa3f51038e46192d2af326b46d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a845b6fbfeac2b1b4deb3ca289a5eeb55"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a845b6fbfeac2b1b4deb3ca289a5eeb55">SignUser</a> (<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO.html">CreateUserDTO</a> newUser, <a class="el" href="namespaceAdeNote_1_1Models.html#a0ad63207f9f4ee5ba4893989f6321597">AuthType</a> authType=AuthType.local)</td></tr>
-<tr class="separator:a845b6fbfeac2b1b4deb3ca289a5eeb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c807f2a5b09445f60b73178c942c24c"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a3c807f2a5b09445f60b73178c942c24c">SignUser</a> (<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO.html">CreateUserDTO</a> newUser, <a class="el" href="namespaceAdeNote_1_1Models.html#a0ad63207f9f4ee5ba4893989f6321597">AuthType</a> authType=AuthType.local, <a class="el" href="namespaceAdeNote_1_1Models.html#a44d267b0992deac7399dae09f7647131">Role</a> role=Role.User)</td></tr>
+<tr class="separator:a3c807f2a5b09445f60b73178c942c24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05f9a37d44ea9f8f5e6915cb0944ace3"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html">ActionTokenResult</a>&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html">UserDTO</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a05f9a37d44ea9f8f5e6915cb0944ace3">LoginUser</a> (<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1LoginDTO.html">LoginDTO</a> login, <a class="el" href="namespaceAdeNote_1_1Models.html#a0ad63207f9f4ee5ba4893989f6321597">AuthType</a> authType)</td></tr>
 <tr class="separator:a05f9a37d44ea9f8f5e6915cb0944ace3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac367eebcc028896241ebd0f32ab2ecaf"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#ac367eebcc028896241ebd0f32ab2ecaf">GenerateAccessToken</a> (string refreshToken)</td></tr>
@@ -1048,8 +1048,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a845b6fbfeac2b1b4deb3ca289a5eeb55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a845b6fbfeac2b1b4deb3ca289a5eeb55">&#9670;&nbsp;</a></span>SignUser()</h2>
+<a id="a3c807f2a5b09445f60b73178c942c24c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c807f2a5b09445f60b73178c942c24c">&#9670;&nbsp;</a></span>SignUser()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1064,7 +1064,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespaceAdeNote_1_1Models.html#a0ad63207f9f4ee5ba4893989f6321597">AuthType</a>&#160;</td>
-          <td class="paramname"><em>authType</em> = <code>AuthType.local</code>&#160;</td>
+          <td class="paramname"><em>authType</em> = <code>AuthType.local</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceAdeNote_1_1Models.html#a44d267b0992deac7399dae09f7647131">Role</a>&#160;</td>
+          <td class="paramname"><em>role</em> = <code>Role.User</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1074,15 +1080,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ac75e841135019bf4c25c5e34b2408482">AdeNote.Infrastructure.Services.AuthService</a>.</p>
+<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#aa247a2a76c980363f6647cf09786d192">AdeNote.Infrastructure.Services.AuthService</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a845b6fbfeac2b1b4deb3ca289a5eeb55_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a845b6fbfeac2b1b4deb3ca289a5eeb55_icgraph" alt=""/></div>
-<map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a845b6fbfeac2b1b4deb3ca289a5eeb55_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a845b6fbfeac2b1b4deb3ca289a5eeb55_icgraph">
-<area shape="rect" title=" " alt="" coords="305,39,539,80"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,5,257,47"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ad2b8a71a38f4772afb8a1fee1df06d24" title="Sign ups a new user" alt="" coords="5,71,257,112"/>
+<div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a3c807f2a5b09445f60b73178c942c24c_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a3c807f2a5b09445f60b73178c942c24c_icgraph" alt=""/></div>
+<map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a3c807f2a5b09445f60b73178c942c24c_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a3c807f2a5b09445f60b73178c942c24c_icgraph">
+<area shape="rect" title=" " alt="" coords="305,71,539,112"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a09a9505159b5aeff56e78bf2c65e561a" title="Sign ups a new user" alt="" coords="5,5,257,47"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,71,257,112"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ad2b8a71a38f4772afb8a1fee1df06d24" title="Sign ups a new user" alt="" coords="5,136,257,177"/>
 </map>
 </div>
 

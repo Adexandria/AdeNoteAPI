@@ -18,5 +18,10 @@ var namespaceAdeNote_1_1Models =
       [ "none", "namespaceAdeNote_1_1Models.html#a59a9d6cd7df46cfb5727610aa214e751a334c4a4c42fdb79d7ebc3e73b517e6f8", null ],
       [ "sms", "namespaceAdeNote_1_1Models.html#a59a9d6cd7df46cfb5727610aa214e751a18b43c6a536a8fe1362f7a3887936be6", null ],
       [ "google", "namespaceAdeNote_1_1Models.html#a59a9d6cd7df46cfb5727610aa214e751ac822c1b63853ed273b89687ac505f9fa", null ]
+    ] ],
+    [ "Role", "namespaceAdeNote_1_1Models.html#a44d267b0992deac7399dae09f7647131", [
+      [ "User", "namespaceAdeNote_1_1Models.html#a44d267b0992deac7399dae09f7647131a8f9bfe9d1345237cb3b2b205864da075", null ],
+      [ "Admin", "namespaceAdeNote_1_1Models.html#a44d267b0992deac7399dae09f7647131ae3afed0047b08059d0fada10f400c1e5", null ],
+      [ "SuperAdmin", "namespaceAdeNote_1_1Models.html#a44d267b0992deac7399dae09f7647131a0b28a5799a32c687dad2c5183718ceac", null ]
     ] ]
 ];

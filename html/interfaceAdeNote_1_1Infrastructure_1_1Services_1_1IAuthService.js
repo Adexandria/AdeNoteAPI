@@ -23,7 +23,7 @@ var interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService =
     [ "SetAuthenticator", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#ae3c515f59107f454452f2be174b2e00f", null ],
     [ "SetPhoneNumber", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a5bfedca5a816cc4c024d4852887fe189", null ],
     [ "SetSmsAuthenticator", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8e029bac287e94a02f291647721758a6", null ],
-    [ "SignUser", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a845b6fbfeac2b1b4deb3ca289a5eeb55", null ],
+    [ "SignUser", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a3c807f2a5b09445f60b73178c942c24c", null ],
     [ "VerifyAuthenticatorOTP", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#af732dc7da9b94c239d866efc66e7334d", null ],
     [ "VerifyPasswordlessToken", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a4433b9e7905cabacdafa8b48833cf9cb", null ],
     [ "VerifyPhoneNumber", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a821718637f3c6de0c7ffa1b45e6ca830", null ],

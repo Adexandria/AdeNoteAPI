@@ -91,12 +91,13 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 </div><table border="0" cellspacing="10" cellpadding="0">
 <tr><td><img src="inherit_graph_0.png" border="0" usemap="#aAdeNote_8Controllers_8BaseController" alt=""/>
 <map name="aAdeNote_8Controllers_8BaseController" id="aAdeNote_8Controllers_8BaseController">
-<area shape="rect" title=" " alt="" coords="5,111,124,138"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1BaseController.html" title="A base controller" alt="" coords="172,104,361,145"/>
+<area shape="rect" title=" " alt="" coords="5,143,124,170"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1BaseController.html" title="A base controller" alt="" coords="172,136,361,177"/>
 <area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html" title="This handles the authentication." alt="" coords="409,5,661,47"/>
 <area shape="rect" href="classAdeNote_1_1Controllers_1_1BookController.html" title="Handles all the end points for book. User can create,update,fetch and delete books" alt="" coords="440,71,631,112"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1LabelController.html" title="Handles creating, updating and deleting a label" alt="" coords="439,136,631,177"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1PageController.html" title="Handles the page management for a particular book." alt="" coords="441,201,629,243"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1DashboardController.html" title=" " alt="" coords="422,136,649,177"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1LabelController.html" title="Handles creating, updating and deleting a label" alt="" coords="439,201,631,243"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1PageController.html" title="Handles the page management for a particular book." alt="" coords="441,267,629,308"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_1.png" border="0" usemap="#aAdeNote_8Db_8NoteDbContext" alt=""/>
@@ -192,164 +193,188 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExportService.html" title=" " alt="" coords="287,5,520,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_14.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8ILabelService" alt=""/>
+<tr><td><img src="inherit_graph_14.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8IFileService" alt=""/>
+<map name="aAdeNote_8Infrastructure_8Services_8IFileService" id="aAdeNote_8Infrastructure_8Services_8IFileService">
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IFileService.html" title=" " alt="" coords="5,5,239,47"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1FileService.html" title=" " alt="" coords="287,5,520,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_15.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8ILabelService" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Services_8ILabelService" id="aAdeNote_8Infrastructure_8Services_8ILabelService">
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html" title="An interface to interact with the controller" alt="" coords="5,5,239,47"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html" title="An implementaion of the interface" alt="" coords="287,5,520,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_15.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8INotificationService" alt=""/>
+<tr><td><img src="inherit_graph_16.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8INotificationService" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Services_8INotificationService" id="aAdeNote_8Infrastructure_8Services_8INotificationService">
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html" title="Manages the email notification using template" alt="" coords="5,5,239,47"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html" title="Manages the email notification using template" alt="" coords="287,5,520,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_16.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8IPageService" alt=""/>
+<tr><td><img src="inherit_graph_17.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8IPageService" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Services_8IPageService" id="aAdeNote_8Infrastructure_8Services_8IPageService">
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html" title="An interface to interact with the controller" alt="" coords="5,5,239,47"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html" title="An implementation of the interface" alt="" coords="287,5,520,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_17.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8ISmsService" alt=""/>
+<tr><td><img src="inherit_graph_18.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8ISmsService" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Services_8ISmsService" id="aAdeNote_8Infrastructure_8Services_8ISmsService">
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html" title="A sms service used to send message via sms" alt="" coords="5,5,239,47"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html" title="A sms service used to send message via sms" alt="" coords="287,5,520,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_18.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8ITextTranslation" alt=""/>
+<tr><td><img src="inherit_graph_19.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8ITextTranslation" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Services_8ITextTranslation" id="aAdeNote_8Infrastructure_8Services_8ITextTranslation">
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation.html" title=" " alt="" coords="5,5,239,47"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html" title=" " alt="" coords="287,5,520,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_19.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8IUserService" alt=""/>
+<tr><td><img src="inherit_graph_20.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8IUserService" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Services_8IUserService" id="aAdeNote_8Infrastructure_8Services_8IUserService">
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html" title=" " alt="" coords="5,5,239,47"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html" title=" " alt="" coords="287,5,520,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_20.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8IWordService" alt=""/>
+<tr><td><img src="inherit_graph_21.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8IWordService" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Services_8IWordService" id="aAdeNote_8Infrastructure_8Services_8IWordService">
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService.html" title=" " alt="" coords="5,5,239,47"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1WordService.html" title=" " alt="" coords="287,5,520,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_21.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8ActionResult_3_01T_01_4" alt=""/>
+<tr><td><img src="inherit_graph_22.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8ActionResult_3_01T_01_4" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8ActionResult_3_01T_01_4" id="aAdeNote_8Infrastructure_8Utilities_8ActionResult_3_01T_01_4">
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html" title=" " alt="" coords="5,5,235,47"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html" title=" " alt="" coords="283,5,512,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_22.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8AI_8Language" alt=""/>
+<tr><td><img src="inherit_graph_23.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8AI_8Language" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8AI_8Language" id="aAdeNote_8Infrastructure_8Utilities_8AI_8Language">
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1Language.html" title=" " alt="" coords="5,5,235,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_23.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8AI_8TranslateConfiguration" alt=""/>
+<tr><td><img src="inherit_graph_24.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8AI_8TranslateConfiguration" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8AI_8TranslateConfiguration" id="aAdeNote_8Infrastructure_8Utilities_8AI_8TranslateConfiguration">
 <area shape="rect" title=" " alt="" coords="5,13,177,39"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1TranslateConfiguration.html" title=" " alt="" coords="225,5,455,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_24.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8BlobConfiguration" alt=""/>
+<tr><td><img src="inherit_graph_25.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8BlobConfiguration" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8BlobConfiguration" id="aAdeNote_8Infrastructure_8Utilities_8BlobConfiguration">
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html" title="Contains configuration for blob storage" alt="" coords="5,5,235,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_25.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8DashboardAuthenticationFilter" alt=""/>
+<tr><td><img src="inherit_graph_26.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8DashboardAuthenticationFilter" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8DashboardAuthenticationFilter" id="aAdeNote_8Infrastructure_8Utilities_8DashboardAuthenticationFilter">
 <area shape="rect" title=" " alt="" coords="5,13,221,39"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter.html" title=" " alt="" coords="269,5,499,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_26.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8Database" alt=""/>
+<tr><td><img src="inherit_graph_27.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8Database" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8Database" id="aAdeNote_8Infrastructure_8Utilities_8Database">
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database.html" title=" " alt="" coords="5,5,235,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_27.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8Email" alt=""/>
+<tr><td><img src="inherit_graph_28.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8DefaultConfiguration" alt=""/>
+<map name="aAdeNote_8Infrastructure_8Utilities_8DefaultConfiguration" id="aAdeNote_8Infrastructure_8Utilities_8DefaultConfiguration">
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration.html" title=" " alt="" coords="5,5,235,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_29.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8Email" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8Email" id="aAdeNote_8Infrastructure_8Utilities_8Email">
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email.html" title=" " alt="" coords="5,5,235,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_28.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8EmailConfiguration" alt=""/>
+<tr><td><img src="inherit_graph_30.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8EmailConfiguration" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8EmailConfiguration" id="aAdeNote_8Infrastructure_8Utilities_8EmailConfiguration">
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration.html" title="Email condiguration for the application" alt="" coords="5,5,235,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_29.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8EntityDoc_3_01T_01_4" alt=""/>
+<tr><td><img src="inherit_graph_31.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8EntityDoc_3_01T_01_4" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8EntityDoc_3_01T_01_4" id="aAdeNote_8Infrastructure_8Utilities_8EntityDoc_3_01T_01_4">
 <area shape="rect" title=" " alt="" coords="5,13,95,39"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc.html" title=" " alt="" coords="143,5,372,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_30.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8ExportEntity_3_01T_01_4" alt=""/>
+<tr><td><img src="inherit_graph_32.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8ExportEntity_3_01T_01_4" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8ExportEntity_3_01T_01_4" id="aAdeNote_8Infrastructure_8Utilities_8ExportEntity_3_01T_01_4">
 <area shape="rect" title=" " alt="" coords="5,13,111,39"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExportEntity.html" title=" " alt="" coords="159,5,388,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_31.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8HangFireUserConfiguration" alt=""/>
+<tr><td><img src="inherit_graph_33.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8HangFireUserConfiguration" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8HangFireUserConfiguration" id="aAdeNote_8Infrastructure_8Utilities_8HangFireUserConfiguration">
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1HangFireUserConfiguration.html" title=" " alt="" coords="5,5,235,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_32.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8ImportSheet" alt=""/>
+<tr><td><img src="inherit_graph_34.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8ImportSheet" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8ImportSheet" id="aAdeNote_8Infrastructure_8Utilities_8ImportSheet">
 <area shape="rect" title=" " alt="" coords="5,13,112,39"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet.html" title=" " alt="" coords="160,5,389,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_33.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8IUserIdentity" alt=""/>
+<tr><td><img src="inherit_graph_35.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8IUserIdentity" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8IUserIdentity" id="aAdeNote_8Infrastructure_8Utilities_8IUserIdentity">
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html" title="Handles the user identity" alt="" coords="5,5,235,47"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdentity.html" title="Implemention" alt="" coords="283,5,512,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_34.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8PasswordAttribute" alt=""/>
+<tr><td><img src="inherit_graph_36.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8PasswordAttribute" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8PasswordAttribute" id="aAdeNote_8Infrastructure_8Utilities_8PasswordAttribute">
 <area shape="rect" title=" " alt="" coords="5,13,149,39"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1PasswordAttribute.html" title=" " alt="" coords="197,5,427,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_35.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8Sms" alt=""/>
+<tr><td><img src="inherit_graph_37.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8RoleRequirement" alt=""/>
+<map name="aAdeNote_8Infrastructure_8Utilities_8RoleRequirement" id="aAdeNote_8Infrastructure_8Utilities_8RoleRequirement">
+<area shape="rect" title=" " alt="" coords="5,13,203,39"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirement.html" title=" " alt="" coords="251,5,480,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_38.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8RoleRequirementHandler" alt=""/>
+<map name="aAdeNote_8Infrastructure_8Utilities_8RoleRequirementHandler" id="aAdeNote_8Infrastructure_8Utilities_8RoleRequirementHandler">
+<area shape="rect" title=" " alt="" coords="5,13,165,39"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirementHandler.html" title=" " alt="" coords="213,5,443,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_39.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8Sms" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8Sms" id="aAdeNote_8Infrastructure_8Utilities_8Sms">
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms.html" title=" " alt="" coords="5,5,263,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_36.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8SmsConfiguration" alt=""/>
+<tr><td><img src="inherit_graph_40.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8SmsConfiguration" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8SmsConfiguration" id="aAdeNote_8Infrastructure_8Utilities_8SmsConfiguration">
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfiguration.html" title=" " alt="" coords="5,5,235,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_37.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8UserId" alt=""/>
+<tr><td><img src="inherit_graph_41.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8UserId" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8UserId" id="aAdeNote_8Infrastructure_8Utilities_8UserId">
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserId.html" title=" " alt="" coords="5,5,235,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_38.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8UserIdConverter" alt=""/>
+<tr><td><img src="inherit_graph_42.png" border="0" usemap="#aAdeNote_8Infrastructure_8Utilities_8UserIdConverter" alt=""/>
 <map name="aAdeNote_8Infrastructure_8Utilities_8UserIdConverter" id="aAdeNote_8Infrastructure_8Utilities_8UserIdConverter">
 <area shape="rect" title=" " alt="" coords="5,13,128,39"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdConverter.html" title="A custom converter to convert the guid into an object" alt="" coords="176,5,405,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_39.png" border="0" usemap="#aAdeNote_8Migrations_8addsalt" alt=""/>
-<map name="aAdeNote_8Migrations_8addsalt" id="aAdeNote_8Migrations_8addsalt">
-<area shape="rect" title=" " alt="" coords="5,107,89,133"/>
-<area shape="rect" href="classAdeNote_1_1Migrations_1_1addsalt.html" title=" " alt="" coords="179,5,382,32"/>
-<area shape="rect" href="classAdeNote_1_1Migrations_1_1firstmigration.html" title=" " alt="" coords="159,56,402,83"/>
-<area shape="rect" href="classAdeNote_1_1Migrations_1_1saltoptional.html" title=" " alt="" coords="165,107,397,133"/>
-<area shape="rect" href="classAdeNote_1_1Migrations_1_1secondmigration.html" title=" " alt="" coords="149,157,413,184"/>
-<area shape="rect" href="classAdeNote_1_1Migrations_1_1setuptexttranslation.html" title=" " alt="" coords="137,208,424,235"/>
+<tr><td><img src="inherit_graph_43.png" border="0" usemap="#aAdeNote_8Migrations_8addrole" alt=""/>
+<map name="aAdeNote_8Migrations_8addrole" id="aAdeNote_8Migrations_8addrole">
+<area shape="rect" title=" " alt="" coords="5,132,89,159"/>
+<area shape="rect" href="classAdeNote_1_1Migrations_1_1addrole.html" title=" " alt="" coords="179,5,383,32"/>
+<area shape="rect" href="classAdeNote_1_1Migrations_1_1addsalt.html" title=" " alt="" coords="179,56,382,83"/>
+<area shape="rect" href="classAdeNote_1_1Migrations_1_1firstmigration.html" title=" " alt="" coords="159,107,402,133"/>
+<area shape="rect" href="classAdeNote_1_1Migrations_1_1saltoptional.html" title=" " alt="" coords="165,157,397,184"/>
+<area shape="rect" href="classAdeNote_1_1Migrations_1_1secondmigration.html" title=" " alt="" coords="149,208,413,235"/>
+<area shape="rect" href="classAdeNote_1_1Migrations_1_1setuptexttranslation.html" title=" " alt="" coords="137,259,424,285"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_40.png" border="0" usemap="#aAdeNote_8Migrations_8NoteDbContextModelSnapshot" alt=""/>
+<tr><td><img src="inherit_graph_44.png" border="0" usemap="#aAdeNote_8Migrations_8NoteDbContextModelSnapshot" alt=""/>
 <map name="aAdeNote_8Migrations_8NoteDbContextModelSnapshot" id="aAdeNote_8Migrations_8NoteDbContextModelSnapshot">
 <area shape="rect" title=" " alt="" coords="5,13,128,39"/>
 <area shape="rect" href="classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html" title=" " alt="" coords="176,5,380,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_41.png" border="0" usemap="#aAdeNote_8Models_8BaseEntity" alt=""/>
+<tr><td><img src="inherit_graph_45.png" border="0" usemap="#aAdeNote_8Models_8BaseEntity" alt=""/>
 <map name="aAdeNote_8Models_8BaseEntity" id="aAdeNote_8Models_8BaseEntity">
 <area shape="rect" href="classAdeNote_1_1Models_1_1BaseEntity.html" title=" " alt="" coords="5,183,208,209"/>
 <area shape="rect" href="classAdeNote_1_1Models_1_1BaseClass.html" title="A base class that includes the id" alt="" coords="265,107,465,133"/>
@@ -363,98 +388,103 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 <area shape="rect" title=" " alt="" coords="309,157,422,184"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_42.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8AuthenticatorDTO" alt=""/>
+<tr><td><img src="inherit_graph_46.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8AuthenticatorDTO" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8AuthenticatorDTO" id="aAdeNote_8Models_8DTOs_8AuthenticatorDTO">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html" title="Displays the authenticator details" alt="" coords="5,5,293,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_43.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8BookCreateDTO" alt=""/>
+<tr><td><img src="inherit_graph_47.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8BookCreateDTO" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8BookCreateDTO" id="aAdeNote_8Models_8DTOs_8BookCreateDTO">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1BookCreateDTO.html" title="A DTO that is used to create a new book" alt="" coords="5,5,211,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_44.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8BookDTO" alt=""/>
+<tr><td><img src="inherit_graph_48.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8BookDTO" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8BookDTO" id="aAdeNote_8Models_8DTOs_8BookDTO">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1BookDTO.html" title="DTO to display the book" alt="" coords="5,5,239,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_45.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8BookPages" alt=""/>
+<tr><td><img src="inherit_graph_49.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8BookPages" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8BookPages" id="aAdeNote_8Models_8DTOs_8BookPages">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1BookPages.html" title="DTO to display pages in a book" alt="" coords="5,5,211,47"/>
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1PageDTO.html" title="DTO to display a page" alt="" coords="259,13,489,39"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_46.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8BookUpdateDTO" alt=""/>
+<tr><td><img src="inherit_graph_50.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8BookUpdateDTO" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8BookUpdateDTO" id="aAdeNote_8Models_8DTOs_8BookUpdateDTO">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1BookUpdateDTO.html" title="DTO to update a book" alt="" coords="5,5,211,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_47.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8ChangePasswordDTO" alt=""/>
+<tr><td><img src="inherit_graph_51.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8ChangePasswordDTO" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8ChangePasswordDTO" id="aAdeNote_8Models_8DTOs_8ChangePasswordDTO">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO.html" title=" " alt="" coords="5,5,227,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_48.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8CreateNoteDTO" alt=""/>
+<tr><td><img src="inherit_graph_52.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8CreateNoteDTO" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8CreateNoteDTO" id="aAdeNote_8Models_8DTOs_8CreateNoteDTO">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO.html" title="DTO to create a note" alt="" coords="5,5,220,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_49.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8CreateUserDTO" alt=""/>
+<tr><td><img src="inherit_graph_53.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8CreateUserDTO" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8CreateUserDTO" id="aAdeNote_8Models_8DTOs_8CreateUserDTO">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO.html" title=" " alt="" coords="5,5,220,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_50.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8DetailsDTO" alt=""/>
+<tr><td><img src="inherit_graph_54.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8DetailsDTO" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8DetailsDTO" id="aAdeNote_8Models_8DTOs_8DetailsDTO">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO.html" title="Displays the user details" alt="" coords="5,5,252,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_51.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8ImportBookDto" alt=""/>
+<tr><td><img src="inherit_graph_55.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8ImportBookDto" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8ImportBookDto" id="aAdeNote_8Models_8DTOs_8ImportBookDto">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1ImportBookDto.html" title=" " alt="" coords="5,5,220,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_52.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8LabelCreateDTO" alt=""/>
+<tr><td><img src="inherit_graph_56.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8LabelCreateDTO" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8LabelCreateDTO" id="aAdeNote_8Models_8DTOs_8LabelCreateDTO">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO.html" title="A DTO to create a label" alt="" coords="5,5,212,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_53.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8LabelDTO" alt=""/>
+<tr><td><img src="inherit_graph_57.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8LabelDTO" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8LabelDTO" id="aAdeNote_8Models_8DTOs_8LabelDTO">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1LabelDTO.html" title="DTO To display the label" alt="" coords="5,5,240,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_54.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8LabelUpdateDTO" alt=""/>
+<tr><td><img src="inherit_graph_58.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8LabelUpdateDTO" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8LabelUpdateDTO" id="aAdeNote_8Models_8DTOs_8LabelUpdateDTO">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1LabelUpdateDTO.html" title="DTO to update a label" alt="" coords="5,5,212,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_55.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8LoginDTO" alt=""/>
+<tr><td><img src="inherit_graph_59.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8LoginDTO" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8LoginDTO" id="aAdeNote_8Models_8DTOs_8LoginDTO">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1LoginDTO.html" title=" " alt="" coords="5,5,240,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_56.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8PageCreateDTO" alt=""/>
+<tr><td><img src="inherit_graph_60.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8PageCreateDTO" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8PageCreateDTO" id="aAdeNote_8Models_8DTOs_8PageCreateDTO">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO.html" title="A DTO to create a page" alt="" coords="5,5,208,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_57.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8PageUpdateDTO" alt=""/>
+<tr><td><img src="inherit_graph_61.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8PageUpdateDTO" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8PageUpdateDTO" id="aAdeNote_8Models_8DTOs_8PageUpdateDTO">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO.html" title="DTO to update a page" alt="" coords="5,5,208,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_58.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8TranslationDto" alt=""/>
+<tr><td><img src="inherit_graph_62.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8StatisticsDto" alt=""/>
+<map name="aAdeNote_8Models_8DTOs_8StatisticsDto" id="aAdeNote_8Models_8DTOs_8StatisticsDto">
+<area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto.html" title=" " alt="" coords="5,5,260,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_63.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8TranslationDto" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8TranslationDto" id="aAdeNote_8Models_8DTOs_8TranslationDto">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html" title=" " alt="" coords="5,5,272,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_59.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8UserDTO" alt=""/>
+<tr><td><img src="inherit_graph_64.png" border="0" usemap="#aAdeNote_8Models_8DTOs_8UserDTO" alt=""/>
 <map name="aAdeNote_8Models_8DTOs_8UserDTO" id="aAdeNote_8Models_8DTOs_8UserDTO">
 <area shape="rect" href="classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html" title="Displays the details of the user" alt="" coords="5,5,236,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_60.png" border="0" usemap="#aAdeNote_8Models_8LabelPage" alt=""/>
+<tr><td><img src="inherit_graph_65.png" border="0" usemap="#aAdeNote_8Models_8LabelPage" alt=""/>
 <map name="aAdeNote_8Models_8LabelPage" id="aAdeNote_8Models_8LabelPage">
 <area shape="rect" href="classAdeNote_1_1Models_1_1LabelPage.html" title="A model to handle the many to many relationship" alt="" coords="5,5,204,32"/>
 </map>

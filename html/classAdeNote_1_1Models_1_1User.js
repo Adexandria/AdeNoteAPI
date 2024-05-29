@@ -2,6 +2,7 @@ var classAdeNote_1_1Models_1_1User =
 [
     [ "User", "classAdeNote_1_1Models_1_1User.html#a8da387320f79a0c282f37916b31153e0", null ],
     [ "User", "classAdeNote_1_1Models_1_1User.html#ad6a8489c09deaa6aa8efea2b55c04a39", null ],
+    [ "User", "classAdeNote_1_1Models_1_1User.html#a91c049c1a6f010a98aa9af0e06e513d6", null ],
     [ "ConfirmEmailVerification", "classAdeNote_1_1Models_1_1User.html#a9f4df5b45e25f4b1df03ecd7cbf4a569", null ],
     [ "ConfirmPhoneNumberVerification", "classAdeNote_1_1Models_1_1User.html#a7eccfd1ba9278a879df37c88bfb6c851", null ],
     [ "DisableTwoFactor", "classAdeNote_1_1Models_1_1User.html#ae1158620c8c888ca1f21a5589f0e8830", null ],
@@ -20,6 +21,7 @@ var classAdeNote_1_1Models_1_1User =
     [ "PhoneNumber", "classAdeNote_1_1Models_1_1User.html#a106f2b89a5d7da3cadb1e590ed677505", null ],
     [ "PhoneNumberConfirmed", "classAdeNote_1_1Models_1_1User.html#ad7b44de7a97e28a4e92a855f0cfbfe5d", null ],
     [ "RefreshToken", "classAdeNote_1_1Models_1_1User.html#a7894f4649c931ee1f2f82c9d5f958ce0", null ],
+    [ "Role", "classAdeNote_1_1Models_1_1User.html#a59fa268b6104ca4a1151193ad18d009d", null ],
     [ "Salt", "classAdeNote_1_1Models_1_1User.html#a06f04f85f2c84df53d9f64d411defbde", null ],
     [ "TwoFactorEnabled", "classAdeNote_1_1Models_1_1User.html#a7fdd6a0dbe0e155cb20ce4f07e8d7969", null ],
     [ "TwoFactorType", "classAdeNote_1_1Models_1_1User.html#a4dd8235d7c3a39f471a90d96e284fbe8", null ],

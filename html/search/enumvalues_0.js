@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['csv_1105',['csv',['../namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8a628cb5675ff524f3e719b7aa2e88fe3f',1,'AdeNote::Infrastructure::Utilities']]]
+  ['admin_1171',['Admin',['../namespaceAdeNote_1_1Models.html#a44d267b0992deac7399dae09f7647131ae3afed0047b08059d0fada10f400c1e5',1,'AdeNote::Models']]]
 ];

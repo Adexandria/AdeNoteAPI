@@ -7,6 +7,9 @@ var hierarchy =
     ] ],
     [ "AdeNote.Infrastructure.Extension.ActionResultExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension.html", null ],
     [ "AdeNote.Models.DTOs.AuthenticatorDTO", "classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html", null ],
+    [ "AuthorizationHandler", null, [
+      [ "AdeNote.Infrastructure.Utilities.RoleRequirementHandler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirementHandler.html", null ]
+    ] ],
     [ "AdeNote.Models.BaseEntity", "classAdeNote_1_1Models_1_1BaseEntity.html", [
       [ "AdeNote.Models.BaseClass", "classAdeNote_1_1Models_1_1BaseClass.html", [
         [ "AdeNote.Models.Book", "classAdeNote_1_1Models_1_1Book.html", null ],
@@ -29,6 +32,7 @@ var hierarchy =
       [ "AdeNote.Controllers.BaseController", "classAdeNote_1_1Controllers_1_1BaseController.html", [
         [ "AdeNote.Controllers.AuthenticationController", "classAdeNote_1_1Controllers_1_1AuthenticationController.html", null ],
         [ "AdeNote.Controllers.BookController", "classAdeNote_1_1Controllers_1_1BookController.html", null ],
+        [ "AdeNote.Controllers.DashboardController", "classAdeNote_1_1Controllers_1_1DashboardController.html", null ],
         [ "AdeNote.Controllers.LabelController", "classAdeNote_1_1Controllers_1_1LabelController.html", null ],
         [ "AdeNote.Controllers.PageController", "classAdeNote_1_1Controllers_1_1PageController.html", null ]
       ] ]
@@ -39,6 +43,7 @@ var hierarchy =
     [ "DbContext", null, [
       [ "AdeNote.Db.NoteDbContext", "classAdeNote_1_1Db_1_1NoteDbContext.html", null ]
     ] ],
+    [ "AdeNote.Infrastructure.Utilities.DefaultConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration.html", null ],
     [ "AdeNote.Models.DTOs.DetailsDTO", "classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO.html", null ],
     [ "AdeNote.Infrastructure.Utilities.Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email.html", null ],
     [ "AdeNote.Infrastructure.Utilities.EmailConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration.html", null ],
@@ -46,6 +51,9 @@ var hierarchy =
     [ "AdeNote.Infrastructure.Utilities.HangFireUserConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HangFireUserConfiguration.html", null ],
     [ "IApplicationUser", null, [
       [ "AdeNote.Models.User", "classAdeNote_1_1Models_1_1User.html", null ]
+    ] ],
+    [ "IAuthorizationRequirement", null, [
+      [ "AdeNote.Infrastructure.Utilities.RoleRequirement", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirement.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Services.IAuthService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html", [
       [ "AdeNote.Infrastructure.Services.AuthService", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html", null ]
@@ -73,6 +81,9 @@ var hierarchy =
     ] ],
     [ "AdeNote.Infrastructure.Services.IExportService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExportService.html", [
       [ "AdeNote.Infrastructure.Services.ExportService", "classAdeNote_1_1Infrastructure_1_1Services_1_1ExportService.html", null ]
+    ] ],
+    [ "AdeNote.Infrastructure.Services.IFileService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IFileService.html", [
+      [ "AdeNote.Infrastructure.Services.FileService", "classAdeNote_1_1Infrastructure_1_1Services_1_1FileService.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Repository.ILabelPageRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html", [
       [ "AdeNote.Infrastructure.Repository.LabelPageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html", null ]
@@ -153,6 +164,7 @@ var hierarchy =
     [ "AdeNote.Models.DTOs.LoginDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LoginDTO.html", null ],
     [ "AdeNote.Infrastructure.Extension.MappingService", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html", null ],
     [ "Migration", null, [
+      [ "AdeNote.Migrations.addrole", "classAdeNote_1_1Migrations_1_1addrole.html", null ],
       [ "AdeNote.Migrations.addsalt", "classAdeNote_1_1Migrations_1_1addsalt.html", null ],
       [ "AdeNote.Migrations.firstmigration", "classAdeNote_1_1Migrations_1_1firstmigration.html", null ],
       [ "AdeNote.Migrations.saltoptional", "classAdeNote_1_1Migrations_1_1saltoptional.html", null ],
@@ -175,6 +187,7 @@ var hierarchy =
     ] ],
     [ "AdeNote.Infrastructure.Utilities.Sms", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms.html", null ],
     [ "AdeNote.Infrastructure.Utilities.SmsConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfiguration.html", null ],
+    [ "AdeNote.Models.DTOs.StatisticsDto", "classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto.html", null ],
     [ "AdeNote.Models.DTOs.TranslationDto", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html", null ],
     [ "AdeNote.Models.DTOs.UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", null ],
     [ "AdeNote.Infrastructure.Utilities.UserId", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserId.html", null ],

@@ -307,87 +307,92 @@ $(document).ready(function(){initNavTree('NoteDbContextModelSnapshot_8cs_source.
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                    b.Property&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;PhoneNumberConfirmed&quot;</span>)</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                        .HasColumnType(<span class="stringliteral">&quot;bit&quot;</span>);</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                    b.Property&lt;<span class="keywordtype">string</span>&gt;(<span class="stringliteral">&quot;Salt&quot;</span>)</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                        .HasColumnType(<span class="stringliteral">&quot;nvarchar(max)&quot;</span>);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                    b.Property&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;TwoFactorEnabled&quot;</span>)</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                        .HasColumnType(<span class="stringliteral">&quot;bit&quot;</span>);</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                    b.Property&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;TwoFactorType&quot;</span>)</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                        .HasColumnType(<span class="stringliteral">&quot;int&quot;</span>);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                    b.Property&lt;<span class="keywordtype">string</span>&gt;(<span class="stringliteral">&quot;UserName&quot;</span>)</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                        .HasColumnType(<span class="stringliteral">&quot;nvarchar(max)&quot;</span>);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    b.HasKey(<span class="stringliteral">&quot;Id&quot;</span>);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                    b.Property&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;Role&quot;</span>)</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                        .ValueGeneratedOnAdd()</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                        .HasColumnType(<span class="stringliteral">&quot;int&quot;</span>)</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                        .HasDefaultValue(0);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                    b.Property&lt;<span class="keywordtype">string</span>&gt;(<span class="stringliteral">&quot;Salt&quot;</span>)</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                        .HasColumnType(<span class="stringliteral">&quot;nvarchar(max)&quot;</span>);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                    b.Property&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;TwoFactorEnabled&quot;</span>)</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                        .HasColumnType(<span class="stringliteral">&quot;bit&quot;</span>);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                    b.Property&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;TwoFactorType&quot;</span>)</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                        .HasColumnType(<span class="stringliteral">&quot;int&quot;</span>);</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                    b.ToTable(<span class="stringliteral">&quot;Users&quot;</span>);</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                });</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                    b.Property&lt;<span class="keywordtype">string</span>&gt;(<span class="stringliteral">&quot;UserName&quot;</span>)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                        .HasColumnType(<span class="stringliteral">&quot;nvarchar(max)&quot;</span>);</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            modelBuilder.Entity(<span class="stringliteral">&quot;AdeNote.Models.Book&quot;</span>, b =&gt;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                {</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                    b.HasOne(<span class="stringliteral">&quot;AdeNote.Models.User&quot;</span>, <span class="stringliteral">&quot;User&quot;</span>)</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                        .WithMany(<span class="stringliteral">&quot;Books&quot;</span>)</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                        .HasForeignKey(<span class="stringliteral">&quot;UserId&quot;</span>)</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                        .OnDelete(DeleteBehavior.Cascade)</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                        .IsRequired();</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                    b.Navigation(<span class="stringliteral">&quot;User&quot;</span>);</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                });</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            modelBuilder.Entity(<span class="stringliteral">&quot;AdeNote.Models.LabelPage&quot;</span>, b =&gt;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                {</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                    b.HasOne(<span class="stringliteral">&quot;AdeNote.Models.Label&quot;</span>, <span class="keyword">null</span>)</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                        .WithMany()</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                        .HasForeignKey(<span class="stringliteral">&quot;LabelId&quot;</span>)</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                        .OnDelete(DeleteBehavior.Cascade)</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                        .IsRequired();</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                    b.HasOne(<span class="stringliteral">&quot;AdeNote.Models.Page&quot;</span>, <span class="keyword">null</span>)</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                        .WithMany()</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                        .HasForeignKey(<span class="stringliteral">&quot;PageId&quot;</span>)</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                        .OnDelete(DeleteBehavior.Cascade)</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                        .IsRequired();</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                });</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            modelBuilder.Entity(<span class="stringliteral">&quot;AdeNote.Models.Page&quot;</span>, b =&gt;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                {</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                    b.HasOne(<span class="stringliteral">&quot;AdeNote.Models.Book&quot;</span>, <span class="stringliteral">&quot;Book&quot;</span>)</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                        .WithMany(<span class="stringliteral">&quot;Pages&quot;</span>)</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                        .HasForeignKey(<span class="stringliteral">&quot;BookId&quot;</span>)</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                        .OnDelete(DeleteBehavior.Cascade)</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                        .IsRequired();</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                    b.Navigation(<span class="stringliteral">&quot;Book&quot;</span>);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                });</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            modelBuilder.Entity(<span class="stringliteral">&quot;AdeNote.Models.RefreshToken&quot;</span>, b =&gt;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                    b.HasOne(<span class="stringliteral">&quot;AdeNote.Models.User&quot;</span>, <span class="stringliteral">&quot;User&quot;</span>)</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                        .WithOne(<span class="stringliteral">&quot;RefreshToken&quot;</span>)</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                        .HasForeignKey(<span class="stringliteral">&quot;AdeNote.Models.RefreshToken&quot;</span>, <span class="stringliteral">&quot;UserId&quot;</span>)</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                        .OnDelete(DeleteBehavior.Cascade)</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                        .IsRequired();</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                    b.Navigation(<span class="stringliteral">&quot;User&quot;</span>);</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                });</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            modelBuilder.Entity(<span class="stringliteral">&quot;AdeNote.Models.Book&quot;</span>, b =&gt;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                    b.Navigation(<span class="stringliteral">&quot;Pages&quot;</span>);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                    b.HasKey(<span class="stringliteral">&quot;Id&quot;</span>);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                    b.ToTable(<span class="stringliteral">&quot;Users&quot;</span>);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                });</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            modelBuilder.Entity(<span class="stringliteral">&quot;AdeNote.Models.Book&quot;</span>, b =&gt;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                    b.HasOne(<span class="stringliteral">&quot;AdeNote.Models.User&quot;</span>, <span class="stringliteral">&quot;User&quot;</span>)</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                        .WithMany(<span class="stringliteral">&quot;Books&quot;</span>)</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                        .HasForeignKey(<span class="stringliteral">&quot;UserId&quot;</span>)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                        .OnDelete(DeleteBehavior.Cascade)</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                        .IsRequired();</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                    b.Navigation(<span class="stringliteral">&quot;User&quot;</span>);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                });</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            modelBuilder.Entity(<span class="stringliteral">&quot;AdeNote.Models.LabelPage&quot;</span>, b =&gt;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                    b.HasOne(<span class="stringliteral">&quot;AdeNote.Models.Label&quot;</span>, <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                        .WithMany()</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                        .HasForeignKey(<span class="stringliteral">&quot;LabelId&quot;</span>)</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                        .OnDelete(DeleteBehavior.Cascade)</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                        .IsRequired();</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                    b.HasOne(<span class="stringliteral">&quot;AdeNote.Models.Page&quot;</span>, <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                        .WithMany()</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                        .HasForeignKey(<span class="stringliteral">&quot;PageId&quot;</span>)</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                        .OnDelete(DeleteBehavior.Cascade)</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                        .IsRequired();</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                });</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            modelBuilder.Entity(<span class="stringliteral">&quot;AdeNote.Models.Page&quot;</span>, b =&gt;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                    b.HasOne(<span class="stringliteral">&quot;AdeNote.Models.Book&quot;</span>, <span class="stringliteral">&quot;Book&quot;</span>)</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                        .WithMany(<span class="stringliteral">&quot;Pages&quot;</span>)</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                        .HasForeignKey(<span class="stringliteral">&quot;BookId&quot;</span>)</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                        .OnDelete(DeleteBehavior.Cascade)</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                        .IsRequired();</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                    b.Navigation(<span class="stringliteral">&quot;Book&quot;</span>);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                });</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            modelBuilder.Entity(<span class="stringliteral">&quot;AdeNote.Models.RefreshToken&quot;</span>, b =&gt;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                    b.HasOne(<span class="stringliteral">&quot;AdeNote.Models.User&quot;</span>, <span class="stringliteral">&quot;User&quot;</span>)</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                        .WithOne(<span class="stringliteral">&quot;RefreshToken&quot;</span>)</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                        .HasForeignKey(<span class="stringliteral">&quot;AdeNote.Models.RefreshToken&quot;</span>, <span class="stringliteral">&quot;UserId&quot;</span>)</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                        .OnDelete(DeleteBehavior.Cascade)</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                        .IsRequired();</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                    b.Navigation(<span class="stringliteral">&quot;User&quot;</span>);</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                });</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            modelBuilder.Entity(<span class="stringliteral">&quot;AdeNote.Models.User&quot;</span>, b =&gt;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            modelBuilder.Entity(<span class="stringliteral">&quot;AdeNote.Models.Book&quot;</span>, b =&gt;</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                {</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                    b.Navigation(<span class="stringliteral">&quot;Books&quot;</span>);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                    b.Navigation(<span class="stringliteral">&quot;RefreshToken&quot;</span>)</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                        .IsRequired();</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                });</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor">#pragma warning restore 612, 618</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        }</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    }</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;}</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                    b.Navigation(<span class="stringliteral">&quot;Pages&quot;</span>);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                });</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            modelBuilder.Entity(<span class="stringliteral">&quot;AdeNote.Models.User&quot;</span>, b =&gt;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                    b.Navigation(<span class="stringliteral">&quot;Books&quot;</span>);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                    b.Navigation(<span class="stringliteral">&quot;RefreshToken&quot;</span>)</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                        .IsRequired();</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                });</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="preprocessor">#pragma warning restore 612, 618</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;}</div>
 <div class="ttc" id="aclassAdeNote_1_1Db_1_1NoteDbContext_html"><div class="ttname"><a href="classAdeNote_1_1Db_1_1NoteDbContext.html">AdeNote.Db.NoteDbContext</a></div><div class="ttdoc">Handles the transactions made to the database</div><div class="ttdef"><b>Definition:</b> <a href="NoteDbContext_8cs_source.html#l00009">NoteDbContext.cs:10</a></div></div>
 <div class="ttc" id="aclassAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot_html"><div class="ttname"><a href="classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html">AdeNote.Migrations.NoteDbContextModelSnapshot</a></div><div class="ttdef"><b>Definition:</b> <a href="NoteDbContextModelSnapshot_8cs_source.html#l00014">NoteDbContextModelSnapshot.cs:15</a></div></div>
 <div class="ttc" id="aclassAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot_html_aadf63f2258fc377d5d82f90a31be897e"><div class="ttname"><a href="classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html#aadf63f2258fc377d5d82f90a31be897e">AdeNote.Migrations.NoteDbContextModelSnapshot.BuildModel</a></div><div class="ttdeci">override void BuildModel(ModelBuilder modelBuilder)</div><div class="ttdef"><b>Definition:</b> <a href="NoteDbContextModelSnapshot_8cs_source.html#l00016">NoteDbContextModelSnapshot.cs:16</a></div></div>

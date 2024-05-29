@@ -118,6 +118,8 @@ Collaboration diagram for AdeNote.Models.User:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad6a8489c09deaa6aa8efea2b55c04a39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Models_1_1User.html#ad6a8489c09deaa6aa8efea2b55c04a39">User</a> (string firstName, string lastName, string email, <a class="el" href="namespaceAdeNote_1_1Models.html#a0ad63207f9f4ee5ba4893989f6321597">AuthType</a> authType)</td></tr>
 <tr class="separator:ad6a8489c09deaa6aa8efea2b55c04a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91c049c1a6f010a98aa9af0e06e513d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Models_1_1User.html#a91c049c1a6f010a98aa9af0e06e513d6">User</a> (string firstName, string lastName, string email, <a class="el" href="namespaceAdeNote_1_1Models.html#a0ad63207f9f4ee5ba4893989f6321597">AuthType</a> authType, <a class="el" href="namespaceAdeNote_1_1Models.html#a44d267b0992deac7399dae09f7647131">Role</a> role)</td></tr>
+<tr class="separator:a91c049c1a6f010a98aa9af0e06e513d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5f85ea7c5fa54941edb9b03aeaafa47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Models_1_1User.html#ac5f85ea7c5fa54941edb9b03aeaafa47">EnableTwoFactor</a> (<a class="el" href="namespaceAdeNote_1_1Models.html#a59a9d6cd7df46cfb5727610aa214e751">MFAType</a> twoFactorType, string authenticatorKey=null)</td></tr>
 <tr class="separator:ac5f85ea7c5fa54941edb9b03aeaafa47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1158620c8c888ca1f21a5589f0e8830"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Models_1_1User.html#ae1158620c8c888ca1f21a5589f0e8830">DisableTwoFactor</a> ()</td></tr>
@@ -170,6 +172,8 @@ Properties</h2></td></tr>
 <tr class="separator:a0abb3b38ddb288c5087f1579ec157181"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06f04f85f2c84df53d9f64d411defbde"><td class="memItemLeft" align="right" valign="top">string?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Models_1_1User.html#a06f04f85f2c84df53d9f64d411defbde">Salt</a><code> [get, set]</code></td></tr>
 <tr class="separator:a06f04f85f2c84df53d9f64d411defbde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59fa268b6104ca4a1151193ad18d009d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceAdeNote_1_1Models.html#a44d267b0992deac7399dae09f7647131">Role</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Models_1_1User.html#a59fa268b6104ca4a1151193ad18d009d">Role</a><code> [get, set]</code></td></tr>
+<tr class="separator:a59fa268b6104ca4a1151193ad18d009d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classAdeNote_1_1Models_1_1BaseClass"><td colspan="2" onclick="javascript:toggleInherit('properties_classAdeNote_1_1Models_1_1BaseClass')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classAdeNote_1_1Models_1_1BaseClass.html">AdeNote.Models.BaseClass</a></td></tr>
 <tr class="memitem:aa4c858bada3808bdddbbea45dc077ca9 inherit properties_classAdeNote_1_1Models_1_1BaseClass"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Models_1_1BaseClass.html#aa4c858bada3808bdddbbea45dc077ca9">Created</a><code> [get, set]</code></td></tr>
 <tr class="separator:aa4c858bada3808bdddbbea45dc077ca9 inherit properties_classAdeNote_1_1Models_1_1BaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,10 +186,10 @@ Properties</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00008">8</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00006">6</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8da387320f79a0c282f37916b31153e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8da387320f79a0c282f37916b31153e0">&#9670;&nbsp;</a></span>User() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8da387320f79a0c282f37916b31153e0">&#9670;&nbsp;</a></span>User() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,12 +211,12 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00010">10</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00008">8</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
 <a id="ad6a8489c09deaa6aa8efea2b55c04a39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6a8489c09deaa6aa8efea2b55c04a39">&#9670;&nbsp;</a></span>User() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6a8489c09deaa6aa8efea2b55c04a39">&#9670;&nbsp;</a></span>User() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,7 +253,55 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00012">12</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00010">10</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+
+</div>
+</div>
+<a id="a91c049c1a6f010a98aa9af0e06e513d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91c049c1a6f010a98aa9af0e06e513d6">&#9670;&nbsp;</a></span>User() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AdeNote.Models.User.User </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>firstName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>lastName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceAdeNote_1_1Models.html#a0ad63207f9f4ee5ba4893989f6321597">AuthType</a>&#160;</td>
+          <td class="paramname"><em>authType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceAdeNote_1_1Models.html#a44d267b0992deac7399dae09f7647131">Role</a>&#160;</td>
+          <td class="paramname"><em>role</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00019">19</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -269,7 +321,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00041">41</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00047">47</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -288,7 +340,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00046">46</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00052">52</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -307,7 +359,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00028">28</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00034">34</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -326,7 +378,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00051">51</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00057">57</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -356,7 +408,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00021">21</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00027">27</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -386,7 +438,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00035">35</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00041">41</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -411,7 +463,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00070">70</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00076">76</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -435,7 +487,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00068">68</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00074">74</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -459,7 +511,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00071">71</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00077">77</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -483,7 +535,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00060">60</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00066">66</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -507,7 +559,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00061">61</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00067">67</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -531,7 +583,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00057">57</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00063">63</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -555,7 +607,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00058">58</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00064">64</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -579,7 +631,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00069">69</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00075">75</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -603,7 +655,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00062">62</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00068">68</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -627,7 +679,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00064">64</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00070">70</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -651,7 +703,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00065">65</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00071">71</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -675,7 +727,31 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00063">63</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00069">69</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+
+</div>
+</div>
+<a id="a59fa268b6104ca4a1151193ad18d009d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59fa268b6104ca4a1151193ad18d009d">&#9670;&nbsp;</a></span>Role</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceAdeNote_1_1Models.html#a44d267b0992deac7399dae09f7647131">Role</a> AdeNote.Models.User.Role</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00079">79</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -699,7 +775,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00072">72</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00078">78</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -723,7 +799,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00066">66</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00072">72</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -747,7 +823,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00067">67</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00073">73</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>
@@ -771,7 +847,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00059">59</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="User_8cs_source.html#l00065">65</a> of file <a class="el" href="User_8cs_source.html">User.cs</a>.</p>
 
 </div>
 </div>

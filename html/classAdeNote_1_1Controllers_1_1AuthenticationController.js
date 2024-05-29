@@ -3,6 +3,7 @@ var classAdeNote_1_1Controllers_1_1AuthenticationController =
     [ "AuthenticationController", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a7354b88a099187053e87d2ec9507a9c5", null ],
     [ "AddPhoneNumber", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a923f2d0cdf5a7252471aa3b94585579e", null ],
     [ "AddToCookie", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#aaf76f4e77c5e74af2928f3296f7828ed", null ],
+    [ "AdminSignUp", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a09a9505159b5aeff56e78bf2c65e561a", null ],
     [ "ChangePassword", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#add190d7e53860d002072d8174f111568", null ],
     [ "GenerateMFARemovalToken", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a27723ecc823f1146179503edad6c8e57", null ],
     [ "GenerateResetToken", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a696fc310d5835c7cb5870b1caed88029", null ],

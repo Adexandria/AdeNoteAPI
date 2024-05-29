@@ -25,7 +25,7 @@ var classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService =
     [ "SetAuthenticator", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ab3d8cce57115793a8568081c7ebec059", null ],
     [ "SetPhoneNumber", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ade8c2ac4d2e33a21d0874f275df7992e", null ],
     [ "SetSmsAuthenticator", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a9c23471931d83f34211055e94d40264d", null ],
-    [ "SignUser", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ac75e841135019bf4c25c5e34b2408482", null ],
+    [ "SignUser", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#aa247a2a76c980363f6647cf09786d192", null ],
     [ "VerifyAuthenticatorOTP", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a0d2bea8f60ea1e908d615bba177d939e", null ],
     [ "VerifyPasswordlessToken", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a910b406a1cf910a11a2dd1e8ec01425f", null ],
     [ "VerifyPhoneNumber", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#adc3b060ec80b625a45eaece17c3539d0", null ],

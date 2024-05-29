@@ -15,6 +15,9 @@ var dir_ef5cfd776dbface43d78a691eb4c00b1 =
     [ "Database.cs", "Database_8cs.html", [
       [ "Database", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database" ]
     ] ],
+    [ "DefaultConfiguration.cs", "DefaultConfiguration_8cs.html", [
+      [ "DefaultConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration" ]
+    ] ],
     [ "Email.cs", "Email_8cs.html", [
       [ "Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email" ]
     ] ],
@@ -40,6 +43,12 @@ var dir_ef5cfd776dbface43d78a691eb4c00b1 =
     [ "MimeType.cs", "MimeType_8cs.html", "MimeType_8cs" ],
     [ "PasswordAttribute.cs", "PasswordAttribute_8cs.html", [
       [ "PasswordAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PasswordAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PasswordAttribute" ]
+    ] ],
+    [ "RoleRequirement.cs", "RoleRequirement_8cs.html", [
+      [ "RoleRequirement", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirement.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirement" ]
+    ] ],
+    [ "RoleRequirementHandler.cs", "RoleRequirementHandler_8cs.html", [
+      [ "RoleRequirementHandler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirementHandler.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirementHandler" ]
     ] ],
     [ "Sms.cs", "Sms_8cs.html", [
       [ "Sms", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms" ]

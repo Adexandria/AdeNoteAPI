@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['google_1108',['google',['../namespaceAdeNote_1_1Models.html#a59a9d6cd7df46cfb5727610aa214e751ac822c1b63853ed273b89687ac505f9fa',1,'AdeNote::Models']]]
+  ['emailconfirmationnotification_1174',['EmailConfirmationNotification',['../namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#aa7c8e05335ad88c8592fb2211f072980a0d50352249b36028bf80fda901528980',1,'AdeNote::Infrastructure::Utilities']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['html_1109',['html',['../namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a8b7d2f18ee1f790b13de05879712203cafc35fdc70d5fc69d269883a822c7a53e',1,'AdeNote.Infrastructure.Utilities.html()'],['../namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8afc35fdc70d5fc69d269883a822c7a53e',1,'AdeNote.Infrastructure.Utilities.html()']]]
+  ['google_1175',['google',['../namespaceAdeNote_1_1Models.html#a59a9d6cd7df46cfb5727610aa214e751ac822c1b63853ed273b89687ac505f9fa',1,'AdeNote::Models']]]
 ];
