@@ -5,7 +5,7 @@ namespace AdeNote.Infrastructure.Services
 {
     public interface ITicketService
     {
-        Task<ActionResult> CreateTicket(TicketStreamDto newTicket, Guid userId);
+        Task<ActionResult> CreateTicket(TicketStreamDto newTicket, string email);
 
         Task<ActionResult> UpdateTicket(string status, Guid adminId, Guid ticketId);
 
@@ -15,7 +15,7 @@ namespace AdeNote.Infrastructure.Services
 
         ActionResult<PaginatedResponse<TicketsDTO>> FetchAllTickets(int pageNumber, int pageSize);
 
-        ActionResult<PaginatedResponse<TicketsDTO>> FetchAllTickets(Guid userId, int pageNumber, int pageSize);
+        ActionResult<PaginatedResponse<TicketsDTO>> FetchAllTickets(string name, int pageNumber, int pageSize);
         ActionResult<PaginatedResponse<TicketsDTO>> SearchTickets(DateTime created, int pageNumber, int pageSize);
         ActionResult<PaginatedResponse<TicketsDTO>> SearchTickets(string status, int pageNumber, int pageSize);
     }

@@ -30,6 +30,14 @@ namespace AdeNote.Infrastructure.Extension
                 .Config;
         }
 
+
+        public static TypeAdapterConfig TicketConfig()
+        {
+            return TypeAdapterConfig<TicketStreamDto, Ticket>
+                .ForType().Map(d => d.Issue, s => s.Issue)
+                .Map(d => d.Description, s => s.Description)
+                .Config;
+        }
         /// <summary>
         /// Maps from page to PageDTO
         /// </summary>

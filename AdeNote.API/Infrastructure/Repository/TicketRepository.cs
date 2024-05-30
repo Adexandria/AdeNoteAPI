@@ -21,6 +21,11 @@ namespace AdeNote.Infrastructure.Repository
             return await SaveChanges<Ticket>();
         }
 
+        public int GetNumberOfTicketsByStatus(Status status)
+        {
+            return Db.Tickets.Where(s => s.Status == status).Count();
+        }
+
         public async Task<Ticket> GetTicket(Guid ticketId)
         {
            var ticket = await Db.Tickets
@@ -43,10 +48,10 @@ namespace AdeNote.Infrastructure.Repository
             return tickets;
         }
 
-        public IEnumerable<Ticket> GetTickets(Guid userId, int pageNumber, int pageSize)
+        public IEnumerable<Ticket> GetTickets(string name, int pageNumber, int pageSize)
         {
             var tickets = Db.Tickets
-                .Where(s=>s.Id == userId)
+                .Where(s=>s.User.FirstName.StartsWith(name) || s.User.LastName.StartsWith(name))
               .Include(s => s.User).OrderByDescending(s=>s.Modified)
               .Skip((pageNumber - 1) * pageSize).Take(pageSize);
 

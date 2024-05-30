@@ -1,4 +1,5 @@
-﻿using AdeNote.Infrastructure.Repository;
+﻿using AdeNote.Infrastructure.Extension;
+using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
@@ -13,21 +14,30 @@ namespace AdeNote.Infrastructure.Services
         {
                 
         }
-        public TicketService(ITicketRepository _ticketRepository, IBlobService _blobService)
+        public TicketService(ITicketRepository _ticketRepository, IUserRepository _userRepository , IBlobService _blobService)
         {
             ticketRepository = _ticketRepository;
+            userRepository = _userRepository;
             blobService = _blobService;
         }
-        public async Task<ActionResult> CreateTicket(TicketStreamDto newTicket, Guid userId)
+        public async Task<ActionResult> CreateTicket(TicketStreamDto newTicket, string email)
         {
             try
             {
-                if (userId == Guid.Empty)
-                    return ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest);
+                if (string.IsNullOrEmpty(email))
+                    return ActionResult.Failed("Invalid email", (int)HttpStatusCode.BadRequest);
 
-                var ticket = newTicket.Adapt<Ticket>();
 
-                ticket.Issuer = userId;
+                var currentUser =  await userRepository.GetUserByEmail(email);
+
+                if(currentUser == null)
+                {
+                    return ActionResult.Failed("Invalid user", StatusCodes.Status400BadRequest);
+                }
+
+                var ticket = newTicket.Adapt<Ticket>(MappingService.TicketConfig());
+
+                ticket.Issuer = currentUser.Id;
 
                 var commitStatus = await ticketRepository.Add(ticket);
 
@@ -59,7 +69,7 @@ namespace AdeNote.Infrastructure.Services
 
                 var tickets = ticketRepository.GetTickets(pageNumber, pageSize);
 
-                if (tickets == null)
+                if (!tickets.Any())
                     return ActionResult<PaginatedResponse<TicketsDTO>>.Failed("There are no tickets", StatusCodes.Status400BadRequest);
 
                 // Use mapster
@@ -84,19 +94,19 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public ActionResult<PaginatedResponse<TicketsDTO>> FetchAllTickets(Guid userId, int pageNumber, int pageSize)
+        public ActionResult<PaginatedResponse<TicketsDTO>> FetchAllTickets(string name, int pageNumber, int pageSize)
         {
             try
             {
-                if (userId == Guid.Empty)
+                if (string.IsNullOrEmpty(name))
                     return ActionResult<PaginatedResponse<TicketsDTO>>.Failed("Invalid id", StatusCodes.Status400BadRequest);
 
                 if(pageNumber == 0 || pageSize == 0)
                     return ActionResult<PaginatedResponse<TicketsDTO>>.Failed("Invalid page number or page size", StatusCodes.Status400BadRequest);
 
-                var tickets = ticketRepository.GetTickets(userId, pageNumber, pageSize);
+                var tickets = ticketRepository.GetTickets(name, pageNumber, pageSize);
 
-                if (tickets == null)
+                if (!tickets.Any())
                     return ActionResult<PaginatedResponse<TicketsDTO>>.Failed("There are no tickets", StatusCodes.Status400BadRequest);
 
                 var currentTickets = tickets.Select(s =>
@@ -165,7 +175,7 @@ namespace AdeNote.Infrastructure.Services
 
                 var tickets = ticketRepository.SearchTickets(x => x.Created == created, pageNumber, pageSize);
 
-                if (tickets == null)
+                if (!tickets.Any())
                     return ActionResult<PaginatedResponse<TicketsDTO>>.Failed("There are no tickets", StatusCodes.Status400BadRequest);
 
                 var currentTickets = tickets.Select(s =>
@@ -210,7 +220,7 @@ namespace AdeNote.Infrastructure.Services
 
                 var tickets = ticketRepository.SearchTickets(x => x.Status == newStatus, pageNumber, pageSize);
 
-                if (tickets == null)
+                if (!tickets.Any())
                     return ActionResult<PaginatedResponse<TicketsDTO>>.Failed("There are no tickets", StatusCodes.Status400BadRequest);
 
                 var currentTickets = tickets.Select(s =>
@@ -256,7 +266,7 @@ namespace AdeNote.Infrastructure.Services
 
                 currentTicket.Status = newStatus;
 
-                var ticket = currentTicket.Adapt<Ticket>();
+                var ticket = currentTicket.Adapt<Ticket>(MappingService.TicketConfig());
 
                 var commitStatus = await ticketRepository.Update(ticket);
 
@@ -302,6 +312,7 @@ namespace AdeNote.Infrastructure.Services
 
 
         private readonly ITicketRepository ticketRepository;
+        private readonly IUserRepository userRepository;
         private readonly IBlobService blobService;
     }
 }

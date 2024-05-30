@@ -14,6 +14,8 @@ namespace AdeNote.Models
             Email = email;
             AuthenticationType = authType;
             Role = Role.User;
+            Created = DateTime.UtcNow;
+            Modified = DateTime.UtcNow;
         }
 
         public User(string firstName, string lastName, string email, AuthType authType, Role role)
@@ -23,6 +25,8 @@ namespace AdeNote.Models
             Email = email;
             AuthenticationType = authType;
             Role = role;
+            Created = DateTime.UtcNow;
+            Modified = DateTime.UtcNow;
         }
         public void EnableTwoFactor(MFAType twoFactorType, string authenticatorKey = null)
         {

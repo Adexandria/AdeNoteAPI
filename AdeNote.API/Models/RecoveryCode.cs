@@ -12,6 +12,7 @@ namespace AdeNote.Models
 
         public RecoveryCode(Guid userId)
         {
+            Id = Guid.NewGuid();
             UserId = userId;
             Codes = GenerateCodes();
         }
@@ -25,10 +26,14 @@ namespace AdeNote.Models
             {
                 var generatedCode = Guid.NewGuid().ToString("N")[..10];
 
-                var code = generatedCode.Insert(6, "-");
+                var code = generatedCode.Insert(5, "-");
 
+                if(i != 0)
+                {
+                    stringBuilder.Append(',');
+                }
                 stringBuilder.Append(code);
-                stringBuilder.Append(',');
+                
             }
 
             return stringBuilder.ToString();

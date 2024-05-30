@@ -26,6 +26,7 @@ namespace AdeNote.Infrastructure.Repository
             var user = await Db.Users.
                    AsNoTracking()
                    .Include(s=>s.RefreshToken)
+                   .Include(s => s.RecoveryCode)
                    .Where(s => s.Email == email)
                    .FirstOrDefaultAsync();
 
@@ -49,7 +50,7 @@ namespace AdeNote.Infrastructure.Repository
         public async Task<User> GetUserByEmail(string email)
         {
             var user = await Db.Users.
-                   AsNoTracking().Include(s=>s.RefreshToken).Where(s => s.Email == email).FirstOrDefaultAsync();
+                   AsNoTracking().Include(s=>s.RefreshToken).Include(s=>s.RecoveryCode).Where(s => s.Email == email).FirstOrDefaultAsync();
 
             return user;
         }
@@ -57,7 +58,7 @@ namespace AdeNote.Infrastructure.Repository
         public async Task<User> GetUser(Guid userId)
         {
             return await Db.Users.
-              AsNoTracking()
+              AsNoTracking().Include(s => s.RecoveryCode)
               .FirstOrDefaultAsync(x => x.Id == userId);
         }
 
@@ -90,7 +91,7 @@ namespace AdeNote.Infrastructure.Repository
 
         public bool IsExist(string email)
         {
-            return Db.Users.Any(s => s.Email == email);
+            return Db.Users.Any(s => s.Email == email);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
         }
 
         public int GetNumberOfUsers()

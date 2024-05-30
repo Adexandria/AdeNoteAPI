@@ -12,8 +12,6 @@ namespace AdeNote.Infrastructure.Services
 
         Task<ActionResult<User>> GetUser(string email);
 
-        ActionResult<StatisticsDto> GetStatistics();
-
         Task<ActionResult<UserDTO>> GetUser(Guid userId);
 
         Task<ActionResult> IsUserExist(string email);

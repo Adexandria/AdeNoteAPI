@@ -3,8 +3,6 @@ using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
-using Google.Authenticator;
-using System.Drawing;
 using System.Security.Claims;
 using System.Text;
 
@@ -40,7 +38,7 @@ namespace AdeNote.Infrastructure.Services
             IRefreshTokenRepository _refreshTokenRepository,
             IPasswordManager _passwordManager,
             ISmsService _smsService,
-            INotificationService notificationService)
+            INotificationService notificationService, IRecoveryCodeRepository _recoveryCodeRepository)
         {
             smsService = _smsService;
             key = _configuration["TwoFactorSecret"];
@@ -53,6 +51,7 @@ namespace AdeNote.Infrastructure.Services
             loginSecret = _configuration["LoginSecret"];
             _tokenProvider.SetTokenEncryptionKey(_configuration["TokenSecret"]);
             _notificationService = notificationService;
+            recoveryCodeRepository = _recoveryCodeRepository;
         }
 
         /// <summary>
@@ -603,7 +602,7 @@ namespace AdeNote.Infrastructure.Services
             return ActionResult.SuccessfulOperation();
         }
 
-        public async Task<ActionResult<string>> GenerateResetToken(Guid userId, string email)
+        public async Task<ActionResult<string>> GenerateResetPasswordToken(Guid userId, string email)
         {
             try
             {
@@ -699,7 +698,11 @@ namespace AdeNote.Infrastructure.Services
 
                 var result = await userRepository.Add(user);
 
-                if (!result)
+                var recoveryCode = new RecoveryCode(user.Id);
+
+                var response = await recoveryCodeRepository.Add(recoveryCode);
+
+                if (!result || !response)
                     return ActionResult<string>.Failed("Failed to remove user token", StatusCodes.Status400BadRequest);
 
                 if(authType != AuthType.local)
@@ -773,7 +776,7 @@ namespace AdeNote.Infrastructure.Services
                 }
 
                 var accessToken = tokenProvider.GenerateToken(new Dictionary<string, object>() { { "id", authenticatedUser.Id.ToString("N") },
-                { ClaimTypes.Email,authenticatedUser.Email} }, 10);
+                { ClaimTypes.Email,authenticatedUser.Email} , { ClaimTypes.Role,authenticatedUser.Role.ToString()} }, 10);
 
                 var refreshToken = tokenProvider.GenerateToken();
 
@@ -799,7 +802,7 @@ namespace AdeNote.Infrastructure.Services
             {
                 if(string.IsNullOrEmpty(refreshToken) || string.IsNullOrWhiteSpace(refreshToken))
                 {
-                    return ActionResult<string>.Failed("Invalid refresh token", StatusCodes.Status404NotFound);
+                    return ActionResult<string>.Failed("Invalid refresh token", StatusCodes.Status400BadRequest);
                 }
 
                 var userId = await refreshTokenRepository.GetUserByRefreshToken(refreshToken);
@@ -827,18 +830,18 @@ namespace AdeNote.Infrastructure.Services
             try
             {
                 if (userId == Guid.Empty)
-                    return ActionResult<string>.Failed("Invalid user id", StatusCodes.Status404NotFound);
+                    return ActionResult<string>.Failed("Invalid user id", StatusCodes.Status400BadRequest);
 
                 if (string.IsNullOrEmpty(email) || string.IsNullOrWhiteSpace(email))
                 {
-                    return ActionResult<string>.Failed("Invalid email", StatusCodes.Status404NotFound);
+                    return ActionResult<string>.Failed("Invalid email", StatusCodes.Status400BadRequest);
                 }
 
                 var user = await userRepository.GetUser(userId);
 
                 if (user == null)
                 {
-                    return ActionResult<string>.Failed("Invalid refresh token", StatusCodes.Status404NotFound);
+                    return ActionResult<string>.Failed("Invalid refresh token", StatusCodes.Status400BadRequest);
                 }
 
                 var accessToken = tokenProvider.GenerateToken(new Dictionary<string, object>() { { "id", user.Id.ToString("N") },
@@ -1004,7 +1007,7 @@ namespace AdeNote.Infrastructure.Services
                 }
 
                 var accessToken = tokenProvider.GenerateToken(new Dictionary<string, object>() { { "id", user.Id.ToString("N") },
-                    { ClaimTypes.Email, user.Email} }, 10);
+                    { ClaimTypes.Email, user.Email} , { ClaimTypes.Role, user.Role.ToString()} }, 10);
 
                 var refreshToken = tokenProvider.GenerateToken();
 
@@ -1014,7 +1017,7 @@ namespace AdeNote.Infrastructure.Services
                 var tokenResponse = await refreshTokenRepository.Add(newRefreshToken);
 
                 if (!tokenResponse)
-                    return ActionTokenResult<UserDTO>.Failed("Failed to login");
+                    return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
 
 
                 var authenticatedUser = new UserDTO(user.Id,user.FirstName,user.LastName,user.Email, isFirstTimeLogin ? user.RecoveryCode.Codes : null);
@@ -1026,6 +1029,100 @@ namespace AdeNote.Infrastructure.Services
                 return ActionTokenResult<UserDTO>.Failed(ex.Message);
             }
         }
+
+        public async Task<ActionTokenResult<UserDTO>> LoginUserByRecoveryCodes(string[] recoveryCodes)
+        {
+            if (recoveryCodes.Length == 0)
+                return ActionTokenResult<UserDTO>.Failed("Invalid recovery codes", StatusCodes.Status400BadRequest);
+
+            var recoveryCode = string.Join(',', recoveryCodes);
+
+            var currentCode = await recoveryCodeRepository.GetUserIdByRecoveryCodes(recoveryCode);
+
+            if(currentCode == null)
+            {
+                return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
+            }
+
+            var user = await userRepository.GetUser(currentCode.UserId);
+
+            if (user == null)
+            {
+                return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
+            }
+
+            await recoveryCodeRepository.Remove(currentCode);
+
+            var newRecoveryCode = new RecoveryCode(user.Id);
+
+            var codeResponse = await recoveryCodeRepository.Add(newRecoveryCode);
+
+            if (!codeResponse)
+            {
+                return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
+            }
+            if (user.LockoutEnabled)
+            {
+                return ActionTokenResult<UserDTO>.Failed("Account has been locked. Please contact admin", StatusCodes.Status400BadRequest);
+            }
+
+            var isFirstTimeLogin = user.RefreshToken == null;
+
+            if (user.RefreshToken != null)
+            {
+                await refreshTokenRepository.Remove(user.RefreshToken);
+            }
+
+            var accessToken = tokenProvider.GenerateToken(new Dictionary<string, object>() { { "id", user.Id.ToString("N") },
+                    { ClaimTypes.Email, user.Email} , { ClaimTypes.Role,user.Role.ToString()} }, 10);
+
+            var refreshToken = tokenProvider.GenerateToken();
+
+            var newRefreshToken = new RefreshToken(refreshToken, user.Id, DateTime.UtcNow.AddMonths(3));
+
+            var tokenResponse = await refreshTokenRepository.Add(newRefreshToken);
+
+            if (!tokenResponse)
+                return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
+
+            var authenticatedUser = new UserDTO(user.Id, user.FirstName, user.LastName, user.Email, newRecoveryCode.Codes );
+
+            return ActionTokenResult<UserDTO>.SuccessfulOperation(authenticatedUser, accessToken, refreshToken);
+        }
+
+
+
+        public async Task<ActionResult<string[]>> GenerateRecoveryCodes(Guid userId)
+        {
+            try
+            {
+                var currentUser = await userRepository.GetUser(userId);
+
+                if(currentUser == null)
+                {
+                    return ActionResult<string[]>.Failed("Invalid user", StatusCodes.Status404NotFound);
+                }
+
+                var recoveryCode =  new RecoveryCode(userId);
+
+                if(currentUser.RecoveryCode != null)
+                {
+                    await recoveryCodeRepository.Remove(currentUser.RecoveryCode);
+                }
+
+                var commitStatus = await recoveryCodeRepository.Add(recoveryCode);
+
+                if (!commitStatus) return ActionResult<string[]>.Failed("Failed to generate recovery codes", StatusCodes.Status400BadRequest);
+
+                return ActionResult<string[]>.SuccessfulOperation(recoveryCode.Codes.Split(','));
+            }
+            catch (Exception ex)
+            {
+                return ActionResult<string[]>.Failed(ex.Message);
+            }
+        }
+
+        
 
         /// <summary>
         /// Two factor authentication secret key
@@ -1058,6 +1155,6 @@ namespace AdeNote.Infrastructure.Services
 
         public INotificationService _notificationService;
 
-
+        public IRecoveryCodeRepository recoveryCodeRepository;
     }
 }

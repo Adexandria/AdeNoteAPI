@@ -1,5 +1,6 @@
 ﻿using AdeNote.Models;
 using Microsoft.EntityFrameworkCore;
+using Org.BouncyCastle.Bcpg.Sig;
 
 namespace AdeNote.Db
 {
@@ -45,6 +46,8 @@ namespace AdeNote.Db
 
         public DbSet<HangfireUser> HangfireUsers {  get; set; } 
 
+        public DbSet<RecoveryCode> RecoveryCodes { get; set; }
+
 
         /// <summary>
         /// An overriden method to handle the mapping of objects. \n
@@ -74,7 +77,9 @@ namespace AdeNote.Db
                 .HasOne(s=>s.User)
                 .WithMany(s => s.Tickets).HasForeignKey(s=>s.Issuer);
 
-
+            modelBuilder.Entity<RecoveryCode>()
+                .HasOne(s => s.User)
+                .WithOne(s => s.RecoveryCode).HasForeignKey("RecoveryCode", "UserId");
 
             modelBuilder.Entity<User>()
                 .HasOne(s => s.RecoveryCode)

@@ -21,14 +21,6 @@ namespace AdeNote.Infrastructure.Services
         }
 
 
-        public ActionResult<StatisticsDto> GetStatistics()
-        {
-            var noOfUsers = _userRepository.GetNumberOfUsers();
-
-            return ActionResult<StatisticsDto>.SuccessfulOperation( new StatisticsDto() { NumberOfUsers = noOfUsers });
-        }
-
-
         public async Task<ActionResult> UpdateUserPassword(Guid userId, string currentPassword,string password)
         {
             var currentUser = await _userRepository.GetUser(userId);
@@ -95,7 +87,7 @@ namespace AdeNote.Infrastructure.Services
             if (currentUser == null)
                 return ActionResult<UserDTO>.Failed("User doesn't exist", StatusCodes.Status404NotFound);
 
-            return ActionResult<UserDTO>.SuccessfulOperation(new UserDTO(userId, currentUser.FirstName,currentUser.LastName, currentUser.Email, currentUser.RecoveryCode.Codes));
+            return ActionResult<UserDTO>.SuccessfulOperation(new UserDTO(userId, currentUser.FirstName,currentUser.LastName, currentUser.Email, currentUser.RecoveryCode?.Codes));
         }
 
         public readonly IUserRepository _userRepository;

@@ -30,9 +30,9 @@ namespace AdeNote.Controllers
 
         [HttpGet("users")]
         [Authorize("Owner")]
-        public IActionResult GetUserTickets(Guid userId, int pageNumber = 1, int pageSize = 20)
+        public IActionResult GetUserTickets(string name, int pageNumber = 1, int pageSize = 20)
         {
-            var response = ticketService.FetchAllTickets(userId, pageNumber, pageSize);
+            var response = ticketService.FetchAllTickets(name, pageNumber, pageSize);
 
             return response.Response();
         }
@@ -65,16 +65,18 @@ namespace AdeNote.Controllers
         }
 
         [HttpPost]
-        [Authorize("User")]
-        public async Task<IActionResult> GenerateTickets(TicketCreateDto newTicket)
+        public async Task<IActionResult> GenerateTickets([FromForm]TicketCreateDto newTicket, string email)
         {
             var ms = new MemoryStream
             {
                 Position = 0
             };
 
-            await newTicket.Image?.CopyToAsync(ms);
-
+            if(newTicket.Image != null)
+            {
+                await newTicket.Image?.CopyToAsync(ms);
+            }
+           
             var ticket = new TicketStreamDto()
             { 
                 Description = newTicket.Description,
@@ -82,7 +84,7 @@ namespace AdeNote.Controllers
                 Issue = newTicket.Issue
             };
 
-            var response = await ticketService.CreateTicket(ticket, CurrentUser);
+            var response = await ticketService.CreateTicket(ticket, email);
 
             return response.Response();
         }

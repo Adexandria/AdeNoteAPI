@@ -2,7 +2,7 @@
 {
     public class Ticket : BaseClass
     {
-        protected Ticket()
+        public Ticket()
         {
             
         }
@@ -38,7 +38,7 @@
 
         public string? ImageUrl { get; set; }
 
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         public Guid? AdminId { get; set; }
     }

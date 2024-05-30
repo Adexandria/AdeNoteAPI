@@ -1,20 +1,26 @@
 ﻿using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Services;
 using AdeNote.Infrastructure.Utilities;
+using Asp.Versioning;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AdeNote.Controllers
 {
-    [Route("api/dashboard")]
+    [Route("api/v{version:apiVersion}/dashboard")]
+    [ApiVersion("1.0")]
     [ApiController]
     public class DashboardController : BaseController
     {
         private IUserService userService;
+        private readonly IStatisticsService statisticsService;
 
-        public DashboardController(IUserService _userService, IUserIdentity userIdentity) : base(userIdentity) 
+        public DashboardController(IUserService _userService,
+            IStatisticsService _statisticsService,
+            IUserIdentity userIdentity) : base(userIdentity) 
         {
            userService = _userService;
+            statisticsService = _statisticsService;
         }
 
 
@@ -22,7 +28,7 @@ namespace AdeNote.Controllers
         [Authorize("Owner")]
         public IActionResult GetActiveUsers()
         {
-            var response = userService.GetStatistics();
+            var response = statisticsService.GetStatistics();
             return response.Response();
         }
 
