@@ -26,7 +26,7 @@ namespace AdeNote.Controllers
 
         [HttpGet("admin")]
         [Authorize("Owner")]
-        public IActionResult GetActiveUsers()
+        public IActionResult GetStatistics()
         {
             var response = statisticsService.GetStatistics();
             return response.Response();
