@@ -5,5 +5,7 @@ var namespaceAdeNote_1_1Controllers =
     [ "BookController", "classAdeNote_1_1Controllers_1_1BookController.html", "classAdeNote_1_1Controllers_1_1BookController" ],
     [ "DashboardController", "classAdeNote_1_1Controllers_1_1DashboardController.html", "classAdeNote_1_1Controllers_1_1DashboardController" ],
     [ "LabelController", "classAdeNote_1_1Controllers_1_1LabelController.html", "classAdeNote_1_1Controllers_1_1LabelController" ],
-    [ "PageController", "classAdeNote_1_1Controllers_1_1PageController.html", "classAdeNote_1_1Controllers_1_1PageController" ]
+    [ "PageController", "classAdeNote_1_1Controllers_1_1PageController.html", "classAdeNote_1_1Controllers_1_1PageController" ],
+    [ "TicketController", "classAdeNote_1_1Controllers_1_1TicketController.html", "classAdeNote_1_1Controllers_1_1TicketController" ],
+    [ "UserController", "classAdeNote_1_1Controllers_1_1UserController.html", "classAdeNote_1_1Controllers_1_1UserController" ]
 ];

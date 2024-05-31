@@ -135,6 +135,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abe83dcfaffc9e7fd2acea7a3c547958e"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#abe83dcfaffc9e7fd2acea7a3c547958e">Login</a> ([FromQuery]string email)</td></tr>
 <tr class="memdesc:abe83dcfaffc9e7fd2acea7a3c547958e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logins user using passwordless method  <a href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#abe83dcfaffc9e7fd2acea7a3c547958e">More...</a><br /></td></tr>
 <tr class="separator:abe83dcfaffc9e7fd2acea7a3c547958e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a406c93773bc58dd740751681c0934e"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3a406c93773bc58dd740751681c0934e">LoginByRecoveryCodes</a> (string[] codes)</td></tr>
+<tr class="memdesc:a3a406c93773bc58dd740751681c0934e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logins user using recovery codes  <a href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3a406c93773bc58dd740751681c0934e">More...</a><br /></td></tr>
+<tr class="separator:a3a406c93773bc58dd740751681c0934e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f9c5c7f9a9a9e13446b3460ad8abf37"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9f9c5c7f9a9a9e13446b3460ad8abf37">VerifyPasswordlessToken</a> ([FromQuery] string token)</td></tr>
 <tr class="memdesc:a9f9c5c7f9a9a9e13446b3460ad8abf37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logins user using passwordless method  <a href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9f9c5c7f9a9a9e13446b3460ad8abf37">More...</a><br /></td></tr>
 <tr class="separator:a9f9c5c7f9a9a9e13446b3460ad8abf37"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,26 +148,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:add190d7e53860d002072d8174f111568"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change password  <a href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#add190d7e53860d002072d8174f111568">More...</a><br /></td></tr>
 <tr class="separator:add190d7e53860d002072d8174f111568"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac355a5462d55a447765c63b13431229b"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ac355a5462d55a447765c63b13431229b">ResetPassword</a> ([FromBody]string password,[FromQuery] string token)</td></tr>
-<tr class="memdesc:ac355a5462d55a447765c63b13431229b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset password  <a href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ac355a5462d55a447765c63b13431229b">More...</a><br /></td></tr>
+<tr class="memdesc:ac355a5462d55a447765c63b13431229b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset password using reset password token  <a href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ac355a5462d55a447765c63b13431229b">More...</a><br /></td></tr>
 <tr class="separator:ac355a5462d55a447765c63b13431229b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a696fc310d5835c7cb5870b1caed88029"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a696fc310d5835c7cb5870b1caed88029">GenerateResetToken</a> (string email)</td></tr>
-<tr class="memdesc:a696fc310d5835c7cb5870b1caed88029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate token  <a href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a696fc310d5835c7cb5870b1caed88029">More...</a><br /></td></tr>
-<tr class="separator:a696fc310d5835c7cb5870b1caed88029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a901c83387f0d2b7e1ae8c6e1823c0f9c"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a901c83387f0d2b7e1ae8c6e1823c0f9c">GenerateResetPasswordToken</a> (string email)</td></tr>
+<tr class="memdesc:a901c83387f0d2b7e1ae8c6e1823c0f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate reset password token  <a href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a901c83387f0d2b7e1ae8c6e1823c0f9c">More...</a><br /></td></tr>
+<tr class="separator:a901c83387f0d2b7e1ae8c6e1823c0f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48d8e946cb745f663395c743208b46d7"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a48d8e946cb745f663395c743208b46d7">GetAccessToken</a> ()</td></tr>
 <tr class="memdesc:a48d8e946cb745f663395c743208b46d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets access token using refresh token  <a href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a48d8e946cb745f663395c743208b46d7">More...</a><br /></td></tr>
 <tr class="separator:a48d8e946cb745f663395c743208b46d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcab0d745ea8985803931c8630630408"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#afcab0d745ea8985803931c8630630408">SetUpGoogleAuthenticator</a> ()</td></tr>
-<tr class="memdesc:afcab0d745ea8985803931c8630630408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up two factor authentication using google authenticator app  <a href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#afcab0d745ea8985803931c8630630408">More...</a><br /></td></tr>
-<tr class="separator:afcab0d745ea8985803931c8630630408"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab30f6d5eec51e4622c4ddfd5aad4d2f6"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ab30f6d5eec51e4622c4ddfd5aad4d2f6">SetUpSmsAuthenticator</a> ()</td></tr>
-<tr class="memdesc:ab30f6d5eec51e4622c4ddfd5aad4d2f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up two factor authentication using sms  <a href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ab30f6d5eec51e4622c4ddfd5aad4d2f6">More...</a><br /></td></tr>
-<tr class="separator:ab30f6d5eec51e4622c4ddfd5aad4d2f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a923f2d0cdf5a7252471aa3b94585579e"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a923f2d0cdf5a7252471aa3b94585579e">AddPhoneNumber</a> (string phoneNumber)</td></tr>
-<tr class="memdesc:a923f2d0cdf5a7252471aa3b94585579e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds phone number  <a href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a923f2d0cdf5a7252471aa3b94585579e">More...</a><br /></td></tr>
-<tr class="separator:a923f2d0cdf5a7252471aa3b94585579e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a898afbb1083814447509b28d58923782"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a898afbb1083814447509b28d58923782">VerifyPhoneNumber</a> (string verificationCode)</td></tr>
-<tr class="memdesc:a898afbb1083814447509b28d58923782"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies phone number  <a href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a898afbb1083814447509b28d58923782">More...</a><br /></td></tr>
-<tr class="separator:a898afbb1083814447509b28d58923782"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80937a23ac6f3818d63dbf13bc6f8b40"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a80937a23ac6f3818d63dbf13bc6f8b40">Verifyemail</a> (string verificationToken)</td></tr>
 <tr class="memdesc:a80937a23ac6f3818d63dbf13bc6f8b40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies email  <a href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a80937a23ac6f3818d63dbf13bc6f8b40">More...</a><br /></td></tr>
 <tr class="separator:a80937a23ac6f3818d63dbf13bc6f8b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -289,45 +280,6 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a923f2d0cdf5a7252471aa3b94585579e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a923f2d0cdf5a7252471aa3b94585579e">&#9670;&nbsp;</a></span>AddPhoneNumber()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.AuthenticationController.AddPhoneNumber </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>phoneNumber</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Adds phone number </p>
-<p>Sample request: </p><pre class="fragment">        POST /authentication/phonenumber
-</pre> <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">phoneNumber</td><td>User phone number</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>&lt;response code ="200"&gt; Returns if phone number was added/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
-
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00494">494</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1AuthenticationController_a923f2d0cdf5a7252471aa3b94585579e_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1AuthenticationController_a923f2d0cdf5a7252471aa3b94585579e_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a923f2d0cdf5a7252471aa3b94585579e_cgraph" id="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a923f2d0cdf5a7252471aa3b94585579e_cgraph">
-<area shape="rect" title="Adds phone number" alt="" coords="5,5,257,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a5bfedca5a816cc4c024d4852887fe189" title="Sets up phone number" alt="" coords="305,5,539,47"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="aaf76f4e77c5e74af2928f3296f7828ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf76f4e77c5e74af2928f3296f7828ed">&#9670;&nbsp;</a></span>AddToCookie()</h2>
 
@@ -378,19 +330,20 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00878">878</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00788">788</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Controllers_1_1AuthenticationController_aaf76f4e77c5e74af2928f3296f7828ed_icgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1AuthenticationController_aaf76f4e77c5e74af2928f3296f7828ed_icgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Controllers_1_1AuthenticationController_aaf76f4e77c5e74af2928f3296f7828ed_icgraph" id="aclassAdeNote_1_1Controllers_1_1AuthenticationController_aaf76f4e77c5e74af2928f3296f7828ed_icgraph">
 <area shape="rect" title="Add data to cookie" alt="" coords="605,136,857,177"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="305,37,557,79"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9f9c5c7f9a9a9e13446b3460ad8abf37" title="Logins user using passwordless method" alt="" coords="305,103,557,144"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ac6e29dec9bd50a10a1629d70231b7fc4" title="Verifies sms code" alt="" coords="305,168,557,209"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ab1fe105f9760c908a3b9782c2de84908" title="Verifies time based One time password" alt="" coords="305,233,557,275"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user" alt="" coords="5,5,257,47"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,71,257,112"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3a406c93773bc58dd740751681c0934e" title="Logins user using recovery codes" alt="" coords="305,5,557,47"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="305,71,557,112"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9f9c5c7f9a9a9e13446b3460ad8abf37" title="Logins user using passwordless method" alt="" coords="305,136,557,177"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ac6e29dec9bd50a10a1629d70231b7fc4" title="Verifies sms code" alt="" coords="305,201,557,243"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ab1fe105f9760c908a3b9782c2de84908" title="Verifies time based One time password" alt="" coords="305,267,557,308"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user" alt="" coords="5,39,257,80"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,104,257,145"/>
 </map>
 </div>
 
@@ -463,7 +416,7 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if password was changed successfully&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if user can't be found&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Action result</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00295">295</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00350">350</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -498,7 +451,7 @@ Here is the call graph for this function:</div>
 <p>&lt;response code ="200"&gt; Returns if multifactor authentication was disabled successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00833">833</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00743">743</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -511,14 +464,14 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a696fc310d5835c7cb5870b1caed88029"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a696fc310d5835c7cb5870b1caed88029">&#9670;&nbsp;</a></span>GenerateResetToken()</h2>
+<a id="a901c83387f0d2b7e1ae8c6e1823c0f9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a901c83387f0d2b7e1ae8c6e1823c0f9c">&#9670;&nbsp;</a></span>GenerateResetPasswordToken()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.AuthenticationController.GenerateResetToken </td>
+          <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.AuthenticationController.GenerateResetPasswordToken </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>email</em></td><td>)</td>
@@ -527,8 +480,8 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Generate token </p>
-<p>Sample request: </p><pre class="fragment">        POST /authentication/password/send-token
+<p>Generate reset password token </p>
+<p>Sample request: </p><pre class="fragment">        POST /authentication/reset-password-token
 </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">email</td><td>email of the user</td></tr>
@@ -537,15 +490,15 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if token was generated&lt;/response&gt; &lt;response code ="404"&gt; Returns if user can't be found&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Action result</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00352">352</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00407">407</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1AuthenticationController_a696fc310d5835c7cb5870b1caed88029_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1AuthenticationController_a696fc310d5835c7cb5870b1caed88029_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a696fc310d5835c7cb5870b1caed88029_cgraph" id="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a696fc310d5835c7cb5870b1caed88029_cgraph">
-<area shape="rect" title="Generate token" alt="" coords="5,39,257,80"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aea767e3bba531744d9d345053ea70641" title=" " alt="" coords="305,5,548,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a03ab9a9318120aaf87ccc2e60a82e445" title=" " alt="" coords="310,71,543,112"/>
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1AuthenticationController_a901c83387f0d2b7e1ae8c6e1823c0f9c_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1AuthenticationController_a901c83387f0d2b7e1ae8c6e1823c0f9c_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a901c83387f0d2b7e1ae8c6e1823c0f9c_cgraph" id="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a901c83387f0d2b7e1ae8c6e1823c0f9c_cgraph">
+<area shape="rect" title="Generate reset password token" alt="" coords="5,39,289,80"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#af6297ee0574880f09f584e28c681a8aa" title=" " alt="" coords="337,5,640,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a03ab9a9318120aaf87ccc2e60a82e445" title=" " alt="" coords="372,71,605,112"/>
 </map>
 </div>
 
@@ -567,11 +520,11 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Gets access token using refresh token </p>
-<p>Sample request: </p><pre class="fragment">        POST /authentication/token
+<p>Sample request: </p><pre class="fragment">        POST /authentication/access-token
 </pre> <dl class="section return"><dt>Returns</dt><dd>An access token</dd></dl>
 <p>&lt;response code ="200"&gt; Returns if logged in successfully&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; &lt;response code ="404"&gt; Returns if user can't be found&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Access token</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00384">384</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00439">439</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -601,10 +554,10 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Gets existing qr code </p>
-<p>Sample request </p><pre class="fragment">        GET /authentication/two-factor-authentication/app/qr-code
+<p>Sample request </p><pre class="fragment">        GET /authentication/two-factor-authentication/google/qr-code
 </pre> <p>&lt;response code ="200"&gt; Returns if google two factor authenticator was enabled for the user&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Qr ucode url</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00745">745</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00655">655</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -644,7 +597,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classAdeNote_1_1Controllers_1_1AuthenticationController_abe83dcfaffc9e7fd2acea7a3c547958e_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1AuthenticationController_abe83dcfaffc9e7fd2acea7a3c547958e_cgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Controllers_1_1AuthenticationController_abe83dcfaffc9e7fd2acea7a3c547958e_cgraph" id="aclassAdeNote_1_1Controllers_1_1AuthenticationController_abe83dcfaffc9e7fd2acea7a3c547958e_cgraph">
 <area shape="rect" title="Logins user using passwordless method" alt="" coords="5,5,257,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a05f9a37d44ea9f8f5e6915cb0944ace3" title=" " alt="" coords="305,5,539,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a9252c9c841e1e035a998502b30dc16bd" title=" " alt="" coords="305,5,565,47"/>
 </map>
 </div>
 
@@ -680,13 +633,52 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Controllers_1_1AuthenticationController_a69b35d627d7ed8fb1519152236986063_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1AuthenticationController_a69b35d627d7ed8fb1519152236986063_cgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a69b35d627d7ed8fb1519152236986063_cgraph" id="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a69b35d627d7ed8fb1519152236986063_cgraph">
-<area shape="rect" title="Logins user" alt="" coords="5,136,257,177"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="305,136,557,177"/>
+<area shape="rect" title="Logins user" alt="" coords="5,169,257,211"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="305,169,557,211"/>
 <area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#aaf76f4e77c5e74af2928f3296f7828ed" title="Add data to cookie" alt="" coords="609,5,861,47"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a777010bf07284b344981579b32dbd0ff" title=" " alt="" coords="618,71,851,112"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a597da2feeb46e66d1069f097333b6d87" title="Checks if MFA has been enabled for the user using user id." alt="" coords="605,136,864,177"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a05f9a37d44ea9f8f5e6915cb0944ace3" title=" " alt="" coords="618,201,851,243"/>
 <area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a5bc24a38f2a0d984148fd747b4d5c226" title=" " alt="" coords="609,267,861,308"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="614,332,855,373"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3a406c93773bc58dd740751681c0934e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a406c93773bc58dd740751681c0934e">&#9670;&nbsp;</a></span>LoginByRecoveryCodes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.AuthenticationController.LoginByRecoveryCodes </td>
+          <td>(</td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>codes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logins user using recovery codes </p>
+<p>Sample request: </p><pre class="fragment">        POST /authentication/login/recovery-codes
+</pre> <p>&lt;response code ="200"&gt; Returns if logged in successfully&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>A name and email</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00200">200</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1AuthenticationController_a3a406c93773bc58dd740751681c0934e_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1AuthenticationController_a3a406c93773bc58dd740751681c0934e_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a3a406c93773bc58dd740751681c0934e_cgraph" id="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a3a406c93773bc58dd740751681c0934e_cgraph">
+<area shape="rect" title="Logins user using recovery codes" alt="" coords="5,169,257,211"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#aaf76f4e77c5e74af2928f3296f7828ed" title="Add data to cookie" alt="" coords="325,5,577,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a777010bf07284b344981579b32dbd0ff" title=" " alt="" coords="334,71,567,112"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a597da2feeb46e66d1069f097333b6d87" title="Checks if MFA has been enabled for the user using user id." alt="" coords="321,136,580,177"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a726c478f3410e8230646323e91c9b3ed" title=" " alt="" coords="305,201,596,243"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a5bc24a38f2a0d984148fd747b4d5c226" title=" " alt="" coords="325,267,577,308"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="330,332,571,373"/>
 </map>
 </div>
 
@@ -710,21 +702,22 @@ Here is the call graph for this function:</div>
 <p>Logins user </p>
 <p>&lt;response code ="200"&gt; Returns if logged in successfully&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>A name and email</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00242">242</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00297">297</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Controllers_1_1AuthenticationController_afc6cbaaa9dd5257966347c086be6aa6e_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1AuthenticationController_afc6cbaaa9dd5257966347c086be6aa6e_cgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Controllers_1_1AuthenticationController_afc6cbaaa9dd5257966347c086be6aa6e_cgraph" id="aclassAdeNote_1_1Controllers_1_1AuthenticationController_afc6cbaaa9dd5257966347c086be6aa6e_cgraph">
-<area shape="rect" title="Logins user" alt="" coords="5,136,257,177"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a6807bc22822cd81764378182854bda9d" title=" " alt="" coords="315,71,548,112"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="305,136,557,177"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a3c807f2a5b09445f60b73178c942c24c" title=" " alt="" coords="315,201,548,243"/>
+<area shape="rect" title="Logins user" alt="" coords="5,169,257,211"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a6807bc22822cd81764378182854bda9d" title=" " alt="" coords="315,104,548,145"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="305,169,557,211"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a3c807f2a5b09445f60b73178c942c24c" title=" " alt="" coords="315,235,548,276"/>
 <area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#aaf76f4e77c5e74af2928f3296f7828ed" title="Add data to cookie" alt="" coords="609,5,861,47"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a777010bf07284b344981579b32dbd0ff" title=" " alt="" coords="618,71,851,112"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a597da2feeb46e66d1069f097333b6d87" title="Checks if MFA has been enabled for the user using user id." alt="" coords="605,136,864,177"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a05f9a37d44ea9f8f5e6915cb0944ace3" title=" " alt="" coords="618,201,851,243"/>
 <area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a5bc24a38f2a0d984148fd747b4d5c226" title=" " alt="" coords="609,267,861,308"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="614,332,855,373"/>
 </map>
 </div>
 
@@ -764,18 +757,19 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00904">904</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00814">814</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Controllers_1_1AuthenticationController_a3290db6b409ab3ee4c978f2b7d010b95_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1AuthenticationController_a3290db6b409ab3ee4c978f2b7d010b95_cgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a3290db6b409ab3ee4c978f2b7d010b95_cgraph" id="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a3290db6b409ab3ee4c978f2b7d010b95_cgraph">
-<area shape="rect" title=" " alt="" coords="5,136,257,177"/>
+<area shape="rect" title=" " alt="" coords="5,169,257,211"/>
 <area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#aaf76f4e77c5e74af2928f3296f7828ed" title="Add data to cookie" alt="" coords="309,5,561,47"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a777010bf07284b344981579b32dbd0ff" title=" " alt="" coords="318,71,551,112"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a597da2feeb46e66d1069f097333b6d87" title="Checks if MFA has been enabled for the user using user id." alt="" coords="305,136,564,177"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a05f9a37d44ea9f8f5e6915cb0944ace3" title=" " alt="" coords="318,201,551,243"/>
 <area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a5bc24a38f2a0d984148fd747b4d5c226" title=" " alt="" coords="309,267,561,308"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="314,332,555,373"/>
 </map>
 </div>
 <div class="dynheader">
@@ -810,7 +804,7 @@ Here is the caller graph for this function:</div>
 <p>Sample request </p><pre class="fragment">        POST /authentication/sign-out
 </pre> <p>&lt;response code ="200"&gt; Returns if user was logged out successfully&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Action result</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00773">773</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00683">683</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -844,7 +838,7 @@ Here is the call graph for this function:</div>
 <p>&lt;response code ="200"&gt; Returns if multifactor authentication was disabled successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00805">805</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00715">715</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -874,12 +868,12 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Removes google or sms authenticator using token </p>
-<p>Sample request: </p><pre class="fragment">            DELETE authentication/two-factor-authentication/recovery/verify-token
+<p>Sample request: </p><pre class="fragment">            DELETE authentication/two-factor-authentication/verify-recovery-token
 </pre> <dl class="section return"><dt>Returns</dt><dd>Action result</dd></dl>
 <p>&lt;response code ="200"&gt; Returns if multifactor authentication was disabled successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00862">862</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00772">772</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -918,8 +912,8 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Reset password </p>
-<p>Sample request: </p><pre class="fragment">        POST /authentication/password/verify-token
+<p>Reset password using reset password token </p>
+<p>Sample request: </p><pre class="fragment">        POST /authentication/reset-password
 </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">password</td><td>New password</td></tr>
@@ -929,13 +923,13 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if password was changed successfully&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if user can't be found&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Action result</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00324">324</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00379">379</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Controllers_1_1AuthenticationController_ac355a5462d55a447765c63b13431229b_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1AuthenticationController_ac355a5462d55a447765c63b13431229b_cgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Controllers_1_1AuthenticationController_ac355a5462d55a447765c63b13431229b_cgraph" id="aclassAdeNote_1_1Controllers_1_1AuthenticationController_ac355a5462d55a447765c63b13431229b_cgraph">
-<area shape="rect" title="Reset password" alt="" coords="5,39,257,80"/>
+<area shape="rect" title="Reset password using reset password token" alt="" coords="5,39,257,80"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a965ee83c4fe0cf6fd8499c8d40d908f3" title=" " alt="" coords="305,5,541,47"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aa9b04aa3f51038e46192d2af326b46d4" title=" " alt="" coords="307,71,540,112"/>
 </map>
@@ -967,19 +961,20 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00891">891</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00801">801</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Controllers_1_1AuthenticationController_a5bc24a38f2a0d984148fd747b4d5c226_icgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1AuthenticationController_a5bc24a38f2a0d984148fd747b4d5c226_icgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a5bc24a38f2a0d984148fd747b4d5c226_icgraph" id="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a5bc24a38f2a0d984148fd747b4d5c226_icgraph">
 <area shape="rect" title=" " alt="" coords="605,136,857,177"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="305,37,557,79"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9f9c5c7f9a9a9e13446b3460ad8abf37" title="Logins user using passwordless method" alt="" coords="305,103,557,144"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ac6e29dec9bd50a10a1629d70231b7fc4" title="Verifies sms code" alt="" coords="305,168,557,209"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ab1fe105f9760c908a3b9782c2de84908" title="Verifies time based One time password" alt="" coords="305,233,557,275"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user" alt="" coords="5,5,257,47"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,71,257,112"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3a406c93773bc58dd740751681c0934e" title="Logins user using recovery codes" alt="" coords="305,5,557,47"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="305,71,557,112"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9f9c5c7f9a9a9e13446b3460ad8abf37" title="Logins user using passwordless method" alt="" coords="305,136,557,177"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ac6e29dec9bd50a10a1629d70231b7fc4" title="Verifies sms code" alt="" coords="305,201,557,243"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ab1fe105f9760c908a3b9782c2de84908" title="Verifies time based One time password" alt="" coords="305,267,557,308"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user" alt="" coords="5,39,257,80"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,104,257,145"/>
 </map>
 </div>
 
@@ -1004,7 +999,7 @@ Here is the caller graph for this function:</div>
 <p>Sample request: </p><pre class="fragment">        POST /two-factor-authentication/sms/send-code
 </pre> <p>&lt;response code ="200"&gt; Returns if code was sent&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00595">595</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00505">505</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1015,73 +1010,6 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a84c70bfd6bb4b8de6058be1579ceb436" title="Checks if a phone number has been verified" alt="" coords="305,71,565,112"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8278027fb07f272ad08d4cb0b50ec659" title="Reads the user details from the token" alt="" coords="307,136,564,177"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a450048a2665575559a9d2c4d3d4d4e0d" title="Sends otp to phone number" alt="" coords="319,201,552,243"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="afcab0d745ea8985803931c8630630408"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcab0d745ea8985803931c8630630408">&#9670;&nbsp;</a></span>SetUpGoogleAuthenticator()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.AuthenticationController.SetUpGoogleAuthenticator </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets up two factor authentication using google authenticator app </p>
-<p>Sample request: </p><pre class="fragment">        POST /authentication/two-factor-authentication/app
-</pre> <p>&lt;response code ="200"&gt; Returns if two factor authenticator was successfully set up&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Authenticator key</dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00420">420</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1AuthenticationController_afcab0d745ea8985803931c8630630408_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1AuthenticationController_afcab0d745ea8985803931c8630630408_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1AuthenticationController_afcab0d745ea8985803931c8630630408_cgraph" id="aclassAdeNote_1_1Controllers_1_1AuthenticationController_afcab0d745ea8985803931c8630630408_cgraph">
-<area shape="rect" title="Sets up two factor authentication using google authenticator app" alt="" coords="5,39,268,80"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a597da2feeb46e66d1069f097333b6d87" title="Checks if MFA has been enabled for the user using user id." alt="" coords="316,5,575,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#ae3c515f59107f454452f2be174b2e00f" title="Sets up MFA using google authenticator app" alt="" coords="329,71,562,112"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ab30f6d5eec51e4622c4ddfd5aad4d2f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab30f6d5eec51e4622c4ddfd5aad4d2f6">&#9670;&nbsp;</a></span>SetUpSmsAuthenticator()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.AuthenticationController.SetUpSmsAuthenticator </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets up two factor authentication using sms </p>
-<p>Sample request: </p><pre class="fragment">        POST /authentication/two-factor-authentication/sms
-</pre> <p>&lt;response code ="200"&gt; Returns if two factor authenticator was successfully set up&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
-
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00454">454</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1AuthenticationController_ab30f6d5eec51e4622c4ddfd5aad4d2f6_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1AuthenticationController_ab30f6d5eec51e4622c4ddfd5aad4d2f6_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1AuthenticationController_ab30f6d5eec51e4622c4ddfd5aad4d2f6_cgraph" id="aclassAdeNote_1_1Controllers_1_1AuthenticationController_ab30f6d5eec51e4622c4ddfd5aad4d2f6_cgraph">
-<area shape="rect" title="Sets up two factor authentication using sms" alt="" coords="5,71,257,112"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a597da2feeb46e66d1069f097333b6d87" title="Checks if MFA has been enabled for the user using user id." alt="" coords="306,5,565,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a84c70bfd6bb4b8de6058be1579ceb436" title="Checks if a phone number has been verified" alt="" coords="305,71,565,112"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8e029bac287e94a02f291647721758a6" title="Sets up MFA using sms authentication" alt="" coords="313,136,558,177"/>
 </map>
 </div>
 
@@ -1154,7 +1082,7 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if phone number was verified&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00561">561</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00475">475</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1187,58 +1115,19 @@ Here is the call graph for this function:</div>
 <p>Sample request: </p><pre class="fragment">        POST /authentication/login/passwordless/verify-token
 </pre> <p>&lt;response code ="200"&gt; Returns if logged in successfully&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>A name and email</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00200">200</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00251">251</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Controllers_1_1AuthenticationController_a9f9c5c7f9a9a9e13446b3460ad8abf37_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1AuthenticationController_a9f9c5c7f9a9a9e13446b3460ad8abf37_cgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a9f9c5c7f9a9a9e13446b3460ad8abf37_cgraph" id="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a9f9c5c7f9a9a9e13446b3460ad8abf37_cgraph">
-<area shape="rect" title="Logins user using passwordless method" alt="" coords="5,136,257,177"/>
+<area shape="rect" title="Logins user using passwordless method" alt="" coords="5,169,257,211"/>
 <area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#aaf76f4e77c5e74af2928f3296f7828ed" title="Add data to cookie" alt="" coords="314,5,566,47"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a777010bf07284b344981579b32dbd0ff" title=" " alt="" coords="323,71,557,112"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a597da2feeb46e66d1069f097333b6d87" title="Checks if MFA has been enabled for the user using user id." alt="" coords="311,136,569,177"/>
 <area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a5bc24a38f2a0d984148fd747b4d5c226" title=" " alt="" coords="314,201,566,243"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a4433b9e7905cabacdafa8b48833cf9cb" title=" " alt="" coords="305,267,575,308"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a898afbb1083814447509b28d58923782"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a898afbb1083814447509b28d58923782">&#9670;&nbsp;</a></span>VerifyPhoneNumber()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.AuthenticationController.VerifyPhoneNumber </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>verificationCode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Verifies phone number </p>
-<p>Sample request: </p><pre class="fragment">        POST /authentication/verify-phonenumber
-</pre> <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">verificationCode</td><td>Verification code</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>&lt;response code ="200"&gt; Returns if phone number was verified&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
-
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00524">524</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1AuthenticationController_a898afbb1083814447509b28d58923782_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1AuthenticationController_a898afbb1083814447509b28d58923782_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a898afbb1083814447509b28d58923782_cgraph" id="aclassAdeNote_1_1Controllers_1_1AuthenticationController_a898afbb1083814447509b28d58923782_cgraph">
-<area shape="rect" title="Verifies phone number" alt="" coords="5,39,257,80"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a84c70bfd6bb4b8de6058be1579ceb436" title="Checks if a phone number has been verified" alt="" coords="305,5,565,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a821718637f3c6de0c7ffa1b45e6ca830" title="Sets up phone number" alt="" coords="317,71,554,112"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="319,267,561,308"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a4433b9e7905cabacdafa8b48833cf9cb" title=" " alt="" coords="305,332,575,373"/>
 </map>
 </div>
 
@@ -1264,7 +1153,7 @@ Here is the call graph for this function:</div>
 <p>Sample request: </p><pre class="fragment">        POST /two-factor-authentication/sms/verify-code
 </pre> <p>&lt;response code ="200"&gt; Returns if verification code was successfully verified&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Access token</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00644">644</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00554">554</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1300,7 +1189,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Verifies time based One time password </p>
-<p>Sample request: </p><pre class="fragment">            POST /authentication/two-factor-authentication/app/verify-code
+<p>Sample request: </p><pre class="fragment">            POST /authentication/two-factor-authentication/google/verify-code
 </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">totp</td><td>Timed based one time password</td></tr>
@@ -1309,7 +1198,7 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if one time password was verified correctly&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p><dl class="section return"><dt>Returns</dt><dd>Access token</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00702">702</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AuthenticationController_8cs_source.html#l00612">612</a> of file <a class="el" href="AuthenticationController_8cs_source.html">AuthenticationController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

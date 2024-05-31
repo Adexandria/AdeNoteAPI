@@ -1,4 +1,4 @@
 <map id="AdeNote.Infrastructure.Services.IAuthService.SetPhoneNumber" name="AdeNote.Infrastructure.Services.IAuthService.SetPhoneNumber">
-<area shape="rect" id="node1" title="Sets up phone number" alt="" coords="305,5,539,47"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a923f2d0cdf5a7252471aa3b94585579e" title="Adds phone number" alt="" coords="5,5,257,47"/>
+<area shape="rect" id="node1" title="Sets up phone number" alt="" coords="260,5,493,47"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1UserController.html#a78936cc90340d7fecd28eb8feca1bc5b" title="Adds phone number" alt="" coords="5,5,212,47"/>
 </map>

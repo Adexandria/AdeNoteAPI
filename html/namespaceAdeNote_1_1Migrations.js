@@ -6,5 +6,10 @@ var namespaceAdeNote_1_1Migrations =
     [ "addsalt", "classAdeNote_1_1Migrations_1_1addsalt.html", "classAdeNote_1_1Migrations_1_1addsalt" ],
     [ "saltoptional", "classAdeNote_1_1Migrations_1_1saltoptional.html", "classAdeNote_1_1Migrations_1_1saltoptional" ],
     [ "addrole", "classAdeNote_1_1Migrations_1_1addrole.html", "classAdeNote_1_1Migrations_1_1addrole" ],
+    [ "addrecoverycodes", "classAdeNote_1_1Migrations_1_1addrecoverycodes.html", "classAdeNote_1_1Migrations_1_1addrecoverycodes" ],
+    [ "addticket", "classAdeNote_1_1Migrations_1_1addticket.html", "classAdeNote_1_1Migrations_1_1addticket" ],
+    [ "addissue", "classAdeNote_1_1Migrations_1_1addissue.html", "classAdeNote_1_1Migrations_1_1addissue" ],
+    [ "addrecoverycode", "classAdeNote_1_1Migrations_1_1addrecoverycode.html", "classAdeNote_1_1Migrations_1_1addrecoverycode" ],
+    [ "descriptionnullable", "classAdeNote_1_1Migrations_1_1descriptionnullable.html", "classAdeNote_1_1Migrations_1_1descriptionnullable" ],
     [ "NoteDbContextModelSnapshot", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot" ]
 ];

@@ -122,6 +122,14 @@ Functions</h2></td></tr>
 <tr class="separator:a9139f4d5b9d552d9e1ec835b32711c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d01e39a31e08920320f7ddafc8cf966"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a6d01e39a31e08920320f7ddafc8cf966">AddScoped&lt; IRefreshTokenRepository, RefreshRepository &gt;</a> ()</td></tr>
 <tr class="separator:a6d01e39a31e08920320f7ddafc8cf966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac553ad27f538b927708b826f8a5eb2b4"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ac553ad27f538b927708b826f8a5eb2b4">AddScoped&lt; ITicketRepository, TicketRepository &gt;</a> ()</td></tr>
+<tr class="separator:ac553ad27f538b927708b826f8a5eb2b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e0373838126bc41f1a6be345c0d830"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a67e0373838126bc41f1a6be345c0d830">AddScoped&lt; IRecoveryCodeRepository, RecoveryCodeRepository &gt;</a> ()</td></tr>
+<tr class="separator:a67e0373838126bc41f1a6be345c0d830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8959c8612eb27b38adad90712b6e409c"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a8959c8612eb27b38adad90712b6e409c">AddScoped&lt; ITicketService, TicketService &gt;</a> ()</td></tr>
+<tr class="separator:a8959c8612eb27b38adad90712b6e409c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f456db12e14d2e6b93f5b0558fee955"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a4f456db12e14d2e6b93f5b0558fee955">AddScoped&lt; IStatisticsService, StatisticService &gt;</a> ()</td></tr>
+<tr class="separator:a4f456db12e14d2e6b93f5b0558fee955"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b6f75db7150ed7ba5a016bd2311c8b9"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a2b6f75db7150ed7ba5a016bd2311c8b9">AddScoped&lt; IBookService, BookService &gt;</a> ()</td></tr>
 <tr class="separator:a2b6f75db7150ed7ba5a016bd2311c8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07bd73fc96935d6cab367e322a442cc2"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a07bd73fc96935d6cab367e322a442cc2">AddScoped&lt; IPageService, PageService &gt;</a> ()</td></tr>
@@ -194,8 +202,8 @@ Functions</h2></td></tr>
 <tr class="separator:a6435d8beeff4999dc0b0c6d60a86a4e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6f72d752b2e73aa0292f74bd13237ab"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#af6f72d752b2e73aa0292f74bd13237ab">UseAuthorization</a> ()</td></tr>
 <tr class="separator:af6f72d752b2e73aa0292f74bd13237ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39f0db1f930b0e988220a2c135b3b61c"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a39f0db1f930b0e988220a2c135b3b61c">UseHangfireDashboard</a> (&quot;/hangfire&quot;, new DashboardOptions { Authorization=new[] { new <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter.html">DashboardAuthenticationFilter</a>(builder.Services.BuildServiceProvider()) }, DashboardTitle=&quot;AdeNote API&quot;, DarkModeEnabled=true, FaviconPath=&quot;icon/download.ico&quot; })</td></tr>
-<tr class="separator:a39f0db1f930b0e988220a2c135b3b61c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0b2e3161dc7fa368b7d8ffdbc5843d0"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#af0b2e3161dc7fa368b7d8ffdbc5843d0">UseHangfireDashboard</a> (&quot;/hangfire&quot;, new DashboardOptions { Authorization=new[] { new <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter.html">DashboardAuthenticationFilter</a>(builder.Services.BuildServiceProvider()) }, DashboardTitle=&quot;AdeNote API&quot;, DarkModeEnabled=true, FaviconPath=&quot;icon/download.ico&quot;, AppPath=&quot;swagger/index.html&quot; })</td></tr>
+<tr class="separator:af0b2e3161dc7fa368b7d8ffdbc5843d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e2ee3170aa6279b68eefd1651f7d96c"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a9e2ee3170aa6279b68eefd1651f7d96c">MapControllers</a> ()</td></tr>
 <tr class="separator:a9e2ee3170aa6279b68eefd1651f7d96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa3dbf02e269c3ef7e8546d290c6b3dd"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#aaa3dbf02e269c3ef7e8546d290c6b3dd">Run</a> ()</td></tr>
@@ -768,6 +776,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a67e0373838126bc41f1a6be345c0d830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e0373838126bc41f1a6be345c0d830">&#9670;&nbsp;</a></span>AddScoped&lt; IRecoveryCodeRepository, RecoveryCodeRepository &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRecoveryCodeRepository.html">IRecoveryCodeRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RecoveryCodeRepository.html">RecoveryCodeRepository</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6d01e39a31e08920320f7ddafc8cf966"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d01e39a31e08920320f7ddafc8cf966">&#9670;&nbsp;</a></span>AddScoped&lt; IRefreshTokenRepository, RefreshRepository &gt;()</h2>
 
@@ -802,6 +827,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a4f456db12e14d2e6b93f5b0558fee955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f456db12e14d2e6b93f5b0558fee955">&#9670;&nbsp;</a></span>AddScoped&lt; IStatisticsService, StatisticService &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IStatisticsService.html">IStatisticsService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1StatisticService.html">StatisticService</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5adfec2416e50744e01ed90e408732d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5adfec2416e50744e01ed90e408732d4">&#9670;&nbsp;</a></span>AddScoped&lt; ITextTranslation, TextTranslation &gt;()</h2>
 
@@ -810,6 +852,40 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation.html">ITextTranslation</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html">TextTranslation</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac553ad27f538b927708b826f8a5eb2b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac553ad27f538b927708b826f8a5eb2b4">&#9670;&nbsp;</a></span>AddScoped&lt; ITicketRepository, TicketRepository &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html">ITicketRepository</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html">TicketRepository</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8959c8612eb27b38adad90712b6e409c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8959c8612eb27b38adad90712b6e409c">&#9670;&nbsp;</a></span>AddScoped&lt; ITicketService, TicketService &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITicketService.html">ITicketService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TicketService.html">TicketService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1173,8 +1249,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a39f0db1f930b0e988220a2c135b3b61c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39f0db1f930b0e988220a2c135b3b61c">&#9670;&nbsp;</a></span>UseHangfireDashboard()</h2>
+<a id="af0b2e3161dc7fa368b7d8ffdbc5843d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0b2e3161dc7fa368b7d8ffdbc5843d0">&#9670;&nbsp;</a></span>UseHangfireDashboard()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1188,7 +1264,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">new DashboardOptions { Authorization=new[] { new <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter.html">DashboardAuthenticationFilter</a>(builder.Services.BuildServiceProvider()) }, DashboardTitle=&quot;AdeNote API&quot;, DarkModeEnabled=true, FaviconPath=&quot;icon/download.ico&quot; }&#160;</td>
+          <td class="paramtype">new DashboardOptions { Authorization=new[] { new <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter.html">DashboardAuthenticationFilter</a>(builder.Services.BuildServiceProvider()) }, DashboardTitle=&quot;AdeNote API&quot;, DarkModeEnabled=true, FaviconPath=&quot;icon/download.ico&quot;, AppPath=&quot;swagger/index.html&quot; }&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -1276,7 +1352,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00179">179</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00183">183</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1292,7 +1368,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00176">176</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00180">180</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>

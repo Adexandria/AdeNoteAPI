@@ -7,6 +7,8 @@ var classAdeNote_1_1Db_1_1NoteDbContext =
     [ "LabelPage", "classAdeNote_1_1Db_1_1NoteDbContext.html#ab87ae22cea895df7a57626ec3fcfc083", null ],
     [ "Labels", "classAdeNote_1_1Db_1_1NoteDbContext.html#a5337f5e16ca23614ebcd28bc990e47c4", null ],
     [ "Pages", "classAdeNote_1_1Db_1_1NoteDbContext.html#a27439d3eab69d1af06403bcda671f3d8", null ],
+    [ "RecoveryCodes", "classAdeNote_1_1Db_1_1NoteDbContext.html#a4cd4604a59ac03d3d1f688f990ca4bc9", null ],
     [ "RefreshTokens", "classAdeNote_1_1Db_1_1NoteDbContext.html#a16fcb633257a4267ea3971bcf109fe9d", null ],
+    [ "Tickets", "classAdeNote_1_1Db_1_1NoteDbContext.html#a44f750499076655de3d8521065a843b6", null ],
     [ "Users", "classAdeNote_1_1Db_1_1NoteDbContext.html#a930d201fdb648b068bab2954cd9d0a08", null ]
 ];

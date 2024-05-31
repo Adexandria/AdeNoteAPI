@@ -18,14 +18,18 @@ var namespaceAdeNote_1_1Infrastructure_1_1Services =
     [ "INotificationService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService" ],
     [ "IPageService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService" ],
     [ "ISmsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService" ],
+    [ "IStatisticsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IStatisticsService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IStatisticsService" ],
     [ "ITextTranslation", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation" ],
+    [ "ITicketService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITicketService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITicketService" ],
     [ "IUserService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService" ],
     [ "IWordService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService" ],
     [ "LabelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService" ],
     [ "NotificationService", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService" ],
     [ "PageService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService" ],
     [ "SmsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService" ],
+    [ "StatisticService", "classAdeNote_1_1Infrastructure_1_1Services_1_1StatisticService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1StatisticService" ],
     [ "TextTranslation", "classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation" ],
+    [ "TicketService", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketService" ],
     [ "UserService", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService" ],
     [ "WordService", "classAdeNote_1_1Infrastructure_1_1Services_1_1WordService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1WordService" ]
 ];

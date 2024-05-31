@@ -117,8 +117,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9fd888dcb826dc65f56bcb1dda374525"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e4a91eb4c49221d51bde236090d86fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a8e4a91eb4c49221d51bde236090d86fa">UserService</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html">IUserRepository</a> userRepository, IPasswordManager passwordManager)</td></tr>
 <tr class="separator:a8e4a91eb4c49221d51bde236090d86fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7af04610a56fd8268fcc73c4c0025bdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto.html">StatisticsDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a7af04610a56fd8268fcc73c4c0025bdf">GetStatistics</a> ()</td></tr>
-<tr class="separator:a7af04610a56fd8268fcc73c4c0025bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61abb1c47f09a5e85f4fec0aa211bbb8"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a61abb1c47f09a5e85f4fec0aa211bbb8">UpdateUserPassword</a> (Guid userId, string currentPassword, string password)</td></tr>
 <tr class="separator:a61abb1c47f09a5e85f4fec0aa211bbb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc473178a62350e4bba60c5dd5d8aec9"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#abc473178a62350e4bba60c5dd5d8aec9">ResetUserPassword</a> (Guid userId, string password)</td></tr>
@@ -127,6 +125,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4dfc24278e11f725ebbba7d1e4b5d92d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82dc47bbd1b5aa194a62b7a01adb060e"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a82dc47bbd1b5aa194a62b7a01adb060e">IsUserExist</a> (string email)</td></tr>
 <tr class="separator:a82dc47bbd1b5aa194a62b7a01adb060e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1cc9f65a5b9133768316bef09316a1a"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html">UserDTO</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#ac1cc9f65a5b9133768316bef09316a1a">GetUser</a> (Guid userId)</td></tr>
+<tr class="separator:ac1cc9f65a5b9133768316bef09316a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -189,39 +189,41 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7af04610a56fd8268fcc73c4c0025bdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7af04610a56fd8268fcc73c4c0025bdf">&#9670;&nbsp;</a></span>GetStatistics()</h2>
+<a id="ac1cc9f65a5b9133768316bef09316a1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1cc9f65a5b9133768316bef09316a1a">&#9670;&nbsp;</a></span>GetUser() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt;<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto.html">StatisticsDto</a>&gt; AdeNote.Infrastructure.Services.UserService.GetStatistics </td>
+          <td class="memname">async Task&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt;<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html">UserDTO</a>&gt; &gt; AdeNote.Infrastructure.Services.UserService.GetUser </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>userId</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#aad7b44e1f2eaf947150f438b1a82cc5d">AdeNote.Infrastructure.Services.IUserService</a>.</p>
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a4794936673fcde383f20465184dc74fc">AdeNote.Infrastructure.Services.IUserService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00024">24</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00088">88</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService_a7af04610a56fd8268fcc73c4c0025bdf_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_a7af04610a56fd8268fcc73c4c0025bdf_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_a7af04610a56fd8268fcc73c4c0025bdf_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_a7af04610a56fd8268fcc73c4c0025bdf_cgraph">
-<area shape="rect" title=" " alt="" coords="5,39,239,80"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a3730d3f52e532c9fcd221472602f754d" title=" " alt="" coords="287,5,541,47"/>
-<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="293,71,535,112"/>
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService_ac1cc9f65a5b9133768316bef09316a1a_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_ac1cc9f65a5b9133768316bef09316a1a_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_ac1cc9f65a5b9133768316bef09316a1a_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1UserService_ac1cc9f65a5b9133768316bef09316a1a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,71,239,112"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="295,5,525,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a2f9c93cf4ef3a74b15a0bf2b71cd21ad" title="Get existings of a user" alt="" coords="287,71,533,112"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="289,136,531,177"/>
 </map>
 </div>
 
 </div>
 </div>
 <a id="a4dfc24278e11f725ebbba7d1e4b5d92d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4dfc24278e11f725ebbba7d1e4b5d92d">&#9670;&nbsp;</a></span>GetUser()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dfc24278e11f725ebbba7d1e4b5d92d">&#9670;&nbsp;</a></span>GetUser() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -238,7 +240,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a03ab9a9318120aaf87ccc2e60a82e445">AdeNote.Infrastructure.Services.IUserService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00074">74</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00070">70</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -271,7 +273,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a6807bc22822cd81764378182854bda9d">AdeNote.Infrastructure.Services.IUserService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00083">83</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00079">79</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -314,7 +316,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a965ee83c4fe0cf6fd8499c8d40d908f3">AdeNote.Infrastructure.Services.IUserService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00055">55</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00049">49</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -364,7 +366,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a405b0b24c7f646da2ec1ae4cf5b8174c">AdeNote.Infrastructure.Services.IUserService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00032">32</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00024">24</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -393,7 +395,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00093">93</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00098">98</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
 
 </div>
 </div>
@@ -409,7 +411,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00092">92</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserService_8cs_source.html#l00097">97</a> of file <a class="el" href="UserService_8cs_source.html">UserService.cs</a>.</p>
 
 </div>
 </div>

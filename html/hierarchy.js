@@ -15,10 +15,12 @@ var hierarchy =
         [ "AdeNote.Models.Book", "classAdeNote_1_1Models_1_1Book.html", null ],
         [ "AdeNote.Models.Label", "classAdeNote_1_1Models_1_1Label.html", null ],
         [ "AdeNote.Models.Page", "classAdeNote_1_1Models_1_1Page.html", null ],
-        [ "AdeNote.Models.RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", null ],
+        [ "AdeNote.Models.Ticket", "classAdeNote_1_1Models_1_1Ticket.html", null ],
         [ "AdeNote.Models.User", "classAdeNote_1_1Models_1_1User.html", null ]
       ] ],
-      [ "AdeNote.Models.HangfireUser", "classAdeNote_1_1Models_1_1HangfireUser.html", null ]
+      [ "AdeNote.Models.HangfireUser", "classAdeNote_1_1Models_1_1HangfireUser.html", null ],
+      [ "AdeNote.Models.RecoveryCode", "classAdeNote_1_1Models_1_1RecoveryCode.html", null ],
+      [ "AdeNote.Models.RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Utilities.BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", null ],
     [ "AdeNote.Models.DTOs.BookCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1BookCreateDTO.html", null ],
@@ -34,7 +36,9 @@ var hierarchy =
         [ "AdeNote.Controllers.BookController", "classAdeNote_1_1Controllers_1_1BookController.html", null ],
         [ "AdeNote.Controllers.DashboardController", "classAdeNote_1_1Controllers_1_1DashboardController.html", null ],
         [ "AdeNote.Controllers.LabelController", "classAdeNote_1_1Controllers_1_1LabelController.html", null ],
-        [ "AdeNote.Controllers.PageController", "classAdeNote_1_1Controllers_1_1PageController.html", null ]
+        [ "AdeNote.Controllers.PageController", "classAdeNote_1_1Controllers_1_1PageController.html", null ],
+        [ "AdeNote.Controllers.TicketController", "classAdeNote_1_1Controllers_1_1TicketController.html", null ],
+        [ "AdeNote.Controllers.UserController", "classAdeNote_1_1Controllers_1_1UserController.html", null ]
       ] ]
     ] ],
     [ "AdeNote.Models.DTOs.CreateNoteDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO.html", null ],
@@ -122,9 +126,19 @@ var hierarchy =
         [ "AdeNote.Infrastructure.Repository.PageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html", null ]
       ] ]
     ] ],
+    [ "AdeNote.Infrastructure.Repository.IRepository< RecoveryCode >", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html", [
+      [ "AdeNote.Infrastructure.Repository.IRecoveryCodeRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRecoveryCodeRepository.html", [
+        [ "AdeNote.Infrastructure.Repository.RecoveryCodeRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1RecoveryCodeRepository.html", null ]
+      ] ]
+    ] ],
     [ "AdeNote.Infrastructure.Repository.IRepository< RefreshToken >", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html", [
       [ "AdeNote.Infrastructure.Repository.IRefreshTokenRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html", [
         [ "AdeNote.Infrastructure.Repository.RefreshRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html", null ]
+      ] ]
+    ] ],
+    [ "AdeNote.Infrastructure.Repository.IRepository< Ticket >", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html", [
+      [ "AdeNote.Infrastructure.Repository.ITicketRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html", [
+        [ "AdeNote.Infrastructure.Repository.TicketRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html", null ]
       ] ]
     ] ],
     [ "AdeNote.Infrastructure.Repository.IRepository< User >", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html", [
@@ -141,8 +155,14 @@ var hierarchy =
     [ "AdeNote.Infrastructure.Services.ISmsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html", [
       [ "AdeNote.Infrastructure.Services.SmsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html", null ]
     ] ],
+    [ "AdeNote.Infrastructure.Services.IStatisticsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IStatisticsService.html", [
+      [ "AdeNote.Infrastructure.Services.StatisticService", "classAdeNote_1_1Infrastructure_1_1Services_1_1StatisticService.html", null ]
+    ] ],
     [ "AdeNote.Infrastructure.Services.ITextTranslation", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation.html", [
       [ "AdeNote.Infrastructure.Services.TextTranslation", "classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html", null ]
+    ] ],
+    [ "AdeNote.Infrastructure.Services.ITicketService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITicketService.html", [
+      [ "AdeNote.Infrastructure.Services.TicketService", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketService.html", null ]
     ] ],
     [ "ITranslateConfiguration", null, [
       [ "AdeNote.Infrastructure.Utilities.AI.TranslateConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1TranslateConfiguration.html", null ]
@@ -164,8 +184,13 @@ var hierarchy =
     [ "AdeNote.Models.DTOs.LoginDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LoginDTO.html", null ],
     [ "AdeNote.Infrastructure.Extension.MappingService", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html", null ],
     [ "Migration", null, [
+      [ "AdeNote.Migrations.addissue", "classAdeNote_1_1Migrations_1_1addissue.html", null ],
+      [ "AdeNote.Migrations.addrecoverycode", "classAdeNote_1_1Migrations_1_1addrecoverycode.html", null ],
+      [ "AdeNote.Migrations.addrecoverycodes", "classAdeNote_1_1Migrations_1_1addrecoverycodes.html", null ],
       [ "AdeNote.Migrations.addrole", "classAdeNote_1_1Migrations_1_1addrole.html", null ],
       [ "AdeNote.Migrations.addsalt", "classAdeNote_1_1Migrations_1_1addsalt.html", null ],
+      [ "AdeNote.Migrations.addticket", "classAdeNote_1_1Migrations_1_1addticket.html", null ],
+      [ "AdeNote.Migrations.descriptionnullable", "classAdeNote_1_1Migrations_1_1descriptionnullable.html", null ],
       [ "AdeNote.Migrations.firstmigration", "classAdeNote_1_1Migrations_1_1firstmigration.html", null ],
       [ "AdeNote.Migrations.saltoptional", "classAdeNote_1_1Migrations_1_1saltoptional.html", null ],
       [ "AdeNote.Migrations.secondmigration", "classAdeNote_1_1Migrations_1_1secondmigration.html", null ],
@@ -176,18 +201,26 @@ var hierarchy =
     ] ],
     [ "AdeNote.Models.DTOs.PageCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO.html", null ],
     [ "AdeNote.Models.DTOs.PageUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.PaginatedResponse< T >", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html", null ],
     [ "AdeNote.Infrastructure.Repository.Repository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html", [
       [ "AdeNote.Infrastructure.Repository.BookRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html", null ],
       [ "AdeNote.Infrastructure.Repository.HangfireUserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1HangfireUserRepository.html", null ],
       [ "AdeNote.Infrastructure.Repository.LabelPageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html", null ],
       [ "AdeNote.Infrastructure.Repository.LabelRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository.html", null ],
       [ "AdeNote.Infrastructure.Repository.PageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html", null ],
+      [ "AdeNote.Infrastructure.Repository.RecoveryCodeRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1RecoveryCodeRepository.html", null ],
       [ "AdeNote.Infrastructure.Repository.RefreshRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html", null ],
+      [ "AdeNote.Infrastructure.Repository.TicketRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html", null ],
       [ "AdeNote.Infrastructure.Repository.UserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Utilities.Sms", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms.html", null ],
     [ "AdeNote.Infrastructure.Utilities.SmsConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfiguration.html", null ],
     [ "AdeNote.Models.DTOs.StatisticsDto", "classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto.html", null ],
+    [ "AdeNote.Models.DTOs.TicketCreateDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketCreateDto.html", null ],
+    [ "AdeNote.Models.DTOs.TicketDTO", "classAdeNote_1_1Models_1_1DTOs_1_1TicketDTO.html", null ],
+    [ "AdeNote.Models.DTOs.TicketsDTO", "classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html", null ],
+    [ "AdeNote.Models.DTOs.TicketStatusDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStatusDto.html", null ],
+    [ "AdeNote.Models.DTOs.TicketStreamDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto.html", null ],
     [ "AdeNote.Models.DTOs.TranslationDto", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html", null ],
     [ "AdeNote.Models.DTOs.UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", null ],
     [ "AdeNote.Infrastructure.Utilities.UserId", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserId.html", null ],

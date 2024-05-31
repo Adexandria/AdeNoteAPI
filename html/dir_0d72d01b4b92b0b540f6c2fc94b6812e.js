@@ -54,8 +54,14 @@ var dir_0d72d01b4b92b0b540f6c2fc94b6812e =
     [ "ISmsService.cs", "ISmsService_8cs.html", [
       [ "ISmsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService" ]
     ] ],
+    [ "IStatisticsService.cs", "IStatisticsService_8cs.html", [
+      [ "IStatisticsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IStatisticsService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IStatisticsService" ]
+    ] ],
     [ "ITextTranslation.cs", "ITextTranslation_8cs.html", [
       [ "ITextTranslation", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation" ]
+    ] ],
+    [ "ITicketService.cs", "ITicketService_8cs.html", [
+      [ "ITicketService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITicketService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITicketService" ]
     ] ],
     [ "IUserService.cs", "IUserService_8cs.html", [
       [ "IUserService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService" ]
@@ -75,8 +81,14 @@ var dir_0d72d01b4b92b0b540f6c2fc94b6812e =
     [ "SmsService.cs", "SmsService_8cs.html", [
       [ "SmsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService" ]
     ] ],
+    [ "StatisticService.cs", "StatisticService_8cs.html", [
+      [ "StatisticService", "classAdeNote_1_1Infrastructure_1_1Services_1_1StatisticService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1StatisticService" ]
+    ] ],
     [ "TextTranslation.cs", "TextTranslation_8cs.html", [
       [ "TextTranslation", "classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation" ]
+    ] ],
+    [ "TicketService.cs", "TicketService_8cs.html", [
+      [ "TicketService", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketService" ]
     ] ],
     [ "UserService.cs", "UserService_8cs.html", [
       [ "UserService", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService" ]

@@ -1,5 +1,5 @@
 <map id="AdeNote.Infrastructure.Repository.IRepository.Update" name="AdeNote.Infrastructure.Repository.IRepository.Update">
-<area shape="rect" id="node1" title="Updates an existing object" alt="" coords="296,365,543,407"/>
+<area shape="rect" id="node1" title="Updates an existing object" alt="" coords="296,397,543,439"/>
 <area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a372c9329dad519fa97967996fce98a29" title=" " alt="" coords="10,5,243,47"/>
 <area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a7859b04addc0239dc19e7f2c26948c65" title="Disables Multi factor authentication for a particular user" alt="" coords="10,71,243,112"/>
 <area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#abc473178a62350e4bba60c5dd5d8aec9" title=" " alt="" coords="10,136,243,177"/>
@@ -10,6 +10,7 @@
 <area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#ae3e9a2095bdc23aa657f024473bfb434" title="Updates an existing book" alt="" coords="10,463,243,504"/>
 <area shape="rect" id="node10" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a808f63b17b96a3eb2a6ded93ae78de91" title="Updates an existing page" alt="" coords="10,528,243,569"/>
 <area shape="rect" id="node11" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a40c4b3ff821053124c01b2f95badae7b" title="Updates an existing label" alt="" coords="10,593,243,635"/>
-<area shape="rect" id="node12" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a61abb1c47f09a5e85f4fec0aa211bbb8" title=" " alt="" coords="5,659,248,700"/>
-<area shape="rect" id="node13" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#adc3b060ec80b625a45eaece17c3539d0" title="Sets up phone number" alt="" coords="10,724,243,765"/>
+<area shape="rect" id="node12" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketService.html#af8a8f2ba6fc2a676656b194e5eae9763" title=" " alt="" coords="10,659,243,700"/>
+<area shape="rect" id="node13" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a61abb1c47f09a5e85f4fec0aa211bbb8" title=" " alt="" coords="5,724,248,765"/>
+<area shape="rect" id="node14" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#adc3b060ec80b625a45eaece17c3539d0" title="Sets up phone number" alt="" coords="10,789,243,831"/>
 </map>

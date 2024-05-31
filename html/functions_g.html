@@ -92,6 +92,9 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 <li>GenerateBlobUri()
 : <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#a8b886ceaabea7194c2bda162c1caa3b1">AdeNote.Infrastructure.Services.BlobService</a>
 </li>
+<li>GenerateCodes()
+: <a class="el" href="classAdeNote_1_1Models_1_1RecoveryCode.html#ac2510a172789058846d8c7e130d5d643">AdeNote.Models.RecoveryCode</a>
+</li>
 <li>GenerateContentTemplate()
 : <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html#ab3eae32ef8b3d97db43ee1453381b81d">AdeNote.Infrastructure.Services.NotificationService</a>
 </li>
@@ -102,19 +105,26 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 : <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a7406a88b21c76907b292a2be3d69fbf9">AdeNote.Infrastructure.Services.AuthService</a>
 , <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a777010bf07284b344981579b32dbd0ff">AdeNote.Infrastructure.Services.IAuthService</a>
 </li>
-<li>GenerateResetToken()
-: <a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a696fc310d5835c7cb5870b1caed88029">AdeNote.Controllers.AuthenticationController</a>
-, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a5b0cd81d29252be914d6bb1c172370d2">AdeNote.Infrastructure.Services.AuthService</a>
-, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aea767e3bba531744d9d345053ea70641">AdeNote.Infrastructure.Services.IAuthService</a>
+<li>GenerateRecoveryCode()
+: <a class="el" href="classAdeNote_1_1Controllers_1_1UserController.html#ac163c2c4c10193dc96ca6c5b9b5313c9">AdeNote.Controllers.UserController</a>
+</li>
+<li>GenerateRecoveryCodes()
+: <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a567badcdb3891ed981e30fa859bb4e57">AdeNote.Infrastructure.Services.AuthService</a>
+, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a51acc95bda2d17c281ef6a2cc766b013">AdeNote.Infrastructure.Services.IAuthService</a>
+</li>
+<li>GenerateResetPasswordToken()
+: <a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a901c83387f0d2b7e1ae8c6e1823c0f9c">AdeNote.Controllers.AuthenticationController</a>
+, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a345c6dbad74d639fccfd2b2f74a2a486">AdeNote.Infrastructure.Services.AuthService</a>
+, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#af6297ee0574880f09f584e28c681a8aa">AdeNote.Infrastructure.Services.IAuthService</a>
 </li>
 <li>GenerateStorageCredentials()
 : <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#aa53600a0efdb5d21c9d69530b57b5421">AdeNote.Infrastructure.Services.BlobService</a>
 </li>
+<li>GenerateTickets()
+: <a class="el" href="classAdeNote_1_1Controllers_1_1TicketController.html#aa5304277402bc661aacd1e083d5dd7d6">AdeNote.Controllers.TicketController</a>
+</li>
 <li>GetAccessToken()
 : <a class="el" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a48d8e946cb745f663395c743208b46d7">AdeNote.Controllers.AuthenticationController</a>
-</li>
-<li>GetActiveUsers()
-: <a class="el" href="classAdeNote_1_1Controllers_1_1DashboardController.html#a1f186df1609c66356422544d02704c8d">AdeNote.Controllers.DashboardController</a>
 </li>
 <li>GetAll()
 : <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html#a8dba3dfdf0d76e480dc36e8140720a33">AdeNote.Infrastructure.Repository.BookRepository</a>
@@ -136,6 +146,9 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 </li>
 <li>GetAllPages()
 : <a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#ae2ec824762a4cd73de383794e18ce42d">AdeNote.Controllers.PageController</a>
+</li>
+<li>GetAllTickets()
+: <a class="el" href="classAdeNote_1_1Controllers_1_1TicketController.html#a5c380e7732ad096c77ee480a01104382">AdeNote.Controllers.TicketController</a>
 </li>
 <li>GetAsync()
 : <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html#aeededd69d69949250b0ee571bfb5d0c7">AdeNote.Infrastructure.Repository.BookRepository</a>
@@ -187,6 +200,10 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 <li>GetMimeType()
 : <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExportService.html#afb53bb0a095683f97ead621553e054b4">AdeNote.Infrastructure.Services.ExportService</a>
 </li>
+<li>GetNumberOfTicketsByStatus()
+: <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#a225cef2b2ff29409e60439f8a4fea262">AdeNote.Infrastructure.Repository.ITicketRepository</a>
+, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html#ae25f8a6ac3a8541e296f1a43aba8a4ff">AdeNote.Infrastructure.Repository.TicketRepository</a>
+</li>
 <li>GetNumberOfUsers()
 : <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a3730d3f52e532c9fcd221472602f754d">AdeNote.Infrastructure.Repository.IUserRepository</a>
 , <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#aaa69b21eb3ce37adfccdf4e34100dd7a">AdeNote.Infrastructure.Repository.UserRepository</a>
@@ -203,8 +220,9 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 , <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#a4ef5e39b299ccc16fd88da7074767ddd">AdeNote.Infrastructure.Repository.RefreshRepository</a>
 </li>
 <li>GetStatistics()
-: <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#aad7b44e1f2eaf947150f438b1a82cc5d">AdeNote.Infrastructure.Services.IUserService</a>
-, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a7af04610a56fd8268fcc73c4c0025bdf">AdeNote.Infrastructure.Services.UserService</a>
+: <a class="el" href="classAdeNote_1_1Controllers_1_1DashboardController.html#a9b3d7c0323e3a42f0ba857b475032802">AdeNote.Controllers.DashboardController</a>
+, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IStatisticsService.html#a51e721ede598c1b690f407243300c8aa">AdeNote.Infrastructure.Services.IStatisticsService</a>
+, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1StatisticService.html#aa32837080ffd5f73e87c0ee04cf57dca">AdeNote.Infrastructure.Services.StatisticService</a>
 </li>
 <li>GetSupportedLanaguages()
 : <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1Language.html#a1810d05801521412117fb1c16ef105b4">AdeNote.Infrastructure.Utilities.AI.Language</a>
@@ -213,10 +231,20 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 : <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation.html#a7f0bb9dc577c9643de5625eb836f27c0">AdeNote.Infrastructure.Services.ITextTranslation</a>
 , <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html#ad7de78e15cad7e4f0fa7dced1f8610ad">AdeNote.Infrastructure.Services.TextTranslation</a>
 </li>
+<li>GetTicket()
+: <a class="el" href="classAdeNote_1_1Controllers_1_1TicketController.html#ab9063d216cedebf808fa37623d43e6ed">AdeNote.Controllers.TicketController</a>
+, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#a7e39627f289cb9a027fe1e901da790e8">AdeNote.Infrastructure.Repository.ITicketRepository</a>
+, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html#aac89682b36646158207d97d3d40af6ac">AdeNote.Infrastructure.Repository.TicketRepository</a>
+</li>
+<li>GetTickets()
+: <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#afc4136b978c438ed02b5b2a9220d1424">AdeNote.Infrastructure.Repository.ITicketRepository</a>
+, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html#af2c0fe7be3cdc1f49056f6a3134da4bf">AdeNote.Infrastructure.Repository.TicketRepository</a>
+</li>
 <li>GetUser()
-: <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a2f9c93cf4ef3a74b15a0bf2b71cd21ad">AdeNote.Infrastructure.Repository.IUserRepository</a>
+: <a class="el" href="classAdeNote_1_1Controllers_1_1DashboardController.html#a5c10a1c455e5e0c2d2ea168db9cd8a28">AdeNote.Controllers.DashboardController</a>
+, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a2f9c93cf4ef3a74b15a0bf2b71cd21ad">AdeNote.Infrastructure.Repository.IUserRepository</a>
 , <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#aa3db8e941c5a035f08aa799556322d98">AdeNote.Infrastructure.Repository.UserRepository</a>
-, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a03ab9a9318120aaf87ccc2e60a82e445">AdeNote.Infrastructure.Services.IUserService</a>
+, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html#a4794936673fcde383f20465184dc74fc">AdeNote.Infrastructure.Services.IUserService</a>
 , <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a4dfc24278e11f725ebbba7d1e4b5d92d">AdeNote.Infrastructure.Services.UserService</a>
 </li>
 <li>GetUserByEmail()
@@ -227,9 +255,16 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 : <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html#a39fb6f09dce7bcd42f61ab624ba6d819">AdeNote.Infrastructure.Repository.IRefreshTokenRepository</a>
 , <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#ad5fc307cbac4d2b04475d7079dfeea8f">AdeNote.Infrastructure.Repository.RefreshRepository</a>
 </li>
+<li>GetUserIdByRecoveryCodes()
+: <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRecoveryCodeRepository.html#a344c1ef6ded732f595d0f36456557c09">AdeNote.Infrastructure.Repository.IRecoveryCodeRepository</a>
+, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RecoveryCodeRepository.html#a83a401ec807ca6968f2b26e35055f642">AdeNote.Infrastructure.Repository.RecoveryCodeRepository</a>
+</li>
 <li>GetUserQrCode()
 : <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#afef6b990e73d38f9d85dd12ae50dc5fc">AdeNote.Infrastructure.Services.AuthService</a>
 , <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a21e1eb6648b86c8f155f8b9e07b54c7f">AdeNote.Infrastructure.Services.IAuthService</a>
+</li>
+<li>GetUserTickets()
+: <a class="el" href="classAdeNote_1_1Controllers_1_1TicketController.html#a29dfceb2e238385aca84434c7ced1d5b">AdeNote.Controllers.TicketController</a>
 </li>
 </ul>
 </div><!-- contents -->

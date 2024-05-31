@@ -18,6 +18,11 @@ var namespaceAdeNote_1_1Models_1_1DTOs =
     [ "PageDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1PageDTO" ],
     [ "PageUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO" ],
     [ "StatisticsDto", "classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto" ],
+    [ "TicketCreateDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketCreateDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketCreateDto" ],
+    [ "TicketDTO", "classAdeNote_1_1Models_1_1DTOs_1_1TicketDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketDTO" ],
+    [ "TicketsDTO", "classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO" ],
+    [ "TicketStatusDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStatusDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStatusDto" ],
+    [ "TicketStreamDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto" ],
     [ "TranslationDto", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto" ],
     [ "UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO" ]
 ];

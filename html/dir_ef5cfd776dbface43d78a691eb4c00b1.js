@@ -3,7 +3,8 @@ var dir_ef5cfd776dbface43d78a691eb4c00b1 =
     [ "AI", "dir_8cc2629b561c8e5be742c96c0ee7626b.html", "dir_8cc2629b561c8e5be742c96c0ee7626b" ],
     [ "ActionResult.cs", "ActionResult_8cs.html", [
       [ "ActionResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult" ],
-      [ "ActionTokenResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult" ]
+      [ "ActionTokenResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult" ],
+      [ "PaginatedResponse", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse" ]
     ] ],
     [ "BlobConfiguration.cs", "BlobConfiguration_8cs.html", [
       [ "BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration" ]

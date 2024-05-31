@@ -17,5 +17,11 @@ var dir_3bdc45994b62d0923218a8948c0eb398 =
     ] ],
     [ "PageController.cs", "PageController_8cs.html", [
       [ "PageController", "classAdeNote_1_1Controllers_1_1PageController.html", "classAdeNote_1_1Controllers_1_1PageController" ]
+    ] ],
+    [ "TicketController.cs", "TicketController_8cs.html", [
+      [ "TicketController", "classAdeNote_1_1Controllers_1_1TicketController.html", "classAdeNote_1_1Controllers_1_1TicketController" ]
+    ] ],
+    [ "UserController.cs", "UserController_8cs.html", [
+      [ "UserController", "classAdeNote_1_1Controllers_1_1UserController.html", "classAdeNote_1_1Controllers_1_1UserController" ]
     ] ]
 ];

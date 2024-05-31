@@ -3,6 +3,7 @@ var namespaceAdeNote_1_1Infrastructure_1_1Utilities =
     [ "AI", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1AI.html", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1AI" ],
     [ "ActionResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult" ],
     [ "ActionTokenResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult" ],
+    [ "PaginatedResponse", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse" ],
     [ "BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration" ],
     [ "DashboardAuthenticationFilter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter" ],
     [ "Database", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database" ],

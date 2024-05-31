@@ -24,10 +24,17 @@ var dir_fab80d2647e49d0e675ea0809587eea2 =
     [ "Page.cs", "Page_8cs.html", [
       [ "Page", "classAdeNote_1_1Models_1_1Page.html", "classAdeNote_1_1Models_1_1Page" ]
     ] ],
+    [ "RecoveryCode.cs", "RecoveryCode_8cs.html", [
+      [ "RecoveryCode", "classAdeNote_1_1Models_1_1RecoveryCode.html", "classAdeNote_1_1Models_1_1RecoveryCode" ]
+    ] ],
     [ "RefreshToken.cs", "RefreshToken_8cs.html", [
       [ "RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", "classAdeNote_1_1Models_1_1RefreshToken" ]
     ] ],
     [ "Role.cs", "Role_8cs.html", "Role_8cs" ],
+    [ "Status.cs", "Status_8cs.html", "Status_8cs" ],
+    [ "Ticket.cs", "Ticket_8cs.html", [
+      [ "Ticket", "classAdeNote_1_1Models_1_1Ticket.html", "classAdeNote_1_1Models_1_1Ticket" ]
+    ] ],
     [ "User.cs", "User_8cs.html", [
       [ "User", "classAdeNote_1_1Models_1_1User.html", "classAdeNote_1_1Models_1_1User" ]
     ] ]

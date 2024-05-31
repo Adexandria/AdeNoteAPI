@@ -161,8 +161,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a13e638232a86f7971f22c92466391299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacc053d60148ae97730156897feda292"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aacc053d60148ae97730156897feda292">DisableUserMFA</a> (string token)</td></tr>
 <tr class="separator:aacc053d60148ae97730156897feda292"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea767e3bba531744d9d345053ea70641"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aea767e3bba531744d9d345053ea70641">GenerateResetToken</a> (Guid userId, string email)</td></tr>
-<tr class="separator:aea767e3bba531744d9d345053ea70641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6297ee0574880f09f584e28c681a8aa"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#af6297ee0574880f09f584e28c681a8aa">GenerateResetPasswordToken</a> (Guid userId, string email)</td></tr>
+<tr class="separator:af6297ee0574880f09f584e28c681a8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9b04aa3f51038e46192d2af326b46d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#aa9b04aa3f51038e46192d2af326b46d4">VerifyResetToken</a> (string token)</td></tr>
 <tr class="separator:aa9b04aa3f51038e46192d2af326b46d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c807f2a5b09445f60b73178c942c24c"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a3c807f2a5b09445f60b73178c942c24c">SignUser</a> (<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO.html">CreateUserDTO</a> newUser, <a class="el" href="namespaceAdeNote_1_1Models.html#a0ad63207f9f4ee5ba4893989f6321597">AuthType</a> authType=AuthType.local, <a class="el" href="namespaceAdeNote_1_1Models.html#a44d267b0992deac7399dae09f7647131">Role</a> role=Role.User)</td></tr>
@@ -173,10 +173,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac367eebcc028896241ebd0f32ab2ecaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96561e50f238b7dbce50c5563f73646d"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a96561e50f238b7dbce50c5563f73646d">GenerateAccessToken</a> (Guid userId, string email)</td></tr>
 <tr class="separator:a96561e50f238b7dbce50c5563f73646d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1274e598283165e7aa79f10e2f69ac33"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a1274e598283165e7aa79f10e2f69ac33">LoginUser</a> (string email)</td></tr>
-<tr class="separator:a1274e598283165e7aa79f10e2f69ac33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9252c9c841e1e035a998502b30dc16bd"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a9252c9c841e1e035a998502b30dc16bd">LoginUserPasswordless</a> (string email)</td></tr>
+<tr class="separator:a9252c9c841e1e035a998502b30dc16bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4433b9e7905cabacdafa8b48833cf9cb"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html">ActionTokenResult</a>&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html">UserDTO</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a4433b9e7905cabacdafa8b48833cf9cb">VerifyPasswordlessToken</a> (string token)</td></tr>
 <tr class="separator:a4433b9e7905cabacdafa8b48833cf9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51acc95bda2d17c281ef6a2cc766b013"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; string[]&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a51acc95bda2d17c281ef6a2cc766b013">GenerateRecoveryCodes</a> (Guid userId)</td></tr>
+<tr class="separator:a51acc95bda2d17c281ef6a2cc766b013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726c478f3410e8230646323e91c9b3ed"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html">ActionTokenResult</a>&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html">UserDTO</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a726c478f3410e8230646323e91c9b3ed">LoginUserByRecoveryCodes</a> (string[] recoveryCodes)</td></tr>
+<tr class="separator:a726c478f3410e8230646323e91c9b3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An authentication interface that with the controller </p>
@@ -399,25 +403,55 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a777010bf07284b344981579b32dbd0ff_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a777010bf07284b344981579b32dbd0ff_icgraph" alt=""/></div>
 <map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a777010bf07284b344981579b32dbd0ff_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a777010bf07284b344981579b32dbd0ff_icgraph">
-<area shape="rect" title=" " alt="" coords="624,71,857,112"/>
+<area shape="rect" title=" " alt="" coords="624,104,857,145"/>
 <area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a27723ecc823f1146179503edad6c8e57" title="Generates token to removes google or sms authenticator" alt="" coords="305,5,576,47"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="315,71,567,112"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9f9c5c7f9a9a9e13446b3460ad8abf37" title="Logins user using passwordless method" alt="" coords="315,136,567,177"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user" alt="" coords="5,39,257,80"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,104,257,145"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3a406c93773bc58dd740751681c0934e" title="Logins user using recovery codes" alt="" coords="315,71,567,112"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="315,136,567,177"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9f9c5c7f9a9a9e13446b3460ad8abf37" title="Logins user using passwordless method" alt="" coords="315,201,567,243"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user" alt="" coords="5,104,257,145"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,169,257,211"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="aea767e3bba531744d9d345053ea70641"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea767e3bba531744d9d345053ea70641">&#9670;&nbsp;</a></span>GenerateResetToken()</h2>
+<a id="a51acc95bda2d17c281ef6a2cc766b013"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51acc95bda2d17c281ef6a2cc766b013">&#9670;&nbsp;</a></span>GenerateRecoveryCodes()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt;string&gt; &gt; AdeNote.Infrastructure.Services.IAuthService.GenerateResetToken </td>
+          <td class="memname">Task&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt;string[]&gt; &gt; AdeNote.Infrastructure.Services.IAuthService.GenerateRecoveryCodes </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>userId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a567badcdb3891ed981e30fa859bb4e57">AdeNote.Infrastructure.Services.AuthService</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a51acc95bda2d17c281ef6a2cc766b013_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a51acc95bda2d17c281ef6a2cc766b013_icgraph" alt=""/></div>
+<map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a51acc95bda2d17c281ef6a2cc766b013_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a51acc95bda2d17c281ef6a2cc766b013_icgraph">
+<area shape="rect" title=" " alt="" coords="296,5,565,47"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1UserController.html#ac163c2c4c10193dc96ca6c5b9b5313c9" title="Generate new recovery code" alt="" coords="5,5,248,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af6297ee0574880f09f584e28c681a8aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6297ee0574880f09f584e28c681a8aa">&#9670;&nbsp;</a></span>GenerateResetPasswordToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt;string&gt; &gt; AdeNote.Infrastructure.Services.IAuthService.GenerateResetPasswordToken </td>
           <td>(</td>
           <td class="paramtype">Guid&#160;</td>
           <td class="paramname"><em>userId</em>, </td>
@@ -436,14 +470,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a5b0cd81d29252be914d6bb1c172370d2">AdeNote.Infrastructure.Services.AuthService</a>.</p>
+<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a345c6dbad74d639fccfd2b2f74a2a486">AdeNote.Infrastructure.Services.AuthService</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_aea767e3bba531744d9d345053ea70641_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_aea767e3bba531744d9d345053ea70641_icgraph" alt=""/></div>
-<map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_aea767e3bba531744d9d345053ea70641_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_aea767e3bba531744d9d345053ea70641_icgraph">
-<area shape="rect" title=" " alt="" coords="305,5,548,47"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a696fc310d5835c7cb5870b1caed88029" title="Generate token" alt="" coords="5,5,257,47"/>
+<div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_af6297ee0574880f09f584e28c681a8aa_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_af6297ee0574880f09f584e28c681a8aa_icgraph" alt=""/></div>
+<map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_af6297ee0574880f09f584e28c681a8aa_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_af6297ee0574880f09f584e28c681a8aa_icgraph">
+<area shape="rect" title=" " alt="" coords="337,5,640,47"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a901c83387f0d2b7e1ae8c6e1823c0f9c" title="Generate reset password token" alt="" coords="5,5,289,47"/>
 </map>
 </div>
 
@@ -557,14 +591,15 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a597da2feeb46e66d1069f097333b6d87_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a597da2feeb46e66d1069f097333b6d87_icgraph" alt=""/></div>
 <map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a597da2feeb46e66d1069f097333b6d87_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a597da2feeb46e66d1069f097333b6d87_icgraph">
 <area shape="rect" title="Checks if MFA has been enabled for the user using user id." alt="" coords="616,201,875,243"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="311,37,563,79"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3b1635ec52b83ce1ff5a6f008130a66c" title="Sends one time password via sms" alt="" coords="311,103,563,144"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#afcab0d745ea8985803931c8630630408" title="Sets up two factor authentication using google authenticator app" alt="" coords="305,168,568,209"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ab30f6d5eec51e4622c4ddfd5aad4d2f6" title="Sets up two factor authentication using sms" alt="" coords="311,233,563,275"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9f9c5c7f9a9a9e13446b3460ad8abf37" title="Logins user using passwordless method" alt="" coords="311,299,563,340"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ac6e29dec9bd50a10a1629d70231b7fc4" title="Verifies sms code" alt="" coords="311,364,563,405"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user" alt="" coords="5,5,257,47"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,71,257,112"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3a406c93773bc58dd740751681c0934e" title="Logins user using recovery codes" alt="" coords="311,5,563,47"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="311,71,563,112"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3b1635ec52b83ce1ff5a6f008130a66c" title="Sends one time password via sms" alt="" coords="311,136,563,177"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1UserController.html#ae28420ba0635c8568bc6bedee7b01bca" title="Sets up two factor authentication using google authenticator app" alt="" coords="305,201,568,243"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1UserController.html#a2bbabbe2d779a9a47b8995fad0d532b8" title="Sets up two factor authentication using sms" alt="" coords="315,267,559,308"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9f9c5c7f9a9a9e13446b3460ad8abf37" title="Logins user using passwordless method" alt="" coords="311,332,563,373"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ac6e29dec9bd50a10a1629d70231b7fc4" title="Verifies sms code" alt="" coords="311,397,563,439"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user" alt="" coords="5,39,257,80"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,104,257,145"/>
 </map>
 </div>
 
@@ -671,8 +706,8 @@ Here is the caller graph for this function:</div>
 <map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a84c70bfd6bb4b8de6058be1579ceb436_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a84c70bfd6bb4b8de6058be1579ceb436_icgraph">
 <area shape="rect" title="Checks if a phone number has been verified" alt="" coords="305,104,565,145"/>
 <area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3b1635ec52b83ce1ff5a6f008130a66c" title="Sends one time password via sms" alt="" coords="5,5,257,47"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ab30f6d5eec51e4622c4ddfd5aad4d2f6" title="Sets up two factor authentication using sms" alt="" coords="5,71,257,112"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a898afbb1083814447509b28d58923782" title="Verifies phone number" alt="" coords="5,136,257,177"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1UserController.html#a2bbabbe2d779a9a47b8995fad0d532b8" title="Sets up two factor authentication using sms" alt="" coords="9,71,253,112"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1UserController.html#a18ba254cf6253b7749dfc2c3e5588c54" title="Verifies phone number" alt="" coords="22,136,241,177"/>
 <area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ac6e29dec9bd50a10a1629d70231b7fc4" title="Verifies sms code" alt="" coords="5,201,257,243"/>
 </map>
 </div>
@@ -717,7 +752,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a05f9a37d44ea9f8f5e6915cb0944ace3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05f9a37d44ea9f8f5e6915cb0944ace3">&#9670;&nbsp;</a></span>LoginUser() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a05f9a37d44ea9f8f5e6915cb0944ace3">&#9670;&nbsp;</a></span>LoginUser()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -749,23 +784,51 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a05f9a37d44ea9f8f5e6915cb0944ace3_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a05f9a37d44ea9f8f5e6915cb0944ace3_icgraph" alt=""/></div>
 <map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a05f9a37d44ea9f8f5e6915cb0944ace3_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a05f9a37d44ea9f8f5e6915cb0944ace3_icgraph">
 <area shape="rect" title=" " alt="" coords="605,39,839,80"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#abe83dcfaffc9e7fd2acea7a3c547958e" title="Logins user using passwordless method" alt="" coords="305,5,557,47"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="305,71,557,112"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user" alt="" coords="5,37,257,79"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,103,257,144"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="305,39,557,80"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user" alt="" coords="5,5,257,47"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,71,257,112"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a1274e598283165e7aa79f10e2f69ac33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1274e598283165e7aa79f10e2f69ac33">&#9670;&nbsp;</a></span>LoginUser() <span class="overload">[2/2]</span></h2>
+<a id="a726c478f3410e8230646323e91c9b3ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a726c478f3410e8230646323e91c9b3ed">&#9670;&nbsp;</a></span>LoginUserByRecoveryCodes()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt;string&gt; &gt; AdeNote.Infrastructure.Services.IAuthService.LoginUser </td>
+          <td class="memname">Task&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html">ActionTokenResult</a>&lt;<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html">UserDTO</a>&gt; &gt; AdeNote.Infrastructure.Services.IAuthService.LoginUserByRecoveryCodes </td>
+          <td>(</td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>recoveryCodes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a99409ed2d3165412f8dd6b0181d49345">AdeNote.Infrastructure.Services.AuthService</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a726c478f3410e8230646323e91c9b3ed_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a726c478f3410e8230646323e91c9b3ed_icgraph" alt=""/></div>
+<map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a726c478f3410e8230646323e91c9b3ed_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a726c478f3410e8230646323e91c9b3ed_icgraph">
+<area shape="rect" title=" " alt="" coords="305,5,596,47"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3a406c93773bc58dd740751681c0934e" title="Logins user using recovery codes" alt="" coords="5,5,257,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9252c9c841e1e035a998502b30dc16bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9252c9c841e1e035a998502b30dc16bd">&#9670;&nbsp;</a></span>LoginUserPasswordless()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt;string&gt; &gt; AdeNote.Infrastructure.Services.IAuthService.LoginUserPasswordless </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>email</em></td><td>)</td>
@@ -774,7 +837,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a9fdcd0ae63bfceaa0a911369d3be10c0">AdeNote.Infrastructure.Services.AuthService</a>.</p>
+<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ad97b5599bea90e6691166c8ff299a2fa">AdeNote.Infrastructure.Services.AuthService</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a9252c9c841e1e035a998502b30dc16bd_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a9252c9c841e1e035a998502b30dc16bd_icgraph" alt=""/></div>
+<map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a9252c9c841e1e035a998502b30dc16bd_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a9252c9c841e1e035a998502b30dc16bd_icgraph">
+<area shape="rect" title=" " alt="" coords="305,5,565,47"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#abe83dcfaffc9e7fd2acea7a3c547958e" title="Logins user using passwordless method" alt="" coords="5,5,257,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -957,7 +1029,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_ae3c515f59107f454452f2be174b2e00f_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_ae3c515f59107f454452f2be174b2e00f_icgraph" alt=""/></div>
 <map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_ae3c515f59107f454452f2be174b2e00f_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_ae3c515f59107f454452f2be174b2e00f_icgraph">
 <area shape="rect" title="Sets up MFA using google authenticator app" alt="" coords="316,5,549,47"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#afcab0d745ea8985803931c8630630408" title="Sets up two factor authentication using google authenticator app" alt="" coords="5,5,268,47"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1UserController.html#ae28420ba0635c8568bc6bedee7b01bca" title="Sets up two factor authentication using google authenticator app" alt="" coords="5,5,268,47"/>
 </map>
 </div>
 
@@ -1004,8 +1076,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a5bfedca5a816cc4c024d4852887fe189_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a5bfedca5a816cc4c024d4852887fe189_icgraph" alt=""/></div>
 <map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a5bfedca5a816cc4c024d4852887fe189_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a5bfedca5a816cc4c024d4852887fe189_icgraph">
-<area shape="rect" title="Sets up phone number" alt="" coords="305,5,539,47"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a923f2d0cdf5a7252471aa3b94585579e" title="Adds phone number" alt="" coords="5,5,257,47"/>
+<area shape="rect" title="Sets up phone number" alt="" coords="260,5,493,47"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1UserController.html#a78936cc90340d7fecd28eb8feca1bc5b" title="Adds phone number" alt="" coords="5,5,212,47"/>
 </map>
 </div>
 
@@ -1041,8 +1113,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a8e029bac287e94a02f291647721758a6_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a8e029bac287e94a02f291647721758a6_icgraph" alt=""/></div>
 <map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a8e029bac287e94a02f291647721758a6_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a8e029bac287e94a02f291647721758a6_icgraph">
-<area shape="rect" title="Sets up MFA using sms authentication" alt="" coords="305,5,551,47"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ab30f6d5eec51e4622c4ddfd5aad4d2f6" title="Sets up two factor authentication using sms" alt="" coords="5,5,257,47"/>
+<area shape="rect" title="Sets up MFA using sms authentication" alt="" coords="297,5,543,47"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1UserController.html#a2bbabbe2d779a9a47b8995fad0d532b8" title="Sets up two factor authentication using sms" alt="" coords="5,5,249,47"/>
 </map>
 </div>
 
@@ -1214,8 +1286,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a821718637f3c6de0c7ffa1b45e6ca830_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a821718637f3c6de0c7ffa1b45e6ca830_icgraph" alt=""/></div>
 <map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a821718637f3c6de0c7ffa1b45e6ca830_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_a821718637f3c6de0c7ffa1b45e6ca830_icgraph">
-<area shape="rect" title="Sets up phone number" alt="" coords="305,5,543,47"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#a898afbb1083814447509b28d58923782" title="Verifies phone number" alt="" coords="5,5,257,47"/>
+<area shape="rect" title="Sets up phone number" alt="" coords="272,5,509,47"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1UserController.html#a18ba254cf6253b7749dfc2c3e5588c54" title="Verifies phone number" alt="" coords="5,5,224,47"/>
 </map>
 </div>
 
@@ -1244,7 +1316,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_aa9b04aa3f51038e46192d2af326b46d4_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_aa9b04aa3f51038e46192d2af326b46d4_icgraph" alt=""/></div>
 <map name="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_aa9b04aa3f51038e46192d2af326b46d4_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService_aa9b04aa3f51038e46192d2af326b46d4_icgraph">
 <area shape="rect" title=" " alt="" coords="305,5,539,47"/>
-<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ac355a5462d55a447765c63b13431229b" title="Reset password" alt="" coords="5,5,257,47"/>
+<area shape="rect" href="classAdeNote_1_1Controllers_1_1AuthenticationController.html#ac355a5462d55a447765c63b13431229b" title="Reset password using reset password token" alt="" coords="5,5,257,47"/>
 </map>
 </div>
 
