@@ -1,0 +1,8 @@
+<map id="AdeNote.Infrastructure.Services.StatisticService" name="AdeNote.Infrastructure.Services.StatisticService">
+<area shape="rect" id="node1" title=" " alt="" coords="625,57,859,98"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IStatisticsService.html" title=" " alt="" coords="276,5,411,32"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html" title=" " alt="" coords="220,57,467,98"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,64,171,91"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html" title=" " alt="" coords="220,122,467,163"/>
+<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="10,129,166,156"/>
+</map>

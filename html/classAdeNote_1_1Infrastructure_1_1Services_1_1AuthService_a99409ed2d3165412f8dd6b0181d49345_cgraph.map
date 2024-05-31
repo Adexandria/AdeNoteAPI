@@ -1,0 +1,8 @@
+<map id="AdeNote.Infrastructure.Services.AuthService.LoginUserByRecoveryCodes" name="AdeNote.Infrastructure.Services.AuthService.LoginUserByRecoveryCodes">
+<area shape="rect" id="node1" title=" " alt="" coords="5,144,292,185"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#af7cfac5b470f7e8886c0335122bdd817" title="Saves a new entity" alt="" coords="356,5,603,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html#abb3c34371d11ab0bd97e489cfcaeeabd" title=" " alt="" coords="365,71,594,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRecoveryCodeRepository.html#a344c1ef6ded732f595d0f36456557c09" title=" " alt="" coords="342,137,617,193"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#aa09992933cc1efc25ff9ba7ed29d601a" title="Remove an existing object" alt="" coords="356,217,603,259"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html#abb8e7898d77e0b0d8720c212a2837134" title=" " alt="" coords="340,283,619,324"/>
+</map>
