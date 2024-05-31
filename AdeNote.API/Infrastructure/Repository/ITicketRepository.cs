@@ -9,7 +9,7 @@ namespace AdeNote.Infrastructure.Repository
 
         Task<Ticket> GetTicket(Guid ticketId);
 
-        int GetNumberOfTicketsByStatus(Status status);
+        List<TicketStatusDto> GetNumberOfTicketsByStatus();
 
         IEnumerable<Ticket> GetTickets(string name,int pageNumber, int pageSize);
 

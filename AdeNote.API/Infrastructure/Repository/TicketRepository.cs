@@ -21,9 +21,20 @@ namespace AdeNote.Infrastructure.Repository
             return await SaveChanges<Ticket>();
         }
 
-        public int GetNumberOfTicketsByStatus(Status status)
+        public List<TicketStatusDto> GetNumberOfTicketsByStatus()
         {
-            return Db.Tickets.Where(s => s.Status == status).Count();
+            var tickets = Db.Tickets;
+
+            var numberOfTickets = new List<TicketStatusDto>()
+            {
+                new(Status.Pending, tickets.Count(s=>s.Status == Status.Pending)),
+                new(Status.Unresolved, tickets.Count(s=>s.Status == Status.Unresolved)),
+                new(Status.Solved, tickets.Count(s=>s.Status == Status.Solved)),
+                new(Status.Inreview, tickets.Count(s=>s.Status == Status.Inreview))
+
+            };
+
+            return numberOfTickets;
         }
 
         public async Task<Ticket> GetTicket(Guid ticketId)

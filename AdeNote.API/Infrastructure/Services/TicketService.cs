@@ -78,7 +78,7 @@ namespace AdeNote.Infrastructure.Services
                     {
                         Issue = s.Issue,
                         TicketId = s.Id,
-                        Status = s.Status.ToString(),
+                        Status = s.Status.GetDescription(),
                         FirstName = s.User.FirstName,
                         LastName = s.User.LastName
                     });
@@ -114,7 +114,7 @@ namespace AdeNote.Infrastructure.Services
                    {
                        Issue = s.Issue,
                        TicketId = s.Id,
-                       Status = s.Status.ToString(),
+                       Status = s.Status.GetDescription(),
                        FirstName = s.User.FirstName,
                        LastName = s.User.LastName
                    });
@@ -141,6 +141,9 @@ namespace AdeNote.Infrastructure.Services
                 if (ticket == null)
                     return ActionResult<TicketDTO>.Failed("There are no existing tickets", StatusCodes.Status400BadRequest);
 
+
+                var ticketAdmin = await userRepository.GetUser(ticket.AdminId.GetValueOrDefault());
+
                 var currentTicket = new TicketDTO()
                 {
                     Description = ticket.Description,
@@ -148,9 +151,10 @@ namespace AdeNote.Infrastructure.Services
                     ImageUrl = ticket.ImageUrl,
                     Issuer = ticket.Issuer,
                     TicketId = ticket.Id,
-                    Status = ticket.Status.ToString(),
+                    Status = ticket.Status.GetDescription(),
                     FirstName = ticket.User.FirstName,
-                    LastName = ticket.User.LastName
+                    LastName = ticket.User.LastName,
+                    Handler = $"{ticketAdmin?.FirstName}  {ticketAdmin?.LastName}"
                 };
 
                 return ActionResult<TicketDTO>.SuccessfulOperation(currentTicket);
@@ -183,7 +187,7 @@ namespace AdeNote.Infrastructure.Services
                    {
                        Issue = s.Issue,
                        TicketId = s.Id,
-                       Status = s.Status.ToString(),
+                       Status = s.Status.GetDescription(),
                        FirstName = s.User.FirstName,
                        LastName = s.User.LastName
                    });
@@ -228,7 +232,7 @@ namespace AdeNote.Infrastructure.Services
                    {
                        Issue = s.Issue,
                        TicketId = s.Id,
-                       Status = s.Status.ToString(),
+                       Status = s.Status.GetDescription(),
                        FirstName = s.User.FirstName,
                        LastName = s.User.LastName
                    });
@@ -265,10 +269,9 @@ namespace AdeNote.Infrastructure.Services
                 }
 
                 currentTicket.Status = newStatus;
+                currentTicket.AdminId = adminId;
 
-                var ticket = currentTicket.Adapt<Ticket>(MappingService.TicketConfig());
-
-                var commitStatus = await ticketRepository.Update(ticket);
+                var commitStatus = await ticketRepository.Update(currentTicket);
 
                 if(!commitStatus)
                 {

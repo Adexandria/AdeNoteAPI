@@ -18,14 +18,9 @@ namespace AdeNote.Infrastructure.Services
         public ActionResult<StatisticsDto> GetStatistics()
         {
             var numberOfUsers = userRepository.GetNumberOfUsers();
-            var numberOfTicketUnResolved = ticketRepository.GetNumberOfTicketsByStatus(Status.Unresolved);
-            var numberOfTicketPending = ticketRepository.GetNumberOfTicketsByStatus(Status.Pending);
-            var numberOfTicketInReview = ticketRepository.GetNumberOfTicketsByStatus(Status.Inreview);
-            var numberOfTicketSolved = ticketRepository.GetNumberOfTicketsByStatus(Status.Solved);
+            var numberOfTickets = ticketRepository.GetNumberOfTicketsByStatus();
 
-            return ActionResult<StatisticsDto>.SuccessfulOperation(new StatisticsDto(numberOfUsers,
-                numberOfTicketPending, numberOfTicketInReview,
-                numberOfTicketSolved, numberOfTicketUnResolved));
+            return ActionResult<StatisticsDto>.SuccessfulOperation(new StatisticsDto(numberOfUsers,numberOfTickets));
         }
     }
 }

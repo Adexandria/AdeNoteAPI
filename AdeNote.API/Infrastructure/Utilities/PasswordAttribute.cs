@@ -9,6 +9,7 @@ namespace AdeNote.Infrastructure.Utilities
         {
             switch (true)
             {
+               
                 case bool _ when !Regex.IsMatch(value.ToString(), "[$!&*^]"):
                     return new ValidationResult("Password must have at least one special character eg $!&*^");
                 case bool _ when !Regex.IsMatch(value.ToString(), "[A-Z]"):

@@ -11,15 +11,23 @@ namespace AdeNote.Infrastructure.Utilities
     {
         public static void CreateTables(this IServiceCollection services)
         {
-            var dbContext = services.BuildServiceProvider().GetService<NoteDbContext>()
+            var provider = services.BuildServiceProvider();
+            var dbContext =provider.GetService<NoteDbContext>()
                 ?? throw new NullReferenceException("Unregistered service");
+
+            var loggerFactory = provider.GetRequiredService<ILoggerFactory>() 
+                ?? throw new NullReferenceException("Unregistered service");
+
+            var logger = loggerFactory.CreateLogger<NoteDbContext>();
 
             var databaseCreator = dbContext.GetService<IRelationalDatabaseCreator>();
 
             if (!databaseCreator.HasTables())
             {
+                logger.LogInformation("Created Tables successfully");
                 databaseCreator.CreateTables();
             }
+            logger.LogInformation("Tables have been created");
         }
 
         public static void SeedHangFireUser(this IServiceCollection services, HangFireUserConfiguration config)

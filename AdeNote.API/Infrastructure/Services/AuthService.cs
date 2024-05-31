@@ -788,7 +788,7 @@ namespace AdeNote.Infrastructure.Services
                     return ActionTokenResult<UserDTO>.Failed("Failed to login");
 
                 return ActionTokenResult<UserDTO>.SuccessfulOperation(new UserDTO(authenticatedUser.Id,authenticatedUser.FirstName,
-                    authenticatedUser.LastName, authenticatedUser.Email, isFirstTimeLogin ? authenticatedUser.RecoveryCode.Codes : null),accessToken,refreshToken);
+                    authenticatedUser.LastName, authenticatedUser.Email, isFirstTimeLogin ? authenticatedUser.RecoveryCode?.Codes : null),accessToken,refreshToken);
             }
             catch (Exception ex)
             {
@@ -1020,7 +1020,7 @@ namespace AdeNote.Infrastructure.Services
                     return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
 
 
-                var authenticatedUser = new UserDTO(user.Id,user.FirstName,user.LastName,user.Email, isFirstTimeLogin ? user.RecoveryCode.Codes : null);
+                var authenticatedUser = new UserDTO(user.Id,user.FirstName,user.LastName,user.Email, isFirstTimeLogin ? user.RecoveryCode?.Codes : null);
 
                 return ActionTokenResult<UserDTO>.SuccessfulOperation(authenticatedUser, accessToken, refreshToken);
             }
