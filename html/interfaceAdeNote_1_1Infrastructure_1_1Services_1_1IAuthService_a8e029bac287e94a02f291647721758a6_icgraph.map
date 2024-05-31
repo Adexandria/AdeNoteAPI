@@ -1,0 +1,4 @@
+<map id="AdeNote.Infrastructure.Services.IAuthService.SetSmsAuthenticator" name="AdeNote.Infrastructure.Services.IAuthService.SetSmsAuthenticator">
+<area shape="rect" id="node1" title="Sets up MFA using sms authentication" alt="" coords="297,5,543,47"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1UserController.html#a2bbabbe2d779a9a47b8995fad0d532b8" title="Sets up two factor authentication using sms" alt="" coords="5,5,249,47"/>
+</map>
