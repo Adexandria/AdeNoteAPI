@@ -21,14 +21,6 @@ namespace AdeNote.Infrastructure.Services
         }
 
 
-        public ActionResult<StatisticsDto> GetStatistics()
-        {
-            var noOfUsers = _userRepository.GetNumberOfUsers();
-
-            return ActionResult<StatisticsDto>.SuccessfulOperation( new StatisticsDto() { NumberOfUsers = noOfUsers });
-        }
-
-
         public async Task<ActionResult> UpdateUserPassword(Guid userId, string currentPassword,string password)
         {
             var currentUser = await _userRepository.GetUser(userId);
@@ -42,7 +34,9 @@ namespace AdeNote.Infrastructure.Services
 
             var hashedPassword = _passwordManager.HashPassword(password,out string salt);
 
-           currentUser.SetPassword(hashedPassword, salt);
+            currentUser.SetPassword(hashedPassword, salt);
+
+            currentUser.SetModifiedDate();
 
             var commitStatus = await _userRepository.Update(currentUser);
 
@@ -63,6 +57,8 @@ namespace AdeNote.Infrastructure.Services
             currentUser.SetPassword(hashedPassword, salt);
 
             var commitStatus = await _userRepository.Update(currentUser);
+
+            currentUser.SetModifiedDate();
 
             if (!commitStatus)
                 return ActionResult.Failed("Failed to update password", StatusCodes.Status400BadRequest);
@@ -87,6 +83,15 @@ namespace AdeNote.Infrastructure.Services
                 return ActionResult.Failed("User doesn't exist", StatusCodes.Status404NotFound);
 
             return ActionResult.SuccessfulOperation();
+        }
+
+        public async Task<ActionResult<UserDTO>> GetUser(Guid userId)
+        {
+            var currentUser = await _userRepository.GetUser(userId);
+            if (currentUser == null)
+                return ActionResult<UserDTO>.Failed("User doesn't exist", StatusCodes.Status404NotFound);
+
+            return ActionResult<UserDTO>.SuccessfulOperation(new UserDTO(userId, currentUser.FirstName,currentUser.LastName, currentUser.Email, currentUser.RecoveryCode?.Codes));
         }
 
         public readonly IUserRepository _userRepository;

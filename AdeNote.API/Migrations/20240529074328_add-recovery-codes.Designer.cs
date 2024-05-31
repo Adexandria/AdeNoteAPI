@@ -4,6 +4,7 @@ using AdeNote.Db;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AdeNote.Migrations
 {
     [DbContext(typeof(NoteDbContext))]
-    partial class NoteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240529074328_add-recovery-codes")]
+    partial class addrecoverycodes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -159,7 +162,7 @@ namespace AdeNote.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("RecoveryCodes");
+                    b.ToTable("RecoveryCode");
                 });
 
             modelBuilder.Entity("AdeNote.Models.RefreshToken", b =>
@@ -193,44 +196,6 @@ namespace AdeNote.Migrations
                         .IsUnique();
 
                     b.ToTable("RefreshTokens");
-                });
-
-            modelBuilder.Entity("AdeNote.Models.Ticket", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("AdminId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Issue")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("Issuer")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("Modified")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Issuer");
-
-                    b.ToTable("Tickets");
                 });
 
             modelBuilder.Entity("AdeNote.Models.User", b =>
@@ -277,11 +242,6 @@ namespace AdeNote.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
-
-                    b.Property<int>("Role")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(0);
 
                     b.Property<string>("Salt")
                         .HasColumnType("nvarchar(max)");
@@ -359,17 +319,6 @@ namespace AdeNote.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("AdeNote.Models.Ticket", b =>
-                {
-                    b.HasOne("AdeNote.Models.User", "User")
-                        .WithMany("Tickets")
-                        .HasForeignKey("Issuer")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("AdeNote.Models.Book", b =>
                 {
                     b.Navigation("Pages");
@@ -384,8 +333,6 @@ namespace AdeNote.Migrations
 
                     b.Navigation("RefreshToken")
                         .IsRequired();
-
-                    b.Navigation("Tickets");
                 });
 #pragma warning restore 612, 618
         }

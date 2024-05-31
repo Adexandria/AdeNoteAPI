@@ -4,6 +4,7 @@ using AdeNote.Db;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AdeNote.Migrations
 {
     [DbContext(typeof(NoteDbContext))]
-    partial class NoteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240529091647_add-ticket")]
+    partial class addticket
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -159,7 +162,7 @@ namespace AdeNote.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("RecoveryCodes");
+                    b.ToTable("RecoveryCode");
                 });
 
             modelBuilder.Entity("AdeNote.Models.RefreshToken", b =>
@@ -201,20 +204,14 @@ namespace AdeNote.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("AdminId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Issue")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("Issuer")
@@ -230,7 +227,7 @@ namespace AdeNote.Migrations
 
                     b.HasIndex("Issuer");
 
-                    b.ToTable("Tickets");
+                    b.ToTable("Ticket");
                 });
 
             modelBuilder.Entity("AdeNote.Models.User", b =>

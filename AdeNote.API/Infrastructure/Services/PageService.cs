@@ -174,7 +174,7 @@ namespace AdeNote.Infrastructure.Services
                 var page = updatePage.Adapt<Page>(MappingService.UpdateLabelConfig());
                 page.Id = pageId;
                 page.BookId = bookId;
-
+                page.SetModifiedDate();
                 var commitStatus = await pageRepository.Update(page);
                 if (!commitStatus)
                     return ActionResult.Failed("Failed to update page");

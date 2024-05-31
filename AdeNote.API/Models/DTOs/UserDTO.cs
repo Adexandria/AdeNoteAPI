@@ -11,13 +11,16 @@
         /// </summary>
         /// <param name="name">Name of the user</param>
         /// <param name="email">Email of the user</param>
-        public UserDTO(Guid userId,string firstname, string lastName, string email)
+        public UserDTO(Guid userId,string firstname, string lastName, string email,string? codes)
         {
             UserId = userId;
             FirstName = firstname;
             LastName = lastName;
             Email = email;
+            Codes = codes?.Split(',');
         }
+
+
 
         public Guid UserId { get; set; }
         /// <summary>
@@ -29,6 +32,8 @@
         /// <summary>
         ///  Email of the user
         /// </summary>
-        public string Email { get; set; }   
+        public string Email { get; set; }  
+        
+        public string[]? Codes { get; set; }
     }
 }

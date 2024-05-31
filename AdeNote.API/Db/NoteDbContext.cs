@@ -1,5 +1,6 @@
 ﻿using AdeNote.Models;
 using Microsoft.EntityFrameworkCore;
+using Org.BouncyCastle.Bcpg.Sig;
 
 namespace AdeNote.Db
 {
@@ -34,6 +35,8 @@ namespace AdeNote.Db
 
         public DbSet<User> Users { get; set; }
 
+        public DbSet<Ticket> Tickets { get; set; }
+
         /// <summary>
         /// Initialises the label page objects
         /// </summary>
@@ -42,6 +45,8 @@ namespace AdeNote.Db
         public DbSet<RefreshToken> RefreshTokens { get; set; }
 
         public DbSet<HangfireUser> HangfireUsers {  get; set; } 
+
+        public DbSet<RecoveryCode> RecoveryCodes { get; set; }
 
 
         /// <summary>
@@ -66,6 +71,21 @@ namespace AdeNote.Db
 
             modelBuilder.Entity<Book>()
                 .HasMany(s => s.Pages);
+
+
+            modelBuilder.Entity<Ticket>()
+                .HasOne(s=>s.User)
+                .WithMany(s => s.Tickets).HasForeignKey(s=>s.Issuer);
+
+            modelBuilder.Entity<RecoveryCode>()
+                .HasOne(s => s.User)
+                .WithOne(s => s.RecoveryCode).HasForeignKey("RecoveryCode", "UserId");
+
+            modelBuilder.Entity<User>()
+                .HasOne(s => s.RecoveryCode)
+                .WithOne(s => s.User)
+                .HasForeignKey("RecoveryCode", "UserId");
+
 
             modelBuilder.Entity<Page>()
                 .HasMany(s => s.Labels)

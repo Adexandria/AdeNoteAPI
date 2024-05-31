@@ -1,5 +1,7 @@
 ﻿
 
+using Twilio.Base;
+
 namespace AdeNote.Infrastructure.Utilities
 {
     public class ActionResult<T> : ActionResult 
@@ -199,4 +201,24 @@ namespace AdeNote.Infrastructure.Utilities
             return this;
         }
     }
+
+
+    public class PaginatedResponse<T> 
+    {
+        public PaginatedResponse(int pageNumber, int pageSize, IEnumerable<T> entities)
+        {
+            CurrentPage = pageNumber;
+            PageSize = pageSize;
+            TotalCount = entities.Count();
+            TotalPages = (int)Math.Ceiling(TotalCount / (double)PageSize);
+            Entities = entities;
+        }
+        public int CurrentPage { get; private set; }
+        public int TotalPages { get; private set; }
+        public int PageSize { get; private set; }
+        public int TotalCount { get; private set; }
+        public IEnumerable<T> Entities { get; private set; }
+
+    }
+
 }

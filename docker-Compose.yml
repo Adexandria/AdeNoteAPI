@@ -15,23 +15,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: adenote_api
-    environment:
-      - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings__NotesDB=Server=host.docker.internal,1450;Database=master;User Id=sa;Password=Xandriaisalovelygirl4;TrustServerCertificate=True;Encrypt=False;
-      - EmailConfiguration__Domain=sandbox361cfdcfadd74f4f88af2e45a6e128f8.mailgun.org
-      - EmailConfiguration__From=<mailgun@sandbox361cfdcfadd74f4f88af2e45a6e128f8.mailgun.org>
-      - EmailConfiguration__APIKey=${EmailAPIKey}
-      - EmailConfiguration__URL= https://api.mailgun.net/v3
-      - TwilioConfiguration__AccountKey=${TwilioAccountKey}
-      - TwilioConfiguration__AccountSecret=${TwilioAccountSecret}
-      - TwilioConfiguration__PhoneNumber=${TwilioPhoneNumber}
-      - TokenSecret=${TokenSecret}
-      - TwoFactorSecret=${TwoFactorSecret}
-      - AzureStorageSecret__AccountKey=${AzureAccountKey}
-      - AzureStorageSecret__AccountName=deola
-      - AzureStorageSecret__Container=textimages
-      - LoginSecret=${LoginSecret}
+    container_name: adenote
+    env_file: .env
     depends_on:
       - db
     ports:

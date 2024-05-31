@@ -139,7 +139,7 @@ namespace AdeNote.Infrastructure.Services
 
         Task<ActionResult> DisableUserMFA(string token);
 
-        Task<ActionResult<string>> GenerateResetToken(Guid userId, string email);
+        Task<ActionResult<string>> GenerateResetPasswordToken(Guid userId, string email);
 
         ActionResult VerifyResetToken(string token);
 
@@ -151,7 +151,11 @@ namespace AdeNote.Infrastructure.Services
 
         Task<ActionResult<string>> GenerateAccessToken(Guid userId, string email);
 
-        Task<ActionResult<string>> LoginUser(string email);
+        Task<ActionResult<string>> LoginUserPasswordless(string email);
         Task<ActionTokenResult<UserDTO>> VerifyPasswordlessToken(string token);
+
+        Task<ActionResult<string[]>> GenerateRecoveryCodes(Guid userId);
+
+        Task<ActionTokenResult<UserDTO>> LoginUserByRecoveryCodes(string[] recoveryCodes);
     }
 }

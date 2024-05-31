@@ -137,7 +137,7 @@ namespace AdeNote.Controllers
         [Produces("application/json")]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("login")]
         public IActionResult Login(LoginDTO login)
@@ -170,8 +170,59 @@ namespace AdeNote.Controllers
         [HttpPost("login/passwordless")]
         public async Task<IActionResult> Login([FromQuery]string email)
         {
-           var response = await _authService.LoginUser(email);
+           var response = await _authService.LoginUserPasswordless(email);
            return response.Response();
+        }
+
+
+        /// <summary>
+        /// Logins user using recovery codes
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///             
+        ///             POST /authentication/login/recovery-codes
+        ///             
+        ///  </remarks>
+        /// <response code ="200"> Returns if logged in successfully</response>
+        /// <response code ="400"> Returns if experiencing client issues</response>
+        /// <response code ="500"> Returns if experiencing server issues</response>
+        /// <response code ="401"> Returns if unauthorised</response>
+        /// <returns>A name and email</returns>
+        [AllowAnonymous]
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(ActionTokenResult<UserDTO>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ActionTokenResult<UserDTO>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(ActionTokenResult<UserDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpPost("login/recovery-codes")]
+        public async Task<IActionResult> LoginByRecoveryCodes(string[] codes)
+        {
+            var response = await _authService.LoginUserByRecoveryCodes(codes);
+            if (response.NotSuccessful)
+                return response.Response();
+
+            var resultResponse = _authService.IsAuthenticatorEnabled(response.Data.Email).Result;
+
+            if (resultResponse.Data != MFAType.none.ToString())
+            {
+                var tokenResponse = _authService.GenerateMFAToken(response.Data.UserId, response.Data.Email, response.RefreshToken);
+
+                AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(8));
+
+                return Infrastructure
+                    .Utilities.
+                    ActionResult<string>
+                    .SuccessfulOperation($"Proceed to enter otp from {resultResponse.Data} authenticator")
+                    .Response();
+            }
+
+            SendNotification(response.Data.Email);
+
+            AddToCookie("AdeNote-RefreshToken", response.RefreshToken, DateTime.UtcNow.AddMonths(2));
+
+            return response.Response();
         }
 
 
@@ -212,10 +263,14 @@ namespace AdeNote.Controllers
 
                 AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(8));
 
-                return Ok($"Proceed to enter otp from {resultResponse.Data} authenticator");
+                return Infrastructure
+                  .Utilities.
+                  ActionResult<string>
+                  .SuccessfulOperation($"Proceed to enter otp from {resultResponse.Data} authenticator")
+                  .Response();
             }
 
-           SendNotification(response.Data.Email);
+            SendNotification(response.Data.Email);
 
             AddToCookie("AdeNote-RefreshToken", response.RefreshToken, DateTime.UtcNow.AddMonths(2));
 
@@ -299,12 +354,12 @@ namespace AdeNote.Controllers
         }
 
         /// <summary>
-        /// Reset password
+        /// Reset password using reset password token
         /// </summary>
         /// <remarks>
         /// Sample request:
         /// 
-        ///             POST /authentication/password/verify-token
+        ///             POST /authentication/reset-password
         /// </remarks>
         /// <param name="password">New password</param>
         /// <param name="token">A token to allow user to reset password</param>
@@ -331,12 +386,12 @@ namespace AdeNote.Controllers
         }
 
         /// <summary>
-        /// Generate token
+        /// Generate reset password token
         /// </summary>
         /// <remarks>
         /// Sample request:
         ///     
-        ///             POST /authentication/password/send-token
+        ///             POST /authentication/reset-password-token
         /// </remarks>
         /// <param name="email">email of the user</param>
         /// <response code ="200"> Returns if token was generated</response>
@@ -348,13 +403,13 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
-        [HttpPost("generate-token")]
-        public async Task<IActionResult> GenerateResetToken(string email)
+        [HttpPost("reset-password-token")]
+        public async Task<IActionResult> GenerateResetPasswordToken(string email)
         {
             var userResponse = await _userService.GetUser(email);
             if(userResponse.NotSuccessful)
                 return userResponse.Response();
-            var response = await _authService.GenerateResetToken(userResponse.Data.Id, email);
+            var response = await _authService.GenerateResetPasswordToken(userResponse.Data.Id, email);
             return response.Response();
         }
         /// <summary>
@@ -363,7 +418,7 @@ namespace AdeNote.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///             POST /authentication/token
+        ///             POST /authentication/access-token
         /// </remarks>
         /// <returns>An access token</returns>
         /// <response code ="200"> Returns if logged in successfully</response>
@@ -380,7 +435,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
-        [HttpPost("token")]
+        [HttpPost("access-token")]
         public async Task<IActionResult> GetAccessToken()
         {
             var refreshToken = Request.Cookies["AdeNote-RefreshToken"];
@@ -391,147 +446,6 @@ namespace AdeNote.Controllers
 
 
             var response = await _authService.GenerateAccessToken(refreshToken);
-            return response.Response();
-        }
-
-        /// <summary>
-        /// Sets up two factor authentication using google authenticator app
-        /// </summary>
-        /// <remarks>
-        /// Sample request: 
-        /// 
-        ///             POST /authentication/two-factor-authentication/app
-        ///             
-        /// </remarks>
-        /// <response code ="200"> Returns if two factor authenticator was successfully set up</response>
-        /// <response code ="400"> Returns if experiencing client issues</response>
-        /// <response code ="500"> Returns if experiencing server issues</response>
-        /// <response code ="404"> Returns if parameters not found</response>
-        /// <response code ="401"> Returns if unauthorised</response>
-        /// <returns>Authenticator key</returns>
-        [Produces("application/json")]
-        [Authorize("User")]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<AuthenticatorDTO>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
-        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
-        [HttpPost("two-factor-authentication/app")]
-        public async Task<IActionResult> SetUpGoogleAuthenticator()
-        {
-            var resultResponse = await _authService.IsAuthenticatorEnabled(CurrentUser, MFAType.google);
-
-            if (resultResponse.IsSuccessful)
-                return Infrastructure.Utilities.ActionResult.Failed("User has set up two factor authentication", StatusCodes.Status400BadRequest).Response();
-
-            var response = await _authService.SetAuthenticator(CurrentUser, CurrentEmail);
-
-            return response.Response();
-        }
-
-        /// <summary>
-        /// Sets up two factor authentication using sms
-        /// </summary>
-        /// <remarks>
-        /// Sample request: 
-        /// 
-        ///             POST /authentication/two-factor-authentication/sms
-        ///             
-        /// </remarks>
-        /// <response code ="200"> Returns if two factor authenticator was successfully set up</response>
-        /// <response code ="400"> Returns if experiencing client issues</response>
-        /// <response code ="500"> Returns if experiencing server issues</response>
-        /// <response code ="404"> Returns if parameters not found</response>
-        /// <response code ="401"> Returns if unauthorised</response>
-        [Produces("application/json")]
-        [Authorize("User")]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
-        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
-        [HttpPost("two-factor-authentication/sms")]
-        public async Task<IActionResult> SetUpSmsAuthenticator()
-        {
-            var resultResponse = await _authService.IsAuthenticatorEnabled(CurrentUser, MFAType.sms);
-
-            if (resultResponse.IsSuccessful)
-                return Infrastructure.Utilities.ActionResult.Failed("User has set up two factor authentication", StatusCodes.Status400BadRequest).Response();
-
-            var verificationResponse = await _authService.IsPhoneNumberVerified(CurrentUser);
-
-            if (verificationResponse.NotSuccessful)
-                return verificationResponse.Response();
-
-            var response = await _authService.SetSmsAuthenticator(CurrentUser);
-
-            return response.Response();
-        }
-
-        /// <summary>
-        /// Adds phone number
-        /// </summary>
-        /// <remarks>
-        /// Sample request: 
-        /// 
-        ///             POST /authentication/phonenumber
-        ///             
-        /// </remarks>
-        /// <param name="phoneNumber">User phone number</param>
-        /// <response code ="200"> Returns if phone number was added/response>
-        /// <response code ="400"> Returns if experiencing client issues</response>
-        /// <response code ="500"> Returns if experiencing server issues</response>
-        /// <response code ="404"> Returns if parameters not found</response>
-        /// <response code ="401"> Returns if unauthorised</response>
-        [Produces("application/json")]
-        [Authorize("User")]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
-        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
-        [HttpPost("phonenumber")]
-        public async Task<IActionResult> AddPhoneNumber(string phoneNumber)
-        {
-            var response = await _authService.SetPhoneNumber(CurrentUser,phoneNumber);
-
-            return response.Response();
-        }
-
-        /// <summary>
-        /// Verifies phone number
-        /// </summary>
-        /// <remarks>
-        /// Sample request: 
-        /// 
-        ///             POST /authentication/verify-phonenumber
-        ///             
-        /// </remarks>
-        /// <param name="verificationCode">Verification code</param>
-        /// <response code ="200"> Returns if phone number was verified</response>
-        /// <response code ="400"> Returns if experiencing client issues</response>
-        /// <response code ="500"> Returns if experiencing server issues</response>
-        /// <response code ="404"> Returns if parameters not found</response>
-        /// <response code ="401"> Returns if unauthorised</response>
-        [Produces("application/json")]
-        [Authorize("User")]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
-        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
-        [HttpPost("verify-phonenumber")]
-        public async Task<IActionResult> VerifyPhoneNumber(string verificationCode)
-        {
-            var resultResponse = await _authService.IsPhoneNumberVerified(CurrentUser);
-
-            if(resultResponse.IsSuccessful)
-                return Infrastructure.Utilities
-                    .ActionResult.Failed("Phone number is already verified",StatusCodes.Status400BadRequest)
-                    .Response();
-
-            var response = await _authService.VerifyPhoneNumber(CurrentUser,verificationCode);
-
             return response.Response();
         }
 
@@ -565,10 +479,6 @@ namespace AdeNote.Controllers
 
             return response.Response();
         }
-
-
-
-
 
         /// <summary>
         /// Sends one time password via sms
@@ -683,7 +593,7 @@ namespace AdeNote.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///                 POST /authentication/two-factor-authentication/app/verify-code
+        ///                 POST /authentication/two-factor-authentication/google/verify-code
         /// </remarks>
         /// <param name="totp">Timed based one time password</param>
         /// <response code ="200"> Returns if one time password was verified correctly</response>
@@ -698,7 +608,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [AllowAnonymous]
-        [HttpPost("two-factor-authentication/app/verify-code")]
+        [HttpPost("two-factor-authentication/google/verify-code")]
         public async Task<IActionResult> VerifyTOTP(string totp)
         {
             var token = Request.Cookies["Multi-FactorToken"];
@@ -727,7 +637,7 @@ namespace AdeNote.Controllers
         /// <remarks>
         /// Sample request
         ///     
-        ///             GET /authentication/two-factor-authentication/app/qr-code
+        ///             GET /authentication/two-factor-authentication/google/qr-code
         /// </remarks>
         /// <response code ="200"> Returns if google two factor authenticator was enabled for the user</response>
         /// <response code ="400"> Returns if experiencing client issues</response>
@@ -741,7 +651,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [Authorize("User")]
-        [HttpGet("two-factor-authentication/app/qr-code")]
+        [HttpGet("two-factor-authentication/google/qr-code")]
         public async Task<IActionResult> GetAuthenticatorQRCode()
         {
             var response = await _authService.GetUserQrCode(CurrentUser);
@@ -844,7 +754,7 @@ namespace AdeNote.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///                 DELETE authentication/two-factor-authentication/recovery/verify-token
+        ///                 DELETE authentication/two-factor-authentication/verify-recovery-token
         /// </remarks>
         /// <returns>Action result</returns>
         /// <response code ="200"> Returns if multifactor authentication was disabled successful</response>
@@ -858,7 +768,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [AllowAnonymous]
-        [HttpDelete("two-factor-authentication/recovery/verify-token")]
+        [HttpDelete("two-factor-authentication/verify-recovery-token")]
         public async Task<IActionResult> RemoveAuthenicator([FromBody] string token)
         {
             var response = await _authService.DisableUserMFA(token);
@@ -916,7 +826,11 @@ namespace AdeNote.Controllers
 
                 AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(8));
 
-                return Ok($"Proceed to enter otp from {resultResponse.Data} authenticator");
+                return Infrastructure
+                    .Utilities.
+                     ActionResult<string>
+                     .SuccessfulOperation("$Proceed to enter otp from {resultResponse.Data} authenticator")
+                    .Response();
             }
 
             SendNotification(loginResponse.Data.Email);
