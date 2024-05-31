@@ -3,7 +3,7 @@
 
 namespace AdeNote.Models
 {
-    public class RefreshToken : BaseClass, IRefreshToken
+    public class RefreshToken : BaseEntity, IRefreshToken
     {
         public RefreshToken()
         {

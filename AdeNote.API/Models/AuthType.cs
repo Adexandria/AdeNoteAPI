@@ -3,7 +3,6 @@
     public enum AuthType
     {
         local,
-        microsoft
-        
+        microsoft  
     }
 }

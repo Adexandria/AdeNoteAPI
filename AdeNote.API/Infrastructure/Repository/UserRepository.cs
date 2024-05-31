@@ -59,6 +59,7 @@ namespace AdeNote.Infrastructure.Repository
         {
             return await Db.Users.
               AsNoTracking().Include(s => s.RecoveryCode)
+              .Include(s=>s.RefreshToken)
               .FirstOrDefaultAsync(x => x.Id == userId);
         }
 

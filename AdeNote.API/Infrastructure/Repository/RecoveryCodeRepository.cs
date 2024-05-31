@@ -22,7 +22,7 @@ namespace AdeNote.Infrastructure.Repository
 
         public async Task<RecoveryCode> GetUserIdByRecoveryCodes(string recoveryCode)
         {
-            var Code = await Db.RecoveryCodes.Where(s => s.Codes == recoveryCode).FirstOrDefaultAsync();
+            var Code = await Db.RecoveryCodes.Include(s=>s.User).ThenInclude(s => s.RefreshToken).Where(s => s.Codes == recoveryCode).FirstOrDefaultAsync();
 
             return Code;
         }

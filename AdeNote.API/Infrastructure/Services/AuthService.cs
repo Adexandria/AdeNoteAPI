@@ -1032,62 +1032,66 @@ namespace AdeNote.Infrastructure.Services
 
         public async Task<ActionTokenResult<UserDTO>> LoginUserByRecoveryCodes(string[] recoveryCodes)
         {
-            if (recoveryCodes.Length == 0)
-                return ActionTokenResult<UserDTO>.Failed("Invalid recovery codes", StatusCodes.Status400BadRequest);
-
-            var recoveryCode = string.Join(',', recoveryCodes);
-
-            var currentCode = await recoveryCodeRepository.GetUserIdByRecoveryCodes(recoveryCode);
-
-            if(currentCode == null)
+            try
             {
-                return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
-            }
+                if (recoveryCodes.Length == 0)
+                    return ActionTokenResult<UserDTO>.Failed("Invalid recovery codes", StatusCodes.Status400BadRequest);
 
-            var user = await userRepository.GetUser(currentCode.UserId);
+                var recoveryCode = string.Join(',', recoveryCodes);
 
-            if (user == null)
-            {
-                return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
-            }
+                var currentCode = await recoveryCodeRepository.GetUserIdByRecoveryCodes(recoveryCode);
 
-            await recoveryCodeRepository.Remove(currentCode);
+                if (currentCode == null)
+                {
+                    return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
+                }
 
-            var newRecoveryCode = new RecoveryCode(user.Id);
 
-            var codeResponse = await recoveryCodeRepository.Add(newRecoveryCode);
+                var user = currentCode.User;
 
-            if (!codeResponse)
-            {
-                return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
-            }
-            if (user.LockoutEnabled)
-            {
-                return ActionTokenResult<UserDTO>.Failed("Account has been locked. Please contact admin", StatusCodes.Status400BadRequest);
-            }
+                await recoveryCodeRepository.Remove(currentCode);
 
-            var isFirstTimeLogin = user.RefreshToken == null;
+                var newRecoveryCode = new RecoveryCode(user.Id);
 
-            if (user.RefreshToken != null)
-            {
-                await refreshTokenRepository.Remove(user.RefreshToken);
-            }
+                var codeResponse = await recoveryCodeRepository.Add(newRecoveryCode);
 
-            var accessToken = tokenProvider.GenerateToken(new Dictionary<string, object>() { { "id", user.Id.ToString("N") },
+                if (!codeResponse)
+                {
+                    return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
+                }
+                if (user.LockoutEnabled)
+                {
+                    return ActionTokenResult<UserDTO>.Failed("Account has been locked. Please contact admin", StatusCodes.Status400BadRequest);
+                }
+
+                var isFirstTimeLogin = user.RefreshToken == null;
+
+                if (user.RefreshToken != null)
+                {
+                    await refreshTokenRepository.Remove(user.RefreshToken);
+                }
+
+                var accessToken = tokenProvider.GenerateToken(new Dictionary<string, object>() { { "id", user.Id.ToString("N") },
                     { ClaimTypes.Email, user.Email} , { ClaimTypes.Role,user.Role.ToString()} }, 10);
 
-            var refreshToken = tokenProvider.GenerateToken();
+                var refreshToken = tokenProvider.GenerateToken();
 
-            var newRefreshToken = new RefreshToken(refreshToken, user.Id, DateTime.UtcNow.AddMonths(3));
+                var newRefreshToken = new RefreshToken(refreshToken, user.Id, DateTime.UtcNow.AddMonths(3));
 
-            var tokenResponse = await refreshTokenRepository.Add(newRefreshToken);
+                var tokenResponse = await refreshTokenRepository.Add(newRefreshToken);
 
-            if (!tokenResponse)
-                return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
+                if (!tokenResponse)
+                    return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
 
-            var authenticatedUser = new UserDTO(user.Id, user.FirstName, user.LastName, user.Email, newRecoveryCode.Codes );
+                var authenticatedUser = new UserDTO(user.Id, user.FirstName, user.LastName, user.Email, newRecoveryCode.Codes);
 
-            return ActionTokenResult<UserDTO>.SuccessfulOperation(authenticatedUser, accessToken, refreshToken);
+                return ActionTokenResult<UserDTO>.SuccessfulOperation(authenticatedUser, accessToken, refreshToken);
+            }
+            catch (Exception ex)
+            {
+                return ActionTokenResult<UserDTO>.Failed(ex.Message);
+            }
+           
         }
 
 

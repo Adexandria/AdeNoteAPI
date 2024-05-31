@@ -269,7 +269,10 @@ namespace AdeNote.Infrastructure.Services
                 }
 
                 currentTicket.Status = newStatus;
+
                 currentTicket.AdminId = adminId;
+
+                currentTicket.SetModifiedDate();
 
                 var commitStatus = await ticketRepository.Update(currentTicket);
 

@@ -34,7 +34,9 @@ namespace AdeNote.Infrastructure.Services
 
             var hashedPassword = _passwordManager.HashPassword(password,out string salt);
 
-           currentUser.SetPassword(hashedPassword, salt);
+            currentUser.SetPassword(hashedPassword, salt);
+
+            currentUser.SetModifiedDate();
 
             var commitStatus = await _userRepository.Update(currentUser);
 
@@ -55,6 +57,8 @@ namespace AdeNote.Infrastructure.Services
             currentUser.SetPassword(hashedPassword, salt);
 
             var commitStatus = await _userRepository.Update(currentUser);
+
+            currentUser.SetModifiedDate();
 
             if (!commitStatus)
                 return ActionResult.Failed("Failed to update password", StatusCodes.Status400BadRequest);
