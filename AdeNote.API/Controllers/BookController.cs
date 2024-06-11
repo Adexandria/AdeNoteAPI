@@ -5,6 +5,7 @@ using AdeNote.Models.DTOs;
 using Asp.Versioning;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace AdeNote.Controllers
 {
@@ -30,7 +31,9 @@ namespace AdeNote.Controllers
         /// <param name="bookService">An interface that interacts with the book tables</param>
         /// <param name="userIdentity">An interface that interacts with the user.
         /// This fetches the current user details</param>
-        public BookController(IBookService bookService, IUserIdentity userIdentity, IExportService exportService, IExcel excelService) : base(userIdentity)
+        public BookController(IBookService bookService, 
+            IUserIdentity userIdentity, IExportService exportService, 
+            IExcel excelService) : base(userIdentity)
         {
             _bookService = bookService;
             _exportService = exportService;
@@ -85,7 +88,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<BookDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpGet("{bookId}")]
-        public async Task<IActionResult> GetBook(Guid bookId)
+        public async Task<IActionResult> GetBook([Required] Guid bookId)
         {
             var response = await _bookService.GetById(bookId, CurrentUser);
             return response.Response();
@@ -103,7 +106,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<BookDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> ExportBooks(string extensionType, string sheetName = "Adenote")
+        public async Task<IActionResult> ExportBooks([Required] string extensionType, string sheetName = "Adenote")
         {
             var bookResponse = await _bookService.GetAll(CurrentUser);
             if (bookResponse.NotSuccessful)
@@ -125,7 +128,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<BookDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("import")]
-        public async Task<IActionResult> ImportBooks(IFormFile bookSheet, int sheetName = 0)
+        public async Task<IActionResult> ImportBooks(IFormFile bookSheet, [Required] int sheetName = 0)
         {
             var ms = new MemoryStream();
             bookSheet?.CopyToAsync(ms);

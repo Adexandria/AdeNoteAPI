@@ -1,11 +1,13 @@
 ﻿using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Services;
 using AdeNote.Infrastructure.Utilities;
+using AdeNote.Infrastructure.Utilities.ValidationAttributes;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
 using Asp.Versioning;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 
 namespace AdeNote.Controllers
@@ -197,7 +199,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(ActionTokenResult<UserDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("login/recovery-codes")]
-        public async Task<IActionResult> LoginByRecoveryCodes(string[] codes)
+        public async Task<IActionResult> LoginByRecoveryCodes([Required] string[] codes)
         {
             var response = await _authService.LoginUserByRecoveryCodes(codes);
             if (response.NotSuccessful)
@@ -472,7 +474,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("verify-email")]
         [AllowAnonymous]
-        public async Task<IActionResult> Verifyemail(string verificationToken)
+        public async Task<IActionResult> Verifyemail([Required]string verificationToken)
         {
 
             var response = await _authService.ConfirmEmail(verificationToken);
@@ -551,7 +553,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [AllowAnonymous]
         [HttpPost("two-factor-authentication/sms/verify-code")]
-        public async Task<IActionResult> VerifySmsOTP(string otp)
+        public async Task<IActionResult> VerifySmsOTP([Required] string otp)
         {
             var token = Request.Cookies["Multi-FactorToken"];
 
@@ -609,7 +611,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [AllowAnonymous]
         [HttpPost("two-factor-authentication/google/verify-code")]
-        public async Task<IActionResult> VerifyTOTP(string totp)
+        public async Task<IActionResult> VerifyTOTP([Required] string totp)
         {
             var token = Request.Cookies["Multi-FactorToken"];
 
@@ -740,7 +742,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [AllowAnonymous]
         [HttpGet("two-factor-authentication/recovery")]
-        public async Task<IActionResult> GenerateMFARemovalToken(string email)
+        public async Task<IActionResult> GenerateMFARemovalToken([Required] string email)
         {
             var response = await _authService.GenerateMFAToken(email);
             return response.Response();
@@ -769,7 +771,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [AllowAnonymous]
         [HttpDelete("two-factor-authentication/verify-recovery-token")]
-        public async Task<IActionResult> RemoveAuthenicator([FromBody] string token)
+        public async Task<IActionResult> RemoveAuthenicator([FromBody] [Required(AllowEmptyStrings = false)] string token)
         {
             var response = await _authService.DisableUserMFA(token);
             return response.Response();

@@ -1,10 +1,13 @@
-﻿namespace AdeNote.Models.DTOs
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace AdeNote.Models.DTOs
 {
     /// <summary>
     /// DTO to create a note
     /// </summary>
     public class CreateNoteDTO
     {
+        [Required(ErrorMessage = "Enter task")]
         /// <summary>
         /// The note to perform
         /// </summary>

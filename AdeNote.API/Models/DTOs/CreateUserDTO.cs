@@ -1,4 +1,4 @@
-﻿using AdeNote.Infrastructure.Utilities;
+﻿using AdeNote.Infrastructure.Utilities.ValidationAttributes;
 using System.ComponentModel.DataAnnotations;
 
 namespace AdeNote.Models.DTOs
