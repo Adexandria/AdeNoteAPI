@@ -2,6 +2,7 @@
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Moq;
 
 namespace AdeNote.Tests
@@ -25,6 +26,9 @@ namespace AdeNote.Tests
             Repo.Db.Database.EnsureCreated();
 
             obj = CreateModel();
+
+            Repo.logger = new Mock<ILogger<TModel>>().Object;
+
         }
 
         public void AssumeSaveChangesSuccessfully()
@@ -44,7 +48,6 @@ namespace AdeNote.Tests
 
         protected TModel obj { get; set; }
         protected TRepo Repo { get; set; }
-
         private Mock<TRepo> mockRepo { get; set; }
 
     }

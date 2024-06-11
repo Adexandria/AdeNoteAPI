@@ -29,7 +29,7 @@ namespace AdeNote.Infrastructure.Repository
         /// A property to handle transactions
         /// </summary>
         public NoteDbContext Db { get; set; }
-        protected ILogger logger { get; set; }
+        public ILogger logger { get; set; }
 
         /// <summary>
         /// Save changes. \n
