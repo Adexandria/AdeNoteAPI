@@ -67,7 +67,7 @@ namespace AdeNote.Tests.Services
             //Arrange
             var book1 = new Book("Test 1", "Description1");
 
-            Repo.Setup(s=>s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>())).ReturnsAsync(book1);
+            Repo.Setup(s=>s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>(),false)).ReturnsAsync(book1);
 
             //Act
             var response = await Service.GetById(Guid.NewGuid(),Guid.NewGuid());
@@ -95,7 +95,7 @@ namespace AdeNote.Tests.Services
         public async Task ShouldFailToGetBookByIdIfBookDoesNotExist()
         {
             //Arrange
-            Repo.Setup(s => s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>()));
+            Repo.Setup(s => s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>(), false));
 
             //Act
             var response = await Service.GetById(Guid.NewGuid(), Guid.NewGuid());
@@ -114,7 +114,7 @@ namespace AdeNote.Tests.Services
             //Arrange
             var book1 = new Book("Test 1", "Description1");
 
-            Repo.Setup(s => s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>())).ReturnsAsync(book1);
+            Repo.Setup(s => s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>(),false)).ReturnsAsync(book1);
             Repo.Setup(s => s.Remove(It.IsAny<Book>())).ReturnsAsync(true);
 
             //Act
@@ -142,7 +142,7 @@ namespace AdeNote.Tests.Services
         public async Task ShouldFailToRemoveBookIfBookDoesNotExist()
         {
             //Arrange
-            Repo.Setup(s => s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>()));
+            Repo.Setup(s => s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>(), false));
 
             //Act
             var response = await Service.Remove(Guid.NewGuid(), Guid.NewGuid());
@@ -161,7 +161,7 @@ namespace AdeNote.Tests.Services
             //Arrange
             var book1 = new Book("Test 1", "Description1");
 
-            Repo.Setup(s => s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>())).ReturnsAsync(book1);
+            Repo.Setup(s => s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>(), false)).ReturnsAsync(book1);
             Repo.Setup(s => s.Remove(It.IsAny<Book>()));
 
             //Act
@@ -181,8 +181,8 @@ namespace AdeNote.Tests.Services
             //Arrange
             var book1 = new Book("Test 1", "Description1");
 
-            Repo.Setup(s => s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>())).ReturnsAsync(book1);
-            Repo.Setup(s => s.Update(It.IsAny<Book>())).ReturnsAsync(true);
+            Repo.Setup(s => s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>(),true)).ReturnsAsync(book1);
+            Repo.Setup(s => s.Update(It.IsAny<Book>(), It.IsAny<Book>())).ReturnsAsync(true);
 
             //Act
             var response = await Service.Update(Guid.NewGuid(), Guid.NewGuid(),
@@ -211,7 +211,7 @@ namespace AdeNote.Tests.Services
         public async Task ShouldFailToUpdateBookIfBookDoesNotExist()
         {
             //Arrange
-            Repo.Setup(s => s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>()));
+            Repo.Setup(s => s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>(), false));
 
             //Act
             var response = await Service.Update(Guid.NewGuid(), Guid.NewGuid(), 
@@ -231,7 +231,7 @@ namespace AdeNote.Tests.Services
             //Arrange
             var book1 = new Book("Test 1", "Description1");
 
-            Repo.Setup(s => s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>())).ReturnsAsync(book1);
+            Repo.Setup(s => s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>(), true)).ReturnsAsync(book1);
             Repo.Setup(s => s.Update(It.IsAny<Book>()));
 
             //Act

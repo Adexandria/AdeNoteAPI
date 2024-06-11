@@ -7,7 +7,7 @@ using Moq;
 namespace AdeNote.Tests
 {
     public class RepoTestHelpher<TRepo,TModel>
-        where TRepo : Repository
+        where TRepo : Repository<TModel>
         where TModel : class
     {
         [SetUp]
@@ -29,12 +29,12 @@ namespace AdeNote.Tests
 
         public void AssumeSaveChangesSuccessfully()
         {
-            mockRepo.Setup(s => s.SaveChanges<TModel>()).ReturnsAsync(true);
+            mockRepo.Setup(s => s.SaveChanges()).ReturnsAsync(true);
         }
 
         public void AssumeSaveChangesFailed()
         {
-            mockRepo.Setup(s => s.SaveChanges<TModel>()).ReturnsAsync(false);
+            mockRepo.Setup(s => s.SaveChanges()).ReturnsAsync(false);
         }
 
         protected virtual TModel CreateModel()

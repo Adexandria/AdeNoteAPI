@@ -47,7 +47,7 @@ namespace AdeNote.Tests.Repositories
         public async Task ShouldGetBookSuccessfully()
         {
             //Act
-            var response = await Repo.GetAsync(new Guid("a557773f-f8c3-47af-a16f-d144dfc0c64b"), new Guid("6b9da688-9591-4e3c-bf8c-732dd3080866"));
+            var response = await Repo.GetAsync(new Guid("a557773f-f8c3-47af-a16f-d144dfc0c64b"), new Guid("6b9da688-9591-4e3c-bf8c-732dd3080866"),false);
 
             //Assert
             Assert.That(response, Is.Null);
@@ -74,7 +74,7 @@ namespace AdeNote.Tests.Repositories
             AssumeSaveChangesSuccessfully();
              
             //Act
-            var response = await Repo.Update(books.FirstOrDefault());
+            var response = await Repo.Update(books.FirstOrDefault(), books.FirstOrDefault());
 
             //Assert
             Assert.That(response, Is.EqualTo(true));
