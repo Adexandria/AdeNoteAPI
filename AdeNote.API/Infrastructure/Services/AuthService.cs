@@ -102,10 +102,16 @@ namespace AdeNote.Infrastructure.Services
 
                 return ActionResult<AuthenticatorDTO>.SuccessfulOperation(authenticatorDto);
             }
+            catch (OperationCanceledException)
+            {
+                return ActionResult<AuthenticatorDTO>
+                    .Failed("Cancelled action", StatusCodes.Status400BadRequest);
+            }
             catch (Exception ex)
             {
                 return ActionResult<AuthenticatorDTO>.Failed(ex.Message);
             }
+            
         }
 
         /// <summary>
@@ -819,6 +825,10 @@ namespace AdeNote.Infrastructure.Services
 
                 return ActionResult<string>.SuccessfulOperation(accessToken);
             }
+            catch (OperationCanceledException)
+            {
+                return ActionResult<string>.Failed("Cancelled action", StatusCodes.Status400BadRequest);
+            }
             catch (Exception ex)
             {
                 return ActionResult<string>.Failed(ex.Message);
@@ -1126,7 +1136,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        
+
 
         /// <summary>
         /// Two factor authentication secret key

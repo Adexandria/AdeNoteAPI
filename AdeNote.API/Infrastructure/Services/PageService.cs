@@ -167,7 +167,7 @@ namespace AdeNote.Infrastructure.Services
                 if (currentBook == null)
                     return await Task.FromResult(ActionResult.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound));
 
-                var currentBookPage = await pageRepository.GetBookPage(bookId, pageId);
+                var currentBookPage = await pageRepository.GetBookPage(bookId, pageId,true);
                 if (currentBookPage == null)
                     return await Task.FromResult(ActionResult.Failed("page doesn't exist", (int)HttpStatusCode.NotFound));
 
@@ -175,7 +175,8 @@ namespace AdeNote.Infrastructure.Services
                 page.Id = pageId;
                 page.BookId = bookId;
                 page.SetModifiedDate();
-                var commitStatus = await pageRepository.Update(page);
+
+                var commitStatus = await pageRepository.Update(page, currentBookPage);
                 if (!commitStatus)
                     return ActionResult.Failed("Failed to update page");
 
