@@ -13,7 +13,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <param name="bookId">A book id</param>
         /// <param name="pageId">A page id</param>
         /// <returns>a page object</returns>
-        Task<Page> GetBookPage(Guid bookId, Guid pageId);
+        Task<Page> GetBookPage(Guid bookId, Guid pageId,bool isTracked = false);
 
         /// <summary>
         /// Gets all pages from a book
@@ -21,5 +21,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <param name="bookId">a book id</param>
         /// <returns>A list of pages</returns>
         IQueryable<Page> GetBookPages(Guid bookId);
+
+        Task<bool> Update(Page entity, Page currentPage);
     }
 }

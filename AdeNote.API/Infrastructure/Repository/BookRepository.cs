@@ -1,14 +1,14 @@
 ﻿using AdeNote.Db;
 using AdeNote.Models;
 using Microsoft.EntityFrameworkCore;
-using NPOI.HSSF.Record.Chart;
+
 
 namespace AdeNote.Infrastructure.Repository
 {
     /// <summary>
     /// Handles the persisting and querying of Book objects
     /// </summary>
-    public class BookRepository : Repository, IBookRepository
+    public class BookRepository : Repository<Book>, IBookRepository
     {
         /// <summary>
         /// A Constructor
@@ -21,7 +21,7 @@ namespace AdeNote.Infrastructure.Repository
         /// A Constructor
         /// </summary>
         /// <param name="noteDb">Handles the transactions</param>
-        public BookRepository(NoteDbContext noteDb) : base(noteDb)
+        public BookRepository(NoteDbContext noteDb,ILoggerFactory loggerFactory) : base(noteDb,loggerFactory)
         {
         }
 
@@ -32,15 +32,26 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>a boolean value</returns>
         public async Task<bool> Add(Book entity)
         {
-           entity.Id = Guid.NewGuid();
-           await Db.Books.AddAsync(entity);
-           return await SaveChanges<Book>();
+            entity.Id = Guid.NewGuid();
+           
+            await Db.Books.AddAsync(entity);
+           
+            var result =  await SaveChanges();
+         
+            logger.LogInformation("Add book to database: {result}", result);
+           
+            return result;
         }
 
         public async Task<bool> Add(IEnumerable<Book> books)
         {
             await Db.Books.AddRangeAsync(books);
-            return await SaveChanges<Book>();
+
+            var result = await SaveChanges();
+
+            logger.LogInformation("Add books to database: {result}", result);
+
+            return result;
         }
 
         /// <summary>
@@ -62,12 +73,16 @@ namespace AdeNote.Infrastructure.Repository
         /// <param name="bookId">A book id</param>
         /// <param name="userId">A user id</param>
         /// <returns>Book object</returns>
-        public async Task<Book> GetAsync(Guid bookId, Guid userId)
+        public async Task<Book> GetAsync(Guid bookId, Guid userId, bool isTracked)
         {
             var book = Db.Books.Where(s => s.UserId == userId)
                 .Include(s => s.Pages)
-                .Include(s => s.User)
-                .AsNoTracking();
+                .Include(s => s.User);
+
+            if(!isTracked)
+            {
+                return await book.AsNoTracking().FirstOrDefaultAsync();
+            }
 
             return await book.FirstOrDefaultAsync();
         }
@@ -80,7 +95,12 @@ namespace AdeNote.Infrastructure.Repository
         public async Task<bool> Remove(Book entity)
         {
             Db.Books.Remove(entity);
-            return await SaveChanges<Book>();
+
+            var result = await SaveChanges();
+
+            logger.LogInformation("Delete book to database: {result}", result);
+
+            return result;
         }
 
         /// <summary>
@@ -97,7 +117,29 @@ namespace AdeNote.Infrastructure.Repository
 
             Db.Entry(currentBook).State = EntityState.Modified;
 
-            return await SaveChanges<Book>();
+            var result = await SaveChanges();
+
+            logger.LogInformation("Update book to database: {result}", result);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Updates an existing book
+        /// </summary>
+        /// <param name="entity">A book object</param>
+        /// <returns>a boolean value</returns>
+        public async Task<bool> Update(Book entity, Book currentBook)
+        {
+            Db.Entry(currentBook).CurrentValues.SetValues(entity);
+
+            Db.Entry(currentBook).State = EntityState.Modified;
+
+            var result = await SaveChanges();
+
+            logger.LogInformation("Update book to database: {result}", result);
+
+            return result;
         }
     }
 }

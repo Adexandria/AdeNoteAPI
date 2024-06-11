@@ -4,18 +4,24 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AdeNote.Infrastructure.Repository
 {
-    public class RefreshRepository : Repository, IRefreshTokenRepository
+    public class RefreshRepository : Repository<RefreshToken>, IRefreshTokenRepository
     {
-        public RefreshRepository(NoteDbContext db):base(db) 
+        public RefreshRepository(NoteDbContext db, ILoggerFactory loggerFactory):base(db,loggerFactory) 
         { 
-
+            
         }
 
         public async Task<bool> Add(RefreshToken entity)
         {
             entity.Id = Guid.NewGuid();
+
             await Db.RefreshTokens.AddAsync(entity);
-            return await SaveChanges<RefreshToken>();
+
+            var result =  await SaveChanges();
+
+            logger.LogInformation("Add refresh token to database: {result}", result);
+
+            return result;
         }
 
         public async Task<RefreshToken> GetRefreshToken(string refreshToken)
@@ -45,18 +51,23 @@ namespace AdeNote.Infrastructure.Repository
         public async Task<bool> Remove(RefreshToken entity)
         {
             Db.RefreshTokens.Remove(entity);
-            return await SaveChanges<RefreshToken>();
+
+            var result = await SaveChanges();
+
+            logger.LogInformation("Remove refresh token to database: {result}", result);
+
+            return result;
         }
 
         public async Task<bool> Update(RefreshToken entity)
         {
-            var currentUserDetail = Db.RefreshTokens.Where(s => s.Id == entity.Id).FirstOrDefault();
+            Db.RefreshTokens.Update(entity);
 
-            Db.Entry(currentUserDetail).CurrentValues.SetValues(entity);
+            var result = await SaveChanges();
 
-            Db.Entry(currentUserDetail).State = EntityState.Modified;
+            logger.LogInformation("Update refresh token to database: {result}", result);
 
-            return await SaveChanges<RefreshToken>();
+            return result;
         }
     }
 }

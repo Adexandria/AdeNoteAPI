@@ -5,9 +5,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AdeNote.Infrastructure.Repository
 {
-    public class UserRepository : Repository, IUserRepository
+    public class UserRepository : Repository<User>, IUserRepository
     {
-        public UserRepository(NoteDbContext dbContext, IPasswordManager passwordManager) : base(dbContext)
+        public UserRepository(NoteDbContext dbContext,
+            IPasswordManager passwordManager,
+            ILoggerFactory loggerFactory) : base(dbContext, loggerFactory)
         {
             PasswordManager = passwordManager;
         }
@@ -18,7 +20,11 @@ namespace AdeNote.Infrastructure.Repository
 
             await Db.Users.AddAsync(entity);
 
-            return await SaveChanges<User>();
+            var result = await SaveChanges();
+
+            logger.LogInformation("Add user to database:{result}", result);
+
+            return result;
         }
 
         public async Task<User> AuthenticateUser(string email, string password, AuthType authType)
@@ -49,16 +55,15 @@ namespace AdeNote.Infrastructure.Repository
 
         public async Task<User> GetUserByEmail(string email)
         {
-            var user = await Db.Users.
-                   AsNoTracking().Include(s=>s.RefreshToken).Include(s=>s.RecoveryCode).Where(s => s.Email == email).FirstOrDefaultAsync();
+            var user = await Db.Users
+                .Include(s=>s.RefreshToken).Include(s=>s.RecoveryCode).Where(s => s.Email == email).FirstOrDefaultAsync();
 
             return user;
         }
 
         public async Task<User> GetUser(Guid userId)
         {
-            return await Db.Users.
-              AsNoTracking().Include(s => s.RecoveryCode)
+            return await Db.Users.Include(s => s.RecoveryCode)
               .Include(s=>s.RefreshToken)
               .FirstOrDefaultAsync(x => x.Id == userId);
         }
@@ -76,19 +81,25 @@ namespace AdeNote.Infrastructure.Repository
         public async Task<bool> Remove(User entity)
         {
             Db.Users.Remove(entity);
-            return await SaveChanges<User>();
+
+            var result = await SaveChanges();
+
+            logger.LogInformation("Remove user to database:{result}", result);
+
+            return result;
         }
 
         public async Task<bool> Update(User entity)
         {
-            var currentUserDetail = Db.Users.Where(s => s.Id == entity.Id).FirstOrDefault();
+            Db.Users.Update(entity);
 
-            Db.Entry(currentUserDetail).CurrentValues.SetValues(entity);
+            var result = await SaveChanges();
 
-            Db.Entry(currentUserDetail).State = EntityState.Modified;
+            logger.LogInformation("Update user to database:{result}", result);
 
-            return await SaveChanges<User>();
+            return result;
         }
+
 
         public bool IsExist(string email)
         {

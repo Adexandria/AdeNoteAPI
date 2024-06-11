@@ -6,7 +6,7 @@ namespace AdeNote.Infrastructure.Repository
     /// <summary>
     /// Commits new and tracked changes in the objects
     /// </summary>
-    public class Repository
+    public class Repository<T>
     {
         /// <summary>
         /// A Constructor
@@ -19,15 +19,17 @@ namespace AdeNote.Infrastructure.Repository
         /// A constructor
         /// </summary>
         /// <param name="noteDb">Handles Transactions</param>
-        public Repository(NoteDbContext noteDb)
+        public Repository(NoteDbContext noteDb , ILoggerFactory loggerFactory)
         {
             Db = noteDb;
+            logger = loggerFactory.CreateLogger<T>();
         }
 
         /// <summary>
         /// A property to handle transactions
         /// </summary>
         public NoteDbContext Db { get; set; }
+        protected ILogger logger { get; set; }
 
         /// <summary>
         /// Save changes. \n
@@ -37,7 +39,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <typeparam name="T">A generic type T</typeparam>
         /// <returns>A boolean value</returns>
         /// <exception cref="NotSupportedException">Thrown if the type is not supported</exception>
-        public virtual async Task<bool> SaveChanges<T>() where T : class
+        public virtual async Task<bool> SaveChanges() 
         {
 
             var saved = false;
