@@ -119,7 +119,7 @@ namespace AdeNote.Infrastructure.Services
         /// </summary>
         /// <param name="userId">User id</param>
         /// <param name="phoneNumber">phone number</param>
-        public async Task<ActionResult> SetPhoneNumber(Guid userId, string phoneNumber)
+        public async Task<ActionResult> SetPhoneNumber(Guid userId, string phoneNumber, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -162,7 +162,7 @@ namespace AdeNote.Infrastructure.Services
         /// </summary>
         /// <param name="userId">User id</param>
         /// <returns>boolean value</returns>
-        public async Task<ActionResult> IsPhoneNumberVerified(Guid userId)
+        public async Task<ActionResult> IsPhoneNumberVerified(Guid userId, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -175,6 +175,9 @@ namespace AdeNote.Infrastructure.Services
                     return ActionResult.Failed("Phone number has not been verified", StatusCodes.Status400BadRequest);
 
                 return ActionResult.SuccessfulOperation();
+            }catch(OperationCanceledException)
+            {
+                return ActionResult.Failed("Phone verification has been cancelled", StatusCodes.Status400BadRequest);
             }
             catch (Exception ex)
             {
@@ -188,7 +191,7 @@ namespace AdeNote.Infrastructure.Services
         /// </summary>
         /// <param name="userId">User id</param>
         /// <param name="token">phone number verification token</param>
-        public async Task<ActionResult> VerifyPhoneNumber(Guid userId, string token)
+        public async Task<ActionResult> VerifyPhoneNumber(Guid userId, string token, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -226,7 +229,7 @@ namespace AdeNote.Infrastructure.Services
         /// Sets up MFA using sms authentication 
         /// </summary>
         /// <param name="userId">User id</param>
-        public async Task<ActionResult> SetSmsAuthenticator(Guid userId)
+        public async Task<ActionResult> SetSmsAuthenticator(Guid userId, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -256,7 +259,7 @@ namespace AdeNote.Infrastructure.Services
         /// Sends otp to phone number 
         /// </summary>
         /// <param name="userId">User id</param>
-        public async Task<ActionResult> SendSmsOTP(Guid userId,string email)
+        public async Task<ActionResult> SendSmsOTP(Guid userId,string email, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -290,7 +293,7 @@ namespace AdeNote.Infrastructure.Services
         /// </summary>
         /// <param name="email">Email of the user</param>
         /// <param name="otp">One time password</param>
-        public ActionResult VerifyAuthenticatorOTP(string email, string otp)
+        public ActionResult VerifyAuthenticatorOTP(string email, string otp, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -320,7 +323,7 @@ namespace AdeNote.Infrastructure.Services
         /// </summary>
         /// <param name="userId">User id</param>
         /// <returns>Qr code url</returns>
-        public async Task<ActionResult<string>> GetUserQrCode(Guid userId)
+        public async Task<ActionResult<string>> GetUserQrCode(Guid userId, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -344,7 +347,7 @@ namespace AdeNote.Infrastructure.Services
         /// Checks if MFA has been enabled for the user using user id.
         /// </summary>
         /// <param name="userId">User id</param>
-        public async Task<ActionResult> IsAuthenticatorEnabled(Guid userId, MFAType authenticatorType)
+        public async Task<ActionResult> IsAuthenticatorEnabled(Guid userId, MFAType authenticatorType, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -401,7 +404,7 @@ namespace AdeNote.Infrastructure.Services
         /// </summary>
         /// <param name="token">MFA Token</param>
         /// <returns>User details</returns>
-        public ActionResult<DetailsDTO> ReadDetailsFromToken(string token)
+        public ActionResult<DetailsDTO> ReadDetailsFromToken(string token, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -430,7 +433,7 @@ namespace AdeNote.Infrastructure.Services
         /// Checks if MFA has been enabled for the user
         /// </summary>
         /// <param name="email">Email of the user</param>
-        public async Task<ActionResult> IsAuthenticatorEnabled(string email, MFAType authenticatorType)
+        public async Task<ActionResult> IsAuthenticatorEnabled(string email, MFAType authenticatorType, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -453,7 +456,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public async Task<ActionResult<string>> GenerateMFAToken(string email)
+        public async Task<ActionResult<string>> GenerateMFAToken(string email, CancellationToken cancellationToken = default)
         {
             if (string.IsNullOrEmpty(email))
                 return ActionResult<string>.Failed("Invalid email", StatusCodes.Status404NotFound);
@@ -484,7 +487,7 @@ namespace AdeNote.Infrastructure.Services
         /// </summary>
         /// <param name="userId">User id</param>
         /// <param name="refreshToken">Refresh token</param>
-        public async Task<ActionResult> RevokeRefreshToken(Guid userId, string refreshToken)
+        public async Task<ActionResult> RevokeRefreshToken(Guid userId, string refreshToken, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -520,7 +523,7 @@ namespace AdeNote.Infrastructure.Services
         /// Checks if refresh token is revoked
         /// </summary>
         /// <param name="refreshToken">Refresh token</param>
-        public async Task<ActionResult> IsTokenRevoked(string refreshToken)
+        public async Task<ActionResult> IsTokenRevoked(string refreshToken, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -545,7 +548,7 @@ namespace AdeNote.Infrastructure.Services
         /// Disables Multi factor authentication for a particular user
         /// </summary>
         /// <param name="userId">User id</param>
-        public async Task<ActionResult> DisableUserMFA(Guid userId)
+        public async Task<ActionResult> DisableUserMFA(Guid userId, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -577,7 +580,7 @@ namespace AdeNote.Infrastructure.Services
         }
 
 
-        public async Task<ActionResult> DisableUserMFA(string token)
+        public async Task<ActionResult> DisableUserMFA(string token, CancellationToken cancellationToken = default)
         {
             if (string.IsNullOrEmpty(token))
                 return ActionResult.Failed("Invalid token", StatusCodes.Status404NotFound);
@@ -608,7 +611,7 @@ namespace AdeNote.Infrastructure.Services
             return ActionResult.SuccessfulOperation();
         }
 
-        public async Task<ActionResult<string>> GenerateResetPasswordToken(Guid userId, string email)
+        public async Task<ActionResult<string>> GenerateResetPasswordToken(Guid userId, string email, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -634,7 +637,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public ActionResult VerifyResetToken(string token)
+        public ActionResult VerifyResetToken(string token, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -654,7 +657,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public async Task<ActionResult<string>> IsAuthenticatorEnabled(string email)
+        public async Task<ActionResult<string>> IsAuthenticatorEnabled(string email, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -739,7 +742,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public async Task<ActionTokenResult<UserDTO>> LoginUser(LoginDTO login, AuthType authType)
+        public async Task<ActionTokenResult<UserDTO>> LoginUser(LoginDTO login, AuthType authType, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -802,7 +805,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public async Task<ActionResult<string>> GenerateAccessToken(string refreshToken)
+        public async Task<ActionResult<string>> GenerateAccessToken(string refreshToken, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -835,7 +838,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public async Task<ActionResult<string>> GenerateAccessToken(Guid userId, string email)
+        public async Task<ActionResult<string>> GenerateAccessToken(Guid userId, string email, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -865,7 +868,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public async Task<ActionResult> ConfirmEmail(string verificationToken)
+        public async Task<ActionResult> ConfirmEmail(string verificationToken, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -912,7 +915,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public async Task<ActionResult<bool>> IsEmailVerified(Guid userId)
+        public async Task<ActionResult<bool>> IsEmailVerified(Guid userId, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -931,7 +934,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public async Task<ActionResult<string>> LoginUserPasswordless(string email)
+        public async Task<ActionResult<string>> LoginUserPasswordless(string email, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -981,7 +984,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public async Task<ActionTokenResult<UserDTO>> VerifyPasswordlessToken(string token)
+        public async Task<ActionTokenResult<UserDTO>> VerifyPasswordlessToken(string token, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -1040,7 +1043,7 @@ namespace AdeNote.Infrastructure.Services
             }
         }
 
-        public async Task<ActionTokenResult<UserDTO>> LoginUserByRecoveryCodes(string[] recoveryCodes)
+        public async Task<ActionTokenResult<UserDTO>> LoginUserByRecoveryCodes(string[] recoveryCodes, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -1106,7 +1109,7 @@ namespace AdeNote.Infrastructure.Services
 
 
 
-        public async Task<ActionResult<string[]>> GenerateRecoveryCodes(Guid userId)
+        public async Task<ActionResult<string[]>> GenerateRecoveryCodes(Guid userId, CancellationToken cancellationToken = default)
         {
             try
             {
