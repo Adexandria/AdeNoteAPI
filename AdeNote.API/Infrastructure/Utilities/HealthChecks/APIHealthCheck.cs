@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Diagnostics.HealthChecks;
+﻿using AdeNote.Infrastructure.Exceptions;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using System.Diagnostics;
 
 namespace AdeNote.Infrastructure.Utilities.HealthChecks
@@ -7,20 +8,37 @@ namespace AdeNote.Infrastructure.Utilities.HealthChecks
     {
         public Task<HealthCheckResult> CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken = default)
         {
-            var responseTime = Stopwatch.StartNew();
+            int numberOfRetries = 0;
 
-             context.Registration.Timeout = new TimeSpan(0,0,0,0,200);
+            HealthCheckResult result = HealthCheckResult.Degraded("Degraded result from API");
 
-            if (responseTime.Elapsed <= context.Registration.Timeout)
+            while(numberOfRetries < 3)
             {
-                return Task.FromResult(HealthCheckResult.Healthy("Healthy result from API"));
-            }
-            else if (responseTime.Elapsed > context.Registration.Timeout)
-            {
-                return Task.FromResult(HealthCheckResult.Degraded("Degraded result from API"));
+                try
+                {
+                    var responseTime = Stopwatch.StartNew();
+
+                    context.Registration.Timeout = new TimeSpan(0, 0, 0, 0, 200);
+
+                    if (responseTime.Elapsed <= context.Registration.Timeout)
+                    {
+                        result = HealthCheckResult.Healthy("Healthy result from API");
+                        break;
+                    }
+
+                    throw new HealthCheckException("Unhealthy result from API");
+                }
+                catch (HealthCheckException ex)
+                {
+                    numberOfRetries++;
+                    if (numberOfRetries == 3)
+                    {
+                        result = HealthCheckResult.Unhealthy(ex.Message);
+                    }
+                }
             }
 
-            return Task.FromResult(HealthCheckResult.Unhealthy("Unhealthy result from API"));
+            return Task.FromResult(result);
         }
 
     }

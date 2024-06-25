@@ -1,10 +1,12 @@
 ﻿using AdeNote.Infrastructure.Extension;
-using AdeNote.Infrastructure.Services;
-using AdeNote.Infrastructure.Utilities;
+using AdeNote.Infrastructure.Services.PageSettings;
+using AdeNote.Infrastructure.Utilities.UserConfiguation;
+using AdeNote.Infrastructure.Utilities.ValidationAttributes;
 using AdeNote.Models.DTOs;
 using Asp.Versioning;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace AdeNote.Controllers
@@ -51,7 +53,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<IEnumerable<PageDTO>>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpGet]
-        public async Task<IActionResult> GetAllPages(Guid bookId)
+        public async Task<IActionResult> GetAllPages([ValidGuid("Invalid book id")]Guid bookId)
         {
             var response = await _pageService.GetAll(bookId);
             return response.Response();
@@ -79,7 +81,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<PageDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpGet("{pageId}")]
-        public async Task<IActionResult> GetPage(Guid bookId, Guid pageId)
+        public async Task<IActionResult> GetPage([ValidGuid("Invalid book id")] Guid bookId, [ValidGuid("Invalid page id")] Guid pageId)
         {
             var response = await _pageService.GetById(bookId, pageId);
             return response.Response();
@@ -112,9 +114,9 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost]
-        public async Task<IActionResult> CreatePage(Guid bookId, PageCreateDTO pageCreate)
+        public async Task<IActionResult> CreatePage([ValidGuid("Invalid book id")] Guid bookId, PageCreateDTO pageCreate)
         {
-            var response = await _pageService.Add(bookId,CurrentUser,pageCreate);
+            var response = await _pageService.Add(bookId, CurrentUser, pageCreate);
             return response.Response();
         }
 
@@ -146,9 +148,10 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("{pageId}/labels")]
-        public async Task<IActionResult> AddLabelsToPage(Guid bookId, Guid pageId,List<string> labels)
+        public async Task<IActionResult> AddLabelsToPage([ValidGuid("Invalid book id")] Guid bookId, [ValidGuid("Invalid page id")] Guid pageId, 
+            [ValidCollection("Invalid labels")]List<string> labels)
         {
-            var response = await _pageService.AddLabels(bookId,CurrentUser,pageId,labels);
+            var response = await _pageService.AddLabels(bookId, CurrentUser, pageId, labels);
             return response.Response();
         }
 
@@ -180,9 +183,9 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPut("{pageId}")]
-        public async Task<IActionResult> UpdatePage(Guid bookId, Guid pageId,PageUpdateDTO pageUpdate)
+        public async Task<IActionResult> UpdatePage([ValidGuid("Invalid book id")] Guid bookId, [ValidGuid("Invalid page id")] Guid pageId,PageUpdateDTO pageUpdate)
         {
-            var response = await _pageService.Update(bookId,CurrentUser,pageId,pageUpdate);
+            var response = await _pageService.Update(bookId, CurrentUser, pageId, pageUpdate);
             return response.Response();
         }
 
@@ -207,9 +210,9 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpDelete("{pageId}/labels")]
-        public async Task<IActionResult> RemoveAllLabels(Guid bookId,Guid pageId)
+        public async Task<IActionResult> RemoveAllLabels([ValidGuid("Invalid book id")] Guid bookId, [ValidGuid("Invalid page id")] Guid pageId)
         {
-            var response = await _pageService.RemoveAllPageLabels(bookId, CurrentUser,pageId);
+            var response = await _pageService.RemoveAllPageLabels(bookId, CurrentUser, pageId);
             return response.Response();
         }
 
@@ -237,9 +240,9 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpDelete("{pageId}/labels/search")]
-        public async Task<IActionResult> RemoveAllLabels(Guid bookId, Guid pageId, string title)
+        public async Task<IActionResult> RemoveAllLabels([ValidGuid("Invalid book id")] Guid bookId, [ValidGuid("Invalid page id")] Guid pageId, string title)
         {
-            var response = await _pageService.RemovePageLabel(bookId, CurrentUser, pageId,title);
+            var response = await _pageService.RemovePageLabel(bookId, CurrentUser, pageId, title);
             return response.Response();
         }
 
@@ -267,9 +270,9 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpDelete("{pageId}")]
-        public async Task<IActionResult> DeletePage(Guid bookId, Guid pageId)
+        public async Task<IActionResult> DeletePage([ValidGuid("Invalid book id")] Guid bookId, [ValidGuid("Invalid page id")] Guid pageId)
         {
-            Infrastructure.Utilities.ActionResult response = await _pageService.Remove(bookId,CurrentUser,pageId);
+            Infrastructure.Utilities.ActionResult response = await _pageService.Remove(bookId, CurrentUser, pageId);
             return response.Response();
         }
 
@@ -299,9 +302,9 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("{pageId}/translate")]
-        public async Task<IActionResult> TranslatePage(Guid bookId, Guid pageId, string to)
+        public async Task<IActionResult> TranslatePage([ValidGuid("Invalid book id")] Guid bookId, [ValidGuid("Invalid page id")] Guid pageId, [Required]string to, CancellationToken cancellationToken)
         {
-            var response = await _pageService.TranslatePage(bookId, CurrentUser, pageId,to);
+            var response = await _pageService.TranslatePage(bookId, CurrentUser, pageId, to, cancellationToken);
             return response.Response();
         }
 

@@ -1,5 +1,5 @@
 ﻿using AdeNote.Infrastructure.Repository;
-using AdeNote.Infrastructure.Services;
+using AdeNote.Infrastructure.Services.BookSetting;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
 using Moq;
@@ -74,21 +74,6 @@ namespace AdeNote.Tests.Services
 
             //Assert
             Assert.That(response.IsSuccessful, Is.EqualTo(true));
-        }
-
-        [Test]
-        public async Task ShouldFailToGetBookByIdIfIdIsEmpty()
-        {
-            //Act
-            var response = await Service.GetById(new Guid(), Guid.NewGuid());
-
-
-            //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(response.IsSuccessful, Is.EqualTo(false));
-                Assert.That(response.Errors.Single(), Is.EqualTo("Invalid id"));
-            });
         }
 
         [Test]

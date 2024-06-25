@@ -1,7 +1,9 @@
 ﻿using AdeAuth.Services;
 using AdeNote.Infrastructure.Repository;
-using AdeNote.Infrastructure.Services;
-using AdeNote.Infrastructure.Utilities;
+using AdeNote.Infrastructure.Services.Authentication;
+using AdeNote.Infrastructure.Services.Blob;
+using AdeNote.Infrastructure.Services.SmsSettings;
+using AdeNote.Infrastructure.Utilities.SmsConfig;
 using AdeNote.Models;
 using AdeNote.Tests.Models;
 using Moq;

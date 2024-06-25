@@ -1,4 +1,4 @@
-﻿using AdeNote.Infrastructure.Utilities;
+﻿using AdeNote.Infrastructure.Utilities.UserConfiguation;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AdeNote.Controllers

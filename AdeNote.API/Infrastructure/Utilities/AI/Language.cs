@@ -1,4 +1,4 @@
-﻿using AdeNote.Infrastructure.Services;
+﻿using AdeNote.Infrastructure.Services.TranslationAI;
 using AdeText.Models;
 using Hangfire;
 using Microsoft.Extensions.Caching.Memory;
@@ -13,7 +13,6 @@ namespace AdeNote.Infrastructure.Utilities.AI
         }
         public void GetLanguages()
         {
-            var backgroundClient = serviceProvider.GetRequiredService<IBackgroundJobClient>();
             RecurringJob.AddOrUpdate("GetLanguages",() => GetSupportedLanaguages(), "0 12 * * *");
         }
 
