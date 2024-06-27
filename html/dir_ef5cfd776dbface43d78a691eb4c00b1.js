@@ -1,6 +1,8 @@
 var dir_ef5cfd776dbface43d78a691eb4c00b1 =
 [
     [ "AI", "dir_8cc2629b561c8e5be742c96c0ee7626b.html", "dir_8cc2629b561c8e5be742c96c0ee7626b" ],
+    [ "HealthChecks", "dir_39a04f2b65b00f7f08bff69b4b25f877.html", "dir_39a04f2b65b00f7f08bff69b4b25f877" ],
+    [ "ValidationAttributes", "dir_79c00eb72f9a950aed85b96e96283e57.html", "dir_79c00eb72f9a950aed85b96e96283e57" ],
     [ "ActionResult.cs", "ActionResult_8cs.html", [
       [ "ActionResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult" ],
       [ "ActionTokenResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult" ],
@@ -13,8 +15,8 @@ var dir_ef5cfd776dbface43d78a691eb4c00b1 =
     [ "DashboardAuthenticationFilter.cs", "DashboardAuthenticationFilter_8cs.html", [
       [ "DashboardAuthenticationFilter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter" ]
     ] ],
-    [ "Database.cs", "Database_8cs.html", [
-      [ "Database", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database" ]
+    [ "DatabaseExtension.cs", "DatabaseExtension_8cs.html", [
+      [ "DatabaseExtension", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DatabaseExtension.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DatabaseExtension" ]
     ] ],
     [ "DefaultConfiguration.cs", "DefaultConfiguration_8cs.html", [
       [ "DefaultConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration" ]
@@ -42,9 +44,6 @@ var dir_ef5cfd776dbface43d78a691eb4c00b1 =
       [ "IUserIdentity", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity" ]
     ] ],
     [ "MimeType.cs", "MimeType_8cs.html", "MimeType_8cs" ],
-    [ "PasswordAttribute.cs", "PasswordAttribute_8cs.html", [
-      [ "PasswordAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PasswordAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PasswordAttribute" ]
-    ] ],
     [ "RoleRequirement.cs", "RoleRequirement_8cs.html", [
       [ "RoleRequirement", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirement.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirement" ]
     ] ],

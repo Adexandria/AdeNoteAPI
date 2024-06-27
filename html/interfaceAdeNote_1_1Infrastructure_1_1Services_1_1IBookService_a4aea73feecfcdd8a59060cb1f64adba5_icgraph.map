@@ -1,5 +1,5 @@
 <map id="AdeNote.Infrastructure.Services.IBookService.GetAll" name="AdeNote.Infrastructure.Services.IBookService.GetAll">
 <area shape="rect" id="node1" title="Get all books" alt="" coords="244,39,477,80"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1BookController.html#a24bf39b6873e8d4c3feefdb3a091784b" title="Exports books to excel sheets" alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1BookController.html#af2536bb41e37c6f3e0fe0265a9b0b543" title="Exports books to excel sheets" alt="" coords="5,5,196,47"/>
 <area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1BookController.html#ad906923347f5e4793921d7fbb7d96cf1" title="fetches all books" alt="" coords="5,71,196,112"/>
 </map>

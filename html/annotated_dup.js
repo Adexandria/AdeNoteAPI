@@ -16,10 +16,11 @@ var annotated_dup =
       ] ],
       [ "Infrastructure", "namespaceAdeNote_1_1Infrastructure.html", [
         [ "Extension", "namespaceAdeNote_1_1Infrastructure_1_1Extension.html", [
-          [ "ActionResultExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ActionResultExtension" ],
           [ "EnumExtensions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1EnumExtensions.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1EnumExtensions" ],
           [ "MappingService", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService" ],
-          [ "SwaggerOptions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions" ]
+          [ "ResultExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ResultExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ResultExtension" ],
+          [ "SwaggerOptions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions" ],
+          [ "ValidatorResult", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ValidatorResult.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ValidatorResult" ]
         ] ],
         [ "Repository", "namespaceAdeNote_1_1Infrastructure_1_1Repository.html", [
           [ "BookRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository" ],
@@ -66,6 +67,7 @@ var annotated_dup =
           [ "ITextTranslation", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation" ],
           [ "ITicketService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITicketService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITicketService" ],
           [ "IUserService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService" ],
+          [ "IValidatorService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IValidatorService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IValidatorService" ],
           [ "IWordService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService" ],
           [ "LabelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService" ],
           [ "NotificationService", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService" ],
@@ -82,12 +84,20 @@ var annotated_dup =
             [ "Language", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1Language.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1Language" ],
             [ "TranslateConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1TranslateConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1TranslateConfiguration" ]
           ] ],
+          [ "HealthChecks", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks.html", [
+            [ "APIHealthCheck", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1APIHealthCheck.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1APIHealthCheck" ],
+            [ "DatabaseHealthCheck", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1DatabaseHealthCheck.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1DatabaseHealthCheck" ]
+          ] ],
+          [ "ValidationAttributes", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes.html", [
+            [ "ExpectedAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ExpectedAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ExpectedAttribute" ],
+            [ "PasswordAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1PasswordAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1PasswordAttribute" ]
+          ] ],
           [ "ActionResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult" ],
           [ "ActionTokenResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult" ],
           [ "PaginatedResponse", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse" ],
           [ "BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration" ],
           [ "DashboardAuthenticationFilter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter" ],
-          [ "Database", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Database" ],
+          [ "DatabaseExtension", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DatabaseExtension.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DatabaseExtension" ],
           [ "DefaultConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration" ],
           [ "Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email" ],
           [ "EmailConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration" ],
@@ -96,7 +106,6 @@ var annotated_dup =
           [ "HangFireUserConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HangFireUserConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HangFireUserConfiguration" ],
           [ "ImportSheet", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet" ],
           [ "IUserIdentity", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity" ],
-          [ "PasswordAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PasswordAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PasswordAttribute" ],
           [ "RoleRequirement", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirement.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirement" ],
           [ "RoleRequirementHandler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirementHandler.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirementHandler" ],
           [ "Sms", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms" ],

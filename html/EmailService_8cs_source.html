@@ -128,7 +128,7 @@ $(document).ready(function(){initNavTree('EmailService_8cs_source.html',''); ini
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    request.AddParameter(<span class="stringliteral">&quot;html&quot;</span>, email.HtmlMessage);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                }</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                var response = await client.ExecuteAsync(request);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <a class="code" href="classAdeNote_1_1Infrastructure_1_1Services_1_1EmailService.html#ab262f38bc24d233328c968fd6c8dc819">logger</a>.LogInformation($<span class="stringliteral">&quot;Message sent {response.StatusCode} at {DateTime.UtcNow} Errors: {response.ErrorMessage}&quot;</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <a class="code" href="classAdeNote_1_1Infrastructure_1_1Services_1_1EmailService.html#ab262f38bc24d233328c968fd6c8dc819">logger</a>.LogInformation(<span class="stringliteral">&quot;Message sent {StatusCode} at {UtcNow} Errors: {ErrorMessage}&quot;</span>,response.StatusCode,DateTime.UtcNow,response.ErrorMessage);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            })</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            {</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
@@ -151,8 +151,8 @@ $(document).ready(function(){initNavTree('EmailService_8cs_source.html',''); ini
 <div class="ttc" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService_html"><div class="ttname"><a href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html">AdeNote.Infrastructure.Services.IEmailService</a></div><div class="ttdef"><b>Definition:</b> <a href="IEmailService_8cs_source.html#l00005">IEmailService.cs:6</a></div></div>
 <div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_1_1Services_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure_1_1Services.html">AdeNote.Infrastructure.Services</a></div><div class="ttdef"><b>Definition:</b> <a href="AuthService_8cs_source.html#l00009">AuthService.cs:10</a></div></div>
 <div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_1_1Utilities_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html">AdeNote.Infrastructure.Utilities</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionResult_8cs_source.html#l00005">ActionResult.cs:6</a></div></div>
-<div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure.html">AdeNote.Infrastructure</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionResultExtension_8cs_source.html#l00005">ActionResultExtension.cs:6</a></div></div>
-<div class="ttc" id="anamespaceAdeNote_html"><div class="ttname"><a href="namespaceAdeNote.html">AdeNote</a></div><div class="ttdef"><b>Definition:</b> <a href="AuthenticationController_8cs_source.html#l00011">AuthenticationController.cs:12</a></div></div>
+<div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure.html">AdeNote.Infrastructure</a></div><div class="ttdef"><b>Definition:</b> <a href="EnumExtensions_8cs_source.html#l00003">EnumExtensions.cs:4</a></div></div>
+<div class="ttc" id="anamespaceAdeNote_html"><div class="ttname"><a href="namespaceAdeNote.html">AdeNote</a></div><div class="ttdef"><b>Definition:</b> <a href="AuthenticationController_8cs_source.html#l00013">AuthenticationController.cs:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

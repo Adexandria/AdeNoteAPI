@@ -114,9 +114,11 @@ Collaboration diagram for AdeNote.Infrastructure.Repository.IBookRepository:</di
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ace07f2fb2416ddcbebef9cdb4b02af5c"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Models_1_1Book.html">Book</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#ace07f2fb2416ddcbebef9cdb4b02af5c">GetAsync</a> (Guid bookId, Guid userId)</td></tr>
-<tr class="memdesc:ace07f2fb2416ddcbebef9cdb4b02af5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a particular book that belongs to a user  <a href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#ace07f2fb2416ddcbebef9cdb4b02af5c">More...</a><br /></td></tr>
-<tr class="separator:ace07f2fb2416ddcbebef9cdb4b02af5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab18880eba0d7d3571eb09ccf7d7070dc"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Models_1_1Book.html">Book</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#ab18880eba0d7d3571eb09ccf7d7070dc">GetAsync</a> (Guid bookId, Guid userId, bool isTracked=false)</td></tr>
+<tr class="memdesc:ab18880eba0d7d3571eb09ccf7d7070dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a particular book that belongs to a user  <a href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#ab18880eba0d7d3571eb09ccf7d7070dc">More...</a><br /></td></tr>
+<tr class="separator:ab18880eba0d7d3571eb09ccf7d7070dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6885eed7854db14e541e2e3d8d06a883"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#a6885eed7854db14e541e2e3d8d06a883">Update</a> (<a class="el" href="classAdeNote_1_1Models_1_1Book.html">Book</a> entity, <a class="el" href="classAdeNote_1_1Models_1_1Book.html">Book</a> currentBook)</td></tr>
+<tr class="separator:a6885eed7854db14e541e2e3d8d06a883"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78723e733a646d4c4307fcee749a94dc"><td class="memItemLeft" align="right" valign="top">IQueryable&lt; <a class="el" href="classAdeNote_1_1Models_1_1Book.html">Book</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#a78723e733a646d4c4307fcee749a94dc">GetAll</a> (Guid userId)</td></tr>
 <tr class="memdesc:a78723e733a646d4c4307fcee749a94dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all books that belong to a user  <a href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#a78723e733a646d4c4307fcee749a94dc">More...</a><br /></td></tr>
 <tr class="separator:a78723e733a646d4c4307fcee749a94dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -205,8 +207,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ace07f2fb2416ddcbebef9cdb4b02af5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace07f2fb2416ddcbebef9cdb4b02af5c">&#9670;&nbsp;</a></span>GetAsync()</h2>
+<a id="ab18880eba0d7d3571eb09ccf7d7070dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab18880eba0d7d3571eb09ccf7d7070dc">&#9670;&nbsp;</a></span>GetAsync()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -221,7 +223,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Guid&#160;</td>
-          <td class="paramname"><em>userId</em>&#160;</td>
+          <td class="paramname"><em>userId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isTracked</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -241,12 +249,12 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A book object</dd></dl>
 
-<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html#aeededd69d69949250b0ee571bfb5d0c7">AdeNote.Infrastructure.Repository.BookRepository</a>.</p>
+<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html#ac402f040a147a677b554b48e89e3040c">AdeNote.Infrastructure.Repository.BookRepository</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository_ace07f2fb2416ddcbebef9cdb4b02af5c_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository_ace07f2fb2416ddcbebef9cdb4b02af5c_icgraph" alt=""/></div>
-<map name="ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository_ace07f2fb2416ddcbebef9cdb4b02af5c_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository_ace07f2fb2416ddcbebef9cdb4b02af5c_icgraph">
+<div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository_ab18880eba0d7d3571eb09ccf7d7070dc_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository_ab18880eba0d7d3571eb09ccf7d7070dc_icgraph" alt=""/></div>
+<map name="ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository_ab18880eba0d7d3571eb09ccf7d7070dc_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository_ab18880eba0d7d3571eb09ccf7d7070dc_icgraph">
 <area shape="rect" title="Get a particular book that belongs to a user" alt="" coords="303,300,549,341"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#adf0cd7e7cf1020375687ff71625e3d9c" title="Adds a new page to a book" alt="" coords="13,5,247,47"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#abf09a31621901923997d15a1fc293d1b" title="Adds labels to a page" alt="" coords="13,71,247,112"/>
@@ -258,6 +266,45 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a7b8959a9d6f1d10503e62660315e16f0" title=" " alt="" coords="13,463,247,504"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#ae3e9a2095bdc23aa657f024473bfb434" title="Updates an existing book" alt="" coords="13,528,247,569"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a808f63b17b96a3eb2a6ded93ae78de91" title="Updates an existing page" alt="" coords="13,593,247,635"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6885eed7854db14e541e2e3d8d06a883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6885eed7854db14e541e2e3d8d06a883">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;bool&gt; AdeNote.Infrastructure.Repository.IBookRepository.Update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAdeNote_1_1Models_1_1Book.html">Book</a>&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAdeNote_1_1Models_1_1Book.html">Book</a>&#160;</td>
+          <td class="paramname"><em>currentBook</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html#ac6301926d49ae953d93d7e19c5892e21">AdeNote.Infrastructure.Repository.BookRepository</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository_a6885eed7854db14e541e2e3d8d06a883_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository_a6885eed7854db14e541e2e3d8d06a883_icgraph" alt=""/></div>
+<map name="ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository_a6885eed7854db14e541e2e3d8d06a883_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository_a6885eed7854db14e541e2e3d8d06a883_icgraph">
+<area shape="rect" title=" " alt="" coords="287,5,533,47"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#ae3e9a2095bdc23aa657f024473bfb434" title="Updates an existing book" alt="" coords="5,5,239,47"/>
 </map>
 </div>
 

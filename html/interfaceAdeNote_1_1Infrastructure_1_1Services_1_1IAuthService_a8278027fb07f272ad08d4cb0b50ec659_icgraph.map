@@ -1,6 +1,6 @@
 <map id="AdeNote.Infrastructure.Services.IAuthService.ReadDetailsFromToken" name="AdeNote.Infrastructure.Services.IAuthService.ReadDetailsFromToken">
 <area shape="rect" id="node1" title="Reads the user details from the token" alt="" coords="305,71,563,112"/>
 <area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3b1635ec52b83ce1ff5a6f008130a66c" title="Sends one time password via sms" alt="" coords="5,5,257,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#ac6e29dec9bd50a10a1629d70231b7fc4" title="Verifies sms code" alt="" coords="5,71,257,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#ab1fe105f9760c908a3b9782c2de84908" title="Verifies time based One time password" alt="" coords="5,136,257,177"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a8d610717757937c399997cffac62b060" title="Verifies sms code" alt="" coords="5,71,257,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9ff673c8d9c0ed05e50eba0bd702f6fe" title="Verifies time based One time password" alt="" coords="5,136,257,177"/>
 </map>

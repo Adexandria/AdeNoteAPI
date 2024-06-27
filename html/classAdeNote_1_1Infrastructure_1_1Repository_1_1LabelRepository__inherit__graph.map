@@ -1,6 +1,6 @@
 <map id="AdeNote.Infrastructure.Repository.LabelRepository" name="AdeNote.Infrastructure.Repository.LabelRepository">
-<area shape="rect" id="node1" title="Handles persisting and querying for Label objects" alt="" coords="5,155,252,196"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title="Commits new and tracked changes in the objects" alt="" coords="15,80,107,107"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html" title="An interface that includes label object" alt="" coords="131,80,262,107"/>
-<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="116,5,277,32"/>
+<area shape="rect" id="node1" title="Handles persisting and querying for Label objects" alt="" coords="45,155,291,196"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title=" " alt="" coords="5,80,163,107"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html" title="An interface that includes label object" alt="" coords="187,80,317,107"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="171,5,333,32"/>
 </map>

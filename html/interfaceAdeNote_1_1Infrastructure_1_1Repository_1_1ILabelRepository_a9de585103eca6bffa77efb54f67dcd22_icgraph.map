@@ -1,6 +1,4 @@
 <map id="AdeNote.Infrastructure.Repository.ILabelRepository.GetAsync" name="AdeNote.Infrastructure.Repository.ILabelRepository.GetAsync">
-<area shape="rect" id="node1" title="Get a particular label" alt="" coords="287,71,533,112"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a2c2c4c8652f71426887ca9f34fd82041" title="Gets a particular label by id" alt="" coords="5,5,239,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a360d316bd27475252c1a073eb8fd54bc" title="Removes an existing label" alt="" coords="5,71,239,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a40c4b3ff821053124c01b2f95badae7b" title="Updates an existing label" alt="" coords="5,136,239,177"/>
+<area shape="rect" id="node1" title="Get a particular label" alt="" coords="287,5,533,47"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a40c4b3ff821053124c01b2f95badae7b" title="Updates an existing label" alt="" coords="5,5,239,47"/>
 </map>

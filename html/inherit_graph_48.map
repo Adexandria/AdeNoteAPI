@@ -1,14 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classAdeNote_1_1Models_1_1BaseEntity.html" title=" " alt="" coords="5,157,208,184"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Models_1_1BaseClass.html" title="A base class that includes the id" alt="" coords="269,81,469,108"/>
-<area shape="rect" id="node8" href="$classAdeNote_1_1Models_1_1HangfireUser.html" title=" " alt="" coords="260,132,479,159"/>
-<area shape="rect" id="node9" href="$classAdeNote_1_1Models_1_1RecoveryCode.html" title=" " alt="" coords="256,183,483,209"/>
-<area shape="rect" id="node10" href="$classAdeNote_1_1Models_1_1RefreshToken.html" title=" " alt="" coords="259,233,479,260"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Models_1_1Book.html" title="A book object" alt="" coords="533,5,700,32"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Models_1_1Label.html" title="A label model" alt="" coords="533,56,701,83"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Models_1_1Page.html" title="Page model" alt="" coords="535,107,699,133"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Models_1_1Ticket.html" title=" " alt="" coords="531,157,703,184"/>
-<area shape="rect" id="node7" href="$classAdeNote_1_1Models_1_1User.html" title=" " alt="" coords="535,233,698,260"/>
-<area shape="rect" id="node11" title=" " alt="" coords="305,284,434,311"/>
-<area shape="rect" id="node12" title=" " alt="" coords="50,233,163,260"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,112,39"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet.html" title=" " alt="" coords="160,5,389,47"/>
 </map>

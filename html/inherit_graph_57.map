@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO.html" title="Displays the user details" alt="" coords="5,5,252,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,46,149,73"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ExpectedAttribute.html" title=" " alt="" coords="198,5,470,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1PasswordAttribute.html" title=" " alt="" coords="197,71,471,112"/>
 </map>
