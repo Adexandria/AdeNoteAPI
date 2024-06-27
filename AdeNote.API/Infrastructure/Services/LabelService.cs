@@ -73,7 +73,7 @@ namespace AdeNote.Infrastructure.Services
            if (labelId == Guid.Empty)
               return await Task.FromResult(ActionResult<LabelDTO>.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
-            var currentLabel = await labelRepository.GetAsync(labelId);
+            var currentLabel = await labelRepository.GetNoTrackingAsync(labelId);
             if (currentLabel == null)
                 return await Task.FromResult(ActionResult<LabelDTO>.Failed("Label doesn't exist", (int)HttpStatusCode.NotFound));
 
@@ -93,7 +93,7 @@ namespace AdeNote.Infrastructure.Services
                 if (labelId == Guid.Empty)
                     return await Task.FromResult(ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
-                var currentLabel = await labelRepository.GetAsync(labelId);
+                var currentLabel = await labelRepository.GetNoTrackingAsync(labelId);
                 if(currentLabel == null)
                     return await Task.FromResult(ActionResult.Failed("label doesn't exist", (int)HttpStatusCode.NotFound));
 
@@ -127,9 +127,12 @@ namespace AdeNote.Infrastructure.Services
                     return await Task.FromResult(ActionResult.Failed("label doesn't exist", (int)HttpStatusCode.NotFound));
 
                 var label = updateLabel.Adapt<Label>();
+
                 label.Id = labelId;
 
-                var commitStatus = await labelRepository.Update(label);
+                label.SetModifiedDate();
+
+                var commitStatus = await labelRepository.Update(label,currentLabel);
                 if (!commitStatus)
                     return ActionResult.Failed("Failed to update label");
 

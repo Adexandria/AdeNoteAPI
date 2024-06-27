@@ -40,7 +40,7 @@ namespace AdeNote.Infrastructure.Services
                     request.AddParameter("html", email.HtmlMessage);
                 }
                 var response = await client.ExecuteAsync(request);
-                logger.LogInformation($"Message sent {response.StatusCode} at {DateTime.UtcNow} Errors: {response.ErrorMessage}");
+                logger.LogInformation("Message sent {StatusCode} at {UtcNow} Errors: {ErrorMessage}",response.StatusCode,DateTime.UtcNow,response.ErrorMessage);
             })
             {
 

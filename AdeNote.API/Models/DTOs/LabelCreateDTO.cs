@@ -10,7 +10,7 @@ namespace AdeNote.Models.DTOs
         /// <summary>
         /// Title of a label
         /// </summary>
-        [Required]
+        [Required(ErrorMessage = "Enter label")]
         public string Title { get; set; }
     }
 }

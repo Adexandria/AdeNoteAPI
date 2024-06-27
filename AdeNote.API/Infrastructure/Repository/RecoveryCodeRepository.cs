@@ -4,11 +4,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AdeNote.Infrastructure.Repository
 {
-    public class RecoveryCodeRepository : Repository,IRecoveryCodeRepository
+    public class RecoveryCodeRepository : Repository<RecoveryCode>,IRecoveryCodeRepository
     {
-        public RecoveryCodeRepository(NoteDbContext db): base(db)
+        public RecoveryCodeRepository(NoteDbContext db, ILoggerFactory loggerFactory): base(db, loggerFactory)
         {
-            
         }
 
         public async Task<bool> Add(RecoveryCode entity)
@@ -17,7 +16,11 @@ namespace AdeNote.Infrastructure.Repository
 
             await Db.RecoveryCodes.AddAsync(entity);
 
-            return await SaveChanges<RecoveryCode>();  
+            var result =  await SaveChanges();
+
+            logger.LogInformation("Add recovery code to database:{result}", result);
+
+            return result;
         }
 
         public async Task<RecoveryCode> GetUserIdByRecoveryCodes(string recoveryCode)
@@ -30,7 +33,12 @@ namespace AdeNote.Infrastructure.Repository
         public async Task<bool> Remove(RecoveryCode entity)
         {
             Db.RecoveryCodes.Remove(entity);
-            return await SaveChanges<RecoveryCode>();
+
+            var result = await SaveChanges();
+
+            logger.LogInformation("Remove recovery code to database:{result}", result);
+
+            return result;
         }
 
         public async Task<bool> Update(RecoveryCode entity)
@@ -42,7 +50,11 @@ namespace AdeNote.Infrastructure.Repository
 
             Db.Entry(currentCode).State = EntityState.Modified;
 
-            return await SaveChanges<RecoveryCode>();
+            var result = await SaveChanges();
+
+            logger.LogInformation("Update recovery code to database:{result}", result);
+
+            return result;
         }
     }
 }

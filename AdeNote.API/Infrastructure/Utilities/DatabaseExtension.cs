@@ -7,11 +7,14 @@ using Microsoft.EntityFrameworkCore.Storage;
 
 namespace AdeNote.Infrastructure.Utilities
 {
-    public static class Database
+    public static class DatabaseExtension
     {
-        public static void CreateTables(this IServiceCollection services)
+        public static void CreateTables(this WebApplication app)
         {
-            var provider = services.BuildServiceProvider();
+            using var scope = app.Services.CreateScope();
+
+            var provider = scope.ServiceProvider;
+
             var dbContext =provider.GetService<NoteDbContext>()
                 ?? throw new NullReferenceException("Unregistered service");
 
@@ -22,28 +25,36 @@ namespace AdeNote.Infrastructure.Utilities
 
             var databaseCreator = dbContext.GetService<IRelationalDatabaseCreator>();
 
+            if (databaseCreator.CanConnect() && !databaseCreator.Exists())
+            {
+                databaseCreator.Create();
+                logger.LogInformation("Database has been created");
+            }
+
             if (!databaseCreator.HasTables())
             {
                 logger.LogInformation("Created Tables successfully");
                 databaseCreator.CreateTables();
             }
+
             logger.LogInformation("Tables have been created");
         }
 
-        public static void SeedHangFireUser(this IServiceCollection services, HangFireUserConfiguration config)
+        public static void SeedHangFireUser(this WebApplication app, HangFireUserConfiguration config)
         {
             if(config == null)
             {
                 throw new ArgumentNullException(nameof(config));
             }
+            using var scope = app.Services.CreateScope();
 
-            var serviceProvider = services.BuildServiceProvider();
+            var serviceProvider = scope.ServiceProvider;
+
             var hangfireUserRepository = serviceProvider.GetService<IHangfireUserRepository>() 
                 ?? throw new NullReferenceException("Unregistered service");
 
             var passwordManager = serviceProvider.GetService<IPasswordManager>() 
                 ?? throw new NullReferenceException("Unregistered service");
-
 
             if (!hangfireUserRepository.IsSeeded)
             {
@@ -57,14 +68,16 @@ namespace AdeNote.Infrastructure.Utilities
             }
         }
 
-        public static void SeedSuperAdmin(this IServiceCollection services, DefaultConfiguration config)
+        public static void SeedSuperAdmin(this WebApplication app, DefaultConfiguration config)
         {
             if (config == null)
             {
                 throw new ArgumentNullException(nameof(config));
             }
 
-            var serviceProvider = services.BuildServiceProvider();
+            using var scope = app.Services.CreateScope();
+
+            var serviceProvider = scope.ServiceProvider;
 
             var passwordManager = serviceProvider.GetService<IPasswordManager>()
                 ?? throw new NullReferenceException("Unregistered service");

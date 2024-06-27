@@ -2,7 +2,6 @@
 using AdeText.Models;
 using Hangfire;
 using Microsoft.Extensions.Caching.Memory;
-using System.Runtime.InteropServices;
 
 namespace AdeNote.Infrastructure.Utilities.AI
 {
@@ -52,7 +51,7 @@ namespace AdeNote.Infrastructure.Utilities.AI
                     return;
                 }
 
-                logger.LogInformation("Failed to update languages");
+                logger.LogError(new Exception(response.Errors[0]),"Failed to update languages");
 
             });
         }

@@ -61,7 +61,7 @@ namespace AdeNote.Tests.Services
         public async Task ShouldGetLabelByIdSuccessfully()
         {
             //Arrange
-            Repo.Setup(s=>s.GetAsync(It.IsAny<Guid>())).ReturnsAsync(new Label("label1"));
+            Repo.Setup(s=>s.GetNoTrackingAsync(It.IsAny<Guid>())).ReturnsAsync(new Label("label1"));
 
             //Act
             var response = await Service.GetById(Guid.NewGuid());
@@ -86,7 +86,7 @@ namespace AdeNote.Tests.Services
         public async Task ShouldFailToGetLabelIfLabelDoesNotExist()
         {
             //Arrange
-            Repo.Setup(s => s.GetAsync(It.IsAny<Guid>()));
+            Repo.Setup(s => s.GetNoTrackingAsync(It.IsAny<Guid>()));
 
             //Act
             var response = await Service.GetById(Guid.NewGuid());
@@ -112,7 +112,7 @@ namespace AdeNote.Tests.Services
         public async Task ShouldRemoveLabelSuccessfully()
         {
             //Arrange
-            Repo.Setup(s => s.GetAsync(It.IsAny<Guid>())).ReturnsAsync(new Label("label1"));
+            Repo.Setup(s => s.GetNoTrackingAsync(It.IsAny<Guid>())).ReturnsAsync(new Label("label1"));
             Repo.Setup(s => s.Remove(It.IsAny<Label>())).ReturnsAsync(true);
 
             //Act
@@ -137,7 +137,7 @@ namespace AdeNote.Tests.Services
         public async Task ShouldFailToRemoveLabel()
         {
             //Arrange
-            Repo.Setup(s => s.GetAsync(It.IsAny<Guid>())).ReturnsAsync(new Label("label1"));
+            Repo.Setup(s => s.GetNoTrackingAsync(It.IsAny<Guid>())).ReturnsAsync(new Label("label1"));
             Repo.Setup(s => s.Remove(It.IsAny<Label>())).ReturnsAsync(false);
 
             //Act
@@ -165,7 +165,7 @@ namespace AdeNote.Tests.Services
         {
             //Arrange
             Repo.Setup(s => s.GetAsync(It.IsAny<Guid>())).ReturnsAsync(new Label("label1"));
-            Repo.Setup(s => s.Update(It.IsAny<Label>())).ReturnsAsync(true);
+            Repo.Setup(s => s.Update(It.IsAny<Label>(), It.IsAny<Label>())).ReturnsAsync(true);
 
             //Act
             var response = await Service.Update(Guid.NewGuid(), updateObj);
@@ -190,7 +190,7 @@ namespace AdeNote.Tests.Services
         {
             //Arrange
             Repo.Setup(s => s.GetAsync(It.IsAny<Guid>())).ReturnsAsync(new Label("label1"));
-            Repo.Setup(s => s.Update(It.IsAny<Label>())).ReturnsAsync(false);
+            Repo.Setup(s => s.Update(It.IsAny<Label>(), It.IsAny<Label>())).ReturnsAsync(false);
 
             //Act
             var response = await Service.Update(Guid.NewGuid(), updateObj);

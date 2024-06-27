@@ -172,15 +172,14 @@ namespace AdeNote.Infrastructure.Services
                 book.Id = bookId;
                 book.UserId = userId;
 
-                var currentBook = await bookRepository.GetAsync(bookId,userId);
+                var currentBook = await bookRepository.GetAsync(bookId,userId,true);
 
                 if (currentBook == null)
                     return ActionResult.Failed("Book does not exist", (int)HttpStatusCode.NotFound);
 
-                currentBook.SetModifiedDate();
+                book.SetModifiedDate();
 
-
-                var commitStatus = await bookRepository.Update(book);
+                var commitStatus = await bookRepository.Update(book,currentBook);
                 if (!commitStatus)
                     return ActionResult.Failed("Failed to update book");
 

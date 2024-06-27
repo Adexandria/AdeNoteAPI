@@ -2,12 +2,13 @@
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Moq;
 
 namespace AdeNote.Tests
 {
     public class RepoTestHelpher<TRepo,TModel>
-        where TRepo : Repository
+        where TRepo : Repository<TModel>
         where TModel : class
     {
         [SetUp]
@@ -25,16 +26,19 @@ namespace AdeNote.Tests
             Repo.Db.Database.EnsureCreated();
 
             obj = CreateModel();
+
+            Repo.logger = new Mock<ILogger<TModel>>().Object;
+
         }
 
         public void AssumeSaveChangesSuccessfully()
         {
-            mockRepo.Setup(s => s.SaveChanges<TModel>()).ReturnsAsync(true);
+            mockRepo.Setup(s => s.SaveChanges()).ReturnsAsync(true);
         }
 
         public void AssumeSaveChangesFailed()
         {
-            mockRepo.Setup(s => s.SaveChanges<TModel>()).ReturnsAsync(false);
+            mockRepo.Setup(s => s.SaveChanges()).ReturnsAsync(false);
         }
 
         protected virtual TModel CreateModel()
@@ -44,7 +48,6 @@ namespace AdeNote.Tests
 
         protected TModel obj { get; set; }
         protected TRepo Repo { get; set; }
-
         private Mock<TRepo> mockRepo { get; set; }
 
     }

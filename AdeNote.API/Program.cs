@@ -5,21 +5,25 @@ using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Services;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Infrastructure.Utilities.AI;
+using AdeNote.Infrastructure.Utilities.HealthChecks;
 using AdeNote.Models;
 using AdeText;
-using AdeText.Models;
 using Asp.Versioning;
 using Asp.Versioning.ApiExplorer;
 using DocBuilder.Services;
 using Excelify.Services;
 using Hangfire;
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 using System.Text;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration.AddEnvironmentVariables().Build();
@@ -34,9 +38,9 @@ var connectionString = configuration.GetConnectionString("NotesDB");
 // Gets the token secret from appsettings
 var tokenSecret = configuration["TokenSecret"];
 
-builder.Services.AddScoped<IUserIdentity, UserIdentity>();
+
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddLogging();
+builder.Services.AddLogging(builder => builder.AddConsole());
 builder.Services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
@@ -116,15 +120,21 @@ builder.Services.AddSingleton((_) => AuthFactory.CreateService().TokenProvider);
 builder.Services.AddSingleton((_) => AuthFactory.CreateService().MfaService);
 builder.Services.AddSingleton((_) => AdeTextFactory.BuildClient(textClientConfiguration));
 builder.Services.AddMemoryCache();
+builder.Services.AddScoped<IUserIdentity, UserIdentity>();
 builder.Services.AddSingleton((_) => new ExcelifyFactory());
 builder.Services.AddHangfire(config => config
     .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
     .UseSimpleAssemblyNameTypeSerializer()
     .UseRecommendedSerializerSettings()
-    .UseSqlServerStorage(configuration.GetConnectionString("HangfireConnection")));
+    .UseSqlServerStorage(configuration.GetConnectionString("NotesDB")));
+
+
+builder.Services.AddHealthChecks()
+    .AddCheck<DatabaseHealthCheck>("CheckDatabase")
+    .AddCheck<APIHealthCheck>("CheckAPI")
+    ;
 
 builder.Services.AddHangfireServer();
-builder.Services.AddSingleton(LoggerFactory.Create(b => b.AddConsole()));
 builder.Services.AddDbContext<NoteDbContext>(options => options
 .UseSqlServer(connectionString));
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -170,10 +180,18 @@ builder.Services.AddAuthorization(options =>
 
     options.AddPolicy("sso",new AuthorizationPolicyBuilder("SSO").RequireAuthenticatedUser().Build());
 });
+builder.Services.AddHttpLogging(logging =>
+{
+    logging.LoggingFields = HttpLoggingFields.All;
+    logging.RequestHeaders.Add("sec-ch-ua");
+    logging.ResponseHeaders.Add("MyResponseHeader");
+    logging.MediaTypeOptions.AddText("application/javascript");
+    logging.RequestBodyLogLimit = 4096;
+    logging.ResponseBodyLogLimit = 4096;
+}
+);
 
-builder.Services.CreateTables();
-builder.Services.SeedHangFireUser(hangfireUserConfiguration);
-builder.Services.SeedSuperAdmin(defaultConfiguration);
+
 
 new Language(builder.Services.BuildServiceProvider()).GetLanguages();
 
@@ -194,7 +212,11 @@ app.UseSwaggerUI(setupAction =>
                        description.GroupName.ToUpperInvariant());
     }
 });
-
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+app.UseHttpLogging();
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
@@ -211,8 +233,15 @@ app.UseHangfireDashboard("/hangfire", new DashboardOptions
   AppPath = "swagger/index.html"
 });
 
+app.MapHealthChecks("/health", new HealthCheckOptions
+{
+    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+});
 
 app.MapControllers();
 
+app.CreateTables();
+app.SeedHangFireUser(hangfireUserConfiguration);
+app.SeedSuperAdmin(defaultConfiguration);
 app.Run();
 

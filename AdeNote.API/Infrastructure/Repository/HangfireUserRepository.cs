@@ -4,11 +4,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AdeNote.Infrastructure.Repository
 {
-    public class HangfireUserRepository : Repository, IHangfireUserRepository
+    public class HangfireUserRepository : Repository<HangfireUser>, IHangfireUserRepository
     {
-        public HangfireUserRepository(NoteDbContext dbContext): base(dbContext)
+        public HangfireUserRepository(NoteDbContext dbContext, ILoggerFactory loggerFactory): base(dbContext,loggerFactory)
         {
-            
         }
 
         public bool IsSeeded
@@ -23,14 +22,25 @@ namespace AdeNote.Infrastructure.Repository
         public async Task<bool> Add(HangfireUser entity)
         {
             entity.Id = Guid.NewGuid();
+
             await Db.HangfireUsers.AddAsync(entity);
-            return await SaveChanges<HangfireUser>();
+
+            var result =  await SaveChanges();
+
+            logger.LogInformation("Add hang fire user to database : {result}", result);
+
+            return result;
         }
 
         public async Task<bool> Remove(HangfireUser entity)
         {
             Db.HangfireUsers.Remove(entity);
-            return await SaveChanges<HangfireUser>();
+
+            var result = await SaveChanges();
+
+            logger.LogInformation("Remove hang fire user to database : {result}", result);
+
+            return result;
         }
 
         public async Task<bool> Update(HangfireUser entity)
@@ -41,7 +51,11 @@ namespace AdeNote.Infrastructure.Repository
 
             Db.Entry(currentUser).State = EntityState.Modified;
 
-            return await SaveChanges<HangfireUser>();
+            var result = await SaveChanges();
+
+            logger.LogInformation("Update hang fire user to database : {result}", result);
+
+            return result;
         }
     }
 }

@@ -7,7 +7,7 @@ namespace AdeNote.Infrastructure.Repository
     /// <summary>
     /// Handles persisting and querying for page labels.
     /// </summary>
-    public class LabelPageRepository : Repository, ILabelPageRepository
+    public class LabelPageRepository : Repository<LabelPage>, ILabelPageRepository
     {
         /// <summary>
         /// A Constructor
@@ -20,9 +20,8 @@ namespace AdeNote.Infrastructure.Repository
         /// A constructor
         /// </summary>
         /// <param name="db">Handles Transactions</param>
-        public LabelPageRepository(NoteDbContext db) : base(db)
+        public LabelPageRepository(NoteDbContext db, ILoggerFactory loggerFactory) : base(db, loggerFactory)
         {
-           
         }
 
         /// <summary>
@@ -33,9 +32,16 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>A boolean value</returns>
         public async Task<bool> AddLabelToPage(Guid pageId, Guid labelId)
         {
+
             var pageLabel = new LabelPage(pageId, labelId);
+
             await Db.LabelPage.AddAsync(pageLabel);
-            return await SaveChanges<LabelPage>();
+
+            var result =  await SaveChanges();
+
+            logger.LogInformation("Add label to page: {result}",result);
+
+            return result;
 
         }
 
@@ -46,8 +52,13 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>A boolean value</returns>
         public async Task<bool> DeleteLabelFromPage(LabelPage currentPageLabel)
         {
-             Db.LabelPage.Remove(currentPageLabel);
-            return await SaveChanges<LabelPage>();
+            Db.LabelPage.Remove(currentPageLabel);
+
+            var result = await SaveChanges();
+
+            logger.LogInformation("Add label to page: {result}", result);
+
+            return result;
         }
 
         /// <summary>
@@ -58,7 +69,11 @@ namespace AdeNote.Infrastructure.Repository
         public async Task<bool> DeleteLabelsFromPage(IList<LabelPage> pageLabels)
         {
             Db.LabelPage.RemoveRange(pageLabels);
-            return await SaveChanges<LabelPage>();
+
+            var result = await SaveChanges();
+            logger.LogInformation("Add label to page: {result}", result);
+
+            return result;
         }
 
         /// <summary>

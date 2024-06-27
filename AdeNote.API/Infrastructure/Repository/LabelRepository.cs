@@ -7,7 +7,7 @@ namespace AdeNote.Infrastructure.Repository
     /// <summary>
     /// Handles persisting and querying for Label objects
     /// </summary>
-    public class LabelRepository : Repository, ILabelRepository
+    public class LabelRepository : Repository<Label>, ILabelRepository
     {
         /// <summary>
         /// A Constructor
@@ -21,7 +21,7 @@ namespace AdeNote.Infrastructure.Repository
         /// A constructor
         /// </summary>
         /// <param name="noteDb">Handles transaction</param>
-        public LabelRepository(NoteDbContext noteDb) : base(noteDb)
+        public LabelRepository(NoteDbContext noteDb,ILoggerFactory loggerFactory) : base(noteDb,loggerFactory)
         {
         }
         /// <summary>
@@ -32,8 +32,14 @@ namespace AdeNote.Infrastructure.Repository
         public async Task<bool> Add(Label entity)
         {
             entity.Id = Guid.NewGuid();
+
             await Db.Labels.AddAsync(entity);
-            return await SaveChanges<Label>();
+
+            var result = await SaveChanges();
+
+            logger.LogInformation("Add label to database: {result}", result);
+
+            return result;
         }
 
         /// <summary>
@@ -50,7 +56,7 @@ namespace AdeNote.Infrastructure.Repository
         /// </summary>
         /// <param name="id">label id</param>
         /// <returns>boolean value</returns>
-        public async Task<Label> GetAsync(Guid id)
+        public async Task<Label> GetNoTrackingAsync(Guid id)
         {
             return await Db.Labels.AsNoTracking().FirstOrDefaultAsync(s => s.Id == id);
         }
@@ -72,7 +78,12 @@ namespace AdeNote.Infrastructure.Repository
         public async Task<bool> Remove(Label entity)
         {
             Db.Remove(entity);
-            return await SaveChanges<Label>();
+
+            var result = await SaveChanges();
+
+            logger.LogInformation("Remove label to database: {result}", result);
+
+            return result;
         }
 
         /// <summary>
@@ -89,7 +100,29 @@ namespace AdeNote.Infrastructure.Repository
 
             Db.Entry(currentLabel).State = EntityState.Modified;
 
-            return await SaveChanges<Label>();
+            var result = await SaveChanges();
+
+            logger.LogInformation("Update label to database: {result}", result);
+
+            return result;
+        }
+
+        public async Task<Label> GetAsync(Guid id)
+        {
+            return await Db.Labels.FirstOrDefaultAsync(s => s.Id == id);
+        }
+
+        public async Task<bool> Update(Label entity, Label currentLabel)
+        {
+            Db.Entry(currentLabel).CurrentValues.SetValues(entity);
+
+            Db.Entry(currentLabel).State = EntityState.Modified;
+
+            var result = await SaveChanges();
+
+            logger.LogInformation("Update label to database: {result}", result);
+
+            return result;
         }
     }
 }

@@ -5,11 +5,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AdeNote.Infrastructure.Repository
 {
-    public class TicketRepository : Repository, ITicketRepository
+    public class TicketRepository : Repository<Ticket>, ITicketRepository
     {
-        public TicketRepository(NoteDbContext dbContext) :base(dbContext) 
+        public TicketRepository(NoteDbContext dbContext, ILoggerFactory loggerFactory) :base(dbContext, loggerFactory) 
         {
-                
         }
 
         public async Task<bool> Add(Ticket entity)
@@ -18,7 +17,11 @@ namespace AdeNote.Infrastructure.Repository
 
             await Db.Tickets.AddAsync(entity);
 
-            return await SaveChanges<Ticket>();
+            var result = await SaveChanges();
+
+            logger.LogInformation("Add ticket to database:{result}", result);
+
+            return result;
         }
 
         public List<TicketStatusDto> GetNumberOfTicketsByStatus()
@@ -72,7 +75,12 @@ namespace AdeNote.Infrastructure.Repository
         public async Task<bool> Remove(Ticket entity)
         {
             Db.Remove(entity);
-            return await SaveChanges<Ticket>();
+
+            var result = await SaveChanges();
+
+            logger.LogInformation("Remove ticket to database:{result}", result);
+
+            return result;
         }
 
         public IEnumerable<Ticket> SearchTickets(Func<Ticket, bool> expression, int pageNumber, int pageSize)
@@ -92,7 +100,11 @@ namespace AdeNote.Infrastructure.Repository
         {
             Db.Update(entity);
 
-            return await SaveChanges<Ticket>();
+            var result = await SaveChanges();
+
+            logger.LogInformation("Update ticket to database:{result}", result);
+
+            return result;
         }
     }
 }

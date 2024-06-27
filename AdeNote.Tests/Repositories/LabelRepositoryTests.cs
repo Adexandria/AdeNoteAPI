@@ -41,7 +41,7 @@ namespace AdeNote.Tests.Repositories
         public async Task ShouldGetLabelSuccessfully()
         {
             //Act
-            var response = await Repo.GetAsync(new Guid("c80fbb29-6d17-40a7-bb1a-c91770976848"));
+            var response = await Repo.GetNoTrackingAsync(new Guid("c80fbb29-6d17-40a7-bb1a-c91770976848"));
 
             //Assert
             Assert.That(response, Is.TypeOf<Label>());

@@ -11,12 +11,12 @@ namespace AdeNote.Models.DTOs
         /// <summary>
         /// A title of a page
         /// </summary>
-        [Required]
+        [Required(ErrorMessage = "Enter page name")]
         public string Title { get; set; }
         /// <summary>
         /// A content of a page
         /// </summary>
-        [Required]
+        [Required(ErrorMessage = "Enter content")]
         public string Content { get; set; }
     }
 }

@@ -9,6 +9,8 @@ namespace AdeNote.Models.DTOs
         [EmailAddress]
         public string Email { get; set; }
 
+
+        [Required(ErrorMessage ="Enter password")]
         public string Password { get; set; }
     }
 }

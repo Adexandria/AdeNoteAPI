@@ -12,14 +12,14 @@ namespace AdeNote.Models.DTOs
         /// <summary>
         /// Title of the book
         /// </summary>
-        [Required]
+        [Required(ErrorMessage = "Enter title")]
         public string Title { get; set; }
 
         [Excelify("description")]
         /// <summary>
         /// Description of the book
         /// </summary>
-        [Required]
+        [Required(ErrorMessage = "Enter description")]
         public string Description { get; set; }
     }
 }
