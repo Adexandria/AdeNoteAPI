@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Repository.ILabelRepository.GetNoTrackingAsync" name="AdeNote.Infrastructure.Repository.ILabelRepository.GetNoTrackingAsync">
+<area shape="rect" id="node1" title="Get a particular label with no tracking" alt="" coords="287,39,553,80"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a2c2c4c8652f71426887ca9f34fd82041" title="Gets a particular label by id" alt="" coords="5,5,239,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a360d316bd27475252c1a073eb8fd54bc" title="Removes an existing label" alt="" coords="5,71,239,112"/>
+</map>

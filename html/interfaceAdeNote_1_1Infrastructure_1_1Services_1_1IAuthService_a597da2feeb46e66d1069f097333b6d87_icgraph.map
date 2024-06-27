@@ -1,0 +1,12 @@
+<map id="AdeNote.Infrastructure.Services.IAuthService.IsAuthenticatorEnabled" name="AdeNote.Infrastructure.Services.IAuthService.IsAuthenticatorEnabled">
+<area shape="rect" id="node1" title="Checks if MFA has been enabled for the user using user id." alt="" coords="616,201,875,243"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#aa577d9771607968fb833de57507c9ef0" title="Logins user using recovery codes" alt="" coords="311,5,563,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="311,71,563,112"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3b1635ec52b83ce1ff5a6f008130a66c" title="Sends one time password via sms" alt="" coords="311,136,563,177"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Controllers_1_1UserController.html#ae28420ba0635c8568bc6bedee7b01bca" title="Sets up two factor authentication using google authenticator app" alt="" coords="305,201,568,243"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Controllers_1_1UserController.html#a2bbabbe2d779a9a47b8995fad0d532b8" title="Sets up two factor authentication using sms" alt="" coords="315,267,559,308"/>
+<area shape="rect" id="node9" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9f9c5c7f9a9a9e13446b3460ad8abf37" title="Logins user using passwordless method" alt="" coords="311,332,563,373"/>
+<area shape="rect" id="node10" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a8d610717757937c399997cffac62b060" title="Verifies sms code" alt="" coords="311,397,563,439"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user" alt="" coords="5,39,257,80"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,104,257,145"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="AdeNote.Infrastructure.Services.IAuthService.IsPhoneNumberVerified" name="AdeNote.Infrastructure.Services.IAuthService.IsPhoneNumberVerified">
+<area shape="rect" id="node1" title="Checks if a phone number has been verified" alt="" coords="305,104,565,145"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3b1635ec52b83ce1ff5a6f008130a66c" title="Sends one time password via sms" alt="" coords="5,5,257,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1UserController.html#a2bbabbe2d779a9a47b8995fad0d532b8" title="Sets up two factor authentication using sms" alt="" coords="9,71,253,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Controllers_1_1UserController.html#a18ba254cf6253b7749dfc2c3e5588c54" title="Verifies phone number" alt="" coords="22,136,241,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a8d610717757937c399997cffac62b060" title="Verifies sms code" alt="" coords="5,201,257,243"/>
+</map>

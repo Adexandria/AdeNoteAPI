@@ -1,0 +1,4 @@
+<map id="AdeNote.Infrastructure.Services.LabelService.GetById" name="AdeNote.Infrastructure.Services.LabelService.GetById">
+<area shape="rect" id="node1" title="Gets a particular label by id" alt="" coords="5,5,239,47"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html#a6506bd2a906f28b5d432adc056c3c3af" title="Get a particular label with no tracking" alt="" coords="287,5,553,47"/>
+</map>

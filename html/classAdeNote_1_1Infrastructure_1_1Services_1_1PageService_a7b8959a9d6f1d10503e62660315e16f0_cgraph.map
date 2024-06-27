@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Services.PageService.TranslatePage" name="AdeNote.Infrastructure.Services.PageService.TranslatePage">
+<area shape="rect" id="node1" title=" " alt="" coords="5,169,239,211"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#ab18880eba0d7d3571eb09ccf7d7070dc" title="Get a particular book that belongs to a user" alt="" coords="307,5,553,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html#a770e88bd6d67b6ff4bac64138f515bab" title="Gets an individual page from a particular book" alt="" coords="307,71,553,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation.html#a7f0bb9dc577c9643de5625eb836f27c0" title=" " alt="" coords="287,136,573,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="309,201,551,243"/>
+<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation.html#a903ff1e2f8e7c0b4fb53e60dcffd2395" title=" " alt="" coords="313,267,547,308"/>
+<area shape="rect" id="node7" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation.html#ae08153e8037ccfe5b0c66699021deb02" title=" " alt="" coords="310,332,550,373"/>
+</map>
