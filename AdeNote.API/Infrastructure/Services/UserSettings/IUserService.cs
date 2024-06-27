@@ -12,7 +12,7 @@ namespace AdeNote.Infrastructure.Services.UserSettings
 
         Task<ActionResult<User>> GetUser(string email);
 
-        Task<ActionResult<UserDTO>> GetUser(Guid userId);
+        Task<ActionResult<UsersDTO>> GetUser(Guid userId);
 
         Task<ActionResult> IsUserExist(string email);
     }

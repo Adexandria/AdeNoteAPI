@@ -1,8 +1,10 @@
-﻿using AdeAuth.Services;
+﻿using AdeAuth.Models;
+using AdeAuth.Services;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
+using Azure.Core;
 
 
 namespace AdeNote.Infrastructure.Services.UserSettings
@@ -88,15 +90,15 @@ namespace AdeNote.Infrastructure.Services.UserSettings
             return ActionResult.SuccessfulOperation();
         }
 
-        public async Task<ActionResult<UserDTO>> GetUser(Guid userId)
+        public async Task<ActionResult<UsersDTO>> GetUser(Guid userId)
         {
             var currentUser = await _userRepository.GetUser(userId);
 
             if (currentUser == null)
-                return ActionResult<UserDTO>.Failed("User doesn't exist", StatusCodes.Status404NotFound);
+                return ActionResult<UsersDTO>.Failed("User doesn't exist", StatusCodes.Status404NotFound);
 
-            return ActionResult<UserDTO>.SuccessfulOperation(new UserDTO(userId, currentUser.FirstName, currentUser.LastName, currentUser.Email, currentUser.RecoveryCode?.Codes));
-
+            return ActionResult<UsersDTO>.SuccessfulOperation(new UsersDTO(userId, currentUser.FirstName,
+            currentUser.LastName, currentUser.Email, currentUser.RecoveryCode?.Codes));
         }
 
         public readonly IUserRepository _userRepository;

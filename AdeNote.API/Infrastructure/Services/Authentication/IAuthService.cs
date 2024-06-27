@@ -147,7 +147,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
 
         Task<ActionResult<string>> SignUser(CreateUserDTO newUser, AuthType authType = AuthType.local, Role role = Role.User);
 
-        Task<ActionTokenResult<UserDTO>> LoginUser(LoginDTO login, AuthType authType);
+        Task<ActionResult<UserDTO>> LoginUser(LoginDTO login, AuthType authType);
 
         Task<ActionResult<string>> GenerateAccessToken(string refreshToken);
 
@@ -155,10 +155,10 @@ namespace AdeNote.Infrastructure.Services.Authentication
 
         Task<ActionResult<string>> LoginUserPasswordless(string email);
 
-        Task<ActionTokenResult<UserDTO>> VerifyPasswordlessToken(string token);
+        Task<ActionResult<UserDTO>> VerifyPasswordlessToken(string token);
 
         Task<ActionResult<string[]>> GenerateRecoveryCodes(Guid userId);
 
-        Task<ActionTokenResult<UserDTO>> LoginUserByRecoveryCodes(string[] recoveryCodes);
+        Task<ActionResult<UserDTO>> LoginUserByRecoveryCodes(string[] recoveryCodes);
     }
 }

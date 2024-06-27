@@ -27,13 +27,13 @@ namespace AdeNote.Infrastructure.Extension
 
             var databaseCreator = dbContext.GetService<IRelationalDatabaseCreator>();
 
-            if (databaseCreator.CanConnect() && !databaseCreator.Exists())
+            if (!databaseCreator.Exists())
             {
                 databaseCreator.Create();
                 logger.LogInformation("Database has been created");
             }
 
-            if (!databaseCreator.HasTables())
+            if (!databaseCreator.HasTables() && databaseCreator.CanConnect())
             {
                 logger.LogInformation("Created Tables successfully");
                 databaseCreator.CreateTables();

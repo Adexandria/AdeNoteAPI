@@ -288,7 +288,7 @@ namespace AdeNote.Controllers
         /// </remarks>
         /// <param name="bookId">A book id</param>
         /// <param name="pageId">A page id</param>
-        /// <param name="to"?>Tranlated language</param>
+        /// <param name="to">Tranlated language</param>
         ///  <response code ="200"> Returns if Successful</response>
         ///  <response code ="400"> Returns if experiencing client issues</response>
         ///  <response code ="500"> Returns if experiencing server issues</response>

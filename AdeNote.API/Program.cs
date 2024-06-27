@@ -1,6 +1,7 @@
 using AdeAuth.Services;
 using AdeNote.Db;
 using AdeNote.Infrastructure.Extension;
+using AdeNote.Infrastructure.Middlewares;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Services.Authentication;
 using AdeNote.Infrastructure.Services.Blob;
@@ -211,7 +212,7 @@ builder.Services.AddHttpLogging(logging =>
 var app = builder.Build();
 
 
-app.UseMiddleware<OperationCanceledMiddleware>();
+app.UseMiddleware<ExceptionMiddleware>();
 
 // Configure the HTTP request pipeline.
 var apiVersionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
@@ -228,7 +229,6 @@ app.UseSwaggerUI(setupAction =>
                        description.GroupName.ToUpperInvariant());
     }
 });
-
 app.UseHttpLogging();
 app.UseHttpsRedirection();
 

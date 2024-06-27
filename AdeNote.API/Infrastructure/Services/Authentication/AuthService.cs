@@ -10,7 +10,6 @@ using AdeNote.Models;
 using AdeNote.Models.DTOs;
 using System.Security.Claims;
 using System.Text;
-using System.Threading;
 
 namespace AdeNote.Infrastructure.Services.Authentication
 {
@@ -619,18 +618,18 @@ namespace AdeNote.Infrastructure.Services.Authentication
             return ActionResult<string>.SuccessfulOperation(emailConfirmationToken);
         }
 
-        public async Task<ActionTokenResult<UserDTO>> LoginUser(LoginDTO login, AuthType authType)
+        public async Task<ActionResult<UserDTO>> LoginUser(LoginDTO login, AuthType authType)
         {
             var authenticatedUser = await userRepository.AuthenticateUser(login.Email, login.Password, authType);
 
             if (authenticatedUser == null)
             {
-                return ActionTokenResult<UserDTO>.Failed("Invalid email/password", StatusCodes.Status400BadRequest);
+                return ActionResult<UserDTO>.Failed("Invalid email/password", StatusCodes.Status400BadRequest);
             }
 
             if (authenticatedUser.LockoutEnabled)
             {
-                return ActionTokenResult<UserDTO>.Failed("Account has been disable. Please contact admin");
+                return ActionResult<UserDTO>.Failed("Account has been disable. Please contact admin");
 
             }
 
@@ -648,15 +647,14 @@ namespace AdeNote.Infrastructure.Services.Authentication
 
                 _notificationService.SendNotification(new Email(authenticatedUser.Email, "Confirm email"),
                     EmailTemplate.EmailConfirmationNotification, ContentType.html, substitutions);
-                return ActionTokenResult<UserDTO>.Failed("Confirm email", StatusCodes.Status400BadRequest);
+                return ActionResult<UserDTO>.Failed("Confirm email", StatusCodes.Status400BadRequest);
             }
 
             var isFirstTimeLogin = authenticatedUser.RefreshToken == null;
 
             if (authenticatedUser.RefreshToken != null)
             {
-
-                var refreshTokenResult = await refreshTokenRepository.Remove(authenticatedUser.RefreshToken);
+                await refreshTokenRepository.Remove(authenticatedUser.RefreshToken);
             }
 
             var accessToken = tokenProvider.GenerateToken(new Dictionary<string, object>() { { "id", authenticatedUser.Id.ToString("N") },
@@ -669,10 +667,10 @@ namespace AdeNote.Infrastructure.Services.Authentication
             var tokenResponse = await refreshTokenRepository.Add(token);
 
             if (!tokenResponse)
-                return ActionTokenResult<UserDTO>.Failed("Failed to login");
+                return ActionResult<UserDTO>.Failed("Failed to login");
 
-            return ActionTokenResult<UserDTO>.SuccessfulOperation(new UserDTO(authenticatedUser.Id, authenticatedUser.FirstName,
-                authenticatedUser.LastName, authenticatedUser.Email, isFirstTimeLogin ? authenticatedUser.RecoveryCode?.Codes : null), accessToken, refreshToken);
+            return ActionResult<UserDTO>.SuccessfulOperation(new UserDTO(authenticatedUser.Id, authenticatedUser.FirstName,
+                authenticatedUser.LastName, authenticatedUser.Email, isFirstTimeLogin ? authenticatedUser.RecoveryCode?.Codes : null, refreshToken, accessToken));
         }
 
         public async Task<ActionResult<string>> GenerateAccessToken(string refreshToken)
@@ -818,30 +816,30 @@ namespace AdeNote.Infrastructure.Services.Authentication
 
         }
 
-        public async Task<ActionTokenResult<UserDTO>> VerifyPasswordlessToken(string token)
+        public async Task<ActionResult<UserDTO>> VerifyPasswordlessToken(string token)
         {
             if (string.IsNullOrEmpty(token) || string.IsNullOrWhiteSpace(token))
             {
-                return ActionTokenResult<UserDTO>.Failed("Invalid token", StatusCodes.Status400BadRequest);
+                return ActionResult<UserDTO>.Failed("Invalid token", StatusCodes.Status400BadRequest);
             }
 
             var claims = tokenProvider.ReadToken(token, false, ClaimTypes.Email);
 
             if (claims.Count == 0 || claims.Count >= 2)
             {
-                return ActionTokenResult<UserDTO>.Failed("Invalid token", StatusCodes.Status400BadRequest);
+                return ActionResult<UserDTO>.Failed("Invalid token", StatusCodes.Status400BadRequest);
             }
 
             var user = await userRepository.GetUserByEmail(claims.GetValueOrDefault(ClaimTypes.Email).ToString());
 
             if (user == null)
             {
-                return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
+                return ActionResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
             }
 
             if (user.LockoutEnabled)
             {
-                return ActionTokenResult<UserDTO>.Failed("Account has been locked. Please contact admin", StatusCodes.Status400BadRequest);
+                return ActionResult<UserDTO>.Failed("Account has been locked. Please contact admin", StatusCodes.Status400BadRequest);
             }
 
             var isFirstTimeLogin = user.RefreshToken == null;
@@ -861,18 +859,19 @@ namespace AdeNote.Infrastructure.Services.Authentication
             var tokenResponse = await refreshTokenRepository.Add(newRefreshToken);
 
             if (!tokenResponse)
-                return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
+                return ActionResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
 
 
-            var authenticatedUser = new UserDTO(user.Id, user.FirstName, user.LastName, user.Email, isFirstTimeLogin ? user.RecoveryCode?.Codes : null);
+            var authenticatedUser = new UserDTO(user.Id, user.FirstName, user.LastName, user.Email, 
+                isFirstTimeLogin ? user.RecoveryCode?.Codes : null, refreshToken, accessToken);
 
-            return ActionTokenResult<UserDTO>.SuccessfulOperation(authenticatedUser, accessToken, refreshToken);
+            return ActionResult<UserDTO>.SuccessfulOperation(authenticatedUser);
         }
 
-        public async Task<ActionTokenResult<UserDTO>> LoginUserByRecoveryCodes(string[] recoveryCodes)
+        public async Task<ActionResult<UserDTO>> LoginUserByRecoveryCodes(string[] recoveryCodes)
         {
             if (recoveryCodes.Length == 0)
-                return ActionTokenResult<UserDTO>.Failed("Invalid recovery codes", StatusCodes.Status400BadRequest);
+                return ActionResult<UserDTO>.Failed("Invalid recovery codes", StatusCodes.Status400BadRequest);
 
             var recoveryCode = string.Join(',', recoveryCodes);
 
@@ -880,7 +879,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
 
             if (currentCode == null)
             {
-                return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
+                return ActionResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
             }
 
             var user = currentCode.User;
@@ -893,11 +892,11 @@ namespace AdeNote.Infrastructure.Services.Authentication
 
             if (!codeResponse)
             {
-                return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
+                return ActionResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
             }
             if (user.LockoutEnabled)
             {
-                return ActionTokenResult<UserDTO>.Failed("Account has been locked. Please contact admin", StatusCodes.Status400BadRequest);
+                return ActionResult<UserDTO>.Failed("Account has been locked. Please contact admin", StatusCodes.Status400BadRequest);
             }
 
             var isFirstTimeLogin = user.RefreshToken == null;
@@ -917,11 +916,11 @@ namespace AdeNote.Infrastructure.Services.Authentication
             var tokenResponse = await refreshTokenRepository.Add(newRefreshToken);
 
             if (!tokenResponse)
-                return ActionTokenResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
+                return ActionResult<UserDTO>.Failed("Failed to login", StatusCodes.Status400BadRequest);
 
-            var authenticatedUser = new UserDTO(user.Id, user.FirstName, user.LastName, user.Email, newRecoveryCode.Codes);
+            var authenticatedUser = new UserDTO(user.Id, user.FirstName, user.LastName, user.Email, newRecoveryCode.Codes,refreshToken, accessToken);
 
-            return ActionTokenResult<UserDTO>.SuccessfulOperation(authenticatedUser, accessToken, refreshToken);
+            return ActionResult<UserDTO>.SuccessfulOperation(authenticatedUser);
 
         }
 

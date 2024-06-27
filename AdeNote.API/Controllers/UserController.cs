@@ -137,7 +137,7 @@ namespace AdeNote.Controllers
         ///             
         /// </remarks>
         /// <param name="phoneNumber">User phone number</param>
-        /// <response code ="200"> Returns if phone number was added/response>
+        /// <response code ="200"> Returns if phone number was added</response>
         /// <response code ="400"> Returns if experiencing client issues</response>
         /// <response code ="500"> Returns if experiencing server issues</response>
         /// <response code ="404"> Returns if parameters not found</response>
