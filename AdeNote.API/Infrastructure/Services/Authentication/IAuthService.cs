@@ -49,7 +49,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
         /// <param name="userId">User id</param>
         /// <param name="email">Email of the user</param>
         /// <returns>Manual key and qr code</returns>
-        Task<ActionResult<AuthenticatorDTO>> SetAuthenticator(Guid userId, string email);
+        Task<ActionResult<AuthenticatorDTO>> SetAuthenticator(Guid userId, string email, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Sets up MFA using sms authentication 

@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Authentication;
@@ -8,9 +7,10 @@ namespace AdeNote.Infrastructure.Middlewares
 {
     public class ExceptionMiddleware
     {
-        public ExceptionMiddleware(RequestDelegate requestDelegate)
+        public ExceptionMiddleware(RequestDelegate requestDelegate, ILoggerFactory loggerFactory)
         {
             _requestDelegate = requestDelegate;       
+            _logger = loggerFactory.CreateLogger<ExceptionMiddleware>();
         }
         /// <summary>
         /// Handles http request
@@ -48,11 +48,11 @@ namespace AdeNote.Infrastructure.Middlewares
                 StatusCode = error.StatusCode,
 
             };
-
             var result = JsonConvert.SerializeObject(responseObject);
 
             context.Response.ContentType = "application/json; charset=utf-8";
             context.Response.StatusCode = error.StatusCode;
+            _logger.LogError("Failed Operation, StatusCode: {StatusCode}, Error:{Message}", error.StatusCode, error.ErrorMessage);
             return context.Response.WriteAsync(result);
         }
 
@@ -79,6 +79,8 @@ namespace AdeNote.Infrastructure.Middlewares
                 return new CustomProblemDetail(exception.Message, StatusCodes.Status500InternalServerError);
             }
         }
+
+        private ILogger<ExceptionMiddleware> _logger {  get; set; }
     }
 }
 

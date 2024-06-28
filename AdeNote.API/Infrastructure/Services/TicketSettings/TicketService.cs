@@ -22,7 +22,7 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
             blobService = _blobService;
         }
 
-        public async Task<ActionResult> CreateTicket(TicketStreamDto newTicket, string email)
+        public async Task<ActionResult> CreateTicket(TicketStreamDto newTicket, string email, CancellationToken cancellationToken)
         {
             if (string.IsNullOrEmpty(email))
                 return ActionResult.Failed("Invalid email", (int)HttpStatusCode.BadRequest);
@@ -39,14 +39,20 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
 
             ticket.Issuer = currentUser.Id;
 
-            var commitStatus = await ticketRepository.Add(ticket);
-
             if (newTicket.Image.Length != 0)
             {
-                var url = await blobService.UploadImage($"T{ticket.Id.ToString()[..4]}", newTicket.Image) ?? $"T{ticket.Id.ToString()[..4]}";
+                cancellationToken.ThrowIfCancellationRequested();
+                var url = await blobService.UploadImage($"T{Guid.NewGuid().ToString()[..4]}", newTicket.Image, cancellationToken) ?? $"T{Guid.NewGuid().ToString()[..4]}";
+
+                if (url != "Success")
+                {
+                    return ActionResult<string>.Failed(url, 400);
+                }
 
                 ticket.ImageUrl = url;
             }
+
+            var commitStatus = await ticketRepository.Add(ticket);
 
             if (!commitStatus)
                 return ActionResult.Failed("Failed to create a ticket");

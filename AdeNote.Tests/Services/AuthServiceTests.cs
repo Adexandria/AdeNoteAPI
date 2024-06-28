@@ -40,13 +40,13 @@ namespace AdeNote.Tests.Services
         public async Task ShouldSetAuthenticatorSuccessfully()
         {
             //Arrange
-            blobService.Setup(s => s.UploadImage(It.IsAny<string>(), It.IsAny<Stream>(),Infrastructure.Utilities.MimeType.png)).ReturnsAsync("test-url");
+            blobService.Setup(s => s.UploadImage(It.IsAny<string>(), It.IsAny<Stream>(),It.IsAny<CancellationToken>(),Infrastructure.Utilities.MimeType.png)).ReturnsAsync("test-url");
             userRepository.Setup(s => s.Update(It.IsAny<User>())).ReturnsAsync(true);
             userRepository.Setup(s => s.GetUser(It.IsAny<Guid>())).ReturnsAsync(new User("first", "lastname", "test@gmail", AuthType.local) { TwoFactorType = 0 });
             mfaService.Setup(s => s.SetupGoogleAuthenticator("Adenote", It.IsAny<string>(), It.IsAny<byte[]>()))
                 .Returns(new Authenticator("SGVsbG8sIFdvcmxkIQ==,SGVsbG8sIFdvcmxkIQ==", "12345555"));
             //Act
-            var response = await authService.SetAuthenticator(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"), "email");
+            var response = await authService.SetAuthenticator(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"), "email", It.IsAny<CancellationToken>());
 
             //Assert
             Assert.That(response.IsSuccessful, Is.True);
@@ -56,14 +56,14 @@ namespace AdeNote.Tests.Services
         public async Task ShouldFailToSetAuthenticator()
         {
             //Arrange
-            blobService.Setup(s => s.UploadImage(It.IsAny<string>(), It.IsAny<Stream>(), Infrastructure.Utilities.MimeType.png)).ReturnsAsync("test-url");
+            blobService.Setup(s => s.UploadImage(It.IsAny<string>(), It.IsAny<Stream>(), It.IsAny<CancellationToken>(), Infrastructure.Utilities.MimeType.png)).ReturnsAsync("test-url");
             userRepository.Setup(s => s.Update(It.IsAny<User>())).ReturnsAsync(false);
             userRepository.Setup(s => s.GetUser(It.IsAny<Guid>())).ReturnsAsync(new User("first", "lastname", "test@gmail", AuthType.local) { TwoFactorType = 0 });
             mfaService.Setup(s => s.SetupGoogleAuthenticator("Adenote", It.IsAny<string>(), It.IsAny<byte[]>()))
                 .Returns(new Authenticator("SGVsbG8sIFdvcmxkIQ==,SGVsbG8sIFdvcmxkIQ==", "12345555"));
 
             //Act
-            var response = await authService.SetAuthenticator(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"), "email");
+            var response = await authService.SetAuthenticator(new Guid("f79cd68f-2aa9-4edc-9427-742109626943"), "email", It.IsAny<CancellationToken>());
 
             //Assert
             Assert.That(response.IsSuccessful, Is.False);
@@ -76,7 +76,7 @@ namespace AdeNote.Tests.Services
         public async Task ShouldFailToSetAuthenticatorIfParametersDoNotExist(Guid userId, string email,string error)
         {
             //Act
-            var response = await authService.SetAuthenticator(userId,email);
+            var response = await authService.SetAuthenticator(userId,email, It.IsAny<CancellationToken>());
 
             //Assert
             Assert.That(response.IsSuccessful, Is.False);

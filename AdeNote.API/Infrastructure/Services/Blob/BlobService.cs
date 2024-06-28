@@ -37,7 +37,7 @@ namespace AdeNote.Infrastructure.Services.Blob
         /// <param name="file">Image</param>
         /// <param name="mimeType">Mime type of file</param>
         /// <returns>a url</returns>
-        public async Task<string> UploadImage(string fileName, Stream file, MimeType mimeType)
+        public async Task<string> UploadImage(string fileName, Stream file, CancellationToken cancellationToken, MimeType mimeType)
         {
             try
             {
@@ -53,8 +53,8 @@ namespace AdeNote.Infrastructure.Services.Blob
             }
             catch (RequestFailedException)
             {
-                fileService.UploadImage(fileName, file, mimeType);
-                return null;
+                return fileService.UploadImage(fileName, file, mimeType);
+               
             }
         }
 
@@ -84,13 +84,13 @@ namespace AdeNote.Infrastructure.Services.Blob
         /// </summary>
         /// <param name="fileUrl">file url</param>
         /// <returns>True if deleted</returns>
-        public async Task<bool> DeleteImage(string fileUrl)
+        public async Task<bool> DeleteImage(string fileUrl, CancellationToken cancellationToken)
         {
             try
             {
                 var storageCredentials = GenerateStorageCredentials();
                 var blobClient = new BlobClient(new Uri(fileUrl), storageCredentials);
-                return await blobClient.DeleteIfExistsAsync();
+                return await blobClient.DeleteIfExistsAsync(cancellationToken: cancellationToken);
             }
             catch (RequestFailedException)
             {
@@ -104,7 +104,7 @@ namespace AdeNote.Infrastructure.Services.Blob
         /// <param name="fileName">file name</param>
         /// <param name="mimeType">mime type of the file</param>
         /// <returns>Html content</returns>
-        public async Task<string> DownloadImage(string fileName, MimeType mimeType)
+        public async Task<string> DownloadImage(string fileName, CancellationToken cancellationToken, MimeType mimeType)
         {
             try
             {
@@ -112,7 +112,7 @@ namespace AdeNote.Infrastructure.Services.Blob
                 var blobUri = GenerateBlobUri(fileName, mimeType);
                 var storageCredentials = GenerateStorageCredentials();
                 var blobClient = new BlobClient(blobUri, storageCredentials);
-                var response = await blobClient.DownloadToAsync(ms);
+                var response = await blobClient.DownloadToAsync(ms,cancellationToken);
                 ms.Position = 0;
                 using var reader = new StreamReader(ms, Encoding.UTF8);
                 var data = reader.ReadToEnd();
@@ -131,7 +131,7 @@ namespace AdeNote.Infrastructure.Services.Blob
         /// <param name="fileName">file name</param>
         /// <param name="mimeType">mime type of the file</param>
         /// <returns>Html content</returns>
-        public async Task<Stream> DownloadStream(string fileName, MimeType mimeType)
+        public async Task<Stream> DownloadStream(string fileName, CancellationToken cancellationToken, MimeType mimeType)
         {
             try
             {
@@ -140,7 +140,7 @@ namespace AdeNote.Infrastructure.Services.Blob
                 var storageCredentials = GenerateStorageCredentials();
                 var blobClient = new BlobClient(blobUri, storageCredentials);
 
-                await blobClient.DownloadToAsync(ms);
+                await blobClient.DownloadToAsync(ms,cancellationToken);
 
                 ms.Position = 0;
                 return ms;

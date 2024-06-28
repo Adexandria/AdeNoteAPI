@@ -18,7 +18,7 @@ namespace AdeNote.Infrastructure.Services.Export
 
 
 
-        public async Task<ActionResult<string>> ExportEntities<T>(string extensionType, string name, IEnumerable<T> entities)
+        public async Task<ActionResult<string>> ExportEntities<T>(string extensionType, string name, IEnumerable<T> entities, CancellationToken cancellationToken)
             where T : class
         {
             var mime = GetMimeType(extensionType);
@@ -32,7 +32,7 @@ namespace AdeNote.Infrastructure.Services.Export
 
             if (mime == MimeType.docx)
             {
-                var template = await _blobService.DownloadStream("AdenoteLetterHead", MimeType.docx);
+                var template = await _blobService.DownloadStream("AdenoteLetterHead", cancellationToken, MimeType.docx);
                 file = _wordService.ExportToWord(name, entities, template);
             }
             else
@@ -40,7 +40,14 @@ namespace AdeNote.Infrastructure.Services.Export
                 file = _excelService.ExportEntities(extensionType, name, entities);
             }
 
-            var url = await _blobService.UploadImage(name, file, mime);
+            cancellationToken.ThrowIfCancellationRequested();
+
+            var url = await _blobService.UploadImage(name, file,cancellationToken ,mime);
+
+            if(url != "Success")
+            {
+                return ActionResult<string>.Failed($"{url}, try {MimeType.docx} format",400);
+            }
 
             return ActionResult<string>.SuccessfulOperation(url);
 

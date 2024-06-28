@@ -65,7 +65,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
         /// <param name="userId">User id</param>
         /// <param name="email">Email of the user</param>
         /// <returns>Manual key and qr code</returns>
-        public async Task<ActionResult<AuthenticatorDTO>> SetAuthenticator(Guid userId, string email)
+        public async Task<ActionResult<AuthenticatorDTO>> SetAuthenticator(Guid userId, string email, CancellationToken cancellationToken)
         {
 
             if (userId == Guid.Empty)
@@ -94,15 +94,22 @@ namespace AdeNote.Infrastructure.Services.Authentication
 
             var imageName = Guid.NewGuid().ToString("N")[^4];
 
-            var url = await blobService.UploadImage($"qrCode{imageName}", memoryStream);
+            cancellationToken.ThrowIfCancellationRequested();
 
-            currentUser.EnableTwoFactor(MFAType.google, url);
+            var imagePath = await blobService.UploadImage($"qrCode{imageName}", memoryStream,cancellationToken);
+
+            if( imagePath != "Success")
+            {
+                return ActionResult<AuthenticatorDTO>.Failed(imagePath, StatusCodes.Status400BadRequest);
+            }
+
+            currentUser.EnableTwoFactor(MFAType.google, imagePath);
 
             var result = await userRepository.Update(currentUser);
             if (!result)
                 return ActionResult<AuthenticatorDTO>.Failed("failed to set up two factor authentication", StatusCodes.Status400BadRequest);
 
-            var authenticatorDto = new AuthenticatorDTO(authenticator.ManualKey, url);
+            var authenticatorDto = new AuthenticatorDTO(authenticator.ManualKey, imagePath);
 
             return ActionResult<AuthenticatorDTO>.SuccessfulOperation(authenticatorDto);
         }

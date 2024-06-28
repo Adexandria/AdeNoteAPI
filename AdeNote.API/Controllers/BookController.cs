@@ -109,13 +109,13 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<BookDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> ExportBooks([Allow("xlsx","xls","csv","docx")]string extensionType, CancellationToken cancellationToken, string sheetName = "Adenote")
+        public async Task<IActionResult> ExportBooks([Allow("Invalid extension type","xlsx","xls","csv","docx")]string extensionType, CancellationToken cancellationToken, string sheetName = "Adenote")
         {
             var bookResponse = await _bookService.GetAll(CurrentUser);
-            if (bookResponse.NotSuccessful)
+            if (!bookResponse.Data.Any())
                 return bookResponse.Response();
 
-            var response =  await _exportService.ExportEntities(extensionType, sheetName,bookResponse.Data);
+            var response =  await _exportService.ExportEntities(extensionType, sheetName,bookResponse.Data,cancellationToken);
             return response.Response();
         }
 

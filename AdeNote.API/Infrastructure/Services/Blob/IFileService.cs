@@ -24,6 +24,6 @@ namespace AdeNote.Infrastructure.Services.Blob
         /// <param name="fileName">Image name</param>
         /// <param name="file">Image</param>
         /// <returns>a url</returns>
-        void UploadImage(string fileName, Stream file, MimeType mimeType = MimeType.png);
+        string UploadImage(string fileName, Stream file, MimeType mimeType = MimeType.png);
     }
 }

@@ -6,7 +6,7 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
     public interface ITicketService
     {
         Task<ActionResult> CreateTicket(TicketStreamDto newTicket,
-           string email);
+           string email, CancellationToken cancellationToken = default);
 
         Task<ActionResult> UpdateTicket(string status,
            Guid adminId,

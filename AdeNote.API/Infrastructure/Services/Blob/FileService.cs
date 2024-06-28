@@ -4,18 +4,23 @@ namespace AdeNote.Infrastructure.Services.Blob
 {
     public class FileService : IFileService
     {
-        public async void UploadImage(string fileName, Stream file, MimeType mimeType = MimeType.png)
+        public string UploadImage(string fileName, Stream file, MimeType mimeType = MimeType.png)
         {
-            using var fileStream = new FileStream($"Template/{fileName}.{mimeType}", FileMode.OpenOrCreate);
+            try
+            {
+                using var fileStream = new FileStream($"Template/{fileName}.{mimeType}", FileMode.OpenOrCreate);
 
-            using var memoryStream = new MemoryStream();
+                var blob = ConvertToBytes(file);
 
-            await file.CopyToAsync(memoryStream);
+                fileStream.Write(blob, 0, blob.Length);
 
-            var blob = memoryStream.ToArray();
-
-            fileStream.Write(blob, 0, blob.Length);
-
+                return "Success";
+            }
+            catch (Exception)
+            {
+                return $"Unable to export file to {mimeType} format";
+            }
+            
         }
 
         public string DownloadImage(string fileName, MimeType mimeType = MimeType.html)
@@ -34,14 +39,27 @@ namespace AdeNote.Infrastructure.Services.Blob
         {
             using var fileStream = new FileStream($"Template/{fileName}.{mimeType}", FileMode.Open);
 
-            var ms = new MemoryStream();
+            var memoryStream = new MemoryStream();
 
-            fileStream.CopyTo(ms);
+            fileStream.CopyTo(memoryStream);
 
-            ms.Position = 0;
+            memoryStream.Position = 0;
 
-            return ms;
+            return memoryStream;
         }
 
+
+        private byte[] ConvertToBytes(Stream stream)
+        {
+            byte[] bytes;
+
+            stream.Position = 0;
+
+            using (var binaryReader = new BinaryReader(stream))
+            {
+                bytes = binaryReader.ReadBytes((int)stream.Length);
+            }
+            return bytes;
+        }
     }
 }
