@@ -74,5 +74,8 @@ var dir_1f978ac47b9de0238fe08f2065b1e45b =
     ] ],
     [ "UserDTO.cs", "UserDTO_8cs.html", [
       [ "UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO" ]
+    ] ],
+    [ "UsersDTO.cs", "UsersDTO_8cs.html", [
+      [ "UsersDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO" ]
     ] ]
 ];

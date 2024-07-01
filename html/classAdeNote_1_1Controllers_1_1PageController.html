@@ -111,53 +111,53 @@ Collaboration diagram for AdeNote.Controllers.PageController:</div>
 <area shape="rect" title="Handles the page management for a particular book." alt="" coords="120,185,308,227"/>
 <area shape="rect" href="classAdeNote_1_1Controllers_1_1BaseController.html" title="A base controller" alt="" coords="5,89,124,115"/>
 <area shape="rect" title=" " alt="" coords="5,5,124,32"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html" title="An interface to interact with the controller" alt="" coords="148,81,381,123"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html" title="An interface to interact with the controller" alt="" coords="148,81,381,123"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a63ae06b7f1ace77fa83bd57f648603f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a63ae06b7f1ace77fa83bd57f648603f7">PageController</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html">IPageService</a> pageService, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html">IUserIdentity</a> userIdentity)</td></tr>
+<tr class="memitem:a63ae06b7f1ace77fa83bd57f648603f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a63ae06b7f1ace77fa83bd57f648603f7">PageController</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html">IPageService</a> pageService, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1IUserIdentity.html">IUserIdentity</a> userIdentity)</td></tr>
 <tr class="memdesc:a63ae06b7f1ace77fa83bd57f648603f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor  <a href="classAdeNote_1_1Controllers_1_1PageController.html#a63ae06b7f1ace77fa83bd57f648603f7">More...</a><br /></td></tr>
 <tr class="separator:a63ae06b7f1ace77fa83bd57f648603f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2ec824762a4cd73de383794e18ce42d"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#ae2ec824762a4cd73de383794e18ce42d">GetAllPages</a> (Guid bookId)</td></tr>
-<tr class="memdesc:ae2ec824762a4cd73de383794e18ce42d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetches all pages in a book  <a href="classAdeNote_1_1Controllers_1_1PageController.html#ae2ec824762a4cd73de383794e18ce42d">More...</a><br /></td></tr>
-<tr class="separator:ae2ec824762a4cd73de383794e18ce42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9fcb5ca8d81b964429ea8e66ab2db96"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#ab9fcb5ca8d81b964429ea8e66ab2db96">GetPage</a> (Guid bookId, Guid pageId)</td></tr>
-<tr class="memdesc:ab9fcb5ca8d81b964429ea8e66ab2db96"><td class="mdescLeft">&#160;</td><td class="mdescRight">fetches a single page in a book  <a href="classAdeNote_1_1Controllers_1_1PageController.html#ab9fcb5ca8d81b964429ea8e66ab2db96">More...</a><br /></td></tr>
-<tr class="separator:ab9fcb5ca8d81b964429ea8e66ab2db96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00bdd8459e3826b3be99eae9a509c2dc"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a00bdd8459e3826b3be99eae9a509c2dc">CreatePage</a> (Guid bookId, <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO.html">PageCreateDTO</a> pageCreate)</td></tr>
-<tr class="memdesc:a00bdd8459e3826b3be99eae9a509c2dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a single page in a book  <a href="classAdeNote_1_1Controllers_1_1PageController.html#a00bdd8459e3826b3be99eae9a509c2dc">More...</a><br /></td></tr>
-<tr class="separator:a00bdd8459e3826b3be99eae9a509c2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a730027769b9579899ce4bee387d9d490"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a730027769b9579899ce4bee387d9d490">AddLabelsToPage</a> (Guid bookId, Guid pageId, List&lt; string &gt; labels)</td></tr>
-<tr class="memdesc:a730027769b9579899ce4bee387d9d490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds labels to a page  <a href="classAdeNote_1_1Controllers_1_1PageController.html#a730027769b9579899ce4bee387d9d490">More...</a><br /></td></tr>
-<tr class="separator:a730027769b9579899ce4bee387d9d490"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38b75f41f108e3b429b8ff1721a139e2"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a38b75f41f108e3b429b8ff1721a139e2">UpdatePage</a> (Guid bookId, Guid pageId, <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO.html">PageUpdateDTO</a> pageUpdate)</td></tr>
-<tr class="memdesc:a38b75f41f108e3b429b8ff1721a139e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates an existing page  <a href="classAdeNote_1_1Controllers_1_1PageController.html#a38b75f41f108e3b429b8ff1721a139e2">More...</a><br /></td></tr>
-<tr class="separator:a38b75f41f108e3b429b8ff1721a139e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada613737fb6fd1fd68ce7471bb05071f"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#ada613737fb6fd1fd68ce7471bb05071f">RemoveAllLabels</a> (Guid bookId, Guid pageId)</td></tr>
-<tr class="memdesc:ada613737fb6fd1fd68ce7471bb05071f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all label from a page  <a href="classAdeNote_1_1Controllers_1_1PageController.html#ada613737fb6fd1fd68ce7471bb05071f">More...</a><br /></td></tr>
-<tr class="separator:ada613737fb6fd1fd68ce7471bb05071f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae32594f99c42b8cd87c566443ad63cb9"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#ae32594f99c42b8cd87c566443ad63cb9">RemoveAllLabels</a> (Guid bookId, Guid pageId, string title)</td></tr>
-<tr class="memdesc:ae32594f99c42b8cd87c566443ad63cb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a single label from a page  <a href="classAdeNote_1_1Controllers_1_1PageController.html#ae32594f99c42b8cd87c566443ad63cb9">More...</a><br /></td></tr>
-<tr class="separator:ae32594f99c42b8cd87c566443ad63cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70171d82a1a1790e832f5aa2fb1cb29a"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a70171d82a1a1790e832f5aa2fb1cb29a">DeletePage</a> (Guid bookId, Guid pageId)</td></tr>
-<tr class="memdesc:a70171d82a1a1790e832f5aa2fb1cb29a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a page froma book  <a href="classAdeNote_1_1Controllers_1_1PageController.html#a70171d82a1a1790e832f5aa2fb1cb29a">More...</a><br /></td></tr>
-<tr class="separator:a70171d82a1a1790e832f5aa2fb1cb29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a605829cd43c240b69d34c1b21c214290"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a605829cd43c240b69d34c1b21c214290">TranslatePage</a> (Guid bookId, Guid pageId, string to)</td></tr>
-<tr class="memdesc:a605829cd43c240b69d34c1b21c214290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translates page to another language  <a href="classAdeNote_1_1Controllers_1_1PageController.html#a605829cd43c240b69d34c1b21c214290">More...</a><br /></td></tr>
-<tr class="separator:a605829cd43c240b69d34c1b21c214290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b6817b9d77e0256a36f0c371b4d0908"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a5b6817b9d77e0256a36f0c371b4d0908">GetAllPages</a> ([ValidGuid(&quot;Invalid book id&quot;)]Guid bookId)</td></tr>
+<tr class="memdesc:a5b6817b9d77e0256a36f0c371b4d0908"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetches all pages in a book  <a href="classAdeNote_1_1Controllers_1_1PageController.html#a5b6817b9d77e0256a36f0c371b4d0908">More...</a><br /></td></tr>
+<tr class="separator:a5b6817b9d77e0256a36f0c371b4d0908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa8fdac292866eaa9bb82e06b49fb12"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a2fa8fdac292866eaa9bb82e06b49fb12">GetPage</a> ([ValidGuid(&quot;Invalid book id&quot;)] Guid bookId, [ValidGuid(&quot;Invalid page id&quot;)] Guid pageId)</td></tr>
+<tr class="memdesc:a2fa8fdac292866eaa9bb82e06b49fb12"><td class="mdescLeft">&#160;</td><td class="mdescRight">fetches a single page in a book  <a href="classAdeNote_1_1Controllers_1_1PageController.html#a2fa8fdac292866eaa9bb82e06b49fb12">More...</a><br /></td></tr>
+<tr class="separator:a2fa8fdac292866eaa9bb82e06b49fb12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a063ab0f8cc6615daa52833f679371754"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a063ab0f8cc6615daa52833f679371754">CreatePage</a> ([ValidGuid(&quot;Invalid book id&quot;)] Guid bookId, <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO.html">PageCreateDTO</a> pageCreate)</td></tr>
+<tr class="memdesc:a063ab0f8cc6615daa52833f679371754"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a single page in a book  <a href="classAdeNote_1_1Controllers_1_1PageController.html#a063ab0f8cc6615daa52833f679371754">More...</a><br /></td></tr>
+<tr class="separator:a063ab0f8cc6615daa52833f679371754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2500abea66297e5e4db61f3136c101d"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#ab2500abea66297e5e4db61f3136c101d">AddLabelsToPage</a> ([ValidGuid(&quot;Invalid book id&quot;)] Guid bookId, [ValidGuid(&quot;Invalid page id&quot;)] Guid pageId, [ValidCollection(&quot;Invalid labels&quot;)]List&lt; string &gt; labels)</td></tr>
+<tr class="memdesc:ab2500abea66297e5e4db61f3136c101d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds labels to a page  <a href="classAdeNote_1_1Controllers_1_1PageController.html#ab2500abea66297e5e4db61f3136c101d">More...</a><br /></td></tr>
+<tr class="separator:ab2500abea66297e5e4db61f3136c101d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89b96b2a7541700b4cb3fb9114649cfb"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a89b96b2a7541700b4cb3fb9114649cfb">UpdatePage</a> ([ValidGuid(&quot;Invalid book id&quot;)] Guid bookId, [ValidGuid(&quot;Invalid page id&quot;)] Guid pageId, <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO.html">PageUpdateDTO</a> pageUpdate)</td></tr>
+<tr class="memdesc:a89b96b2a7541700b4cb3fb9114649cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates an existing page  <a href="classAdeNote_1_1Controllers_1_1PageController.html#a89b96b2a7541700b4cb3fb9114649cfb">More...</a><br /></td></tr>
+<tr class="separator:a89b96b2a7541700b4cb3fb9114649cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79278ad0b093e38310878176ab795604"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a79278ad0b093e38310878176ab795604">RemoveAllLabels</a> ([ValidGuid(&quot;Invalid book id&quot;)] Guid bookId, [ValidGuid(&quot;Invalid page id&quot;)] Guid pageId)</td></tr>
+<tr class="memdesc:a79278ad0b093e38310878176ab795604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all label from a page  <a href="classAdeNote_1_1Controllers_1_1PageController.html#a79278ad0b093e38310878176ab795604">More...</a><br /></td></tr>
+<tr class="separator:a79278ad0b093e38310878176ab795604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59b7c2cc4354a0907d7a33adb551d534"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a59b7c2cc4354a0907d7a33adb551d534">RemoveAllLabels</a> ([ValidGuid(&quot;Invalid book id&quot;)] Guid bookId, [ValidGuid(&quot;Invalid page id&quot;)] Guid pageId, string title)</td></tr>
+<tr class="memdesc:a59b7c2cc4354a0907d7a33adb551d534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a single label from a page  <a href="classAdeNote_1_1Controllers_1_1PageController.html#a59b7c2cc4354a0907d7a33adb551d534">More...</a><br /></td></tr>
+<tr class="separator:a59b7c2cc4354a0907d7a33adb551d534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa563d929f20f509fbc19562b30a211a4"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#aa563d929f20f509fbc19562b30a211a4">DeletePage</a> ([ValidGuid(&quot;Invalid book id&quot;)] Guid bookId, [ValidGuid(&quot;Invalid page id&quot;)] Guid pageId)</td></tr>
+<tr class="memdesc:aa563d929f20f509fbc19562b30a211a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a page froma book  <a href="classAdeNote_1_1Controllers_1_1PageController.html#aa563d929f20f509fbc19562b30a211a4">More...</a><br /></td></tr>
+<tr class="separator:aa563d929f20f509fbc19562b30a211a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c703c289afd5ac16dd4a6e721deb841"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a9c703c289afd5ac16dd4a6e721deb841">TranslatePage</a> ([ValidGuid(&quot;Invalid book id&quot;)] Guid bookId, [ValidGuid(&quot;Invalid page id&quot;)] Guid pageId, [Required]string to, CancellationToken cancellationToken)</td></tr>
+<tr class="memdesc:a9c703c289afd5ac16dd4a6e721deb841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translates page to another language  <a href="classAdeNote_1_1Controllers_1_1PageController.html#a9c703c289afd5ac16dd4a6e721deb841">More...</a><br /></td></tr>
+<tr class="separator:a9c703c289afd5ac16dd4a6e721deb841"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAdeNote_1_1Controllers_1_1BaseController')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html">AdeNote.Controllers.BaseController</a></td></tr>
 <tr class="memitem:a5f361e89da9d1716605fb2c9a0dab893 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html#a5f361e89da9d1716605fb2c9a0dab893">BaseController</a> ()</td></tr>
 <tr class="memdesc:a5f361e89da9d1716605fb2c9a0dab893 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="mdescLeft">&#160;</td><td class="mdescRight">A parameterless constructor  <a href="classAdeNote_1_1Controllers_1_1BaseController.html#a5f361e89da9d1716605fb2c9a0dab893">More...</a><br /></td></tr>
 <tr class="separator:a5f361e89da9d1716605fb2c9a0dab893 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5383b97ea5540b425dd972423b8573d1 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html#a5383b97ea5540b425dd972423b8573d1">BaseController</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html">IUserIdentity</a> userIdentity)</td></tr>
+<tr class="memitem:a5383b97ea5540b425dd972423b8573d1 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html#a5383b97ea5540b425dd972423b8573d1">BaseController</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1IUserIdentity.html">IUserIdentity</a> userIdentity)</td></tr>
 <tr class="memdesc:a5383b97ea5540b425dd972423b8573d1 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor  <a href="classAdeNote_1_1Controllers_1_1BaseController.html#a5383b97ea5540b425dd972423b8573d1">More...</a><br /></td></tr>
 <tr class="separator:a5383b97ea5540b425dd972423b8573d1 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a7b831ca3bb21b0be51bc35e4223914c9"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html">IPageService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a7b831ca3bb21b0be51bc35e4223914c9">_pageService</a></td></tr>
+<tr class="memitem:a7b831ca3bb21b0be51bc35e4223914c9"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html">IPageService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1PageController.html#a7b831ca3bb21b0be51bc35e4223914c9">_pageService</a></td></tr>
 <tr class="separator:a7b831ca3bb21b0be51bc35e4223914c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -174,7 +174,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>Handles the page management for a particular book. </p>
 <p>Supports version 1</p>
 
-<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00021">21</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00023">23</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a63ae06b7f1ace77fa83bd57f648603f7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a63ae06b7f1ace77fa83bd57f648603f7">&#9670;&nbsp;</a></span>PageController()</h2>
@@ -185,13 +185,13 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">AdeNote.Controllers.PageController.PageController </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html">IPageService</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html">IPageService</a>&#160;</td>
           <td class="paramname"><em>pageService</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html">IUserIdentity</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1IUserIdentity.html">IUserIdentity</a>&#160;</td>
           <td class="paramname"><em>userIdentity</em>&#160;</td>
         </tr>
         <tr>
@@ -211,13 +211,13 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00030">30</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00032">32</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a730027769b9579899ce4bee387d9d490"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a730027769b9579899ce4bee387d9d490">&#9670;&nbsp;</a></span>AddLabelsToPage()</h2>
+<a id="ab2500abea66297e5e4db61f3136c101d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2500abea66297e5e4db61f3136c101d">&#9670;&nbsp;</a></span>AddLabelsToPage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,19 +225,19 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.PageController.AddLabelsToPage </td>
           <td>(</td>
-          <td class="paramtype">Guid&#160;</td>
+          <td class="paramtype">[ValidGuid(&quot;Invalid book id&quot;)] Guid&#160;</td>
           <td class="paramname"><em>bookId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Guid&#160;</td>
+          <td class="paramtype">[ValidGuid(&quot;Invalid page id&quot;)] Guid&#160;</td>
           <td class="paramname"><em>pageId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">List&lt; string &gt;&#160;</td>
+          <td class="paramtype">[ValidCollection(&quot;Invalid labels&quot;)] List&lt; string &gt;&#160;</td>
           <td class="paramname"><em>labels</em>&#160;</td>
         </tr>
         <tr>
@@ -265,21 +265,21 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00149">149</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00151">151</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_a730027769b9579899ce4bee387d9d490_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_a730027769b9579899ce4bee387d9d490_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1PageController_a730027769b9579899ce4bee387d9d490_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_a730027769b9579899ce4bee387d9d490_cgraph">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_ab2500abea66297e5e4db61f3136c101d_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_ab2500abea66297e5e4db61f3136c101d_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_ab2500abea66297e5e4db61f3136c101d_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_ab2500abea66297e5e4db61f3136c101d_cgraph">
 <area shape="rect" title="Adds labels to a page" alt="" coords="5,5,207,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#ab970e173dc1fae8223cd3a67ecd52899" title="Adds labels to a page" alt="" coords="255,5,488,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#aa67f930bf60c952afd5f436735f62cef" title="Adds labels to a page" alt="" coords="255,5,519,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a00bdd8459e3826b3be99eae9a509c2dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00bdd8459e3826b3be99eae9a509c2dc">&#9670;&nbsp;</a></span>CreatePage()</h2>
+<a id="a063ab0f8cc6615daa52833f679371754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a063ab0f8cc6615daa52833f679371754">&#9670;&nbsp;</a></span>CreatePage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -287,7 +287,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.PageController.CreatePage </td>
           <td>(</td>
-          <td class="paramtype">Guid&#160;</td>
+          <td class="paramtype">[ValidGuid(&quot;Invalid book id&quot;)] Guid&#160;</td>
           <td class="paramname"><em>bookId</em>, </td>
         </tr>
         <tr>
@@ -319,21 +319,21 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00115">115</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00117">117</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_a00bdd8459e3826b3be99eae9a509c2dc_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_a00bdd8459e3826b3be99eae9a509c2dc_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1PageController_a00bdd8459e3826b3be99eae9a509c2dc_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_a00bdd8459e3826b3be99eae9a509c2dc_cgraph">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_a063ab0f8cc6615daa52833f679371754_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_a063ab0f8cc6615daa52833f679371754_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_a063ab0f8cc6615daa52833f679371754_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_a063ab0f8cc6615daa52833f679371754_cgraph">
 <area shape="rect" title="Creates a single page in a book" alt="" coords="5,5,193,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#a2fcbd64ead6115d7d321bb9e80245a04" title="Adds a new page to a book" alt="" coords="241,5,475,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#ae9bc40760e1425722d4130717d76e371" title="Adds a new page to a book" alt="" coords="241,5,475,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a70171d82a1a1790e832f5aa2fb1cb29a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70171d82a1a1790e832f5aa2fb1cb29a">&#9670;&nbsp;</a></span>DeletePage()</h2>
+<a id="aa563d929f20f509fbc19562b30a211a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa563d929f20f509fbc19562b30a211a4">&#9670;&nbsp;</a></span>DeletePage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -341,13 +341,13 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.PageController.DeletePage </td>
           <td>(</td>
-          <td class="paramtype">Guid&#160;</td>
+          <td class="paramtype">[ValidGuid(&quot;Invalid book id&quot;)] Guid&#160;</td>
           <td class="paramname"><em>bookId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Guid&#160;</td>
+          <td class="paramtype">[ValidGuid(&quot;Invalid page id&quot;)] Guid&#160;</td>
           <td class="paramname"><em>pageId</em>&#160;</td>
         </tr>
         <tr>
@@ -369,21 +369,21 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00270">270</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00273">273</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_a70171d82a1a1790e832f5aa2fb1cb29a_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_a70171d82a1a1790e832f5aa2fb1cb29a_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1PageController_a70171d82a1a1790e832f5aa2fb1cb29a_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_a70171d82a1a1790e832f5aa2fb1cb29a_cgraph">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_aa563d929f20f509fbc19562b30a211a4_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_aa563d929f20f509fbc19562b30a211a4_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_aa563d929f20f509fbc19562b30a211a4_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_aa563d929f20f509fbc19562b30a211a4_cgraph">
 <area shape="rect" title="Removes a page froma book" alt="" coords="5,5,193,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#a54987cc9723fe39eed075064aaad4f1c" title="Removes a particular page" alt="" coords="241,5,475,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#acf58236b74915e24c9d47056351d43d2" title="Removes a particular page" alt="" coords="241,5,492,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ae2ec824762a4cd73de383794e18ce42d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2ec824762a4cd73de383794e18ce42d">&#9670;&nbsp;</a></span>GetAllPages()</h2>
+<a id="a5b6817b9d77e0256a36f0c371b4d0908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b6817b9d77e0256a36f0c371b4d0908">&#9670;&nbsp;</a></span>GetAllPages()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -391,7 +391,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.PageController.GetAllPages </td>
           <td>(</td>
-          <td class="paramtype">Guid&#160;</td>
+          <td class="paramtype">[ValidGuid(&quot;Invalid book id&quot;)] Guid&#160;</td>
           <td class="paramname"><em>bookId</em></td><td>)</td>
           <td></td>
         </tr>
@@ -409,21 +409,21 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>A list of pages</dd></dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00054">54</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00056">56</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_ae2ec824762a4cd73de383794e18ce42d_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_ae2ec824762a4cd73de383794e18ce42d_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1PageController_ae2ec824762a4cd73de383794e18ce42d_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_ae2ec824762a4cd73de383794e18ce42d_cgraph">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_a5b6817b9d77e0256a36f0c371b4d0908_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_a5b6817b9d77e0256a36f0c371b4d0908_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_a5b6817b9d77e0256a36f0c371b4d0908_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_a5b6817b9d77e0256a36f0c371b4d0908_cgraph">
 <area shape="rect" title="Fetches all pages in a book" alt="" coords="5,5,193,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#ae55fcbe5cf4b78adbb156349ff9ec364" title="Gets all pages in a book" alt="" coords="241,5,475,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#af77622099f1a52f1727618aa76f3f870" title="Gets all pages in a book" alt="" coords="241,5,479,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ab9fcb5ca8d81b964429ea8e66ab2db96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9fcb5ca8d81b964429ea8e66ab2db96">&#9670;&nbsp;</a></span>GetPage()</h2>
+<a id="a2fa8fdac292866eaa9bb82e06b49fb12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fa8fdac292866eaa9bb82e06b49fb12">&#9670;&nbsp;</a></span>GetPage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -431,13 +431,13 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.PageController.GetPage </td>
           <td>(</td>
-          <td class="paramtype">Guid&#160;</td>
+          <td class="paramtype">[ValidGuid(&quot;Invalid book id&quot;)] Guid&#160;</td>
           <td class="paramname"><em>bookId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Guid&#160;</td>
+          <td class="paramtype">[ValidGuid(&quot;Invalid page id&quot;)] Guid&#160;</td>
           <td class="paramname"><em>pageId</em>&#160;</td>
         </tr>
         <tr>
@@ -460,21 +460,21 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>A single page</dd></dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00082">82</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00084">84</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_ab9fcb5ca8d81b964429ea8e66ab2db96_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_ab9fcb5ca8d81b964429ea8e66ab2db96_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1PageController_ab9fcb5ca8d81b964429ea8e66ab2db96_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_ab9fcb5ca8d81b964429ea8e66ab2db96_cgraph">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_a2fa8fdac292866eaa9bb82e06b49fb12_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_a2fa8fdac292866eaa9bb82e06b49fb12_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_a2fa8fdac292866eaa9bb82e06b49fb12_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_a2fa8fdac292866eaa9bb82e06b49fb12_cgraph">
 <area shape="rect" title="fetches a single page in a book" alt="" coords="5,5,193,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#a3152a7a9e2da4f40d574ba4165f049dc" title="Get a page by id" alt="" coords="241,5,475,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#ae93554aba136ec10c395a6c13cd6d516" title="Get a page by id" alt="" coords="241,5,491,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ada613737fb6fd1fd68ce7471bb05071f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada613737fb6fd1fd68ce7471bb05071f">&#9670;&nbsp;</a></span>RemoveAllLabels() <span class="overload">[1/2]</span></h2>
+<a id="a79278ad0b093e38310878176ab795604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79278ad0b093e38310878176ab795604">&#9670;&nbsp;</a></span>RemoveAllLabels() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -482,13 +482,13 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.PageController.RemoveAllLabels </td>
           <td>(</td>
-          <td class="paramtype">Guid&#160;</td>
+          <td class="paramtype">[ValidGuid(&quot;Invalid book id&quot;)] Guid&#160;</td>
           <td class="paramname"><em>bookId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Guid&#160;</td>
+          <td class="paramtype">[ValidGuid(&quot;Invalid page id&quot;)] Guid&#160;</td>
           <td class="paramname"><em>pageId</em>&#160;</td>
         </tr>
         <tr>
@@ -510,21 +510,21 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00210">210</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00213">213</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_ada613737fb6fd1fd68ce7471bb05071f_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_ada613737fb6fd1fd68ce7471bb05071f_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1PageController_ada613737fb6fd1fd68ce7471bb05071f_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_ada613737fb6fd1fd68ce7471bb05071f_cgraph">
-<area shape="rect" title="Removes all label from a page" alt="" coords="5,5,208,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#ab0c3b7a21d1e94b3b80308b234a81e6c" title="Removes all labels from a page" alt="" coords="256,5,509,47"/>
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_a79278ad0b093e38310878176ab795604_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_a79278ad0b093e38310878176ab795604_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_a79278ad0b093e38310878176ab795604_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_a79278ad0b093e38310878176ab795604_cgraph">
+<area shape="rect" title="Removes all label from a page" alt="" coords="5,13,208,54"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#ad8c960c2fe3b13b1b5a820c77e0732f0" title="Removes all labels from a page" alt="" coords="256,5,524,61"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ae32594f99c42b8cd87c566443ad63cb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae32594f99c42b8cd87c566443ad63cb9">&#9670;&nbsp;</a></span>RemoveAllLabels() <span class="overload">[2/2]</span></h2>
+<a id="a59b7c2cc4354a0907d7a33adb551d534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59b7c2cc4354a0907d7a33adb551d534">&#9670;&nbsp;</a></span>RemoveAllLabels() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -532,13 +532,13 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.PageController.RemoveAllLabels </td>
           <td>(</td>
-          <td class="paramtype">Guid&#160;</td>
+          <td class="paramtype">[ValidGuid(&quot;Invalid book id&quot;)] Guid&#160;</td>
           <td class="paramname"><em>bookId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Guid&#160;</td>
+          <td class="paramtype">[ValidGuid(&quot;Invalid page id&quot;)] Guid&#160;</td>
           <td class="paramname"><em>pageId</em>, </td>
         </tr>
         <tr>
@@ -567,21 +567,21 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00240">240</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00243">243</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_ae32594f99c42b8cd87c566443ad63cb9_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_ae32594f99c42b8cd87c566443ad63cb9_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1PageController_ae32594f99c42b8cd87c566443ad63cb9_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_ae32594f99c42b8cd87c566443ad63cb9_cgraph">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_a59b7c2cc4354a0907d7a33adb551d534_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_a59b7c2cc4354a0907d7a33adb551d534_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_a59b7c2cc4354a0907d7a33adb551d534_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_a59b7c2cc4354a0907d7a33adb551d534_cgraph">
 <area shape="rect" title="Removes a single label from a page" alt="" coords="5,5,208,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#a337fdb877913e6ee0fa797fb991dd703" title="Removes a particular label from a page" alt="" coords="256,5,489,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#ad1073dd1289af39a362d25eea7fe7646" title="Removes a particular label from a page" alt="" coords="256,5,573,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a605829cd43c240b69d34c1b21c214290"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a605829cd43c240b69d34c1b21c214290">&#9670;&nbsp;</a></span>TranslatePage()</h2>
+<a id="a9c703c289afd5ac16dd4a6e721deb841"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c703c289afd5ac16dd4a6e721deb841">&#9670;&nbsp;</a></span>TranslatePage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -589,20 +589,26 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.PageController.TranslatePage </td>
           <td>(</td>
-          <td class="paramtype">Guid&#160;</td>
+          <td class="paramtype">[ValidGuid(&quot;Invalid book id&quot;)] Guid&#160;</td>
           <td class="paramname"><em>bookId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Guid&#160;</td>
+          <td class="paramtype">[ValidGuid(&quot;Invalid page id&quot;)] Guid&#160;</td>
           <td class="paramname"><em>pageId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>to</em>&#160;</td>
+          <td class="paramtype">[Required] string&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CancellationToken&#160;</td>
+          <td class="paramname"><em>cancellationToken</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -618,27 +624,27 @@ Here is the call graph for this function:</div>
   <table class="params">
     <tr><td class="paramname">bookId</td><td>A book id</td></tr>
     <tr><td class="paramname">pageId</td><td>A page id</td></tr>
+    <tr><td class="paramname">to</td><td>Tranlated language</td></tr>
   </table>
   </dd>
 </dl>
-<p>&lt;param name="to"?&gt;Tranlated language</p>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00302">302</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00305">305</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_a605829cd43c240b69d34c1b21c214290_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_a605829cd43c240b69d34c1b21c214290_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1PageController_a605829cd43c240b69d34c1b21c214290_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_a605829cd43c240b69d34c1b21c214290_cgraph">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_a9c703c289afd5ac16dd4a6e721deb841_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_a9c703c289afd5ac16dd4a6e721deb841_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_a9c703c289afd5ac16dd4a6e721deb841_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_a9c703c289afd5ac16dd4a6e721deb841_cgraph">
 <area shape="rect" title="Translates page to another language" alt="" coords="5,5,193,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#a68b2d5fa34625b2d973059d77ce033ba" title=" " alt="" coords="241,5,475,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#a29f815e76543d608f04d23a7a9dc302e" title=" " alt="" coords="241,5,528,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a38b75f41f108e3b429b8ff1721a139e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38b75f41f108e3b429b8ff1721a139e2">&#9670;&nbsp;</a></span>UpdatePage()</h2>
+<a id="a89b96b2a7541700b4cb3fb9114649cfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89b96b2a7541700b4cb3fb9114649cfb">&#9670;&nbsp;</a></span>UpdatePage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -646,13 +652,13 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.PageController.UpdatePage </td>
           <td>(</td>
-          <td class="paramtype">Guid&#160;</td>
+          <td class="paramtype">[ValidGuid(&quot;Invalid book id&quot;)] Guid&#160;</td>
           <td class="paramname"><em>bookId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Guid&#160;</td>
+          <td class="paramtype">[ValidGuid(&quot;Invalid page id&quot;)] Guid&#160;</td>
           <td class="paramname"><em>pageId</em>, </td>
         </tr>
         <tr>
@@ -685,14 +691,14 @@ Here is the call graph for this function:</div>
 </dl>
 <p>&lt;response code ="200"&gt; Returns if Successful&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00183">183</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00186">186</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_a38b75f41f108e3b429b8ff1721a139e2_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_a38b75f41f108e3b429b8ff1721a139e2_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1PageController_a38b75f41f108e3b429b8ff1721a139e2_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_a38b75f41f108e3b429b8ff1721a139e2_cgraph">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1PageController_a89b96b2a7541700b4cb3fb9114649cfb_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1PageController_a89b96b2a7541700b4cb3fb9114649cfb_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1PageController_a89b96b2a7541700b4cb3fb9114649cfb_cgraph" id="aclassAdeNote_1_1Controllers_1_1PageController_a89b96b2a7541700b4cb3fb9114649cfb_cgraph">
 <area shape="rect" title="Updates an existing page" alt="" coords="5,5,193,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html#a5b83fba99fa29067e304ee2ffaf16480" title="Updates an existing page" alt="" coords="241,5,475,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#ab22d64a4179f24a54e9ffa3aa8830afa" title="Updates an existing page" alt="" coords="241,5,485,47"/>
 </map>
 </div>
 
@@ -709,7 +715,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html">IPageService</a> AdeNote.Controllers.PageController._pageService</td>
+          <td class="memname">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html">IPageService</a> AdeNote.Controllers.PageController._pageService</td>
         </tr>
       </table>
   </td>
@@ -719,7 +725,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00023">23</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageController_8cs_source.html#l00025">25</a> of file <a class="el" href="PageController_8cs_source.html">PageController.cs</a>.</p>
 
 </div>
 </div>

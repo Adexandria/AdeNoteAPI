@@ -1,9 +1,0 @@
-<map id="AdeNote.Controllers.AuthenticationController.LoginByRecoveryCodes" name="AdeNote.Controllers.AuthenticationController.LoginByRecoveryCodes">
-<area shape="rect" id="node1" title="Logins user using recovery codes" alt="" coords="5,169,257,211"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#aaf76f4e77c5e74af2928f3296f7828ed" title="Add data to cookie" alt="" coords="325,5,577,47"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a777010bf07284b344981579b32dbd0ff" title=" " alt="" coords="334,71,567,112"/>
-<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a597da2feeb46e66d1069f097333b6d87" title="Checks if MFA has been enabled for the user using user id." alt="" coords="321,136,580,177"/>
-<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a726c478f3410e8230646323e91c9b3ed" title=" " alt="" coords="305,201,596,243"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a5bc24a38f2a0d984148fd747b4d5c226" title=" " alt="" coords="325,267,577,308"/>
-<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="330,332,571,373"/>
-</map>

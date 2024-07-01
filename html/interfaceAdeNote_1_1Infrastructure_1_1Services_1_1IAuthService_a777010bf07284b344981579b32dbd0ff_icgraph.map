@@ -1,9 +1,0 @@
-<map id="AdeNote.Infrastructure.Services.IAuthService.GenerateMFAToken" name="AdeNote.Infrastructure.Services.IAuthService.GenerateMFAToken">
-<area shape="rect" id="node1" title=" " alt="" coords="624,104,857,145"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a8b5173ea4f80e7cc7b560f45143cbd1f" title="Generates token to removes google or sms authenticator" alt="" coords="305,5,576,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#aa577d9771607968fb833de57507c9ef0" title="Logins user using recovery codes" alt="" coords="315,71,567,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="315,136,567,177"/>
-<area shape="rect" id="node7" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9f9c5c7f9a9a9e13446b3460ad8abf37" title="Logins user using passwordless method" alt="" coords="315,201,567,243"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user" alt="" coords="5,104,257,145"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,169,257,211"/>
-</map>

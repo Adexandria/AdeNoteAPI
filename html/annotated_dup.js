@@ -15,12 +15,20 @@ var annotated_dup =
         [ "NoteDbContext", "classAdeNote_1_1Db_1_1NoteDbContext.html", "classAdeNote_1_1Db_1_1NoteDbContext" ]
       ] ],
       [ "Infrastructure", "namespaceAdeNote_1_1Infrastructure.html", [
+        [ "Exceptions", "namespaceAdeNote_1_1Infrastructure_1_1Exceptions.html", [
+          [ "HealthCheckException", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1HealthCheckException.html", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1HealthCheckException" ]
+        ] ],
         [ "Extension", "namespaceAdeNote_1_1Infrastructure_1_1Extension.html", [
+          [ "DatabaseExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension" ],
           [ "EnumExtensions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1EnumExtensions.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1EnumExtensions" ],
           [ "MappingService", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService" ],
           [ "ResultExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ResultExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ResultExtension" ],
           [ "SwaggerOptions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions" ],
           [ "ValidatorResult", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ValidatorResult.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ValidatorResult" ]
+        ] ],
+        [ "Middlewares", "namespaceAdeNote_1_1Infrastructure_1_1Middlewares.html", [
+          [ "CustomProblemDetail", "classAdeNote_1_1Infrastructure_1_1Middlewares_1_1CustomProblemDetail.html", "classAdeNote_1_1Infrastructure_1_1Middlewares_1_1CustomProblemDetail" ],
+          [ "ExceptionMiddleware", "classAdeNote_1_1Infrastructure_1_1Middlewares_1_1ExceptionMiddleware.html", "classAdeNote_1_1Infrastructure_1_1Middlewares_1_1ExceptionMiddleware" ]
         ] ],
         [ "Repository", "namespaceAdeNote_1_1Infrastructure_1_1Repository.html", [
           [ "BookRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository" ],
@@ -45,74 +53,119 @@ var annotated_dup =
           [ "UserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository" ]
         ] ],
         [ "Services", "namespaceAdeNote_1_1Infrastructure_1_1Services.html", [
-          [ "AuthService", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService" ],
-          [ "BlobService", "classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService" ],
-          [ "BookService", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookService" ],
-          [ "EmailService", "classAdeNote_1_1Infrastructure_1_1Services_1_1EmailService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1EmailService" ],
-          [ "ExcelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService" ],
-          [ "ExportService", "classAdeNote_1_1Infrastructure_1_1Services_1_1ExportService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1ExportService" ],
-          [ "FileService", "classAdeNote_1_1Infrastructure_1_1Services_1_1FileService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1FileService" ],
-          [ "IAuthService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService" ],
-          [ "IBlobService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService" ],
-          [ "IBookService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService" ],
-          [ "IEmailService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService" ],
-          [ "IExcel", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExcel.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExcel" ],
-          [ "IExportService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExportService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExportService" ],
-          [ "IFileService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IFileService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IFileService" ],
-          [ "ILabelService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService" ],
-          [ "INotificationService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService" ],
-          [ "IPageService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService" ],
-          [ "ISmsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService" ],
-          [ "IStatisticsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IStatisticsService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IStatisticsService" ],
-          [ "ITextTranslation", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation" ],
-          [ "ITicketService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITicketService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITicketService" ],
-          [ "IUserService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService" ],
-          [ "IValidatorService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IValidatorService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IValidatorService" ],
-          [ "IWordService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService" ],
-          [ "LabelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService" ],
-          [ "NotificationService", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService" ],
-          [ "PageService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService" ],
-          [ "SmsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService" ],
-          [ "StatisticService", "classAdeNote_1_1Infrastructure_1_1Services_1_1StatisticService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1StatisticService" ],
-          [ "TextTranslation", "classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation" ],
-          [ "TicketService", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketService" ],
-          [ "UserService", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService" ],
-          [ "WordService", "classAdeNote_1_1Infrastructure_1_1Services_1_1WordService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1WordService" ]
+          [ "Authentication", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication.html", [
+            [ "AuthService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService" ],
+            [ "IAuthService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService" ]
+          ] ],
+          [ "Blob", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob.html", [
+            [ "BlobService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService" ],
+            [ "FileService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService" ],
+            [ "IBlobService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService" ],
+            [ "IFileService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IFileService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IFileService" ]
+          ] ],
+          [ "BookSetting", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting.html", [
+            [ "BookService", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService" ],
+            [ "IBookService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1IBookService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1IBookService" ]
+          ] ],
+          [ "EmailSettings", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings.html", [
+            [ "EmailService", "classAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1EmailService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1EmailService" ],
+            [ "IEmailService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1IEmailService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1IEmailService" ]
+          ] ],
+          [ "Excel", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1Excel.html", [
+            [ "ExcelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1ExcelService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1ExcelService" ],
+            [ "IExcel", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1IExcel.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1IExcel" ]
+          ] ],
+          [ "Export", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1Export.html", [
+            [ "ExportService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1ExportService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1ExportService" ],
+            [ "IExportService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1IExportService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1IExportService" ]
+          ] ],
+          [ "LabelSettings", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings.html", [
+            [ "ILabelService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1ILabelService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1ILabelService" ],
+            [ "LabelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService" ]
+          ] ],
+          [ "Notification", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification.html", [
+            [ "INotificationService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1INotificationService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1INotificationService" ],
+            [ "NotificationService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1NotificationService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1NotificationService" ]
+          ] ],
+          [ "PageSettings", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings.html", [
+            [ "IPageService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService" ],
+            [ "PageService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService" ]
+          ] ],
+          [ "SmsSettings", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1SmsSettings.html", [
+            [ "ISmsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1SmsSettings_1_1ISmsService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1SmsSettings_1_1ISmsService" ],
+            [ "SmsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsSettings_1_1SmsService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsSettings_1_1SmsService" ]
+          ] ],
+          [ "Statistics", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1Statistics.html", [
+            [ "IStatisticsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Statistics_1_1IStatisticsService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Statistics_1_1IStatisticsService" ],
+            [ "StatisticService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Statistics_1_1StatisticService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1Statistics_1_1StatisticService" ]
+          ] ],
+          [ "TicketSettings", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings.html", [
+            [ "ITicketService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService" ],
+            [ "TicketService", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService" ]
+          ] ],
+          [ "TranslationAI", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI.html", [
+            [ "ITextTranslation", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1ITextTranslation.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1ITextTranslation" ],
+            [ "TextTranslation", "classAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1TextTranslation.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1TextTranslation" ]
+          ] ],
+          [ "UserSettings", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings.html", [
+            [ "IUserService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1IUserService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1IUserService" ],
+            [ "UserService", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService" ]
+          ] ],
+          [ "Word", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1Word.html", [
+            [ "IWordService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1IWordService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1IWordService" ],
+            [ "WordService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1WordService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1WordService" ]
+          ] ]
         ] ],
         [ "Utilities", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html", [
           [ "AI", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1AI.html", [
             [ "Language", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1Language.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1Language" ],
             [ "TranslateConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1TranslateConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1TranslateConfiguration" ]
           ] ],
+          [ "AuthenticationFilter", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter.html", [
+            [ "DashboardAuthenticationFilter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1DashboardAuthenticationFilter.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1DashboardAuthenticationFilter" ],
+            [ "HangFireUserConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1HangFireUserConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1HangFireUserConfiguration" ]
+          ] ],
+          [ "AuthorisationHandler", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler.html", [
+            [ "RoleRequirement", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirement.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirement" ],
+            [ "RoleRequirementHandler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirementHandler.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirementHandler" ]
+          ] ],
+          [ "EmailSettings", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings.html", [
+            [ "Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings_1_1Email.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings_1_1Email" ],
+            [ "EmailConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings_1_1EmailConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings_1_1EmailConfiguration" ]
+          ] ],
+          [ "ExcelSettings", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1ExcelSettings.html", [
+            [ "ExportEntity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExcelSettings_1_1ExportEntity.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExcelSettings_1_1ExportEntity" ],
+            [ "ImportSheet", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExcelSettings_1_1ImportSheet.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExcelSettings_1_1ImportSheet" ]
+          ] ],
           [ "HealthChecks", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks.html", [
             [ "APIHealthCheck", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1APIHealthCheck.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1APIHealthCheck" ],
             [ "DatabaseHealthCheck", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1DatabaseHealthCheck.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1DatabaseHealthCheck" ]
           ] ],
+          [ "SmsConfig", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig.html", [
+            [ "Sms", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1Sms.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1Sms" ],
+            [ "SmsConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1SmsConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1SmsConfiguration" ]
+          ] ],
+          [ "UserConfiguation", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation.html", [
+            [ "IUserIdentity", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1IUserIdentity.html", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1IUserIdentity" ],
+            [ "UserId", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1UserId.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1UserId" ],
+            [ "UserIdConverter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1UserIdConverter.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1UserIdConverter" ],
+            [ "UserIdentity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1UserIdentity.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1UserIdentity" ]
+          ] ],
           [ "ValidationAttributes", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes.html", [
+            [ "AllowAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1AllowAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1AllowAttribute" ],
             [ "ExpectedAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ExpectedAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ExpectedAttribute" ],
-            [ "PasswordAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1PasswordAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1PasswordAttribute" ]
+            [ "PasswordAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1PasswordAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1PasswordAttribute" ],
+            [ "ValidCollectionAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidCollectionAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidCollectionAttribute" ],
+            [ "ValidDateTimeAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidDateTimeAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidDateTimeAttribute" ],
+            [ "ValidGuidAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidGuidAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidGuidAttribute" ],
+            [ "ValidIntAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidIntAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidIntAttribute" ],
+            [ "ValidObjectAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidObjectAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidObjectAttribute" ]
           ] ],
           [ "ActionResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult" ],
-          [ "ActionTokenResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult" ],
           [ "PaginatedResponse", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse" ],
           [ "BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration" ],
-          [ "DashboardAuthenticationFilter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter" ],
-          [ "DatabaseExtension", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DatabaseExtension.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DatabaseExtension" ],
           [ "DefaultConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration" ],
-          [ "Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email" ],
-          [ "EmailConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration" ],
-          [ "EntityDoc", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc" ],
-          [ "ExportEntity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExportEntity.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExportEntity" ],
-          [ "HangFireUserConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HangFireUserConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HangFireUserConfiguration" ],
-          [ "ImportSheet", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet" ],
-          [ "IUserIdentity", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity" ],
-          [ "RoleRequirement", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirement.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirement" ],
-          [ "RoleRequirementHandler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirementHandler.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirementHandler" ],
-          [ "Sms", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms" ],
-          [ "SmsConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfiguration" ],
-          [ "UserId", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserId.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserId" ],
-          [ "UserIdConverter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdConverter.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdConverter" ],
-          [ "UserIdentity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdentity.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdentity" ]
+          [ "EntityDoc", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc" ]
         ] ]
       ] ],
       [ "Migrations", "namespaceAdeNote_1_1Migrations.html", [
@@ -155,7 +208,8 @@ var annotated_dup =
           [ "TicketStatusDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStatusDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStatusDto" ],
           [ "TicketStreamDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto" ],
           [ "TranslationDto", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto" ],
-          [ "UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO" ]
+          [ "UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO" ],
+          [ "UsersDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO" ]
         ] ],
         [ "BaseClass", "classAdeNote_1_1Models_1_1BaseClass.html", "classAdeNote_1_1Models_1_1BaseClass" ],
         [ "Book", "classAdeNote_1_1Models_1_1Book.html", "classAdeNote_1_1Models_1_1Book" ],

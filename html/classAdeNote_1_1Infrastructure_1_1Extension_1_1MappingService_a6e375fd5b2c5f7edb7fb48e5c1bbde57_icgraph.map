@@ -1,4 +1,4 @@
 <map id="AdeNote.Infrastructure.Extension.MappingService.BookConfig" name="AdeNote.Infrastructure.Extension.MappingService.BookConfig">
 <area shape="rect" id="node1" title="Maps from book entity to book dto" alt="" coords="287,5,529,47"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#ad0a361099dcb26981ae2e7cfac523b91" title="Get all books" alt="" coords="5,5,239,47"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a70a77b72e449bc1c9ff03741737f30db" title="Get all books" alt="" coords="5,5,239,47"/>
 </map>

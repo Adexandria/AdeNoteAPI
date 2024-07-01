@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AdeNote API: AdeNote.API/Infrastructure/Services/IWordService.cs Source File</title>
+<title>AdeNote API: AdeNote.API/Infrastructure/Services/Word/IWordService.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -86,25 +86,23 @@ $(document).ready(function(){initNavTree('IWordService_8cs_source.html',''); ini
 <div class="title">IWordService.cs</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="IWordService_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Services.html">AdeNote.Infrastructure.Services</a></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService.html">    5</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService.html">IWordService</a></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService.html#a3a61851733085d123aded2c8c19f43c7">    7</a></span>&#160;        Stream <a class="code" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService.html#a3a61851733085d123aded2c8c19f43c7">ExportToWord&lt;T&gt;</a>(<span class="keywordtype">string</span> name, IEnumerable&lt;T&gt; entities, Stream <span class="keyword">template</span>)</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;            where T : <span class="keyword">class</span>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    }</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
-<div class="ttc" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService_html"><div class="ttname"><a href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService.html">AdeNote.Infrastructure.Services.IWordService</a></div><div class="ttdef"><b>Definition:</b> <a href="IWordService_8cs_source.html#l00005">IWordService.cs:6</a></div></div>
-<div class="ttc" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService_html_a3a61851733085d123aded2c8c19f43c7"><div class="ttname"><a href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService.html#a3a61851733085d123aded2c8c19f43c7">AdeNote.Infrastructure.Services.IWordService.ExportToWord&lt; T &gt;</a></div><div class="ttdeci">Stream ExportToWord&lt; T &gt;(string name, IEnumerable&lt; T &gt; entities, Stream template)</div></div>
-<div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_1_1Services_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure_1_1Services.html">AdeNote.Infrastructure.Services</a></div><div class="ttdef"><b>Definition:</b> <a href="AuthService_8cs_source.html#l00009">AuthService.cs:10</a></div></div>
+<a href="IWordService_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespaceAdeNote_1_1Infrastructure_1_1Services_1_1Word.html">    1</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Services_1_1Word.html">AdeNote.Infrastructure.Services.Word</a></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1IWordService.html">    3</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1IWordService.html">IWordService</a></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    {</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1IWordService.html#a48dce79b6d10402878590bef317aabbe">    5</a></span>&#160;        Stream <a class="code" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1IWordService.html#a48dce79b6d10402878590bef317aabbe">ExportToWord&lt;T&gt;</a>(<span class="keywordtype">string</span> name, IEnumerable&lt;T&gt; entities, Stream <span class="keyword">template</span>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;            where T : <span class="keyword">class</span>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    }</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
+<div class="ttc" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1IWordService_html"><div class="ttname"><a href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1IWordService.html">AdeNote.Infrastructure.Services.Word.IWordService</a></div><div class="ttdef"><b>Definition:</b> <a href="IWordService_8cs_source.html#l00003">IWordService.cs:4</a></div></div>
+<div class="ttc" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1IWordService_html_a48dce79b6d10402878590bef317aabbe"><div class="ttname"><a href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1IWordService.html#a48dce79b6d10402878590bef317aabbe">AdeNote.Infrastructure.Services.Word.IWordService.ExportToWord&lt; T &gt;</a></div><div class="ttdeci">Stream ExportToWord&lt; T &gt;(string name, IEnumerable&lt; T &gt; entities, Stream template)</div></div>
+<div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_1_1Services_1_1Word_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure_1_1Services_1_1Word.html">AdeNote.Infrastructure.Services.Word</a></div><div class="ttdef"><b>Definition:</b> <a href="IWordService_8cs_source.html#l00001">IWordService.cs:2</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_1d0334f32218fb7912a97d4dd0458d9a.html">AdeNote.API</a></li><li class="navelem"><a class="el" href="dir_b71eec9eca2bbdf66529551c49f21604.html">Infrastructure</a></li><li class="navelem"><a class="el" href="dir_0d72d01b4b92b0b540f6c2fc94b6812e.html">Services</a></li><li class="navelem"><a class="el" href="IWordService_8cs.html">IWordService.cs</a></li>
+    <li class="navelem"><a class="el" href="dir_1d0334f32218fb7912a97d4dd0458d9a.html">AdeNote.API</a></li><li class="navelem"><a class="el" href="dir_b71eec9eca2bbdf66529551c49f21604.html">Infrastructure</a></li><li class="navelem"><a class="el" href="dir_0d72d01b4b92b0b540f6c2fc94b6812e.html">Services</a></li><li class="navelem"><a class="el" href="dir_3e5761ab79812456c69a10864abf2ff2.html">Word</a></li><li class="navelem"><a class="el" href="IWordService_8cs.html">IWordService.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

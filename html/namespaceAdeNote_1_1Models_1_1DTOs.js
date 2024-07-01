@@ -24,5 +24,6 @@ var namespaceAdeNote_1_1Models_1_1DTOs =
     [ "TicketStatusDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStatusDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStatusDto" ],
     [ "TicketStreamDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto" ],
     [ "TranslationDto", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto" ],
-    [ "UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO" ]
+    [ "UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO" ],
+    [ "UsersDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO" ]
 ];

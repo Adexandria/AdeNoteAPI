@@ -1,7 +1,0 @@
-<map id="AdeNote.Infrastructure.Services.AuthService.SignUser" name="AdeNote.Infrastructure.Services.AuthService.SignUser">
-<area shape="rect" id="node1" title=" " alt="" coords="5,104,239,145"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#af7cfac5b470f7e8886c0335122bdd817" title="Saves a new entity" alt="" coords="287,5,533,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="295,71,525,112"/>
-<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a8325a5a7a398ece0bf109379613d9bd4" title=" " alt="" coords="287,136,533,177"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="289,201,531,243"/>
-</map>

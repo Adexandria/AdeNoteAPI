@@ -1,13 +1,13 @@
 <map id="AdeNote.Infrastructure.Repository.IRepository.Update" name="AdeNote.Infrastructure.Repository.IRepository.Update">
-<area shape="rect" id="node1" title="Updates an existing object" alt="" coords="296,300,543,341"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a372c9329dad519fa97967996fce98a29" title=" " alt="" coords="10,5,243,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a7859b04addc0239dc19e7f2c26948c65" title="Disables Multi factor authentication for a particular user" alt="" coords="10,71,243,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#abc473178a62350e4bba60c5dd5d8aec9" title=" " alt="" coords="10,136,243,177"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a17fd9d9222dccac856699707c0338f78" title="Revokes existing refresh token" alt="" coords="7,201,246,243"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ab3d8cce57115793a8568081c7ebec059" title="Sets up MFA using google authenticator app" alt="" coords="10,267,243,308"/>
-<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#ade8c2ac4d2e33a21d0874f275df7992e" title="Sets phone number verification" alt="" coords="10,332,243,373"/>
-<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a9c23471931d83f34211055e94d40264d" title="Sets up MFA using sms authentication" alt="" coords="6,397,247,439"/>
-<area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketService.html#af8a8f2ba6fc2a676656b194e5eae9763" title=" " alt="" coords="10,463,243,504"/>
-<area shape="rect" id="node10" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html#a61abb1c47f09a5e85f4fec0aa211bbb8" title=" " alt="" coords="5,528,248,569"/>
-<area shape="rect" id="node11" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#adc3b060ec80b625a45eaece17c3539d0" title="Sets up phone number" alt="" coords="10,593,243,635"/>
+<area shape="rect" id="node1" title="Updates an existing object" alt="" coords="393,331,640,372"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a1973595c9a3167299cdddd294a4faf0a" title=" " alt="" coords="30,5,321,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a19d640d50cc2fc1f1bddecc2202d6d9e" title="Disables Multi factor authentication for a particular user" alt="" coords="49,71,301,127"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html#a587045101b47bee1d9e46ad50b4784fe" title=" " alt="" coords="46,151,305,207"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a231467f6c641b3d641221966f7e73b39" title="Revokes existing refresh token" alt="" coords="6,232,345,273"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#acbe3cd3f8622a1f358b1941b50fc1baa" title="Sets up MFA using google authenticator app" alt="" coords="19,297,331,339"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#aaa425eea88ef45788924097c2fdc480f" title="Sets phone number verification" alt="" coords="17,363,333,404"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a10e31c72b6362a2bdf7c27f5b5ed3a00" title="Sets up MFA using sms authentication" alt="" coords="5,428,345,469"/>
+<area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a32fc1c102db2d8ab9d0d04cd3b5d8b86" title=" " alt="" coords="28,493,323,535"/>
+<area shape="rect" id="node10" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html#ad3466ddf6e724f440824dc78ec7c6917" title=" " alt="" coords="41,559,309,615"/>
+<area shape="rect" id="node11" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a7c838f7c258b7f55827b0c48bc6b379c" title="Sets up phone number" alt="" coords="9,640,341,681"/>
 </map>

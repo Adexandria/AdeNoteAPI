@@ -1,4 +1,0 @@
-<map id="AdeNote.Infrastructure.Services.IAuthService.DisableUserMFA" name="AdeNote.Infrastructure.Services.IAuthService.DisableUserMFA">
-<area shape="rect" id="node1" title="Disables authentication for a user" alt="" coords="305,5,539,47"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a2a42a287d029a6ed05c970bfc5b3cb88" title="Removes google or sms authenticator" alt="" coords="5,5,257,47"/>
-</map>

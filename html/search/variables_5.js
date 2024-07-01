@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['emailconfig_1415',['emailConfig',['../classAdeNote_1_1Infrastructure_1_1Services_1_1EmailService.html#af1291e7259b44d93b1b7dbf3f1cd0a91',1,'AdeNote::Infrastructure::Services::EmailService']]]
+  ['emailconfig_1518',['emailConfig',['../classAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1EmailService.html#a7a332cb802ed5fe5dc67a7021a848e75',1,'AdeNote::Infrastructure::Services::EmailSettings::EmailService']]]
 ];

@@ -1,11 +1,11 @@
 <map id="AdeNote.Infrastructure.Repository.IRepository.Add" name="AdeNote.Infrastructure.Repository.IRepository.Add">
-<area shape="rect" id="node1" title="Saves a new entity" alt="" coords="340,235,587,276"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#adf0cd7e7cf1020375687ff71625e3d9c" title="Adds a new page to a book" alt="" coords="32,5,265,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html#a9f61c6f1c39f12304640cb6441a2c8e3" title="Adds new label" alt="" coords="32,71,265,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketService.html#a4f37455ec8963805339d423bfabdaf32" title=" " alt="" coords="32,136,265,177"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a567badcdb3891ed981e30fa859bb4e57" title=" " alt="" coords="16,201,281,243"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a3bd7b05400162bb100bfa9f9872d425f" title=" " alt="" coords="32,267,265,308"/>
-<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a99409ed2d3165412f8dd6b0181d49345" title=" " alt="" coords="5,332,292,373"/>
-<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#aa247a2a76c980363f6647cf09786d192" title=" " alt="" coords="32,397,265,439"/>
-<area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a910b406a1cf910a11a2dd1e8ec01425f" title=" " alt="" coords="16,463,281,504"/>
+<area shape="rect" id="node1" title="Saves a new entity" alt="" coords="417,247,664,288"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#acf8e3ff932a90b07c2d820e5084fc6a9" title="Adds a new page to a book" alt="" coords="71,5,304,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a827a75ca62f2c6c2173e922fec77cf81" title="Adds new label" alt="" coords="71,71,304,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a07d99b135390bfc450eb3cef6c079939" title=" " alt="" coords="42,136,333,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a9cfadde31812d4dbfe59a7a7529f0d04" title=" " alt="" coords="56,202,319,258"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a2dbac0dc61d3924b102383a9af80fb82" title=" " alt="" coords="53,283,321,324"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a811177a417d7c00208466e7186c762a9" title=" " alt="" coords="53,349,321,405"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#ac2faafb896337c6592083798c6a3c610" title=" " alt="" coords="57,429,318,471"/>
+<area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a13062f2ff2f6d75b4b03954bf8354950" title=" " alt="" coords="5,495,369,536"/>
 </map>

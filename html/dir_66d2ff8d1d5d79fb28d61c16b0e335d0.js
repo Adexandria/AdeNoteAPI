@@ -1,5 +1,8 @@
 var dir_66d2ff8d1d5d79fb28d61c16b0e335d0 =
 [
+    [ "DatabaseExtension.cs", "DatabaseExtension_8cs.html", [
+      [ "DatabaseExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension" ]
+    ] ],
     [ "EnumExtensions.cs", "EnumExtensions_8cs.html", [
       [ "EnumExtensions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1EnumExtensions.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1EnumExtensions" ]
     ] ],

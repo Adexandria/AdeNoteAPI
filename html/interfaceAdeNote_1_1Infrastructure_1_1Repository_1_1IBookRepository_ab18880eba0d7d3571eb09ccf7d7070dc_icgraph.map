@@ -1,13 +1,13 @@
 <map id="AdeNote.Infrastructure.Repository.IBookRepository.GetAsync" name="AdeNote.Infrastructure.Repository.IBookRepository.GetAsync">
-<area shape="rect" id="node1" title="Get a particular book that belongs to a user" alt="" coords="303,300,549,341"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#adf0cd7e7cf1020375687ff71625e3d9c" title="Adds a new page to a book" alt="" coords="13,5,247,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#abf09a31621901923997d15a1fc293d1b" title="Adds labels to a page" alt="" coords="13,71,247,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#a4a39e3e1655bae5b6d826c996cbfbf54" title="Get book by id" alt="" coords="13,136,247,177"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#a34e8a74cd49c072981876f80509b7019" title="Deletes an existing book" alt="" coords="13,201,247,243"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a89eb05e7a610ce4b752bc8ce7ba72257" title="Removes a particular page" alt="" coords="13,267,247,308"/>
-<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#ab59d69b440d5472b6a1eda53a8c1c311" title="Removes all labels from a page" alt="" coords="5,332,255,373"/>
-<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#aad077b7f369d3f503d4a4d603867410f" title="Removes a particular label from a page" alt="" coords="13,397,247,439"/>
-<area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a7b8959a9d6f1d10503e62660315e16f0" title=" " alt="" coords="13,463,247,504"/>
-<area shape="rect" id="node10" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html#ae3e9a2095bdc23aa657f024473bfb434" title="Updates an existing book" alt="" coords="13,528,247,569"/>
-<area shape="rect" id="node11" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a808f63b17b96a3eb2a6ded93ae78de91" title="Updates an existing page" alt="" coords="13,593,247,635"/>
+<area shape="rect" id="node1" title="Get a particular book that belongs to a user" alt="" coords="367,304,613,345"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#acf8e3ff932a90b07c2d820e5084fc6a9" title="Adds a new page to a book" alt="" coords="45,5,279,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a8e2b0177a745a904b2efb05992589dba" title="Adds labels to a page" alt="" coords="32,71,292,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a41b68bf14e0a3a5c8e42cff968254469" title="Get book by id" alt="" coords="41,136,283,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#acb860bb5d10ed2d7df3c431ae9851a62" title="Deletes an existing book" alt="" coords="40,201,284,243"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a9eda296d25b2515b4f99ba303e2b215f" title="Removes a particular page" alt="" coords="39,267,285,308"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a3dd54d63edc37b4c680c502050919aca" title="Removes all labels from a page" alt="" coords="30,333,294,389"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#ad900f42930477e0f4326f07472b856d6" title="Removes a particular label from a page" alt="" coords="5,413,319,455"/>
+<area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#aac702f08ed1cec86f13bea5f0296deeb" title=" " alt="" coords="21,479,303,520"/>
+<area shape="rect" id="node10" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a98346b3abdf205b35bf037a7c33cbacf" title="Updates an existing book" alt="" coords="43,544,281,585"/>
+<area shape="rect" id="node11" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a4cc858090bc6da9facb215f15b2c0841" title="Updates an existing page" alt="" coords="42,609,282,651"/>
 </map>

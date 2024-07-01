@@ -1,6 +1,0 @@
-<map id="AdeNote.Infrastructure.Services.AuthService.GenerateAccessToken" name="AdeNote.Infrastructure.Services.AuthService.GenerateAccessToken">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,252,112"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="309,5,538,47"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a2f9c93cf4ef3a74b15a0bf2b71cd21ad" title="Get existings of a user" alt="" coords="300,71,547,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="303,136,544,177"/>
-</map>

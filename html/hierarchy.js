@@ -1,13 +1,11 @@
 var hierarchy =
 [
     [ "ActionResult", null, [
-      [ "AdeNote.Infrastructure.Utilities.ActionResult< T >", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html", [
-        [ "AdeNote.Infrastructure.Utilities.ActionTokenResult< T >", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionTokenResult.html", null ]
-      ] ]
+      [ "AdeNote.Infrastructure.Utilities.ActionResult< T >", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html", null ]
     ] ],
     [ "AdeNote.Models.DTOs.AuthenticatorDTO", "classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html", null ],
     [ "AuthorizationHandler", null, [
-      [ "AdeNote.Infrastructure.Utilities.RoleRequirementHandler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirementHandler.html", null ]
+      [ "AdeNote.Infrastructure.Utilities.AuthorisationHandler.RoleRequirementHandler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirementHandler.html", null ]
     ] ],
     [ "AdeNote.Models.BaseEntity", "classAdeNote_1_1Models_1_1BaseEntity.html", [
       [ "AdeNote.Models.BaseClass", "classAdeNote_1_1Models_1_1BaseClass.html", [
@@ -42,51 +40,56 @@ var hierarchy =
     ] ],
     [ "AdeNote.Models.DTOs.CreateNoteDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO.html", null ],
     [ "AdeNote.Models.DTOs.CreateUserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO.html", null ],
-    [ "AdeNote.Infrastructure.Utilities.DatabaseExtension", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DatabaseExtension.html", null ],
+    [ "AdeNote.Infrastructure.Middlewares.CustomProblemDetail", "classAdeNote_1_1Infrastructure_1_1Middlewares_1_1CustomProblemDetail.html", null ],
+    [ "AdeNote.Infrastructure.Extension.DatabaseExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension.html", null ],
     [ "DbContext", null, [
       [ "AdeNote.Db.NoteDbContext", "classAdeNote_1_1Db_1_1NoteDbContext.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Utilities.DefaultConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration.html", null ],
     [ "AdeNote.Models.DTOs.DetailsDTO", "classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO.html", null ],
-    [ "AdeNote.Infrastructure.Utilities.Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Email.html", null ],
-    [ "AdeNote.Infrastructure.Utilities.EmailConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailConfiguration.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.EmailSettings.Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings_1_1Email.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.EmailSettings.EmailConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings_1_1EmailConfiguration.html", null ],
     [ "AdeNote.Infrastructure.Extension.EnumExtensions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1EnumExtensions.html", null ],
-    [ "AdeNote.Infrastructure.Utilities.HangFireUserConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HangFireUserConfiguration.html", null ],
+    [ "Exception", null, [
+      [ "AdeNote.Infrastructure.Exceptions.HealthCheckException", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1HealthCheckException.html", null ]
+    ] ],
+    [ "AdeNote.Infrastructure.Middlewares.ExceptionMiddleware", "classAdeNote_1_1Infrastructure_1_1Middlewares_1_1ExceptionMiddleware.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.AuthenticationFilter.HangFireUserConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1HangFireUserConfiguration.html", null ],
     [ "IApplicationUser", null, [
       [ "AdeNote.Models.User", "classAdeNote_1_1Models_1_1User.html", null ]
     ] ],
     [ "IAuthorizationRequirement", null, [
-      [ "AdeNote.Infrastructure.Utilities.RoleRequirement", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirement.html", null ]
+      [ "AdeNote.Infrastructure.Utilities.AuthorisationHandler.RoleRequirement", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirement.html", null ]
     ] ],
-    [ "AdeNote.Infrastructure.Services.IAuthService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html", [
-      [ "AdeNote.Infrastructure.Services.AuthService", "classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html", null ]
+    [ "AdeNote.Infrastructure.Services.Authentication.IAuthService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html", [
+      [ "AdeNote.Infrastructure.Services.Authentication.AuthService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html", null ]
     ] ],
-    [ "AdeNote.Infrastructure.Services.IBlobService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html", [
-      [ "AdeNote.Infrastructure.Services.BlobService", "classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html", null ]
+    [ "AdeNote.Infrastructure.Services.Blob.IBlobService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html", [
+      [ "AdeNote.Infrastructure.Services.Blob.BlobService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html", null ]
     ] ],
-    [ "AdeNote.Infrastructure.Services.IBookService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html", [
-      [ "AdeNote.Infrastructure.Services.BookService", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html", null ]
+    [ "AdeNote.Infrastructure.Services.BookSetting.IBookService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1IBookService.html", [
+      [ "AdeNote.Infrastructure.Services.BookSetting.BookService", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html", null ]
     ] ],
     [ "IConfigureNamedOptions", null, [
       [ "AdeNote.Infrastructure.Extension.SwaggerOptions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html", null ]
     ] ],
     [ "IDashboardAuthorizationFilter", null, [
-      [ "AdeNote.Infrastructure.Utilities.DashboardAuthenticationFilter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter.html", null ]
+      [ "AdeNote.Infrastructure.Utilities.AuthenticationFilter.DashboardAuthenticationFilter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1DashboardAuthenticationFilter.html", null ]
     ] ],
-    [ "AdeNote.Infrastructure.Services.IEmailService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html", [
-      [ "AdeNote.Infrastructure.Services.EmailService", "classAdeNote_1_1Infrastructure_1_1Services_1_1EmailService.html", null ]
+    [ "AdeNote.Infrastructure.Services.EmailSettings.IEmailService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1IEmailService.html", [
+      [ "AdeNote.Infrastructure.Services.EmailSettings.EmailService", "classAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1EmailService.html", null ]
     ] ],
     [ "IEntityDoc", null, [
       [ "AdeNote.Infrastructure.Utilities.EntityDoc< T >", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc.html", null ]
     ] ],
-    [ "AdeNote.Infrastructure.Services.IExcel", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExcel.html", [
-      [ "AdeNote.Infrastructure.Services.ExcelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html", null ]
+    [ "AdeNote.Infrastructure.Services.Excel.IExcel", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1IExcel.html", [
+      [ "AdeNote.Infrastructure.Services.Excel.ExcelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1ExcelService.html", null ]
     ] ],
-    [ "AdeNote.Infrastructure.Services.IExportService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExportService.html", [
-      [ "AdeNote.Infrastructure.Services.ExportService", "classAdeNote_1_1Infrastructure_1_1Services_1_1ExportService.html", null ]
+    [ "AdeNote.Infrastructure.Services.Export.IExportService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1IExportService.html", [
+      [ "AdeNote.Infrastructure.Services.Export.ExportService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1ExportService.html", null ]
     ] ],
-    [ "AdeNote.Infrastructure.Services.IFileService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IFileService.html", [
-      [ "AdeNote.Infrastructure.Services.FileService", "classAdeNote_1_1Infrastructure_1_1Services_1_1FileService.html", null ]
+    [ "AdeNote.Infrastructure.Services.Blob.IFileService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IFileService.html", [
+      [ "AdeNote.Infrastructure.Services.Blob.FileService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html", null ]
     ] ],
     [ "IHealthCheck", null, [
       [ "AdeNote.Infrastructure.Utilities.HealthChecks.APIHealthCheck", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1APIHealthCheck.html", null ],
@@ -95,15 +98,15 @@ var hierarchy =
     [ "AdeNote.Infrastructure.Repository.ILabelPageRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html", [
       [ "AdeNote.Infrastructure.Repository.LabelPageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html", null ]
     ] ],
-    [ "AdeNote.Infrastructure.Services.ILabelService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html", [
-      [ "AdeNote.Infrastructure.Services.LabelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html", null ]
+    [ "AdeNote.Infrastructure.Services.LabelSettings.ILabelService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1ILabelService.html", [
+      [ "AdeNote.Infrastructure.Services.LabelSettings.LabelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html", null ]
     ] ],
     [ "AdeNote.Models.DTOs.ImportBookDto", "classAdeNote_1_1Models_1_1DTOs_1_1ImportBookDto.html", null ],
-    [ "AdeNote.Infrastructure.Services.INotificationService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html", [
-      [ "AdeNote.Infrastructure.Services.NotificationService", "classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html", null ]
+    [ "AdeNote.Infrastructure.Services.Notification.INotificationService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1INotificationService.html", [
+      [ "AdeNote.Infrastructure.Services.Notification.NotificationService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1NotificationService.html", null ]
     ] ],
-    [ "AdeNote.Infrastructure.Services.IPageService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html", [
-      [ "AdeNote.Infrastructure.Services.PageService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html", null ]
+    [ "AdeNote.Infrastructure.Services.PageSettings.IPageService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html", [
+      [ "AdeNote.Infrastructure.Services.PageSettings.PageService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html", null ]
     ] ],
     [ "IRefreshToken", null, [
       [ "AdeNote.Models.RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", null ]
@@ -150,35 +153,34 @@ var hierarchy =
       ] ]
     ] ],
     [ "ISheetExport", null, [
-      [ "AdeNote.Infrastructure.Utilities.ExportEntity< T >", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExportEntity.html", null ]
+      [ "AdeNote.Infrastructure.Utilities.ExcelSettings.ExportEntity< T >", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExcelSettings_1_1ExportEntity.html", null ]
     ] ],
     [ "ISheetImport", null, [
-      [ "AdeNote.Infrastructure.Utilities.ImportSheet", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ImportSheet.html", null ]
+      [ "AdeNote.Infrastructure.Utilities.ExcelSettings.ImportSheet", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExcelSettings_1_1ImportSheet.html", null ]
     ] ],
-    [ "AdeNote.Infrastructure.Services.ISmsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html", [
-      [ "AdeNote.Infrastructure.Services.SmsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html", null ]
+    [ "AdeNote.Infrastructure.Services.SmsSettings.ISmsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1SmsSettings_1_1ISmsService.html", [
+      [ "AdeNote.Infrastructure.Services.SmsSettings.SmsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1SmsSettings_1_1SmsService.html", null ]
     ] ],
-    [ "AdeNote.Infrastructure.Services.IStatisticsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IStatisticsService.html", [
-      [ "AdeNote.Infrastructure.Services.StatisticService", "classAdeNote_1_1Infrastructure_1_1Services_1_1StatisticService.html", null ]
+    [ "AdeNote.Infrastructure.Services.Statistics.IStatisticsService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Statistics_1_1IStatisticsService.html", [
+      [ "AdeNote.Infrastructure.Services.Statistics.StatisticService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Statistics_1_1StatisticService.html", null ]
     ] ],
-    [ "AdeNote.Infrastructure.Services.ITextTranslation", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation.html", [
-      [ "AdeNote.Infrastructure.Services.TextTranslation", "classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html", null ]
+    [ "AdeNote.Infrastructure.Services.TranslationAI.ITextTranslation", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1ITextTranslation.html", [
+      [ "AdeNote.Infrastructure.Services.TranslationAI.TextTranslation", "classAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1TextTranslation.html", null ]
     ] ],
-    [ "AdeNote.Infrastructure.Services.ITicketService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITicketService.html", [
-      [ "AdeNote.Infrastructure.Services.TicketService", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketService.html", null ]
+    [ "AdeNote.Infrastructure.Services.TicketSettings.ITicketService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html", [
+      [ "AdeNote.Infrastructure.Services.TicketSettings.TicketService", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html", null ]
     ] ],
     [ "ITranslateConfiguration", null, [
       [ "AdeNote.Infrastructure.Utilities.AI.TranslateConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1TranslateConfiguration.html", null ]
     ] ],
-    [ "AdeNote.Infrastructure.Utilities.IUserIdentity", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html", [
-      [ "AdeNote.Infrastructure.Utilities.UserIdentity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdentity.html", null ]
+    [ "AdeNote.Infrastructure.Utilities.UserConfiguation.IUserIdentity", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1IUserIdentity.html", [
+      [ "AdeNote.Infrastructure.Utilities.UserConfiguation.UserIdentity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1UserIdentity.html", null ]
     ] ],
-    [ "AdeNote.Infrastructure.Services.IUserService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html", [
-      [ "AdeNote.Infrastructure.Services.UserService", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html", null ]
+    [ "AdeNote.Infrastructure.Services.UserSettings.IUserService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1IUserService.html", [
+      [ "AdeNote.Infrastructure.Services.UserSettings.UserService", "classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html", null ]
     ] ],
-    [ "AdeNote.Infrastructure.Services.IValidatorService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IValidatorService.html", null ],
-    [ "AdeNote.Infrastructure.Services.IWordService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService.html", [
-      [ "AdeNote.Infrastructure.Services.WordService", "classAdeNote_1_1Infrastructure_1_1Services_1_1WordService.html", null ]
+    [ "AdeNote.Infrastructure.Services.Word.IWordService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1IWordService.html", [
+      [ "AdeNote.Infrastructure.Services.Word.WordService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1WordService.html", null ]
     ] ],
     [ "AdeNote.Models.DTOs.LabelCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO.html", null ],
     [ "AdeNote.Models.DTOs.LabelDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelDTO.html", null ],
@@ -235,8 +237,8 @@ var hierarchy =
       [ "AdeNote.Infrastructure.Repository.UserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Extension.ResultExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ResultExtension.html", null ],
-    [ "AdeNote.Infrastructure.Utilities.Sms", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Sms.html", null ],
-    [ "AdeNote.Infrastructure.Utilities.SmsConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfiguration.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.SmsConfig.Sms", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1Sms.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.SmsConfig.SmsConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1SmsConfiguration.html", null ],
     [ "AdeNote.Models.DTOs.StatisticsDto", "classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto.html", null ],
     [ "AdeNote.Models.DTOs.TicketCreateDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketCreateDto.html", null ],
     [ "AdeNote.Models.DTOs.TicketDTO", "classAdeNote_1_1Models_1_1DTOs_1_1TicketDTO.html", null ],
@@ -244,16 +246,24 @@ var hierarchy =
     [ "AdeNote.Models.DTOs.TicketStatusDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStatusDto.html", null ],
     [ "AdeNote.Models.DTOs.TicketStreamDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto.html", null ],
     [ "AdeNote.Models.DTOs.TranslationDto", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html", null ],
-    [ "AdeNote.Models.DTOs.UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", null ],
-    [ "AdeNote.Infrastructure.Utilities.UserId", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserId.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.UserConfiguation.UserId", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1UserId.html", null ],
+    [ "AdeNote.Models.DTOs.UsersDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO.html", [
+      [ "AdeNote.Models.DTOs.UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", null ]
+    ] ],
     [ "ValidationAttribute", null, [
+      [ "AdeNote.Infrastructure.Utilities.ValidationAttributes.AllowAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1AllowAttribute.html", null ],
       [ "AdeNote.Infrastructure.Utilities.ValidationAttributes.ExpectedAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ExpectedAttribute.html", null ],
-      [ "AdeNote.Infrastructure.Utilities.ValidationAttributes.PasswordAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1PasswordAttribute.html", null ]
+      [ "AdeNote.Infrastructure.Utilities.ValidationAttributes.PasswordAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1PasswordAttribute.html", null ],
+      [ "AdeNote.Infrastructure.Utilities.ValidationAttributes.ValidCollectionAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidCollectionAttribute.html", null ],
+      [ "AdeNote.Infrastructure.Utilities.ValidationAttributes.ValidDateTimeAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidDateTimeAttribute.html", null ],
+      [ "AdeNote.Infrastructure.Utilities.ValidationAttributes.ValidGuidAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidGuidAttribute.html", null ],
+      [ "AdeNote.Infrastructure.Utilities.ValidationAttributes.ValidIntAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidIntAttribute.html", null ],
+      [ "AdeNote.Infrastructure.Utilities.ValidationAttributes.ValidObjectAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidObjectAttribute.html", null ]
     ] ],
     [ "ValidationResult", null, [
       [ "AdeNote.Infrastructure.Extension.ValidatorResult", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ValidatorResult.html", null ]
     ] ],
     [ "ValueConverter", null, [
-      [ "AdeNote.Infrastructure.Utilities.UserIdConverter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdConverter.html", null ]
+      [ "AdeNote.Infrastructure.Utilities.UserConfiguation.UserIdConverter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1UserIdConverter.html", null ]
     ] ]
 ];

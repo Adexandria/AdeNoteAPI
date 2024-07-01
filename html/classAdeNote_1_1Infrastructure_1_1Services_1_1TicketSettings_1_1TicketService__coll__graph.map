@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Services.TicketSettings.TicketService" name="AdeNote.Infrastructure.Services.TicketSettings.TicketService">
+<area shape="rect" id="node1" title=" " alt="" coords="625,81,859,122"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html" title=" " alt="" coords="287,5,400,32"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html" title="An interface that includes the behaviour of cloud storage" alt="" coords="227,57,460,98"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html" title=" " alt="" coords="220,122,467,163"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="10,129,166,156"/>
+<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html" title=" " alt="" coords="220,187,467,229"/>
+<area shape="rect" id="node7" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,195,171,221"/>
+</map>

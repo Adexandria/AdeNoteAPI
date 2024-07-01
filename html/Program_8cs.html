@@ -148,8 +148,8 @@ Functions</h2></td></tr>
 <tr class="separator:afe1a29a5ec8f2a434f1f355de71764d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad817729cdc7a941d724b9c1f358856e1"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ad817729cdc7a941d724b9c1f358856e1">AddScoped&lt; IHangfireUserRepository, HangfireUserRepository &gt;</a> ()</td></tr>
 <tr class="separator:ad817729cdc7a941d724b9c1f358856e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cad9e4851b88551ca20788beba96b67"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a3cad9e4851b88551ca20788beba96b67">AddScoped&lt; IExcel, AdeNote.Infrastructure.Services.ExcelService &gt;</a> ()</td></tr>
-<tr class="separator:a3cad9e4851b88551ca20788beba96b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2556cf967e719dbdab25961808dee95"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#af2556cf967e719dbdab25961808dee95">AddScoped&lt; IExcel, AdeNote.Infrastructure.Services.Excel.ExcelService &gt;</a> ()</td></tr>
+<tr class="separator:af2556cf967e719dbdab25961808dee95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b4eaa1116a4ab8cdb1e3978353768ad"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a6b4eaa1116a4ab8cdb1e3978353768ad">AddScoped&lt; IExportService, ExportService &gt;</a> ()</td></tr>
 <tr class="separator:a6b4eaa1116a4ab8cdb1e3978353768ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a673eaa738d33f4152f6ad2fec6372729"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a673eaa738d33f4152f6ad2fec6372729">AddScoped&lt; IWordService, WordService &gt;</a> ()</td></tr>
@@ -182,18 +182,16 @@ Functions</h2></td></tr>
 <tr class="separator:ad383931ac699cc34078df0532f159279"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b2bc4c41ab1f801b53d7330af1fdf7e"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a7b2bc4c41ab1f801b53d7330af1fdf7e">AddAuthentication</a> (JwtBearerDefaults.AuthenticationScheme) .AddJwtBearer(options</td></tr>
 <tr class="separator:a7b2bc4c41ab1f801b53d7330af1fdf7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac80d42999a5573afaa2ee98c642caf4c"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ac80d42999a5573afaa2ee98c642caf4c">AddAuthorization</a> (options=&gt; { options.AddPolicy(&quot;User&quot;, policy=&gt; { policy.AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme);policy.Requirements.Add(new <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirement.html">RoleRequirement</a>(Role.User));});options.AddPolicy(&quot;Owner&quot;, policy=&gt; { policy.AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme);policy.AddRequirements(new <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirement.html">RoleRequirement</a>(Role.Admin, Role.SuperAdmin));});options.AddPolicy(&quot;sso&quot;, new AuthorizationPolicyBuilder(&quot;SSO&quot;).RequireAuthenticatedUser().Build());})</td></tr>
+<tr class="memitem:ac80d42999a5573afaa2ee98c642caf4c"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ac80d42999a5573afaa2ee98c642caf4c">AddAuthorization</a> (options=&gt; { options.AddPolicy(&quot;User&quot;, policy=&gt; { policy.AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme);policy.Requirements.Add(new <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirement.html">RoleRequirement</a>(Role.User));});options.AddPolicy(&quot;Owner&quot;, policy=&gt; { policy.AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme);policy.AddRequirements(new <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirement.html">RoleRequirement</a>(Role.Admin, Role.SuperAdmin));});options.AddPolicy(&quot;sso&quot;, new AuthorizationPolicyBuilder(&quot;SSO&quot;).RequireAuthenticatedUser().Build());})</td></tr>
 <tr class="separator:ac80d42999a5573afaa2ee98c642caf4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f3ff91928870df3813589a8c08e16d5"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a3f3ff91928870df3813589a8c08e16d5">AddHttpLogging</a> (logging=&gt; { logging.LoggingFields=HttpLoggingFields.All;logging.RequestHeaders.Add(&quot;sec-ch-ua&quot;);logging.ResponseHeaders.Add(&quot;MyResponseHeader&quot;);logging.MediaTypeOptions.AddText(&quot;application/javascript&quot;);logging.RequestBodyLogLimit=4096;logging.ResponseBodyLogLimit=4096;})</td></tr>
 <tr class="separator:a3f3ff91928870df3813589a8c08e16d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc1fc4cd83f16d5484970cfddbdc53cc"><td class="memItemLeft" align="right" valign="top">new&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#adc1fc4cd83f16d5484970cfddbdc53cc">Language</a> (builder.Services.BuildServiceProvider()).GetLanguages()</td></tr>
-<tr class="separator:adc1fc4cd83f16d5484970cfddbdc53cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad079bef961545b4473939a559e146e92"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ad079bef961545b4473939a559e146e92">UseMiddleware&lt; ExceptionMiddleware &gt;</a> ()</td></tr>
+<tr class="separator:ad079bef961545b4473939a559e146e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a5cfe7fee09f478241b98af703affea"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a9a5cfe7fee09f478241b98af703affea">UseSwagger</a> ()</td></tr>
 <tr class="separator:a9a5cfe7fee09f478241b98af703affea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed8da194c8645afcc193177096881cd0"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#aed8da194c8645afcc193177096881cd0">UseSwaggerUI</a> (setupAction=&gt; { foreach(var description in apiVersionDescriptionProvider.ApiVersionDescriptions.Reverse()) { setupAction.SwaggerEndpoint($&quot;/swagger/{description.GroupName}/swagger.json&quot;, description.GroupName.ToUpperInvariant());} })</td></tr>
 <tr class="separator:aed8da194c8645afcc193177096881cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79a944c7f0e25196ca3c5a8638b919b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a79a944c7f0e25196ca3c5a8638b919b9">if</a> (app.Environment.IsDevelopment())</td></tr>
-<tr class="separator:a79a944c7f0e25196ca3c5a8638b919b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65434d10e966dc45335a034bc9b96094"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a65434d10e966dc45335a034bc9b96094">UseHttpLogging</a> ()</td></tr>
 <tr class="separator:a65434d10e966dc45335a034bc9b96094"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4d447fc3129a3aa301d736b8bd04ae9"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#aa4d447fc3129a3aa301d736b8bd04ae9">UseHttpsRedirection</a> ()</td></tr>
@@ -202,7 +200,7 @@ Functions</h2></td></tr>
 <tr class="separator:a6435d8beeff4999dc0b0c6d60a86a4e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6f72d752b2e73aa0292f74bd13237ab"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#af6f72d752b2e73aa0292f74bd13237ab">UseAuthorization</a> ()</td></tr>
 <tr class="separator:af6f72d752b2e73aa0292f74bd13237ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0b2e3161dc7fa368b7d8ffdbc5843d0"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#af0b2e3161dc7fa368b7d8ffdbc5843d0">UseHangfireDashboard</a> (&quot;/hangfire&quot;, new DashboardOptions { Authorization=new[] { new <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter.html">DashboardAuthenticationFilter</a>(builder.Services.BuildServiceProvider()) }, DashboardTitle=&quot;AdeNote API&quot;, DarkModeEnabled=true, FaviconPath=&quot;icon/download.ico&quot;, AppPath=&quot;swagger/index.html&quot; })</td></tr>
+<tr class="memitem:af0b2e3161dc7fa368b7d8ffdbc5843d0"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#af0b2e3161dc7fa368b7d8ffdbc5843d0">UseHangfireDashboard</a> (&quot;/hangfire&quot;, new DashboardOptions { Authorization=new[] { new <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1DashboardAuthenticationFilter.html">DashboardAuthenticationFilter</a>(builder.Services.BuildServiceProvider()) }, DashboardTitle=&quot;AdeNote API&quot;, DarkModeEnabled=true, FaviconPath=&quot;icon/download.ico&quot;, AppPath=&quot;swagger/index.html&quot; })</td></tr>
 <tr class="separator:af0b2e3161dc7fa368b7d8ffdbc5843d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abab263bbe4cd9214435aeacab5568d52"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#abab263bbe4cd9214435aeacab5568d52">MapHealthChecks</a> (&quot;/health&quot;, new HealthCheckOptions { ResponseWriter=UIResponseWriter.WriteHealthCheckUIResponse })</td></tr>
 <tr class="separator:abab263bbe4cd9214435aeacab5568d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,6 +212,8 @@ Functions</h2></td></tr>
 <tr class="separator:a3d2d2ed5c3aca49697d371451f43255d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99b682bea2ac361eacf1db8e3f85e21d"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a99b682bea2ac361eacf1db8e3f85e21d">SeedSuperAdmin</a> (<a class="el" href="Program_8cs.html#a927d10c47955fb031d16daaa774ef0d1">defaultConfiguration</a>)</td></tr>
 <tr class="separator:a99b682bea2ac361eacf1db8e3f85e21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc1fc4cd83f16d5484970cfddbdc53cc"><td class="memItemLeft" align="right" valign="top">new&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#adc1fc4cd83f16d5484970cfddbdc53cc">Language</a> (builder.Services.BuildServiceProvider()).GetLanguages()</td></tr>
+<tr class="separator:adc1fc4cd83f16d5484970cfddbdc53cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa3dbf02e269c3ef7e8546d290c6b3dd"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#aaa3dbf02e269c3ef7e8546d290c6b3dd">Run</a> ()</td></tr>
 <tr class="separator:aaa3dbf02e269c3ef7e8546d290c6b3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -227,7 +227,7 @@ Variables</h2></td></tr>
 <tr class="separator:ad72aaf9e90f43ab189b485eadfd7af52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af58c307d03903192a8133df2d551f38b"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#af58c307d03903192a8133df2d551f38b">textClientConfiguration</a> = configuration.GetSection(&quot;TextTranslationConfiguration&quot;).Get&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1TranslateConfiguration.html">TranslateConfiguration</a>&gt;()</td></tr>
 <tr class="separator:af58c307d03903192a8133df2d551f38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3165920b37228f7b5918f55b3721a2e"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ab3165920b37228f7b5918f55b3721a2e">hangfireUserConfiguration</a> = configuration.GetSection(&quot;HangfireUser&quot;).Get&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1HangFireUserConfiguration.html">HangFireUserConfiguration</a>&gt;()</td></tr>
+<tr class="memitem:ab3165920b37228f7b5918f55b3721a2e"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ab3165920b37228f7b5918f55b3721a2e">hangfireUserConfiguration</a> = configuration.GetSection(&quot;HangfireUser&quot;).Get&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1HangFireUserConfiguration.html">HangFireUserConfiguration</a>&gt;()</td></tr>
 <tr class="separator:ab3165920b37228f7b5918f55b3721a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a927d10c47955fb031d16daaa774ef0d1"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a927d10c47955fb031d16daaa774ef0d1">defaultConfiguration</a> = configuration.GetSection(&quot;DefaultConfiguration&quot;).Get&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration.html">DefaultConfiguration</a>&gt;()</td></tr>
 <tr class="separator:a927d10c47955fb031d16daaa774ef0d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -302,7 +302,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">{ options.AddPolicy(&quot;User&quot;, policy=&gt; { policy.AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme);policy.Requirements.Add(new <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirement.html">RoleRequirement</a>(Role.User));});options.AddPolicy(&quot;Owner&quot;, policy=&gt; { policy.AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme);policy.AddRequirements(new <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirement.html">RoleRequirement</a>(Role.Admin, Role.SuperAdmin));});options.AddPolicy(&quot;sso&quot;, new AuthorizationPolicyBuilder(&quot;SSO&quot;).RequireAuthenticatedUser().Build());}&#160;</td>
+          <td class="paramtype">{ options.AddPolicy(&quot;User&quot;, policy=&gt; { policy.AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme);policy.Requirements.Add(new <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirement.html">RoleRequirement</a>(Role.User));});options.AddPolicy(&quot;Owner&quot;, policy=&gt; { policy.AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme);policy.AddRequirements(new <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirement.html">RoleRequirement</a>(Role.Admin, Role.SuperAdmin));});options.AddPolicy(&quot;sso&quot;, new AuthorizationPolicyBuilder(&quot;SSO&quot;).RequireAuthenticatedUser().Build());}&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -575,7 +575,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; IAuthorizationHandler, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1RoleRequirementHandler.html">RoleRequirementHandler</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; IAuthorizationHandler, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirementHandler.html">RoleRequirementHandler</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -592,7 +592,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html">IAuthService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html">AuthService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html">IAuthService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html">AuthService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -609,7 +609,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html">IBlobService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html">BlobService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html">IBlobService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html">BlobService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -643,7 +643,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBookService.html">IBookService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookService.html">BookService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1IBookService.html">IBookService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html">BookService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -660,7 +660,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html">IEmailService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1EmailService.html">EmailService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1IEmailService.html">IEmailService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1EmailService.html">EmailService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -670,14 +670,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a3cad9e4851b88551ca20788beba96b67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3cad9e4851b88551ca20788beba96b67">&#9670;&nbsp;</a></span>AddScoped&lt; IExcel, AdeNote.Infrastructure.Services.ExcelService &gt;()</h2>
+<a id="af2556cf967e719dbdab25961808dee95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2556cf967e719dbdab25961808dee95">&#9670;&nbsp;</a></span>AddScoped&lt; IExcel, AdeNote.Infrastructure.Services.Excel.ExcelService &gt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExcel.html">IExcel</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExcelService.html">AdeNote.Infrastructure.Services.ExcelService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1IExcel.html">IExcel</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1ExcelService.html">AdeNote.Infrastructure.Services.Excel.ExcelService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -694,7 +694,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IExportService.html">IExportService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ExportService.html">ExportService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1IExportService.html">IExportService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1ExportService.html">ExportService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -711,7 +711,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IFileService.html">IFileService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1FileService.html">FileService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IFileService.html">IFileService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html">FileService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -779,7 +779,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html">ILabelService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelService.html">LabelService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1ILabelService.html">ILabelService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html">LabelService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -796,7 +796,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html">INotificationService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1NotificationService.html">NotificationService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1INotificationService.html">INotificationService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1NotificationService.html">NotificationService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -830,7 +830,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IPageService.html">IPageService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html">PageService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html">IPageService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html">PageService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -881,7 +881,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ISmsService.html">ISmsService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1SmsService.html">SmsService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1SmsSettings_1_1ISmsService.html">ISmsService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1SmsSettings_1_1SmsService.html">SmsService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -898,7 +898,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IStatisticsService.html">IStatisticsService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1StatisticService.html">StatisticService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Statistics_1_1IStatisticsService.html">IStatisticsService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Statistics_1_1StatisticService.html">StatisticService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -915,7 +915,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITextTranslation.html">ITextTranslation</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TextTranslation.html">TextTranslation</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1ITextTranslation.html">ITextTranslation</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1TextTranslation.html">TextTranslation</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -949,7 +949,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ITicketService.html">ITicketService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TicketService.html">TicketService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html">ITicketService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html">TicketService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -966,7 +966,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html">IUserIdentity</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserIdentity.html">UserIdentity</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1IUserIdentity.html">IUserIdentity</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1UserIdentity.html">UserIdentity</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1000,7 +1000,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IUserService.html">IUserService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserService.html">UserService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1IUserService.html">IUserService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html">UserService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1017,7 +1017,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IWordService.html">IWordService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1WordService.html">WordService</a> &gt; </td>
+          <td class="memname">builder.Services. <a class="el" href="Program_8cs.html#a8e2334791dff2a8a90d0d567fcbf0f5c">AddScoped</a>&lt; <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1IWordService.html">IWordService</a>, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1WordService.html">WordService</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1170,26 +1170,6 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a79a944c7f0e25196ca3c5a8638b919b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79a944c7f0e25196ca3c5a8638b919b9">&#9670;&nbsp;</a></span>if()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">if </td>
-          <td>(</td>
-          <td class="paramtype">app.Environment.&#160;</td>
-          <td class="paramname"><em>IsDevelopment</em>()</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00215">215</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1358,7 +1338,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">new DashboardOptions { Authorization=new[] { new <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1DashboardAuthenticationFilter.html">DashboardAuthenticationFilter</a>(builder.Services.BuildServiceProvider()) }, DashboardTitle=&quot;AdeNote API&quot;, DarkModeEnabled=true, FaviconPath=&quot;icon/download.ico&quot;, AppPath=&quot;swagger/index.html&quot; }&#160;</td>
+          <td class="paramtype">new DashboardOptions { Authorization=new[] { new <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1DashboardAuthenticationFilter.html">DashboardAuthenticationFilter</a>(builder.Services.BuildServiceProvider()) }, DashboardTitle=&quot;AdeNote API&quot;, DarkModeEnabled=true, FaviconPath=&quot;icon/download.ico&quot;, AppPath=&quot;swagger/index.html&quot; }&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -1396,6 +1376,23 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">app. UseHttpsRedirection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad079bef961545b4473939a559e146e92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad079bef961545b4473939a559e146e92">&#9670;&nbsp;</a></span>UseMiddleware&lt; ExceptionMiddleware &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">app. UseMiddleware&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Middlewares_1_1ExceptionMiddleware.html">ExceptionMiddleware</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1463,7 +1460,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00201">201</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00218">218</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1479,7 +1476,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00198">198</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00212">212</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1495,7 +1492,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00030">30</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00048">48</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1511,7 +1508,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00028">28</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00046">46</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1527,7 +1524,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00029">29</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00047">47</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1543,7 +1540,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00035">35</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00053">53</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1559,7 +1556,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00033">33</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00051">51</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1570,12 +1567,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">var hangfireUserConfiguration = configuration.GetSection(&quot;HangfireUser&quot;).Get&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1HangFireUserConfiguration.html">HangFireUserConfiguration</a>&gt;()</td>
+          <td class="memname">var hangfireUserConfiguration = configuration.GetSection(&quot;HangfireUser&quot;).Get&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1HangFireUserConfiguration.html">HangFireUserConfiguration</a>&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00032">32</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00050">50</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1591,7 +1588,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00031">31</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00049">49</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -1607,7 +1604,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00039">39</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00057">57</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>

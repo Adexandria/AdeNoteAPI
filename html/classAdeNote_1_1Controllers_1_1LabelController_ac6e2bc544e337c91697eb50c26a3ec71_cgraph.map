@@ -1,4 +1,4 @@
 <map id="AdeNote.Controllers.LabelController.CreateLabel" name="AdeNote.Controllers.LabelController.CreateLabel">
 <area shape="rect" id="node1" title="Creates a new label" alt="" coords="5,5,197,47"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ILabelService.html#a7c1ccd9bed77499dc0e14b00325f1a99" title="Adds new label" alt="" coords="245,5,479,47"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1ILabelService.html#a4dbd40779597811e065e309402efabbf" title="Adds new label" alt="" coords="245,5,479,47"/>
 </map>

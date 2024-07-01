@@ -1,5 +1,5 @@
 <map id="AdeNote.Infrastructure.Extension.MappingService.PageLabelsConfig" name="AdeNote.Infrastructure.Extension.MappingService.PageLabelsConfig">
-<area shape="rect" id="node1" title="Maps from page to PageDTO" alt="" coords="287,39,531,80"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#abba30ecd5990f4bfd7e27c93936b9293" title="Gets all pages in a book" alt="" coords="5,5,239,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a60b79eecf54573abebec1bb834262a7e" title="Get a page by id" alt="" coords="5,71,239,112"/>
+<area shape="rect" id="node1" title="Maps from page to PageDTO" alt="" coords="299,39,543,80"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a465f011dbaa238246dfeb37707986acb" title="Gets all pages in a book" alt="" coords="11,5,245,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#ae4397f438be40bff7d79305047bc747a" title="Get a page by id" alt="" coords="5,71,251,112"/>
 </map>

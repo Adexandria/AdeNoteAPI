@@ -1,6 +1,0 @@
-<map id="AdeNote.Infrastructure.Services.NotificationService" name="AdeNote.Infrastructure.Services.NotificationService">
-<area shape="rect" id="node1" title="Manages the email notification using template" alt="" coords="384,57,617,98"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1INotificationService.html" title="Manages the email notification using template" alt="" coords="47,5,197,32"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IBlobService.html" title="An interface that includes the behaviour of cloud storage" alt="" coords="5,57,239,98"/>
-<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IEmailService.html" title=" " alt="" coords="5,122,239,163"/>
-</map>

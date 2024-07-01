@@ -1,8 +1,8 @@
 <map id="AdeNote.Controllers.AuthenticationController.SendNotification" name="AdeNote.Controllers.AuthenticationController.SendNotification">
 <area shape="rect" id="node1" title=" " alt="" coords="605,136,857,177"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#aa577d9771607968fb833de57507c9ef0" title="Logins user using recovery codes" alt="" coords="305,5,557,47"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9cd1153f2138c6bbf15d6e8b888d77b2" title="Logins user using recovery codes" alt="" coords="305,5,557,47"/>
 <area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="305,71,557,112"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9f9c5c7f9a9a9e13446b3460ad8abf37" title="Logins user using passwordless method" alt="" coords="305,136,557,177"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3194efae2091c141a13a085de9072ac8" title="Logins user using passwordless method" alt="" coords="305,136,557,177"/>
 <area shape="rect" id="node7" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a8d610717757937c399997cffac62b060" title="Verifies sms code" alt="" coords="305,201,557,243"/>
 <area shape="rect" id="node8" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9ff673c8d9c0ed05e50eba0bd702f6fe" title="Verifies time based One time password" alt="" coords="305,267,557,308"/>
 <area shape="rect" id="node4" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user" alt="" coords="5,39,257,80"/>

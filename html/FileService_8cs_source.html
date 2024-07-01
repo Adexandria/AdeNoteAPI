@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AdeNote API: AdeNote.API/Infrastructure/Services/FileService.cs Source File</title>
+<title>AdeNote API: AdeNote.API/Infrastructure/Services/Blob/FileService.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -88,90 +88,86 @@ $(document).ready(function(){initNavTree('FileService_8cs_source.html',''); init
 <div class="contents">
 <a href="FileService_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceAdeNote.html">AdeNote</a>.<a class="code" href="namespaceAdeNote_1_1Infrastructure.html">Infrastructure</a>.<a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html">Utilities</a>;</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Services.html">AdeNote.Infrastructure.Services</a></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob.html">AdeNote.Infrastructure.Services.Blob</a></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classAdeNote_1_1Infrastructure_1_1Services_1_1FileService.html">    5</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classAdeNote_1_1Infrastructure_1_1Services_1_1FileService.html">FileService</a> : <a class="code" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IFileService.html">IFileService</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html">    5</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html">FileService</a> : <a class="code" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IFileService.html">IFileService</a></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classAdeNote_1_1Infrastructure_1_1Services_1_1FileService.html#a70a68ac245520107b8d6ba2b7f57af1c">    7</a></span>&#160;        <span class="keyword">public</span> async <span class="keywordtype">void</span> <a class="code" href="classAdeNote_1_1Infrastructure_1_1Services_1_1FileService.html#a70a68ac245520107b8d6ba2b7f57af1c">UploadImage</a>(<span class="keywordtype">string</span> fileName, Stream file, <a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8">MimeType</a> mimeType = <a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8">MimeType</a>.png)</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html#aa5a21e3fa20d30d884f0886bae940638">    7</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html#aa5a21e3fa20d30d884f0886bae940638">UploadImage</a>(<span class="keywordtype">string</span> fileName, Stream file, <a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8">MimeType</a> mimeType = <a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8">MimeType</a>.png)</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        {</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;            <span class="keywordflow">try</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                <span class="keyword">using</span> var fileStream = <span class="keyword">new</span> FileStream($<span class="stringliteral">&quot;Template/{fileName}.{mimeType}&quot;</span>, FileMode.OpenOrCreate);</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                <span class="keyword">using</span> var memoryStream = <span class="keyword">new</span> MemoryStream();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                var blob = <a class="code" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html#a8328f484e63c86062194ce6f1f93159f">ConvertToBytes</a>(file);</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                await file.CopyToAsync(memoryStream);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                fileStream.Write(blob, 0, blob.Length);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                var blob = memoryStream.ToArray();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                fileStream.Write(blob, 0, blob.Length);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">catch</span> (Exception)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classAdeNote_1_1Infrastructure_1_1Services_1_1FileService.html#a12b74c87cc79a5c3b899dfce444092be">   28</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="classAdeNote_1_1Infrastructure_1_1Services_1_1FileService.html#a12b74c87cc79a5c3b899dfce444092be">DownloadImage</a>(<span class="keywordtype">string</span> fileName, <a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8">MimeType</a> mimeType = <a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8">MimeType</a>.html)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keyword">using</span> var fileStream = <span class="keyword">new</span> FileStream($<span class="stringliteral">&quot;Template/{fileName}.{mimeType}&quot;</span>, FileMode.Open);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;Success&quot;</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordflow">catch</span> (Exception)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <span class="keywordflow">return</span> $<span class="stringliteral">&quot;Unable to export file to {mimeType} format&quot;</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html#ae0703698537811468d26c2a2dab7d5a4">   26</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html#ae0703698537811468d26c2a2dab7d5a4">DownloadImage</a>(<span class="keywordtype">string</span> fileName, <a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8">MimeType</a> mimeType = <a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8">MimeType</a>.html)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keyword">using</span> var fileStream = <span class="keyword">new</span> FileStream($<span class="stringliteral">&quot;Template/{fileName}.{mimeType}&quot;</span>, FileMode.Open);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keyword">using</span> var streamReader = <span class="keyword">new</span> StreamReader(fileStream);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            var blob = streamReader.ReadToEnd();</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keyword">using</span> var streamReader = <span class="keyword">new</span> StreamReader(fileStream);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">return</span> blob;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                var blob = streamReader.ReadToEnd();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordflow">return</span> blob;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">catch</span> (Exception)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html#aada84695ba37244f9ee08b8d6b1e0a7f">   38</a></span>&#160;        <span class="keyword">public</span> Stream <a class="code" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html#aada84695ba37244f9ee08b8d6b1e0a7f">DownloadStream</a>(<span class="keywordtype">string</span> fileName, <a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8">MimeType</a> mimeType = <a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8">MimeType</a>.html)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keyword">using</span> var fileStream = <span class="keyword">new</span> FileStream($<span class="stringliteral">&quot;Template/{fileName}.{mimeType}&quot;</span>, FileMode.Open);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            var memoryStream = <span class="keyword">new</span> MemoryStream();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            fileStream.CopyTo(memoryStream);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            memoryStream.Position = 0;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classAdeNote_1_1Infrastructure_1_1Services_1_1FileService.html#a74dd1acb658f57612b2015cbd920d2ca">   48</a></span>&#160;        <span class="keyword">public</span> Stream <a class="code" href="classAdeNote_1_1Infrastructure_1_1Services_1_1FileService.html#a74dd1acb658f57612b2015cbd920d2ca">DownloadStream</a>(<span class="keywordtype">string</span> fileName, <a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8">MimeType</a> mimeType = <a class="code" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8">MimeType</a>.html)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keyword">using</span> var fileStream = <span class="keyword">new</span> FileStream($<span class="stringliteral">&quot;Template/{fileName}.{mimeType}&quot;</span>, FileMode.Open);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                var ms = <span class="keyword">new</span> MemoryStream();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">return</span> memoryStream;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html#a8328f484e63c86062194ce6f1f93159f">   52</a></span>&#160;        <span class="keyword">private</span> <span class="keywordtype">byte</span>[] <a class="code" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html#a8328f484e63c86062194ce6f1f93159f">ConvertToBytes</a>(Stream stream)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordtype">byte</span>[] bytes;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                fileStream.CopyTo(ms);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            stream.Position = 0;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                ms.Position = 0;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">return</span> ms;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keyword">using</span> (var binaryReader = <span class="keyword">new</span> BinaryReader(stream))</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                bytes = binaryReader.ReadBytes((<span class="keywordtype">int</span>)stream.Length);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">catch</span> (Exception)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">return</span> <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;       </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
-<div class="ttc" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1FileService_html"><div class="ttname"><a href="classAdeNote_1_1Infrastructure_1_1Services_1_1FileService.html">AdeNote.Infrastructure.Services.FileService</a></div><div class="ttdef"><b>Definition:</b> <a href="FileService_8cs_source.html#l00005">FileService.cs:6</a></div></div>
-<div class="ttc" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1FileService_html_a12b74c87cc79a5c3b899dfce444092be"><div class="ttname"><a href="classAdeNote_1_1Infrastructure_1_1Services_1_1FileService.html#a12b74c87cc79a5c3b899dfce444092be">AdeNote.Infrastructure.Services.FileService.DownloadImage</a></div><div class="ttdeci">string DownloadImage(string fileName, MimeType mimeType=MimeType.html)</div><div class="ttdoc">Downloads image</div><div class="ttdef"><b>Definition:</b> <a href="FileService_8cs_source.html#l00028">FileService.cs:28</a></div></div>
-<div class="ttc" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1FileService_html_a70a68ac245520107b8d6ba2b7f57af1c"><div class="ttname"><a href="classAdeNote_1_1Infrastructure_1_1Services_1_1FileService.html#a70a68ac245520107b8d6ba2b7f57af1c">AdeNote.Infrastructure.Services.FileService.UploadImage</a></div><div class="ttdeci">async void UploadImage(string fileName, Stream file, MimeType mimeType=MimeType.png)</div><div class="ttdoc">Uploads image</div><div class="ttdef"><b>Definition:</b> <a href="FileService_8cs_source.html#l00007">FileService.cs:7</a></div></div>
-<div class="ttc" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1FileService_html_a74dd1acb658f57612b2015cbd920d2ca"><div class="ttname"><a href="classAdeNote_1_1Infrastructure_1_1Services_1_1FileService.html#a74dd1acb658f57612b2015cbd920d2ca">AdeNote.Infrastructure.Services.FileService.DownloadStream</a></div><div class="ttdeci">Stream DownloadStream(string fileName, MimeType mimeType=MimeType.html)</div><div class="ttdoc">Downloads image</div><div class="ttdef"><b>Definition:</b> <a href="FileService_8cs_source.html#l00048">FileService.cs:48</a></div></div>
-<div class="ttc" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1IFileService_html"><div class="ttname"><a href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IFileService.html">AdeNote.Infrastructure.Services.IFileService</a></div><div class="ttdef"><b>Definition:</b> <a href="IFileService_8cs_source.html#l00005">IFileService.cs:6</a></div></div>
-<div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_1_1Services_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure_1_1Services.html">AdeNote.Infrastructure.Services</a></div><div class="ttdef"><b>Definition:</b> <a href="AuthService_8cs_source.html#l00009">AuthService.cs:10</a></div></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">return</span> bytes;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="ttc" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService_html"><div class="ttname"><a href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html">AdeNote.Infrastructure.Services.Blob.FileService</a></div><div class="ttdef"><b>Definition:</b> <a href="FileService_8cs_source.html#l00005">FileService.cs:6</a></div></div>
+<div class="ttc" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService_html_a8328f484e63c86062194ce6f1f93159f"><div class="ttname"><a href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html#a8328f484e63c86062194ce6f1f93159f">AdeNote.Infrastructure.Services.Blob.FileService.ConvertToBytes</a></div><div class="ttdeci">byte[] ConvertToBytes(Stream stream)</div><div class="ttdef"><b>Definition:</b> <a href="FileService_8cs_source.html#l00052">FileService.cs:52</a></div></div>
+<div class="ttc" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService_html_aa5a21e3fa20d30d884f0886bae940638"><div class="ttname"><a href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html#aa5a21e3fa20d30d884f0886bae940638">AdeNote.Infrastructure.Services.Blob.FileService.UploadImage</a></div><div class="ttdeci">string UploadImage(string fileName, Stream file, MimeType mimeType=MimeType.png)</div><div class="ttdoc">Uploads image</div><div class="ttdef"><b>Definition:</b> <a href="FileService_8cs_source.html#l00007">FileService.cs:7</a></div></div>
+<div class="ttc" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService_html_aada84695ba37244f9ee08b8d6b1e0a7f"><div class="ttname"><a href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html#aada84695ba37244f9ee08b8d6b1e0a7f">AdeNote.Infrastructure.Services.Blob.FileService.DownloadStream</a></div><div class="ttdeci">Stream DownloadStream(string fileName, MimeType mimeType=MimeType.html)</div><div class="ttdoc">Downloads image</div><div class="ttdef"><b>Definition:</b> <a href="FileService_8cs_source.html#l00038">FileService.cs:38</a></div></div>
+<div class="ttc" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService_html_ae0703698537811468d26c2a2dab7d5a4"><div class="ttname"><a href="classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html#ae0703698537811468d26c2a2dab7d5a4">AdeNote.Infrastructure.Services.Blob.FileService.DownloadImage</a></div><div class="ttdeci">string DownloadImage(string fileName, MimeType mimeType=MimeType.html)</div><div class="ttdoc">Downloads image</div><div class="ttdef"><b>Definition:</b> <a href="FileService_8cs_source.html#l00026">FileService.cs:26</a></div></div>
+<div class="ttc" id="ainterfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IFileService_html"><div class="ttname"><a href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IFileService.html">AdeNote.Infrastructure.Services.Blob.IFileService</a></div><div class="ttdef"><b>Definition:</b> <a href="IFileService_8cs_source.html#l00005">IFileService.cs:6</a></div></div>
+<div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob.html">AdeNote.Infrastructure.Services.Blob</a></div><div class="ttdef"><b>Definition:</b> <a href="BlobService_8cs_source.html#l00009">BlobService.cs:10</a></div></div>
 <div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_1_1Utilities_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html">AdeNote.Infrastructure.Utilities</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionResult_8cs_source.html#l00005">ActionResult.cs:6</a></div></div>
 <div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_1_1Utilities_html_a5dbb47479f072858ae359006d49caee8"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8">AdeNote.Infrastructure.Utilities.MimeType</a></div><div class="ttdeci">MimeType</div><div class="ttdef"><b>Definition:</b> <a href="MimeType_8cs_source.html#l00005">MimeType.cs:6</a></div></div>
-<div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure.html">AdeNote.Infrastructure</a></div><div class="ttdef"><b>Definition:</b> <a href="EnumExtensions_8cs_source.html#l00003">EnumExtensions.cs:4</a></div></div>
-<div class="ttc" id="anamespaceAdeNote_html"><div class="ttname"><a href="namespaceAdeNote.html">AdeNote</a></div><div class="ttdef"><b>Definition:</b> <a href="AuthenticationController_8cs_source.html#l00013">AuthenticationController.cs:14</a></div></div>
+<div class="ttc" id="anamespaceAdeNote_1_1Infrastructure_html"><div class="ttname"><a href="namespaceAdeNote_1_1Infrastructure.html">AdeNote.Infrastructure</a></div><div class="ttdef"><b>Definition:</b> <a href="HealthCheckException_8cs_source.html#l00001">HealthCheckException.cs:2</a></div></div>
+<div class="ttc" id="anamespaceAdeNote_html"><div class="ttname"><a href="namespaceAdeNote.html">AdeNote</a></div><div class="ttdef"><b>Definition:</b> <a href="AuthenticationController_8cs_source.html#l00017">AuthenticationController.cs:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_1d0334f32218fb7912a97d4dd0458d9a.html">AdeNote.API</a></li><li class="navelem"><a class="el" href="dir_b71eec9eca2bbdf66529551c49f21604.html">Infrastructure</a></li><li class="navelem"><a class="el" href="dir_0d72d01b4b92b0b540f6c2fc94b6812e.html">Services</a></li><li class="navelem"><a class="el" href="FileService_8cs.html">FileService.cs</a></li>
+    <li class="navelem"><a class="el" href="dir_1d0334f32218fb7912a97d4dd0458d9a.html">AdeNote.API</a></li><li class="navelem"><a class="el" href="dir_b71eec9eca2bbdf66529551c49f21604.html">Infrastructure</a></li><li class="navelem"><a class="el" href="dir_0d72d01b4b92b0b540f6c2fc94b6812e.html">Services</a></li><li class="navelem"><a class="el" href="dir_ae2985f88821770137ededa8edc12e51.html">Blob</a></li><li class="navelem"><a class="el" href="FileService_8cs.html">FileService.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

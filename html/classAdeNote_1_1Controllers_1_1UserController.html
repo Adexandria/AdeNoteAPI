@@ -108,13 +108,13 @@ Collaboration diagram for AdeNote.Controllers.UserController:</div>
 <area shape="rect" title=" " alt="" coords="121,185,307,227"/>
 <area shape="rect" href="classAdeNote_1_1Controllers_1_1BaseController.html" title="A base controller" alt="" coords="5,89,124,115"/>
 <area shape="rect" title=" " alt="" coords="5,5,124,32"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html" title="An authentication interface that with the controller" alt="" coords="148,81,381,123"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html" title="An authentication interface that with the controller" alt="" coords="148,81,381,123"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1dad6f4dbcdb2f626b8d7aaf14ca7b60"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1UserController.html#a1dad6f4dbcdb2f626b8d7aaf14ca7b60">UserController</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html">IUserIdentity</a> userIdentity, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html">IAuthService</a> authService)</td></tr>
+<tr class="memitem:a1dad6f4dbcdb2f626b8d7aaf14ca7b60"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1UserController.html#a1dad6f4dbcdb2f626b8d7aaf14ca7b60">UserController</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1IUserIdentity.html">IUserIdentity</a> userIdentity, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html">IAuthService</a> authService)</td></tr>
 <tr class="separator:a1dad6f4dbcdb2f626b8d7aaf14ca7b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac163c2c4c10193dc96ca6c5b9b5313c9"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1UserController.html#ac163c2c4c10193dc96ca6c5b9b5313c9">GenerateRecoveryCode</a> ()</td></tr>
 <tr class="memdesc:ac163c2c4c10193dc96ca6c5b9b5313c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate new recovery code  <a href="classAdeNote_1_1Controllers_1_1UserController.html#ac163c2c4c10193dc96ca6c5b9b5313c9">More...</a><br /></td></tr>
@@ -125,23 +125,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2bbabbe2d779a9a47b8995fad0d532b8"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1UserController.html#a2bbabbe2d779a9a47b8995fad0d532b8">SetUpSmsAuthenticator</a> ()</td></tr>
 <tr class="memdesc:a2bbabbe2d779a9a47b8995fad0d532b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up two factor authentication using sms  <a href="classAdeNote_1_1Controllers_1_1UserController.html#a2bbabbe2d779a9a47b8995fad0d532b8">More...</a><br /></td></tr>
 <tr class="separator:a2bbabbe2d779a9a47b8995fad0d532b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78936cc90340d7fecd28eb8feca1bc5b"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1UserController.html#a78936cc90340d7fecd28eb8feca1bc5b">AddPhoneNumber</a> (string phoneNumber)</td></tr>
-<tr class="memdesc:a78936cc90340d7fecd28eb8feca1bc5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds phone number  <a href="classAdeNote_1_1Controllers_1_1UserController.html#a78936cc90340d7fecd28eb8feca1bc5b">More...</a><br /></td></tr>
-<tr class="separator:a78936cc90340d7fecd28eb8feca1bc5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18ba254cf6253b7749dfc2c3e5588c54"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1UserController.html#a18ba254cf6253b7749dfc2c3e5588c54">VerifyPhoneNumber</a> (string verificationCode)</td></tr>
-<tr class="memdesc:a18ba254cf6253b7749dfc2c3e5588c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies phone number  <a href="classAdeNote_1_1Controllers_1_1UserController.html#a18ba254cf6253b7749dfc2c3e5588c54">More...</a><br /></td></tr>
-<tr class="separator:a18ba254cf6253b7749dfc2c3e5588c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1975e6e934d123e5663fbbea09d663b3"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1UserController.html#a1975e6e934d123e5663fbbea09d663b3">AddPhoneNumber</a> ([Required(ErrorMessage=&quot;Invalid phone number&quot;)]string phoneNumber)</td></tr>
+<tr class="memdesc:a1975e6e934d123e5663fbbea09d663b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds phone number  <a href="classAdeNote_1_1Controllers_1_1UserController.html#a1975e6e934d123e5663fbbea09d663b3">More...</a><br /></td></tr>
+<tr class="separator:a1975e6e934d123e5663fbbea09d663b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd52555778f99b28262cc72bb05010be"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1UserController.html#abd52555778f99b28262cc72bb05010be">VerifyPhoneNumber</a> ([Required(ErrorMessage=&quot;Invalid verification code&quot;)]string verificationCode)</td></tr>
+<tr class="memdesc:abd52555778f99b28262cc72bb05010be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies phone number  <a href="classAdeNote_1_1Controllers_1_1UserController.html#abd52555778f99b28262cc72bb05010be">More...</a><br /></td></tr>
+<tr class="separator:abd52555778f99b28262cc72bb05010be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAdeNote_1_1Controllers_1_1BaseController')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html">AdeNote.Controllers.BaseController</a></td></tr>
 <tr class="memitem:a5f361e89da9d1716605fb2c9a0dab893 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html#a5f361e89da9d1716605fb2c9a0dab893">BaseController</a> ()</td></tr>
 <tr class="memdesc:a5f361e89da9d1716605fb2c9a0dab893 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="mdescLeft">&#160;</td><td class="mdescRight">A parameterless constructor  <a href="classAdeNote_1_1Controllers_1_1BaseController.html#a5f361e89da9d1716605fb2c9a0dab893">More...</a><br /></td></tr>
 <tr class="separator:a5f361e89da9d1716605fb2c9a0dab893 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5383b97ea5540b425dd972423b8573d1 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html#a5383b97ea5540b425dd972423b8573d1">BaseController</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html">IUserIdentity</a> userIdentity)</td></tr>
+<tr class="memitem:a5383b97ea5540b425dd972423b8573d1 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html#a5383b97ea5540b425dd972423b8573d1">BaseController</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1IUserIdentity.html">IUserIdentity</a> userIdentity)</td></tr>
 <tr class="memdesc:a5383b97ea5540b425dd972423b8573d1 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor  <a href="classAdeNote_1_1Controllers_1_1BaseController.html#a5383b97ea5540b425dd972423b8573d1">More...</a><br /></td></tr>
 <tr class="separator:a5383b97ea5540b425dd972423b8573d1 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ac08d2d0dca899c459b3ef0eb107b0a73"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html">IAuthService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1UserController.html#ac08d2d0dca899c459b3ef0eb107b0a73">_authService</a></td></tr>
+<tr class="memitem:ac08d2d0dca899c459b3ef0eb107b0a73"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html">IAuthService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1UserController.html#ac08d2d0dca899c459b3ef0eb107b0a73">_authService</a></td></tr>
 <tr class="separator:ac08d2d0dca899c459b3ef0eb107b0a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -167,13 +167,13 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">AdeNote.Controllers.UserController.UserController </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1IUserIdentity.html">IUserIdentity</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1IUserIdentity.html">IUserIdentity</a>&#160;</td>
           <td class="paramname"><em>userIdentity</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html">IAuthService</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html">IAuthService</a>&#160;</td>
           <td class="paramname"><em>authService</em>&#160;</td>
         </tr>
         <tr>
@@ -189,8 +189,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a78936cc90340d7fecd28eb8feca1bc5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78936cc90340d7fecd28eb8feca1bc5b">&#9670;&nbsp;</a></span>AddPhoneNumber()</h2>
+<a id="a1975e6e934d123e5663fbbea09d663b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1975e6e934d123e5663fbbea09d663b3">&#9670;&nbsp;</a></span>AddPhoneNumber()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,7 +198,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.UserController.AddPhoneNumber </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
+          <td class="paramtype">[Required(ErrorMessage = &quot;Invalid phone number&quot;)] string&#160;</td>
           <td class="paramname"><em>phoneNumber</em></td><td>)</td>
           <td></td>
         </tr>
@@ -213,16 +213,16 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>&lt;response code ="200"&gt; Returns if phone number was added/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
+<p>&lt;response code ="200"&gt; Returns if phone number was added&lt;/response&gt; &lt;response code ="400"&gt; Returns if experiencing client issues&lt;/response&gt; &lt;response code ="500"&gt; Returns if experiencing server issues&lt;/response&gt; &lt;response code ="404"&gt; Returns if parameters not found&lt;/response&gt; &lt;response code ="401"&gt; Returns if unauthorised&lt;/response&gt; </p>
 
 <p class="definition">Definition at line <a class="el" href="UserController_8cs_source.html#l00153">153</a> of file <a class="el" href="UserController_8cs_source.html">UserController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1UserController_a78936cc90340d7fecd28eb8feca1bc5b_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1UserController_a78936cc90340d7fecd28eb8feca1bc5b_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1UserController_a78936cc90340d7fecd28eb8feca1bc5b_cgraph" id="aclassAdeNote_1_1Controllers_1_1UserController_a78936cc90340d7fecd28eb8feca1bc5b_cgraph">
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1UserController_a1975e6e934d123e5663fbbea09d663b3_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1UserController_a1975e6e934d123e5663fbbea09d663b3_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1UserController_a1975e6e934d123e5663fbbea09d663b3_cgraph" id="aclassAdeNote_1_1Controllers_1_1UserController_a1975e6e934d123e5663fbbea09d663b3_cgraph">
 <area shape="rect" title="Adds phone number" alt="" coords="5,5,212,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a5bfedca5a816cc4c024d4852887fe189" title="Sets up phone number" alt="" coords="260,5,493,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a551c55e2e147ebaa398fa19bd06c7ca3" title="Sets up phone number" alt="" coords="260,5,580,47"/>
 </map>
 </div>
 
@@ -253,8 +253,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Controllers_1_1UserController_ac163c2c4c10193dc96ca6c5b9b5313c9_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1UserController_ac163c2c4c10193dc96ca6c5b9b5313c9_cgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Controllers_1_1UserController_ac163c2c4c10193dc96ca6c5b9b5313c9_cgraph" id="aclassAdeNote_1_1Controllers_1_1UserController_ac163c2c4c10193dc96ca6c5b9b5313c9_cgraph">
-<area shape="rect" title="Generate new recovery code" alt="" coords="5,5,248,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a51acc95bda2d17c281ef6a2cc766b013" title=" " alt="" coords="296,5,565,47"/>
+<area shape="rect" title="Generate new recovery code" alt="" coords="5,13,248,54"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#aa438b9ccee87c7e4c937aa66563fe38d" title=" " alt="" coords="296,5,563,61"/>
 </map>
 </div>
 
@@ -285,9 +285,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Controllers_1_1UserController_ae28420ba0635c8568bc6bedee7b01bca_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1UserController_ae28420ba0635c8568bc6bedee7b01bca_cgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Controllers_1_1UserController_ae28420ba0635c8568bc6bedee7b01bca_cgraph" id="aclassAdeNote_1_1Controllers_1_1UserController_ae28420ba0635c8568bc6bedee7b01bca_cgraph">
-<area shape="rect" title="Sets up two factor authentication using google authenticator app" alt="" coords="5,39,268,80"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a597da2feeb46e66d1069f097333b6d87" title="Checks if MFA has been enabled for the user using user id." alt="" coords="316,5,575,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#ae3c515f59107f454452f2be174b2e00f" title="Sets up MFA using google authenticator app" alt="" coords="329,71,562,112"/>
+<area shape="rect" title="Sets up two factor authentication using google authenticator app" alt="" coords="5,50,268,91"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#aaf94eb652fece547262e34ca1b5edbb3" title="Checks if MFA has been enabled for the user using user id." alt="" coords="321,5,627,61"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a8aa2bc556a0b1150ee03575cfb32d748" title="Sets up MFA using google authenticator app" alt="" coords="316,86,632,127"/>
 </map>
 </div>
 
@@ -318,17 +318,17 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Controllers_1_1UserController_a2bbabbe2d779a9a47b8995fad0d532b8_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1UserController_a2bbabbe2d779a9a47b8995fad0d532b8_cgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Controllers_1_1UserController_a2bbabbe2d779a9a47b8995fad0d532b8_cgraph" id="aclassAdeNote_1_1Controllers_1_1UserController_a2bbabbe2d779a9a47b8995fad0d532b8_cgraph">
-<area shape="rect" title="Sets up two factor authentication using sms" alt="" coords="5,71,249,112"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a597da2feeb46e66d1069f097333b6d87" title="Checks if MFA has been enabled for the user using user id." alt="" coords="298,5,557,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a84c70bfd6bb4b8de6058be1579ceb436" title="Checks if a phone number has been verified" alt="" coords="297,71,557,112"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a8e029bac287e94a02f291647721758a6" title="Sets up MFA using sms authentication" alt="" coords="305,136,550,177"/>
+<area shape="rect" title="Sets up two factor authentication using sms" alt="" coords="5,93,249,134"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#aaf94eb652fece547262e34ca1b5edbb3" title="Checks if MFA has been enabled for the user using user id." alt="" coords="297,5,604,61"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#aa5d10728851e7fb0228a2705d73450c8" title="Checks if a phone number has been verified" alt="" coords="321,85,580,141"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a15228bc8ed930e953d2b7d2eb9594409" title="Sets up MFA using sms authentication" alt="" coords="323,165,579,221"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a18ba254cf6253b7749dfc2c3e5588c54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18ba254cf6253b7749dfc2c3e5588c54">&#9670;&nbsp;</a></span>VerifyPhoneNumber()</h2>
+<a id="abd52555778f99b28262cc72bb05010be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd52555778f99b28262cc72bb05010be">&#9670;&nbsp;</a></span>VerifyPhoneNumber()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -336,7 +336,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.UserController.VerifyPhoneNumber </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
+          <td class="paramtype">[Required(ErrorMessage =&quot;Invalid verification code&quot;)] string&#160;</td>
           <td class="paramname"><em>verificationCode</em></td><td>)</td>
           <td></td>
         </tr>
@@ -357,11 +357,11 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1UserController_a18ba254cf6253b7749dfc2c3e5588c54_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1UserController_a18ba254cf6253b7749dfc2c3e5588c54_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1UserController_a18ba254cf6253b7749dfc2c3e5588c54_cgraph" id="aclassAdeNote_1_1Controllers_1_1UserController_a18ba254cf6253b7749dfc2c3e5588c54_cgraph">
-<area shape="rect" title="Verifies phone number" alt="" coords="5,39,224,80"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a84c70bfd6bb4b8de6058be1579ceb436" title="Checks if a phone number has been verified" alt="" coords="272,5,532,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html#a821718637f3c6de0c7ffa1b45e6ca830" title="Sets up phone number" alt="" coords="283,71,521,112"/>
+<div class="center"><img src="classAdeNote_1_1Controllers_1_1UserController_abd52555778f99b28262cc72bb05010be_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1UserController_abd52555778f99b28262cc72bb05010be_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Controllers_1_1UserController_abd52555778f99b28262cc72bb05010be_cgraph" id="aclassAdeNote_1_1Controllers_1_1UserController_abd52555778f99b28262cc72bb05010be_cgraph">
+<area shape="rect" title="Verifies phone number" alt="" coords="5,53,224,94"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#aa5d10728851e7fb0228a2705d73450c8" title="Checks if a phone number has been verified" alt="" coords="272,5,531,61"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#abb06f8d41649f11f0353fba04742fe65" title="Sets up phone number" alt="" coords="279,85,523,141"/>
 </map>
 </div>
 
@@ -378,7 +378,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1IAuthService.html">IAuthService</a> AdeNote.Controllers.UserController._authService</td>
+          <td class="memname">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html">IAuthService</a> AdeNote.Controllers.UserController._authService</td>
         </tr>
       </table>
   </td>

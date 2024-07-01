@@ -1,7 +1,0 @@
-<map id="AdeNote.Infrastructure.Services.BlobService.GenerateStorageCredentials" name="AdeNote.Infrastructure.Services.BlobService.GenerateStorageCredentials">
-<area shape="rect" id="node1" title="Creates a shared key for the account" alt="" coords="287,104,573,145"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#a46d523c62a2b6ecd6eb204607667f2b5" title="Deletes Image" alt="" coords="5,5,239,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#abaed3b7b1fdd72fa77d59590f4bd0387" title="Downloads image" alt="" coords="5,71,239,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#aab716841ffbd991afc1e415012d4467b" title="Downloads image" alt="" coords="5,136,239,177"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BlobService.html#a01f2b2b5c0e72161ed5ab864990cf314" title="Uploads image" alt="" coords="5,201,239,243"/>
-</map>

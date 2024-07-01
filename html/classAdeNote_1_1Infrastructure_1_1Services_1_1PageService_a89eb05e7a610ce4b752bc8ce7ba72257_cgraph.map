@@ -1,8 +1,0 @@
-<map id="AdeNote.Infrastructure.Services.PageService.Remove" name="AdeNote.Infrastructure.Services.PageService.Remove">
-<area shape="rect" id="node1" title="Removes a particular page" alt="" coords="5,136,239,177"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="295,5,525,47"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#ab18880eba0d7d3571eb09ccf7d7070dc" title="Get a particular book that belongs to a user" alt="" coords="287,71,533,112"/>
-<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html#a770e88bd6d67b6ff4bac64138f515bab" title="Gets an individual page from a particular book" alt="" coords="287,136,533,177"/>
-<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#aa09992933cc1efc25ff9ba7ed29d601a" title="Remove an existing object" alt="" coords="287,201,533,243"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="289,267,531,308"/>
-</map>

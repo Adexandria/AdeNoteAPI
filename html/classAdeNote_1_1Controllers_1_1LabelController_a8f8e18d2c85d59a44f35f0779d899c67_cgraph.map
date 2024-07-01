@@ -1,0 +1,4 @@
+<map id="AdeNote.Controllers.LabelController.DeleteLabel" name="AdeNote.Controllers.LabelController.DeleteLabel">
+<area shape="rect" id="node1" title="Deletes an existing label" alt="" coords="5,5,197,47"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1ILabelService.html#ac7f3251dda795587bec62aac225ff87f" title="Removes an existing label" alt="" coords="245,5,504,47"/>
+</map>

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['labelpagerepository_1419',['labelPageRepository',['../classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#a6f8b03e75087cb7d0e0927e151234929',1,'AdeNote::Infrastructure::Services::PageService']]],
-  ['labelrepository_1420',['labelRepository',['../classAdeNote_1_1Infrastructure_1_1Services_1_1PageService.html#ad16bb7ed4d13a6c99e26e6e9155e219a',1,'AdeNote::Infrastructure::Services::PageService']]],
-  ['logger_1421',['logger',['../classAdeNote_1_1Infrastructure_1_1Services_1_1EmailService.html#ab262f38bc24d233328c968fd6c8dc819',1,'AdeNote::Infrastructure::Services::EmailService']]],
-  ['loginsecret_1422',['loginSecret',['../classAdeNote_1_1Infrastructure_1_1Services_1_1AuthService.html#a8772a17371200516c02e29147d99f723',1,'AdeNote::Infrastructure::Services::AuthService']]]
+  ['labelpagerepository_1522',['labelPageRepository',['../classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a4448136f20e58bac4abfab13235d4c1b',1,'AdeNote::Infrastructure::Services::PageSettings::PageService']]],
+  ['labelrepository_1523',['labelRepository',['../classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a3b5c924aeaf6f6d2d55859e31b219331',1,'AdeNote::Infrastructure::Services::PageSettings::PageService']]],
+  ['logger_1524',['logger',['../classAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1EmailService.html#a66dceb29489e7b501be5584a67824124',1,'AdeNote::Infrastructure::Services::EmailSettings::EmailService']]],
+  ['loginsecret_1525',['loginSecret',['../classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#aefdc35379e25b55b19a0f765273049fa',1,'AdeNote::Infrastructure::Services::Authentication::AuthService']]]
 ];
