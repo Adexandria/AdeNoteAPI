@@ -40,7 +40,7 @@ namespace AdeNote.Tests.Services
         public async Task ShouldSetAuthenticatorSuccessfully()
         {
             //Arrange
-            blobService.Setup(s => s.UploadImage(It.IsAny<string>(), It.IsAny<Stream>(),It.IsAny<CancellationToken>(),Infrastructure.Utilities.MimeType.png)).ReturnsAsync("test-url");
+            blobService.Setup(s => s.UploadImage(It.IsAny<string>(), It.IsAny<Stream>(),It.IsAny<CancellationToken>(),Infrastructure.Utilities.MimeType.png)).ReturnsAsync("Success");
             userRepository.Setup(s => s.Update(It.IsAny<User>())).ReturnsAsync(true);
             userRepository.Setup(s => s.GetUser(It.IsAny<Guid>())).ReturnsAsync(new User("first", "lastname", "test@gmail", AuthType.local) { TwoFactorType = 0 });
             mfaService.Setup(s => s.SetupGoogleAuthenticator("Adenote", It.IsAny<string>(), It.IsAny<byte[]>()))
@@ -56,7 +56,7 @@ namespace AdeNote.Tests.Services
         public async Task ShouldFailToSetAuthenticator()
         {
             //Arrange
-            blobService.Setup(s => s.UploadImage(It.IsAny<string>(), It.IsAny<Stream>(), It.IsAny<CancellationToken>(), Infrastructure.Utilities.MimeType.png)).ReturnsAsync("test-url");
+            blobService.Setup(s => s.UploadImage(It.IsAny<string>(), It.IsAny<Stream>(), It.IsAny<CancellationToken>(), Infrastructure.Utilities.MimeType.png)).ReturnsAsync("Success");
             userRepository.Setup(s => s.Update(It.IsAny<User>())).ReturnsAsync(false);
             userRepository.Setup(s => s.GetUser(It.IsAny<Guid>())).ReturnsAsync(new User("first", "lastname", "test@gmail", AuthType.local) { TwoFactorType = 0 });
             mfaService.Setup(s => s.SetupGoogleAuthenticator("Adenote", It.IsAny<string>(), It.IsAny<byte[]>()))
