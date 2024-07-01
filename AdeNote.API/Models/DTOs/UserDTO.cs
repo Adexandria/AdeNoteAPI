@@ -1,39 +1,20 @@
 ﻿namespace AdeNote.Models.DTOs
 {
-
-    /// <summary>
-    /// Displays the details of the user
-    /// </summary>
-    public class UserDTO
+    public class UserDTO : UsersDTO
     {
-        /// <summary>
-        /// A constructor
-        /// </summary>
-        /// <param name="name">Name of the user</param>
-        /// <param name="email">Email of the user</param>
-        public UserDTO(Guid userId,string firstname, string lastName, string email,string? codes)
+        public UserDTO(Guid userId, string firstname, string lastName, string email, string? codes,
+           string refreshToken, string accessToken) : base(userId,firstname,lastName,email,codes)
         {
             UserId = userId;
             FirstName = firstname;
             LastName = lastName;
             Email = email;
             Codes = codes?.Split(',');
+            RefreshToken = refreshToken;
+            AccessToken = accessToken;
         }
+        public string RefreshToken { get; set; }
 
-
-
-        public Guid UserId { get; set; }
-        /// <summary>
-        /// Name of the user
-        /// </summary>
-        public string FirstName { get; set; }    
-
-        public string LastName { get; set; }    
-        /// <summary>
-        ///  Email of the user
-        /// </summary>
-        public string Email { get; set; }  
-        
-        public string[]? Codes { get; set; }
+        public string AccessToken { get; set; }
     }
 }

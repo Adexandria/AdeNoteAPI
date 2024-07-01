@@ -19,15 +19,15 @@ namespace AdeText.Services
             requestSent = 0;
             _jsonExtractorService = new JsonExtractorService();
         }
-        public async Task<IDetectLanguage> DetectLanguage(string text)
+        public async Task<IDetectLanguage> DetectLanguage(string text, CancellationToken cancellationToken)
         {
             object[] body = new object[] { new { Text = text } };
 
             var requestBody = JsonSerializer.Serialize(body);
-            return await SendRequest<DetectLanguage>(requestBody, "detect?api-version=3.0");
+            return await SendRequest<DetectLanguage>(requestBody, "detect?api-version=3.0", cancellationToken);
         }
 
-        public async Task<ITranslateLanguage> TranslateLanguage(string text, string to, string from = null)
+        public async Task<ITranslateLanguage> TranslateLanguage(string text, string to, string from = null, CancellationToken cancellationToken = default)
         {
             object[] body = new object[] { new { Text = text } };
 
@@ -44,10 +44,10 @@ namespace AdeText.Services
                 endpoint += $"to={to}";
             }
 
-            return await SendRequest<TranslateLanguage>(requestBody, endpoint);
+            return await SendRequest<TranslateLanguage>(requestBody, endpoint, cancellationToken);
         }
 
-        public async Task<ITranslateLanguage> TranslateLanguage(string text, string[] tos, string from = null)
+        public async Task<ITranslateLanguage> TranslateLanguage(string text, string[] tos, string from = null, CancellationToken cancellationToken = default)
         {
             object[] body = new object[] { new { Text = text } };
 
@@ -65,11 +65,11 @@ namespace AdeText.Services
                 endpoint += $"&to={to}";
             }
 
-            return await SendRequest<TranslateLanguage>(requestBody, endpoint);
+            return await SendRequest<TranslateLanguage>(requestBody, endpoint, cancellationToken);
         }
 
 
-        public async Task<Translation> TransliterateLanguage(string text, string toLanguage, string fromScript)
+        public async Task<Translation> TransliterateLanguage(string text, string toLanguage, string fromScript, CancellationToken cancellationToken = default )
         {
             object[] body = new object[] { new { Text = text } };
 
@@ -78,11 +78,11 @@ namespace AdeText.Services
             string endpoint = $"transliterate?api-version=3.0" +
                 $"&language={toLanguage}&fromScript={fromScript}&toScript=Latn";
 
-            return await SendRequest<Translation>(requestBody, endpoint);
+            return await SendRequest<Translation>(requestBody, endpoint, cancellationToken);
         }
 
 
-        public ILanguage GetSupportedLanguages(string[] scopes, string _etag = null)
+        public ILanguage GetSupportedLanguages(string[] scopes, string _etag = null, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -109,7 +109,7 @@ namespace AdeText.Services
                         .Add(new System.Net.Http.Headers.EntityTagHeaderValue(_etag));
                 }
 
-                HttpResponseMessage response = client.Send(request);
+                HttpResponseMessage response = client.Send(request,cancellationToken);
 
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
@@ -131,6 +131,10 @@ namespace AdeText.Services
             }
             catch (TranslationException ex)
             {
+                if (ex.StatusCode == HttpStatusCode.Unauthorized)
+                {
+                    return null;
+                }
                 Task.Delay(TimeSpan.FromSeconds(Math.Pow(3, requestSent))).Wait();
                 requestSent++;
                 if (requestSent < retryConfiguration && ex.StatusCode == HttpStatusCode.TooManyRequests 
@@ -153,7 +157,7 @@ namespace AdeText.Services
 
 
 
-        private async Task<TConcrete> SendRequest<TConcrete>(string requestBody, string endpoint) 
+        private async Task<TConcrete> SendRequest<TConcrete>(string requestBody, string endpoint, CancellationToken cancellationToken) 
             where TConcrete : class
         {
             try
@@ -166,11 +170,11 @@ namespace AdeText.Services
                 request.Headers.Add("Ocp-Apim-Subscription-Key", _key);
                 request.Headers.Add("Ocp-Apim-Subscription-Region", _location);
 
-                HttpResponseMessage response = await client.SendAsync(request);
+                HttpResponseMessage response = await client.SendAsync(request, cancellationToken);
 
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
-                    throw new Exception();
+                    throw new TranslationException(response.StatusCode);
                 }
 
                 var content = await response.Content.ReadAsStringAsync();
@@ -193,13 +197,18 @@ namespace AdeText.Services
 
                 return deserialiseContent;
             }
-            catch (Exception ex)
+            catch (TranslationException ex)
             {
-                Task.Delay(TimeSpan.FromSeconds(Math.Pow(3, requestSent))).Wait();
-                requestSent++;
-                if (requestSent < retryConfiguration)
+                if(ex.StatusCode == HttpStatusCode.Unauthorized)
                 {
-                    return await SendRequest<TConcrete>(requestBody, endpoint);
+                    return null;
+                }
+                Task.Delay(TimeSpan.FromSeconds(Math.Pow(3, requestSent)), cancellationToken).Wait();
+                requestSent++;
+                if (requestSent < retryConfiguration && ex.StatusCode == HttpStatusCode.TooManyRequests
+                    || ex.StatusCode == HttpStatusCode.ServiceUnavailable)
+                {
+                    return await SendRequest<TConcrete>(requestBody, endpoint,cancellationToken);
                 }
                 else
                 {

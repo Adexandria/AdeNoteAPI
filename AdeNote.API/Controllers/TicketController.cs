@@ -1,10 +1,11 @@
 ﻿using AdeNote.Infrastructure.Extension;
-using AdeNote.Infrastructure.Services;
-using AdeNote.Infrastructure.Utilities;
+using AdeNote.Infrastructure.Services.TicketSettings;
+using AdeNote.Infrastructure.Utilities.UserConfiguation;
+using AdeNote.Infrastructure.Utilities.ValidationAttributes;
 using AdeNote.Models.DTOs;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace AdeNote.Controllers
 {
@@ -30,7 +31,7 @@ namespace AdeNote.Controllers
 
         [HttpGet("users")]
         [Authorize("Owner")]
-        public IActionResult GetUserTickets(string name, int pageNumber = 1, int pageSize = 20)
+        public IActionResult GetUserTickets([Required(ErrorMessage = "Invalid name")] string name, int pageNumber = 1, int pageSize = 20)
         {
             var response = ticketService.FetchAllTickets(name, pageNumber, pageSize);
 
@@ -39,16 +40,16 @@ namespace AdeNote.Controllers
 
         [HttpGet("date")]
         [Authorize("Owner")]
-        public IActionResult SearchUserTickets(DateTime created, int pageNumber = 1, int pageSize = 20)
+        public IActionResult SearchUserTicketsByDate([ValidDateTime("Invalid date and time")] string created, int pageNumber = 1, int pageSize = 20)
         {
-            var response = ticketService.SearchTickets(created, pageNumber, pageSize);
+            var response = ticketService.SearchTicketsByDate(created, pageNumber, pageSize);
 
             return response.Response();
         }
 
         [HttpGet("status")]
         [Authorize("Owner")]
-        public IActionResult SearchUserTickets(string status, int pageNumber = 1, int pageSize = 20)
+        public IActionResult SearchUserTickets([Allow("Invalid status", "Pending", "Inreview", "Solved", "Unresolved")] string status, int pageNumber = 1, int pageSize = 20)
         {
             var response = ticketService.SearchTickets(status, pageNumber, pageSize);
 
@@ -57,7 +58,7 @@ namespace AdeNote.Controllers
 
         [HttpGet("{ticketId}")]
         [Authorize("Owner")]
-        public async Task<IActionResult> GetTicket(Guid ticketId)
+        public async Task<IActionResult> GetTicket([ValidGuid("Invalid ticket id")] Guid ticketId)
         {
             var response = await ticketService.FetchTicketById(ticketId);
 
@@ -65,7 +66,7 @@ namespace AdeNote.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> GenerateTickets([FromForm]TicketCreateDto newTicket, string email)
+        public async Task<IActionResult> GenerateTickets([FromForm]TicketCreateDto newTicket, [Required(ErrorMessage = "Invalid email")]  string email)
         {
             var ms = new MemoryStream
             {
@@ -91,7 +92,8 @@ namespace AdeNote.Controllers
 
         [HttpPut("{ticketId}")]
         [Authorize("Owner")]
-        public async Task<IActionResult> UpdateTicketStatus([FromQuery] string status, Guid ticketId)
+        public async Task<IActionResult> UpdateTicketStatus([FromQuery] [Allow("Invalid status", "Pending", "Inreview", "Solved", "Unresolved")]  string status,
+            [ValidGuid("Invalid ticket id")] Guid ticketId)
         {
             var response = await ticketService.UpdateTicket(status, CurrentUser, ticketId);
 

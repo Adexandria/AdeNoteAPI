@@ -1,5 +1,5 @@
 ﻿using AdeNote.Infrastructure.Repository;
-using AdeNote.Infrastructure.Services;
+using AdeNote.Infrastructure.Services.LabelSettings;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
 using Moq;

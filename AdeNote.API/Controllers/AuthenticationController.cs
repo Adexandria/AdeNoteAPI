@@ -1,6 +1,10 @@
 ﻿using AdeNote.Infrastructure.Extension;
-using AdeNote.Infrastructure.Services;
+using AdeNote.Infrastructure.Services.Authentication;
+using AdeNote.Infrastructure.Services.Notification;
+using AdeNote.Infrastructure.Services.UserSettings;
 using AdeNote.Infrastructure.Utilities;
+using AdeNote.Infrastructure.Utilities.EmailSettings;
+using AdeNote.Infrastructure.Utilities.UserConfiguation;
 using AdeNote.Infrastructure.Utilities.ValidationAttributes;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
@@ -33,8 +37,8 @@ namespace AdeNote.Controllers
         /// <param name="notificationService">Handles Notification</param>
         /// <param name="userIdentity">An interface that interacts with the user. This fetches the current user details</param>
         /// <param name="userService">An interface that manages users</param>
-        public AuthenticationController( IUserIdentity userIdentity,
-            IAuthService authService, INotificationService notificationService,IUserService userService) : base(userIdentity)
+        public AuthenticationController(IUserIdentity userIdentity,
+            IAuthService authService, INotificationService notificationService, IUserService userService) : base(userIdentity)
         {
             _authService = authService;
             _notificationService = notificationService;
@@ -63,7 +67,7 @@ namespace AdeNote.Controllers
         /// <response code ="500"> Returns if experiencing server issues</response>
         /// <response code ="401"> Returns if unauthorised</response>
         /// <returns>A name and email</returns>
-        [AllowAnonymous] 
+        [AllowAnonymous]
         [Consumes("application/json")]
         [Produces("application/json")]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
@@ -71,7 +75,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<CreateUserDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("sign-up")]
-        public async Task<IActionResult> SignUp(CreateUserDTO newUser)
+        public async Task<IActionResult> SignUp(CreateUserDTO newUser, CancellationToken cancellationToken)
         {
             var response = await _authService.SignUser(newUser);
             return response.Response();
@@ -139,7 +143,7 @@ namespace AdeNote.Controllers
         [Produces("application/json")]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<LoginDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("login")]
         public IActionResult Login(LoginDTO login)
@@ -167,13 +171,13 @@ namespace AdeNote.Controllers
         [Produces("application/json")]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<LoginDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("login/passwordless")]
-        public async Task<IActionResult> Login([FromQuery]string email)
+        public async Task<IActionResult> Login([FromQuery][Required(ErrorMessage = "Invalid email")] string email)
         {
-           var response = await _authService.LoginUserPasswordless(email);
-           return response.Response();
+            var response = await _authService.LoginUserPasswordless(email);
+            return response.Response();
         }
 
 
@@ -194,12 +198,12 @@ namespace AdeNote.Controllers
         [AllowAnonymous]
         [Consumes("application/json")]
         [Produces("application/json")]
-        [ProducesResponseType(typeof(ActionTokenResult<UserDTO>), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(ActionTokenResult<UserDTO>), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(ActionTokenResult<UserDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<UserDTO>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<UserDTO>), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<UserDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("login/recovery-codes")]
-        public async Task<IActionResult> LoginByRecoveryCodes([Required] string[] codes)
+        public async Task<IActionResult> LoginByRecoveryCodes([ValidCollection("Invalid recovery codes")] string[] codes)
         {
             var response = await _authService.LoginUserByRecoveryCodes(codes);
             if (response.NotSuccessful)
@@ -209,7 +213,7 @@ namespace AdeNote.Controllers
 
             if (resultResponse.Data != MFAType.none.ToString())
             {
-                var tokenResponse = _authService.GenerateMFAToken(response.Data.UserId, response.Data.Email, response.RefreshToken);
+                var tokenResponse = _authService.GenerateMFAToken(response.Data.UserId, response.Data.Email, response.Data.RefreshToken);
 
                 AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(8));
 
@@ -222,7 +226,7 @@ namespace AdeNote.Controllers
 
             SendNotification(response.Data.Email);
 
-            AddToCookie("AdeNote-RefreshToken", response.RefreshToken, DateTime.UtcNow.AddMonths(2));
+            AddToCookie("AdeNote-RefreshToken", response.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
 
             return response.Response();
         }
@@ -247,10 +251,10 @@ namespace AdeNote.Controllers
         [Produces("application/json")]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<LoginDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("login/passwordless/verify-token")]
-        public async Task<IActionResult> VerifyPasswordlessToken([FromQuery] string token)
+        public async Task<IActionResult> VerifyPasswordlessToken([FromQuery] string token, CancellationToken cancellationToken)
         {
             var response = await _authService.VerifyPasswordlessToken(token);
 
@@ -261,7 +265,7 @@ namespace AdeNote.Controllers
 
             if (resultResponse.Data != MFAType.none.ToString())
             {
-                var tokenResponse = _authService.GenerateMFAToken(response.Data.UserId, response.Data.Email, response.RefreshToken);
+                var tokenResponse = _authService.GenerateMFAToken(response.Data.UserId, response.Data.Email, response.Data.RefreshToken);
 
                 AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(8));
 
@@ -274,7 +278,7 @@ namespace AdeNote.Controllers
 
             SendNotification(response.Data.Email);
 
-            AddToCookie("AdeNote-RefreshToken", response.RefreshToken, DateTime.UtcNow.AddMonths(2));
+            AddToCookie("AdeNote-RefreshToken", response.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
 
             return response.Response();
         }
@@ -292,7 +296,7 @@ namespace AdeNote.Controllers
         [Produces("application/json")]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(typeof(ActionTokenResult<LoginDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<LoginDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("sso")]
         [Authorize("sso")]
@@ -313,7 +317,7 @@ namespace AdeNote.Controllers
 
             if (isExist.NotSuccessful)
             {
-                var response = await _authService.SignUser(new CreateUserDTO() { Email = userEmail , FirstName = names[0], LastName= names[1]},AuthType.microsoft);
+                var response = await _authService.SignUser(new CreateUserDTO() { Email = userEmail, FirstName = names[0], LastName = names[1] }, AuthType.microsoft);
 
                 if (response.NotSuccessful)
                     return response.Response();
@@ -351,7 +355,8 @@ namespace AdeNote.Controllers
         [HttpPost("change-password")]
         public async Task<IActionResult> ChangePassword(ChangePasswordDTO changePassword)
         {
-            var response = await _userService.UpdateUserPassword(CurrentUser, changePassword.CurrentPassword, changePassword.Password);
+            var response = await _userService.UpdateUserPassword(CurrentUser,
+                changePassword.CurrentPassword, changePassword.Password);
             return response.Response();
         }
 
@@ -378,12 +383,15 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("reset-password")]
-        public async Task<IActionResult> ResetPassword([FromBody]string password,[FromQuery] string token)
+        public async Task<IActionResult> ResetPassword([FromBody][Password] string password, [FromQuery] string token)
         {
             var tokenResponse = _authService.VerifyResetToken(token);
+
             if (tokenResponse.NotSuccessful)
                 return tokenResponse.Response();
-            var response = await _userService.ResetUserPassword(CurrentUser,password);
+
+            var response = await _userService.ResetUserPassword(CurrentUser, password);
+
             return response.Response();
         }
 
@@ -406,12 +414,15 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<string>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [HttpPost("reset-password-token")]
-        public async Task<IActionResult> GenerateResetPasswordToken(string email)
+        public async Task<IActionResult> GenerateResetPasswordToken([FromBody] string email, CancellationToken cancellationToken)
         {
             var userResponse = await _userService.GetUser(email);
+
             if(userResponse.NotSuccessful)
                 return userResponse.Response();
+
             var response = await _authService.GenerateResetPasswordToken(userResponse.Data.Id, email);
+
             return response.Response();
         }
         /// <summary>
@@ -438,7 +449,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("access-token")]
-        public async Task<IActionResult> GetAccessToken()
+        public async Task<IActionResult> GetAccessToken(CancellationToken cancellationToken)
         {
             var refreshToken = Request.Cookies["AdeNote-RefreshToken"];
 
@@ -476,7 +487,6 @@ namespace AdeNote.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Verifyemail([Required]string verificationToken)
         {
-
             var response = await _authService.ConfirmEmail(verificationToken);
 
             return response.Response();
@@ -688,7 +698,10 @@ namespace AdeNote.Controllers
 
             var response = await _authService.RevokeRefreshToken(CurrentUser, refreshToken);
 
-            Response.Cookies.Delete("AdeNote-RefreshToken");
+            if (response.IsSuccessful)
+            {
+                Response.Cookies.Delete("AdeNote-RefreshToken");
+            }
 
             return response.Response();
         }
@@ -824,7 +837,7 @@ namespace AdeNote.Controllers
 
             if (resultResponse.Data != MFAType.none.ToString())
             {
-                var tokenResponse = _authService.GenerateMFAToken(loginResponse.Data.UserId, login.Email, loginResponse.RefreshToken);
+                var tokenResponse = _authService.GenerateMFAToken(loginResponse.Data.UserId, login.Email, loginResponse.Data.RefreshToken);
 
                 AddToCookie("Multi-FactorToken", tokenResponse.Data, DateTime.UtcNow.AddMinutes(8));
 
@@ -837,9 +850,17 @@ namespace AdeNote.Controllers
 
             SendNotification(loginResponse.Data.Email);
 
-            AddToCookie("AdeNote-RefreshToken", loginResponse.RefreshToken, DateTime.UtcNow.AddMonths(2));
+            AddToCookie("AdeNote-RefreshToken", loginResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
 
-            return loginResponse.Response();
+            return Ok(new 
+            { 
+                accessToken = loginResponse.Data.AccessToken,
+                email = loginResponse.Data.Email,
+                recoveryCodes = loginResponse.Data.Codes,
+                firstName = loginResponse.Data.FirstName,
+                lastName = loginResponse.Data.LastName,
+                userId = loginResponse.Data.UserId
+            });
         }
     }
 }

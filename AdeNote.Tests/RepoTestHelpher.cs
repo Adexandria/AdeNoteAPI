@@ -1,6 +1,5 @@
 ﻿using AdeNote.Db;
 using AdeNote.Infrastructure.Repository;
-using AdeNote.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Moq;

@@ -1,12 +1,12 @@
 ﻿using AdeNote.Infrastructure.Extension;
-using AdeNote.Infrastructure.Services;
-using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models.DTOs;
 using AdeNote.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Asp.Versioning;
+using System.ComponentModel.DataAnnotations;
+using AdeNote.Infrastructure.Utilities.UserConfiguation;
+using AdeNote.Infrastructure.Services.Authentication;
 
 namespace AdeNote.Controllers
 {
@@ -137,7 +137,7 @@ namespace AdeNote.Controllers
         ///             
         /// </remarks>
         /// <param name="phoneNumber">User phone number</param>
-        /// <response code ="200"> Returns if phone number was added/response>
+        /// <response code ="200"> Returns if phone number was added</response>
         /// <response code ="400"> Returns if experiencing client issues</response>
         /// <response code ="500"> Returns if experiencing server issues</response>
         /// <response code ="404"> Returns if parameters not found</response>
@@ -150,7 +150,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("phonenumber")]
-        public async Task<IActionResult> AddPhoneNumber(string phoneNumber)
+        public async Task<IActionResult> AddPhoneNumber([Required(ErrorMessage = "Invalid phone number")]string phoneNumber)
         {
             var response = await _authService.SetPhoneNumber(CurrentUser, phoneNumber);
 
@@ -180,7 +180,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("verify-phonenumber")]
-        public async Task<IActionResult> VerifyPhoneNumber(string verificationCode)
+        public async Task<IActionResult> VerifyPhoneNumber([Required(ErrorMessage ="Invalid verification code")]string verificationCode)
         {
             var resultResponse = await _authService.IsPhoneNumberVerified(CurrentUser);
 

@@ -1,6 +1,7 @@
 ﻿using AdeNote.Infrastructure.Extension;
-using AdeNote.Infrastructure.Services;
-using AdeNote.Infrastructure.Utilities;
+using AdeNote.Infrastructure.Services.Statistics;
+using AdeNote.Infrastructure.Services.UserSettings;
+using AdeNote.Infrastructure.Utilities.UserConfiguation;
 using Asp.Versioning;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

@@ -1,11 +1,29 @@
 using AdeAuth.Services;
 using AdeNote.Db;
 using AdeNote.Infrastructure.Extension;
+using AdeNote.Infrastructure.Middlewares;
 using AdeNote.Infrastructure.Repository;
-using AdeNote.Infrastructure.Services;
+using AdeNote.Infrastructure.Services.Authentication;
+using AdeNote.Infrastructure.Services.Blob;
+using AdeNote.Infrastructure.Services.BookSetting;
+using AdeNote.Infrastructure.Services.EmailSettings;
+using AdeNote.Infrastructure.Services.Excel;
+using AdeNote.Infrastructure.Services.Export;
+using AdeNote.Infrastructure.Services.LabelSettings;
+using AdeNote.Infrastructure.Services.Notification;
+using AdeNote.Infrastructure.Services.PageSettings;
+using AdeNote.Infrastructure.Services.SmsSettings;
+using AdeNote.Infrastructure.Services.Statistics;
+using AdeNote.Infrastructure.Services.TicketSettings;
+using AdeNote.Infrastructure.Services.TranslationAI;
+using AdeNote.Infrastructure.Services.UserSettings;
+using AdeNote.Infrastructure.Services.Word;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Infrastructure.Utilities.AI;
+using AdeNote.Infrastructure.Utilities.AuthenticationFilter;
+using AdeNote.Infrastructure.Utilities.AuthorisationHandler;
 using AdeNote.Infrastructure.Utilities.HealthChecks;
+using AdeNote.Infrastructure.Utilities.UserConfiguation;
 using AdeNote.Models;
 using AdeText;
 using Asp.Versioning;
@@ -108,7 +126,7 @@ builder.Services.AddScoped<ISmsService, SmsService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<IUserService,UserService>();
 builder.Services.AddScoped<IHangfireUserRepository, HangfireUserRepository>();
-builder.Services.AddScoped<IExcel, AdeNote.Infrastructure.Services.ExcelService>();
+builder.Services.AddScoped<IExcel, AdeNote.Infrastructure.Services.Excel.ExcelService>();
 builder.Services.AddScoped<IExportService, ExportService>();
 builder.Services.AddScoped<IWordService,WordService>();
 builder.Services.AddScoped<ITextTranslation, TextTranslation>();
@@ -131,8 +149,7 @@ builder.Services.AddHangfire(config => config
 
 builder.Services.AddHealthChecks()
     .AddCheck<DatabaseHealthCheck>("CheckDatabase")
-    .AddCheck<APIHealthCheck>("CheckAPI")
-    ;
+    .AddCheck<APIHealthCheck>("CheckAPI");
 
 builder.Services.AddHangfireServer();
 builder.Services.AddDbContext<NoteDbContext>(options => options
@@ -192,10 +209,10 @@ builder.Services.AddHttpLogging(logging =>
 );
 
 
-
-new Language(builder.Services.BuildServiceProvider()).GetLanguages();
-
 var app = builder.Build();
+
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 // Configure the HTTP request pipeline.
 var apiVersionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
@@ -212,10 +229,6 @@ app.UseSwaggerUI(setupAction =>
                        description.GroupName.ToUpperInvariant());
     }
 });
-if (app.Environment.IsDevelopment())
-{
-    app.UseDeveloperExceptionPage();
-}
 app.UseHttpLogging();
 app.UseHttpsRedirection();
 
@@ -243,5 +256,7 @@ app.MapControllers();
 app.CreateTables();
 app.SeedHangFireUser(hangfireUserConfiguration);
 app.SeedSuperAdmin(defaultConfiguration);
+
+new Language(builder.Services.BuildServiceProvider()).GetLanguages();
 app.Run();
 

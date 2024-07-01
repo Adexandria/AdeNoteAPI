@@ -1,5 +1,6 @@
 ﻿using AdeNote.Infrastructure.Extension;
-using AdeNote.Infrastructure.Services;
+using AdeNote.Infrastructure.Services.LabelSettings;
+using AdeNote.Infrastructure.Utilities.ValidationAttributes;
 using AdeNote.Models.DTOs;
 using Asp.Versioning;
 using Microsoft.AspNetCore.Authorization;
@@ -74,7 +75,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<LabelDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpGet("{labelId}")]
-        public async Task<IActionResult> GetLabel(Guid labelId)
+        public async Task<IActionResult> GetLabel([ValidGuid("Invalid label id")] Guid labelId)
         {
             var response = await _labelService.GetById(labelId);
             return response.Response();
@@ -129,7 +130,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPut("{labelId}")]
-        public async Task<IActionResult> UpdateLabel(Guid labelId,LabelUpdateDTO updateLabel)
+        public async Task<IActionResult> UpdateLabel([ValidGuid("Invalid label id")] Guid labelId,LabelUpdateDTO updateLabel)
         {
             var response = await _labelService.Update(labelId, updateLabel);
             return response.Response();
@@ -153,7 +154,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpDelete("{labelId}")]
-        public async Task<IActionResult> DeleteLabel(Guid labelId)
+        public async Task<IActionResult> DeleteLabel([ValidGuid("Invalid label id")]Guid labelId)
         {
             var response = await _labelService.Remove(labelId);
             return response.Response();

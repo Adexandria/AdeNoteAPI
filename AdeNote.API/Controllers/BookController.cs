@@ -1,6 +1,9 @@
 ﻿using AdeNote.Infrastructure.Extension;
-using AdeNote.Infrastructure.Services;
-using AdeNote.Infrastructure.Utilities;
+using AdeNote.Infrastructure.Services.BookSetting;
+using AdeNote.Infrastructure.Services.Excel;
+using AdeNote.Infrastructure.Services.Export;
+using AdeNote.Infrastructure.Utilities.UserConfiguation;
+using AdeNote.Infrastructure.Utilities.ValidationAttributes;
 using AdeNote.Models.DTOs;
 using Asp.Versioning;
 using Microsoft.AspNetCore.Authorization;
@@ -88,7 +91,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<BookDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpGet("{bookId}")]
-        public async Task<IActionResult> GetBook([Required] Guid bookId)
+        public async Task<IActionResult> GetBook(Guid bookId)
         {
             var response = await _bookService.GetById(bookId, CurrentUser);
             return response.Response();
@@ -106,13 +109,13 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<BookDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> ExportBooks([Required] string extensionType, string sheetName = "Adenote")
+        public async Task<IActionResult> ExportBooks([Allow("Invalid extension type","xlsx","xls","csv","docx")]string extensionType, CancellationToken cancellationToken, string sheetName = "Adenote")
         {
             var bookResponse = await _bookService.GetAll(CurrentUser);
-            if (bookResponse.NotSuccessful)
+            if (!bookResponse.Data.Any())
                 return bookResponse.Response();
 
-            var response =  await _exportService.ExportEntities(extensionType, sheetName,bookResponse.Data);
+            var response =  await _exportService.ExportEntities(extensionType, sheetName,bookResponse.Data,cancellationToken);
             return response.Response();
         }
 
@@ -128,7 +131,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<BookDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("import")]
-        public async Task<IActionResult> ImportBooks(IFormFile bookSheet, [Required] int sheetName = 0)
+        public async Task<IActionResult> ImportBooks(IFormFile bookSheet, [ValidInt("Invalid sheet name", 0)]int sheetName = 0)
         {
             var ms = new MemoryStream();
             bookSheet?.CopyToAsync(ms);
@@ -164,7 +167,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost]
-        public async Task<IActionResult> CreateBook(BookCreateDTO createBook)
+        public async Task<IActionResult> CreateBook(BookCreateDTO createBook, CancellationToken cancellationToken)
         {
             var response = await _bookService.Add(CurrentUser, createBook);
             return response.Response();
@@ -196,7 +199,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPut("{bookId}")]
-        public async Task<IActionResult> UpdateBook(Guid bookId,BookUpdateDTO bookUpdate)
+        public async Task<IActionResult> UpdateBook(Guid bookId,BookUpdateDTO bookUpdate, CancellationToken cancellationToken)
         {
             var response = await _bookService.Update(bookId,CurrentUser,bookUpdate);
             return response.Response();
@@ -223,7 +226,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpDelete("{bookId}")]
-        public async Task<IActionResult> DeleteBook(Guid bookId)
+        public async Task<IActionResult> DeleteBook([ValidGuid("Invalid book id")]Guid bookId, CancellationToken cancellationToken)
         {
             var response = await _bookService.Remove(bookId, CurrentUser);
             return response.Response();
