@@ -1,0 +1,11 @@
+<map id="AdeNote.Infrastructure.Repository.IRepository.Remove" name="AdeNote.Infrastructure.Repository.IRepository.Remove">
+<area shape="rect" id="node1" title="Remove an existing object" alt="" coords="417,263,664,304"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#ad56006099b1f8ed076adfb27d4a31663" title=" " alt="" coords="42,5,333,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a9cfadde31812d4dbfe59a7a7529f0d04" title=" " alt="" coords="56,71,319,127"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a2dbac0dc61d3924b102383a9af80fb82" title=" " alt="" coords="53,152,321,193"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a811177a417d7c00208466e7186c762a9" title=" " alt="" coords="53,218,321,274"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#acb860bb5d10ed2d7df3c431ae9851a62" title="Deletes an existing book" alt="" coords="65,299,309,340"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a9eda296d25b2515b4f99ba303e2b215f" title="Removes a particular page" alt="" coords="64,364,311,405"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a221c29b77985940b8beda2dea14a892d" title="Removes an existing label" alt="" coords="60,429,315,471"/>
+<area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a13062f2ff2f6d75b4b03954bf8354950" title=" " alt="" coords="5,495,369,536"/>
+</map>
