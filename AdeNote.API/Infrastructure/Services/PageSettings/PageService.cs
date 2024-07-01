@@ -286,15 +286,15 @@ namespace AdeNote.Infrastructure.Services.PageSettings
         public async Task<ActionResult<TranslationDto>> TranslatePage(Guid bookId, Guid userId, Guid pageId, string translatedLanguage, CancellationToken cancellationToken = default)
         {
             if (bookId == Guid.Empty || pageId == Guid.Empty || userId == Guid.Empty)
-                return await Task.FromResult(ActionResult<TranslationDto>.Failed("Invalid id", StatusCodes.Status400BadRequest));
+                return ActionResult<TranslationDto>.Failed("Invalid id", StatusCodes.Status400BadRequest);
 
             var currentBook = await bookRepository.GetAsync(bookId, userId);
             if (currentBook == null)
-                return await Task.FromResult(ActionResult<TranslationDto>.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound));
+                return ActionResult<TranslationDto>.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound);
 
             var currentBookPage = await pageRepository.GetBookPage(bookId, pageId);
             if (currentBookPage == null)
-                return await Task.FromResult(ActionResult<TranslationDto>.Failed("page doesn't exist", (int)HttpStatusCode.NotFound));
+                return ActionResult<TranslationDto>.Failed("page doesn't exist", (int)HttpStatusCode.NotFound);
 
 
             var translationLanguages = memoryCache.Get("translation_languages") as Dictionary<string, string>;
@@ -307,8 +307,8 @@ namespace AdeNote.Infrastructure.Services.PageSettings
                 var languagesResponse = textTranslation.GetSupportedLanguages("translation", "transliteration");
                 if (languagesResponse.NotSuccessful)
                 {
-                    return await Task.FromResult(ActionResult<TranslationDto>
-                    .Failed("Failed to fetch languages", StatusCodes.Status400BadRequest));
+                    return ActionResult<TranslationDto>
+                    .Failed("Failed to fetch languages", StatusCodes.Status400BadRequest);
                 }
                 memoryCache.Set("translation_languages", languagesResponse.Data.TranslationLanguages);
                 memoryCache.Set("transliteration_languages", languagesResponse.Data.TransliterationLanguages);
@@ -322,16 +322,16 @@ namespace AdeNote.Infrastructure.Services.PageSettings
 
             if (translationLanguage == null)
             {
-                return await Task.FromResult(ActionResult<TranslationDto>
-                    .Failed("The language is not supported", StatusCodes.Status400BadRequest));
+                return ActionResult<TranslationDto>
+                    .Failed("The language is not supported", StatusCodes.Status400BadRequest);
             }
 
             var translatedResponse = await textTranslation.TranslatePage(currentBookPage.Content, translationLanguage, cancellationToken);
 
             if (translatedResponse.NotSuccessful)
             {
-                return await Task.FromResult(ActionResult<TranslationDto>
-                  .Failed("Failed to translate page", StatusCodes.Status400BadRequest));
+                return ActionResult<TranslationDto>
+                  .Failed(translatedResponse.Errors.FirstOrDefault(), StatusCodes.Status400BadRequest);
             }
 
             var detectedLanguage = translationLanguages.FirstOrDefault(s => s.Value.ToUpper() == translatedResponse.Data[1].ToUpper()).Key ?? translatedResponse.Data[1];
@@ -347,8 +347,8 @@ namespace AdeNote.Infrastructure.Services.PageSettings
 
                 if (transliterationResponse.NotSuccessful)
                 {
-                    return await Task.FromResult(ActionResult<TranslationDto>
-                     .Failed("Failed to translate page", StatusCodes.Status400BadRequest));
+                    return ActionResult<TranslationDto>
+                     .Failed(transliterationResponse.Errors.FirstOrDefault(), StatusCodes.Status400BadRequest);
                 }
 
                 return ActionResult<TranslationDto>.SuccessfulOperation(new TranslationDto(currentBookPage.Content,
@@ -368,6 +368,5 @@ namespace AdeNote.Infrastructure.Services.PageSettings
         public IBookRepository bookRepository;
         public ILabelRepository labelRepository;
         public ILabelPageRepository labelPageRepository;
-
     }
 }

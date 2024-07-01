@@ -131,6 +131,10 @@ namespace AdeText.Services
             }
             catch (TranslationException ex)
             {
+                if (ex.StatusCode == HttpStatusCode.Unauthorized)
+                {
+                    return null;
+                }
                 Task.Delay(TimeSpan.FromSeconds(Math.Pow(3, requestSent))).Wait();
                 requestSent++;
                 if (requestSent < retryConfiguration && ex.StatusCode == HttpStatusCode.TooManyRequests 
@@ -170,7 +174,7 @@ namespace AdeText.Services
 
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
-                    throw new Exception();
+                    throw new TranslationException(response.StatusCode);
                 }
 
                 var content = await response.Content.ReadAsStringAsync();
@@ -193,11 +197,16 @@ namespace AdeText.Services
 
                 return deserialiseContent;
             }
-            catch (Exception ex)
+            catch (TranslationException ex)
             {
+                if(ex.StatusCode == HttpStatusCode.Unauthorized)
+                {
+                    return null;
+                }
                 Task.Delay(TimeSpan.FromSeconds(Math.Pow(3, requestSent)), cancellationToken).Wait();
                 requestSent++;
-                if (requestSent < retryConfiguration)
+                if (requestSent < retryConfiguration && ex.StatusCode == HttpStatusCode.TooManyRequests
+                    || ex.StatusCode == HttpStatusCode.ServiceUnavailable)
                 {
                     return await SendRequest<TConcrete>(requestBody, endpoint,cancellationToken);
                 }

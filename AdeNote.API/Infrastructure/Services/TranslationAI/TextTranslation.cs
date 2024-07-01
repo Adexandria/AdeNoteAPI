@@ -21,19 +21,19 @@ namespace AdeNote.Infrastructure.Services.TranslationAI
 
             if (detectedlanguage == null)
             {
-                return ActionResult<string[]>.Failed($"Failed to translate to {translatedLanguage}");
+                return ActionResult<string[]>.Failed($"Failed to translate to {translatedLanguage}, Service Unavailable Try again later", StatusCodes.Status400BadRequest);
             }
 
             if (detectedlanguage.Language == translatedLanguage)
             {
-                return ActionResult<string[]>.Failed($"Failed to translate to {translatedLanguage}, Text is already in this language");
+                return ActionResult<string[]>.Failed($"Failed to translate to {translatedLanguage}, Text is already in this language", StatusCodes.Status400BadRequest);
             }
 
             var translatedText = await _translateClient.TranslateLanguage(pageContent, translatedLanguage, detectedlanguage.Language, cancellationToken);
 
             if (!translatedText.Translations.Any())
             {
-                return ActionResult<string[]>.Failed($"Failed to translate to {translatedLanguage}");
+                return ActionResult<string[]>.Failed($"Failed to translate to {translatedLanguage}, Service Unavailable Try again later", StatusCodes.Status400BadRequest);
             }
 
             return ActionResult<string[]>.SuccessfulOperation
