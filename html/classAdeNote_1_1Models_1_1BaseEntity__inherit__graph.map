@@ -1,0 +1,12 @@
+<map id="AdeNote.Models.BaseEntity" name="AdeNote.Models.BaseEntity">
+<area shape="rect" id="node1" title=" " alt="" coords="5,183,208,209"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Models_1_1BaseClass.html" title="A base class that includes the id" alt="" coords="269,107,469,133"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Models_1_1HangfireUser.html" title=" " alt="" coords="260,157,479,184"/>
+<area shape="rect" id="node9" href="$classAdeNote_1_1Models_1_1RecoveryCode.html" title=" " alt="" coords="256,208,483,235"/>
+<area shape="rect" id="node10" href="$classAdeNote_1_1Models_1_1RefreshToken.html" title=" " alt="" coords="259,259,479,285"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Models_1_1Book.html" title="A book object" alt="" coords="533,5,700,32"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Models_1_1Label.html" title="A label model" alt="" coords="533,56,701,83"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Models_1_1Page.html" title="Page model" alt="" coords="535,107,699,133"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Models_1_1Ticket.html" title=" " alt="" coords="531,157,703,184"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Models_1_1User.html" title=" " alt="" coords="535,208,698,235"/>
+</map>

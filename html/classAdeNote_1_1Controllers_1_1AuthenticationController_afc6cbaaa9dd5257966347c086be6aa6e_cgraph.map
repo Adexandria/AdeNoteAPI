@@ -1,0 +1,12 @@
+<map id="AdeNote.Controllers.AuthenticationController.LoginSSO" name="AdeNote.Controllers.AuthenticationController.LoginSSO">
+<area shape="rect" id="node1" title="Logins user" alt="" coords="5,196,257,237"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1IUserService.html#a056ad377c0b3da455cc74f3d3d1098f0" title=" " alt="" coords="305,131,573,172"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="313,196,565,237"/>
+<area shape="rect" id="node10" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a34fa505918eee7081054699a93eb3e88" title=" " alt="" coords="307,261,572,303"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#aaf76f4e77c5e74af2928f3296f7828ed" title="Add data to cookie" alt="" coords="649,5,901,47"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a16f0fab35e143dc859418eae87729007" title=" " alt="" coords="641,71,908,127"/>
+<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#aaf94eb652fece547262e34ca1b5edbb3" title="Checks if MFA has been enabled for the user using user id." alt="" coords="621,151,928,207"/>
+<area shape="rect" id="node7" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#af9faa7aced51916bf533fdfd0fbbad21" title=" " alt="" coords="639,232,911,273"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a5bc24a38f2a0d984148fd747b4d5c226" title=" " alt="" coords="649,297,901,339"/>
+<area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="654,363,895,404"/>
+</map>
