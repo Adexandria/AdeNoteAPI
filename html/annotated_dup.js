@@ -129,6 +129,9 @@ var annotated_dup =
             [ "RoleRequirement", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirement.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirement" ],
             [ "RoleRequirementHandler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirementHandler.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirementHandler" ]
           ] ],
+          [ "CacheModel", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1CacheModel.html", [
+            [ "Cache", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CacheModel_1_1Cache.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CacheModel_1_1Cache" ]
+          ] ],
           [ "EmailSettings", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings.html", [
             [ "Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings_1_1Email.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings_1_1Email" ],
             [ "EmailConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings_1_1EmailConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings_1_1EmailConfiguration" ]

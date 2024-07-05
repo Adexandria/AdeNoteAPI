@@ -40,7 +40,7 @@ var NAVTREE =
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
-        [ "Properties", "functions_prop.html", null ]
+        [ "Properties", "functions_prop.html", "functions_prop" ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -57,12 +57,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "20240430084252__firstmigration_8Designer_8cs.html",
-"NoteDbContext_8cs.html",
-"classAdeNote_1_1Controllers_1_1PageController.html",
-"classAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1ExportService.html#a7c010006d12320661a8e95e2c9071227",
-"classAdeNote_1_1Migrations_1_1addticket.html#a80fc0ef8bcd8da5beadef1784fac41e2",
-"dir_6edd8ff1cdc96bf77cceb00776c29124.html",
-"namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8afc35fdc70d5fc69d269883a822c7a53e"
+"NoteDbContextModelSnapshot_8cs.html",
+"classAdeNote_1_1Controllers_1_1LabelController.html#aa863fdf110a0e98549478150d766479a",
+"classAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1ExportService.html#a02df722485be0dbc27cdde451444ffcf",
+"classAdeNote_1_1Migrations_1_1addrole.html#a5c0c11e386eb1657ae0fa5d444b94755",
+"dir_3bdc45994b62d0923218a8948c0eb398.html",
+"namespaceAdeNote_1_1Db.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

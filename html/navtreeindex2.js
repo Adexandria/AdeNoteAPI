@@ -1,5 +1,8 @@
 var NAVTREEINDEX2 =
 {
+"classAdeNote_1_1Controllers_1_1LabelController.html#aa863fdf110a0e98549478150d766479a":[1,0,0,0,4,5],
+"classAdeNote_1_1Controllers_1_1LabelController.html#ac6e2bc544e337c91697eb50c26a3ec71":[1,0,0,0,4,1],
+"classAdeNote_1_1Controllers_1_1LabelController.html#af7f09b63fc909d025b044a473bd13805":[1,0,0,0,4,3],
 "classAdeNote_1_1Controllers_1_1PageController.html":[1,0,0,0,5],
 "classAdeNote_1_1Controllers_1_1PageController.html#a063ab0f8cc6615daa52833f679371754":[1,0,0,0,5,2],
 "classAdeNote_1_1Controllers_1_1PageController.html#a2fa8fdac292866eaa9bb82e06b49fb12":[1,0,0,0,5,5],
@@ -92,7 +95,8 @@ var NAVTREEINDEX2 =
 "classAdeNote_1_1Infrastructure_1_1Repository_1_1HangfireUserRepository.html":[1,0,0,2,3,1],
 "classAdeNote_1_1Infrastructure_1_1Repository_1_1HangfireUserRepository.html#a3576436e059f6805149c8b16fae562b4":[1,0,0,2,3,1,2],
 "classAdeNote_1_1Infrastructure_1_1Repository_1_1HangfireUserRepository.html#a560aaa6efce5d3ea6e2762679ae6fc42":[1,0,0,2,3,1,0],
-"classAdeNote_1_1Infrastructure_1_1Repository_1_1HangfireUserRepository.html#aa9639ede227ad6722a3d5bd1cdb0f097":[1,0,0,2,3,1,4],
+"classAdeNote_1_1Infrastructure_1_1Repository_1_1HangfireUserRepository.html#aa9639ede227ad6722a3d5bd1cdb0f097":[1,0,0,2,3,1,5],
+"classAdeNote_1_1Infrastructure_1_1Repository_1_1HangfireUserRepository.html#acbf0a071cbe4ae8e25733acc4eb492fb":[1,0,0,2,3,1,4],
 "classAdeNote_1_1Infrastructure_1_1Repository_1_1HangfireUserRepository.html#adc44d8f5fd2708a690c06f014aec411e":[1,0,0,2,3,1,3],
 "classAdeNote_1_1Infrastructure_1_1Repository_1_1HangfireUserRepository.html#ae1310ad701196497848c12393c27b9eb":[1,0,0,2,3,1,1],
 "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html":[1,0,0,2,3,12],
@@ -245,9 +249,5 @@ var NAVTREEINDEX2 =
 "classAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1ExcelService.html#ad0119d730a9fdb47d14f703e77a866ca":[1,0,0,2,4,4,0,3],
 "classAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1ExcelService.html#ad54177d88d5165621e59e8f52fce2520":[1,0,0,2,4,4,0,2],
 "classAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1ExcelService.html#adb0e0d2909aa8586453117a2a02ad4c5":[1,0,0,2,4,4,0,0],
-"classAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1ExportService.html":[1,0,0,2,4,5,0],
-"classAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1ExportService.html#a02df722485be0dbc27cdde451444ffcf":[1,0,0,2,4,5,0,3],
-"classAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1ExportService.html#a215a13c1ffff96caa4d0ffadcc2a31f6":[1,0,0,2,4,5,0,2],
-"classAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1ExportService.html#a416a6ada6e1069e3a495125331ca3fb5":[1,0,0,2,4,5,0,4],
-"classAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1ExportService.html#a426d22f7771ea0badd4d69bd1bdddf60":[1,0,0,2,4,5,0,0]
+"classAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1ExportService.html":[1,0,0,2,4,5,0]
 };

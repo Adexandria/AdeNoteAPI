@@ -70,6 +70,9 @@ var hierarchy =
     [ "AdeNote.Infrastructure.Services.BookSetting.IBookService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1IBookService.html", [
       [ "AdeNote.Infrastructure.Services.BookSetting.BookService", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html", null ]
     ] ],
+    [ "ICache", null, [
+      [ "AdeNote.Infrastructure.Utilities.CacheModel.Cache", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CacheModel_1_1Cache.html", null ]
+    ] ],
     [ "IConfigureNamedOptions", null, [
       [ "AdeNote.Infrastructure.Extension.SwaggerOptions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html", null ]
     ] ],

@@ -3,6 +3,7 @@ var namespaceAdeNote_1_1Infrastructure_1_1Utilities =
     [ "AI", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1AI.html", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1AI" ],
     [ "AuthenticationFilter", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter.html", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter" ],
     [ "AuthorisationHandler", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler.html", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler" ],
+    [ "CacheModel", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1CacheModel.html", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1CacheModel" ],
     [ "EmailSettings", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings.html", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings" ],
     [ "ExcelSettings", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1ExcelSettings.html", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1ExcelSettings" ],
     [ "HealthChecks", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks.html", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks" ],

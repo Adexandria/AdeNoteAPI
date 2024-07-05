@@ -43,6 +43,7 @@ var Program_8cs =
     [ "AddScoped< IWordService, WordService >", "Program_8cs.html#a673eaa738d33f4152f6ad2fec6372729", null ],
     [ "AddSingleton", "Program_8cs.html#ad1861579dad56e4666fe51d68a6e3d18", null ],
     [ "AddSingleton", "Program_8cs.html#a3981764c656b0785b1ae83b3acbd0d3a", null ],
+    [ "AddSingleton", "Program_8cs.html#a2f3954b9fef6070eb9ce00bf4b58b819", null ],
     [ "AddSingleton", "Program_8cs.html#a082f7551c9eee18ddd0aee67c85591a6", null ],
     [ "AddSwaggerGen", "Program_8cs.html#ab75edc3b5613643a6f0a45dff585da82", null ],
     [ "ConfigureOptions< SwaggerOptions >", "Program_8cs.html#a73f3690588f4876843046269be482027", null ],

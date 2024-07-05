@@ -23,8 +23,8 @@ var searchData=
   ['_5fsmsconfig_42',['_smsConfig',['../classAdeNote_1_1Infrastructure_1_1Services_1_1SmsSettings_1_1SmsService.html#a992059d7663f6910d79e56d479bc575b',1,'AdeNote::Infrastructure::Services::SmsSettings::SmsService']]],
   ['_5ftranslateclient_43',['_translateClient',['../classAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1TextTranslation.html#a461f21e7bcb7c531cad8a82451044850',1,'AdeNote::Infrastructure::Services::TranslationAI::TextTranslation']]],
   ['_5fuserrepository_44',['_userRepository',['../classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html#a74eccbf3efeba44be0426f91f94443bd',1,'AdeNote::Infrastructure::Services::UserSettings::UserService']]],
-  ['_5fusers_45',['_users',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1DashboardAuthenticationFilter.html#ab3e473eab633ee02766beef79a1b1a2a',1,'AdeNote::Infrastructure::Utilities::AuthenticationFilter::DashboardAuthenticationFilter']]],
-  ['_5fuserservice_46',['_userService',['../classAdeNote_1_1Controllers_1_1AuthenticationController.html#af8a19b56eed7f52e6578675e22e9b3a9',1,'AdeNote::Controllers::AuthenticationController']]],
+  ['_5fuserservice_45',['_userService',['../classAdeNote_1_1Controllers_1_1AuthenticationController.html#af8a19b56eed7f52e6578675e22e9b3a9',1,'AdeNote::Controllers::AuthenticationController']]],
+  ['_5fusersrepository_46',['_usersRepository',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1DashboardAuthenticationFilter.html#a8702cc5e7596a982b1b053c2ff4756a4',1,'AdeNote::Infrastructure::Utilities::AuthenticationFilter::DashboardAuthenticationFilter']]],
   ['_5fvalues_47',['_values',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1AllowAttribute.html#ab2b4d5607d45dba1e73c5bec631d3b9e',1,'AdeNote::Infrastructure::Utilities::ValidationAttributes::AllowAttribute']]],
   ['_5fwordservice_48',['_wordService',['../classAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1ExportService.html#a7c010006d12320661a8e95e2c9071227',1,'AdeNote::Infrastructure::Services::Export::ExportService']]]
 ];
