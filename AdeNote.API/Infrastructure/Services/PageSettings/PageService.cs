@@ -1,11 +1,11 @@
-﻿using AdeNote.Infrastructure.Extension;
+﻿using AdeCache.Services;
+using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Services.TranslationAI;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
 using Mapster;
-using Microsoft.Extensions.Caching.Memory;
 using System.Net;
 
 namespace AdeNote.Infrastructure.Services.PageSettings
@@ -31,14 +31,14 @@ namespace AdeNote.Infrastructure.Services.PageSettings
         /// <param name="_labelPageRepository">>Handles persisting and querying page labels</param>
         public PageService(IPageRepository _pageRepository,
             IBookRepository _bookRepository, ILabelRepository _labelRepository, ILabelPageRepository _labelPageRepository,
-            ITextTranslation _textTranslation, IServiceProvider serviceProvider)
+            ITextTranslation _textTranslation, ICacheService _cacheService)
         {
             pageRepository = _pageRepository;
             bookRepository = _bookRepository;
             labelRepository = _labelRepository;
             labelPageRepository = _labelPageRepository;
             textTranslation = _textTranslation;
-            memoryCache = serviceProvider.GetRequiredService<IMemoryCache>();
+            cacheService = _cacheService;
         }
 
         /// <summary>
@@ -297,9 +297,9 @@ namespace AdeNote.Infrastructure.Services.PageSettings
                 return ActionResult<TranslationDto>.Failed("page doesn't exist", (int)HttpStatusCode.NotFound);
 
 
-            var translationLanguages = memoryCache.Get("translation_languages") as Dictionary<string, string>;
+            var translationLanguages = cacheService.Get<Dictionary<string,string>>("translation_languages");
 
-            var transliterationLanguages = memoryCache.Get("transliteration_languages") as Dictionary<string, string>;
+            var transliterationLanguages = cacheService.Get<Dictionary<string, string>>("transliteration_languages");
 
 
             if (translationLanguages == null)
@@ -310,9 +310,9 @@ namespace AdeNote.Infrastructure.Services.PageSettings
                     return ActionResult<TranslationDto>
                     .Failed("Failed to fetch languages", StatusCodes.Status400BadRequest);
                 }
-                memoryCache.Set("translation_languages", languagesResponse.Data.TranslationLanguages);
-                memoryCache.Set("transliteration_languages", languagesResponse.Data.TransliterationLanguages);
-                memoryCache.Set("etag", languagesResponse.Data.ETag);
+                cacheService.Set("translation_languages", languagesResponse.Data.TranslationLanguages);
+                cacheService.Set("transliteration_languages", languagesResponse.Data.TransliterationLanguages);
+                cacheService.Set("etag", languagesResponse.Data.ETag);
 
                 translationLanguages = languagesResponse.Data.TranslationLanguages;
                 transliterationLanguages = languagesResponse.Data.TransliterationLanguages;
@@ -362,7 +362,7 @@ namespace AdeNote.Infrastructure.Services.PageSettings
                 detectedLanguage, translatedLanguage));
         }
 
-        public IMemoryCache memoryCache;
+        public ICacheService cacheService;
         public ITextTranslation textTranslation;
         public IPageRepository pageRepository;
         public IBookRepository bookRepository;

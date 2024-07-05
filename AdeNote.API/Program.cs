@@ -1,4 +1,5 @@
 using AdeAuth.Services;
+using AdeCache;
 using AdeNote.Db;
 using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Middlewares;
@@ -22,6 +23,7 @@ using AdeNote.Infrastructure.Utilities;
 using AdeNote.Infrastructure.Utilities.AI;
 using AdeNote.Infrastructure.Utilities.AuthenticationFilter;
 using AdeNote.Infrastructure.Utilities.AuthorisationHandler;
+using AdeNote.Infrastructure.Utilities.CacheModel;
 using AdeNote.Infrastructure.Utilities.HealthChecks;
 using AdeNote.Infrastructure.Utilities.UserConfiguation;
 using AdeNote.Models;
@@ -36,7 +38,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.HttpLogging;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
@@ -152,6 +156,9 @@ builder.Services.AddHealthChecks()
     .AddCheck<APIHealthCheck>("CheckAPI");
 
 builder.Services.AddHangfireServer();
+
+builder.Services.AddSingleton((_) => new CacheFactory().CreateService(new Cache(configuration["CacheHostName"],
+    builder.Services.BuildServiceProvider().GetService<IMemoryCache>())));
 builder.Services.AddDbContext<NoteDbContext>(options => options
 .UseSqlServer(connectionString));
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
