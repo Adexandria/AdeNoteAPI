@@ -1,4 +1,5 @@
-﻿using AdeNote.Infrastructure.Services.TranslationAI;
+﻿using AdeCache.Services;
+using AdeNote.Infrastructure.Services.TranslationAI;
 using AdeText.Models;
 using Hangfire;
 using Microsoft.Extensions.Caching.Memory;
@@ -22,13 +23,13 @@ namespace AdeNote.Infrastructure.Utilities.AI
             {
                 var textTranslation = serviceProvider.GetRequiredService<ITextTranslation>();
 
-                var memoryCache = serviceProvider.GetRequiredService<IMemoryCache>();
+                var cacheService = serviceProvider.GetRequiredService<ICacheService>();
 
                 var loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();
 
                 var logger = loggerFactory.CreateLogger<Language>();
 
-                var etag = memoryCache.Get("etag")?.ToString();
+                var etag = cacheService.Get<string>("etag")?.ToString();
 
                 ActionResult<ILanguage> response = null;
 
@@ -44,9 +45,9 @@ namespace AdeNote.Infrastructure.Utilities.AI
                 if (response.IsSuccessful)
                 {
                     logger.LogInformation("All languages updated successfully");
-                    memoryCache.Set("etag", response.Data.ETag);
-                    memoryCache.Set("translation_languages", response.Data.TranslationLanguages);
-                    memoryCache.Set("transliteration_languages", response.Data.TransliterationLanguages);
+                    cacheService.Set("etag", response.Data.ETag);
+                    cacheService.Set("translation_languages", response.Data.TranslationLanguages);
+                    cacheService.Set("transliteration_languages", response.Data.TransliterationLanguages);
                     return;
                 }
 

@@ -1,9 +1,9 @@
 ﻿using AdeAuth.Services;
 using AdeNote.Db;
+using AdeNote.Infrastructure.Repository;
 using AdeNote.Models;
 using Hangfire.Annotations;
 using Hangfire.Dashboard;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Primitives;
 using System.Net.Http.Headers;
 using System.Text;
@@ -16,7 +16,7 @@ namespace AdeNote.Infrastructure.Utilities.AuthenticationFilter
 
         public DashboardAuthenticationFilter(IServiceProvider serviceProvider)
         {
-            _users = serviceProvider.GetRequiredService<NoteDbContext>().HangfireUsers ?? throw new NullReferenceException("Unregistered service");
+            _usersRepository = serviceProvider.GetRequiredService<IHangfireUserRepository>() ?? throw new NullReferenceException("Unregistered service");
             _passwordManager = serviceProvider.GetRequiredService<IPasswordManager>() ?? throw new NullReferenceException("Unregistered service");
             var loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>() ?? throw new NullReferenceException("Unregistered service");
             _logger = loggerFactory.CreateLogger<DashboardAuthenticationFilter>();
@@ -25,7 +25,6 @@ namespace AdeNote.Infrastructure.Utilities.AuthenticationFilter
         public bool Authorize([NotNull] DashboardContext context)
         {
             var httpContext = context.GetHttpContext();
-
             var values = httpContext.Request.Headers["Authorization"];
 
             if (string.IsNullOrEmpty(values) || string.IsNullOrWhiteSpace(values))
@@ -63,8 +62,9 @@ namespace AdeNote.Infrastructure.Utilities.AuthenticationFilter
                 SetChallengeResponse(httpContext);
                 return false;
             }
+            var users = _usersRepository.hangfireUsers;
 
-            var currentUser = _users.FirstOrDefault(s => s.Username == userCredentials[0]);
+            var currentUser = users.FirstOrDefault(s => s.Username == userCredentials[0]);
 
             if (currentUser == null)
             {
@@ -96,6 +96,6 @@ namespace AdeNote.Infrastructure.Utilities.AuthenticationFilter
         private readonly ILogger _logger;
         private const string _authenticationScheme = "Basic";
         private IPasswordManager _passwordManager;
-        private DbSet<HangfireUser> _users { get; set; }
+        private IHangfireUserRepository _usersRepository { get; set; }
     }
 }
