@@ -18,6 +18,7 @@ namespace AdeNote.Infrastructure.Repository
             }
         }
 
+        public IList<HangfireUser> hangfireUsers => Db.HangfireUsers.ToList();
 
         public async Task<bool> Add(HangfireUser entity)
         {
