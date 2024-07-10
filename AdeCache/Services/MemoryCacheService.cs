@@ -26,9 +26,9 @@ namespace AdeCache.Services
             _memoryCache.Remove(key);
         }
 
-        public override void Set<T>(string key, T value, DateTime expiryDate = default)
+        public override void Set<T>(string key, T value, DateTime expiryDate)
         {
-            if(expiryDate == null)
+            if(expiryDate == default)
             {
                 _memoryCache.Set(key, value);
             }

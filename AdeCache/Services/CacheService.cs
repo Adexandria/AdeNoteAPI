@@ -7,6 +7,6 @@
 
         public abstract void Remove(string key);
 
-        public abstract void Set<T>(string key, T value, DateTime expiryDate = default);
+        public abstract void Set<T>(string key, T value, DateTime expiryDate);
     }
 }

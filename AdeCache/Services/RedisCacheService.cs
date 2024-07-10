@@ -8,8 +8,7 @@ namespace AdeCache.Services
     {
         public RedisCacheService(ICache cache)
         {
-            _redis = ConnectionMultiplexer.Connect(cache.HostName);
-          
+            _host = cache.HostName;
         }
         public override T Get<T>(string key)
         {
@@ -40,12 +39,13 @@ namespace AdeCache.Services
         {
             try
             {
-                var isConnected = _redis.IsConnected;
-                if (isConnected)
+                var redis = ConnectionMultiplexer.Connect(_host);
+
+                if (redis.IsConnected)
                 {
-                    _database = _redis.GetDatabase();
+                    _database = redis.GetDatabase();
                 }
-                return isConnected;
+                return false;
             }
             catch (Exception)
             {
@@ -53,8 +53,7 @@ namespace AdeCache.Services
             }
         }
 
-        private readonly ConnectionMultiplexer _redis;
-
+        private readonly string _host;
         private IDatabase _database;
     }
 }
