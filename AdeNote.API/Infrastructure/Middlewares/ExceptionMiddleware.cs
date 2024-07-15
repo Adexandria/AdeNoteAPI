@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Excelify.Services.Exceptions;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Authentication;
@@ -73,6 +74,9 @@ namespace AdeNote.Infrastructure.Middlewares
             } else if (exception is OperationCanceledException o)
             {
                 return new CustomProblemDetail("Operation has been cancelled", StatusCodes.Status400BadRequest);
+            } else if (exception is CacheException cacheExpection)
+            {
+                return new CustomProblemDetail(cacheExpection.Message, StatusCodes.Status500InternalServerError);
             }
             else
             {
