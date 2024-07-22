@@ -8,8 +8,6 @@ namespace AdeMessaging.Models
 {
     public interface IMessaging
     {
-        string ConnectionString { get; set; }
-        string Exchange {  get; set; }
         ExchangeType ExchangeType { get; set; }
         string HostName { get; set; }
         string VirtualHost { get; set; }

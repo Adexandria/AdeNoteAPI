@@ -1,15 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
+
 
 namespace AdeMessaging.Models
 {
     public enum ExchangeType
     {
+        [Description("direct")]
         direct,
-        opic,
+        [Description("topic")]
+        topicStar,
+        [Description("topic")]
+        topicHashTag,
+        [Description("fanout")]
         fanout
     }
 }
