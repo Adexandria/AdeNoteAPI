@@ -12,44 +12,44 @@ namespace AdeNote.Infrastructure.Extension
     {
         private static AzureAdConfiguration ExtractAzureAdConfiguration(IConfiguration configuration)
         {
-           return configuration.GetSection("AzureAd").Get<AzureAdConfiguration>();
+           return configuration.GetSection("AzureAd").Get<AzureAdConfiguration>() ?? throw new NullReferenceException(nameof(AzureAdConfiguration));
         }
 
         private static TranslateConfiguration ExtractTranslateConfiguration(IConfiguration configuration)
         {
-            return configuration.GetSection("TextTranslationConfiguration").Get<TranslateConfiguration>();
+            return configuration.GetSection("TextTranslationConfiguration").Get<TranslateConfiguration>() ?? throw new NullReferenceException(nameof(TranslateConfiguration));
         }
 
         private static HangFireUserConfiguration ExtractHangFireUserConfiguration(IConfiguration configuration)
         {
-           return configuration.GetSection("HangfireUser").Get<HangFireUserConfiguration>();
+           return configuration.GetSection("HangfireUser").Get<HangFireUserConfiguration>() ?? throw new NullReferenceException(nameof(HangFireUserConfiguration));
         }
 
         private static DefaultConfiguration ExtractDefaultConfiguration(IConfiguration configuration)
         {
-            return configuration.GetSection("DefaultConfiguration").Get<DefaultConfiguration>();
+            return configuration.GetSection("DefaultConfiguration").Get<DefaultConfiguration>() ?? throw new NullReferenceException(nameof(DefaultConfiguration));
         }
 
         private static Messaging ExtractMessagingConfiguration(IConfiguration configuration)
         {
-            return configuration.GetSection("RabbitMq").Get<Messaging>();
+            return configuration.GetSection("RabbitMq").Get<Messaging>() ?? throw new NullReferenceException(nameof(Messaging));
         }
 
         private static string ExtractConnectionString(IConfiguration configuration)
         {
-            return configuration.GetConnectionString("NotesDB");
+            return configuration.GetConnectionString("NotesDB") ?? throw new NullReferenceException("Invalid Connection string");
         }
 
         private static string ExtractTokenSecret(IConfiguration configuration)
         {
-            return configuration["TokenSecret"];
+            return configuration["TokenSecret"] ?? throw new NullReferenceException("Invalid token secret");
         }
 
         private static Cache ExtractCacheConfiguration(IConfiguration configuration)
         {
-            var hostName = configuration["CacheHostName"];
+            var hostName = configuration["CacheHostName"] ?? throw new NullReferenceException("Invalid host name");
 
-            return new Cache(hostName);
+            return new Cache(hostName) ??throw new NullReferenceException(nameof(Cache));
         }
 
 
