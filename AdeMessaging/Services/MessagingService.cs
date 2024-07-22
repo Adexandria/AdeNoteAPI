@@ -9,7 +9,9 @@ namespace AdeMessaging.Services
     public abstract class MessagingService : IMessagingService
     {
         public abstract bool IsConnected();
-        public abstract void Publish(string message, string topic);
-        public abstract void Subscribe(string topic);
+        public abstract void CreateExchange(string exchange);
+        public abstract void CreateQueue(string queue, string exchange, string routingKey);
+        public abstract string Publish(string message, string exchange, string routingKey);
+        public abstract string Subscribe(string exchange, string queue, string routingKey);
     }
 }

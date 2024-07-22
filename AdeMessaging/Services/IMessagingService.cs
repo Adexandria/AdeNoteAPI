@@ -8,9 +8,12 @@ namespace AdeMessaging.Services
 {
     public interface IMessagingService
     {
-        void Publish(string message, string topic);
+        string Publish(string message, string exchange, string routingKey);
 
-        void Subscribe(string topic);
+        string Subscribe(string exchange, string queue, string routingKey);
+
+        void CreateQueue(string queue, string exchange, string routingKey);
+        void CreateExchange(string exchange);
 
         bool IsConnected();
     }
