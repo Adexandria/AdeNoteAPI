@@ -4,21 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdeAuth.Services.Utility
+namespace AdeAuth.Models
 {
     /// <summary>
-    /// Manages authenticator
+    /// Manages user's role
     /// </summary>
-    public interface IAuthenticator
+    public interface IUserRole
     {
         /// <summary>
-        /// Qr code 
+        /// Role id
         /// </summary>
-        public string QrCodeImage { get; set; }
+        public Guid RoleId { get; set; }
 
         /// <summary>
-        /// Manual key
+        /// User id
         /// </summary>
-        public string ManualKey { get; set; }
+        public Guid UserId { get; set; }
     }
 }

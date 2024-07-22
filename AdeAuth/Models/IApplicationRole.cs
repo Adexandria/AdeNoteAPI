@@ -1,11 +1,19 @@
 ﻿namespace AdeAuth.Models
 {
+    /// <summary>
+    /// Manages user role
+    /// </summary>
     public interface IApplicationRole
     {
+        /// <summary>
+        /// Id
+        /// </summary>
         Guid Id { get; set; }
 
-        string Name { get; set; }
+        /// <summary>
+        /// Name of the role
+        /// </summary>
 
-        Guid UserId { get; set; }
+        string Name { get; set; }
     }
 }
