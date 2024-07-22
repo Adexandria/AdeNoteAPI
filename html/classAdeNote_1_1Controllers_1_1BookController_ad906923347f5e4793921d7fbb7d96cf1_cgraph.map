@@ -1,0 +1,4 @@
+<map id="AdeNote.Controllers.BookController.GetAllBooks" name="AdeNote.Controllers.BookController.GetAllBooks">
+<area shape="rect" id="node1" title="fetches all books" alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1IBookService.html#abfc5b8ec59d1638812b103282185e8cc" title="Get all books" alt="" coords="244,5,479,47"/>
+</map>
