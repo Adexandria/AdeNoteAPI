@@ -3,7 +3,7 @@
 
 namespace AdeNote.Models
 {
-    public class User : BaseClass, IApplicationUser
+    public class User : BaseEntity, IApplicationUser
     {
         protected User() { }
 
@@ -63,6 +63,11 @@ namespace AdeNote.Models
             LockoutEnabled = true;
         }
 
+        public void SetModifiedDate()
+        {
+            Modified = DateTime.UtcNow;
+        }
+
 
         public void CreateRecoveryCodes()
         {
@@ -89,5 +94,9 @@ namespace AdeNote.Models
         public RecoveryCode RecoveryCode { get; set; }
         public Role Role { get; set; }
         public IList<Ticket> Tickets { get; set; } = new List<Ticket>();
+
+        public DateTime Created { get; set; }
+
+        public DateTime Modified { get; set; }
     }
 }

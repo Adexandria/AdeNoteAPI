@@ -4,6 +4,7 @@ using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Infrastructure.Utilities.AuthenticationFilter;
 using AdeNote.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
 
@@ -27,16 +28,9 @@ namespace AdeNote.Infrastructure.Extension
 
             var databaseCreator = dbContext.GetService<IRelationalDatabaseCreator>();
 
-            if (!databaseCreator.Exists())
+            if (databaseCreator.CanConnect())
             {
-                databaseCreator.Create();
-                logger.LogInformation("Database has been created");
-            }
-
-            if (!databaseCreator.HasTables() && databaseCreator.CanConnect())
-            {
-                logger.LogInformation("Created Tables successfully");
-                databaseCreator.CreateTables();
+                dbContext.Database.Migrate();
             }
 
             logger.LogInformation("Tables have been created");

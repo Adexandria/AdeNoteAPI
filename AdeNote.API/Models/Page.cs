@@ -5,7 +5,7 @@ namespace AdeNote.Models
     /// <summary>
     /// Page model
     /// </summary>
-    public class Page : BaseClass
+    public class Page: BaseEntity
     {
         /// <summary>
         /// A constructor
@@ -16,6 +16,10 @@ namespace AdeNote.Models
             Labels = new List<Label>();
         }
 
+        public void SetModifiedDate()
+        {
+            Modified = DateTime.UtcNow;
+        }
 
         /// <summary>
         /// A Constructor
@@ -54,6 +58,10 @@ namespace AdeNote.Models
         /// A list of labels
         /// </summary>
         public IList<Label> Labels { get; set; }
-        
+
+        public DateTime Created { get; set; }
+
+        public DateTime Modified { get; set; }
+
     }
 }

@@ -59,11 +59,14 @@ namespace AdeNote.Db
           base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Book>()
-                .HasOne(s=>s.User).WithMany(s=>s.Books).HasForeignKey(s=>s.UserId);
+                .HasOne(s => s.User)
+                .WithMany(s => s.Books).HasForeignKey(s => s.UserId);
+
 
             modelBuilder.Entity<RefreshToken>()
                 .HasOne(s => s.User).
-                WithOne(s => s.RefreshToken).HasForeignKey("RefreshToken","UserId");
+                WithOne(s => s.RefreshToken)
+                .HasForeignKey("RefreshToken","UserId");
 
             modelBuilder.Entity<User>()
                 .Property(s => s.Role)

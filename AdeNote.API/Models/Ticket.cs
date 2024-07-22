@@ -1,6 +1,6 @@
 ﻿namespace AdeNote.Models
 {
-    public class Ticket : BaseClass
+    public class Ticket :BaseEntity
     {
         public Ticket()
         {
@@ -21,6 +21,10 @@
             ImageUrl = imageUrl;
         }
 
+        public void SetModifiedDate()
+        {
+            Modified = DateTime.UtcNow;
+        }
 
         public void UpdateTicket(Guid adminId)
         {
@@ -41,5 +45,9 @@
         public string? Description { get; set; }
 
         public Guid? AdminId { get; set; }
+
+        public DateTime Created { get; set; }
+
+        public DateTime Modified { get; set; }
     }
 }
