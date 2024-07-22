@@ -44,6 +44,10 @@ var NAVTREEINDEX0 =
 "20240530125352__description-nullable_8Designer_8cs_source.html":[2,0,0,3,21],
 "20240530125352__description-nullable_8cs.html":[2,0,0,3,20],
 "20240530125352__description-nullable_8cs_source.html":[2,0,0,3,20],
+"20240722121647__add-created-modified_8Designer_8cs.html":[2,0,0,3,23],
+"20240722121647__add-created-modified_8Designer_8cs_source.html":[2,0,0,3,23],
+"20240722121647__add-created-modified_8cs.html":[2,0,0,3,22],
+"20240722121647__add-created-modified_8cs_source.html":[2,0,0,3,22],
 "APIHealthCheck_8cs.html":[2,0,0,2,5,7,0],
 "APIHealthCheck_8cs_source.html":[2,0,0,2,5,7,0],
 "ActionResult_8cs.html":[2,0,0,2,5,12],
@@ -245,9 +249,5 @@ var NAVTREEINDEX0 =
 "LanguageScheduler_8cs_source.html":[2,0,0,2,5,0,0],
 "LoginDTO_8cs.html":[2,0,0,4,0,13],
 "LoginDTO_8cs_source.html":[2,0,0,4,0,13],
-"MFAType_8cs.html":[2,0,0,4,8],
-"MFAType_8cs.html#a59a9d6cd7df46cfb5727610aa214e751":[2,0,0,4,8,0],
-"MFAType_8cs.html#a59a9d6cd7df46cfb5727610aa214e751a18b43c6a536a8fe1362f7a3887936be6":[2,0,0,4,8,0,1],
-"MFAType_8cs.html#a59a9d6cd7df46cfb5727610aa214e751a334c4a4c42fdb79d7ebc3e73b517e6f8":[2,0,0,4,8,0,0],
-"MFAType_8cs.html#a59a9d6cd7df46cfb5727610aa214e751ac822c1b63853ed273b89687ac505f9fa":[2,0,0,4,8,0,2]
+"MFAType_8cs.html":[2,0,0,4,8]
 };

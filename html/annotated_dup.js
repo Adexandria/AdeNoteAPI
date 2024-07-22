@@ -197,6 +197,7 @@ var annotated_dup =
         [ "addissue", "classAdeNote_1_1Migrations_1_1addissue.html", "classAdeNote_1_1Migrations_1_1addissue" ],
         [ "addrecoverycode", "classAdeNote_1_1Migrations_1_1addrecoverycode.html", "classAdeNote_1_1Migrations_1_1addrecoverycode" ],
         [ "descriptionnullable", "classAdeNote_1_1Migrations_1_1descriptionnullable.html", "classAdeNote_1_1Migrations_1_1descriptionnullable" ],
+        [ "addcreatedmodified", "classAdeNote_1_1Migrations_1_1addcreatedmodified.html", "classAdeNote_1_1Migrations_1_1addcreatedmodified" ],
         [ "NoteDbContextModelSnapshot", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot" ]
       ] ],
       [ "Models", "namespaceAdeNote_1_1Models.html", [

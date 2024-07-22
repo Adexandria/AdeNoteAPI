@@ -1,5 +1,4 @@
 <map id="AdeNote.Models.Label" name="AdeNote.Models.Label">
-<area shape="rect" id="node1" title="A label model" alt="" coords="5,155,173,181"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Models_1_1BaseClass.html" title="A base class that includes the id" alt="" coords="45,80,134,107"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Models_1_1BaseEntity.html" title=" " alt="" coords="43,5,135,32"/>
+<area shape="rect" id="node1" title="A label model" alt="" coords="5,80,173,107"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Models_1_1BaseEntity.html" title=" " alt="" coords="43,5,135,32"/>
 </map>

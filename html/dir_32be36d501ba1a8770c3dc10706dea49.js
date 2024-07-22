@@ -66,6 +66,12 @@ var dir_32be36d501ba1a8770c3dc10706dea49 =
     [ "20240530125352_description-nullable.Designer.cs", "20240530125352__description-nullable_8Designer_8cs.html", [
       [ "descriptionnullable", "classAdeNote_1_1Migrations_1_1descriptionnullable.html", "classAdeNote_1_1Migrations_1_1descriptionnullable" ]
     ] ],
+    [ "20240722121647_add-created-modified.cs", "20240722121647__add-created-modified_8cs.html", [
+      [ "addcreatedmodified", "classAdeNote_1_1Migrations_1_1addcreatedmodified.html", "classAdeNote_1_1Migrations_1_1addcreatedmodified" ]
+    ] ],
+    [ "20240722121647_add-created-modified.Designer.cs", "20240722121647__add-created-modified_8Designer_8cs.html", [
+      [ "addcreatedmodified", "classAdeNote_1_1Migrations_1_1addcreatedmodified.html", "classAdeNote_1_1Migrations_1_1addcreatedmodified" ]
+    ] ],
     [ "NoteDbContextModelSnapshot.cs", "NoteDbContextModelSnapshot_8cs.html", [
       [ "NoteDbContextModelSnapshot", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot" ]
     ] ]

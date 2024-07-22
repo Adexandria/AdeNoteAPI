@@ -11,16 +11,15 @@ var hierarchy =
     ] ],
     [ "AdeNote.Infrastructure.Utilities.SSO.AzureAdConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SSO_1_1AzureAdConfiguration.html", null ],
     [ "AdeNote.Models.BaseEntity", "classAdeNote_1_1Models_1_1BaseEntity.html", [
-      [ "AdeNote.Models.BaseClass", "classAdeNote_1_1Models_1_1BaseClass.html", [
-        [ "AdeNote.Models.Book", "classAdeNote_1_1Models_1_1Book.html", null ],
-        [ "AdeNote.Models.Label", "classAdeNote_1_1Models_1_1Label.html", null ],
-        [ "AdeNote.Models.Page", "classAdeNote_1_1Models_1_1Page.html", null ],
-        [ "AdeNote.Models.Ticket", "classAdeNote_1_1Models_1_1Ticket.html", null ],
-        [ "AdeNote.Models.User", "classAdeNote_1_1Models_1_1User.html", null ]
-      ] ],
+      [ "AdeNote.Models.BaseClass", "classAdeNote_1_1Models_1_1BaseClass.html", null ],
+      [ "AdeNote.Models.Book", "classAdeNote_1_1Models_1_1Book.html", null ],
       [ "AdeNote.Models.HangfireUser", "classAdeNote_1_1Models_1_1HangfireUser.html", null ],
+      [ "AdeNote.Models.Label", "classAdeNote_1_1Models_1_1Label.html", null ],
+      [ "AdeNote.Models.Page", "classAdeNote_1_1Models_1_1Page.html", null ],
       [ "AdeNote.Models.RecoveryCode", "classAdeNote_1_1Models_1_1RecoveryCode.html", null ],
-      [ "AdeNote.Models.RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", null ]
+      [ "AdeNote.Models.RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", null ],
+      [ "AdeNote.Models.Ticket", "classAdeNote_1_1Models_1_1Ticket.html", null ],
+      [ "AdeNote.Models.User", "classAdeNote_1_1Models_1_1User.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Utilities.BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", null ],
     [ "AdeNote.Models.DTOs.BookCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1BookCreateDTO.html", null ],
@@ -202,6 +201,7 @@ var hierarchy =
     [ "AdeNote.Models.DTOs.LoginDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LoginDTO.html", null ],
     [ "AdeNote.Infrastructure.Extension.MappingService", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html", null ],
     [ "Migration", null, [
+      [ "AdeNote.Migrations.addcreatedmodified", "classAdeNote_1_1Migrations_1_1addcreatedmodified.html", null ],
       [ "AdeNote.Migrations.addissue", "classAdeNote_1_1Migrations_1_1addissue.html", null ],
       [ "AdeNote.Migrations.addrecoverycode", "classAdeNote_1_1Migrations_1_1addrecoverycode.html", null ],
       [ "AdeNote.Migrations.addrecoverycodes", "classAdeNote_1_1Migrations_1_1addrecoverycodes.html", null ],

@@ -1,5 +1,4 @@
 <map id="AdeNote.Models.Ticket" name="AdeNote.Models.Ticket">
-<area shape="rect" id="node1" title=" " alt="" coords="5,155,177,181"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Models_1_1BaseClass.html" title="A base class that includes the id" alt="" coords="47,80,136,107"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Models_1_1BaseEntity.html" title=" " alt="" coords="45,5,137,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,177,107"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Models_1_1BaseEntity.html" title=" " alt="" coords="45,5,137,32"/>
 </map>
