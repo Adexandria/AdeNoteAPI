@@ -14,11 +14,9 @@ namespace AdeNote.Infrastructure.Utilities.AuthenticationFilter
     public class DashboardAuthenticationFilter : IDashboardAuthorizationFilter
     {
 
-        public DashboardAuthenticationFilter(IServiceProvider serviceProvider)
+        public DashboardAuthenticationFilter(HangFireUserConfiguration _hangFireUser,ILoggerFactory loggerFactory)
         {
-            _usersRepository = serviceProvider.GetRequiredService<IHangfireUserRepository>() ?? throw new NullReferenceException("Unregistered service");
-            _passwordManager = serviceProvider.GetRequiredService<IPasswordManager>() ?? throw new NullReferenceException("Unregistered service");
-            var loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>() ?? throw new NullReferenceException("Unregistered service");
+            hangFireUser = _hangFireUser;
             _logger = loggerFactory.CreateLogger<DashboardAuthenticationFilter>();
         }
 
@@ -62,26 +60,16 @@ namespace AdeNote.Infrastructure.Utilities.AuthenticationFilter
                 SetChallengeResponse(httpContext);
                 return false;
             }
-            var users = _usersRepository.hangfireUsers;
 
-            var currentUser = users.FirstOrDefault(s => s.Username == userCredentials[0]);
+            var currentUser = hangFireUser.Username == userCredentials[0] && hangFireUser.Password == userCredentials[1];
 
-            if (currentUser == null)
-            {
-                _logger.LogInformation("Invalid username/password");
-                SetChallengeResponse(httpContext);
-                return false;
-            }
-
-            var isPasswordCorrect = _passwordManager.VerifyPassword(userCredentials[1], currentUser.PasswordHash, currentUser.Salt);
-
-            if (isPasswordCorrect)
+            if (currentUser)
             {
                 _logger.LogInformation("User has successfully authenticated");
                 httpContext.Response.StatusCode = 200;
                 return true;
             }
-
+            _logger.LogInformation("Invalid username/password");
             SetChallengeResponse(httpContext);
             return false;
         }
@@ -93,9 +81,8 @@ namespace AdeNote.Infrastructure.Utilities.AuthenticationFilter
             httpContext.Response.WriteAsync("Authentication is required.");
         }
 
+        private readonly HangFireUserConfiguration hangFireUser;
         private readonly ILogger _logger;
         private const string _authenticationScheme = "Basic";
-        private IPasswordManager _passwordManager;
-        private IHangfireUserRepository _usersRepository { get; set; }
     }
 }
