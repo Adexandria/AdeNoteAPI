@@ -3,7 +3,7 @@
     /// <summary>
     /// A label model
     /// </summary>
-    public class Label : BaseClass
+    public class Label : BaseEntity
     {
         /// <summary>
         /// A constructor
@@ -19,6 +19,11 @@
         {
             Title = title;
         }
+
+        public void SetModifiedDate()
+        {
+            Modified = DateTime.UtcNow;
+        }
         /// <summary>
         /// Title of the label
         /// </summary>
@@ -28,5 +33,9 @@
         /// A list of pages
         /// </summary>
         public IList<Page> Pages { get; set; }
+
+        public DateTime Created { get; set; }
+
+        public DateTime Modified { get; set; }
     }
 }

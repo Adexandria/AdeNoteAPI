@@ -5,7 +5,7 @@ namespace AdeNote.Models
     /// <summary>
     /// A book object
     /// </summary>
-    public class Book : BaseClass
+    public class Book : BaseEntity
     {
         /// <summary>
         /// A Constructor
@@ -38,6 +38,11 @@ namespace AdeNote.Models
             return this;
         }
 
+        public void SetModifiedDate()
+        {
+            Modified = DateTime.UtcNow;
+        }
+
         /// <summary>
         /// Title of the book
         /// </summary>
@@ -63,5 +68,9 @@ namespace AdeNote.Models
         /// A user model
         /// </summary>
         public User User { get; set; }
+
+        public DateTime Created { get; set; }
+
+        public DateTime Modified { get; set; }
     }
 }
