@@ -3,10 +3,13 @@ var hierarchy =
     [ "ActionResult", null, [
       [ "AdeNote.Infrastructure.Utilities.ActionResult< T >", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html", null ]
     ] ],
+    [ "AdeNote.Infrastructure.Utilities.ApplicationScheduler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationScheduler.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.ApplicationSetting", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting.html", null ],
     [ "AdeNote.Models.DTOs.AuthenticatorDTO", "classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html", null ],
     [ "AuthorizationHandler", null, [
       [ "AdeNote.Infrastructure.Utilities.AuthorisationHandler.RoleRequirementHandler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirementHandler.html", null ]
     ] ],
+    [ "AdeNote.Infrastructure.Utilities.SSO.AzureAdConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SSO_1_1AzureAdConfiguration.html", null ],
     [ "AdeNote.Models.BaseEntity", "classAdeNote_1_1Models_1_1BaseEntity.html", [
       [ "AdeNote.Models.BaseClass", "classAdeNote_1_1Models_1_1BaseClass.html", [
         [ "AdeNote.Models.Book", "classAdeNote_1_1Models_1_1Book.html", null ],
@@ -27,6 +30,7 @@ var hierarchy =
     ] ],
     [ "AdeNote.Models.DTOs.BookUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1BookUpdateDTO.html", null ],
     [ "AdeNote.Models.DTOs.ChangePasswordDTO", "classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO.html", null ],
+    [ "AdeNote.Infrastructure.Extension.ConfigurationExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html", null ],
     [ "ControllerBase", null, [
       [ "AdeNote.Controllers.BaseController", "classAdeNote_1_1Controllers_1_1BaseController.html", [
         [ "AdeNote.Controllers.AuthenticationController", "classAdeNote_1_1Controllers_1_1AuthenticationController.html", null ],
@@ -50,6 +54,8 @@ var hierarchy =
     [ "AdeNote.Infrastructure.Utilities.EmailSettings.Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings_1_1Email.html", null ],
     [ "AdeNote.Infrastructure.Utilities.EmailSettings.EmailConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings_1_1EmailConfiguration.html", null ],
     [ "AdeNote.Infrastructure.Extension.EnumExtensions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1EnumExtensions.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.EventSystem.EventConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1EventConfiguration.html", null ],
+    [ "AdeNote.Infrastructure.Extension.EventExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1EventExtension.html", null ],
     [ "Exception", null, [
       [ "AdeNote.Infrastructure.Exceptions.HealthCheckException", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1HealthCheckException.html", null ]
     ] ],
@@ -103,6 +109,9 @@ var hierarchy =
     ] ],
     [ "AdeNote.Infrastructure.Services.LabelSettings.ILabelService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1ILabelService.html", [
       [ "AdeNote.Infrastructure.Services.LabelSettings.LabelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html", null ]
+    ] ],
+    [ "IMessaging", null, [
+      [ "AdeNote.Infrastructure.Utilities.EventSystem.Messaging", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1Messaging.html", null ]
     ] ],
     [ "AdeNote.Models.DTOs.ImportBookDto", "classAdeNote_1_1Models_1_1DTOs_1_1ImportBookDto.html", null ],
     [ "AdeNote.Infrastructure.Services.Notification.INotificationService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1INotificationService.html", [
@@ -189,7 +198,7 @@ var hierarchy =
     [ "AdeNote.Models.DTOs.LabelDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelDTO.html", null ],
     [ "AdeNote.Models.LabelPage", "classAdeNote_1_1Models_1_1LabelPage.html", null ],
     [ "AdeNote.Models.DTOs.LabelUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelUpdateDTO.html", null ],
-    [ "AdeNote.Infrastructure.Utilities.AI.Language", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1Language.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.AI.LanguageScheduler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1LanguageScheduler.html", null ],
     [ "AdeNote.Models.DTOs.LoginDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LoginDTO.html", null ],
     [ "AdeNote.Infrastructure.Extension.MappingService", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html", null ],
     [ "Migration", null, [
@@ -211,6 +220,7 @@ var hierarchy =
     [ "AdeNote.Models.DTOs.PageCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO.html", null ],
     [ "AdeNote.Models.DTOs.PageUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO.html", null ],
     [ "AdeNote.Infrastructure.Utilities.PaginatedResponse< T >", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html", null ],
+    [ "AdeNote.Infrastructure.Extension.ProgramExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ProgramExtension.html", null ],
     [ "AdeNote.Infrastructure.Repository.Repository< T >", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html", null ],
     [ "AdeNote.Infrastructure.Repository.Repository< Book >", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html", [
       [ "AdeNote.Infrastructure.Repository.BookRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html", null ]
@@ -240,11 +250,13 @@ var hierarchy =
       [ "AdeNote.Infrastructure.Repository.UserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Extension.ResultExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ResultExtension.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.EventSystem.Scheduler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1Scheduler.html", null ],
     [ "AdeNote.Infrastructure.Utilities.SmsConfig.Sms", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1Sms.html", null ],
     [ "AdeNote.Infrastructure.Utilities.SmsConfig.SmsConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1SmsConfiguration.html", null ],
     [ "AdeNote.Models.DTOs.StatisticsDto", "classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto.html", null ],
     [ "AdeNote.Models.DTOs.TicketCreateDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketCreateDto.html", null ],
     [ "AdeNote.Models.DTOs.TicketDTO", "classAdeNote_1_1Models_1_1DTOs_1_1TicketDTO.html", null ],
+    [ "AdeNote.Infrastructure.Services.TicketSettings.TicketEvent", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketEvent.html", null ],
     [ "AdeNote.Models.DTOs.TicketsDTO", "classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html", null ],
     [ "AdeNote.Models.DTOs.TicketStatusDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStatusDto.html", null ],
     [ "AdeNote.Models.DTOs.TicketStreamDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto.html", null ],

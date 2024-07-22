@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['xls_1587',['xls',['../namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8a018e2a13e58c535167ed37cf44316005',1,'AdeNote::Infrastructure::Utilities']]],
-  ['xlsx_1588',['xlsx',['../namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a5dbb47479f072858ae359006d49caee8abf3e2924dcba1c52da01b5eda1111b2b',1,'AdeNote::Infrastructure::Utilities']]]
+  ['unresolved_1622',['Unresolved',['../namespaceAdeNote_1_1Models.html#a84ba93a53853547a517930069ae52e89a4a3b76ab214699973b85cc072788ff7d',1,'AdeNote::Models']]],
+  ['user_1623',['User',['../namespaceAdeNote_1_1Models.html#a44d267b0992deac7399dae09f7647131a8f9bfe9d1345237cb3b2b205864da075',1,'AdeNote::Models']]]
 ];

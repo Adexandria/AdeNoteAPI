@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['textclientconfiguration_1550',['textClientConfiguration',['../Program_8cs.html#af58c307d03903192a8133df2d551f38b',1,'Program.cs']]],
-  ['texttranslation_1551',['textTranslation',['../classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#aec79e11e32fb66d277880805df24dff8',1,'AdeNote::Infrastructure::Services::PageSettings::PageService']]],
-  ['ticketrepository_1552',['ticketRepository',['../classAdeNote_1_1Infrastructure_1_1Services_1_1Statistics_1_1StatisticService.html#adef8383325df61952cc72c088d218a71',1,'AdeNote.Infrastructure.Services.Statistics.StatisticService.ticketRepository()'],['../classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#adced04eec2e52b0a724d2f60c244d98a',1,'AdeNote.Infrastructure.Services.TicketSettings.TicketService.ticketRepository()']]],
-  ['ticketservice_1553',['ticketService',['../classAdeNote_1_1Controllers_1_1TicketController.html#a75843848be464633043087c636a0b576',1,'AdeNote::Controllers::TicketController']]],
-  ['tokenprovider_1554',['tokenProvider',['../classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#ab4e935eb5f2bb16c52925de0079d9bf7',1,'AdeNote::Infrastructure::Services::Authentication::AuthService']]],
-  ['tokensecret_1555',['tokenSecret',['../Program_8cs.html#adb71d22b23118555670835ec58716126',1,'Program.cs']]]
+  ['userrepository_1592',['userRepository',['../classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a402815076bfc2e1bb846ba7b104e97aa',1,'AdeNote.Infrastructure.Services.Authentication.AuthService.userRepository()'],['../classAdeNote_1_1Infrastructure_1_1Services_1_1Statistics_1_1StatisticService.html#a2d88de91fe103182c4525b3a912b1d19',1,'AdeNote.Infrastructure.Services.Statistics.StatisticService.userRepository()'],['../classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a6788e26df09a2f530dfd1c9d1a6bee06',1,'AdeNote.Infrastructure.Services.TicketSettings.TicketService.userRepository()']]],
+  ['userservice_1593',['userService',['../classAdeNote_1_1Controllers_1_1DashboardController.html#ab9a65029eb14bd638121f19329995dc5',1,'AdeNote::Controllers::DashboardController']]]
 ];

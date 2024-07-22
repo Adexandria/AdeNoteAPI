@@ -19,9 +19,12 @@ var annotated_dup =
           [ "HealthCheckException", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1HealthCheckException.html", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1HealthCheckException" ]
         ] ],
         [ "Extension", "namespaceAdeNote_1_1Infrastructure_1_1Extension.html", [
+          [ "ConfigurationExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension" ],
           [ "DatabaseExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension" ],
           [ "EnumExtensions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1EnumExtensions.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1EnumExtensions" ],
+          [ "EventExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1EventExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1EventExtension" ],
           [ "MappingService", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService" ],
+          [ "ProgramExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ProgramExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ProgramExtension" ],
           [ "ResultExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ResultExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ResultExtension" ],
           [ "SwaggerOptions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions" ],
           [ "ValidatorResult", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ValidatorResult.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ValidatorResult" ]
@@ -101,6 +104,7 @@ var annotated_dup =
           ] ],
           [ "TicketSettings", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings.html", [
             [ "ITicketService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService" ],
+            [ "TicketEvent", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketEvent.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketEvent" ],
             [ "TicketService", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService" ]
           ] ],
           [ "TranslationAI", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI.html", [
@@ -118,7 +122,7 @@ var annotated_dup =
         ] ],
         [ "Utilities", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html", [
           [ "AI", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1AI.html", [
-            [ "Language", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1Language.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1Language" ],
+            [ "LanguageScheduler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1LanguageScheduler.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1LanguageScheduler" ],
             [ "TranslateConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1TranslateConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1TranslateConfiguration" ]
           ] ],
           [ "AuthenticationFilter", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter.html", [
@@ -136,6 +140,11 @@ var annotated_dup =
             [ "Email", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings_1_1Email.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings_1_1Email" ],
             [ "EmailConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings_1_1EmailConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings_1_1EmailConfiguration" ]
           ] ],
+          [ "EventSystem", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem.html", [
+            [ "EventConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1EventConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1EventConfiguration" ],
+            [ "Messaging", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1Messaging.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1Messaging" ],
+            [ "Scheduler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1Scheduler.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1Scheduler" ]
+          ] ],
           [ "ExcelSettings", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1ExcelSettings.html", [
             [ "ExportEntity", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExcelSettings_1_1ExportEntity.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExcelSettings_1_1ExportEntity" ],
             [ "ImportSheet", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExcelSettings_1_1ImportSheet.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExcelSettings_1_1ImportSheet" ]
@@ -147,6 +156,9 @@ var annotated_dup =
           [ "SmsConfig", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig.html", [
             [ "Sms", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1Sms.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1Sms" ],
             [ "SmsConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1SmsConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1SmsConfiguration" ]
+          ] ],
+          [ "SSO", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1SSO.html", [
+            [ "AzureAdConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SSO_1_1AzureAdConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SSO_1_1AzureAdConfiguration" ]
           ] ],
           [ "UserConfiguation", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation.html", [
             [ "IUserIdentity", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1IUserIdentity.html", "interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1IUserIdentity" ],
@@ -166,6 +178,8 @@ var annotated_dup =
           ] ],
           [ "ActionResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult" ],
           [ "PaginatedResponse", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse" ],
+          [ "ApplicationScheduler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationScheduler.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationScheduler" ],
+          [ "ApplicationSetting", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting" ],
           [ "BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration" ],
           [ "DefaultConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration" ],
           [ "EntityDoc", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc" ]

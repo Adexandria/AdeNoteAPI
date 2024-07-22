@@ -105,20 +105,21 @@ Collaboration diagram for AdeNote.Infrastructure.Services.TicketSettings.TicketS
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService__coll__graph.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8TicketSettings_8TicketService_coll__map" alt="Collaboration graph"/></div>
 <map name="aAdeNote_8Infrastructure_8Services_8TicketSettings_8TicketService_coll__map" id="aAdeNote_8Infrastructure_8Services_8TicketSettings_8TicketService_coll__map">
-<area shape="rect" title=" " alt="" coords="625,81,859,122"/>
+<area shape="rect" title=" " alt="" coords="644,122,877,163"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html" title=" " alt="" coords="287,5,400,32"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html" title="An interface that includes the behaviour of cloud storage" alt="" coords="227,57,460,98"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html" title=" " alt="" coords="220,122,467,163"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="10,129,166,156"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html" title=" " alt="" coords="220,187,467,229"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,195,171,221"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1EventConfiguration.html" title=" " alt="" coords="225,122,461,163"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html" title=" " alt="" coords="220,187,467,229"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="10,195,166,221"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html" title=" " alt="" coords="220,253,467,294"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,260,171,287"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a832a80e0de1b967e6c631c5bb296d854"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a832a80e0de1b967e6c631c5bb296d854">TicketService</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html">ITicketRepository</a> _ticketRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html">IUserRepository</a> _userRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html">IBlobService</a> _blobService, CancellationToken cancellationToken=default)</td></tr>
-<tr class="separator:a832a80e0de1b967e6c631c5bb296d854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a327be8d3fcd23927f8f60d8c9cf72960"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a327be8d3fcd23927f8f60d8c9cf72960">TicketService</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html">ITicketRepository</a> _ticketRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html">IUserRepository</a> _userRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html">IBlobService</a> _blobService, IMessagingService _messagingService, IConfiguration config)</td></tr>
+<tr class="separator:a327be8d3fcd23927f8f60d8c9cf72960"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07d99b135390bfc450eb3cef6c079939"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a07d99b135390bfc450eb3cef6c079939">CreateTicket</a> (<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto.html">TicketStreamDto</a> newTicket, string email, CancellationToken cancellationToken)</td></tr>
 <tr class="separator:a07d99b135390bfc450eb3cef6c079939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71cb993f66f468725fa508ac3eaf53dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html">PaginatedResponse</a>&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html">TicketsDTO</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a71cb993f66f468725fa508ac3eaf53dd">FetchAllTickets</a> (int pageNumber, int pageSize)</td></tr>
@@ -149,10 +150,14 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a6788e26df09a2f530dfd1c9d1a6bee06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a087b0502e91a23dd8403eac43ef20358"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html">IBlobService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a087b0502e91a23dd8403eac43ef20358">blobService</a></td></tr>
 <tr class="separator:a087b0502e91a23dd8403eac43ef20358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8bb895b0847c3f4e2bc773ea8510f71"><td class="memItemLeft" align="right" valign="top">readonly IMessagingService&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#ad8bb895b0847c3f4e2bc773ea8510f71">messagingService</a></td></tr>
+<tr class="separator:ad8bb895b0847c3f4e2bc773ea8510f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac05587cb593f725a649bec076ef80390"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1EventConfiguration.html">EventConfiguration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#ac05587cb593f725a649bec076ef80390">eventConfiguration</a></td></tr>
+<tr class="separator:ac05587cb593f725a649bec076ef80390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00012">12</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00015">15</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a598a59f1b04dffc013967a60e488f8e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a598a59f1b04dffc013967a60e488f8e4">&#9670;&nbsp;</a></span>TicketService() <span class="overload">[1/2]</span></h2>
@@ -177,12 +182,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00014">14</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00017">17</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
 
 </div>
 </div>
-<a id="a832a80e0de1b967e6c631c5bb296d854"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a832a80e0de1b967e6c631c5bb296d854">&#9670;&nbsp;</a></span>TicketService() <span class="overload">[2/2]</span></h2>
+<a id="a327be8d3fcd23927f8f60d8c9cf72960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a327be8d3fcd23927f8f60d8c9cf72960">&#9670;&nbsp;</a></span>TicketService() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,8 +213,14 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">CancellationToken&#160;</td>
-          <td class="paramname"><em>cancellationToken</em> = <code>default</code>&#160;</td>
+          <td class="paramtype">IMessagingService&#160;</td>
+          <td class="paramname"><em>_messagingService</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IConfiguration&#160;</td>
+          <td class="paramname"><em>config</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -219,7 +230,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00018">18</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00021">21</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
 
 </div>
 </div>
@@ -258,7 +269,7 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html#adcfb594d6b4648e5b70adb3e60e8f2cf">AdeNote.Infrastructure.Services.TicketSettings.ITicketService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00025">25</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00035">35</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -294,7 +305,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html#aa362e852211f6484b68fc503bc812b53">AdeNote.Infrastructure.Services.TicketSettings.ITicketService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00243">243</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00269">269</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -338,7 +349,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html#ae65ece11a89689440e9ef00090b96fc3">AdeNote.Infrastructure.Services.TicketSettings.ITicketService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00063">63</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00073">73</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -387,7 +398,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html#a19960be450f85571765e830591e4169e">AdeNote.Infrastructure.Services.TicketSettings.ITicketService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00090">90</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00100">100</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -420,7 +431,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html#a1206eb3945cdb86bf4c2bf02d35642eb">AdeNote.Infrastructure.Services.TicketSettings.ITicketService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00118">118</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00128">128</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -470,7 +481,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html#a1eeaf8cd7df24dca3f155727281ce33e">AdeNote.Infrastructure.Services.TicketSettings.ITicketService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00172">172</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00182">182</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -519,7 +530,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html#a9336fe7e603aefc2def828c38208576e">AdeNote.Infrastructure.Services.TicketSettings.ITicketService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00145">145</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00155">155</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -568,17 +579,18 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html#a45d0ca98337445548918ee24a485726b">AdeNote.Infrastructure.Services.TicketSettings.ITicketService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00211">211</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00221">221</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService_a32fc1c102db2d8ab9d0d04cd3b5d8b86_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService_a32fc1c102db2d8ab9d0d04cd3b5d8b86_cgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService_a32fc1c102db2d8ab9d0d04cd3b5d8b86_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService_a32fc1c102db2d8ab9d0d04cd3b5d8b86_cgraph">
-<area shape="rect" title=" " alt="" coords="5,104,300,145"/>
+<area shape="rect" title=" " alt="" coords="5,136,300,177"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="357,5,586,47"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#a7e39627f289cb9a027fe1e901da790e8" title=" " alt="" coords="348,71,595,112"/>
-<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="351,136,592,177"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#ae451c2bb0462a873a4e0f8c0d3a9b721" title="Updates an existing object" alt="" coords="348,201,595,243"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a2f9c93cf4ef3a74b15a0bf2b71cd21ad" title="Get existings of a user" alt="" coords="348,136,595,177"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="351,201,592,243"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#ae451c2bb0462a873a4e0f8c0d3a9b721" title="Updates an existing object" alt="" coords="348,267,595,308"/>
 </map>
 </div>
 
@@ -605,7 +617,55 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00266">266</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00292">292</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac05587cb593f725a649bec076ef80390"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac05587cb593f725a649bec076ef80390">&#9670;&nbsp;</a></span>eventConfiguration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1EventConfiguration.html">EventConfiguration</a> AdeNote.Infrastructure.Services.TicketSettings.TicketService.eventConfiguration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00294">294</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad8bb895b0847c3f4e2bc773ea8510f71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8bb895b0847c3f4e2bc773ea8510f71">&#9670;&nbsp;</a></span>messagingService</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly IMessagingService AdeNote.Infrastructure.Services.TicketSettings.TicketService.messagingService</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00293">293</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
 
 </div>
 </div>
@@ -629,7 +689,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00264">264</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00290">290</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
 
 </div>
 </div>
@@ -653,7 +713,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00265">265</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketService_8cs_source.html#l00291">291</a> of file <a class="el" href="TicketService_8cs_source.html">TicketService.cs</a>.</p>
 
 </div>
 </div>

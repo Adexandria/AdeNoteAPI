@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fileservice_1533',['fileService',['../classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#a2afdb63f05373cf3674f9d4e4b95ed21',1,'AdeNote::Infrastructure::Services::Blob::BlobService']]]
+  ['hangfireuser_1570',['hangFireUser',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1DashboardAuthenticationFilter.html#a4b950245efce16d2709d2c405f130b14',1,'AdeNote::Infrastructure::Utilities::AuthenticationFilter::DashboardAuthenticationFilter']]]
 ];
