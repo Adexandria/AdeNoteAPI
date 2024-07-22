@@ -62,11 +62,6 @@ namespace AdeNote.Db
                 .HasOne(s => s.User)
                 .WithMany(s => s.Books).HasForeignKey(s => s.UserId);
 
-            modelBuilder.Entity<Book>()
-             .HasDiscriminator(b => b.Modified);
-
-            modelBuilder.Entity<Book>()
-                .Property(s => s.Modified).HasColumnName("Modified");
 
             modelBuilder.Entity<RefreshToken>()
                 .HasOne(s => s.User).
