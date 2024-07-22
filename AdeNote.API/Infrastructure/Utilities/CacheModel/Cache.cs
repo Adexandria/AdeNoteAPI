@@ -5,11 +5,17 @@ namespace AdeNote.Infrastructure.Utilities.CacheModel
 {
     public class Cache : ICache
     {
-        public Cache(string hostName, IMemoryCache memoryCache)
+        public Cache(string hostName)
         {
-            MemoryCache = memoryCache;
             HostName = hostName;
         }
+
+        public Cache SetMemoryCache(IMemoryCache memoryCache) 
+        { 
+            MemoryCache = memoryCache;
+            return this;
+        }
+
         public IMemoryCache MemoryCache { get; set; }
         public string HostName { get; set; }
     }

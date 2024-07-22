@@ -1,11 +1,14 @@
-﻿using AdeNote.Infrastructure.Extension;
+﻿using AdeMessaging.Services;
+using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Services.Blob;
 using AdeNote.Infrastructure.Utilities;
+using AdeNote.Infrastructure.Utilities.EventSystem;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
 using Mapster;
 using System.Net;
+using System.Text.Json;
 
 namespace AdeNote.Infrastructure.Services.TicketSettings
 {
@@ -15,11 +18,18 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
         {
 
         }
-        public TicketService(ITicketRepository _ticketRepository, IUserRepository _userRepository, IBlobService _blobService, CancellationToken cancellationToken = default)
+        public TicketService(ITicketRepository _ticketRepository, IUserRepository _userRepository, 
+            IBlobService _blobService
+            , IMessagingService _messagingService, IConfiguration config)
         {
             ticketRepository = _ticketRepository;
             userRepository = _userRepository;
             blobService = _blobService;
+            messagingService = _messagingService;
+            eventConfiguration = config.GetSection("Events")
+                .GetSection("Ticket")
+                .Get<EventConfiguration>() ?? throw new NullReferenceException(nameof(eventConfiguration));
+          
         }
 
         public async Task<ActionResult> CreateTicket(TicketStreamDto newTicket, string email, CancellationToken cancellationToken)
@@ -237,6 +247,22 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
                 return ActionResult.Failed("Failed to update ticket", StatusCodes.Status400BadRequest);
             }
 
+            var admin = await userRepository.GetUser(adminId);
+            var message = JsonSerializer.Serialize(new
+            {
+                status = newStatus.GetDescription(),
+                firstName = currentTicket.User.FirstName,
+                lastName = currentTicket.User.LastName,
+                ticketId = currentTicket.Id.ToString("N"),
+                emailAddress = currentTicket.User.Email,
+                issue = currentTicket.Issue,
+                lastUpdated = currentTicket.Modified.ToShortDateString(),
+                dateSubmitted = currentTicket.Created.ToShortDateString(),
+                agent = admin.FirstName + " " + admin.LastName
+            });
+
+            messagingService.Publish(message, eventConfiguration.Exchange, eventConfiguration.RoutingKey);
+
             return ActionResult.SuccessfulOperation();
         }
 
@@ -264,5 +290,7 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
         private readonly ITicketRepository ticketRepository;
         private readonly IUserRepository userRepository;
         private readonly IBlobService blobService;
+        private readonly IMessagingService messagingService;
+        private readonly EventConfiguration eventConfiguration;
     }
 }

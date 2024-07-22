@@ -2,15 +2,15 @@
 using AdeNote.Infrastructure.Services.TranslationAI;
 using AdeText.Models;
 using Hangfire;
-using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AdeNote.Infrastructure.Utilities.AI
 {
-    public class Language
+    public class LanguageScheduler
     {
-        public Language(IServiceProvider _serviceProvider)
+        public LanguageScheduler(IServiceProvider serviceProvider)
         {
-            serviceProvider = _serviceProvider;   
+            _serviceProvider = serviceProvider.CreateScope().ServiceProvider;
         }
         public void GetLanguages()
         {
@@ -21,13 +21,14 @@ namespace AdeNote.Infrastructure.Utilities.AI
        {
             await Task.Run(() =>
             {
-                var textTranslation = serviceProvider.GetRequiredService<ITextTranslation>();
 
-                var cacheService = serviceProvider.GetRequiredService<ICacheService>();
+                var textTranslation = _serviceProvider.GetRequiredService<ITextTranslation>();
 
-                var loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();
+                var cacheService = _serviceProvider.GetRequiredService<ICacheService>();
 
-                var logger = loggerFactory.CreateLogger<Language>();
+                var loggerFactory = _serviceProvider.GetRequiredService<ILoggerFactory>();
+
+                var logger = loggerFactory.CreateLogger<LanguageScheduler>();
 
                 var etag = cacheService.Get<string>("etag")?.ToString();
 
@@ -52,9 +53,8 @@ namespace AdeNote.Infrastructure.Utilities.AI
                 }
 
                 logger.LogError(new Exception(response.Errors[0]),"Failed to update languages");
-
             });
         }
-        private IServiceProvider serviceProvider;
+        private readonly IServiceProvider _serviceProvider;
     }
 }

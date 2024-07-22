@@ -1,6 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AdeMessaging.Services.Exceptions;
+using AdeNote.Infrastructure.Middlewares;
+using Excelify.Services.Exceptions;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.Reflection.Metadata.Ecma335;
 using System.Security.Authentication;
 
 namespace AdeNote.Infrastructure.Middlewares
@@ -9,7 +14,7 @@ namespace AdeNote.Infrastructure.Middlewares
     {
         public ExceptionMiddleware(RequestDelegate requestDelegate, ILoggerFactory loggerFactory)
         {
-            _requestDelegate = requestDelegate;       
+            _requestDelegate = requestDelegate;
             _logger = loggerFactory.CreateLogger<ExceptionMiddleware>();
         }
         /// <summary>
@@ -63,21 +68,20 @@ namespace AdeNote.Infrastructure.Middlewares
         /// <returns></returns>
         private CustomProblemDetail GetError(Exception exception)
         {
-            if (exception is ValidationException v)
+            return exception switch
             {
-                return new CustomProblemDetail(v.ValidationResult.ErrorMessage, StatusCodes.Status400BadRequest);
-            }
-            else if (exception is AuthenticationException e)
-            {
-                return new CustomProblemDetail(e.Message, StatusCodes.Status401Unauthorized);
-            } else if (exception is OperationCanceledException o)
-            {
-                return new CustomProblemDetail("Operation has been cancelled", StatusCodes.Status400BadRequest);
-            }
-            else
-            {
-                return new CustomProblemDetail(exception.Message, StatusCodes.Status500InternalServerError);
-            }
+                Exception  when exception is ValidationException validationException => 
+                 new CustomProblemDetail(validationException.Message, StatusCodes.Status400BadRequest),
+                 Exception when exception is AuthenticationException authenticationException =>
+                 new CustomProblemDetail(authenticationException.Message, StatusCodes.Status401Unauthorized),
+                 Exception when exception is OperationCanceledException =>
+                 new CustomProblemDetail("Operation has been cancelled", StatusCodes.Status400BadRequest),
+                 Exception when exception is CacheException cacheException =>
+                 new CustomProblemDetail(cacheException.Message, StatusCodes.Status500InternalServerError),
+                 Exception when exception is MessagingException messagingException =>
+                 new CustomProblemDetail(messagingException.Message, StatusCodes.Status500InternalServerError),
+                 _ => new CustomProblemDetail(exception.Message, StatusCodes.Status500InternalServerError)
+            };
         }
 
         private ILogger<ExceptionMiddleware> _logger {  get; set; }

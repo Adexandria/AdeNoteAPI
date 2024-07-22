@@ -23,7 +23,10 @@ namespace AdeNote.Infrastructure.Utilities.EmailSettings
         EmailConfirmationNotification,
 
         [Description("Passworrdless")]
-        PasswordlessNotification
+        PasswordlessNotification,
+
+        
+        TicketUpdateNotification
 
     }
 }
