@@ -84,6 +84,10 @@ app.UseSwaggerUI(setupAction =>
                        $"/swagger/{description.GroupName}/swagger.json",
                        description.GroupName.ToUpperInvariant());
     }
+    setupAction.EnableDeepLinking();
+    setupAction.DisplayRequestDuration();
+    setupAction.EnableValidator();
+    setupAction.ShowExtensions();
 });
 app.UseHttpLogging();
 app.UseHttpsRedirection();

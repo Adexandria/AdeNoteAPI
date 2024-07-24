@@ -142,6 +142,7 @@ namespace AdeNote.Infrastructure.Extension
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
+                c.OrderActionsBy((apiDesc) => $"{apiDesc.ActionDescriptor}");
             });
         }
 
