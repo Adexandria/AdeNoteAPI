@@ -5,7 +5,7 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdeAuth.Services
+namespace AdeAuth.Services.Interfaces
 {
     /// <summary>
     /// Manages token provider service
@@ -34,7 +34,7 @@ namespace AdeAuth.Services
         /// <param name="verifyParameter">Verify parameter</param>
         /// <param name="claimTypes">Claim types to extract</param>
         /// <returns>A list of claims</returns>
-        Dictionary<string,object> ReadToken(string token, bool verifyParameter = false, params string[] claimTypes);
+        Dictionary<string, object> ReadToken(string token, bool verifyParameter = false, params string[] claimTypes);
 
         /// <summary>
         /// Generated token based on the encoded string

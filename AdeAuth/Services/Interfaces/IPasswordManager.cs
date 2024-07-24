@@ -1,4 +1,4 @@
-﻿namespace AdeAuth.Services
+﻿namespace AdeAuth.Services.Interfaces
 {
     /// <summary>
     /// Manages password manager

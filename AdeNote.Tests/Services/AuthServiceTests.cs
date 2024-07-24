@@ -1,4 +1,4 @@
-﻿using AdeAuth.Services;
+﻿using AdeAuth.Services.Interfaces;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Services.Authentication;
 using AdeNote.Infrastructure.Services.Blob;

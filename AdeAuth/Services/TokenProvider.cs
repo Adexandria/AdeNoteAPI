@@ -1,11 +1,12 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using AdeAuth.Services.Interfaces;
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Cryptography;
 using System.Text;
 
 namespace AdeAuth.Services
 {
-     class TokenProvider : ITokenProvider
+    class TokenProvider : ITokenProvider
      {
 
         /// <summary>

@@ -1,4 +1,6 @@
 ﻿
+using AdeAuth.Services.Interfaces;
+
 namespace AdeAuth.Services
 {
     /// <summary>

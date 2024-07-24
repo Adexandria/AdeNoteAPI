@@ -59,7 +59,7 @@ namespace AdeNote.Infrastructure.Extension
             serviceCollection.AddScoped<IEmailService, EmailService>();
             serviceCollection.AddScoped<ISmsService, SmsService>();
             serviceCollection.AddScoped<INotificationService, NotificationService>();
-            serviceCollection.AddScoped<IUserService, UserService>();
+            serviceCollection.AddScoped<Services.UserSettings.IUserService, Services.UserSettings.UserService>();
             serviceCollection.AddScoped<IHangfireUserRepository, HangfireUserRepository>();
             serviceCollection.AddScoped<IExcel, Services.Excel.ExcelService>();
             serviceCollection.AddScoped<IExportService, ExportService>();

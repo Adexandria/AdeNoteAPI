@@ -1,4 +1,4 @@
-﻿using AdeAuth.Services;
+﻿using AdeAuth.Services.Interfaces;
 using AdeNote.Db;
 using AdeNote.Models;
 using Microsoft.EntityFrameworkCore;

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdeAuth.Services
+namespace AdeAuth.Services.Interfaces
 {
     /// <summary>
     /// Manages multi-factor service
