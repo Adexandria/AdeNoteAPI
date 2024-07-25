@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace AdeAuth.Models
 {
-    internal class ApplicationUser : IApplicationUser
+    internal class ApplicationUser : BaseEntity, IApplicationUser
     {
-        public Guid Id { get; set; }
+        public ApplicationUser():base()
+        {   }
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string UserName { get; set; }
@@ -22,5 +24,7 @@ namespace AdeAuth.Models
         public int TwoFactorType { get; set; }
         public string AuthenticatorKey { get; set; }
         public bool LockoutEnabled { get; set; }
+
+        public IList<IApplicationRole> Roles { get; set; } = new List<ApplicationRole>();
     }
 }

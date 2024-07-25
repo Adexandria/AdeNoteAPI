@@ -80,5 +80,7 @@
         /// Verifies if the user is locked out
         /// </summary>
         bool LockoutEnabled { get; set; }
+
+        IList<IApplicationRole> Roles { get; set; }
     }
 }

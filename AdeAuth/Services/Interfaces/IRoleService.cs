@@ -1,17 +1,12 @@
 ﻿using AdeAuth.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdeAuth.Services.Interfaces
 {
-    public interface IRoleService
+    public interface IRoleService<TModel> where TModel : IApplicationRole
     {
-        void CreateRoles(string[] roles);
-        void CreateRole(string roles);
-        void DeleteRoles(string[] roles);
-        void DeleteRole(string name);
+        Task<bool> CreateRolesAsync(string[] roles);
+        Task<bool> CreateRoleAsync(string role);
+        Task<bool> DeleteRolesAsync(string[] roles);
+        Task<bool> DeleteRoleAsync(string role);
     }
 }

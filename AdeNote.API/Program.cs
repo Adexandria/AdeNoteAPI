@@ -1,3 +1,4 @@
+using AdeAuth.Infrastructure;
 using AdeNote.Db;
 using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Middlewares;
@@ -64,6 +65,9 @@ builder.Services.AddHangfireServer();
 
 builder.Services.AddDbContext<NoteDbContext>(options => options
 .UseSqlServer(applicationSettings.ConnectionString));
+
+//AuthContainerBuilder
+ //   .UseIdentityService<NoteDbContext>((s) => s.UseSqlServer(applicationSettings.ConnectionString));
 
 var app = builder.Build();
 

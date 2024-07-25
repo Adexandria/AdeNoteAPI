@@ -15,5 +15,7 @@
         /// </summary>
 
         string Name { get; set; }
+
+        IList<IApplicationUser> Roles { get; set; }
     }
 }
