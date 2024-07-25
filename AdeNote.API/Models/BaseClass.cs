@@ -5,7 +5,7 @@ namespace AdeNote.Models
     /// <summary>
     /// A base class that includes the id
     /// </summary>
-    public abstract class BaseClass : BaseEntity
+    public class BaseClass : BaseEntity
     {
         public void SetModifiedDate()
         {
