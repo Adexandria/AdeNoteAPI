@@ -5,6 +5,7 @@ using AdeNote.Infrastructure.Middlewares;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Infrastructure.Utilities.AuthenticationFilter;
 using AdeNote.Infrastructure.Utilities.HealthChecks;
+using AdeNote.Models;
 using Asp.Versioning;
 using Asp.Versioning.ApiExplorer;
 using Hangfire;
@@ -12,6 +13,7 @@ using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -66,8 +68,7 @@ builder.Services.AddHangfireServer();
 builder.Services.AddDbContext<NoteDbContext>(options => options
 .UseSqlServer(applicationSettings.ConnectionString));
 
-//AuthContainerBuilder
- //   .UseIdentityService<NoteDbContext>((s) => s.UseSqlServer(applicationSettings.ConnectionString));
+builder.Services.UseIdentityService<IdentityDbContext, User>((s) => s.UseSqlServer(applicationSettings.ConnectionString));
 
 var app = builder.Build();
 
