@@ -4,27 +4,26 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AdeAuth.Services
 {
-    internal class RoleService<TDbContext> : ServiceBase<TDbContext,ApplicationRole>, IRoleService<ApplicationRole>
+    internal class RoleService<TDbContext,TModel> : ServiceBase<TDbContext,ApplicationRole>, IRoleService<TModel>
         where TDbContext : DbContext
+        where TModel : ApplicationRole
     {
         public RoleService(TDbContext dbContext) : base(dbContext)
         {
-            _roles = dbContext.Set<ApplicationRole>();
+            _roles = dbContext.Set<TModel>();
         }
-        public async Task<bool> CreateRoleAsync(string role)
+        public async Task<bool> CreateRoleAsync(TModel role)
         {
-            var newRole = new ApplicationRole(role);
-
-            await _roles.AddAsync(newRole);
+            await _roles.AddAsync(role);
 
             return await SaveChangesAsync();
         }
 
-        public async Task<bool> CreateRolesAsync(string[] roles)
+        public async Task<bool> CreateRolesAsync(List<TModel> roles)
         {
             foreach (var role in roles)
             {
-               await _roles.AddAsync(new ApplicationRole(role));
+               await _roles.AddAsync(role);
             }
 
             return await SaveChangesAsync();
@@ -55,12 +54,12 @@ namespace AdeAuth.Services
             return await SaveChangesAsync();
         }
 
-        private async Task<ApplicationRole> GetRole(string roleName)
+        private async Task<TModel> GetRole(string roleName)
         {
             return await _roles.Where(s => s.Name == roleName).FirstOrDefaultAsync();
         }
 
-        private DbSet<ApplicationRole> _roles;
+        private DbSet<TModel> _roles;
     }
 
    
