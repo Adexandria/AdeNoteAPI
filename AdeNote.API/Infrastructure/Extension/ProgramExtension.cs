@@ -1,6 +1,8 @@
-﻿using AdeAuth.Services;
+﻿using AdeAuth.Infrastructure;
+using AdeAuth.Services;
 using AdeCache;
 using AdeMessaging;
+using AdeNote.Db;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Services.Authentication;
 using AdeNote.Infrastructure.Services.Blob;
@@ -28,6 +30,7 @@ using DocBuilder.Services;
 using Excelify.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -69,9 +72,6 @@ namespace AdeNote.Infrastructure.Extension
             serviceCollection.AddScoped<IAuthorizationHandler, RoleRequirementHandler>();
             serviceCollection.AddScoped<IFileService, FileService>();
             serviceCollection.AddScoped((_) => DocFactory.CreateService());
-            serviceCollection.AddSingleton((_) => AuthFactory.CreateService().PasswordManager);
-            serviceCollection.AddSingleton((_) => AuthFactory.CreateService().TokenProvider);
-            serviceCollection.AddSingleton((_) => AuthFactory.CreateService().MfaService);
             serviceCollection.AddSingleton((x) => MessagingFactory.CreateServices(applicationSettings.Messaging, x.GetRequiredService<ILoggerFactory>()));
             serviceCollection.AddSingleton<LanguageScheduler>();
             serviceCollection.AddSingleton<Scheduler>();
