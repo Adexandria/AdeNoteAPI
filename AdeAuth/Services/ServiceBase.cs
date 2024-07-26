@@ -4,7 +4,6 @@ namespace AdeAuth.Services
 {
     internal class ServiceBase<TDbContext,TModel> 
         where TDbContext: DbContext
-        where TModel : class
     {
         public ServiceBase(TDbContext dbContext)
         {
