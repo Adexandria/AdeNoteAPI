@@ -7,18 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Db\**" />
-    <EmbeddedResource Remove="Db\**" />
-    <None Remove="Db\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Autofac" Version="6.5.0" />
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="GoogleAuthenticator" Version="3.2.0" />
     <PackageReference Include="IdentityServer4.EntityFramework.Storage" Version="4.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.29" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.32" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
   </ItemGroup>
 
 </Project>
