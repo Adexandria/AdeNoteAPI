@@ -1,25 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AdeAuth.Models
+﻿namespace AdeAuth.Models
 {
-    internal class ApplicationRole :  BaseEntity, IApplicationRole
+    /// <summary>
+    /// Manages user role
+    /// </summary>
+    public class ApplicationRole
     {
-        public ApplicationRole():base()
-        {
-                
-        }
-        public ApplicationRole(string name):base() 
-        { 
-            Name = name;
-        }
+        /// <summary>
+        /// Id
+        /// </summary>
+        public Guid Id { get; set; }
 
+        /// <summary>
+        /// Name of the role
+        /// </summary>
 
         public string Name { get; set; }
-
-        public IList<IApplicationUser> User { get; set; } = new List<ApplicationUser>();
     }
 }
