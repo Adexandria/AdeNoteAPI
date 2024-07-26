@@ -2,12 +2,11 @@
 
 namespace AdeNote.Models
 {
-    public class BaseEntity
+    public interface IBaseEntity
     {
         /// <summary>
         /// Id of the entity
         /// </summary>
-        [Key]
         public Guid Id { get; set; }
     }
 }

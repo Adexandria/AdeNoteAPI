@@ -1,8 +1,9 @@
-﻿using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text;
 
 namespace AdeNote.Models
 {
-    public class RecoveryCode : BaseEntity
+    public class RecoveryCode : IBaseEntity
     {
 
         protected RecoveryCode()
@@ -41,6 +42,8 @@ namespace AdeNote.Models
 
 
 
+        [Key]
+        public Guid Id { get; set; }
 
         public Guid UserId { get; set; }
         public User User { get; set; }

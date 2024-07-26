@@ -1,14 +1,16 @@
 ﻿using AdeAuth.Models;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace AdeNote.Models
 {
-    public class User : BaseEntity, IApplicationUser
+    public class User : ApplicationUser, IBaseEntity
     {
-        protected User() { }
+        public User() { }
 
         public User(string firstName, string lastName, string email, AuthType authType)
         {
+            Id = Guid.NewGuid();
             FirstName = firstName;
             LastName = lastName;
             Email = email;
@@ -74,29 +76,28 @@ namespace AdeNote.Models
             RecoveryCode = new RecoveryCode(Id);
         }
 
-
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string? UserName { get; set; }
-        public string Email { get; set; }
-        public bool EmailConfirmed { get; set; }
-        public string? PasswordHash { get; set; }
+        [Key]
+        public new Guid Id { get; set; }
+        public new string FirstName { get; set; }
+        public new string LastName { get; set; }
+        public new string? UserName { get; set; }
+        public new string Email { get; set; }
+        public new bool EmailConfirmed { get; set; }
+        public new string? PasswordHash { get; set; }
         public RefreshToken RefreshToken { get; set; }
-        public string? PhoneNumber { get; set; }
-        public bool PhoneNumberConfirmed { get; set; }
-        public bool TwoFactorEnabled { get; set; }
-        public int TwoFactorType { get; set; }
-        public string? AuthenticatorKey { get; set; }
-        public bool LockoutEnabled { get; set; }
+        public new string? PhoneNumber { get; set; }
+        public new bool PhoneNumberConfirmed { get; set; }
+        public new bool TwoFactorEnabled { get; set; }
+        public new int TwoFactorType { get; set; }
+        public new string? AuthenticatorKey { get; set; }
+        public new bool LockoutEnabled { get; set; }
         public AuthType AuthenticationType { get; set; }
         public IList<Book> Books { get; set; } = new List<Book>();
-        public string? Salt { get; set; }
+        public new string? Salt { get; set; }
         public RecoveryCode RecoveryCode { get; set; }
         public Role Role { get; set; }
         public IList<Ticket> Tickets { get; set; } = new List<Ticket>();
-
         public DateTime Created { get; set; }
-
         public DateTime Modified { get; set; }
     }
 }

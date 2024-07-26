@@ -1,9 +1,11 @@
 ﻿using AdeAuth.Models;
+using SixLabors.ImageSharp.Formats.Tiff.Compression.Decompressors;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace AdeNote.Models
 {
-    public class RefreshToken : BaseEntity, IRefreshToken
+    public class RefreshToken : ApplicationRefreshToken, IBaseEntity
     {
         public RefreshToken()
         {
@@ -22,10 +24,12 @@ namespace AdeNote.Models
             IsRevoked = true;
         }
 
-        public string Token { get; set; }
-        public Guid UserId { get; set; }
-        public User User { get; set; }
-        public DateTime ExpiryDate { get; set; }
-        public bool IsRevoked { get; set; }
+        [Key]
+        public new Guid Id { get; set; }
+        public new string Token { get; set; }
+        public new Guid UserId { get; set; }
+        public new User User { get; set; }
+        public new DateTime ExpiryDate { get; set; }
+        public new bool IsRevoked { get; set; }
     }
 }

@@ -1,9 +1,11 @@
-﻿namespace AdeNote.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace AdeNote.Models
 {
     /// <summary>
     /// A label model
     /// </summary>
-    public class Label : BaseEntity
+    public class Label : IBaseEntity
     {
         /// <summary>
         /// A constructor
@@ -24,6 +26,9 @@
         {
             Modified = DateTime.UtcNow;
         }
+
+        [Key]
+        public Guid Id { get; set; }
         /// <summary>
         /// Title of the label
         /// </summary>
@@ -37,5 +42,6 @@
         public DateTime Created { get; set; }
 
         public DateTime Modified { get; set; }
+       
     }
 }

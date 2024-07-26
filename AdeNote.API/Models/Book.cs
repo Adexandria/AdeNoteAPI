@@ -1,11 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AdeNote.Models
 {
     /// <summary>
     /// A book object
     /// </summary>
-    public class Book : BaseEntity
+    public class Book : IBaseEntity
     {
         /// <summary>
         /// A Constructor
@@ -42,6 +43,9 @@ namespace AdeNote.Models
         {
             Modified = DateTime.UtcNow;
         }
+
+        [Key]
+        public Guid Id { get; set; }
 
         /// <summary>
         /// Title of the book

@@ -1,11 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AdeNote.Models
 {
     /// <summary>
     /// Page model
     /// </summary>
-    public class Page: BaseEntity
+    public class Page: IBaseEntity
     {
         /// <summary>
         /// A constructor
@@ -32,6 +33,9 @@ namespace AdeNote.Models
             Created = DateTime.UtcNow;
             Modified = DateTime.UtcNow;
         }
+
+        [Key]
+        public Guid Id { get; set; }
 
         /// <summary>
         /// A title of the page
