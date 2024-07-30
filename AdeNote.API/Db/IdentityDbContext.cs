@@ -10,5 +10,30 @@ namespace AdeNote.Db
         {
             
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<RefreshToken>().ToTable("RefreshTokens");
+            modelBuilder.Entity<RecoveryCode>().ToTable("RecoveryCodes");
+
+            modelBuilder.Entity<User>().ToTable("Users");
+
+            modelBuilder.Entity<RefreshToken>()
+               .HasOne(s => s.User).
+               WithOne(s => s.RefreshToken)
+               .HasForeignKey("RefreshToken", "UserId");
+
+            modelBuilder.Entity<User>()
+             .HasOne(s => s.RecoveryCode)
+             .WithOne(s => s.User)
+             .HasForeignKey("RecoveryCode", "UserId");
+
+            modelBuilder.Entity<User>()
+               .Property(s => s.Role)
+               .HasDefaultValue(Role.User);
+        }
+
     }
 }
