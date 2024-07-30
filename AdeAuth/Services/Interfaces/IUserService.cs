@@ -5,8 +5,8 @@ namespace AdeAuth.Services.Interfaces
 {
     public interface IUserService<TModel> where TModel : ApplicationUser
     {
-        public Task<bool> SignUpUser(TModel user);
-        public TModel AuthenticateUsingUsername(string username, string password);
-        public TModel AuthenticateUsingEmail(string email, string password);
+        public Task<bool> CreateUserAsync(TModel user);
+        public Task<TModel> AuthenticateUsingUsernameAsync(string username, string password);
+        public Task<TModel> AuthenticateUsingEmailAsync(string email, string password);
     }
 }
