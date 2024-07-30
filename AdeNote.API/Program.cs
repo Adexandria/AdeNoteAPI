@@ -1,4 +1,5 @@
 using AdeAuth.Infrastructure;
+using AdeAuth.Services;
 using AdeNote.Db;
 using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Middlewares;
@@ -14,6 +15,8 @@ using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
+using Twilio.AspNet.Core;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -68,7 +71,12 @@ builder.Services.AddHangfireServer();
 builder.Services.AddDbContext<NoteDbContext>(options => options
 .UseSqlServer(applicationSettings.ConnectionString));
 
-builder.Services.UseIdentityService<IdentityDbContext, User>((s) => s.UseSqlServer(applicationSettings.ConnectionString));
+builder.Services.UseIdentityService<IdentityDbContext, User>((s) => s.UseSqlServer(applicationSettings.ConnectionString), 
+    assembly: Assembly.GetExecutingAssembly(),dependencies: (x) =>
+    {
+        var currentTypes = x.GetTypes().Where(s=>!s.IsInterface && !s.IsAbstract).Where(p=> p.BaseType == typeof(IdentityService<User>)).ToList();
+        return currentTypes;
+    });
 
 var app = builder.Build();
 
@@ -121,7 +129,7 @@ app.MapControllers();
 app.CreateTables();
 app.SeedHangFireUser(applicationSettings.HangFireUserConfiguration);
 app.SeedSuperAdmin(applicationSettings.DefaultConfiguration);
- app.SetUpRabbitConfiguration(configuration);
+app.SetUpRabbitConfiguration(configuration);
 app.ScheduleService(configuration);
 app.Run();
 
