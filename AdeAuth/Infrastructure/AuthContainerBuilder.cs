@@ -2,11 +2,11 @@
 using AdeAuth.Models;
 using AdeAuth.Services;
 using AdeAuth.Services.Interfaces;
-using Autofac;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 
 
@@ -14,74 +14,61 @@ namespace AdeAuth.Infrastructure
 {
     public static class AuthContainerBuilder
     {
-        public static void UseIdentityService<TDbContext>(this IServiceCollection serviceCollection, Action<DbContextOptionsBuilder> actionBuilder) 
+
+        public static void UseIdentityService<TDbContext>(this IServiceCollection serviceCollection,
+            Action<DbContextOptionsBuilder> actionBuilder,
+            Func<Assembly, List<Type>> dependencies = null, Assembly assembly = null)
             where TDbContext : IdentityContext
         {
-            var containerBuilder = new ContainerBuilder();
+            RegisterDbContext<TDbContext>(serviceCollection, actionBuilder);
 
-            RegisterDbContext<TDbContext>(actionBuilder, containerBuilder);
 
-            RegisterDependencies<TDbContext>(containerBuilder);
+            if(assembly != null)
+            {
+                var dependencyTypes = dependencies(assembly);
 
-            var container = containerBuilder.Build();
-
-            using var scope = container.BeginLifetimeScope();
-
-            var application = scope.Resolve<Application<ApplicationUser, ApplicationRole>>();
-
-            serviceCollection.RegisterServices(application);
+                RegisterServices<TDbContext>(serviceCollection, dependencyTypes);
+            }
+            else
+            {
+                RegisterDependencies<TDbContext>(serviceCollection);
+            }
         }
 
-        public static void UseIdentityService<TDbContext,TUser>(this IServiceCollection serviceCollection, Action<DbContextOptionsBuilder> actionBuilder) 
-            where TDbContext : IdentityContext
+        public static void UseIdentityService<TDbContext,TUser>(this IServiceCollection serviceCollection, 
+            Action<DbContextOptionsBuilder> actionBuilder, Func<Assembly, List<Type>> dependencies = null, Assembly assembly = null) 
+            where TDbContext : IdentityContext<TUser>
             where TUser : ApplicationUser, new()
         {
-            var containerBuilder = new ContainerBuilder();
+            RegisterDbContext<TDbContext>(serviceCollection, actionBuilder);
 
-            RegisterDbContext<TDbContext>(actionBuilder, containerBuilder);
+            if (assembly == null)
+            {
+                RegisterDependencies<TDbContext,TUser>(serviceCollection);
+            }
+            else
+            {
+                RegisterServices<TDbContext,TUser>(serviceCollection, dependencies(assembly));
+            }
 
-            RegisterDependencies<TDbContext,TUser>(containerBuilder);
-
-            var container = containerBuilder.Build();
-
-            using var scope = container.BeginLifetimeScope();
-
-            var application = scope.Resolve<Application<TUser, ApplicationRole>>();
-
-            serviceCollection.RegisterServices(application);
         }
 
-        public static void UseIdentityService<TDbContext, TUser, TRole>(this IServiceCollection serviceCollection, Action<DbContextOptionsBuilder> actionBuilder)
-         where TDbContext : IdentityContext
+        public static void UseIdentityService<TDbContext, TUser, TRole>(this IServiceCollection serviceCollection, Action<DbContextOptionsBuilder> actionBuilder,
+            Func<Assembly, List<Type>> dependencies = null, Assembly assembly = null)
+         where TDbContext : IdentityContext<TUser,TRole>
          where TUser : ApplicationUser, new()
          where TRole: ApplicationRole, new()
         {
-            var containerBuilder = new ContainerBuilder();
+            RegisterDbContext<TDbContext>(serviceCollection, actionBuilder);
 
-            RegisterDbContext<TDbContext>(actionBuilder, containerBuilder);
-
-            RegisterDependencies<TDbContext, TUser, TRole>(containerBuilder);
-
-            var container = containerBuilder.Build();
-
-            using var scope = container.BeginLifetimeScope();
-
-            var application = scope.Resolve<Application<TUser, TRole>>();
-
-            serviceCollection.RegisterServices(application);
-        }
-
-       private static void RunMigration<TDbContext>(TDbContext dbContext) where TDbContext : DbContext
-        {
-         
-         var databaseCreator = dbContext.GetService<IRelationalDatabaseCreator>();
-
-         if (databaseCreator.CanConnect())
-         {
-             CheckTableExistsAndCreateIfMissing(dbContext, "Users");
-             CheckTableExistsAndCreateIfMissing(dbContext, "Roles");
-         }
-
+            if (assembly == null)
+            {
+                RegisterDependencies<TDbContext, TUser, TRole>(serviceCollection);
+            }
+            else
+            {
+                RegisterServices<TDbContext, TUser, TRole>(serviceCollection, dependencies(assembly));
+            }
         }
 
         private static void CheckTableExistsAndCreateIfMissing(DbContext dbContext, string entityName)
@@ -106,110 +93,137 @@ namespace AdeAuth.Infrastructure
             }
         }
 
-        private static void RegisterDbContext<TDbContext>(Action<DbContextOptionsBuilder> actionBuilder, ContainerBuilder containerBuilder) where TDbContext: DbContext
+        private static void RegisterDbContext<TDbContext>(IServiceCollection services, Action<DbContextOptionsBuilder> actionBuilder)
+            where TDbContext: DbContext
         {
-            var dbContextBuilder = new DbContextOptionsBuilder();
+            services.AddDbContext<TDbContext>(actionBuilder);
 
-            actionBuilder(dbContextBuilder);
+            RunMigration(services,(s) => s.GetRequiredService<TDbContext>());
 
-            var dbContext = Activator.CreateInstance(typeof(TDbContext), dbContextBuilder.Options) as TDbContext;
-
-            containerBuilder.Register((_) => dbContext)
-                .As<TDbContext>()
-                .SingleInstance();
-
-            RunMigration<TDbContext>(dbContext);
-
-            RegisterDependencies(containerBuilder);
+            RegisterDependencies(services);
         }
 
-        private static void RegisterDependencies<TDbContext>(ContainerBuilder containerBuilder) where TDbContext : DbContext
-        {
-
-            containerBuilder.RegisterType<RoleService<TDbContext,ApplicationRole>>()
-                .As<IRoleService<ApplicationRole>>().
-                PropertiesAutowired()
-                .InstancePerLifetimeScope();
-
-            containerBuilder.RegisterType<UserService<TDbContext, ApplicationUser>>()
-                .As<IUserService<ApplicationUser>>()
-                .PropertiesAutowired()
-                .InstancePerLifetimeScope();
-
-            containerBuilder.RegisterType<Application<ApplicationUser, ApplicationRole>>()
-              .As<Application<ApplicationUser, ApplicationRole>>()
-              .PropertiesAutowired()
-              .InstancePerLifetimeScope();
-        }
-
-        private static void RegisterDependencies<TDbContext,TUser>(ContainerBuilder containerBuilder)
+        private static void RunMigration<TDbContext>(IServiceCollection services, Func<IServiceProvider,TDbContext> action) 
             where TDbContext : DbContext
+        {
+            TDbContext dbContext = action(services.BuildServiceProvider());
+
+            var databaseCreator = dbContext.GetService<IRelationalDatabaseCreator>();
+
+            if (databaseCreator.CanConnect())
+            {
+                CheckTableExistsAndCreateIfMissing(dbContext, "Users");
+                CheckTableExistsAndCreateIfMissing(dbContext, "Roles");
+                CheckTableExistsAndCreateIfMissing(dbContext, "UserRoles");
+            }
+        }
+
+        private static void RegisterDependencies<TDbContext>(IServiceCollection services)
+           where TDbContext : IdentityContext
+        {
+            services.AddScoped<IRoleService<ApplicationRole>, RoleService<TDbContext, ApplicationUser, ApplicationRole>>();
+
+            services.AddScoped<IUserService<ApplicationUser>, UserService<TDbContext, ApplicationUser>>();
+        }
+
+        private static void RegisterDependencies<TDbContext,TUser>(IServiceCollection services)
+            where TDbContext : IdentityContext<TUser>
             where TUser : ApplicationUser,new()
         {
+            services.AddScoped<IRoleService<ApplicationRole>, RoleService<TDbContext, TUser,ApplicationRole>>();
 
-            containerBuilder.RegisterType<RoleService<TDbContext,ApplicationRole>>()
-                .As<IRoleService<ApplicationRole>>().
-                PropertiesAutowired()
-                .InstancePerLifetimeScope();
-
-            containerBuilder.RegisterType<UserService<TDbContext,TUser>>()
-                .As<IUserService<TUser>>()
-                .PropertiesAutowired()
-                .InstancePerLifetimeScope();
-
-            containerBuilder.RegisterType<Application<TUser, ApplicationRole>>()
-                .As<Application<TUser, ApplicationRole>>()
-                .PropertiesAutowired()
-                .InstancePerLifetimeScope();
+            services.AddScoped<IUserService<TUser>, UserService<TDbContext, TUser>>();
         }
 
-        private static void RegisterDependencies<TDbContext, TUser, TRole>(ContainerBuilder containerBuilder)
-          where TDbContext : IdentityContext
-          where TUser : ApplicationUser, new()
+        private static void RegisterDependencies<TDbContext, TUser, TRole>(IServiceCollection services)
+          where TDbContext : IdentityContext<TUser, TRole>
           where TRole : ApplicationRole, new()
+           where TUser : ApplicationUser, new()
         {
 
-            containerBuilder.RegisterType<RoleService<TDbContext, TRole>>()
-                .As<IRoleService<TRole>>().
-                PropertiesAutowired()
-                .InstancePerLifetimeScope();
-             
+            services.AddScoped<IRoleService<TRole>, RoleService<TDbContext, TUser,TRole>>();
 
-            containerBuilder.RegisterType<UserService<TDbContext, TUser>>()
-                .As<IUserService<TUser>>()
-                .PropertiesAutowired()
-                .InstancePerLifetimeScope();
-
-            containerBuilder.RegisterType<Application<TUser, TRole>>()
-             .As<Application<TUser, TRole>>()
-             .PropertiesAutowired()
-             .InstancePerLifetimeScope();
+            services.AddScoped<IUserService<TUser>, UserService<TDbContext, TUser>>();
         }
 
-        private static void RegisterDependencies(ContainerBuilder containerBuilder)
+        private static void RegisterDependencies(IServiceCollection services)
         {
-            containerBuilder.RegisterType<PasswordManager>()
-                .As<IPasswordManager>()
-                .SingleInstance();
+            services.AddSingleton<IPasswordManager, PasswordManager>();
 
-            containerBuilder.RegisterType<TokenProvider>()
-                .As<ITokenProvider>()
-                .SingleInstance();
+            services.AddSingleton<ITokenProvider,TokenProvider>();
 
-            containerBuilder.RegisterType<MfaService>()
-                .As<IMfaService>()
-                .SingleInstance();
+            services.AddSingleton<IMfaService, MfaService>();   
         }
 
-        private static void RegisterServices<TUser, TRole>(this IServiceCollection serviceCollection, Application<TUser, TRole> application)
-            where TUser : ApplicationUser
-            where TRole : ApplicationRole
+        private static void RegisterServices<TDbContext>(IServiceCollection services, List<Type> dependencyTypes)
+            where TDbContext : IdentityContext
         {
-            serviceCollection.AddSingleton(application.MfaService);
-            serviceCollection.AddSingleton(application.PasswordManager);
-            serviceCollection.AddSingleton(application.TokenProvider);
-            serviceCollection.AddScoped(application.RoleService.GetType());
-            serviceCollection.AddScoped(application.UserService.GetType());
+            var roleServiceType = dependencyTypes.Where(s => s.GetInterfaces().Contains(typeof(IRoleService<ApplicationRole>))).FirstOrDefault();
+            var userServiceType = dependencyTypes.Where(s => s.GetInterfaces().Contains(typeof(IUserService<ApplicationUser>))).FirstOrDefault();
+
+            if(roleServiceType != null && userServiceType != null)
+            {
+                services.AddScoped(typeof(IUserService<ApplicationUser>), userServiceType);
+                services.AddScoped(typeof(IRoleService<ApplicationRole>), roleServiceType);
+            }
+            else if(userServiceType != null)
+            {
+                services.AddScoped(typeof(IUserService<ApplicationUser>), userServiceType);
+                services.AddScoped<IRoleService<ApplicationRole>, RoleService<TDbContext, ApplicationUser, ApplicationRole>>();
+            }else
+            {
+                services.AddScoped(typeof(IRoleService<ApplicationRole>), roleServiceType);
+                services.AddScoped<IUserService<ApplicationUser>, UserService<TDbContext, ApplicationUser>>();
+            }
+        }
+
+        private static void RegisterServices<TDbContext,TUser>(IServiceCollection services, List<Type> dependencyTypes)
+           where TDbContext : IdentityContext<TUser>
+            where TUser : ApplicationUser,new()
+        {
+            var roleServiceType = dependencyTypes.Where(s => s.GetInterfaces().Contains(typeof(IRoleService<ApplicationRole>))).FirstOrDefault();
+            var userServiceType = dependencyTypes.Where(s => s.GetInterfaces().Contains(typeof(IUserService<TUser>))).FirstOrDefault();
+
+            if (roleServiceType != null && userServiceType != null)
+            {
+                services.AddScoped(typeof(IUserService<TUser>), userServiceType);
+                services.AddScoped(typeof(IRoleService<ApplicationRole>), roleServiceType);
+            }
+            else if (userServiceType != null)
+            {
+                services.AddScoped(typeof(IUserService<TUser>), userServiceType);
+                services.AddScoped<IRoleService<ApplicationRole>, RoleService<TDbContext, TUser, ApplicationRole>>();
+            }
+            else
+            {
+                services.AddScoped(typeof(IRoleService<ApplicationRole>), roleServiceType);
+                services.AddScoped<IUserService<TUser>, UserService<TDbContext, TUser>>();
+            }
+        }
+
+        private static void RegisterServices<TDbContext, TUser,TRole>(IServiceCollection services, List<Type> dependencyTypes)
+           where TDbContext : IdentityContext<TUser,TRole>
+            where TUser : ApplicationUser, new()
+            where TRole: ApplicationRole,new()
+        {
+            var roleServiceType = dependencyTypes.Where(s => s.GetInterfaces().Contains(typeof(IRoleService<TRole>))).FirstOrDefault();
+            var userServiceType = dependencyTypes.Where(s => s.GetInterfaces().Contains(typeof(IUserService<TUser>))).FirstOrDefault();
+
+            if (roleServiceType != null && userServiceType != null)
+            {
+                services.AddScoped(typeof(IUserService<TUser>), userServiceType);
+                services.AddScoped(typeof(IRoleService<TRole>), roleServiceType);
+            }
+            else if (userServiceType != null)
+            {
+                services.AddScoped(typeof(IUserService<TUser>), userServiceType);
+                services.AddScoped<IRoleService<TRole>, RoleService<TDbContext, TUser, TRole>>();
+            }
+            else
+            {
+                services.AddScoped(typeof(IRoleService<TRole>), roleServiceType);
+                services.AddScoped<IUserService<TUser>, UserService<TDbContext, TUser>>();
+            }
         }
     }
 }
