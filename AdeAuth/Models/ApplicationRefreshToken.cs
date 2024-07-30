@@ -14,27 +14,27 @@ namespace AdeAuth.Models
         /// <summary>
         /// Id
         /// </summary>
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
         /// <summary>
         /// Refresh Token
         /// </summary>
-        public string Token { get; set; }
+        public virtual string Token { get; set; }
 
         /// <summary>
         /// User id
         /// </summary>
-        public Guid UserId { get; set; }
+        public virtual Guid UserId { get; set; }
 
         /// <summary>
         /// Expiry date 
         /// </summary>
-        public DateTime ExpiryDate { get; set; }
+        public virtual DateTime ExpiryDate { get; set; }
 
         /// <summary>
         /// Verifies if the token is revoked
         /// </summary>
 
-        public bool IsRevoked { get; set; }
+        public virtual bool IsRevoked { get; set; }
     }
 }
