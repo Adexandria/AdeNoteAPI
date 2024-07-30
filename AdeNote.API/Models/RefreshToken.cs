@@ -25,11 +25,11 @@ namespace AdeNote.Models
         }
 
         [Key]
-        public new Guid Id { get; set; }
-        public new string Token { get; set; }
-        public new Guid UserId { get; set; }
-        public new User User { get; set; }
-        public new DateTime ExpiryDate { get; set; }
-        public new bool IsRevoked { get; set; }
+        public override Guid Id { get; set; }
+        public override string Token { get; set; }
+        public override Guid UserId { get; set; }
+        public  User User { get; set; }
+        public override DateTime ExpiryDate { get; set; }
+        public override bool IsRevoked { get; set; }
     }
 }

@@ -77,27 +77,27 @@ namespace AdeNote.Models
         }
 
         [Key]
-        public new Guid Id { get; set; }
-        public new string FirstName { get; set; }
-        public new string LastName { get; set; }
-        public new string? UserName { get; set; }
-        public new string Email { get; set; }
-        public new bool EmailConfirmed { get; set; }
-        public new string? PasswordHash { get; set; }
+        public override Guid Id { get; set; }
+        public override string FirstName { get; set; }
+        public override string LastName { get; set; }
+        public override string? UserName { get; set; }
+        public override string Email { get; set; }
+        public override bool EmailConfirmed { get; set; }
+        public override string? PasswordHash { get; set; }
         public RefreshToken RefreshToken { get; set; }
-        public new string? PhoneNumber { get; set; }
-        public new bool PhoneNumberConfirmed { get; set; }
-        public new bool TwoFactorEnabled { get; set; }
-        public new int TwoFactorType { get; set; }
-        public new string? AuthenticatorKey { get; set; }
-        public new bool LockoutEnabled { get; set; }
+        public override string? PhoneNumber { get; set; }
+        public override bool PhoneNumberConfirmed { get; set; }
+        public override bool TwoFactorEnabled { get; set; }
+        public override int TwoFactorType { get; set; }
+        public override string? AuthenticatorKey { get; set; }
+        public override bool LockoutEnabled { get; set; }
         public AuthType AuthenticationType { get; set; }
         public IList<Book> Books { get; set; } = new List<Book>();
-        public new string? Salt { get; set; }
+        public override string? Salt { get; set; }
         public RecoveryCode RecoveryCode { get; set; }
         public Role Role { get; set; }
         public IList<Ticket> Tickets { get; set; } = new List<Ticket>();
-        public DateTime Created { get; set; }
-        public DateTime Modified { get; set; }
+        public  DateTime Created { get; set; }
+        public  DateTime Modified { get; set; }
     }
 }
