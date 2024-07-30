@@ -33,7 +33,7 @@ namespace AdeNote.Db
         /// </summary>
         public DbSet<Page> Pages { get; set; }
 
-        public DbSet<User> Users { get; set; }
+       // public DbSet<User> Users { get; set; }
 
         public DbSet<Ticket> Tickets { get; set; }
 
@@ -62,6 +62,7 @@ namespace AdeNote.Db
                 .HasOne(s => s.User)
                 .WithMany(s => s.Books).HasForeignKey(s => s.UserId);
 
+           
 
             modelBuilder.Entity<RefreshToken>()
                 .HasOne(s => s.User).
