@@ -5,24 +5,27 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AdeAuth.Services
 {
-    internal class UserService<TDbContext,TModel> : ServiceBase<TDbContext, ApplicationUser>, IUserService<TModel>
+    internal class UserService<TDbContext,TModel> : IdentityService<TModel>
         where TDbContext : DbContext
         where TModel : ApplicationUser,new()
     {
-        public UserService(TDbContext dbContext) : base(dbContext)
-        { 
+        public UserService(TDbContext dbContext,
+            IPasswordManager passwordManager)
+        {
+             Db = dbContext;
             _users = dbContext.Set<TModel>();
+            _passwordManager = passwordManager;
         }
 
-        public TModel AuthenticateUsingUsername(string username, string password)
+        public override async Task<TModel> AuthenticateUsingUsernameAsync(string username, string password)
         {
-            var currentUser = _users.Where(s=>s.UserName == username).FirstOrDefault();
+            var currentUser = await _users.Where(s=>s.UserName == username).FirstOrDefaultAsync();
             if (currentUser == null)
             {
                 return default;
             }
 
-            var isPasswordCorrect = PasswordManager.VerifyPassword(password, currentUser.PasswordHash, currentUser.Salt);
+            var isPasswordCorrect = _passwordManager.VerifyPassword(password, currentUser.PasswordHash, currentUser.Salt);
 
             if (isPasswordCorrect)
             {
@@ -31,15 +34,15 @@ namespace AdeAuth.Services
 
             return default;
         }
-        public TModel AuthenticateUsingEmail(string email, string password)
+        public override async Task<TModel> AuthenticateUsingEmailAsync(string email, string password)
         {
-            var currentUser = _users.Where(s => s.Email == email).FirstOrDefault();
+            var currentUser = await _users.Where(s => s.Email == email).FirstOrDefaultAsync();
             if (currentUser == null)
             {
                 return default;
             }
 
-            var isPasswordCorrect = PasswordManager.VerifyPassword(password, currentUser.PasswordHash, currentUser.Salt);
+            var isPasswordCorrect = _passwordManager.VerifyPassword(password, currentUser.PasswordHash, currentUser.Salt);
 
             if (isPasswordCorrect)
             {
@@ -49,14 +52,62 @@ namespace AdeAuth.Services
             return default;
         }
 
-        public async Task<bool> SignUpUser(TModel user)
+        public override async Task<bool> CreateUserAsync(TModel user)
         {
            _users.Add(user);
 
            return await SaveChangesAsync();
         }
 
-        public IPasswordManager PasswordManager { get; set; }
+        private async Task<bool> SaveChangesAsync()
+        {
+
+            var saved = false;
+            while (!saved)
+            {
+                try
+                {
+                    int commitedResult = await Db.SaveChangesAsync();
+                    if (commitedResult == 0)
+                    {
+                        saved = false;
+                        break;
+                    }
+                    saved = true;
+                }
+                catch (DbUpdateConcurrencyException ex)
+                {
+                    foreach (var entry in ex.Entries)
+                    {
+                        if (entry.Entity is TModel)
+                        {
+                            var proposedValues = entry.CurrentValues;
+                            var databaseValues = entry.GetDatabaseValues();
+
+                            foreach (var property in proposedValues.Properties)
+                            {
+                                var databaseValue = databaseValues[property];
+                            }
+
+                            entry.OriginalValues.SetValues(databaseValues);
+                        }
+                        else
+                        {
+                            throw new NotSupportedException(
+                                "Don't know how to handle concurrency conflicts for "
+                                + entry.Metadata.Name);
+                        }
+                    }
+                }
+            }
+            return saved;
+
+        }
+
+        private readonly TDbContext Db;
+
+        private readonly IPasswordManager _passwordManager;
+
         private readonly DbSet<TModel> _users;
     }
 }
