@@ -2,7 +2,7 @@
 
 namespace AdeNote.Models
 {
-    public class Ticket :IBaseEntity
+    public class Ticket : IBaseEntity
     {
         public Ticket()
         {

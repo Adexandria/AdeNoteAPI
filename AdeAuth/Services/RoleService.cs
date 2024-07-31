@@ -3,6 +3,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AdeAuth.Services
 {
+    /// <summary>
+    /// Manages role services
+    /// </summary>
+    /// <typeparam name="TRole">Application role</typeparam>
     internal class RoleService<TDbContext,TUser,TModel> : RoleManager<TModel>
         where TDbContext : DbContext
         where TUser : ApplicationUser
@@ -15,6 +19,12 @@ namespace AdeAuth.Services
             _userRoles = dbContext.Set<UserRole>();
             _roles = dbContext.Set<TModel>();
         }
+
+        /// <summary>
+        /// Creates role
+        /// </summary>
+        /// <param name="role">New role to add</param>
+        /// <returns>boolean value</returns>
         public override async Task<bool> CreateRoleAsync(TModel role)
         {
             await _roles.AddAsync(role);
@@ -22,6 +32,12 @@ namespace AdeAuth.Services
             return await SaveChangesAsync();
         }
 
+
+        /// <summary>
+        /// Create roles
+        /// </summary>
+        /// <param name="roles">New roles to add</param>
+        /// <returns>boolean value</returns>
         public override async Task<bool> CreateRolesAsync(List<TModel> roles)
         {
             foreach (var role in roles)
@@ -32,6 +48,12 @@ namespace AdeAuth.Services
             return await SaveChangesAsync();
         }
 
+
+        /// <summary>
+        /// Delete role
+        /// </summary>
+        /// <param name="role">Role to delete</param>
+        /// <returns>Boolean value</returns>
         public override async Task<bool> DeleteRoleAsync(string role)
         {
             var currentApplicationRole = await GetRole(role);
@@ -43,6 +65,12 @@ namespace AdeAuth.Services
             return false;
         }
 
+
+        /// <summary>
+        /// Delete roles
+        /// </summary>
+        /// <param name="roles">Roles to delete</param>
+        /// <returns>Boolean value</returns>
         public override async Task<bool> DeleteRolesAsync(string[] roles)
         {
             foreach (var role in roles)
@@ -57,9 +85,15 @@ namespace AdeAuth.Services
             return await SaveChangesAsync();
         }
 
-        public override async Task<bool> AddUserRole(Guid userId, string roleName)
+        /// <summary>
+        /// Add role to user
+        /// </summary>
+        /// <param name="userId">User id</param>
+        /// <param name="role">Existing role name</param>
+        /// <returns>Boolean value</returns>
+        public override async Task<bool> AddUserRole(Guid userId, string role)
         {
-            var currentRole = await GetRole(roleName); 
+            var currentRole = await GetRole(role); 
             if (currentRole == null)
             {
                 return false;
@@ -79,9 +113,15 @@ namespace AdeAuth.Services
             return await SaveChangesAsync();
         }
 
-        public override async Task<bool> RemoveUserRole(Guid userId, string roleName)
+        /// <summary>
+        /// Removes user role
+        /// </summary>
+        /// <param name="userId">User id</param>
+        /// <param name="role">Existing role name</param>
+        /// <returns>Boolean value</returns>
+        public override async Task<bool> RemoveUserRole(Guid userId, string role)
         {
-            var currentRole = await GetRole(roleName);
+            var currentRole = await GetRole(role);
             if (currentRole == null)
             {
                 return false;
@@ -100,13 +140,50 @@ namespace AdeAuth.Services
         }
 
 
-
-        private async Task<TModel> GetRole(string roleName)
+        /// <summary>
+        /// Add role to user
+        /// </summary>
+        /// <param name="email">User email address</param>
+        /// <param name="role">Existing role name</param>
+        /// <returns>Boolean value</returns>
+        public override async Task<bool> AddUserRole(string email, string role)
         {
-            return await _roles.Where(s => s.Name == roleName)
+            var currentRole = await GetRole(role);
+            if (currentRole == null)
+            {
+                return false;
+            }
+
+            var currentUser = await _users.Where(s => s.Email == email).FirstOrDefaultAsync();
+
+            if (currentUser == null)
+                return false;
+
+            _userRoles.Add(new UserRole()
+            {
+                RoleId = currentRole.Id,
+                UserId = currentUser.Id
+            });
+
+            return await SaveChangesAsync();
+        }
+
+        /// <summary>
+        /// Get existing role
+        /// </summary>
+        /// <param name="role">Role</param>
+        /// <returns>role</returns>
+        private async Task<TModel> GetRole(string role)
+        {
+            return await _roles.Where(s => s.Name == role)
                 .FirstOrDefaultAsync();
         }
 
+        /// <summary>
+        /// Save changes and manages concurrency exception
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="NotSupportedException"></exception>
         private async Task<bool> SaveChangesAsync()
         {
 
@@ -151,7 +228,6 @@ namespace AdeAuth.Services
             return saved;
 
         }
-
 
         private readonly DbSet<TUser> _users;
         private readonly DbSet<TModel> _roles;
