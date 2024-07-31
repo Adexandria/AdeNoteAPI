@@ -598,7 +598,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
                 user.ConfirmEmailVerification();
             }
 
-            var result = await userRepository.Add(user);
+            var result = await userService.CreateUserAsync(user);
 
             var recoveryCode = new RecoveryCode(user.Id);
             var response = await recoveryCodeRepository.Add(recoveryCode);
