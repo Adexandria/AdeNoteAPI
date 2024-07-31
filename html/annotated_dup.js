@@ -12,6 +12,7 @@ var annotated_dup =
         [ "UserController", "classAdeNote_1_1Controllers_1_1UserController.html", "classAdeNote_1_1Controllers_1_1UserController" ]
       ] ],
       [ "Db", "namespaceAdeNote_1_1Db.html", [
+        [ "IdentityDbContext", "classAdeNote_1_1Db_1_1IdentityDbContext.html", "classAdeNote_1_1Db_1_1IdentityDbContext" ],
         [ "NoteDbContext", "classAdeNote_1_1Db_1_1NoteDbContext.html", "classAdeNote_1_1Db_1_1NoteDbContext" ]
       ] ],
       [ "Infrastructure", "namespaceAdeNote_1_1Infrastructure.html", [
@@ -34,6 +35,7 @@ var annotated_dup =
           [ "ExceptionMiddleware", "classAdeNote_1_1Infrastructure_1_1Middlewares_1_1ExceptionMiddleware.html", "classAdeNote_1_1Infrastructure_1_1Middlewares_1_1ExceptionMiddleware" ]
         ] ],
         [ "Repository", "namespaceAdeNote_1_1Infrastructure_1_1Repository.html", [
+          [ "AuthRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository" ],
           [ "BookRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository" ],
           [ "HangfireUserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1HangfireUserRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1HangfireUserRepository" ],
           [ "IBookRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository" ],
@@ -232,7 +234,7 @@ var annotated_dup =
         [ "BaseClass", "classAdeNote_1_1Models_1_1BaseClass.html", "classAdeNote_1_1Models_1_1BaseClass" ],
         [ "Book", "classAdeNote_1_1Models_1_1Book.html", "classAdeNote_1_1Models_1_1Book" ],
         [ "HangfireUser", "classAdeNote_1_1Models_1_1HangfireUser.html", "classAdeNote_1_1Models_1_1HangfireUser" ],
-        [ "BaseEntity", "classAdeNote_1_1Models_1_1BaseEntity.html", "classAdeNote_1_1Models_1_1BaseEntity" ],
+        [ "IBaseEntity", "interfaceAdeNote_1_1Models_1_1IBaseEntity.html", "interfaceAdeNote_1_1Models_1_1IBaseEntity" ],
         [ "Label", "classAdeNote_1_1Models_1_1Label.html", "classAdeNote_1_1Models_1_1Label" ],
         [ "LabelPage", "classAdeNote_1_1Models_1_1LabelPage.html", "classAdeNote_1_1Models_1_1LabelPage" ],
         [ "Page", "classAdeNote_1_1Models_1_1Page.html", "classAdeNote_1_1Models_1_1Page" ],

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['pagerepository_1585',['pageRepository',['../classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a591373231896a5eddb1346778f472909',1,'AdeNote::Infrastructure::Services::PageSettings::PageService']]],
-  ['passwordmanager_1586',['PasswordManager',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#a0d311f30f72a3376a16d11e4e59d549d',1,'AdeNote::Infrastructure::Repository::UserRepository']]],
-  ['passwordmanager_1587',['passwordManager',['../classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a09457ff8f4f6adf56ab2f4e13bb95561',1,'AdeNote::Infrastructure::Services::Authentication::AuthService']]]
+  ['messagingservice_1595',['messagingService',['../classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#ad8bb895b0847c3f4e2bc773ea8510f71',1,'AdeNote::Infrastructure::Services::TicketSettings::TicketService']]],
+  ['mfaservice_1596',['mfaService',['../classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a52b556e79516c3ed8ce49d90a5437a96',1,'AdeNote::Infrastructure::Services::Authentication::AuthService']]]
 ];

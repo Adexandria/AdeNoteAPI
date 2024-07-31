@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['fileservice_1575',['fileService',['../classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#a2afdb63f05373cf3674f9d4e4b95ed21',1,'AdeNote::Infrastructure::Services::Blob::BlobService']]]
+  ['emailconfig_1585',['emailConfig',['../classAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1EmailService.html#a7a332cb802ed5fe5dc67a7021a848e75',1,'AdeNote::Infrastructure::Services::EmailSettings::EmailService']]],
+  ['eventconfiguration_1586',['eventConfiguration',['../classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#ac05587cb593f725a649bec076ef80390',1,'AdeNote::Infrastructure::Services::TicketSettings::TicketService']]]
 ];

@@ -1,5 +1,6 @@
 var namespaceAdeNote_1_1Infrastructure_1_1Repository =
 [
+    [ "AuthRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository" ],
     [ "BookRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository" ],
     [ "HangfireUserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1HangfireUserRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1HangfireUserRepository" ],
     [ "IBookRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository" ],

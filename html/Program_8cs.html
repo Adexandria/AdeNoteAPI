@@ -124,12 +124,14 @@ Functions</h2></td></tr>
 <tr class="separator:afa6c84bb6d170b275910b22a47d73380"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61f02687456af0cc06aed2ed6528bb13"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a61f02687456af0cc06aed2ed6528bb13">AddDbContext&lt; NoteDbContext &gt;</a> (options=&gt; options .UseSqlServer(applicationSettings.ConnectionString))</td></tr>
 <tr class="separator:a61f02687456af0cc06aed2ed6528bb13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b72695bce04da30a10565e9ef610e7"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a33b72695bce04da30a10565e9ef610e7">UseIdentityService&lt; IdentityDbContext, User &gt;</a> ((s)=&gt; s.UseSqlServer(applicationSettings.ConnectionString), assembly:Assembly.GetExecutingAssembly(), dependencies:(x)=&gt; { var currentTypes=x.GetTypes().Where(s=&gt;!s.IsInterface &amp;&amp;!s.IsAbstract).Where(p=&gt; p.BaseType==typeof(IdentityService&lt; <a class="el" href="classAdeNote_1_1Models_1_1User.html">User</a> &gt;)).ToList();return currentTypes;})</td></tr>
+<tr class="separator:a33b72695bce04da30a10565e9ef610e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad079bef961545b4473939a559e146e92"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ad079bef961545b4473939a559e146e92">UseMiddleware&lt; ExceptionMiddleware &gt;</a> ()</td></tr>
 <tr class="separator:ad079bef961545b4473939a559e146e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a5cfe7fee09f478241b98af703affea"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a9a5cfe7fee09f478241b98af703affea">UseSwagger</a> ()</td></tr>
 <tr class="separator:a9a5cfe7fee09f478241b98af703affea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed8da194c8645afcc193177096881cd0"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#aed8da194c8645afcc193177096881cd0">UseSwaggerUI</a> (setupAction=&gt; { foreach(var description in apiVersionDescriptionProvider.ApiVersionDescriptions.Reverse()) { setupAction.SwaggerEndpoint($&quot;/swagger/{description.GroupName}/swagger.json&quot;, description.GroupName.ToUpperInvariant());} })</td></tr>
-<tr class="separator:aed8da194c8645afcc193177096881cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45809c2e7c3a4d58496b83c1a8a59d4e"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a45809c2e7c3a4d58496b83c1a8a59d4e">UseSwaggerUI</a> (setupAction=&gt; { foreach(var description in apiVersionDescriptionProvider.ApiVersionDescriptions.Reverse()) { setupAction.SwaggerEndpoint($&quot;/swagger/{description.GroupName}/swagger.json&quot;, description.GroupName.ToUpperInvariant());} setupAction.EnableDeepLinking();setupAction.DisplayRequestDuration();setupAction.EnableValidator();setupAction.ShowExtensions();})</td></tr>
+<tr class="separator:a45809c2e7c3a4d58496b83c1a8a59d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65434d10e966dc45335a034bc9b96094"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a65434d10e966dc45335a034bc9b96094">UseHttpLogging</a> ()</td></tr>
 <tr class="separator:a65434d10e966dc45335a034bc9b96094"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4d447fc3129a3aa301d736b8bd04ae9"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#aa4d447fc3129a3aa301d736b8bd04ae9">UseHttpsRedirection</a> ()</td></tr>
@@ -743,6 +745,52 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a33b72695bce04da30a10565e9ef610e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b72695bce04da30a10565e9ef610e7">&#9670;&nbsp;</a></span>UseIdentityService&lt; IdentityDbContext, User &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">builder.Services. UseIdentityService&lt; <a class="el" href="classAdeNote_1_1Db_1_1IdentityDbContext.html">IdentityDbContext</a>, <a class="el" href="classAdeNote_1_1Models_1_1User.html">User</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">(s)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">s.&#160;</td>
+          <td class="paramname"><em>UseSqlServer</em>applicationSettings.ConnectionString, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">assembly:Assembly.&#160;</td>
+          <td class="paramname"><em>GetExecutingAssembly</em>(), </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">dependencies:(x)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">{ var currentTypes=x.GetTypes().Where(s=&gt;!s.IsInterface &amp;&amp;!s.IsAbstract).Where(p=&gt; p.BaseType==typeof(IdentityService&lt; <a class="el" href="classAdeNote_1_1Models_1_1User.html">User</a> &gt;)).ToList();return currentTypes;}&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad079bef961545b4473939a559e146e92"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad079bef961545b4473939a559e146e92">&#9670;&nbsp;</a></span>UseMiddleware&lt; ExceptionMiddleware &gt;()</h2>
 
@@ -777,8 +825,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aed8da194c8645afcc193177096881cd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed8da194c8645afcc193177096881cd0">&#9670;&nbsp;</a></span>UseSwaggerUI()</h2>
+<a id="a45809c2e7c3a4d58496b83c1a8a59d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45809c2e7c3a4d58496b83c1a8a59d4e">&#9670;&nbsp;</a></span>UseSwaggerUI()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -792,7 +840,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">{ foreach(var description in apiVersionDescriptionProvider.ApiVersionDescriptions.Reverse()) { setupAction.SwaggerEndpoint($&quot;/swagger/{description.GroupName}/swagger.json&quot;, description.GroupName.ToUpperInvariant());} }&#160;</td>
+          <td class="paramtype">{ foreach(var description in apiVersionDescriptionProvider.ApiVersionDescriptions.Reverse()) { setupAction.SwaggerEndpoint($&quot;/swagger/{description.GroupName}/swagger.json&quot;, description.GroupName.ToUpperInvariant());} setupAction.EnableDeepLinking();setupAction.DisplayRequestDuration();setupAction.EnableValidator();setupAction.ShowExtensions();}&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -818,7 +866,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00074">74</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00087">87</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -834,7 +882,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00068">68</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00081">81</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -850,7 +898,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00018">18</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00024">24</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -866,7 +914,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00016">16</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00022">22</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -882,7 +930,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00017">17</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00023">23</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -898,7 +946,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00076">76</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00089">89</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>

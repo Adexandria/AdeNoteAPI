@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['emailconfig_1573',['emailConfig',['../classAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1EmailService.html#a7a332cb802ed5fe5dc67a7021a848e75',1,'AdeNote::Infrastructure::Services::EmailSettings::EmailService']]],
-  ['eventconfiguration_1574',['eventConfiguration',['../classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#ac05587cb593f725a649bec076ef80390',1,'AdeNote::Infrastructure::Services::TicketSettings::TicketService']]]
+  ['db_1584',['Db',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#abb32d6158e36eef72a9b5c9eeb8f3ed8',1,'AdeNote::Infrastructure::Repository::UserRepository']]]
 ];

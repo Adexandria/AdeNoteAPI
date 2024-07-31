@@ -3,24 +3,19 @@ var hierarchy =
     [ "ActionResult", null, [
       [ "AdeNote.Infrastructure.Utilities.ActionResult< T >", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html", null ]
     ] ],
+    [ "ApplicationRefreshToken", null, [
+      [ "AdeNote.Models.RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", null ]
+    ] ],
     [ "AdeNote.Infrastructure.Utilities.ApplicationScheduler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationScheduler.html", null ],
     [ "AdeNote.Infrastructure.Utilities.ApplicationSetting", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting.html", null ],
+    [ "ApplicationUser", null, [
+      [ "AdeNote.Models.User", "classAdeNote_1_1Models_1_1User.html", null ]
+    ] ],
     [ "AdeNote.Models.DTOs.AuthenticatorDTO", "classAdeNote_1_1Models_1_1DTOs_1_1AuthenticatorDTO.html", null ],
     [ "AuthorizationHandler", null, [
       [ "AdeNote.Infrastructure.Utilities.AuthorisationHandler.RoleRequirementHandler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirementHandler.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Utilities.SSO.AzureAdConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SSO_1_1AzureAdConfiguration.html", null ],
-    [ "AdeNote.Models.BaseEntity", "classAdeNote_1_1Models_1_1BaseEntity.html", [
-      [ "AdeNote.Models.BaseClass", "classAdeNote_1_1Models_1_1BaseClass.html", null ],
-      [ "AdeNote.Models.Book", "classAdeNote_1_1Models_1_1Book.html", null ],
-      [ "AdeNote.Models.HangfireUser", "classAdeNote_1_1Models_1_1HangfireUser.html", null ],
-      [ "AdeNote.Models.Label", "classAdeNote_1_1Models_1_1Label.html", null ],
-      [ "AdeNote.Models.Page", "classAdeNote_1_1Models_1_1Page.html", null ],
-      [ "AdeNote.Models.RecoveryCode", "classAdeNote_1_1Models_1_1RecoveryCode.html", null ],
-      [ "AdeNote.Models.RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", null ],
-      [ "AdeNote.Models.Ticket", "classAdeNote_1_1Models_1_1Ticket.html", null ],
-      [ "AdeNote.Models.User", "classAdeNote_1_1Models_1_1User.html", null ]
-    ] ],
     [ "AdeNote.Infrastructure.Utilities.BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", null ],
     [ "AdeNote.Models.DTOs.BookCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1BookCreateDTO.html", null ],
     [ "AdeNote.Models.DTOs.BookDTO", "classAdeNote_1_1Models_1_1DTOs_1_1BookDTO.html", null ],
@@ -60,14 +55,22 @@ var hierarchy =
     ] ],
     [ "AdeNote.Infrastructure.Middlewares.ExceptionMiddleware", "classAdeNote_1_1Infrastructure_1_1Middlewares_1_1ExceptionMiddleware.html", null ],
     [ "AdeNote.Infrastructure.Utilities.AuthenticationFilter.HangFireUserConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1HangFireUserConfiguration.html", null ],
-    [ "IApplicationUser", null, [
-      [ "AdeNote.Models.User", "classAdeNote_1_1Models_1_1User.html", null ]
-    ] ],
     [ "IAuthorizationRequirement", null, [
       [ "AdeNote.Infrastructure.Utilities.AuthorisationHandler.RoleRequirement", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirement.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Services.Authentication.IAuthService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html", [
       [ "AdeNote.Infrastructure.Services.Authentication.AuthService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html", null ]
+    ] ],
+    [ "AdeNote.Models.IBaseEntity", "interfaceAdeNote_1_1Models_1_1IBaseEntity.html", [
+      [ "AdeNote.Models.BaseClass", "classAdeNote_1_1Models_1_1BaseClass.html", null ],
+      [ "AdeNote.Models.Book", "classAdeNote_1_1Models_1_1Book.html", null ],
+      [ "AdeNote.Models.HangfireUser", "classAdeNote_1_1Models_1_1HangfireUser.html", null ],
+      [ "AdeNote.Models.Label", "classAdeNote_1_1Models_1_1Label.html", null ],
+      [ "AdeNote.Models.Page", "classAdeNote_1_1Models_1_1Page.html", null ],
+      [ "AdeNote.Models.RecoveryCode", "classAdeNote_1_1Models_1_1RecoveryCode.html", null ],
+      [ "AdeNote.Models.RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", null ],
+      [ "AdeNote.Models.Ticket", "classAdeNote_1_1Models_1_1Ticket.html", null ],
+      [ "AdeNote.Models.User", "classAdeNote_1_1Models_1_1User.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Services.Blob.IBlobService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html", [
       [ "AdeNote.Infrastructure.Services.Blob.BlobService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html", null ]
@@ -83,6 +86,12 @@ var hierarchy =
     ] ],
     [ "IDashboardAuthorizationFilter", null, [
       [ "AdeNote.Infrastructure.Utilities.AuthenticationFilter.DashboardAuthenticationFilter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1DashboardAuthenticationFilter.html", null ]
+    ] ],
+    [ "IdentityContext", null, [
+      [ "AdeNote.Db.IdentityDbContext", "classAdeNote_1_1Db_1_1IdentityDbContext.html", null ]
+    ] ],
+    [ "IdentityService", null, [
+      [ "AdeNote.Infrastructure.Repository.AuthRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Services.EmailSettings.IEmailService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1IEmailService.html", [
       [ "AdeNote.Infrastructure.Services.EmailSettings.EmailService", "classAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1EmailService.html", null ]
@@ -118,9 +127,6 @@ var hierarchy =
     ] ],
     [ "AdeNote.Infrastructure.Services.PageSettings.IPageService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html", [
       [ "AdeNote.Infrastructure.Services.PageSettings.PageService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html", null ]
-    ] ],
-    [ "IRefreshToken", null, [
-      [ "AdeNote.Models.RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Repository.IRepository< T >", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html", null ],
     [ "AdeNote.Infrastructure.Repository.IRepository< Book >", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html", [
@@ -245,9 +251,6 @@ var hierarchy =
     ] ],
     [ "AdeNote.Infrastructure.Repository.Repository< Ticket >", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html", [
       [ "AdeNote.Infrastructure.Repository.TicketRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html", null ]
-    ] ],
-    [ "AdeNote.Infrastructure.Repository.Repository< User >", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html", [
-      [ "AdeNote.Infrastructure.Repository.UserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Extension.ResultExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ResultExtension.html", null ],
     [ "AdeNote.Infrastructure.Utilities.EventSystem.Scheduler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1Scheduler.html", null ],

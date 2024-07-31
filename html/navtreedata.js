@@ -57,12 +57,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "20240430084252__firstmigration_8Designer_8cs.html",
-"MFAType_8cs.html#a59a9d6cd7df46cfb5727610aa214e751",
-"classAdeNote_1_1Controllers_1_1PageController.html#a7b831ca3bb21b0be51bc35e4223914c9",
-"classAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1ExcelService.html",
-"classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1UserIdConverter.html#a79cac38426eae1dd3fcdaab130edc7aa",
-"classAdeNote_1_1Models_1_1RecoveryCode.html#a8decf03e84d6d0a21140883c609bbc1b",
-"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#af9faa7aced51916bf533fdfd0fbbad21"
+"LanguageScheduler_8cs_source.html",
+"classAdeNote_1_1Controllers_1_1PageController.html#a2fa8fdac292866eaa9bb82e06b49fb12",
+"classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html#a8328f484e63c86062194ce6f1f93159f",
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html#af1e60a49432c0adba75c87d85eb56944",
+"classAdeNote_1_1Models_1_1LabelPage.html",
+"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a15228bc8ed930e953d2b7d2eb9594409"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

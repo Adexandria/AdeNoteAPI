@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['key_1577',['key',['../classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a32d2a938205fdab7ac49db5972ad952c',1,'AdeNote::Infrastructure::Services::Authentication::AuthService']]]
+  ['hangfireuser_1588',['hangFireUser',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1DashboardAuthenticationFilter.html#a4b950245efce16d2709d2c405f130b14',1,'AdeNote::Infrastructure::Utilities::AuthenticationFilter::DashboardAuthenticationFilter']]]
 ];

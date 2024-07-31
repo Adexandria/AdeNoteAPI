@@ -4,7 +4,7 @@ var namespaceAdeNote_1_1Models =
     [ "BaseClass", "classAdeNote_1_1Models_1_1BaseClass.html", "classAdeNote_1_1Models_1_1BaseClass" ],
     [ "Book", "classAdeNote_1_1Models_1_1Book.html", "classAdeNote_1_1Models_1_1Book" ],
     [ "HangfireUser", "classAdeNote_1_1Models_1_1HangfireUser.html", "classAdeNote_1_1Models_1_1HangfireUser" ],
-    [ "BaseEntity", "classAdeNote_1_1Models_1_1BaseEntity.html", "classAdeNote_1_1Models_1_1BaseEntity" ],
+    [ "IBaseEntity", "interfaceAdeNote_1_1Models_1_1IBaseEntity.html", "interfaceAdeNote_1_1Models_1_1IBaseEntity" ],
     [ "Label", "classAdeNote_1_1Models_1_1Label.html", "classAdeNote_1_1Models_1_1Label" ],
     [ "LabelPage", "classAdeNote_1_1Models_1_1LabelPage.html", "classAdeNote_1_1Models_1_1LabelPage" ],
     [ "Page", "classAdeNote_1_1Models_1_1Page.html", "classAdeNote_1_1Models_1_1Page" ],

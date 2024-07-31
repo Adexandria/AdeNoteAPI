@@ -8,6 +8,7 @@ var classAdeNote_1_1Models_1_1Ticket =
     [ "AdminId", "classAdeNote_1_1Models_1_1Ticket.html#a283f5b9ecde0393f50ecf3c61adc886a", null ],
     [ "Created", "classAdeNote_1_1Models_1_1Ticket.html#a02f64babd71872379ae744c2e94289cb", null ],
     [ "Description", "classAdeNote_1_1Models_1_1Ticket.html#a62931ec81872b85df424be92683c4204", null ],
+    [ "Id", "classAdeNote_1_1Models_1_1Ticket.html#af6fecf7385429bc31d1fa5114cef8e58", null ],
     [ "ImageUrl", "classAdeNote_1_1Models_1_1Ticket.html#adf28df5533040b6e0534648dd7975f90", null ],
     [ "Issue", "classAdeNote_1_1Models_1_1Ticket.html#a98a566fe6ad1ac55c5d6462c8f0a38a3", null ],
     [ "Issuer", "classAdeNote_1_1Models_1_1Ticket.html#afd2615313584aeeca42653b004044153", null ],

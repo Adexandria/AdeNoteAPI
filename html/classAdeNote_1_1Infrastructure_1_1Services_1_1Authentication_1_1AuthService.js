@@ -1,7 +1,7 @@
 var classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService =
 [
     [ "AuthService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a3c2567ec658c140bceb140e1dc136cf2", null ],
-    [ "AuthService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a9f1fd91c12af83cd308508496bd61c67", null ],
+    [ "AuthService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#ac5bee437070bc4bbf2bbd6ec99bb6656", null ],
     [ "ConfirmEmail", "classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a1973595c9a3167299cdddd294a4faf0a", null ],
     [ "DisableUserMFA", "classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a19d640d50cc2fc1f1bddecc2202d6d9e", null ],
     [ "DisableUserMFA", "classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#ac93fe1658599a3ef48022f6e2af1a404", null ],
@@ -42,5 +42,6 @@ var classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService 
     [ "refreshTokenRepository", "classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a9e2351c251a62cd7f0485af237d6ebd8", null ],
     [ "smsService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a63e8f30a183fd372acca2bb4c7a97ce9", null ],
     [ "tokenProvider", "classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#ab4e935eb5f2bb16c52925de0079d9bf7", null ],
-    [ "userRepository", "classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a402815076bfc2e1bb846ba7b104e97aa", null ]
+    [ "userRepository", "classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a402815076bfc2e1bb846ba7b104e97aa", null ],
+    [ "userService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a507115228aac50cf3e688e008f426ac0", null ]
 ];

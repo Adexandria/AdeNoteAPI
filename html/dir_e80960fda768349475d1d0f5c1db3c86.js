@@ -1,5 +1,8 @@
 var dir_e80960fda768349475d1d0f5c1db3c86 =
 [
+    [ "AuthRepository.cs", "AuthRepository_8cs.html", [
+      [ "AuthRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1AuthRepository" ]
+    ] ],
     [ "BookRepository.cs", "BookRepository_8cs.html", [
       [ "BookRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository" ]
     ] ],
