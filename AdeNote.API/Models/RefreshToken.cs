@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AdeNote.Models
 {
-    public class RefreshToken : ApplicationRefreshToken, IBaseEntity
+    public class RefreshToken : IBaseEntity
     {
         public RefreshToken()
         {
@@ -25,11 +25,11 @@ namespace AdeNote.Models
         }
 
         [Key]
-        public override Guid Id { get; set; }
-        public override string Token { get; set; }
-        public override Guid UserId { get; set; }
+        public  Guid Id { get; set; }
+        public  string Token { get; set; }
+        public  Guid UserId { get; set; }
         public  User User { get; set; }
-        public override DateTime ExpiryDate { get; set; }
-        public override bool IsRevoked { get; set; }
+        public  DateTime ExpiryDate { get; set; }
+        public  bool IsRevoked { get; set; }
     }
 }

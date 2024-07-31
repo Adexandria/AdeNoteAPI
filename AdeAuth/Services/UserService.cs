@@ -5,10 +5,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AdeAuth.Services
 {
+    /// <summary>
+    /// Manages user service
+    /// </summary>
+    /// <typeparam name="TDbContext">Context to manage operation</typeparam>
+    /// <typeparam name="TModel">Application user</typeparam>
     internal class UserService<TDbContext,TModel> : IdentityService<TModel>
         where TDbContext : DbContext
         where TModel : ApplicationUser,new()
     {
+        /// <summary>
+        /// A constructor
+        /// </summary>
+        /// <param name="dbContext">Context to manage operation</param>
+        /// <param name="passwordManager">Manages passwords</param>
         public UserService(TDbContext dbContext,
             IPasswordManager passwordManager)
         {
@@ -17,6 +27,13 @@ namespace AdeAuth.Services
             _passwordManager = passwordManager;
         }
 
+
+        /// <summary>
+        /// Authenticate user using username and password
+        /// </summary>
+        /// <param name="username">Username</param>
+        /// <param name="password">Password</param>
+        /// <returns>User</returns>
         public override async Task<TModel> AuthenticateUsingUsernameAsync(string username, string password)
         {
             var currentUser = await _users.Where(s=>s.UserName == username).FirstOrDefaultAsync();
@@ -34,6 +51,14 @@ namespace AdeAuth.Services
 
             return default;
         }
+
+
+        /// <summary>
+        /// Authenticate user using email and password
+        /// </summary>
+        /// <param name="email">Email</param>
+        /// <param name="password">Password</param>
+        /// <returns>User</returns>
         public override async Task<TModel> AuthenticateUsingEmailAsync(string email, string password)
         {
             var currentUser = await _users.Where(s => s.Email == email).FirstOrDefaultAsync();
@@ -52,6 +77,11 @@ namespace AdeAuth.Services
             return default;
         }
 
+        /// <summary>
+        /// Create user
+        /// </summary>
+        /// <param name="user">New user to create</param>
+        /// <returns>Boolean value</returns>
         public override async Task<bool> CreateUserAsync(TModel user)
         {
            _users.Add(user);
@@ -59,6 +89,11 @@ namespace AdeAuth.Services
            return await SaveChangesAsync();
         }
 
+        /// <summary>
+        /// Save changes that support concurrency exception
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="NotSupportedException"></exception>
         private async Task<bool> SaveChangesAsync()
         {
 

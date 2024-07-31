@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿
 
 namespace AdeAuth.Models
 {
@@ -6,7 +6,6 @@ namespace AdeAuth.Models
     /// <summary>
     /// Manages users
     /// </summary>
-    [NotMapped]
     public class ApplicationUser 
     {
         /// <summary>

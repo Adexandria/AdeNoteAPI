@@ -1,10 +1,11 @@
 ﻿using AdeAuth.Models;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace AdeAuth.Db
 {
-
+    /// <summary>
+    /// Handles the db context for identity service 
+    /// </summary>
     public class IdentityContext : DbContext 
     {
         public IdentityContext(DbContextOptions options) : base(options)

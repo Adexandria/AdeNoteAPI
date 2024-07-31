@@ -9,6 +9,9 @@ namespace AdeAuth.Services
     /// </summary>
     internal class MfaService : IMfaService
     {
+        /// <summary>
+        /// A constructor
+        /// </summary>
         public MfaService()
         {
             _twoFactorAuthenticator = new TwoFactorAuthenticator();

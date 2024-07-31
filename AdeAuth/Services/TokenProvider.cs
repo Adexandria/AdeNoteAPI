@@ -6,6 +6,9 @@ using System.Text;
 
 namespace AdeAuth.Services
 {
+    /// <summary>
+    /// Manages token service
+    /// </summary>
     class TokenProvider : ITokenProvider
      {
 
