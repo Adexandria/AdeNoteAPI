@@ -3,9 +3,6 @@ var hierarchy =
     [ "ActionResult", null, [
       [ "AdeNote.Infrastructure.Utilities.ActionResult< T >", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html", null ]
     ] ],
-    [ "ApplicationRefreshToken", null, [
-      [ "AdeNote.Models.RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", null ]
-    ] ],
     [ "AdeNote.Infrastructure.Utilities.ApplicationScheduler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationScheduler.html", null ],
     [ "AdeNote.Infrastructure.Utilities.ApplicationSetting", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting.html", null ],
     [ "ApplicationUser", null, [
