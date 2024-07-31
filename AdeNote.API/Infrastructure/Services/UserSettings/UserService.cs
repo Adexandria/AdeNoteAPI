@@ -1,5 +1,5 @@
 ﻿using AdeAuth.Models;
-using AdeAuth.Services;
+using AdeAuth.Services.Interfaces;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;

@@ -1,15 +1,21 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace AdeCache.Models
 {
+    /// <summary>
+    /// Manage caching configuration
+    /// </summary>
     public interface ICache
     {
+        /// <summary>
+        /// Handles memoryCache
+        /// </summary>
         IMemoryCache MemoryCache { get; set; }
+
+        /// <summary>
+        /// Host name of redis cache
+        /// </summary>
         string HostName {  get; set; }
     }
 }

@@ -1,6 +1,8 @@
-﻿namespace AdeNote.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace AdeNote.Models
 {
-    public class Ticket :BaseEntity
+    public class Ticket :IBaseEntity
     {
         public Ticket()
         {
@@ -32,6 +34,8 @@
             AdminId = adminId;
         }
 
+        [Key]
+        public Guid Id { get; set; }
         public Guid Issuer { get; set; }
 
         public string Issue {  get; set; }

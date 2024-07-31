@@ -1,9 +1,12 @@
+using AdeAuth.Infrastructure;
+using AdeAuth.Services;
 using AdeNote.Db;
 using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Middlewares;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Infrastructure.Utilities.AuthenticationFilter;
 using AdeNote.Infrastructure.Utilities.HealthChecks;
+using AdeNote.Models;
 using Asp.Versioning;
 using Asp.Versioning.ApiExplorer;
 using Hangfire;
@@ -11,6 +14,9 @@ using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
+using Twilio.AspNet.Core;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -65,6 +71,13 @@ builder.Services.AddHangfireServer();
 builder.Services.AddDbContext<NoteDbContext>(options => options
 .UseSqlServer(applicationSettings.ConnectionString));
 
+builder.Services.UseIdentityService<IdentityDbContext, User>((s) => s.UseSqlServer(applicationSettings.ConnectionString), 
+    assembly: Assembly.GetExecutingAssembly(),dependencies: (x) =>
+    {
+        var currentTypes = x.GetTypes().Where(s=>!s.IsInterface && !s.IsAbstract).Where(p=> p.BaseType == typeof(IdentityService<User>)).ToList();
+        return currentTypes;
+    });
+
 var app = builder.Build();
 
 
@@ -84,6 +97,10 @@ app.UseSwaggerUI(setupAction =>
                        $"/swagger/{description.GroupName}/swagger.json",
                        description.GroupName.ToUpperInvariant());
     }
+    setupAction.EnableDeepLinking();
+    setupAction.DisplayRequestDuration();
+    setupAction.EnableValidator();
+    setupAction.ShowExtensions();
 });
 app.UseHttpLogging();
 app.UseHttpsRedirection();
@@ -112,7 +129,7 @@ app.MapControllers();
 app.CreateTables();
 app.SeedHangFireUser(applicationSettings.HangFireUserConfiguration);
 app.SeedSuperAdmin(applicationSettings.DefaultConfiguration);
- app.SetUpRabbitConfiguration(configuration);
+app.SetUpRabbitConfiguration(configuration);
 app.ScheduleService(configuration);
 app.Run();
 

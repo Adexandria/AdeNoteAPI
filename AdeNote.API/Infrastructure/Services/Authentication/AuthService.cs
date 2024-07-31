@@ -1,4 +1,4 @@
-﻿using AdeAuth.Services;
+﻿using AdeAuth.Services.Interfaces;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Services.Blob;
 using AdeNote.Infrastructure.Services.Notification;
@@ -43,6 +43,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
             IRefreshTokenRepository _refreshTokenRepository,
             IPasswordManager _passwordManager,
             ISmsService _smsService,
+            IUserService<User> _userService,
             INotificationService notificationService, IRecoveryCodeRepository _recoveryCodeRepository)
         {
             smsService = _smsService;
@@ -57,6 +58,8 @@ namespace AdeNote.Infrastructure.Services.Authentication
             _tokenProvider.SetTokenEncryptionKey(_configuration["TokenSecret"]);
             _notificationService = notificationService;
             recoveryCodeRepository = _recoveryCodeRepository;
+
+            userService = _userService;
         }
 
         /// <summary>
@@ -595,7 +598,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
                 user.ConfirmEmailVerification();
             }
 
-            var result = await userRepository.Add(user);
+            var result = await userService.CreateUserAsync(user);
 
             var recoveryCode = new RecoveryCode(user.Id);
             var response = await recoveryCodeRepository.Add(recoveryCode);
@@ -627,7 +630,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
 
         public async Task<ActionResult<UserDTO>> LoginUser(LoginDTO login, AuthType authType)
         {
-            var authenticatedUser = await userRepository.AuthenticateUser(login.Email, login.Password, authType);
+            var authenticatedUser = await userService.AuthenticateUsingEmailAsync(login.Email, login.Password);
 
             if (authenticatedUser == null)
             {
@@ -991,5 +994,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
         public INotificationService _notificationService;
 
         public IRecoveryCodeRepository recoveryCodeRepository;
+
+        public IUserService<User> userService;
     }
 }

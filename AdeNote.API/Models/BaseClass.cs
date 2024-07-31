@@ -5,7 +5,7 @@ namespace AdeNote.Models
     /// <summary>
     /// A base class that includes the id
     /// </summary>
-    public class BaseClass : BaseEntity
+    public class BaseClass : IBaseEntity
     {
         public void SetModifiedDate()
         {
@@ -15,5 +15,8 @@ namespace AdeNote.Models
         public DateTime Created { get; set; }
 
         public DateTime Modified { get; set; }
+
+        [Key]
+        public Guid Id { get; set; }
     }
 }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Status Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .content {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #343a40;
+        }
+        .footer {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 14px;
+            color: #868e96;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Ticket Status Update</h2>
+        </div>
+        <div class="content">
+            <p>Dear {{FirstName}} {{LastName}},</p>
+            <p>We hope this message finds you well.</p>
+            <p>We are writing to inform you that there has been an update regarding your support ticket, <strong>{{TicketId}}</strong>, submitted on <strong>{{Ticket_Submission_Date}}</strong>.</p>
+            <p><strong>Issue:</strong> {{Issue}}<br>
+            <strong>Current Status:</strong> {{Current_Status}}</p>
+            <p>Our team is actively working on your issue, and we are committed to providing you with a resolution as quickly as possible. Here is the summary of the recent activities related to your ticket:</p>
+            <p><strong>Assigned Agent:</strong> {{Assigned_Agent}}<br>
+            <strong>Last Updated:</strong> {{Last_Update_Date}}<br>
+            <p>If you have any additional information or questions, please do not hesitate to respond to this email or contact our support team at <a href="mailto:{{SupportEmail}}">{{Support_Email}}</a>.</p>
+            <p>Thank you for your patience and understanding.</p>
+            <p>Best regards,</p>
+            {{Your_Company}}<br>
+            {{Contact_Information}}</p>
+        </div>
+        <div class="footer">
+            <p>&copy; {{Current_Year}} {{Your_Company}}. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

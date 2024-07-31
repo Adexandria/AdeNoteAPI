@@ -51,7 +51,7 @@ namespace AdeNote.Infrastructure.Extension
                 Contact = new OpenApiContact()
                 {
                     Email = "adeolaaderibigbe09@gmail.com",
-                    Name = "Adeola Aderibigbe Wuraola"
+                    Name = "Adeola Wuraola Aderibigbe"
 
                 },
                 Description = "This is a simple note API"

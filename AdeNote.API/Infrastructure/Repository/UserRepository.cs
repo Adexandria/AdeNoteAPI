@@ -1,17 +1,20 @@
-﻿using AdeAuth.Services;
+﻿using AdeAuth.Services.Interfaces;
 using AdeNote.Db;
 using AdeNote.Models;
 using Microsoft.EntityFrameworkCore;
+using NPOI.SS.Formula.Functions;
 
 namespace AdeNote.Infrastructure.Repository
 {
-    public class UserRepository : Repository<User>, IUserRepository
+    public class UserRepository : IUserRepository
     {
-        public UserRepository(NoteDbContext dbContext,
+        public UserRepository(IdentityDbContext dbContext,
             IPasswordManager passwordManager,
-            ILoggerFactory loggerFactory) : base(dbContext, loggerFactory)
+            ILoggerFactory loggerFactory)
         {
             PasswordManager = passwordManager;
+            logger = loggerFactory.CreateLogger<UserRepository>();
+            Db = dbContext;
         }
 
         public async Task<bool> Add(User entity)
@@ -112,6 +115,55 @@ namespace AdeNote.Infrastructure.Repository
 
             return noOfUsers;
         }
+
+
+        public virtual async Task<bool> SaveChanges()
+        {
+
+            var saved = false;
+            while (!saved)
+            {
+                try
+                {
+                    int commitedResult = await Db.SaveChangesAsync();
+                    if (commitedResult == 0)
+                    {
+                        saved = false;
+                        break;
+                    }
+                    saved = true;
+                }
+                catch (DbUpdateConcurrencyException ex)
+                {
+                    foreach (var entry in ex.Entries)
+                    {
+                        if (entry.Entity is T)
+                        {
+                            var proposedValues = entry.CurrentValues;
+                            var databaseValues = entry.GetDatabaseValues();
+
+                            foreach (var property in proposedValues.Properties)
+                            {
+                                var databaseValue = databaseValues[property];
+                            }
+
+                            entry.OriginalValues.SetValues(databaseValues);
+                        }
+                        else
+                        {
+                            throw new NotSupportedException(
+                                "Don't know how to handle concurrency conflicts for "
+                                + entry.Metadata.Name);
+                        }
+                    }
+                }
+            }
+            return saved;
+
+        }
+        private readonly IdentityDbContext Db;
+
+        private readonly ILogger<UserRepository> logger;
 
         public readonly IPasswordManager PasswordManager; 
     }
