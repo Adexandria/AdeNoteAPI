@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Excelify.Services.Exceptions
+namespace AdeCache.Services.Exceptions
 {
     /// <summary>
     /// Handles cache exception

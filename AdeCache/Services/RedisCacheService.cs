@@ -24,7 +24,7 @@ namespace AdeCache.Services
         {
            _database.KeyDelete(key);
         }
-
+         
         public override void Set<T>(string key, T value, DateTime expiryDate = default)
         {
             if(expiryDate == default)
@@ -32,7 +32,9 @@ namespace AdeCache.Services
                 _database.JSON().Set(key, "$", value);
                 return;
             }
+
             _database.JSON().Set(key, "$", value);
+            _database.KeyExpire(key, expiryDate);
         }
 
         public override bool CanConnect()
