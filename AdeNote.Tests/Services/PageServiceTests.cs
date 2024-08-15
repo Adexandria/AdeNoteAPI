@@ -20,6 +20,8 @@ namespace AdeNote.Tests.Services
             Service.bookRepository = bookRepo.Object;
             Service.labelRepository = labelRepo.Object;
             Service.labelPageRepository = labelPageRepo.Object;
+            Service.cacheService = CacheService.Object;
+            CacheService.Setup(s => s.Search<Page>(It.IsAny<string>(), It.IsAny<string>())).Returns<IEnumerable<Page>>(default); ;
         }
 
         [Test]
@@ -158,7 +160,7 @@ namespace AdeNote.Tests.Services
             var page = new Page("testing page");
             page.Book = new Book();
             bookRepo.Setup(s => s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>(), false)).ReturnsAsync(new Book());
-            Repo.Setup(s => s.GetBookPage(It.IsAny<Guid>(), It.IsAny<Guid>(), false)).ReturnsAsync(page);
+            Repo.Setup(s => s.GetBookPage(It.IsAny<Guid>(), It.IsAny<Guid>(), true)).ReturnsAsync(page);
             Repo.Setup(s => s.Remove(It.IsAny<Page>())).ReturnsAsync(true);
 
             //Act
@@ -205,7 +207,7 @@ namespace AdeNote.Tests.Services
             var page = new Page("testing page");
             page.Book = new Book();
             bookRepo.Setup(s => s.GetAsync(It.IsAny<Guid>(), It.IsAny<Guid>(), false)).ReturnsAsync(new Book());
-            Repo.Setup(s => s.GetBookPage(It.IsAny<Guid>(), It.IsAny<Guid>(), false)).ReturnsAsync(page);
+            Repo.Setup(s => s.GetBookPage(It.IsAny<Guid>(), It.IsAny<Guid>(), true)).ReturnsAsync(page);
             Repo.Setup(s => s.Remove(It.IsAny<Page>())).ReturnsAsync(false);
 
             //Act

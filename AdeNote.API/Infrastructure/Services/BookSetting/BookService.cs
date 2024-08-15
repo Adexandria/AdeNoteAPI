@@ -14,7 +14,7 @@ namespace AdeNote.Infrastructure.Services.BookSetting
     /// </summary>
     public class BookService : IBookService
     {
-        private readonly ICacheService cacheService;
+        public ICacheService cacheService;
 
         /// <summary>
         /// A Constructor
@@ -118,11 +118,12 @@ namespace AdeNote.Infrastructure.Services.BookSetting
 
             var currentBook = cacheService.Get<Book>($"{_cacheKey}:{userId}:{bookId}") ?? await bookRepository.GetAsync(bookId, userId);
 
-            if (currentBook != null)
+            if (currentBook == null)
             {
-                cacheService.Set($"{_cacheKey}:{userId}:{bookId}", currentBook, DateTime.UtcNow.AddMinutes(30));
+                return ActionResult<BookDTO>.Failed("Book does not exist", (int)HttpStatusCode.NotFound);
             }
 
+            cacheService.Set($"{_cacheKey}:{userId}:{bookId}", currentBook, DateTime.UtcNow.AddMinutes(30));
             var currentBookDTO = currentBook.Adapt<BookDTO>();
 
             return ActionResult<BookDTO>.SuccessfulOperation(currentBookDTO);
@@ -174,7 +175,7 @@ namespace AdeNote.Infrastructure.Services.BookSetting
             book.Id = bookId;
             book.UserId = userId;
 
-            var currentBook = cacheService.Get<Book>($"{_cacheKey}:{userId}:{bookId}") ?? await bookRepository.GetAsync(bookId, userId);
+            var currentBook = cacheService.Get<Book>($"{_cacheKey}:{userId}:{bookId}") ?? await bookRepository.GetAsync(bookId, userId,true);
 
             if (currentBook == null)
                 return ActionResult.Failed("Book does not exist", (int)HttpStatusCode.NotFound);

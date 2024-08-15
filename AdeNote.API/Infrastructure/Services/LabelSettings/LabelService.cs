@@ -15,7 +15,7 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
     /// </summary>
     public class LabelService : ILabelService
     {
-        private readonly ICacheService cacheService;
+        public ICacheService cacheService;
 
         /// <summary>
         /// A constructor

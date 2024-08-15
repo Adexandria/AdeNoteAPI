@@ -1,4 +1,5 @@
-﻿using Mapster;
+﻿using AdeCache.Services;
+using Mapster;
 using Moq;
 
 
@@ -16,6 +17,7 @@ namespace AdeNote.Tests
            Repo = new Mock<TRepo>();
            obj = CreateModel();
            updateObj = MapModel();
+           CacheService = new Mock<ICacheService>();
         }
 
         protected virtual TModel CreateModel()
@@ -34,6 +36,7 @@ namespace AdeNote.Tests
         protected TModel obj { get; set; }
         protected TUpdateModel updateObj { get; set; }
         protected TService Service { get; set; }
+        protected Mock<ICacheService> CacheService { get; set; }
         protected Mock<TRepo> Repo { get; set; }
     }
 }
