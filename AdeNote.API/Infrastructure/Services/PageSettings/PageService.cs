@@ -53,17 +53,20 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             if (bookId == Guid.Empty || userId == Guid.Empty)
                 return ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest);
 
-            var currentBook = await bookRepository.GetAsync(bookId, userId);
+            var currentBook = cacheService.Get<Book>($"{_bookCacheKey}:{userId}:{bookId}") ?? await bookRepository.GetAsync(bookId, userId);
+
             if (currentBook == null)
                 return ActionResult.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound);
 
             var page = createPage.Adapt<Page>();
-            page.BookId = bookId;
 
+            page.BookId = bookId;
 
             var commitStatus = await pageRepository.Add(page);
             if (!commitStatus)
                 return ActionResult.Failed("Failed to add page");
+
+            cacheService.Set($"{_pageCacheKey}:{bookId}:{page.Id}",page, DateTime.UtcNow.AddMinutes(30));
 
             return ActionResult.SuccessfulOperation();
 
@@ -78,8 +81,15 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             if (bookId == Guid.Empty)
                 return await Task.FromResult(ActionResult<IEnumerable<PageDTO>>.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
-            var currentBookPages = pageRepository.GetBookPages(bookId);
-            var currentBookPagesDTO = currentBookPages.Adapt<IEnumerable<PageDTO>>(MappingService.PageLabelsConfig());
+            var currentPages = cacheService.Search<Page>(_pageCacheKey,"*");
+
+            if(currentPages == null)
+            {
+                currentPages = pageRepository.GetBookPages(bookId).ToList();
+                currentPages.ForEach(currentPage => cacheService.Set($"{_pageCacheKey}:{bookId}:{currentPage.Id}", currentPage, DateTime.UtcNow.AddMinutes(30)));
+            }
+
+            var currentBookPagesDTO = currentPages.Adapt<IEnumerable<PageDTO>>(MappingService.PageLabelsConfig());
 
             return await Task.FromResult(ActionResult<IEnumerable<PageDTO>>.SuccessfulOperation(currentBookPagesDTO));
 
@@ -97,9 +107,11 @@ namespace AdeNote.Infrastructure.Services.PageSettings
                 return await Task.FromResult(ActionResult<PageDTO>.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
 
-            var currentBookPage = await pageRepository.GetBookPage(bookId, pageId);
+            var currentBookPage = cacheService.Get<Page>($"{_pageCacheKey}:{bookId}:{pageId}") ?? await pageRepository.GetBookPage(bookId, pageId);
+            
             if (currentBookPage == null)
                 return await Task.FromResult(ActionResult<PageDTO>.Failed("page doesn't exist", (int)HttpStatusCode.NotFound));
+            
             var currentBookPageDTO = currentBookPage.Adapt<PageDTO>(MappingService.PageLabelsConfig());
 
             return ActionResult<PageDTO>.SuccessfulOperation(currentBookPageDTO);
@@ -118,18 +130,21 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             if (bookId == Guid.Empty || pageId == Guid.Empty || userId == Guid.Empty)
                 return ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest);
 
-            var currentBook = await bookRepository.GetAsync(bookId, userId);
+            var currentBook = cacheService.Get<Book>($"{_bookCacheKey}:{userId}:{bookId}") ?? await bookRepository.GetAsync(bookId, userId);
+
             if (currentBook == null)
                 return ActionResult.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound);
 
-            var currentBookPage = await pageRepository.GetBookPage(bookId, pageId);
-            if (currentBookPage == null)
-                return ActionResult.Failed("page doesn't exist", (int)HttpStatusCode.NotFound);
+            var currentBookPage = cacheService.Get<Page>($"{_pageCacheKey}:{bookId}:{pageId}") ?? await pageRepository.GetBookPage(bookId, pageId,true);
 
+            if (currentBookPage == null)
+                return ActionResult<PageDTO>.Failed("page doesn't exist", (int)HttpStatusCode.NotFound);
 
             var commitStatus = await pageRepository.Remove(currentBookPage);
             if (!commitStatus)
                 return ActionResult.Failed("Failed to delete page");
+
+            cacheService.Remove($"{_pageCacheKey}:{bookId}:{pageId}");
 
             return ActionResult.SuccessfulOperation();
 
@@ -148,11 +163,12 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             if (bookId == Guid.Empty || pageId == Guid.Empty || userId == Guid.Empty)
                 return ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest);
 
-            var currentBook = await bookRepository.GetAsync(bookId, userId);
+            var currentBook = cacheService.Get<Book>($"{_bookCacheKey}:{userId}:{bookId}") ?? await bookRepository.GetAsync(bookId, userId);
+
             if (currentBook == null)
                 return ActionResult.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound);
 
-            var currentBookPage = await pageRepository.GetBookPage(bookId, pageId, true);
+            var currentBookPage = cacheService.Get<Page>($"{_pageCacheKey}:{bookId}:{pageId}") ?? await pageRepository.GetBookPage(bookId, pageId, true);
             if (currentBookPage == null)
                 return ActionResult.Failed("page doesn't exist", (int)HttpStatusCode.NotFound);
 
@@ -164,6 +180,8 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             var commitStatus = await pageRepository.Update(page, currentBookPage);
             if (!commitStatus)
                 return ActionResult.Failed("Failed to update page");
+
+            cacheService.Set($"{_pageCacheKey}:{bookId}:{pageId}", page, DateTime.UtcNow.AddMinutes(30));
 
             return ActionResult.SuccessfulOperation();
 
@@ -182,18 +200,20 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             if (bookId == Guid.Empty || pageId == Guid.Empty || userId == Guid.Empty)
                 return ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest);
 
-            var currentBook = await bookRepository.GetAsync(bookId, userId);
+            var currentBook = cacheService.Get<Book>($"{_bookCacheKey}:{userId}:{bookId}") ?? await bookRepository.GetAsync(bookId, userId);
+
             if (currentBook == null)
                 return ActionResult.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound);
 
-            var currentBookPage = await pageRepository.GetBookPage(bookId, pageId);
+            var currentBookPage = cacheService.Get<Page>($"{_pageCacheKey}:{bookId}:{pageId}") ?? await pageRepository.GetBookPage(bookId, pageId);
             if (currentBookPage == null)
                 return ActionResult.Failed("page doesn't exist", (int)HttpStatusCode.NotFound);
+
             if (Labels != null)
             {
                 foreach (var label in Labels)
                 {
-                    var currentLabel = await labelRepository.GetByNameAsync(label);
+                    var currentLabel = cacheService.Get<IEnumerable<Label>>(_labelCacheKey).FirstOrDefault(s=>s.Title == label) ?? await labelRepository.GetByNameAsync(label);
                     if (currentLabel == null)
                         return ActionResult.Failed("Label doesn't exist", (int)HttpStatusCode.NotFound);
 
@@ -201,7 +221,6 @@ namespace AdeNote.Infrastructure.Services.PageSettings
                         if (currentBookPage.Labels.Any(s => s.Title == currentLabel.Title))
                         {
                             return ActionResult.Failed("Label has been added", (int)HttpStatusCode.BadRequest);
-
                         }
 
                     var status = await labelPageRepository.AddLabelToPage(pageId, currentLabel.Id);
@@ -226,15 +245,17 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             if (bookId == Guid.Empty || pageId == Guid.Empty || userId == Guid.Empty)
                 return ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest);
 
-            var currentBook = await bookRepository.GetAsync(bookId, userId);
+            var currentBook = cacheService.Get<Book>($"{_bookCacheKey}:{userId}:{bookId}") ?? await bookRepository.GetAsync(bookId, userId);
+
             if (currentBook == null)
                 return ActionResult.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound);
 
-            var currentBookPage = await pageRepository.GetBookPage(bookId, pageId);
+            var currentBookPage = cacheService.Get<Page>($"{_pageCacheKey}:{bookId}:{pageId}") ?? await pageRepository.GetBookPage(bookId, pageId);
             if (currentBookPage == null)
                 return ActionResult.Failed("page doesn't exist", (int)HttpStatusCode.NotFound);
 
             var pageLabels = await labelPageRepository.GetLabels(pageId);
+
             if (!pageLabels.Any())
                 return ActionResult.Failed("Labels doesn't exist in this page", (int)HttpStatusCode.NotFound);
 
@@ -258,11 +279,12 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             if (bookId == Guid.Empty || pageId == Guid.Empty || userId == Guid.Empty)
                 return ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest);
 
-            var currentBook = await bookRepository.GetAsync(bookId, userId);
+            var currentBook = cacheService.Get<Book>($"{_bookCacheKey}:{userId}:{bookId}") ?? await bookRepository.GetAsync(bookId, userId);
+
             if (currentBook == null)
                 return ActionResult.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound);
 
-            var currentBookPage = await pageRepository.GetBookPage(bookId, pageId);
+            var currentBookPage = cacheService.Get<Page>($"{_pageCacheKey}:{bookId}:{pageId}") ?? await pageRepository.GetBookPage(bookId, pageId);
             if (currentBookPage == null)
                 return ActionResult.Failed("page doesn't exist", (int)HttpStatusCode.NotFound);
 
@@ -273,7 +295,6 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             var currentLabelPage = await labelPageRepository.GetLabel(pageId, currentLabel);
             if (currentLabelPage == null)
                 return ActionResult.Failed("Label doesn't exist in this page", (int)HttpStatusCode.NotFound);
-
 
             var commitStatus = await labelPageRepository.DeleteLabelFromPage(currentLabelPage);
 
@@ -288,19 +309,18 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             if (bookId == Guid.Empty || pageId == Guid.Empty || userId == Guid.Empty)
                 return ActionResult<TranslationDto>.Failed("Invalid id", StatusCodes.Status400BadRequest);
 
-            var currentBook = await bookRepository.GetAsync(bookId, userId);
+            var currentBook = cacheService.Get<Book>($"{_bookCacheKey}:{userId}:{bookId}") ?? await bookRepository.GetAsync(bookId, userId);
+
             if (currentBook == null)
                 return ActionResult<TranslationDto>.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound);
 
-            var currentBookPage = await pageRepository.GetBookPage(bookId, pageId);
+            var currentBookPage = cacheService.Get<Page>($"{_pageCacheKey}:{bookId}:{pageId}") ?? await pageRepository.GetBookPage(bookId, pageId);
             if (currentBookPage == null)
                 return ActionResult<TranslationDto>.Failed("page doesn't exist", (int)HttpStatusCode.NotFound);
-
 
             var translationLanguages = cacheService.Get<Dictionary<string,string>>("translation_languages");
 
             var transliterationLanguages = cacheService.Get<Dictionary<string, string>>("transliteration_languages");
-
 
             if (translationLanguages == null)
             {
@@ -368,5 +388,10 @@ namespace AdeNote.Infrastructure.Services.PageSettings
         public IBookRepository bookRepository;
         public ILabelRepository labelRepository;
         public ILabelPageRepository labelPageRepository;
+
+        private string _bookCacheKey = "Books";
+        private string _pageCacheKey = "Pages";
+        private string _labelCacheKey = "Labels";
+
     }
 }

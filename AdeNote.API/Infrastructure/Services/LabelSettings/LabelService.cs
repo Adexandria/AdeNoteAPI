@@ -1,4 +1,5 @@
-﻿using AdeNote.Infrastructure.Extension;
+﻿using AdeCache.Services;
+using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
@@ -14,6 +15,8 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
     /// </summary>
     public class LabelService : ILabelService
     {
+        private readonly ICacheService cacheService;
+
         /// <summary>
         /// A constructor
         /// </summary>
@@ -25,9 +28,10 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
         /// A constructor
         /// </summary>
         /// <param name="_labelRepository">Handles persisting and querying</param>
-        public LabelService(ILabelRepository _labelRepository)
+        public LabelService(ILabelRepository _labelRepository, ICacheService _cacheService)
         {
             labelRepository = _labelRepository;
+            cacheService = _cacheService;
         }
 
         /// <summary>
@@ -43,6 +47,8 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
             if (!commitStatus)
                 return ActionResult.Failed("Failed to add label");
 
+            cacheService.Set($"{_cacheKey}:{label.Id}", label, DateTime.UtcNow.AddMinutes(30));
+
             return ActionResult.SuccessfulOperation();
         }
 
@@ -53,8 +59,14 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
         public async Task<ActionResult<IEnumerable<LabelDTO>>> GetAll()
         {
 
-            var currentLabels = labelRepository.GetAll();
+            var currentLabels = cacheService.Search<Label>(_cacheKey,"*");
 
+            if (currentLabels == null)
+            {
+                currentLabels = labelRepository.GetAll();
+                currentLabels.ForEach(label => cacheService.Set($"{_cacheKey}:{label.Id}",label, DateTime.UtcNow.AddMinutes(30)));
+            }
+               
             var currentLabelsDTO = currentLabels.Adapt<IEnumerable<LabelDTO>>(MappingService.LabelConfig());
 
             return ActionResult<IEnumerable<LabelDTO>>.SuccessfulOperation(currentLabelsDTO);
@@ -71,11 +83,18 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
             if (labelId == Guid.Empty)
                 return ActionResult<LabelDTO>.Failed("Invalid id", (int)HttpStatusCode.BadRequest);
 
-            var currentLabel = await labelRepository.GetNoTrackingAsync(labelId);
+            var currentLabel = cacheService.Get<Label>($"{_cacheKey}:{labelId}");
+
+            if(currentLabel == null)
+            {
+                currentLabel = await labelRepository.GetNoTrackingAsync(labelId);
+                cacheService.Set($"{_cacheKey}:{labelId}", currentLabel);
+            }  
+                
             if (currentLabel == null)
                 return ActionResult<LabelDTO>.Failed("Label doesn't exist", (int)HttpStatusCode.NotFound);
 
-            var currentLabelDTO = currentLabel.Adapt<LabelDTO>();
+            var currentLabelDTO = currentLabel.Adapt<LabelDTO>(MappingService.LabelConfig());
             return ActionResult<LabelDTO>.SuccessfulOperation(currentLabelDTO);
 
 
@@ -91,13 +110,15 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
             if (labelId == Guid.Empty)
                 return ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest);
 
-            var currentLabel = await labelRepository.GetNoTrackingAsync(labelId);
+            var currentLabel = cacheService.Get<Label>($"{_cacheKey}:{labelId}") ?? await labelRepository.GetNoTrackingAsync(labelId);
             if (currentLabel == null)
                 return ActionResult.Failed("label doesn't exist", (int)HttpStatusCode.NotFound);
 
             var commitStatus = await labelRepository.Remove(currentLabel);
             if (!commitStatus)
                 return ActionResult.Failed("Failed to remove label");
+
+            cacheService.Remove(_cacheKey);
 
             return ActionResult.SuccessfulOperation();
         }
@@ -113,7 +134,7 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
             if (labelId == Guid.Empty)
                 return ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest);
 
-            var currentLabel = await labelRepository.GetAsync(labelId);
+            var currentLabel = cacheService.Get<Label>($"{_cacheKey}:{labelId}") ?? await labelRepository.GetAsync(labelId);
             if (currentLabel == null)
                 return ActionResult.Failed("label doesn't exist", (int)HttpStatusCode.NotFound);
 
@@ -127,8 +148,12 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
             if (!commitStatus)
                 return ActionResult.Failed("Failed to update label");
 
+            cacheService.Set(_cacheKey, label);
+
             return ActionResult.SuccessfulOperation();
         }
         public ILabelRepository labelRepository { get; set; }
+
+        private string _cacheKey = "Labels";
     }
 }

@@ -50,24 +50,7 @@ namespace AdeNote.Infrastructure.Services.BookSetting
             if (!commitStatus)
                 return ActionResult.Failed("Failed to add new book");
 
-            List<Book> currentBooks;
-
-            currentBooks = cacheService.Get<IEnumerable<Book>>(_cacheKey).ToList();
-
-            if(currentBooks == null)
-            {
-                currentBooks = new List<Book>()
-                {
-                    book
-                };
-
-                cacheService.Set<IEnumerable<Book>>(_cacheKey, currentBooks, DateTime.UtcNow.AddMinutes(30));
-            }
-            else
-            {
-                currentBooks.Add(book);
-                cacheService.Set<IEnumerable<Book>>(_cacheKey, currentBooks, DateTime.UtcNow.AddMinutes(30));
-            }
+            cacheService.Set($"{_cacheKey}:{book.UserId}:{book.Id}", book, DateTime.UtcNow.AddMinutes(30));
 
             return ActionResult.SuccessfulOperation();
 
@@ -82,7 +65,7 @@ namespace AdeNote.Infrastructure.Services.BookSetting
         public async Task<ActionResult> Add(Guid userId, IList<BookCreateDTO> newBooks)
         {
             var books = newBooks.Adapt<IEnumerable<Book>>().ToList();
-            for (int i = 0; i < books.Count(); i++)
+            for (int i = 0; i < books.Count; i++)
             {
                 books[i].UserId = userId;
                 books[i].Id = Guid.NewGuid();
@@ -91,19 +74,7 @@ namespace AdeNote.Infrastructure.Services.BookSetting
             if (!commitStatus)
                 return ActionResult.Failed("Failed to add new book");
 
-            List<Book> currentBooks;
-
-            currentBooks = cacheService.Get<IEnumerable<Book>>(_cacheKey).ToList();
-
-            if (currentBooks == null)
-            {
-                cacheService.Set<IEnumerable<Book>>(_cacheKey, books, DateTime.UtcNow.AddMinutes(30));
-            }
-            else
-            {
-                currentBooks.AddRange(books);
-                cacheService.Set<IEnumerable<Book>>(_cacheKey, currentBooks, DateTime.UtcNow.AddMinutes(30));
-            }
+            books.ForEach(book => cacheService.Set($"{_cacheKey}:{book.UserId}:{book.Id}", book, DateTime.UtcNow.AddMinutes(30)));
 
             return ActionResult.SuccessfulOperation();
 
@@ -119,12 +90,13 @@ namespace AdeNote.Infrastructure.Services.BookSetting
             if (userId == Guid.Empty)
                 return ActionResult<IEnumerable<BookDTO>>.Failed("Invalid id", (int)HttpStatusCode.BadRequest);
 
-            var currentBooks = cacheService.Get<List<Book>>(_cacheKey);
+            var currentBooks = cacheService.Search<Book>(_cacheKey,"*");
 
-            if (currentBooks == null)
+            if(currentBooks == null)
             {
                 currentBooks = bookRepository.GetAll(userId).ToList();
-                cacheService.Set(_cacheKey, currentBooks, DateTime.UtcNow.AddMinutes(30));
+
+                currentBooks.ForEach(book => cacheService.Set($"{_cacheKey}:{book.UserId}:{book.Id}", book, DateTime.UtcNow.AddMinutes(30)));
             }
 
             var currentBooksDTO = currentBooks.Adapt<IEnumerable<BookDTO>>(MappingService.BookConfig());
@@ -144,21 +116,12 @@ namespace AdeNote.Infrastructure.Services.BookSetting
             if (userId == Guid.Empty)
                 return ActionResult<BookDTO>.Failed("Invalid user id", (int)HttpStatusCode.BadRequest);
 
-            Book currentBook;
+            var currentBook = cacheService.Get<Book>($"{_cacheKey}:{userId}:{bookId}") ?? await bookRepository.GetAsync(bookId, userId);
 
-            var currentBooks = cacheService.Get<IEnumerable<Book>>(_cacheKey);
-           
-            if(currentBooks != null)
+            if (currentBook != null)
             {
-                currentBook = currentBooks.FirstOrDefault(s => s.Id == bookId && s.UserId == userId) ?? await bookRepository.GetAsync(bookId,userId);
+                cacheService.Set($"{_cacheKey}:{userId}:{bookId}", currentBook, DateTime.UtcNow.AddMinutes(30));
             }
-            else
-            {
-                currentBook = await bookRepository.GetAsync(bookId, userId);
-            }
-
-            if (currentBook == null)
-                return ActionResult<BookDTO>.Failed("Book does not exist", (int)HttpStatusCode.NotFound);
 
             var currentBookDTO = currentBook.Adapt<BookDTO>();
 
@@ -178,25 +141,17 @@ namespace AdeNote.Infrastructure.Services.BookSetting
             if (bookId == Guid.Empty || userId == Guid.Empty)
                 return await Task.FromResult(ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
-            Book currentBook;
-
-            var currentBooks = cacheService.Get<IEnumerable<Book>>(_cacheKey).ToList();
-
-            if(currentBooks != null)
-            {
-                currentBook =  currentBooks.FirstOrDefault(s => s.Id == bookId && s.UserId == userId) ?? await bookRepository.GetAsync(bookId, userId);
-            }
-            else
-            {
-                currentBook = await bookRepository.GetAsync(bookId, userId);
-            }
+            var currentBook = cacheService.Get<Book>($"{_cacheKey}:{userId}:{bookId}") ?? await bookRepository.GetAsync(bookId, userId);
 
             if (currentBook == null)
-                return ActionResult.Failed("Book does not exist", (int)HttpStatusCode.NotFound);
+                return ActionResult<BookDTO>.Failed("Book does not exist", (int)HttpStatusCode.NotFound);
 
             var commitStatus = await bookRepository.Remove(currentBook);
             if (!commitStatus)
                 return ActionResult.Failed("Failed to delete book");
+
+
+            cacheService.Remove($"{_cacheKey}:{userId}:{bookId}");
 
             return ActionResult.SuccessfulOperation();
 
@@ -219,18 +174,7 @@ namespace AdeNote.Infrastructure.Services.BookSetting
             book.Id = bookId;
             book.UserId = userId;
 
-            Book currentBook;
-
-            var currentBooks = cacheService.Get<IEnumerable<Book>>(_cacheKey).ToList();
-
-            if (currentBooks != null)
-            {
-                currentBook = currentBooks.FirstOrDefault(s => s.Id == bookId && s.UserId == userId) ?? await bookRepository.GetAsync(bookId, userId,true);
-            }
-            else
-            {
-                currentBook = await bookRepository.GetAsync(bookId, userId,true);
-            }
+            var currentBook = cacheService.Get<Book>($"{_cacheKey}:{userId}:{bookId}") ?? await bookRepository.GetAsync(bookId, userId);
 
             if (currentBook == null)
                 return ActionResult.Failed("Book does not exist", (int)HttpStatusCode.NotFound);
@@ -240,6 +184,8 @@ namespace AdeNote.Infrastructure.Services.BookSetting
             var commitStatus = await bookRepository.Update(book, currentBook);
             if (!commitStatus)
                 return ActionResult.Failed("Failed to update book");
+
+            cacheService.Set($"{_cacheKey}:{userId}:{bookId}", book, DateTime.UtcNow.AddMinutes(30));
 
             return ActionResult.SuccessfulOperation();
 
