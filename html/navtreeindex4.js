@@ -1,5 +1,16 @@
 var NAVTREEINDEX4 =
 {
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1APIHealthCheck.html#acd7d7be336d30bd24304f543f65ea4eb":[1,0,0,2,5,7,0,0],
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1DatabaseHealthCheck.html":[1,0,0,2,5,7,1],
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1DatabaseHealthCheck.html#a4c0877d565491ef168c69b1b884450bd":[1,0,0,2,5,7,1,2],
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1DatabaseHealthCheck.html#a8e036f75e031ade4d2d88136bfb30643":[1,0,0,2,5,7,1,0],
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1DatabaseHealthCheck.html#ae8e60ab6908466c3712b1fcba883f8ff":[1,0,0,2,5,7,1,1],
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html":[1,0,0,2,5,13],
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html#a695e9de255e17f3af8aef35648ecd8eb":[1,0,0,2,5,13,1],
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html#a74cf06826069985572c591938fccde4b":[1,0,0,2,5,13,2],
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html#a7bc8cfa9b3480f80b7ea8cf42177fb93":[1,0,0,2,5,13,5],
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html#a92b986d091d63e7fbb7ca6568eb6e217":[1,0,0,2,5,13,4],
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html#aeaace4f2f180bb994a5a759b43937b98":[1,0,0,2,5,13,0],
 "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html#af1e60a49432c0adba75c87d85eb56944":[1,0,0,2,5,13,3],
 "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SSO_1_1AzureAdConfiguration.html":[1,0,0,2,5,9,0],
 "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SSO_1_1AzureAdConfiguration.html#a6ae79cacfe9f83f70f4491ff2ab254cb":[1,0,0,2,5,9,0,0],
@@ -238,16 +249,5 @@ var NAVTREEINDEX4 =
 "classAdeNote_1_1Models_1_1HangfireUser.html#a3d509942106285f2f26ff3512d539197":[1,0,0,4,3,1],
 "classAdeNote_1_1Models_1_1HangfireUser.html#a49555d71659d082027ec0232e08fed97":[1,0,0,4,3,3],
 "classAdeNote_1_1Models_1_1HangfireUser.html#a56e4b7f27b7e4cd78d6724e2fc5799c2":[1,0,0,4,3,5],
-"classAdeNote_1_1Models_1_1HangfireUser.html#a69389ea1b84042a230aaa6c1a5908c7e":[1,0,0,4,3,4],
-"classAdeNote_1_1Models_1_1HangfireUser.html#abab8f8bf3c183a7ffcb00be2b35464be":[1,0,0,4,3,0],
-"classAdeNote_1_1Models_1_1HangfireUser.html#ac17c41ffdf09205ffc7074f1487a4948":[1,0,0,4,3,6],
-"classAdeNote_1_1Models_1_1Label.html":[1,0,0,4,5],
-"classAdeNote_1_1Models_1_1Label.html#a0afcc9fa3d9c365c0d7dca6b2b17bcb7":[1,0,0,4,5,3],
-"classAdeNote_1_1Models_1_1Label.html#a732ac70566c609f5f8a4aa7de68c37f9":[1,0,0,4,5,5],
-"classAdeNote_1_1Models_1_1Label.html#a8dcf074f376e0007b6211ebdc26362ea":[1,0,0,4,5,2],
-"classAdeNote_1_1Models_1_1Label.html#aa76eebc8a03df48f51c59356524edbd2":[1,0,0,4,5,0],
-"classAdeNote_1_1Models_1_1Label.html#ab1d5b4c19dcfcfa3e81b399c26add58d":[1,0,0,4,5,7],
-"classAdeNote_1_1Models_1_1Label.html#abd1695c2ddbd423af4502438b5771c45":[1,0,0,4,5,6],
-"classAdeNote_1_1Models_1_1Label.html#ac1d72c6a4c08128a8e1082185b6f9cb6":[1,0,0,4,5,4],
-"classAdeNote_1_1Models_1_1Label.html#ad97e3f95720c8aac922d0ec93602fa2c":[1,0,0,4,5,1]
+"classAdeNote_1_1Models_1_1HangfireUser.html#a69389ea1b84042a230aaa6c1a5908c7e":[1,0,0,4,3,4]
 };

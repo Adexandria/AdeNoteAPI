@@ -20,6 +20,7 @@ var annotated_dup =
           [ "HealthCheckException", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1HealthCheckException.html", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1HealthCheckException" ]
         ] ],
         [ "Extension", "namespaceAdeNote_1_1Infrastructure_1_1Extension.html", [
+          [ "CollectionExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1CollectionExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1CollectionExtension" ],
           [ "ConfigurationExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension" ],
           [ "DatabaseExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension" ],
           [ "EnumExtensions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1EnumExtensions.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1EnumExtensions" ],

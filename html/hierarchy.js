@@ -21,6 +21,7 @@ var hierarchy =
     ] ],
     [ "AdeNote.Models.DTOs.BookUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1BookUpdateDTO.html", null ],
     [ "AdeNote.Models.DTOs.ChangePasswordDTO", "classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO.html", null ],
+    [ "AdeNote.Infrastructure.Extension.CollectionExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1CollectionExtension.html", null ],
     [ "AdeNote.Infrastructure.Extension.ConfigurationExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html", null ],
     [ "ControllerBase", null, [
       [ "AdeNote.Controllers.BaseController", "classAdeNote_1_1Controllers_1_1BaseController.html", [
