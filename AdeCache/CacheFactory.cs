@@ -1,12 +1,19 @@
 ﻿using AdeCache.Models;
 using AdeCache.Services;
-using Excelify.Services.Exceptions;
+using AdeCache.Services.Exceptions;
 using System.Reflection;
 
 namespace AdeCache
 {
+    /// <summary>
+    /// Create cache services
+    /// </summary>
     public class CacheFactory
     {
+        /// <summary>
+        /// A constructor
+        /// </summary>
+        /// <param name="assembly">Assembly that include custom cache services</param>
         public CacheFactory(Assembly assembly = null)
         {
            if(assembly == null)
@@ -22,6 +29,12 @@ namespace AdeCache
             }
         }
 
+        /// <summary>
+        /// Create service based on cache configuration
+        /// </summary>
+        /// <param name="cache">Manages ccahe configuration</param>
+        /// <returns></returns>
+        /// <exception cref="CacheException">Throws if it fails to create service</exception>
         public ICacheService CreateService(ICache cache)
         {
             ICacheService cacheService = null;

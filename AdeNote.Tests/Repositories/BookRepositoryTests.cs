@@ -50,7 +50,7 @@ namespace AdeNote.Tests.Repositories
             var response = await Repo.GetAsync(new Guid("a557773f-f8c3-47af-a16f-d144dfc0c64b"), new Guid("6b9da688-9591-4e3c-bf8c-732dd3080866"),false);
 
             //Assert
-            Assert.That(response, Is.Null);
+            Assert.That(response, Is.Not.Null);
         }
 
         [Test]

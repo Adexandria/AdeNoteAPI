@@ -13,6 +13,9 @@ namespace AdeNote.Tests.Services
         protected override void Setup()
         {
             base.Setup();
+            Service.cacheService = CacheService.Object;
+            CacheService.Setup(s => s.Search<Label>(It.IsAny<string>(), It.IsAny<string>()))
+                .Returns<IEnumerable<Label>>(default);
             Service.labelRepository = Repo.Object;
         }
 

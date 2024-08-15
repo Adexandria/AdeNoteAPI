@@ -13,7 +13,9 @@ namespace AdeNote.Tests.Services
         protected override void Setup()
         {
             base.Setup();
+            Service.cacheService = CacheService.Object;
             Service.bookRepository = Repo.Object;
+            CacheService.Setup(s => s.Search<Book>(It.IsAny<string>(), It.IsAny<string>())).Returns<IEnumerable<Book>>(default); ;
         }
 
         [Test]
