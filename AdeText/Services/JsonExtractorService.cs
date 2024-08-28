@@ -81,16 +81,11 @@ namespace AdeText.Services
                     extractedValue = jsonObject["name"]?.GetValue<string>();
                 }
 
-                if (string.IsNullOrEmpty(extractedValue))
+                if (string.IsNullOrEmpty(extractedValue) || languages.ContainsKey(extractedValue))
                 {
                     continue;
                 }
 
-
-                if (languages.ContainsKey(extractedValue))
-                {
-                    continue;
-                }
                 languages.Add(extractedValue, nodeKey);
             }
 
