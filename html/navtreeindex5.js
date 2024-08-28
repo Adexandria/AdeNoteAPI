@@ -1,6 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"classAdeNote_1_1Models_1_1HangfireUser.html#abab8f8bf3c183a7ffcb00be2b35464be":[1,0,0,4,3,0],
 "classAdeNote_1_1Models_1_1HangfireUser.html#ac17c41ffdf09205ffc7074f1487a4948":[1,0,0,4,3,6],
 "classAdeNote_1_1Models_1_1Label.html":[1,0,0,4,5],
 "classAdeNote_1_1Models_1_1Label.html#a0afcc9fa3d9c365c0d7dca6b2b17bcb7":[1,0,0,4,5,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX5 =
 "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#a54aec71b3bc4452deeb44c2b5b1a9dde":[1,0,0,2,3,11,4],
 "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#a7e39627f289cb9a027fe1e901da790e8":[1,0,0,2,3,11,1],
 "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#a9f6ff015c8bfa3a54730c10a33682bab":[1,0,0,2,3,11,3],
-"interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#afc4136b978c438ed02b5b2a9220d1424":[1,0,0,2,3,11,2]
+"interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#afc4136b978c438ed02b5b2a9220d1424":[1,0,0,2,3,11,2],
+"interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html":[1,0,0,2,3,12]
 };

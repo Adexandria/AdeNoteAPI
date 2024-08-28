@@ -1,8 +1,7 @@
 var classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService =
 [
-    [ "BookConfig", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a6e375fd5b2c5f7edb7fb48e5c1bbde57", null ],
-    [ "LabelConfig", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a7ce8136a67a485e2bc49104d093afbc8", null ],
-    [ "PageLabelsConfig", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a19cfe3dca141406dbb673708f860d9ca", null ],
-    [ "TicketConfig", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#ad5ad1c946a60e0fa9a6ab6b2181c4b11", null ],
-    [ "UpdateLabelConfig", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a3ad7c16308d19a17c3372612b1febb1d", null ]
+    [ "BookConfig", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#aa1ceea29022f2cc41c7a148c92a45410", null ],
+    [ "LabelConfig", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a4a72d00573a170e6e1e5bc3736135280", null ],
+    [ "PageLabelsConfig", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a970597c6f3e586d64bfc44315d114220", null ],
+    [ "TicketConfig", "classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a5594af87f1594ec969b57b4ac9c1f2fa", null ]
 ];

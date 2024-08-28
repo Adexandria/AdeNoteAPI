@@ -1,6 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1APIHealthCheck.html#acd7d7be336d30bd24304f543f65ea4eb":[1,0,0,2,5,7,0,0],
 "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1DatabaseHealthCheck.html":[1,0,0,2,5,7,1],
 "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1DatabaseHealthCheck.html#a4c0877d565491ef168c69b1b884450bd":[1,0,0,2,5,7,1,2],
 "classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1DatabaseHealthCheck.html#a8e036f75e031ade4d2d88136bfb30643":[1,0,0,2,5,7,1,0],
@@ -142,8 +141,8 @@ var NAVTREEINDEX4 =
 "classAdeNote_1_1Models_1_1DTOs_1_1BookDTO.html":[1,0,0,4,0,2],
 "classAdeNote_1_1Models_1_1DTOs_1_1BookDTO.html#a1fadddd9b95699d647f1e597ac354087":[1,0,0,4,0,2,3],
 "classAdeNote_1_1Models_1_1DTOs_1_1BookDTO.html#ad4e689c16f1f7d683a3fbf30879b3a72":[1,0,0,4,0,2,1],
-"classAdeNote_1_1Models_1_1DTOs_1_1BookDTO.html#adbf342f65ce05f81b9d813eef6a0672a":[1,0,0,4,0,2,0],
 "classAdeNote_1_1Models_1_1DTOs_1_1BookDTO.html#ae57c7eb3546d3d38541b284225ff6de0":[1,0,0,4,0,2,2],
+"classAdeNote_1_1Models_1_1DTOs_1_1BookDTO.html#aecd71e732e8e83084afdfffaf705d2b8":[1,0,0,4,0,2,0],
 "classAdeNote_1_1Models_1_1DTOs_1_1BookPages.html":[1,0,0,4,0,3],
 "classAdeNote_1_1Models_1_1DTOs_1_1BookPages.html#a1f7cfee97b6911e9e67abe7272f97194":[1,0,0,4,0,3,1],
 "classAdeNote_1_1Models_1_1DTOs_1_1BookPages.html#a3086f89c5f8f0715506981391c3c03ab":[1,0,0,4,0,3,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX4 =
 "classAdeNote_1_1Models_1_1HangfireUser.html#a3d509942106285f2f26ff3512d539197":[1,0,0,4,3,1],
 "classAdeNote_1_1Models_1_1HangfireUser.html#a49555d71659d082027ec0232e08fed97":[1,0,0,4,3,3],
 "classAdeNote_1_1Models_1_1HangfireUser.html#a56e4b7f27b7e4cd78d6724e2fc5799c2":[1,0,0,4,3,5],
-"classAdeNote_1_1Models_1_1HangfireUser.html#a69389ea1b84042a230aaa6c1a5908c7e":[1,0,0,4,3,4]
+"classAdeNote_1_1Models_1_1HangfireUser.html#a69389ea1b84042a230aaa6c1a5908c7e":[1,0,0,4,3,4],
+"classAdeNote_1_1Models_1_1HangfireUser.html#abab8f8bf3c183a7ffcb00be2b35464be":[1,0,0,4,3,0]
 };
