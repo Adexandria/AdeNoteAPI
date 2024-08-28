@@ -8,8 +8,7 @@ This is a note management system API. It provides user with secured access to no
 ### Packages
 - Entity Framework core
 - Swashbuckle
-- TasksLibrary by Paprika
-- Mapster
+- Automapify by Paprika
 
 ### Architecture
 The API uses a monolith structure. It includes:
