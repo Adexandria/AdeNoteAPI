@@ -1,0 +1,4 @@
+<map id="AdeNote.Controllers.LabelController.GetAllLabels" name="AdeNote.Controllers.LabelController.GetAllLabels">
+<area shape="rect" id="node1" title="Fetches all label" alt="" coords="5,5,197,47"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1ILabelService.html#ae38aa29a8aaaf9dc89a58db07d460d41" title="Gets all the labels" alt="" coords="245,5,491,47"/>
+</map>

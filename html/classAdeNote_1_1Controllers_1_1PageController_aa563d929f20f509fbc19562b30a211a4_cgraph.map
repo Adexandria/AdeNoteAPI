@@ -1,0 +1,4 @@
+<map id="AdeNote.Controllers.PageController.DeletePage" name="AdeNote.Controllers.PageController.DeletePage">
+<area shape="rect" id="node1" title="Removes a page froma book" alt="" coords="5,5,193,47"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#acf58236b74915e24c9d47056351d43d2" title="Removes a particular page" alt="" coords="241,5,492,47"/>
+</map>
