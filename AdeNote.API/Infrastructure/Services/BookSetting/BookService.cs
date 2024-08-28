@@ -4,7 +4,7 @@ using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
-using Mapster;
+using Automappify.Services;
 using System.Net;
 
 namespace AdeNote.Infrastructure.Services.BookSetting
@@ -42,7 +42,7 @@ namespace AdeNote.Infrastructure.Services.BookSetting
         /// <returns>A custom action result</returns>
         public async Task<ActionResult> Add(Guid userId, BookCreateDTO createBook)
         {
-            var book = createBook.Adapt<Book>();
+            var book = createBook.Map<BookCreateDTO,Book>();
             book.UserId = userId;
 
             var commitStatus = await bookRepository.Add(book);
@@ -64,7 +64,7 @@ namespace AdeNote.Infrastructure.Services.BookSetting
         /// <returns>A custom action result</returns>
         public async Task<ActionResult> Add(Guid userId, IList<BookCreateDTO> newBooks)
         {
-            var books = newBooks.Adapt<IEnumerable<Book>>().ToList();
+            var books = newBooks.Map<IList<BookCreateDTO>,IEnumerable<Book>>().ToList();
             for (int i = 0; i < books.Count; i++)
             {
                 books[i].UserId = userId;
@@ -99,7 +99,7 @@ namespace AdeNote.Infrastructure.Services.BookSetting
                 currentBooks.ForEach(book => cacheService.Set($"{_cacheKey}:{book.UserId}:{book.Id}", book, DateTime.UtcNow.AddMinutes(30)));
             }
 
-            var currentBooksDTO = currentBooks.Adapt<IEnumerable<BookDTO>>(MappingService.BookConfig());
+            var currentBooksDTO = currentBooks.Map<IEnumerable<Book>,IEnumerable<BookDTO>>(MappingService.BookConfig());
 
             return await Task.FromResult(ActionResult<IEnumerable<BookDTO>>.SuccessfulOperation(currentBooksDTO));
         }
@@ -124,7 +124,7 @@ namespace AdeNote.Infrastructure.Services.BookSetting
             }
 
             cacheService.Set($"{_cacheKey}:{userId}:{bookId}", currentBook, DateTime.UtcNow.AddMinutes(30));
-            var currentBookDTO = currentBook.Adapt<BookDTO>();
+            var currentBookDTO = currentBook.Map<Book,BookDTO>(MappingService.BookConfig());
 
             return ActionResult<BookDTO>.SuccessfulOperation(currentBookDTO);
 
@@ -171,7 +171,7 @@ namespace AdeNote.Infrastructure.Services.BookSetting
             if (bookId == Guid.Empty || userId == Guid.Empty)
                 return await Task.FromResult(ActionResult.Failed("Invalid id", (int)HttpStatusCode.BadRequest));
 
-            var book = updateBook.Adapt<Book>();
+            var book = updateBook.Map<BookUpdateDTO,Book>();
             book.Id = bookId;
             book.UserId = userId;
 

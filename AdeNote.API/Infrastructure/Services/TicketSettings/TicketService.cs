@@ -6,7 +6,7 @@ using AdeNote.Infrastructure.Utilities;
 using AdeNote.Infrastructure.Utilities.EventSystem;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
-using Mapster;
+using Automappify.Services;
 using System.Net;
 using System.Text.Json;
 
@@ -45,7 +45,7 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
                 return ActionResult.Failed("Invalid user", StatusCodes.Status400BadRequest);
             }
 
-            var ticket = newTicket.Adapt<Ticket>(MappingService.TicketConfig());
+            var ticket = newTicket.Map<TicketStreamDto,Ticket>(MappingService.TicketConfig());
 
             ticket.Issuer = currentUser.Id;
 

@@ -1,6 +1,8 @@
 ﻿using AdeNote.Models;
 using AdeNote.Models.DTOs;
-using Mapster;
+using Automapify.Services;
+using Automapify.Services.Extensions;
+using Automappify.Services;
 
 namespace AdeNote.Infrastructure.Extension
 {
@@ -13,51 +15,43 @@ namespace AdeNote.Infrastructure.Extension
         /// Maps from book entity to book dto
         /// </summary>
         /// <returns>a configuration type</returns>
-        public static TypeAdapterConfig BookConfig()
+        public static MapifyConfiguration BookConfig()
         {
-            return TypeAdapterConfig<Book, BookDTO>
-                .ForType().Map(d=> d.BookPages, s=>s.Pages).Config;
+            return new MapifyConfigurationBuilder<Book, BookDTO>()
+                .Map(d=> d.BookPages, s=>s.Pages)
+                .CreateConfig();
         }
 
         /// <summary>
         /// Maps from label to label dto
         /// </summary>
         /// <returns>a configuration type</returns>
-        public static TypeAdapterConfig LabelConfig()
+        public static MapifyConfiguration LabelConfig()
         {
-            return TypeAdapterConfig<Label, LabelDTO>
-                .ForType().Map(d=> d.Label,s=>s.Title)
-                .Config;
+            return new MapifyConfigurationBuilder<Label, LabelDTO>()
+                .Map(d=> d.Label,s=>s.Title)
+                .CreateConfig();
         }
 
 
-        public static TypeAdapterConfig TicketConfig()
+        public static MapifyConfiguration TicketConfig()
         {
-            return TypeAdapterConfig<TicketStreamDto, Ticket>
-                .ForType().Map(d => d.Issue, s => s.Issue)
+            return new MapifyConfigurationBuilder<TicketStreamDto, Ticket>()
+                .Map(d => d.Issue, s => s.Issue)
                 .Map(d => d.Description, s => s.Description)
-                .Config;
+                .CreateConfig();
         }
         /// <summary>
         /// Maps from page to PageDTO
         /// </summary>
         /// <returns>a configuration type</returns>
-        public static TypeAdapterConfig PageLabelsConfig()
+        public static MapifyConfiguration PageLabelsConfig()
         {
-            return TypeAdapterConfig<Page, PageDTO>
-                .ForType().Map(d => d.Labels,
-                s => s.Labels.Adapt<IList<LabelDTO>>(LabelConfig()))
-                .Config;
-        }
-
-        /// <summary>
-        /// Maps from page update dto to page
-        /// </summary>
-        /// <returns>a configuration type</returns>
-        public static TypeAdapterConfig UpdateLabelConfig()
-        {
-            return TypeAdapterConfig<PageUpdateDTO, Page>
-                .NewConfig().Ignore(d=>d.Labels).Config;
+            return new MapifyConfigurationBuilder<Page, PageDTO>()
+                .Map(d => d.Labels.MapTo(s=>s.Label),
+                 s => s.Labels.MapFrom(s=>s.Title))
+                .Map(d=>d.Labels.MapTo(s=>s.Id), s=>s.Labels.MapFrom(s=>s.Id))
+                .CreateConfig();
         }
     }
 }

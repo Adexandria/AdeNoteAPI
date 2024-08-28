@@ -5,7 +5,7 @@ using AdeNote.Infrastructure.Services.TranslationAI;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
-using Mapster;
+using Automappify.Services;
 using System.Net;
 
 namespace AdeNote.Infrastructure.Services.PageSettings
@@ -58,7 +58,7 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             if (currentBook == null)
                 return ActionResult.Failed("Book doesn't exist", (int)HttpStatusCode.NotFound);
 
-            var page = createPage.Adapt<Page>();
+            var page = createPage.Map<PageCreateDTO,Page>();
 
             page.BookId = bookId;
 
@@ -89,7 +89,7 @@ namespace AdeNote.Infrastructure.Services.PageSettings
                 currentPages.ForEach(currentPage => cacheService.Set($"{_pageCacheKey}:{bookId}:{currentPage.Id}", currentPage, DateTime.UtcNow.AddMinutes(30)));
             }
 
-            var currentBookPagesDTO = currentPages.Adapt<IEnumerable<PageDTO>>(MappingService.PageLabelsConfig());
+            var currentBookPagesDTO = currentPages.Map<IEnumerable<Page>,IEnumerable<PageDTO>>(MappingService.PageLabelsConfig());
 
             return await Task.FromResult(ActionResult<IEnumerable<PageDTO>>.SuccessfulOperation(currentBookPagesDTO));
 
@@ -112,7 +112,7 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             if (currentBookPage == null)
                 return await Task.FromResult(ActionResult<PageDTO>.Failed("page doesn't exist", (int)HttpStatusCode.NotFound));
             
-            var currentBookPageDTO = currentBookPage.Adapt<PageDTO>(MappingService.PageLabelsConfig());
+            var currentBookPageDTO = currentBookPage.Map<Page,PageDTO>(MappingService.PageLabelsConfig());
 
             return ActionResult<PageDTO>.SuccessfulOperation(currentBookPageDTO);
 
@@ -172,7 +172,7 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             if (currentBookPage == null)
                 return ActionResult.Failed("page doesn't exist", (int)HttpStatusCode.NotFound);
 
-            var page = updatePage.Adapt<Page>(MappingService.UpdateLabelConfig());
+            var page = updatePage.Map<PageUpdateDTO,Page>();
             page.Id = pageId;
             page.BookId = bookId;
             page.SetModifiedDate();
@@ -213,10 +213,22 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             {
                 foreach (var label in Labels)
                 {
-                    var currentLabel = cacheService.Get<IEnumerable<Label>>(_labelCacheKey).FirstOrDefault(s=>s.Title == label) ?? await labelRepository.GetByNameAsync(label);
-                    if (currentLabel == null)
-                        return ActionResult.Failed("Label doesn't exist", (int)HttpStatusCode.NotFound);
+                    var currentLabels = cacheService.Get<IEnumerable<Label>>(_labelCacheKey);
 
+                    Label currentLabel = null;
+
+                    if (currentLabels != null)
+                    {
+                        currentLabel = currentLabels.FirstOrDefault(s => s.Title == label);
+                    }
+                    else
+                    {
+                        currentLabel = await labelRepository.GetByNameAsync(label);
+                    }
+
+                    if (currentLabel == null)
+                        return ActionResult.Failed("Label doesn't exist", StatusCodes.Status404NotFound);
+                        
                     if (currentBookPage.Labels != null)
                         if (currentBookPage.Labels.Any(s => s.Title == currentLabel.Title))
                         {
