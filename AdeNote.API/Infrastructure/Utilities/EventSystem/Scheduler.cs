@@ -1,5 +1,4 @@
 ﻿using AdeMessaging.Services;
-using AdeNote.Infrastructure.Services.EmailSettings;
 using AdeNote.Infrastructure.Services.Notification;
 using AdeNote.Infrastructure.Services.TicketSettings;
 using AdeNote.Infrastructure.Utilities.EmailSettings;

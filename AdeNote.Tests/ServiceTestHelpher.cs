@@ -1,5 +1,6 @@
 ﻿using AdeCache.Services;
-using Mapster;
+using Automapify.Services;
+using Automappify.Services;
 using Moq;
 
 
@@ -25,12 +26,12 @@ namespace AdeNote.Tests
             return new Mock<TModel>().Object;
         }
 
-        protected virtual TUpdateModel MapModel(TypeAdapterConfig config = null)
+        protected virtual TUpdateModel MapModel(MapifyConfiguration config = null)
         {
             if(config == null)
-                return obj.Adapt<TUpdateModel>();
+                return obj.Map<TModel,TUpdateModel>();
 
-            return obj.Adapt<TUpdateModel>(config);
+            return obj.Map<TModel, TUpdateModel>();
         }
 
         protected TModel obj { get; set; }

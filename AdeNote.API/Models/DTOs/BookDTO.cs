@@ -1,4 +1,5 @@
-﻿using DocBuilder.Services.Utility.Attributes;
+﻿using Automapify.Services.Attributes;
+using DocBuilder.Services.Utility.Attributes;
 using Excelify.Services.Utility.Attributes;
 
 namespace AdeNote.Models.DTOs
@@ -35,6 +36,7 @@ namespace AdeNote.Models.DTOs
         /// <summary>
         /// A list of pages
         /// </summary>
-        public IList<BookPages> BookPages { get; set; }
+
+        public List<BookPages> BookPages { get; set; }
     }
 }

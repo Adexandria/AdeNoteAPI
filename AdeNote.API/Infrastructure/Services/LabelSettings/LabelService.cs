@@ -4,7 +4,7 @@ using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
 using AdeNote.Models.DTOs;
-using Mapster;
+using Automappify.Services;
 using System.Net;
 
 namespace AdeNote.Infrastructure.Services.LabelSettings
@@ -41,7 +41,7 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
         /// <returns>Action result</returns>
         public async Task<ActionResult> Add(LabelCreateDTO createLabel)
         {
-            var label = createLabel.Adapt<Label>();
+            var label = createLabel.Map<LabelCreateDTO,Label>();
 
             var commitStatus = await labelRepository.Add(label);
             if (!commitStatus)
@@ -63,11 +63,11 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
 
             if (currentLabels == null)
             {
-                currentLabels = labelRepository.GetAll();
+                currentLabels = labelRepository.GetAll().ToList();
                 currentLabels.ForEach(label => cacheService.Set($"{_cacheKey}:{label.Id}",label, DateTime.UtcNow.AddMinutes(30)));
             }
                
-            var currentLabelsDTO = currentLabels.Adapt<IEnumerable<LabelDTO>>(MappingService.LabelConfig());
+            var currentLabelsDTO = currentLabels.Map<IEnumerable<Label>,IEnumerable<LabelDTO>>(MappingService.LabelConfig());
 
             return ActionResult<IEnumerable<LabelDTO>>.SuccessfulOperation(currentLabelsDTO);
 
@@ -94,7 +94,7 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
             if (currentLabel == null)
                 return ActionResult<LabelDTO>.Failed("Label doesn't exist", (int)HttpStatusCode.NotFound);
 
-            var currentLabelDTO = currentLabel.Adapt<LabelDTO>(MappingService.LabelConfig());
+            var currentLabelDTO = currentLabel.Map<Label,LabelDTO>(MappingService.LabelConfig());
             return ActionResult<LabelDTO>.SuccessfulOperation(currentLabelDTO);
 
 
@@ -138,7 +138,7 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
             if (currentLabel == null)
                 return ActionResult.Failed("label doesn't exist", (int)HttpStatusCode.NotFound);
 
-            var label = updateLabel.Adapt<Label>();
+            var label = updateLabel.Map<LabelUpdateDTO,Label>();
 
             label.Id = labelId;
 
