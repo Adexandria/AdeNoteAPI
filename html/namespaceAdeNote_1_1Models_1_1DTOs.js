@@ -17,6 +17,7 @@ var namespaceAdeNote_1_1Models_1_1DTOs =
     [ "PageCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO" ],
     [ "PageDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1PageDTO" ],
     [ "PageUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO" ],
+    [ "SolvedTicketDto", "classAdeNote_1_1Models_1_1DTOs_1_1SolvedTicketDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1SolvedTicketDto" ],
     [ "StatisticsDto", "classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto" ],
     [ "TicketCreateDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketCreateDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketCreateDto" ],
     [ "TicketDTO", "classAdeNote_1_1Models_1_1DTOs_1_1TicketDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketDTO" ],
@@ -25,5 +26,6 @@ var namespaceAdeNote_1_1Models_1_1DTOs =
     [ "TicketStreamDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto" ],
     [ "TranslationDto", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto" ],
     [ "UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO" ],
-    [ "UsersDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO" ]
+    [ "UsersDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO" ],
+    [ "UserTicketDto", "classAdeNote_1_1Models_1_1DTOs_1_1UserTicketDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1UserTicketDto" ]
 ];

@@ -6,6 +6,7 @@ var EmailTemplate_8cs =
       [ "MfaRemovalTokenNotification", "EmailTemplate_8cs.html#ace774701098407f69ff33ec4f9c25274aadeb37997209b0964dcd082576394a8b", null ],
       [ "EmailConfirmationNotification", "EmailTemplate_8cs.html#ace774701098407f69ff33ec4f9c25274a0d50352249b36028bf80fda901528980", null ],
       [ "PasswordlessNotification", "EmailTemplate_8cs.html#ace774701098407f69ff33ec4f9c25274a3dbcaddbf945ee2160afe98597e1a345", null ],
-      [ "TicketUpdateNotification", "EmailTemplate_8cs.html#ace774701098407f69ff33ec4f9c25274a24df33726f725193549c7b43f1240c3a", null ]
+      [ "TicketUpdateNotification", "EmailTemplate_8cs.html#ace774701098407f69ff33ec4f9c25274a24df33726f725193549c7b43f1240c3a", null ],
+      [ "SolvedTicketNotification", "EmailTemplate_8cs.html#ace774701098407f69ff33ec4f9c25274a419e15f46c1cd1d053cbfff93eb440ea", null ]
     ] ]
 ];

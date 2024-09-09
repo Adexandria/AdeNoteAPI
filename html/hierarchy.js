@@ -225,6 +225,7 @@ var hierarchy =
     [ "AdeNote.Models.DTOs.PageUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO.html", null ],
     [ "AdeNote.Infrastructure.Utilities.PaginatedResponse< T >", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html", null ],
     [ "AdeNote.Infrastructure.Extension.ProgramExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ProgramExtension.html", null ],
+    [ "AdeNote.Models.Reader", "classAdeNote_1_1Models_1_1Reader.html", null ],
     [ "AdeNote.Infrastructure.Repository.Repository< T >", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html", null ],
     [ "AdeNote.Infrastructure.Repository.Repository< Book >", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html", [
       [ "AdeNote.Infrastructure.Repository.BookRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1BookRepository.html", null ]
@@ -254,6 +255,7 @@ var hierarchy =
     [ "AdeNote.Infrastructure.Utilities.EventSystem.Scheduler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1Scheduler.html", null ],
     [ "AdeNote.Infrastructure.Utilities.SmsConfig.Sms", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1Sms.html", null ],
     [ "AdeNote.Infrastructure.Utilities.SmsConfig.SmsConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1SmsConfiguration.html", null ],
+    [ "AdeNote.Models.DTOs.SolvedTicketDto", "classAdeNote_1_1Models_1_1DTOs_1_1SolvedTicketDto.html", null ],
     [ "AdeNote.Models.DTOs.StatisticsDto", "classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto.html", null ],
     [ "AdeNote.Models.DTOs.TicketCreateDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketCreateDto.html", null ],
     [ "AdeNote.Models.DTOs.TicketDTO", "classAdeNote_1_1Models_1_1DTOs_1_1TicketDTO.html", null ],
@@ -266,6 +268,7 @@ var hierarchy =
     [ "AdeNote.Models.DTOs.UsersDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO.html", [
       [ "AdeNote.Models.DTOs.UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", null ]
     ] ],
+    [ "AdeNote.Models.DTOs.UserTicketDto", "classAdeNote_1_1Models_1_1DTOs_1_1UserTicketDto.html", null ],
     [ "ValidationAttribute", null, [
       [ "AdeNote.Infrastructure.Utilities.ValidationAttributes.AllowAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1AllowAttribute.html", null ],
       [ "AdeNote.Infrastructure.Utilities.ValidationAttributes.ExpectedAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ExpectedAttribute.html", null ],
@@ -274,7 +277,8 @@ var hierarchy =
       [ "AdeNote.Infrastructure.Utilities.ValidationAttributes.ValidDateTimeAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidDateTimeAttribute.html", null ],
       [ "AdeNote.Infrastructure.Utilities.ValidationAttributes.ValidGuidAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidGuidAttribute.html", null ],
       [ "AdeNote.Infrastructure.Utilities.ValidationAttributes.ValidIntAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidIntAttribute.html", null ],
-      [ "AdeNote.Infrastructure.Utilities.ValidationAttributes.ValidObjectAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidObjectAttribute.html", null ]
+      [ "AdeNote.Infrastructure.Utilities.ValidationAttributes.ValidObjectAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidObjectAttribute.html", null ],
+      [ "AdeNote.Infrastructure.Utilities.ValidationAttributes.ValidTicketIdAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidTicketIdAttribute.html", null ]
     ] ],
     [ "ValidationResult", null, [
       [ "AdeNote.Infrastructure.Extension.ValidatorResult", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ValidatorResult.html", null ]

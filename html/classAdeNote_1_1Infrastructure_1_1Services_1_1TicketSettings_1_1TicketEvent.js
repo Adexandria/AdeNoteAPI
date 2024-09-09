@@ -7,6 +7,7 @@ var classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketEvent 
     [ "FirstName", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketEvent.html#a9aa747a951b1d4afeedcd7a3810df482", null ],
     [ "Issue", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketEvent.html#a3fd33463d1b8e732a5be34b4151dd617", null ],
     [ "LastName", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketEvent.html#a4907ce0fac1139dcf812b4796a69ae85", null ],
+    [ "ResolutionDetails", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketEvent.html#aee84933ad747cdab7c33c464d9be4a52", null ],
     [ "Status", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketEvent.html#a31b995be101ef24eccce01edecf385c9", null ],
     [ "TicketId", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketEvent.html#a4e6755fca01b567ff86399f585f6ba15", null ]
 ];

@@ -24,6 +24,9 @@ var dir_fab80d2647e49d0e675ea0809587eea2 =
     [ "Page.cs", "Page_8cs.html", [
       [ "Page", "classAdeNote_1_1Models_1_1Page.html", "classAdeNote_1_1Models_1_1Page" ]
     ] ],
+    [ "Reader.cs", "Reader_8cs.html", [
+      [ "Reader", "classAdeNote_1_1Models_1_1Reader.html", "classAdeNote_1_1Models_1_1Reader" ]
+    ] ],
     [ "RecoveryCode.cs", "RecoveryCode_8cs.html", [
       [ "RecoveryCode", "classAdeNote_1_1Models_1_1RecoveryCode.html", "classAdeNote_1_1Models_1_1RecoveryCode" ]
     ] ],

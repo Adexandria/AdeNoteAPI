@@ -14,6 +14,7 @@ var classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService =
     [ "_bookCacheKey", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a5c57de3ee42419e2b7467090b44ae373", null ],
     [ "_labelCacheKey", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a20ef8b542b1aa4601245d1118a7f3e09", null ],
     [ "_pageCacheKey", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#aa8f8d172898b78fb8011bfe3d06b63cb", null ],
+    [ "_translatedPageCacheKey", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#afdf09c8335a146aa440cef6306de3a0b", null ],
     [ "bookRepository", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a3b961831dd12bdb02c3593f62861f759", null ],
     [ "cacheService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a8ad9120a45a14388a3dc0d28c06b162a", null ],
     [ "labelPageRepository", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a4448136f20e58bac4abfab13235d4c1b", null ],

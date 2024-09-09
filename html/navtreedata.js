@@ -57,12 +57,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "20240430084252__firstmigration_8Designer_8cs.html",
-"Label_8cs_source.html",
-"classAdeNote_1_1Controllers_1_1PageController.html",
-"classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#aab00a6c42eda5e5780ae66f1a25d3938",
-"classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1DatabaseHealthCheck.html",
-"classAdeNote_1_1Models_1_1HangfireUser.html#ac17c41ffdf09205ffc7074f1487a4948",
-"interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a2f9c93cf4ef3a74b15a0bf2b71cd21ad"
+"Label_8cs.html",
+"classAdeNote_1_1Controllers_1_1DashboardController.html#ab9a65029eb14bd638121f19329995dc5",
+"classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#acab109e87522ce3c152c7e69772824a3",
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1Messaging.html",
+"classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html#ac4208bd8250afbebfdb254f03ad6cd15",
+"interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#a6885eed7854db14e541e2e3d8d06a883"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -177,7 +177,8 @@ var annotated_dup =
             [ "ValidDateTimeAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidDateTimeAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidDateTimeAttribute" ],
             [ "ValidGuidAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidGuidAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidGuidAttribute" ],
             [ "ValidIntAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidIntAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidIntAttribute" ],
-            [ "ValidObjectAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidObjectAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidObjectAttribute" ]
+            [ "ValidObjectAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidObjectAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidObjectAttribute" ],
+            [ "ValidTicketIdAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidTicketIdAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidTicketIdAttribute" ]
           ] ],
           [ "ActionResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult" ],
           [ "PaginatedResponse", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse" ],
@@ -222,6 +223,7 @@ var annotated_dup =
           [ "PageCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO" ],
           [ "PageDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1PageDTO" ],
           [ "PageUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO" ],
+          [ "SolvedTicketDto", "classAdeNote_1_1Models_1_1DTOs_1_1SolvedTicketDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1SolvedTicketDto" ],
           [ "StatisticsDto", "classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto" ],
           [ "TicketCreateDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketCreateDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketCreateDto" ],
           [ "TicketDTO", "classAdeNote_1_1Models_1_1DTOs_1_1TicketDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketDTO" ],
@@ -230,7 +232,8 @@ var annotated_dup =
           [ "TicketStreamDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto" ],
           [ "TranslationDto", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto" ],
           [ "UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO" ],
-          [ "UsersDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO" ]
+          [ "UsersDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO" ],
+          [ "UserTicketDto", "classAdeNote_1_1Models_1_1DTOs_1_1UserTicketDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1UserTicketDto" ]
         ] ],
         [ "BaseClass", "classAdeNote_1_1Models_1_1BaseClass.html", "classAdeNote_1_1Models_1_1BaseClass" ],
         [ "Book", "classAdeNote_1_1Models_1_1Book.html", "classAdeNote_1_1Models_1_1Book" ],
@@ -239,6 +242,7 @@ var annotated_dup =
         [ "Label", "classAdeNote_1_1Models_1_1Label.html", "classAdeNote_1_1Models_1_1Label" ],
         [ "LabelPage", "classAdeNote_1_1Models_1_1LabelPage.html", "classAdeNote_1_1Models_1_1LabelPage" ],
         [ "Page", "classAdeNote_1_1Models_1_1Page.html", "classAdeNote_1_1Models_1_1Page" ],
+        [ "Reader", "classAdeNote_1_1Models_1_1Reader.html", "classAdeNote_1_1Models_1_1Reader" ],
         [ "RecoveryCode", "classAdeNote_1_1Models_1_1RecoveryCode.html", "classAdeNote_1_1Models_1_1RecoveryCode" ],
         [ "RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", "classAdeNote_1_1Models_1_1RefreshToken" ],
         [ "Ticket", "classAdeNote_1_1Models_1_1Ticket.html", "classAdeNote_1_1Models_1_1Ticket" ],

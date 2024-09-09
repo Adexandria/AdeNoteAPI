@@ -7,5 +7,6 @@ var namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes =
     [ "ValidDateTimeAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidDateTimeAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidDateTimeAttribute" ],
     [ "ValidGuidAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidGuidAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidGuidAttribute" ],
     [ "ValidIntAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidIntAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidIntAttribute" ],
-    [ "ValidObjectAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidObjectAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidObjectAttribute" ]
+    [ "ValidObjectAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidObjectAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidObjectAttribute" ],
+    [ "ValidTicketIdAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidTicketIdAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidTicketIdAttribute" ]
 ];

@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('classAdeNote_1_1Infrastructure_1_1Repo
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AdeNote.Infrastructure.Repository.TicketRepository Class Reference</div>  </div>
@@ -105,23 +106,27 @@ Collaboration diagram for AdeNote.Infrastructure.Repository.TicketRepository:</d
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository__coll__graph.png" border="0" usemap="#aAdeNote_8Infrastructure_8Repository_8TicketRepository_coll__map" alt="Collaboration graph"/></div>
 <map name="aAdeNote_8Infrastructure_8Repository_8TicketRepository_coll__map" id="aAdeNote_8Infrastructure_8Repository_8TicketRepository_coll__map">
-<area shape="rect" title=" " alt="" coords="48,155,295,196"/>
-<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title=" " alt="" coords="5,80,167,107"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html" title=" " alt="" coords="191,80,325,107"/>
+<area shape="rect" title=" " alt="" coords="135,171,381,212"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title=" " alt="" coords="5,81,167,108"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html" title=" " alt="" coords="191,81,325,108"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="175,5,341,32"/>
+<area shape="rect" href="classAdeNote_1_1Db_1_1IdentityDbContext.html" title=" " alt="" coords="349,81,572,108"/>
+<area shape="rect" title=" " alt="" coords="369,5,552,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7193c61f3f01a126de0c61b8fe4544c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html#a7193c61f3f01a126de0c61b8fe4544c6">TicketRepository</a> (<a class="el" href="classAdeNote_1_1Db_1_1NoteDbContext.html">NoteDbContext</a> dbContext, ILoggerFactory <a class="el" href="Program_8cs.html#a7c716252e481b0bc487cc1c33ac6e4c2">loggerFactory</a>)</td></tr>
-<tr class="separator:a7193c61f3f01a126de0c61b8fe4544c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c90555128675717d730ba6c479d3e44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html#a4c90555128675717d730ba6c479d3e44">TicketRepository</a> (<a class="el" href="classAdeNote_1_1Db_1_1NoteDbContext.html">NoteDbContext</a> dbContext, <a class="el" href="classAdeNote_1_1Db_1_1IdentityDbContext.html">IdentityDbContext</a> identityDbContext, ILoggerFactory <a class="el" href="Program_8cs.html#a7c716252e481b0bc487cc1c33ac6e4c2">loggerFactory</a>)</td></tr>
+<tr class="separator:a4c90555128675717d730ba6c479d3e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7a58c3496307a88922e80f1fb910766"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html#af7a58c3496307a88922e80f1fb910766">Add</a> (<a class="el" href="classAdeNote_1_1Models_1_1Ticket.html">Ticket</a> entity)</td></tr>
 <tr class="separator:af7a58c3496307a88922e80f1fb910766"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae25f8a6ac3a8541e296f1a43aba8a4ff"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1TicketStatusDto.html">TicketStatusDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html#ae25f8a6ac3a8541e296f1a43aba8a4ff">GetNumberOfTicketsByStatus</a> ()</td></tr>
 <tr class="separator:ae25f8a6ac3a8541e296f1a43aba8a4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac89682b36646158207d97d3d40af6ac"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Models_1_1Ticket.html">Ticket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html#aac89682b36646158207d97d3d40af6ac">GetTicket</a> (Guid ticketId)</td></tr>
 <tr class="separator:aac89682b36646158207d97d3d40af6ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20faa950073c52339538df44333f1358"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Models_1_1Ticket.html">Ticket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html#a20faa950073c52339538df44333f1358">GetTicket</a> (string ticketId)</td></tr>
+<tr class="separator:a20faa950073c52339538df44333f1358"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2c0fe7be3cdc1f49056f6a3134da4bf"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="classAdeNote_1_1Models_1_1Ticket.html">Ticket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html#af2c0fe7be3cdc1f49056f6a3134da4bf">GetTickets</a> (int pageNumber, int pageSize)</td></tr>
 <tr class="separator:af2c0fe7be3cdc1f49056f6a3134da4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac31ec4435e08f68d7a82b08d31cda8fd"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="classAdeNote_1_1Models_1_1Ticket.html">Ticket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html#ac31ec4435e08f68d7a82b08d31cda8fd">GetTickets</a> (string name, int pageNumber, int pageSize)</td></tr>
@@ -154,6 +159,11 @@ This will catch conflict exception and update the entity with the database entit
 <tr class="memdesc:aa09992933cc1efc25ff9ba7ed29d601a inherit pub_methods_interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an existing object  <a href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#aa09992933cc1efc25ff9ba7ed29d601a">More...</a><br /></td></tr>
 <tr class="separator:aa09992933cc1efc25ff9ba7ed29d601a inherit pub_methods_interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a2576f88abf110a45b72831526ec86514"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="classAdeNote_1_1Db_1_1IdentityDbContext.html">IdentityDbContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html#a2576f88abf110a45b72831526ec86514">_identityDb</a></td></tr>
+<tr class="separator:a2576f88abf110a45b72831526ec86514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header properties_classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository"><td colspan="2" onclick="javascript:toggleInherit('properties_classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html">AdeNote.Infrastructure.Repository.Repository&lt; Ticket &gt;</a></td></tr>
@@ -165,10 +175,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00008">8</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00009">9</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a7193c61f3f01a126de0c61b8fe4544c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7193c61f3f01a126de0c61b8fe4544c6">&#9670;&nbsp;</a></span>TicketRepository()</h2>
+<a id="a4c90555128675717d730ba6c479d3e44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c90555128675717d730ba6c479d3e44">&#9670;&nbsp;</a></span>TicketRepository()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -178,6 +188,12 @@ Additional Inherited Members</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classAdeNote_1_1Db_1_1NoteDbContext.html">NoteDbContext</a>&#160;</td>
           <td class="paramname"><em>dbContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAdeNote_1_1Db_1_1IdentityDbContext.html">IdentityDbContext</a>&#160;</td>
+          <td class="paramname"><em>identityDbContext</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -193,7 +209,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00010">10</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00011">11</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -214,7 +230,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00014">14</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00016">16</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -244,12 +260,12 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#a225cef2b2ff29409e60439f8a4fea262">AdeNote.Infrastructure.Repository.ITicketRepository</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00027">27</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00029">29</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
 
 </div>
 </div>
 <a id="aac89682b36646158207d97d3d40af6ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac89682b36646158207d97d3d40af6ac">&#9670;&nbsp;</a></span>GetTicket()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aac89682b36646158207d97d3d40af6ac">&#9670;&nbsp;</a></span>GetTicket() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -266,7 +282,29 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#a7e39627f289cb9a027fe1e901da790e8">AdeNote.Infrastructure.Repository.ITicketRepository</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00043">43</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00045">45</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
+
+</div>
+</div>
+<a id="a20faa950073c52339538df44333f1358"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20faa950073c52339538df44333f1358">&#9670;&nbsp;</a></span>GetTicket() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;<a class="el" href="classAdeNote_1_1Models_1_1Ticket.html">Ticket</a>&gt; AdeNote.Infrastructure.Repository.TicketRepository.GetTicket </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>ticketId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#ac6d78227f47f952270851eb017b920df">AdeNote.Infrastructure.Repository.ITicketRepository</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00055">55</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -298,7 +336,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#afc4136b978c438ed02b5b2a9220d1424">AdeNote.Infrastructure.Repository.ITicketRepository</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00056">56</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00065">65</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -336,7 +374,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#a9f6ff015c8bfa3a54730c10a33682bab">AdeNote.Infrastructure.Repository.ITicketRepository</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00065">65</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00073">73</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -356,7 +394,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00075">75</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00085">85</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -403,7 +441,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#a54aec71b3bc4452deeb44c2b5b1a9dde">AdeNote.Infrastructure.Repository.ITicketRepository</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00086">86</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00096">96</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -423,7 +461,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00099">99</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00109">109</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -433,6 +471,31 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html#a9d5cfe761748188d1011869f57e44f03" title="Save changes. &#160;This will catch conflict exception and update the entity with the database entity" alt="" coords="300,5,557,47"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2576f88abf110a45b72831526ec86514"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2576f88abf110a45b72831526ec86514">&#9670;&nbsp;</a></span>_identityDb</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="classAdeNote_1_1Db_1_1IdentityDbContext.html">IdentityDbContext</a> AdeNote.Infrastructure.Repository.TicketRepository._identityDb</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TicketRepository_8cs_source.html#l00120">120</a> of file <a class="el" href="TicketRepository_8cs_source.html">TicketRepository.cs</a>.</p>
 
 </div>
 </div>

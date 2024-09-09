@@ -9,5 +9,6 @@ var classAdeNote_1_1Db_1_1NoteDbContext =
     [ "Pages", "classAdeNote_1_1Db_1_1NoteDbContext.html#a27439d3eab69d1af06403bcda671f3d8", null ],
     [ "RecoveryCodes", "classAdeNote_1_1Db_1_1NoteDbContext.html#a4cd4604a59ac03d3d1f688f990ca4bc9", null ],
     [ "RefreshTokens", "classAdeNote_1_1Db_1_1NoteDbContext.html#a16fcb633257a4267ea3971bcf109fe9d", null ],
-    [ "Tickets", "classAdeNote_1_1Db_1_1NoteDbContext.html#a44f750499076655de3d8521065a843b6", null ]
+    [ "Tickets", "classAdeNote_1_1Db_1_1NoteDbContext.html#a44f750499076655de3d8521065a843b6", null ],
+    [ "Users", "classAdeNote_1_1Db_1_1NoteDbContext.html#a44fc8b58f4dbdc66dbad60c0b2ada573", null ]
 ];
