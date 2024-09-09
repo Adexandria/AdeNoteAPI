@@ -8,13 +8,13 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
         Task<ActionResult> CreateTicket(TicketStreamDto newTicket,
            string email, CancellationToken cancellationToken = default);
 
-        Task<ActionResult> UpdateTicket(string status,
-           Guid adminId,
-             Guid ticketId);
+        Task<ActionResult> UpdateTicket(string status, Guid adminId,Guid ticketId, SolvedTicketDto solvedTicketDto);
 
         Task<ActionResult> DeleteTicket(Guid ticketId);
 
         Task<ActionResult<TicketDTO>> FetchTicketById(Guid ticketId);
+
+        Task<ActionResult<UserTicketDto>> FetchTicketById(string ticketId);
 
         ActionResult<PaginatedResponse<TicketsDTO>> FetchAllTickets(int pageNumber, int pageSize);
 

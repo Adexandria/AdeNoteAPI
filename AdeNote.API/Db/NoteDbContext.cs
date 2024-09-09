@@ -33,8 +33,7 @@ namespace AdeNote.Db
         /// </summary>
         public DbSet<Page> Pages { get; set; }
 
-       // public DbSet<User> Users { get; set; }
-
+        public virtual DbSet<User> Users {  get; set; }
         public DbSet<Ticket> Tickets { get; set; }
 
         /// <summary>
@@ -60,9 +59,8 @@ namespace AdeNote.Db
 
             modelBuilder.Entity<Book>()
                 .HasOne(s => s.User)
-                .WithMany(s => s.Books).HasForeignKey(s => s.UserId);
-
-           
+                .WithMany(s => s.Books)
+                .HasForeignKey(s => s.UserId);
 
             modelBuilder.Entity<RefreshToken>()
                 .HasOne(s => s.User).
@@ -73,13 +71,12 @@ namespace AdeNote.Db
                 .Property(s => s.Role)
                 .HasDefaultValue(Role.User);
 
+            modelBuilder.Entity<Ticket>()
+                .HasOne(s => s.User).
+                WithMany(s => s.Tickets).HasForeignKey(s => s.Issuer);
+
             modelBuilder.Entity<Book>()
                 .HasMany(s => s.Pages);
-
-
-            modelBuilder.Entity<Ticket>()
-                .HasOne(s=>s.User)
-                .WithMany(s => s.Tickets).HasForeignKey(s=>s.Issuer);
 
             modelBuilder.Entity<RecoveryCode>()
                 .HasOne(s => s.User)

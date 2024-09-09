@@ -330,6 +330,13 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             if (currentBookPage == null)
                 return ActionResult<TranslationDto>.Failed("page doesn't exist", (int)HttpStatusCode.NotFound);
 
+            var existingTranslatedPage = cacheService.Get<TranslationDto>($"{_translatedPageCacheKey}:{bookId}:{pageId}:{translatedLanguage.ToLower()}");
+
+            if(existingTranslatedPage != null)
+            {
+                return ActionResult<TranslationDto>.SuccessfulOperation(existingTranslatedPage);
+            }
+
             var translationLanguages = cacheService.Get<Dictionary<string,string>>("translation_languages");
 
             var transliterationLanguages = cacheService.Get<Dictionary<string, string>>("transliteration_languages");
@@ -366,12 +373,13 @@ namespace AdeNote.Infrastructure.Services.PageSettings
                   .Failed(translatedResponse.Errors.FirstOrDefault(), StatusCodes.Status400BadRequest);
             }
 
-            var detectedLanguage = translationLanguages.FirstOrDefault(s => s.Value.ToUpper() == translatedResponse.Data[1].ToUpper()).Key ?? translatedResponse.Data[1];
-
             translatedLanguage = translationLanguages.FirstOrDefault(s => s.Key.ToUpper() == translatedLanguage.ToUpper()).Key;
 
+            var detectedLanguage = translationLanguages.FirstOrDefault(s => s.Value.ToUpper() == translatedResponse.Data[1].ToUpper()).Key ?? translatedResponse.Data[1];
 
             var transliterationLanguage = transliterationLanguages.FirstOrDefault(s => s.Value.ToUpper() == translationLanguage.ToUpper()).Key;
+
+            TranslationDto translatedPage;
 
             if (transliterationLanguage != null)
             {
@@ -383,15 +391,22 @@ namespace AdeNote.Infrastructure.Services.PageSettings
                      .Failed(transliterationResponse.Errors.FirstOrDefault(), StatusCodes.Status400BadRequest);
                 }
 
-                return ActionResult<TranslationDto>.SuccessfulOperation(new TranslationDto(currentBookPage.Content,
+                translatedPage = new TranslationDto(currentBookPage.Content,
                 translatedResponse.Data[0],
-                detectedLanguage, translatedLanguage, transliterationResponse.Data));
+                detectedLanguage, translatedLanguage, transliterationResponse.Data);
+
+                cacheService.Set($"{_translatedPageCacheKey}:{bookId}:{pageId}:{translatedLanguage.ToLower()}", translatedPage, DateTime.UtcNow.AddMinutes(10));
+
+                return ActionResult<TranslationDto>.SuccessfulOperation(translatedPage);
             }
 
-
-            return ActionResult<TranslationDto>.SuccessfulOperation(new TranslationDto(currentBookPage.Content,
+              translatedPage = new TranslationDto(currentBookPage.Content,
                 translatedResponse.Data[0],
-                detectedLanguage, translatedLanguage));
+                detectedLanguage, translatedLanguage);
+
+            cacheService.Set($"{_translatedPageCacheKey}:{bookId}:{pageId}:{translatedLanguage.ToLower()}", translatedPage, DateTime.UtcNow.AddMinutes(10));
+
+            return ActionResult<TranslationDto>.SuccessfulOperation(translatedPage);
         }
 
         public ICacheService cacheService;
@@ -403,6 +418,7 @@ namespace AdeNote.Infrastructure.Services.PageSettings
 
         private string _bookCacheKey = "Books";
         private string _pageCacheKey = "Pages";
+        private string _translatedPageCacheKey = "Pages";
         private string _labelCacheKey = "Labels";
 
     }

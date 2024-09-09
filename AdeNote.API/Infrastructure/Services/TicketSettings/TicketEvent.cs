@@ -30,5 +30,8 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
 
         [JsonPropertyName("agent")]
         public string Admin { get; set; }
+
+        [JsonPropertyName("resolvedDetails")]
+        public string ResolutionDetails { get; set; }
     }
 }

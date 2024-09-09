@@ -1,7 +1,9 @@
 ﻿using AdeMessaging.Services;
+using AdeMessaging.Services.Extensions;
 using AdeNote.Infrastructure.Services.Notification;
 using AdeNote.Infrastructure.Services.TicketSettings;
 using AdeNote.Infrastructure.Utilities.EmailSettings;
+using AdeNote.Models;
 using Hangfire;
 using System.Text.Json;
 
@@ -32,6 +34,8 @@ namespace AdeNote.Infrastructure.Utilities.EventSystem
             }
             var ticket = JsonSerializer.Deserialize<TicketEvent>(message);
 
+            var template = EmailTemplate.TicketUpdateNotification;
+
             var substitution = new Dictionary<string, string>()
             {
                 { "{{FirstName}}", ticket.FirstName},
@@ -48,9 +52,16 @@ namespace AdeNote.Infrastructure.Utilities.EventSystem
                 {"{{Contact_Information}}", "adeolaaderibigbe09@gmail.com" },
                 {"{{Current_Year}}",DateTime.Now.Year.ToString() }
             };
+
+            if(ticket.Status == Status.Resolved.GetDescription())
+            {
+                template = EmailTemplate.SolvedTicketNotification;
+                substitution.Add("{{ResolutionDetails}}", ticket.ResolutionDetails ?? "None");
+            }
+
             var email = new Email(ticket.EmailAddress, "Ticket Status Update");
 
-            notificationService.SendNotification(email, EmailTemplate.TicketUpdateNotification, ContentType.html, substitution);
+            notificationService.SendNotification(email, template, ContentType.html, substitution);
         }
 
 

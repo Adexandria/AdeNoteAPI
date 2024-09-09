@@ -5,9 +5,13 @@ namespace AdeNote.Models
     public enum Status
     {
         Pending,
+
         [Description("In-review")]
         Inreview,
-        Solved,
+
+        [Description("Resolved")]
+        Resolved,
+
         Unresolved
     }
 }

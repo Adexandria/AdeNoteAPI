@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Status - Resolved</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .status {
+            color: #4CAF50;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .details, .resolution {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .details p, .resolution p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ticket Status</h1>
+        </div>
+        <div class="status">
+            Resolved
+        </div>
+        <div class="details">
+            <div class="section-title">Ticket Details</div>
+            <p><strong>Ticket ID:</strong> {{TicketId}}</p>
+            <p><strong>Subject:</strong> {{Issue}}</p>
+            <p><strong>Date Created:</strong> {{Ticket_Submission_Date}}</p>
+            <p><strong>Date Resolved:</strong> {{Last_Update_Date}}</p>
+            <p><strong>Status:</strong> {{Current_Status}}</p>
+        </div>
+        <div class="resolution">
+            <div class="section-title">Resolution Summary</div>
+            <p><strong>Resolution Details:</strong>{{ResolutionDetails}}</p>
+        </div>
+        <div class="footer">
+            <p><strong>If you experience any further issues or have additional questions, please don't hesitate to reach out to us. </strong></p>
+             <p>Please <a href="mailto:adeolaaderibigbe09@gmail.com">contact us</a></p>
+            <p>We appreciate your patience during this process.</p>
+        </div>
+    </div>
+</body>
+</html>
