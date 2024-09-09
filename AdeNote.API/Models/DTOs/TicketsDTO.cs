@@ -11,5 +11,7 @@
         public string Issue { get; set; }
 
         public string Status { get; set; }
+
+        public string Created { get; set; }
     }
 }

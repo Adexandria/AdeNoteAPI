@@ -45,7 +45,7 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
                 return ActionResult.Failed("Invalid user", StatusCodes.Status400BadRequest);
             }
 
-            var ticket = newTicket.Map<TicketStreamDto,Ticket>(MappingService.TicketConfig());
+            var ticket = newTicket.Map<TicketStreamDto,Ticket>(MappingService.TicketStreamConfig());
 
             ticket.Issuer = currentUser.Id;
 
@@ -76,21 +76,12 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
             if (pageNumber == 0 || pageSize == 0)
                 return ActionResult<PaginatedResponse<TicketsDTO>>.Failed("Invalid page number or page size", StatusCodes.Status400BadRequest);
 
-            var tickets = ticketRepository.GetTickets(pageNumber, pageSize);
+            var tickets = ticketRepository.GetTickets(pageNumber, pageSize).ToList();
 
             if (!tickets.Any())
                 return ActionResult<PaginatedResponse<TicketsDTO>>.Failed("There are no tickets", StatusCodes.Status400BadRequest);
 
-            // Use mapster
-            var currentTickets = tickets.Select(s =>
-                new TicketsDTO()
-                {
-                    Issue = s.Issue,
-                    TicketId = s.Id,
-                    Status = s.Status.GetDescription(),
-                    FirstName = s.User.FirstName,
-                    LastName = s.User.LastName
-                });
+            var currentTickets = tickets.Map<IEnumerable<Ticket>, IEnumerable<TicketsDTO>>(MappingService.TicketsConfig());
 
             var paginatedResponse = new PaginatedResponse<TicketsDTO>(pageNumber, pageSize, currentTickets);
 
@@ -110,15 +101,7 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
             if (!tickets.Any())
                 return ActionResult<PaginatedResponse<TicketsDTO>>.Failed("There are no tickets", StatusCodes.Status400BadRequest);
 
-            var currentTickets = tickets.Select(s =>
-               new TicketsDTO()
-               {
-                   Issue = s.Issue,
-                   TicketId = s.Id,
-                   Status = s.Status.GetDescription(),
-                   FirstName = s.User.FirstName,
-                   LastName = s.User.LastName
-               });
+            var currentTickets = tickets.Map<IEnumerable<Ticket>, IEnumerable<TicketsDTO>>(MappingService.TicketsConfig());
 
             var paginatedResponse = new PaginatedResponse<TicketsDTO>(pageNumber, pageSize, currentTickets);
 
@@ -136,20 +119,28 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
 
             var ticketAdmin = await userRepository.GetUser(ticket.AdminId.GetValueOrDefault());
 
-            var currentTicket = new TicketDTO()
-            {
-                Description = ticket.Description,
-                Issue = ticket.Issue,
-                ImageUrl = ticket.ImageUrl,
-                Issuer = ticket.Issuer,
-                TicketId = ticket.Id,
-                Status = ticket.Status.GetDescription(),
-                FirstName = ticket.User.FirstName,
-                LastName = ticket.User.LastName,
-                Handler = $"{ticketAdmin?.FirstName}  {ticketAdmin?.LastName}"
-            };
+            var currentTicket = ticket.Map<Ticket,TicketDTO>(MappingService.TicketConfig());
 
+            currentTicket.Map(ticketAdmin, MappingService.TicketAdminConfig());
+                
             return ActionResult<TicketDTO>.SuccessfulOperation(currentTicket);
+        }
+
+        public async Task<ActionResult<UserTicketDto>> FetchTicketById(string ticketId)
+        {
+            var ticket = await ticketRepository.GetTicket(ticketId);
+            if (ticket == null)
+                return ActionResult<UserTicketDto>.Failed("There are no existing tickets", StatusCodes.Status400BadRequest);
+
+            var ticketAdmin = await userRepository.GetUser(ticket.AdminId.GetValueOrDefault());
+
+            var currentTicket = ticket.Map<Ticket, UserTicketDto>(MappingService.UserTicketConfig());
+
+            currentTicket.TicketId = ticketId;
+
+            currentTicket.Map(ticketAdmin, MappingService.TicketAdminConfig());
+
+            return ActionResult<UserTicketDto>.SuccessfulOperation(currentTicket);
         }
 
         public ActionResult<PaginatedResponse<TicketsDTO>> SearchTicketsByDate(string created, int pageNumber, int pageSize)
@@ -164,15 +155,7 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
             if (!tickets.Any())
                 return ActionResult<PaginatedResponse<TicketsDTO>>.Failed("There are no tickets", StatusCodes.Status400BadRequest);
 
-            var currentTickets = tickets.Select(s =>
-               new TicketsDTO()
-               {
-                   Issue = s.Issue,
-                   TicketId = s.Id,
-                   Status = s.Status.GetDescription(),
-                   FirstName = s.User.FirstName,
-                   LastName = s.User.LastName
-               });
+            var currentTickets = tickets.Map<IEnumerable<Ticket>, IEnumerable<TicketsDTO>>(MappingService.TicketsConfig());
 
             var paginatedResponse = new PaginatedResponse<TicketsDTO>(pageNumber, pageSize, currentTickets);
 
@@ -189,27 +172,17 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
             if (pageNumber == 0 || pageSize == 0)
                 return ActionResult<PaginatedResponse<TicketsDTO>>.Failed("Invalid page number or page size", StatusCodes.Status400BadRequest);
 
-            var isStatus = Enum.TryParse(status, out Status newStatus);
-
-            if (!isStatus)
+            if (!Enum.TryParse(status, out Status newStatus))
             {
                 return ActionResult<PaginatedResponse<TicketsDTO>>.Failed("Invalid status", StatusCodes.Status400BadRequest);
             }
 
-            var tickets = ticketRepository.SearchTickets(x => x.Status == newStatus, pageNumber, pageSize);
+            var tickets = ticketRepository.SearchTickets(x => x.Status == newStatus, pageNumber, pageSize).ToList();
 
             if (!tickets.Any())
                 return ActionResult<PaginatedResponse<TicketsDTO>>.Failed("There are no tickets", StatusCodes.Status400BadRequest);
 
-            var currentTickets = tickets.Select(s =>
-               new TicketsDTO()
-               {
-                   Issue = s.Issue,
-                   TicketId = s.Id,
-                   Status = s.Status.GetDescription(),
-                   FirstName = s.User.FirstName,
-                   LastName = s.User.LastName
-               });
+            var currentTickets = tickets.Map<IEnumerable<Ticket>, IEnumerable<TicketsDTO>>(MappingService.TicketsConfig());
 
             var paginatedResponse = new PaginatedResponse<TicketsDTO>(pageNumber, pageSize, currentTickets);
 
@@ -218,7 +191,7 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
 
 
 
-        public async Task<ActionResult> UpdateTicket(string status, Guid adminId, Guid ticketId)
+        public async Task<ActionResult> UpdateTicket(string status, Guid adminId, Guid ticketId, SolvedTicketDto? solvedTicketDto)
         {
             if (ticketId == Guid.Empty)
                 return ActionResult.Failed("Invalid ticket id", StatusCodes.Status400BadRequest);
@@ -248,17 +221,20 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
             }
 
             var admin = await userRepository.GetUser(adminId);
-            var message = JsonSerializer.Serialize(new
+
+
+            string message = JsonSerializer.Serialize(new
             {
                 status = newStatus.GetDescription(),
                 firstName = currentTicket.User.FirstName,
                 lastName = currentTicket.User.LastName,
-                ticketId = currentTicket.Id.ToString("N"),
+                ticketId = $"tk{currentTicket.Id.ToString("N")[^5..]}",
                 emailAddress = currentTicket.User.Email,
                 issue = currentTicket.Issue,
                 lastUpdated = currentTicket.Modified.ToShortDateString(),
                 dateSubmitted = currentTicket.Created.ToShortDateString(),
-                agent = admin.FirstName + " " + admin.LastName
+                agent = admin.FirstName + " " + admin.LastName,
+                resolvedDetails = solvedTicketDto?.ResolutionDetails
             });
 
             messagingService.Publish(message, eventConfiguration.Exchange, eventConfiguration.RoutingKey);

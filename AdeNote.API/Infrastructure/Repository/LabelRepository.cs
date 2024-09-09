@@ -77,7 +77,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>a boolean value</returns>
         public async Task<bool> Remove(Label entity)
         {
-            Db.Remove(entity);
+            Db.Labels.Remove(entity);
 
             var result = await SaveChanges();
 

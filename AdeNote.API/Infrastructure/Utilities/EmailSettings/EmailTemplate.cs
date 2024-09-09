@@ -26,7 +26,9 @@ namespace AdeNote.Infrastructure.Utilities.EmailSettings
         PasswordlessNotification,
 
         
-        TicketUpdateNotification
+        TicketUpdateNotification,
+
+        SolvedTicketNotification
 
     }
 }

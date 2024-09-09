@@ -73,7 +73,6 @@ namespace AdeAuth.Services
             {
                 return currentUser;
             }
-
             return default;
         }
 

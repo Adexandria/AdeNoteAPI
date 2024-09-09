@@ -49,7 +49,7 @@ namespace AdeNote.Controllers
 
         [HttpGet("status")]
         [Authorize("Owner")]
-        public IActionResult SearchUserTickets([Allow("Invalid status", "Pending", "Inreview", "Solved", "Unresolved")] string status, int pageNumber = 1, int pageSize = 20)
+        public IActionResult SearchUserTickets([Allow("Invalid status", "Pending", "Inreview", "Resolved", "Unresolved")] string status, int pageNumber = 1, int pageSize = 20)
         {
             var response = ticketService.SearchTickets(status, pageNumber, pageSize);
 
@@ -59,6 +59,15 @@ namespace AdeNote.Controllers
         [HttpGet("{ticketId}")]
         [Authorize("Owner")]
         public async Task<IActionResult> GetTicket([ValidGuid("Invalid ticket id")] Guid ticketId)
+        {
+            var response = await ticketService.FetchTicketById(ticketId);
+
+            return response.Response();
+        }
+
+        [HttpGet("search/{ticketId}")]
+        [Authorize("User")]
+        public async Task<IActionResult> GetTicket([ValidTicketId("Invalid ticket id")] string ticketId)
         {
             var response = await ticketService.FetchTicketById(ticketId);
 
@@ -92,10 +101,10 @@ namespace AdeNote.Controllers
 
         [HttpPut("{ticketId}")]
         [Authorize("Owner")]
-        public async Task<IActionResult> UpdateTicketStatus([FromQuery] [Allow("Invalid status", "Pending", "Inreview", "Solved", "Unresolved")]  string status,
-            [ValidGuid("Invalid ticket id")] Guid ticketId)
+        public async Task<IActionResult> UpdateTicketStatus([FromQuery] [Allow("Invalid status", "Pending", "Inreview", "Resolved", "Unresolved")]  string status,
+            [ValidGuid("Invalid ticket id")] Guid ticketId, [FromBody] SolvedTicketDto solvedTicketDto)
         {
-            var response = await ticketService.UpdateTicket(status, CurrentUser, ticketId);
+            var response = await ticketService.UpdateTicket(status, CurrentUser, ticketId,solvedTicketDto);
 
             return response.Response();
         }
