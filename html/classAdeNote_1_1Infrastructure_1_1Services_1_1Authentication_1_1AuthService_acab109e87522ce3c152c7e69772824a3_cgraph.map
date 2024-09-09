@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.AuthService.GenerateMFAToken" name="AdeNote.Infrastructure.Services.Authentication.AuthService.GenerateMFAToken">
+<area shape="rect" id="node1" title="Generates token when trying to log in using MFA" alt="" coords="5,31,268,87"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="322,5,551,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="316,71,557,112"/>
+</map>
