@@ -87,28 +87,16 @@ namespace AdeNote.Infrastructure.Extension
             serviceCollection.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
            .AddJwtBearer(options =>
            {
-               options.TokenValidationParameters = new TokenValidationParameters
-               {
-                   ValidateIssuer = false,
-                   ValidateAudience = false,
-                   ClockSkew = TimeSpan.Zero,
-                   IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(applicationSetting.TokenSecret)),
-                   SaveSigninToken = true
-               };
-           }).AddJwtBearer("SSO", options =>
+               options.TokenSecret = applicationSetting.TokenSecret;
+           })
+           .AddMicrosoftAccount(options =>
            {
-               options.SaveToken = true;
-               options.MetadataAddress = "https://login.microsoftonline.com/organizations/v2.0/.well-known/openid-configuration";
-               options.TokenValidationParameters = new TokenValidationParameters()
-               {
-                   NameClaimType = "name",
-                   ValidAudience = applicationSetting.AzureAdConfiguration.Audience,
-                   ValidIssuer = $"{applicationSetting.AzureAdConfiguration.Instance}{applicationSetting.AzureAdConfiguration.TenantId}/v2.0",
-                   ValidateIssuer = true,
-                   ValidateAudience = true,
-                   ValidateIssuerSigningKey = true,
-                   ValidateLifetime = true
-               };
+               options.NameClaimType = "name";
+               options.Audience = applicationSetting.AzureAdConfiguration.Audience;
+               options.Instance = applicationSetting.AzureAdConfiguration.Instance;
+               options.TenantId = applicationSetting.AzureAdConfiguration.TenantId;
+               options.Type = applicationSetting.AzureAdConfiguration.Type;
+               options.AuthenticationScheme = "SSO";
            });
         }
 

@@ -55,7 +55,6 @@ namespace AdeNote.Infrastructure.Services.Authentication
             refreshTokenRepository = _refreshTokenRepository;
             passwordManager = _passwordManager;
             loginSecret = _configuration["LoginSecret"];
-            _tokenProvider.SetTokenEncryptionKey(_configuration["TokenSecret"]);
             _notificationService = notificationService;
             recoveryCodeRepository = _recoveryCodeRepository;
 
@@ -488,7 +487,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
             if (string.IsNullOrEmpty(token))
                 return ActionResult.Failed("Invalid token", StatusCodes.Status404NotFound);
 
-            var claimValues = tokenProvider.ReadToken(token, true, "id", ClaimTypes.Email);
+            var claimValues = tokenProvider.GetClaims(token, "id", ClaimTypes.Email);
 
             if (claimValues == null)
                 return ActionResult.Failed("Failed to verify token", StatusCodes.Status400BadRequest);
@@ -551,7 +550,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
             if (string.IsNullOrEmpty(token))
                 return ActionResult.Failed("Invalid token", StatusCodes.Status404NotFound);
 
-            var userDTO = tokenProvider.ReadToken(token, true, "id", ClaimTypes.Email);
+            var userDTO = tokenProvider.GetClaims(token, "id", ClaimTypes.Email);
 
             if (userDTO == null)
                 return ActionResult.Failed("Failed to verify token", StatusCodes.Status400BadRequest);
@@ -735,7 +734,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
                 return ActionResult.Failed("Invalid token", StatusCodes.Status400BadRequest);
             }
 
-            var claims = tokenProvider.ReadToken(verificationToken, false, "id", ClaimTypes.Email);
+            var claims = tokenProvider.GetClaims(verificationToken, "id", ClaimTypes.Email);
 
             if (claims == null)
             {
@@ -833,7 +832,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
                 return ActionResult<UserDTO>.Failed("Invalid token", StatusCodes.Status400BadRequest);
             }
 
-            var claims = tokenProvider.ReadToken(token, false, ClaimTypes.Email);
+            var claims = tokenProvider.GetClaims(token, ClaimTypes.Email);
 
             if (claims.Count == 0 || claims.Count >= 2)
             {
