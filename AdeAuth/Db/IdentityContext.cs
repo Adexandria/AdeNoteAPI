@@ -32,6 +32,9 @@ namespace AdeAuth.Db
         }
     }
 
+    /// <summary>
+    /// Handles the db context for identity service 
+    /// </summary>
     public class IdentityContext<TUser> : DbContext where TUser : ApplicationUser
     {
         public IdentityContext(DbContextOptions options): base(options)
@@ -57,6 +60,10 @@ namespace AdeAuth.Db
         }
     }
 
+
+    /// <summary>
+    /// Handles the db context for identity service 
+    /// </summary>
     public class IdentityContext<TUser,TRole> : DbContext
         where TUser : ApplicationUser
         where TRole : ApplicationRole
