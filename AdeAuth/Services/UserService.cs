@@ -10,7 +10,7 @@ namespace AdeAuth.Services
     /// </summary>
     /// <typeparam name="TDbContext">Context to manage operation</typeparam>
     /// <typeparam name="TModel">Application user</typeparam>
-    internal class UserService<TDbContext,TModel> : IdentityService<TModel>
+    public class UserService<TDbContext,TModel> : IdentityService<TModel>
         where TDbContext : DbContext
         where TModel : ApplicationUser,new()
     {

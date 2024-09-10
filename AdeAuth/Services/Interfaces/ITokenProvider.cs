@@ -34,7 +34,7 @@ namespace AdeAuth.Services.Interfaces
         /// <param name="verifyParameter">Verify parameter</param>
         /// <param name="claimTypes">Claim types to extract</param>
         /// <returns>A list of claims</returns>
-        Dictionary<string, object> ReadToken(string token, bool verifyParameter = false, params string[] claimTypes);
+        Dictionary<string, object> GetClaims(string token, params string[] claimTypes);
 
         /// <summary>
         /// Generated token based on the encoded string
@@ -73,11 +73,5 @@ namespace AdeAuth.Services.Interfaces
         /// <param name="otp">One time password</param>
         /// <returns>Boolean value</returns>
         bool VerifyOTP(byte[] encodedString, string otp);
-
-        /// <summary>
-        /// Sets token encryption key 
-        /// </summary>
-        /// <param name="tokenKey">Token key</param>
-        void SetTokenEncryptionKey(string tokenKey);
     }
 }

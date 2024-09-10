@@ -1,4 +1,5 @@
-﻿using AdeAuth.Services.Interfaces;
+﻿using AdeAuth.Models;
+using AdeAuth.Services.Interfaces;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Cryptography;
@@ -13,14 +14,14 @@ namespace AdeAuth.Services
      {
 
         /// <summary>
-        /// Sets token encryption key 
+        /// A constructor
         /// </summary>
-        /// <param name="tokenKey">Token key</param>
-        public void SetTokenEncryptionKey(string tokenKey)
+        /// <param name="tokenConfiguration">Details of token</param>
+        public TokenProvider(TokenConfiguration tokenConfiguration)
         {
-            _tokenKey = tokenKey 
-             ?? throw new NullReferenceException("Invalid token key");
+           _tokenConfiguration = tokenConfiguration;
         }
+
         /// <summary>
         /// Generate token based on claims
         /// </summary>
@@ -67,9 +68,9 @@ namespace AdeAuth.Services
         /// <param name="verifyParameter">Verify parameter</param>
         /// <param name="claimTypes">Claim types to extract</param>
         /// <returns>A list of claims</returns>
-        public Dictionary<string, object> ReadToken(string token, bool verifyParamter, params string[] claimTypes)
+        public Dictionary<string, object> GetClaims(string token, params string[] claimTypes)
         {
-            TokenValidationParameters tokenValidationParameters = GetTokenValidationParameters(verifyParamter);
+            TokenValidationParameters tokenValidationParameters = GetTokenValidationParameters();
 
             JwtSecurityTokenHandler jwtSecurityTokenHandler = new();
             Dictionary<string,object> claimValues = new();
@@ -170,24 +171,27 @@ namespace AdeAuth.Services
 
         private SecurityKey GetSymmetricSecurityKey()
         {
-            byte[] symmetricKey = Encoding.UTF8.GetBytes(_tokenKey);
+            byte[] symmetricKey = Encoding.UTF8.GetBytes(_tokenConfiguration.TokenSecret);
             return new SymmetricSecurityKey(symmetricKey);
         }
 
 
-        private TokenValidationParameters GetTokenValidationParameters(bool verifyParameter)
+        private TokenValidationParameters GetTokenValidationParameters()
         {
             return new TokenValidationParameters()
             {
-                ValidateIssuer = verifyParameter,
-                ValidateAudience = verifyParameter,
-                IssuerSigningKey = GetSymmetricSecurityKey()
+                ValidateIssuer = !string.IsNullOrEmpty(_tokenConfiguration.Issuer),
+                ValidateAudience = !string.IsNullOrEmpty(_tokenConfiguration.Audience),
+                IssuerSigningKey = GetSymmetricSecurityKey(),
+                ValidAudience = _tokenConfiguration.Audience ?? null,
+                ValidIssuer = _tokenConfiguration.Issuer ?? null,
+                ValidateIssuerSigningKey = true,
+                ValidateLifetime = true
             };
         }
 
-     
 
-        private string _tokenKey;
+        private readonly TokenConfiguration _tokenConfiguration;
     }
 
 }
