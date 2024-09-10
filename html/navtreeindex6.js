@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html":[1,0,0,2,3,3],
 "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#a6885eed7854db14e541e2e3d8d06a883":[1,0,0,2,3,3,3],
 "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#a78723e733a646d4c4307fcee749a94dc":[1,0,0,2,3,3,1],
 "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#ab18880eba0d7d3571eb09ccf7d7070dc":[1,0,0,2,3,3,2],

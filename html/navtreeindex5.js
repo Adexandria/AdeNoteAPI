@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html#a7c20be12e8357cbc7f58aff37021c448":[1,0,0,4,0,21,4],
 "classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html#ac4208bd8250afbebfdb254f03ad6cd15":[1,0,0,4,0,21,0],
 "classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html#af7111eabb1302ff8bc8a379816a2dfa4":[1,0,0,4,0,21,1],
 "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html":[1,0,0,4,0,24],
@@ -214,8 +215,8 @@ var NAVTREEINDEX5 =
 "functions_n.html":[1,3,0,13],
 "functions_o.html":[1,3,0,14],
 "functions_p.html":[1,3,0,15],
-"functions_prop.html":[1,3,3,0],
 "functions_prop.html":[1,3,3],
+"functions_prop.html":[1,3,3,0],
 "functions_prop_a.html":[1,3,3,1],
 "functions_prop_b.html":[1,3,3,2],
 "functions_prop_c.html":[1,3,3,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "globals_func.html":[2,1,1],
 "globals_vars.html":[2,1,2],
 "hierarchy.html":[1,2],
-"index.html":[],
-"interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html":[1,0,0,2,3,3]
+"index.html":[]
 };

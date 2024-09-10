@@ -33,6 +33,7 @@ var NAVTREEINDEX4 =
 "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html#aeaace4f2f180bb994a5a759b43937b98":[1,0,0,2,5,13,0],
 "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html#af1e60a49432c0adba75c87d85eb56944":[1,0,0,2,5,13,3],
 "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SSO_1_1AzureAdConfiguration.html":[1,0,0,2,5,9,0],
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1SSO_1_1AzureAdConfiguration.html#a69db81769bd5c51b1204c0fef726790a":[1,0,0,2,5,9,0,3],
 "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SSO_1_1AzureAdConfiguration.html#a6ae79cacfe9f83f70f4491ff2ab254cb":[1,0,0,2,5,9,0,0],
 "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SSO_1_1AzureAdConfiguration.html#a91f66e8b983f9a53b8c7b5804f2373bc":[1,0,0,2,5,9,0,1],
 "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SSO_1_1AzureAdConfiguration.html#ad7909ffaef6a9a8f3fdc78383f208ad1":[1,0,0,2,5,9,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html":[1,0,0,4,0,21],
 "classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html#a12654b6c755b4d83b5676fb4aade77a3":[1,0,0,4,0,21,2],
 "classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html#a433917927dad4ee379baeef686633837":[1,0,0,4,0,21,3],
-"classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html#a52b80a36be5f7ddfedf0c4b45274cc1e":[1,0,0,4,0,21,5],
-"classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html#a7c20be12e8357cbc7f58aff37021c448":[1,0,0,4,0,21,4]
+"classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html#a52b80a36be5f7ddfedf0c4b45274cc1e":[1,0,0,4,0,21,5]
 };

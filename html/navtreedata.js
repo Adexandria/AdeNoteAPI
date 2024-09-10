@@ -61,8 +61,8 @@ var NAVTREEINDEX =
 "classAdeNote_1_1Controllers_1_1DashboardController.html#ab9a65029eb14bd638121f19329995dc5",
 "classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#acab109e87522ce3c152c7e69772824a3",
 "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1Messaging.html",
-"classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html#ac4208bd8250afbebfdb254f03ad6cd15",
-"interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#a6885eed7854db14e541e2e3d8d06a883"
+"classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html#a7c20be12e8357cbc7f58aff37021c448",
+"interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
