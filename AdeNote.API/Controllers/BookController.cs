@@ -1,7 +1,9 @@
 ﻿using AdeNote.Infrastructure.Extension;
+using AdeNote.Infrastructure.Requests.CreateBook;
 using AdeNote.Infrastructure.Services.BookSetting;
 using AdeNote.Infrastructure.Services.Excel;
 using AdeNote.Infrastructure.Services.Export;
+using AdeNote.Infrastructure.Utilities;
 using AdeNote.Infrastructure.Utilities.UserConfiguation;
 using AdeNote.Infrastructure.Utilities.ValidationAttributes;
 using AdeNote.Models.DTOs;
@@ -36,7 +38,7 @@ namespace AdeNote.Controllers
         /// This fetches the current user details</param>
         public BookController(IBookService bookService, 
             IUserIdentity userIdentity, IExportService exportService, 
-            IExcel excelService) : base(userIdentity)
+            IExcel excelService, Application application) : base(userIdentity,application)
         {
             _bookService = bookService;
             _exportService = exportService;
@@ -167,9 +169,14 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost]
-        public async Task<IActionResult> CreateBook(BookCreateDTO createBook, CancellationToken cancellationToken)
+        public async Task<IActionResult> CreateBook(BookCreateDTO createBook)
         {
-            var response = await _bookService.Add(CurrentUser, createBook);
+            var response = await Application.SendAsync(new CreateBookRequest()
+            {
+                Description = createBook.Description,
+                Title = createBook.Title,
+                UserId = CurrentUser
+            });
             return response.Response();
         }
 

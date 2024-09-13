@@ -2,7 +2,7 @@
 {
     public static class CollectionExtension
     {
-        public static void ForEach<T>(this IEnumerable<T> collection, Action<T> action)
+        public static void Foreach<T>(this IEnumerable<T> collection, Action<T> action)
         {
             if (collection == null)
                 return; 
@@ -10,7 +10,6 @@
             {
                 action(item);
             }
-           
         }
     }
 }

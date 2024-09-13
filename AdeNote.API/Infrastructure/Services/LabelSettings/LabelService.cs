@@ -64,7 +64,7 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
             if (currentLabels == null)
             {
                 currentLabels = labelRepository.GetAll().ToList();
-                currentLabels.ForEach(label => cacheService.Set($"{_cacheKey}:{label.Id}",label, DateTime.UtcNow.AddMinutes(30)));
+                currentLabels.Foreach(label => cacheService.Set($"{_cacheKey}:{label.Id}",label, DateTime.UtcNow.AddMinutes(30)));
             }
                
             var currentLabelsDTO = currentLabels.Map<IEnumerable<Label>,IEnumerable<LabelDTO>>(MappingService.LabelConfig());

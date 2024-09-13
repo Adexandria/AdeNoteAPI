@@ -86,7 +86,7 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             if(currentPages == null)
             {
                 currentPages = pageRepository.GetBookPages(bookId).ToList();
-                currentPages.ForEach(currentPage => cacheService.Set($"{_pageCacheKey}:{bookId}:{currentPage.Id}", currentPage, DateTime.UtcNow.AddMinutes(30)));
+                currentPages.Foreach(currentPage => cacheService.Set($"{_pageCacheKey}:{bookId}:{currentPage.Id}", currentPage, DateTime.UtcNow.AddMinutes(30)));
             }
 
             var currentBookPagesDTO = currentPages.Map<IEnumerable<Page>,IEnumerable<PageDTO>>(MappingService.PageLabelsConfig());

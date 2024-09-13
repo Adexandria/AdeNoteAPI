@@ -28,10 +28,13 @@ namespace AdeNote.Infrastructure.Services.BookSetting
         /// </summary>
         /// <param name="_bookRepository">Handles the persisting and querying of book object</param>
         /// <param name="_cacheService">Handles cache operations</param>
-        public BookService(IBookRepository _bookRepository, ICacheService _cacheService)
+        /// <param name="cachingKeys">Handles caching keys</param>
+        public BookService(IBookRepository _bookRepository, 
+            ICacheService _cacheService, CachingKeys cachingKeys)
         {
             bookRepository = _bookRepository;
             cacheService = _cacheService;
+            _cacheKey = cachingKeys.BookCacheKey;
         }
 
         /// <summary>
@@ -96,7 +99,7 @@ namespace AdeNote.Infrastructure.Services.BookSetting
             {
                 currentBooks = bookRepository.GetAll(userId).ToList();
 
-                currentBooks.ForEach(book => cacheService.Set($"{_cacheKey}:{book.UserId}:{book.Id}", book, DateTime.UtcNow.AddMinutes(30)));
+                currentBooks.Foreach(book => cacheService.Set($"{_cacheKey}:{book.UserId}:{book.Id}", book, DateTime.UtcNow.AddMinutes(30)));
             }
 
             var currentBooksDTO = currentBooks.Map<IEnumerable<Book>,IEnumerable<BookDTO>>(MappingService.BookConfig());
@@ -197,6 +200,6 @@ namespace AdeNote.Infrastructure.Services.BookSetting
         /// </summary>
         public IBookRepository bookRepository { get; set; }
 
-        private readonly string _cacheKey = "Books";
+        private readonly string _cacheKey;
     }
 }

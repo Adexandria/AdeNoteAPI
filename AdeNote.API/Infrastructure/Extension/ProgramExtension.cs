@@ -37,6 +37,7 @@ using Microsoft.OpenApi.Models;
 using System.Reflection;
 using System.Text;
 using Excelify.Services;
+using FluentValidation;
 
 namespace AdeNote.Infrastructure.Extension
 {
@@ -63,7 +64,7 @@ namespace AdeNote.Infrastructure.Extension
             serviceCollection.AddScoped<IEmailService, EmailService>();
             serviceCollection.AddScoped<ISmsService, SmsService>();
             serviceCollection.AddScoped<INotificationService, NotificationService>();
-            serviceCollection.AddScoped<Services.UserSettings.IUserService, Services.UserSettings.UserService>();
+            serviceCollection.AddScoped<IUserService, UserService>();
             serviceCollection.AddScoped<IHangfireUserRepository, HangfireUserRepository>();
             serviceCollection.AddScoped<IExcel, Services.Excel.ExcelService>();
             serviceCollection.AddScoped<IExportService, ExportService>();
@@ -80,6 +81,10 @@ namespace AdeNote.Infrastructure.Extension
             serviceCollection.AddSingleton((_) => new ExcelifyFactory());
             serviceCollection.AddSingleton((x) => new CacheFactory().CreateService(applicationSettings.CacheConfiguration
                 .SetMemoryCache(x.GetRequiredService<IMemoryCache>())));
+
+            serviceCollection.AddSingleton<Application>();
+
+            serviceCollection.AddSingleton((_) => applicationSettings.CachingKeys);
         }
 
         public static void RegisterAuthentication(this IServiceCollection serviceCollection, ApplicationSetting applicationSetting)
@@ -156,5 +161,17 @@ namespace AdeNote.Infrastructure.Extension
             });
         }
 
+        public static void RegisterValidation(this IServiceCollection services)
+        {
+            var validationTypes = Assembly.GetExecutingAssembly().GetTypes()
+                .Where(s => s.GetInterfaces()
+                .Any(p=>p.Name == typeof(IValidator<>).Name) && !s.IsAbstract);
+
+            validationTypes.Foreach(s => 
+            {
+                 var type = s.GetInterface(typeof(IValidator<>).Name);
+                services.AddTransient(type, s);
+            });
+        }
     }
 }
