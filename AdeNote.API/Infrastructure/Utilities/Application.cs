@@ -13,7 +13,9 @@ namespace AdeNote.Infrastructure.Utilities
         public async Task<ActionResult> SendAsync<TRequest>(TRequest request, CancellationToken cancellationToken = default)
         where TRequest : IRequest<ActionResult>
         {
-            var validator = serviceProvider.GetRequiredService<IValidator<TRequest>>()
+            using var scope = serviceProvider.CreateScope();
+
+            var validator = scope.ServiceProvider.GetRequiredService<IValidator<TRequest>>()
                 ?? throw new NullReferenceException("Invalid validator, Register validator");
 
             var validationResponse = validator.Validate(request);
@@ -25,8 +27,7 @@ namespace AdeNote.Infrastructure.Utilities
                 return new ActionResult().AddErrors(errorMessages);
             }
 
-
-            var handler = serviceProvider.GetRequiredService<IRequestHandler<TRequest, ActionResult>>()
+            var handler = scope.ServiceProvider.GetRequiredService<IRequestHandler<TRequest, ActionResult>>()
                  ?? throw new NullReferenceException("Invalid request handler, Register request handler");
 
             var response = await handler.Handle(request, cancellationToken);
@@ -37,7 +38,9 @@ namespace AdeNote.Infrastructure.Utilities
         public async Task<ActionResult<TResponse>> SendAsync<TRequest,TResponse>(TRequest request, CancellationToken cancellationToken = default)
             where TRequest: IRequest<ActionResult<TResponse>>
         {
-            var validator = serviceProvider.GetRequiredService<IValidator<TRequest>>()
+            using var scope = serviceProvider.CreateScope();
+
+            var validator = scope.ServiceProvider.GetRequiredService<IValidator<TRequest>>()
                            ?? throw new NullReferenceException("Invalid validator, Register validator");
 
             var validationResponse = validator.Validate(request);
@@ -49,7 +52,7 @@ namespace AdeNote.Infrastructure.Utilities
                 return new ActionResult<TResponse>().AddErrors(errorMessages);
             }
 
-            var handler = serviceProvider.GetRequiredService<IRequestHandler<TRequest, ActionResult<TResponse>>>()
+            var handler = scope.ServiceProvider.GetRequiredService<IRequestHandler<TRequest, ActionResult<TResponse>>>()
                  ?? throw new NullReferenceException("Invalid request handler, Register request handler");
 
             var response = await handler.Handle(request, cancellationToken);
