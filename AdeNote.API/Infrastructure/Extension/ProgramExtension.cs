@@ -167,10 +167,14 @@ namespace AdeNote.Infrastructure.Extension
                 .Where(s => s.GetInterfaces()
                 .Any(p=>p.Name == typeof(IValidator<>).Name) && !s.IsAbstract);
 
+
             validationTypes.Foreach(s => 
             {
-                 var type = s.GetInterface(typeof(IValidator<>).Name);
-                services.AddTransient(type, s);
+                var type = s.GetInterface(typeof(IValidator<>).Name);
+                if(type != null)
+                {
+                   services.AddTransient(type, s);
+                }
             });
         }
     }
