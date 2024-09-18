@@ -28,10 +28,12 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
         /// A constructor
         /// </summary>
         /// <param name="_labelRepository">Handles persisting and querying</param>
-        public LabelService(ILabelRepository _labelRepository, ICacheService _cacheService)
+        public LabelService(ILabelRepository _labelRepository,
+            ICacheService _cacheService, CachingKeys cachingKeys)
         {
             labelRepository = _labelRepository;
             cacheService = _cacheService;
+            _cacheKey = cachingKeys.LabelCacheKey;
         }
 
         /// <summary>
@@ -154,6 +156,6 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
         }
         public ILabelRepository labelRepository { get; set; }
 
-        private string _cacheKey = "Labels";
+        private readonly string _cacheKey;
     }
 }
