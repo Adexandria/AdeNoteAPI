@@ -343,7 +343,7 @@ namespace AdeNote.Infrastructure.Services.PageSettings
 
             if (translationLanguages == null)
             {
-                var languagesResponse = textTranslation.GetSupportedLanguages("translation", "transliteration");
+                var languagesResponse = textTranslation.GetSupportedLanguages("translation", "transliteration", cancellationToken: cancellationToken);
                 if (languagesResponse.NotSuccessful)
                 {
                     return ActionResult<TranslationDto>
