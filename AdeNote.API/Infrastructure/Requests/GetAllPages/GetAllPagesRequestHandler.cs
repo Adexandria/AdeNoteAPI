@@ -16,7 +16,7 @@ namespace AdeNote.Infrastructure.Requests.GetAllPages
         {
             pageRepository = _pageRepository;
             cacheService = _cacheService;
-            _pageCacheKey = cachingKeys.PageCachekey;
+            _pageCacheKey = cachingKeys.PageCacheKey;
         }
 
         public async Task<ActionResult> Handle(GetAllPagesRequest request, CancellationToken cancellationToken)

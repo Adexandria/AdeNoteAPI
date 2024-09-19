@@ -3,7 +3,7 @@ using MediatR;
 
 namespace AdeNote.Infrastructure.Requests.CreatePageLabels
 {
-    public class CreatePageLabelRequest : IRequest<ActionResult>
+    public class CreatePageLabelsRequest : IRequest<ActionResult>
     {
         public Guid BookId { get; set; }
         public Guid UserId { get; set; }

@@ -8,9 +8,9 @@ using System.Net;
 
 namespace AdeNote.Infrastructure.Requests.CreatePageLabels
 {
-    public class CreatePageLabelRequestHandler : IRequestHandler<CreatePageLabelRequest, ActionResult>
+    public class CreatePageLabelsRequestHandler : IRequestHandler<CreatePageLabelsRequest, ActionResult>
     {
-        public CreatePageLabelRequestHandler(IPageRepository pageRepository,
+        public CreatePageLabelsRequestHandler(IPageRepository pageRepository,
     IBookRepository bookRepository,
     ICacheService cacheService, ILabelPageRepository labelPageRepository,
     ILabelRepository labelRepository,
@@ -26,7 +26,7 @@ namespace AdeNote.Infrastructure.Requests.CreatePageLabels
             this.labelPageRepository = labelPageRepository;
         }
 
-        public async Task<ActionResult> Handle(CreatePageLabelRequest request, CancellationToken cancellationToken)
+        public async Task<ActionResult> Handle(CreatePageLabelsRequest request, CancellationToken cancellationToken)
         {
             var currentBook = cacheService.Get<Book>($"{_bookCacheKey}:{request.UserId}:{request.BookId}") ?? await bookRepository.GetAsync(request.BookId, request.UserId);
 
