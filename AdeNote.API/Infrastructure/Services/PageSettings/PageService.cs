@@ -31,7 +31,7 @@ namespace AdeNote.Infrastructure.Services.PageSettings
         /// <param name="_labelPageRepository">>Handles persisting and querying page labels</param>
         public PageService(IPageRepository _pageRepository,
             IBookRepository _bookRepository, ILabelRepository _labelRepository, ILabelPageRepository _labelPageRepository,
-            ITextTranslation _textTranslation, ICacheService _cacheService)
+            ITextTranslation _textTranslation, ICacheService _cacheService, CachingKeys cachingKeys)
         {
             pageRepository = _pageRepository;
             bookRepository = _bookRepository;
@@ -39,6 +39,9 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             labelPageRepository = _labelPageRepository;
             textTranslation = _textTranslation;
             cacheService = _cacheService;
+            _bookCacheKey = cachingKeys.BookCacheKey;
+            _pageCacheKey = cachingKeys.PageCachekey;
+            _labelCacheKey = cachingKeys.LabelCacheKey;
         }
 
         /// <summary>
@@ -330,7 +333,7 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             if (currentBookPage == null)
                 return ActionResult<TranslationDto>.Failed("page doesn't exist", (int)HttpStatusCode.NotFound);
 
-            var existingTranslatedPage = cacheService.Get<TranslationDto>($"{_translatedPageCacheKey}:{bookId}:{pageId}:{translatedLanguage.ToLower()}");
+            var existingTranslatedPage = cacheService.Get<TranslationDto>($"{_pageCacheKey}:{bookId}:{pageId}:{translatedLanguage.ToLower()}");
 
             if(existingTranslatedPage != null)
             {
@@ -395,7 +398,7 @@ namespace AdeNote.Infrastructure.Services.PageSettings
                 translatedResponse.Data[0],
                 detectedLanguage, translatedLanguage, transliterationResponse.Data);
 
-                cacheService.Set($"{_translatedPageCacheKey}:{bookId}:{pageId}:{translatedLanguage.ToLower()}", translatedPage, DateTime.UtcNow.AddMinutes(10));
+                cacheService.Set($"{_pageCacheKey}:{bookId}:{pageId}:{translatedLanguage.ToLower()}", translatedPage, DateTime.UtcNow.AddMinutes(10));
 
                 return ActionResult<TranslationDto>.SuccessfulOperation(translatedPage);
             }
@@ -404,7 +407,7 @@ namespace AdeNote.Infrastructure.Services.PageSettings
                 translatedResponse.Data[0],
                 detectedLanguage, translatedLanguage);
 
-            cacheService.Set($"{_translatedPageCacheKey}:{bookId}:{pageId}:{translatedLanguage.ToLower()}", translatedPage, DateTime.UtcNow.AddMinutes(10));
+            cacheService.Set($"{_pageCacheKey}:{bookId}:{pageId}:{translatedLanguage.ToLower()}", translatedPage, DateTime.UtcNow.AddMinutes(10));
 
             return ActionResult<TranslationDto>.SuccessfulOperation(translatedPage);
         }
@@ -416,10 +419,9 @@ namespace AdeNote.Infrastructure.Services.PageSettings
         public ILabelRepository labelRepository;
         public ILabelPageRepository labelPageRepository;
 
-        private string _bookCacheKey = "Books";
-        private string _pageCacheKey = "Pages";
-        private string _translatedPageCacheKey = "Pages";
-        private string _labelCacheKey = "Labels";
+        private readonly string _bookCacheKey;
+        private readonly string _pageCacheKey;
+        private readonly string _labelCacheKey;
 
     }
 }
