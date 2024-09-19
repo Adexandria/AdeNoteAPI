@@ -10,7 +10,7 @@ using AdeNote.Models.DTOs;
 
 namespace AdeNote.Infrastructure.Requests.CreatePage
 {
-    public class CreatePageRequestHandler : IRequestHandler<CreatePageRequest, ActionResult<IEnumerable<PageDTO>>>
+    public class CreatePageRequestHandler : IRequestHandler<CreatePageRequest, ActionResult>
     {
         public CreatePageRequestHandler(IPageRepository _pageRepository,
             IBookRepository _bookRepository,
@@ -20,7 +20,7 @@ namespace AdeNote.Infrastructure.Requests.CreatePage
             bookRepository = _bookRepository;
             cacheService = _cacheService;
             _bookCacheKey = cachingKeys.BookCacheKey;
-            _pageCacheKey = cachingKeys.PageCachekey;
+            _pageCacheKey = cachingKeys.PageCacheKey;
         }
         public async Task<ActionResult> Handle(CreatePageRequest request, CancellationToken cancellationToken)
         {

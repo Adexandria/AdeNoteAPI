@@ -40,7 +40,7 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             textTranslation = _textTranslation;
             cacheService = _cacheService;
             _bookCacheKey = cachingKeys.BookCacheKey;
-            _pageCacheKey = cachingKeys.PageCachekey;
+            _pageCacheKey = cachingKeys.PageCacheKey;
             _labelCacheKey = cachingKeys.LabelCacheKey;
         }
 
