@@ -1,0 +1,6 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.IAuthService.SignUser" name="AdeNote.Infrastructure.Services.Authentication.IAuthService.SignUser">
+<area shape="rect" id="node1" title=" " alt="" coords="305,71,571,112"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a09a9505159b5aeff56e78bf2c65e561a" title="Sign ups a new user" alt="" coords="5,5,257,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,71,257,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9ba73d7cb87d834b5d25d6a3b32f9474" title="Sign ups a new user" alt="" coords="5,136,257,177"/>
+</map>

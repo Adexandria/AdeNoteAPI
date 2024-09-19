@@ -1,0 +1,6 @@
+<map id="AdeNote.Infrastructure.Services.Blob.BlobService.DownloadStream" name="AdeNote.Infrastructure.Services.Blob.BlobService.DownloadStream">
+<area shape="rect" id="node1" title="Downloads image" alt="" coords="5,71,253,112"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IFileService.html#a9a0b18c1d41baca9c3af1f7af1cb506d" title="Downloads image" alt="" coords="338,5,585,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#a2b58d9e2f0a9f1620098091f29101f9f" title="Generates uri" alt="" coords="339,71,583,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#aab00a6c42eda5e5780ae66f1a25d3938" title="Creates a shared key for the account" alt="" coords="301,136,621,177"/>
+</map>
