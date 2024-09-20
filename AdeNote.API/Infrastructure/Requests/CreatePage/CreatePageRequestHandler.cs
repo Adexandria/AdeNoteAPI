@@ -1,12 +1,10 @@
 ﻿using AdeCache.Services;
 using AdeNote.Infrastructure.Repository;
-using AdeNote.Infrastructure.Services.TranslationAI;
 using AdeNote.Infrastructure.Utilities;
 using AdeNote.Models;
 using MediatR;
 using System.Net;
 using Automappify.Services;
-using AdeNote.Models.DTOs;
 
 namespace AdeNote.Infrastructure.Requests.CreatePage
 {

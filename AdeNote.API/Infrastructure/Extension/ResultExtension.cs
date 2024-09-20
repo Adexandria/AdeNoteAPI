@@ -19,7 +19,7 @@ namespace AdeNote.Infrastructure.Extension
         {
             var result = actionResult.StatusCode switch
             {
-                (int)HttpStatusCode.OK => new OkObjectResult(actionResult),
+                (int)HttpStatusCode.OK => new OkObjectResult(string.Empty),
                 (int)HttpStatusCode.BadRequest => new BadRequestObjectResult(actionResult.Errors),
                 (int)HttpStatusCode.Unauthorized => new UnauthorizedObjectResult(actionResult.Errors),
                 (int)HttpStatusCode.NotFound => new NotFoundObjectResult(actionResult.Errors),

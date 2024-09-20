@@ -11,7 +11,7 @@ using Automappify.Services;
 
 namespace AdeNote.Infrastructure.Requests.GetBookdById
 {
-    public class GetBookByIdRequestHandler : IRequestHandler<GetBookByIdRequest, ActionResult>
+    public class GetBookByIdRequestHandler : IRequestHandler<GetBookByIdRequest, ActionResult<BookDTO>>
     {
 
         public GetBookByIdRequestHandler(IBookRepository _bookRepository,
@@ -23,7 +23,7 @@ namespace AdeNote.Infrastructure.Requests.GetBookdById
             _cacheKey = cachingKeys.BookCacheKey;
         }
 
-        public async Task<ActionResult> Handle(GetBookByIdRequest request, CancellationToken cancellationToken)
+        public async Task<ActionResult<BookDTO>> Handle(GetBookByIdRequest request, CancellationToken cancellationToken)
         {
             var currentBook = cacheService.Get<Book>($"{_cacheKey}:{request.UserId}:{request.BookId}") 
                 ?? await bookRepository.GetAsync(request.BookId, request.UserId);
