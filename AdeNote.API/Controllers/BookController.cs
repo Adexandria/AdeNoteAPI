@@ -1,5 +1,9 @@
 ﻿using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Requests.CreateBook;
+using AdeNote.Infrastructure.Requests.GetAllBooks;
+using AdeNote.Infrastructure.Requests.GetBookdById;
+using AdeNote.Infrastructure.Requests.RemoveBook;
+using AdeNote.Infrastructure.Requests.UpdateBook;
 using AdeNote.Infrastructure.Services.BookSetting;
 using AdeNote.Infrastructure.Services.Excel;
 using AdeNote.Infrastructure.Services.Export;
@@ -66,7 +70,11 @@ namespace AdeNote.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllBooks()
         {
-            var response = await _bookService.GetAll(CurrentUser);
+            var response = await Application.SendAsync<GetAllBooksRequest, IEnumerable<BookDTO>>(new GetAllBooksRequest()
+            {
+                UserId = CurrentUser
+            });
+
             return response.Response();
         }
 
@@ -95,7 +103,11 @@ namespace AdeNote.Controllers
         [HttpGet("{bookId}")]
         public async Task<IActionResult> GetBook(Guid bookId)
         {
-            var response = await _bookService.GetById(bookId, CurrentUser);
+            var response = await Application.SendAsync<GetBookByIdRequest, BookDTO>(new GetBookByIdRequest()
+            {
+                UserId = CurrentUser,
+                BookId = bookId
+            });
             return response.Response();
         }
 
@@ -113,7 +125,11 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> ExportBooks([Allow("Invalid extension type","xlsx","xls","csv","docx")]string extensionType, CancellationToken cancellationToken, string sheetName = "Adenote")
         {
-            var bookResponse = await _bookService.GetAll(CurrentUser);
+            var bookResponse = await Application.SendAsync<GetAllBooksRequest, IEnumerable<BookDTO>>(new GetAllBooksRequest()
+            {
+                UserId = CurrentUser
+            });
+
             if (!bookResponse.Data.Any())
                 return bookResponse.Response();
 
@@ -208,7 +224,13 @@ namespace AdeNote.Controllers
         [HttpPut("{bookId}")]
         public async Task<IActionResult> UpdateBook(Guid bookId,BookUpdateDTO bookUpdate, CancellationToken cancellationToken)
         {
-            var response = await _bookService.Update(bookId,CurrentUser,bookUpdate);
+            var response = await Application.SendAsync(new UpdateBookRequest()
+            { 
+                BookId  = bookId,
+                UpdateBook = bookUpdate,
+                UserId= CurrentUser
+            },cancellationToken);
+
             return response.Response();
         }
 
@@ -235,7 +257,11 @@ namespace AdeNote.Controllers
         [HttpDelete("{bookId}")]
         public async Task<IActionResult> DeleteBook([ValidGuid("Invalid book id")]Guid bookId, CancellationToken cancellationToken)
         {
-            var response = await _bookService.Remove(bookId, CurrentUser);
+            var response = await Application.SendAsync(new RemoveBookRequest()
+            {
+                BookId= bookId,
+                UserId = CurrentUser
+            },cancellationToken);
             return response.Response();
         }
     }

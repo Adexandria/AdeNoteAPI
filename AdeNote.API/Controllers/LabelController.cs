@@ -1,5 +1,12 @@
 ﻿using AdeNote.Infrastructure.Extension;
+using AdeNote.Infrastructure.Requests.CreateLabel;
+using AdeNote.Infrastructure.Requests.GetAllBooks;
+using AdeNote.Infrastructure.Requests.GetAllLabels;
+using AdeNote.Infrastructure.Requests.GetLabelById;
+using AdeNote.Infrastructure.Requests.RemoveLabel;
+using AdeNote.Infrastructure.Requests.UpdateLabel;
 using AdeNote.Infrastructure.Services.LabelSettings;
+using AdeNote.Infrastructure.Utilities;
 using AdeNote.Infrastructure.Utilities.ValidationAttributes;
 using AdeNote.Models.DTOs;
 using Asp.Versioning;
@@ -26,7 +33,7 @@ namespace AdeNote.Controllers
         /// A Constructor
         /// </summary>
         /// <param name="labelService">An interface that interacts with the label tables</param>
-        public LabelController(ILabelService labelService)
+        public LabelController(ILabelService labelService, Application application) : base(application) 
         {
             _labelService = labelService;
         }
@@ -50,7 +57,8 @@ namespace AdeNote.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllLabels()
         {
-            var response = await _labelService.GetAll();
+            var response = await Application.SendAsync<GetAllLabelsRequest, IEnumerable<LabelDTO>>(new GetAllLabelsRequest());
+
             return response.Response();
         }
 
@@ -77,7 +85,11 @@ namespace AdeNote.Controllers
         [HttpGet("{labelId}")]
         public async Task<IActionResult> GetLabel([ValidGuid("Invalid label id")] Guid labelId)
         {
-            var response = await _labelService.GetById(labelId);
+            var response = await Application.SendAsync<GetLabelByIdRequest, LabelDTO>(new GetLabelByIdRequest()
+            {
+                LabelId = labelId
+            });
+
             return response.Response();
         }
 
@@ -103,7 +115,11 @@ namespace AdeNote.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateLabel(LabelCreateDTO createLabel)
         {
-            var response = await _labelService.Add(createLabel);
+            var response = await Application.SendAsync(new CreateLabelRequest() 
+            {
+                Title = createLabel.Title
+            });
+
             return response.Response();
         }
 
@@ -132,7 +148,11 @@ namespace AdeNote.Controllers
         [HttpPut("{labelId}")]
         public async Task<IActionResult> UpdateLabel([ValidGuid("Invalid label id")] Guid labelId,LabelUpdateDTO updateLabel)
         {
-            var response = await _labelService.Update(labelId, updateLabel);
+            var response = await Application.SendAsync(new UpdateLabelRequest()
+            {
+                LabelId = labelId,
+                UpdateLabel = updateLabel
+            });
             return response.Response();
         }
 
@@ -156,7 +176,10 @@ namespace AdeNote.Controllers
         [HttpDelete("{labelId}")]
         public async Task<IActionResult> DeleteLabel([ValidGuid("Invalid label id")]Guid labelId)
         {
-            var response = await _labelService.Remove(labelId);
+            var response = await Application.SendAsync(new RemoveLabelRequest()
+            {
+                LabelId = labelId
+            });
             return response.Response();
         }
     }

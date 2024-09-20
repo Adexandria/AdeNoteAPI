@@ -35,6 +35,11 @@ namespace AdeNote.Controllers
             Application = application;
         }
 
+        public BaseController(Application application)
+        {
+            Application = application;
+        }
+
         /// <summary>
         /// A guid property that hold the value of the current user id
         /// </summary>
