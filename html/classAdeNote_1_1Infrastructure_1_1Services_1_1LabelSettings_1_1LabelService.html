@@ -117,9 +117,9 @@ Collaboration diagram for AdeNote.Infrastructure.Services.LabelSettings.LabelSer
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8ef952f9b80339566dc804ebb0ceb0f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a8ef952f9b80339566dc804ebb0ceb0f2">LabelService</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html">ILabelRepository</a> _labelRepository, ICacheService _cacheService)</td></tr>
-<tr class="memdesc:a8ef952f9b80339566dc804ebb0ceb0f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a8ef952f9b80339566dc804ebb0ceb0f2">More...</a><br /></td></tr>
-<tr class="separator:a8ef952f9b80339566dc804ebb0ceb0f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08026763f1b201dc6172b3f0d51c7be2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a08026763f1b201dc6172b3f0d51c7be2">LabelService</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html">ILabelRepository</a> _labelRepository, ICacheService _cacheService, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys.html">CachingKeys</a> cachingKeys)</td></tr>
+<tr class="memdesc:a08026763f1b201dc6172b3f0d51c7be2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a08026763f1b201dc6172b3f0d51c7be2">More...</a><br /></td></tr>
+<tr class="separator:a08026763f1b201dc6172b3f0d51c7be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a827a75ca62f2c6c2173e922fec77cf81"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a827a75ca62f2c6c2173e922fec77cf81">Add</a> (<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO.html">LabelCreateDTO</a> createLabel)</td></tr>
 <tr class="memdesc:a827a75ca62f2c6c2173e922fec77cf81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new label  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a827a75ca62f2c6c2173e922fec77cf81">More...</a><br /></td></tr>
 <tr class="separator:a827a75ca62f2c6c2173e922fec77cf81"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,8 +154,8 @@ Properties</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a7a8ec16d7f8698122aef3e3be2044e4c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a7a8ec16d7f8698122aef3e3be2044e4c">_cacheKey</a> = &quot;Labels&quot;</td></tr>
-<tr class="separator:a7a8ec16d7f8698122aef3e3be2044e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51fdb626734b6bf90534055f06d7c0fe"><td class="memItemLeft" align="right" valign="top">readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a51fdb626734b6bf90534055f06d7c0fe">_cacheKey</a></td></tr>
+<tr class="separator:a51fdb626734b6bf90534055f06d7c0fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An implementaion of the interface </p>
@@ -191,8 +191,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8ef952f9b80339566dc804ebb0ceb0f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ef952f9b80339566dc804ebb0ceb0f2">&#9670;&nbsp;</a></span>LabelService() <span class="overload">[2/2]</span></h2>
+<a id="a08026763f1b201dc6172b3f0d51c7be2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08026763f1b201dc6172b3f0d51c7be2">&#9670;&nbsp;</a></span>LabelService() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,7 +207,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">ICacheService&#160;</td>
-          <td class="paramname"><em>_cacheService</em>&#160;</td>
+          <td class="paramname"><em>_cacheService</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys.html">CachingKeys</a>&#160;</td>
+          <td class="paramname"><em>cachingKeys</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -257,7 +263,7 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1ILabelService.html#a4dbd40779597811e065e309402efabbf">AdeNote.Infrastructure.Services.LabelSettings.ILabelService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="LabelService_8cs_source.html#l00042">42</a> of file <a class="el" href="LabelService_8cs_source.html">LabelService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LabelService_8cs_source.html#l00044">44</a> of file <a class="el" href="LabelService_8cs_source.html">LabelService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -292,7 +298,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1ILabelService.html#ae38aa29a8aaaf9dc89a58db07d460d41">AdeNote.Infrastructure.Services.LabelSettings.ILabelService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="LabelService_8cs_source.html#l00059">59</a> of file <a class="el" href="LabelService_8cs_source.html">LabelService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LabelService_8cs_source.html#l00061">61</a> of file <a class="el" href="LabelService_8cs_source.html">LabelService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -334,7 +340,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1ILabelService.html#aa3c6a682d3cf6bcf5c51f38b9df6bf1c">AdeNote.Infrastructure.Services.LabelSettings.ILabelService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="LabelService_8cs_source.html#l00081">81</a> of file <a class="el" href="LabelService_8cs_source.html">LabelService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LabelService_8cs_source.html#l00083">83</a> of file <a class="el" href="LabelService_8cs_source.html">LabelService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -377,7 +383,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1ILabelService.html#ac7f3251dda795587bec62aac225ff87f">AdeNote.Infrastructure.Services.LabelSettings.ILabelService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="LabelService_8cs_source.html#l00108">108</a> of file <a class="el" href="LabelService_8cs_source.html">LabelService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LabelService_8cs_source.html#l00110">110</a> of file <a class="el" href="LabelService_8cs_source.html">LabelService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -431,7 +437,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1ILabelService.html#af8efdc25e6d9eda134a4e0e787332a14">AdeNote.Infrastructure.Services.LabelSettings.ILabelService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="LabelService_8cs_source.html#l00132">132</a> of file <a class="el" href="LabelService_8cs_source.html">LabelService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LabelService_8cs_source.html#l00134">134</a> of file <a class="el" href="LabelService_8cs_source.html">LabelService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -448,8 +454,8 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a7a8ec16d7f8698122aef3e3be2044e4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a8ec16d7f8698122aef3e3be2044e4c">&#9670;&nbsp;</a></span>_cacheKey</h2>
+<a id="a51fdb626734b6bf90534055f06d7c0fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51fdb626734b6bf90534055f06d7c0fe">&#9670;&nbsp;</a></span>_cacheKey</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -458,7 +464,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string AdeNote.Infrastructure.Services.LabelSettings.LabelService._cacheKey = &quot;Labels&quot;</td>
+          <td class="memname">readonly string AdeNote.Infrastructure.Services.LabelSettings.LabelService._cacheKey</td>
         </tr>
       </table>
   </td>
@@ -468,7 +474,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LabelService_8cs_source.html#l00157">157</a> of file <a class="el" href="LabelService_8cs_source.html">LabelService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LabelService_8cs_source.html#l00159">159</a> of file <a class="el" href="LabelService_8cs_source.html">LabelService.cs</a>.</p>
 
 </div>
 </div>
@@ -509,7 +515,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LabelService_8cs_source.html#l00155">155</a> of file <a class="el" href="LabelService_8cs_source.html">LabelService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LabelService_8cs_source.html#l00157">157</a> of file <a class="el" href="LabelService_8cs_source.html">LabelService.cs</a>.</p>
 
 </div>
 </div>

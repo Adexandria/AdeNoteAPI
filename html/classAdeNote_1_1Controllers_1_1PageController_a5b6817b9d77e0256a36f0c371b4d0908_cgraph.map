@@ -1,4 +1,0 @@
-<map id="AdeNote.Controllers.PageController.GetAllPages" name="AdeNote.Controllers.PageController.GetAllPages">
-<area shape="rect" id="node1" title="Fetches all pages in a book" alt="" coords="5,5,193,47"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#af77622099f1a52f1727618aa76f3f870" title="Gets all pages in a book" alt="" coords="241,5,479,47"/>
-</map>

@@ -1,11 +1,12 @@
 <map id="AdeNote.Infrastructure.Extension.ConfigurationExtension.ExtractApplicationSetting" name="AdeNote.Infrastructure.Extension.ConfigurationExtension.ExtractApplicationSetting">
-<area shape="rect" id="node1" title=" " alt="" coords="5,272,301,328"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,297,301,353"/>
 <area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a2677736bfde1ed252a29a996c7154216" title=" " alt="" coords="387,5,647,61"/>
 <area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a1007fc200a56a8dd204995561a1e643e" title=" " alt="" coords="385,85,648,141"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#adc6f85db7e3e894b014079dd13593de2" title=" " alt="" coords="349,166,684,207"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#ac78abc9e7d6ca2e4088b01e8784eecc4" title=" " alt="" coords="381,232,652,288"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a3dc5e43857efc2f7d9e6ca67eef16e71" title=" " alt="" coords="376,312,657,368"/>
-<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a123e8423c8d621146a0a7b90ebb77c90" title=" " alt="" coords="370,392,663,448"/>
-<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a9639e4eae20cf4ffec20544423e6399d" title=" " alt="" coords="366,473,667,514"/>
-<area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#af07612e6cefae79df70cfdd22aefc3c1" title=" " alt="" coords="375,539,658,595"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a369eeb578d531452f227172aff553c67" title=" " alt="" coords="363,166,670,207"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#adc6f85db7e3e894b014079dd13593de2" title=" " alt="" coords="349,231,684,273"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#ac78abc9e7d6ca2e4088b01e8784eecc4" title=" " alt="" coords="381,297,652,353"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a3dc5e43857efc2f7d9e6ca67eef16e71" title=" " alt="" coords="376,377,657,433"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a123e8423c8d621146a0a7b90ebb77c90" title=" " alt="" coords="370,457,663,513"/>
+<area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a9639e4eae20cf4ffec20544423e6399d" title=" " alt="" coords="366,538,667,579"/>
+<area shape="rect" id="node10" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#af07612e6cefae79df70cfdd22aefc3c1" title=" " alt="" coords="375,604,658,660"/>
 </map>

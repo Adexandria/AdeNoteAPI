@@ -114,16 +114,16 @@ Collaboration diagram for AdeNote.Controllers.TicketController:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a39687a427f1e74eca7e367571e000d9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1TicketController.html#a39687a427f1e74eca7e367571e000d9b">TicketController</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1IUserIdentity.html">IUserIdentity</a> userIdentity, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html">ITicketService</a> _ticketService)</td></tr>
-<tr class="separator:a39687a427f1e74eca7e367571e000d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c380e7732ad096c77ee480a01104382"><td class="memItemLeft" align="right" valign="top">IActionResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1TicketController.html#a5c380e7732ad096c77ee480a01104382">GetAllTickets</a> (int pageSize=20, int pageNumber=1)</td></tr>
-<tr class="separator:a5c380e7732ad096c77ee480a01104382"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7026f1e11b864e339b5068ae5f0c2cda"><td class="memItemLeft" align="right" valign="top">IActionResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1TicketController.html#a7026f1e11b864e339b5068ae5f0c2cda">GetUserTickets</a> ([Required(ErrorMessage=&quot;Invalid name&quot;)] string name, int pageNumber=1, int pageSize=20)</td></tr>
-<tr class="separator:a7026f1e11b864e339b5068ae5f0c2cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab07e675be1684573d016fc93f3bd719"><td class="memItemLeft" align="right" valign="top">IActionResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1TicketController.html#aab07e675be1684573d016fc93f3bd719">SearchUserTicketsByDate</a> ([ValidDateTime(&quot;Invalid date and time&quot;)] string created, int pageNumber=1, int pageSize=20)</td></tr>
-<tr class="separator:aab07e675be1684573d016fc93f3bd719"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dd62bb9c8cbe7d12cfd6fc1d1988ce5"><td class="memItemLeft" align="right" valign="top">IActionResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1TicketController.html#a0dd62bb9c8cbe7d12cfd6fc1d1988ce5">SearchUserTickets</a> ([Allow(&quot;Invalid status&quot;, &quot;Pending&quot;, &quot;Inreview&quot;, &quot;Resolved&quot;, &quot;Unresolved&quot;)] string status, int pageNumber=1, int pageSize=20)</td></tr>
-<tr class="separator:a0dd62bb9c8cbe7d12cfd6fc1d1988ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac847a3f389396f66bcfc3fa1ae8ef5a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1TicketController.html#ac847a3f389396f66bcfc3fa1ae8ef5a2">TicketController</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1IUserIdentity.html">IUserIdentity</a> userIdentity, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html">ITicketService</a> _ticketService, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1Application.html">Application</a> application)</td></tr>
+<tr class="separator:ac847a3f389396f66bcfc3fa1ae8ef5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad51b545fcf484c40302e9c118c01b3ab"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1TicketController.html#ad51b545fcf484c40302e9c118c01b3ab">GetAllTickets</a> (int pageSize=20, int pageNumber=1)</td></tr>
+<tr class="separator:ad51b545fcf484c40302e9c118c01b3ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedc2ce062b3d6cb7bd59af9547bf3e67"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1TicketController.html#aedc2ce062b3d6cb7bd59af9547bf3e67">GetUserTickets</a> ([Required(ErrorMessage=&quot;Invalid name&quot;)] string name, int pageNumber=1, int pageSize=20)</td></tr>
+<tr class="separator:aedc2ce062b3d6cb7bd59af9547bf3e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2caf7d6d43a903aafd6dd40638ac974f"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1TicketController.html#a2caf7d6d43a903aafd6dd40638ac974f">SearchUserTicketsByDate</a> ([ValidDateTime(&quot;Invalid date and time&quot;)] string created, int pageNumber=1, int pageSize=20)</td></tr>
+<tr class="separator:a2caf7d6d43a903aafd6dd40638ac974f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95f6dd97800508f446873203128665cc"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1TicketController.html#a95f6dd97800508f446873203128665cc">SearchUserTickets</a> ([Allow(&quot;Invalid status&quot;, &quot;Pending&quot;, &quot;Inreview&quot;, &quot;Resolved&quot;, &quot;Unresolved&quot;)] string status, int pageNumber=1, int pageSize=20)</td></tr>
+<tr class="separator:a95f6dd97800508f446873203128665cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad233da4ac11599c0290f9a68da99cd60"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1TicketController.html#ad233da4ac11599c0290f9a68da99cd60">GetTicket</a> ([ValidGuid(&quot;Invalid ticket id&quot;)] Guid ticketId)</td></tr>
 <tr class="separator:ad233da4ac11599c0290f9a68da99cd60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24c04b173108a570ad1721507039771c"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1TicketController.html#a24c04b173108a570ad1721507039771c">GetTicket</a> ([ValidTicketId(&quot;Invalid ticket id&quot;)] string ticketId)</td></tr>
@@ -139,6 +139,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5383b97ea5540b425dd972423b8573d1 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html#a5383b97ea5540b425dd972423b8573d1">BaseController</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1IUserIdentity.html">IUserIdentity</a> userIdentity)</td></tr>
 <tr class="memdesc:a5383b97ea5540b425dd972423b8573d1 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor  <a href="classAdeNote_1_1Controllers_1_1BaseController.html#a5383b97ea5540b425dd972423b8573d1">More...</a><br /></td></tr>
 <tr class="separator:a5383b97ea5540b425dd972423b8573d1 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b1656e1315cb11e7b7219255a9fd017 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html#a6b1656e1315cb11e7b7219255a9fd017">BaseController</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1IUserIdentity.html">IUserIdentity</a> userIdentity, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1Application.html">Application</a> application)</td></tr>
+<tr class="separator:a6b1656e1315cb11e7b7219255a9fd017 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a142d1ef99a2e03dd64c85b88226eb1a5 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html#a142d1ef99a2e03dd64c85b88226eb1a5">BaseController</a> (<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1Application.html">Application</a> application)</td></tr>
+<tr class="separator:a142d1ef99a2e03dd64c85b88226eb1a5 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -154,13 +158,16 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a10662b34dd1d5b08022f3a572f548825 inherit properties_classAdeNote_1_1Controllers_1_1BaseController"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html#a10662b34dd1d5b08022f3a572f548825">CurrentEmail</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a10662b34dd1d5b08022f3a572f548825 inherit properties_classAdeNote_1_1Controllers_1_1BaseController"><td class="mdescLeft">&#160;</td><td class="mdescRight">Email of the authenticated user  <a href="classAdeNote_1_1Controllers_1_1BaseController.html#a10662b34dd1d5b08022f3a572f548825">More...</a><br /></td></tr>
 <tr class="separator:a10662b34dd1d5b08022f3a572f548825 inherit properties_classAdeNote_1_1Controllers_1_1BaseController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a078e7df5ec8f6417397c02b832bb2114 inherit properties_classAdeNote_1_1Controllers_1_1BaseController"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1Application.html">Application</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html#a078e7df5ec8f6417397c02b832bb2114">Application</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a078e7df5ec8f6417397c02b832bb2114 inherit properties_classAdeNote_1_1Controllers_1_1BaseController"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages request handlers  <a href="classAdeNote_1_1Controllers_1_1BaseController.html#a078e7df5ec8f6417397c02b832bb2114">More...</a><br /></td></tr>
+<tr class="separator:a078e7df5ec8f6417397c02b832bb2114 inherit properties_classAdeNote_1_1Controllers_1_1BaseController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00014">14</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00023">23</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a39687a427f1e74eca7e367571e000d9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39687a427f1e74eca7e367571e000d9b">&#9670;&nbsp;</a></span>TicketController()</h2>
+<a id="ac847a3f389396f66bcfc3fa1ae8ef5a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac847a3f389396f66bcfc3fa1ae8ef5a2">&#9670;&nbsp;</a></span>TicketController()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,7 +182,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html">ITicketService</a>&#160;</td>
-          <td class="paramname"><em>_ticketService</em>&#160;</td>
+          <td class="paramname"><em>_ticketService</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1Application.html">Application</a>&#160;</td>
+          <td class="paramname"><em>application</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -185,7 +198,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00018">18</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00027">27</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
 
 </div>
 </div>
@@ -216,27 +229,18 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00078">78</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1TicketController_a982b455f9e92dee174f5442273cdccb1_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1TicketController_a982b455f9e92dee174f5442273cdccb1_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1TicketController_a982b455f9e92dee174f5442273cdccb1_cgraph" id="aclassAdeNote_1_1Controllers_1_1TicketController_a982b455f9e92dee174f5442273cdccb1_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,201,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html#adcfb594d6b4648e5b70adb3e60e8f2cf" title=" " alt="" coords="249,5,544,47"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00125">125</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
 
 </div>
 </div>
-<a id="a5c380e7732ad096c77ee480a01104382"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c380e7732ad096c77ee480a01104382">&#9670;&nbsp;</a></span>GetAllTickets()</h2>
+<a id="ad51b545fcf484c40302e9c118c01b3ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad51b545fcf484c40302e9c118c01b3ab">&#9670;&nbsp;</a></span>GetAllTickets()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IActionResult AdeNote.Controllers.TicketController.GetAllTickets </td>
+          <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.TicketController.GetAllTickets </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>pageSize</em> = <code>20</code>, </td>
@@ -255,16 +259,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00025">25</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1TicketController_a5c380e7732ad096c77ee480a01104382_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1TicketController_a5c380e7732ad096c77ee480a01104382_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1TicketController_a5c380e7732ad096c77ee480a01104382_cgraph" id="aclassAdeNote_1_1Controllers_1_1TicketController_a5c380e7732ad096c77ee480a01104382_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,201,54"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html#ae65ece11a89689440e9ef00090b96fc3" title=" " alt="" coords="249,5,497,61"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00035">35</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
 
 </div>
 </div>
@@ -284,16 +279,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00061">61</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1TicketController_ad233da4ac11599c0290f9a68da99cd60_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1TicketController_ad233da4ac11599c0290f9a68da99cd60_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1TicketController_ad233da4ac11599c0290f9a68da99cd60_cgraph" id="aclassAdeNote_1_1Controllers_1_1TicketController_ad233da4ac11599c0290f9a68da99cd60_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,201,54"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html#a1206eb3945cdb86bf4c2bf02d35642eb" title=" " alt="" coords="249,5,497,61"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00099">99</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
 
 </div>
 </div>
@@ -313,27 +299,18 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00070">70</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1TicketController_a24c04b173108a570ad1721507039771c_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1TicketController_a24c04b173108a570ad1721507039771c_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1TicketController_a24c04b173108a570ad1721507039771c_cgraph" id="aclassAdeNote_1_1Controllers_1_1TicketController_a24c04b173108a570ad1721507039771c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,201,54"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html#a1206eb3945cdb86bf4c2bf02d35642eb" title=" " alt="" coords="249,5,497,61"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00112">112</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
 
 </div>
 </div>
-<a id="a7026f1e11b864e339b5068ae5f0c2cda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7026f1e11b864e339b5068ae5f0c2cda">&#9670;&nbsp;</a></span>GetUserTickets()</h2>
+<a id="aedc2ce062b3d6cb7bd59af9547bf3e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedc2ce062b3d6cb7bd59af9547bf3e67">&#9670;&nbsp;</a></span>GetUserTickets()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IActionResult AdeNote.Controllers.TicketController.GetUserTickets </td>
+          <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.TicketController.GetUserTickets </td>
           <td>(</td>
           <td class="paramtype">[Required(ErrorMessage = &quot;Invalid name&quot;)] string&#160;</td>
           <td class="paramname"><em>name</em>, </td>
@@ -358,27 +335,18 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00034">34</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1TicketController_a7026f1e11b864e339b5068ae5f0c2cda_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1TicketController_a7026f1e11b864e339b5068ae5f0c2cda_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1TicketController_a7026f1e11b864e339b5068ae5f0c2cda_cgraph" id="aclassAdeNote_1_1Controllers_1_1TicketController_a7026f1e11b864e339b5068ae5f0c2cda_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,201,54"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html#ae65ece11a89689440e9ef00090b96fc3" title=" " alt="" coords="249,5,497,61"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00050">50</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
 
 </div>
 </div>
-<a id="a0dd62bb9c8cbe7d12cfd6fc1d1988ce5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0dd62bb9c8cbe7d12cfd6fc1d1988ce5">&#9670;&nbsp;</a></span>SearchUserTickets()</h2>
+<a id="a95f6dd97800508f446873203128665cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f6dd97800508f446873203128665cc">&#9670;&nbsp;</a></span>SearchUserTickets()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IActionResult AdeNote.Controllers.TicketController.SearchUserTickets </td>
+          <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.TicketController.SearchUserTickets </td>
           <td>(</td>
           <td class="paramtype">[Allow(&quot;Invalid status&quot;, &quot;Pending&quot;, &quot;Inreview&quot;, &quot;Resolved&quot;, &quot;Unresolved&quot;)] string&#160;</td>
           <td class="paramname"><em>status</em>, </td>
@@ -403,27 +371,18 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00052">52</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1TicketController_a0dd62bb9c8cbe7d12cfd6fc1d1988ce5_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1TicketController_a0dd62bb9c8cbe7d12cfd6fc1d1988ce5_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1TicketController_a0dd62bb9c8cbe7d12cfd6fc1d1988ce5_cgraph" id="aclassAdeNote_1_1Controllers_1_1TicketController_a0dd62bb9c8cbe7d12cfd6fc1d1988ce5_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,215,54"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html#a1eeaf8cd7df24dca3f155727281ce33e" title=" " alt="" coords="263,5,520,61"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00083">83</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
 
 </div>
 </div>
-<a id="aab07e675be1684573d016fc93f3bd719"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab07e675be1684573d016fc93f3bd719">&#9670;&nbsp;</a></span>SearchUserTicketsByDate()</h2>
+<a id="a2caf7d6d43a903aafd6dd40638ac974f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2caf7d6d43a903aafd6dd40638ac974f">&#9670;&nbsp;</a></span>SearchUserTicketsByDate()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IActionResult AdeNote.Controllers.TicketController.SearchUserTicketsByDate </td>
+          <td class="memname">async Task&lt;IActionResult&gt; AdeNote.Controllers.TicketController.SearchUserTicketsByDate </td>
           <td>(</td>
           <td class="paramtype">[ValidDateTime(&quot;Invalid date and time&quot;)] string&#160;</td>
           <td class="paramname"><em>created</em>, </td>
@@ -448,16 +407,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00043">43</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1TicketController_aab07e675be1684573d016fc93f3bd719_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1TicketController_aab07e675be1684573d016fc93f3bd719_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1TicketController_aab07e675be1684573d016fc93f3bd719_cgraph" id="aclassAdeNote_1_1Controllers_1_1TicketController_aab07e675be1684573d016fc93f3bd719_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,263,54"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html#a9336fe7e603aefc2def828c38208576e" title=" " alt="" coords="311,5,568,61"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00067">67</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
 
 </div>
 </div>
@@ -493,16 +443,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00104">104</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Controllers_1_1TicketController_acfb33df8c97d77f2814279e8089d2b1a_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1TicketController_acfb33df8c97d77f2814279e8089d2b1a_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Controllers_1_1TicketController_acfb33df8c97d77f2814279e8089d2b1a_cgraph" id="aclassAdeNote_1_1Controllers_1_1TicketController_acfb33df8c97d77f2814279e8089d2b1a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,221,47"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html#ae4e85bb0339929ef2108bb20431cd610" title=" " alt="" coords="269,5,568,47"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00150">150</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
 
 </div>
 </div>
@@ -527,7 +468,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00016">16</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TicketController_8cs_source.html#l00025">25</a> of file <a class="el" href="TicketController_8cs_source.html">TicketController.cs</a>.</p>
 
 </div>
 </div>

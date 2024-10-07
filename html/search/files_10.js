@@ -1,13 +1,19 @@
 var searchData=
 [
-  ['user_2ecs_1257',['User.cs',['../User_8cs.html',1,'']]],
-  ['usercontroller_2ecs_1258',['UserController.cs',['../UserController_8cs.html',1,'']]],
-  ['userdto_2ecs_1259',['UserDTO.cs',['../UserDTO_8cs.html',1,'']]],
-  ['userid_2ecs_1260',['UserId.cs',['../UserId_8cs.html',1,'']]],
-  ['useridconverter_2ecs_1261',['UserIdConverter.cs',['../UserIdConverter_8cs.html',1,'']]],
-  ['useridentity_2ecs_1262',['UserIdentity.cs',['../UserIdentity_8cs.html',1,'']]],
-  ['userrepository_2ecs_1263',['UserRepository.cs',['../UserRepository_8cs.html',1,'']]],
-  ['usersdto_2ecs_1264',['UsersDTO.cs',['../UsersDTO_8cs.html',1,'']]],
-  ['userservice_2ecs_1265',['UserService.cs',['../UserService_8cs.html',1,'']]],
-  ['userticketdto_2ecs_1266',['UserTicketDto.cs',['../UserTicketDto_8cs.html',1,'']]]
+  ['texttranslation_2ecs_1654',['TextTranslation.cs',['../TextTranslation_8cs.html',1,'']]],
+  ['ticket_2ecs_1655',['Ticket.cs',['../Ticket_8cs.html',1,'']]],
+  ['ticketcontroller_2ecs_1656',['TicketController.cs',['../TicketController_8cs.html',1,'']]],
+  ['ticketcreatedto_2ecs_1657',['TicketCreateDto.cs',['../TicketCreateDto_8cs.html',1,'']]],
+  ['ticketdto_2ecs_1658',['TicketDTO.cs',['../TicketDTO_8cs.html',1,'']]],
+  ['ticketevent_2ecs_1659',['TicketEvent.cs',['../TicketEvent_8cs.html',1,'']]],
+  ['ticketrepository_2ecs_1660',['TicketRepository.cs',['../TicketRepository_8cs.html',1,'']]],
+  ['ticketsdto_2ecs_1661',['TicketsDTO.cs',['../TicketsDTO_8cs.html',1,'']]],
+  ['ticketservice_2ecs_1662',['TicketService.cs',['../TicketService_8cs.html',1,'']]],
+  ['ticketstatusdto_2ecs_1663',['TicketStatusDto.cs',['../TicketStatusDto_8cs.html',1,'']]],
+  ['ticketstreamdto_2ecs_1664',['TicketStreamDto.cs',['../TicketStreamDto_8cs.html',1,'']]],
+  ['translateconfiguration_2ecs_1665',['TranslateConfiguration.cs',['../TranslateConfiguration_8cs.html',1,'']]],
+  ['translatepagerequest_2ecs_1666',['TranslatePageRequest.cs',['../TranslatePageRequest_8cs.html',1,'']]],
+  ['translatepagerequesthandler_2ecs_1667',['TranslatePageRequestHandler.cs',['../TranslatePageRequestHandler_8cs.html',1,'']]],
+  ['translatepagevalidator_2ecs_1668',['TranslatePageValidator.cs',['../TranslatePageValidator_8cs.html',1,'']]],
+  ['translationdto_2ecs_1669',['TranslationDto.cs',['../TranslationDto_8cs.html',1,'']]]
 ];

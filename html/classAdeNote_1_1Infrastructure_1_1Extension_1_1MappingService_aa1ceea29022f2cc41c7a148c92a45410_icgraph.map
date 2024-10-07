@@ -1,5 +1,7 @@
 <map id="AdeNote.Infrastructure.Extension.MappingService.BookConfig" name="AdeNote.Infrastructure.Extension.MappingService.BookConfig">
-<area shape="rect" id="node1" title="Maps from book entity to book dto" alt="" coords="296,39,539,80"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a70a77b72e449bc1c9ff03741737f30db" title="Get all books" alt="" coords="10,5,243,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a41b68bf14e0a3a5c8e42cff968254469" title="Get book by id" alt="" coords="5,71,248,112"/>
+<area shape="rect" id="node1" title="Maps from book entity to book dto" alt="" coords="411,104,653,145"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a70a77b72e449bc1c9ff03741737f30db" title="Get all books" alt="" coords="67,5,301,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a41b68bf14e0a3a5c8e42cff968254469" title="Get book by id" alt="" coords="63,71,305,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllBooks_1_1GetAllBooksRequestHandler.html#ace7dd94511ca7167956655b2867d904b" title=" " alt="" coords="15,136,353,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1GetBookdById_1_1GetBookByIdRequestHandler.html#ae19edb0d93c9bf29d3e80d8f342d923a" title=" " alt="" coords="5,201,363,243"/>
 </map>

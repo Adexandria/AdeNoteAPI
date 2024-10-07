@@ -1,4 +1,0 @@
-<map id="AdeNote.Controllers.BookController.GetBook" name="AdeNote.Controllers.BookController.GetBook">
-<area shape="rect" id="node1" title="Fetches a particular book" alt="" coords="5,5,196,47"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1IBookService.html#afe2a9bbfd6a54032199fd700c030348e" title="Get book by id" alt="" coords="244,5,491,47"/>
-</map>

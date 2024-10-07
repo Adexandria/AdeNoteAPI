@@ -1,9 +1,10 @@
 <map id="AdeNote.Infrastructure.Repository.IUserRepository.GetUserByEmail" name="AdeNote.Infrastructure.Repository.IUserRepository.GetUserByEmail">
-<area shape="rect" id="node1" title=" " alt="" coords="417,189,664,231"/>
+<area shape="rect" id="node1" title=" " alt="" coords="417,217,664,259"/>
 <area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a07d99b135390bfc450eb3cef6c079939" title=" " alt="" coords="42,5,333,47"/>
 <area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a15be585200f92e5007991604a1183a36" title=" " alt="" coords="56,71,319,127"/>
 <area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html#a952df029155dd7ba184f4f0e42653106" title=" " alt="" coords="65,152,309,193"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a9e33742788672d5c8b7a0174cf0015f4" title="Checks if MFA has been enabled for the user" alt="" coords="36,218,339,274"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#af2583c3d45b5039686fce34fb4d44314" title=" " alt="" coords="53,298,321,354"/>
-<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a13062f2ff2f6d75b4b03954bf8354950" title=" " alt="" coords="5,379,369,420"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateTicket_1_1CreateTicketRequestHandler.html#a529f72388b4794c7d82977940c3b4a13" title=" " alt="" coords="16,217,359,259"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a9e33742788672d5c8b7a0174cf0015f4" title="Checks if MFA has been enabled for the user" alt="" coords="36,283,339,339"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#af2583c3d45b5039686fce34fb4d44314" title=" " alt="" coords="53,363,321,419"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a13062f2ff2f6d75b4b03954bf8354950" title=" " alt="" coords="5,444,369,485"/>
 </map>

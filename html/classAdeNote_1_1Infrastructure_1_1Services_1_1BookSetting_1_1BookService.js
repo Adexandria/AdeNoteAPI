@@ -1,7 +1,7 @@
 var classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService =
 [
     [ "BookService", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a058227773a96cc8197737811a74f5309", null ],
-    [ "BookService", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a829ce3bfd77a64dc14b1c8485c57dd01", null ],
+    [ "BookService", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#afa9084c175bb4fd9a7bb728b025d694a", null ],
     [ "Add", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a82f4718c8a1ec0b8b43b7f0961418e62", null ],
     [ "Add", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#ae9034b18644d978f95576db13696d4e1", null ],
     [ "GetAll", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a70a77b72e449bc1c9ff03741737f30db", null ],

@@ -124,9 +124,9 @@ Collaboration diagram for AdeNote.Infrastructure.Services.PageSettings.PageServi
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5e91a4b03c269dc18b8d90f50e9147e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a5e91a4b03c269dc18b8d90f50e9147e9">PageService</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html">IPageRepository</a> _pageRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html">IBookRepository</a> _bookRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html">ILabelRepository</a> _labelRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html">ILabelPageRepository</a> _labelPageRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1ITextTranslation.html">ITextTranslation</a> _textTranslation, ICacheService _cacheService)</td></tr>
-<tr class="memdesc:a5e91a4b03c269dc18b8d90f50e9147e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a5e91a4b03c269dc18b8d90f50e9147e9">More...</a><br /></td></tr>
-<tr class="separator:a5e91a4b03c269dc18b8d90f50e9147e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d9c0754973031b8dcf08638c3e4ba6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a5d9c0754973031b8dcf08638c3e4ba6b">PageService</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html">IPageRepository</a> _pageRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html">IBookRepository</a> _bookRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html">ILabelRepository</a> _labelRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html">ILabelPageRepository</a> _labelPageRepository, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1ITextTranslation.html">ITextTranslation</a> _textTranslation, ICacheService _cacheService, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys.html">CachingKeys</a> cachingKeys)</td></tr>
+<tr class="memdesc:a5d9c0754973031b8dcf08638c3e4ba6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a5d9c0754973031b8dcf08638c3e4ba6b">More...</a><br /></td></tr>
+<tr class="separator:a5d9c0754973031b8dcf08638c3e4ba6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf8e3ff932a90b07c2d820e5084fc6a9"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#acf8e3ff932a90b07c2d820e5084fc6a9">Add</a> (Guid bookId, Guid userId, <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO.html">PageCreateDTO</a> createPage)</td></tr>
 <tr class="memdesc:acf8e3ff932a90b07c2d820e5084fc6a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new page to a book  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#acf8e3ff932a90b07c2d820e5084fc6a9">More...</a><br /></td></tr>
 <tr class="separator:acf8e3ff932a90b07c2d820e5084fc6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,14 +177,12 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a5c57de3ee42419e2b7467090b44ae373"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a5c57de3ee42419e2b7467090b44ae373">_bookCacheKey</a> = &quot;Books&quot;</td></tr>
-<tr class="separator:a5c57de3ee42419e2b7467090b44ae373"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8f8d172898b78fb8011bfe3d06b63cb"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#aa8f8d172898b78fb8011bfe3d06b63cb">_pageCacheKey</a> = &quot;Pages&quot;</td></tr>
-<tr class="separator:aa8f8d172898b78fb8011bfe3d06b63cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdf09c8335a146aa440cef6306de3a0b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#afdf09c8335a146aa440cef6306de3a0b">_translatedPageCacheKey</a> = &quot;Pages&quot;</td></tr>
-<tr class="separator:afdf09c8335a146aa440cef6306de3a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20ef8b542b1aa4601245d1118a7f3e09"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a20ef8b542b1aa4601245d1118a7f3e09">_labelCacheKey</a> = &quot;Labels&quot;</td></tr>
-<tr class="separator:a20ef8b542b1aa4601245d1118a7f3e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59fdd856fef3be3595368a196e08c071"><td class="memItemLeft" align="right" valign="top">readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a59fdd856fef3be3595368a196e08c071">_bookCacheKey</a></td></tr>
+<tr class="separator:a59fdd856fef3be3595368a196e08c071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b6b0a9e6fa24c542b5fc501744f64c9"><td class="memItemLeft" align="right" valign="top">readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a4b6b0a9e6fa24c542b5fc501744f64c9">_pageCacheKey</a></td></tr>
+<tr class="separator:a4b6b0a9e6fa24c542b5fc501744f64c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac22478473b5708fbbd21ea1f17fcad20"><td class="memItemLeft" align="right" valign="top">readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#ac22478473b5708fbbd21ea1f17fcad20">_labelCacheKey</a></td></tr>
+<tr class="separator:ac22478473b5708fbbd21ea1f17fcad20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An implementation of the interface </p>
@@ -220,8 +218,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a5e91a4b03c269dc18b8d90f50e9147e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e91a4b03c269dc18b8d90f50e9147e9">&#9670;&nbsp;</a></span>PageService() <span class="overload">[2/2]</span></h2>
+<a id="a5d9c0754973031b8dcf08638c3e4ba6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d9c0754973031b8dcf08638c3e4ba6b">&#9670;&nbsp;</a></span>PageService() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,7 +258,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">ICacheService&#160;</td>
-          <td class="paramname"><em>_cacheService</em>&#160;</td>
+          <td class="paramname"><em>_cacheService</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys.html">CachingKeys</a>&#160;</td>
+          <td class="paramname"><em>cachingKeys</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -331,7 +335,7 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#ae9bc40760e1425722d4130717d76e371">AdeNote.Infrastructure.Services.PageSettings.IPageService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00051">51</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00054">54</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -399,7 +403,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#aa67f930bf60c952afd5f436735f62cef">AdeNote.Infrastructure.Services.PageSettings.IPageService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00198">198</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00201">201</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -444,7 +448,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#af77622099f1a52f1727618aa76f3f870">AdeNote.Infrastructure.Services.PageSettings.IPageService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00079">79</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00082">82</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -496,7 +500,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#ae93554aba136ec10c395a6c13cd6d516">AdeNote.Infrastructure.Services.PageSettings.IPageService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00104">104</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00107">107</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -556,7 +560,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#acf58236b74915e24c9d47056351d43d2">AdeNote.Infrastructure.Services.PageSettings.IPageService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00128">128</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00131">131</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -618,7 +622,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#ad8c960c2fe3b13b1b5a820c77e0732f0">AdeNote.Infrastructure.Services.PageSettings.IPageService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00255">255</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00258">258</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -688,7 +692,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#ad1073dd1289af39a362d25eea7fe7646">AdeNote.Infrastructure.Services.PageSettings.IPageService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00289">289</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00292">292</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -752,7 +756,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#a29f815e76543d608f04d23a7a9dc302e">AdeNote.Infrastructure.Services.PageSettings.IPageService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00319">319</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00322">322</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -823,7 +827,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#ab22d64a4179f24a54e9ffa3aa8830afa">AdeNote.Infrastructure.Services.PageSettings.IPageService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00161">161</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00164">164</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -841,8 +845,8 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a5c57de3ee42419e2b7467090b44ae373"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c57de3ee42419e2b7467090b44ae373">&#9670;&nbsp;</a></span>_bookCacheKey</h2>
+<a id="a59fdd856fef3be3595368a196e08c071"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59fdd856fef3be3595368a196e08c071">&#9670;&nbsp;</a></span>_bookCacheKey</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -851,31 +855,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string AdeNote.Infrastructure.Services.PageSettings.PageService._bookCacheKey = &quot;Books&quot;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00419">419</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
-
-</div>
-</div>
-<a id="a20ef8b542b1aa4601245d1118a7f3e09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20ef8b542b1aa4601245d1118a7f3e09">&#9670;&nbsp;</a></span>_labelCacheKey</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string AdeNote.Infrastructure.Services.PageSettings.PageService._labelCacheKey = &quot;Labels&quot;</td>
+          <td class="memname">readonly string AdeNote.Infrastructure.Services.PageSettings.PageService._bookCacheKey</td>
         </tr>
       </table>
   </td>
@@ -889,8 +869,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="aa8f8d172898b78fb8011bfe3d06b63cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8f8d172898b78fb8011bfe3d06b63cb">&#9670;&nbsp;</a></span>_pageCacheKey</h2>
+<a id="ac22478473b5708fbbd21ea1f17fcad20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac22478473b5708fbbd21ea1f17fcad20">&#9670;&nbsp;</a></span>_labelCacheKey</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -899,7 +879,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string AdeNote.Infrastructure.Services.PageSettings.PageService._pageCacheKey = &quot;Pages&quot;</td>
+          <td class="memname">readonly string AdeNote.Infrastructure.Services.PageSettings.PageService._labelCacheKey</td>
         </tr>
       </table>
   </td>
@@ -909,12 +889,12 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00420">420</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00424">424</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
 
 </div>
 </div>
-<a id="afdf09c8335a146aa440cef6306de3a0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdf09c8335a146aa440cef6306de3a0b">&#9670;&nbsp;</a></span>_translatedPageCacheKey</h2>
+<a id="a4b6b0a9e6fa24c542b5fc501744f64c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b6b0a9e6fa24c542b5fc501744f64c9">&#9670;&nbsp;</a></span>_pageCacheKey</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -923,7 +903,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string AdeNote.Infrastructure.Services.PageSettings.PageService._translatedPageCacheKey = &quot;Pages&quot;</td>
+          <td class="memname">readonly string AdeNote.Infrastructure.Services.PageSettings.PageService._pageCacheKey</td>
         </tr>
       </table>
   </td>
@@ -933,7 +913,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00421">421</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00423">423</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
 
 </div>
 </div>
@@ -949,7 +929,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00415">415</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00418">418</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
 
 </div>
 </div>
@@ -965,7 +945,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00412">412</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00415">415</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
 
 </div>
 </div>
@@ -981,7 +961,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00417">417</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00420">420</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
 
 </div>
 </div>
@@ -997,7 +977,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00416">416</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00419">419</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
 
 </div>
 </div>
@@ -1013,7 +993,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00414">414</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00417">417</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
 
 </div>
 </div>
@@ -1029,7 +1009,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00413">413</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PageService_8cs_source.html#l00416">416</a> of file <a class="el" href="PageService_8cs_source.html">PageService.cs</a>.</p>
 
 </div>
 </div>

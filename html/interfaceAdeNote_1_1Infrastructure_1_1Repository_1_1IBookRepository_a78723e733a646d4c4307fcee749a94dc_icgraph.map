@@ -1,4 +1,5 @@
 <map id="AdeNote.Infrastructure.Repository.IBookRepository.GetAll" name="AdeNote.Infrastructure.Repository.IBookRepository.GetAll">
-<area shape="rect" id="node1" title="Get all books that belong to a user" alt="" coords="287,5,533,47"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a70a77b72e449bc1c9ff03741737f30db" title="Get all books" alt="" coords="5,5,239,47"/>
+<area shape="rect" id="node1" title="Get all books that belong to a user" alt="" coords="392,39,639,80"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a70a77b72e449bc1c9ff03741737f30db" title="Get all books" alt="" coords="58,5,291,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllBooks_1_1GetAllBooksRequestHandler.html#ace7dd94511ca7167956655b2867d904b" title=" " alt="" coords="5,71,344,112"/>
 </map>

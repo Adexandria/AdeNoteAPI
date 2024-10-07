@@ -1,20 +1,13 @@
 var searchData=
 [
-  ['reader_989',['Reader',['../classAdeNote_1_1Models_1_1Reader.html',1,'AdeNote::Models']]],
-  ['recoverycode_990',['RecoveryCode',['../classAdeNote_1_1Models_1_1RecoveryCode.html',1,'AdeNote::Models']]],
-  ['recoverycoderepository_991',['RecoveryCodeRepository',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1RecoveryCodeRepository.html',1,'AdeNote::Infrastructure::Repository']]],
-  ['refreshrepository_992',['RefreshRepository',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html',1,'AdeNote::Infrastructure::Repository']]],
-  ['refreshtoken_993',['RefreshToken',['../classAdeNote_1_1Models_1_1RefreshToken.html',1,'AdeNote::Models']]],
-  ['repository_994',['Repository',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html',1,'AdeNote::Infrastructure::Repository']]],
-  ['repository_3c_20book_20_3e_995',['Repository&lt; Book &gt;',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html',1,'AdeNote::Infrastructure::Repository']]],
-  ['repository_3c_20hangfireuser_20_3e_996',['Repository&lt; HangfireUser &gt;',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html',1,'AdeNote::Infrastructure::Repository']]],
-  ['repository_3c_20label_20_3e_997',['Repository&lt; Label &gt;',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html',1,'AdeNote::Infrastructure::Repository']]],
-  ['repository_3c_20labelpage_20_3e_998',['Repository&lt; LabelPage &gt;',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html',1,'AdeNote::Infrastructure::Repository']]],
-  ['repository_3c_20page_20_3e_999',['Repository&lt; Page &gt;',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html',1,'AdeNote::Infrastructure::Repository']]],
-  ['repository_3c_20recoverycode_20_3e_1000',['Repository&lt; RecoveryCode &gt;',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html',1,'AdeNote::Infrastructure::Repository']]],
-  ['repository_3c_20refreshtoken_20_3e_1001',['Repository&lt; RefreshToken &gt;',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html',1,'AdeNote::Infrastructure::Repository']]],
-  ['repository_3c_20ticket_20_3e_1002',['Repository&lt; Ticket &gt;',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html',1,'AdeNote::Infrastructure::Repository']]],
-  ['resultextension_1003',['ResultExtension',['../classAdeNote_1_1Infrastructure_1_1Extension_1_1ResultExtension.html',1,'AdeNote::Infrastructure::Extension']]],
-  ['rolerequirement_1004',['RoleRequirement',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirement.html',1,'AdeNote::Infrastructure::Utilities::AuthorisationHandler']]],
-  ['rolerequirementhandler_1005',['RoleRequirementHandler',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirementHandler.html',1,'AdeNote::Infrastructure::Utilities::AuthorisationHandler']]]
+  ['page_1250',['Page',['../classAdeNote_1_1Models_1_1Page.html',1,'AdeNote::Models']]],
+  ['pagecontroller_1251',['PageController',['../classAdeNote_1_1Controllers_1_1PageController.html',1,'AdeNote::Controllers']]],
+  ['pagecreatedto_1252',['PageCreateDTO',['../classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO.html',1,'AdeNote::Models::DTOs']]],
+  ['pagedto_1253',['PageDTO',['../classAdeNote_1_1Models_1_1DTOs_1_1PageDTO.html',1,'AdeNote::Models::DTOs']]],
+  ['pagerepository_1254',['PageRepository',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html',1,'AdeNote::Infrastructure::Repository']]],
+  ['pageservice_1255',['PageService',['../classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html',1,'AdeNote::Infrastructure::Services::PageSettings']]],
+  ['pageupdatedto_1256',['PageUpdateDTO',['../classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO.html',1,'AdeNote::Models::DTOs']]],
+  ['paginatedresponse_1257',['PaginatedResponse',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html',1,'AdeNote::Infrastructure::Utilities']]],
+  ['passwordattribute_1258',['PasswordAttribute',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1PasswordAttribute.html',1,'AdeNote::Infrastructure::Utilities::ValidationAttributes']]],
+  ['programextension_1259',['ProgramExtension',['../classAdeNote_1_1Infrastructure_1_1Extension_1_1ProgramExtension.html',1,'AdeNote::Infrastructure::Extension']]]
 ];

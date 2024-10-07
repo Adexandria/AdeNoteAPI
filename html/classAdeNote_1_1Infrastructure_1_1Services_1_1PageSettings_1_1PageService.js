@@ -1,7 +1,7 @@
 var classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService =
 [
     [ "PageService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#acf815cfdca13ee7a9cb8cf233595f6fe", null ],
-    [ "PageService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a5e91a4b03c269dc18b8d90f50e9147e9", null ],
+    [ "PageService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a5d9c0754973031b8dcf08638c3e4ba6b", null ],
     [ "Add", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#acf8e3ff932a90b07c2d820e5084fc6a9", null ],
     [ "AddLabels", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a8e2b0177a745a904b2efb05992589dba", null ],
     [ "GetAll", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a465f011dbaa238246dfeb37707986acb", null ],
@@ -11,10 +11,9 @@ var classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService =
     [ "RemovePageLabel", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#ad900f42930477e0f4326f07472b856d6", null ],
     [ "TranslatePage", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#aac702f08ed1cec86f13bea5f0296deeb", null ],
     [ "Update", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a4cc858090bc6da9facb215f15b2c0841", null ],
-    [ "_bookCacheKey", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a5c57de3ee42419e2b7467090b44ae373", null ],
-    [ "_labelCacheKey", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a20ef8b542b1aa4601245d1118a7f3e09", null ],
-    [ "_pageCacheKey", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#aa8f8d172898b78fb8011bfe3d06b63cb", null ],
-    [ "_translatedPageCacheKey", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#afdf09c8335a146aa440cef6306de3a0b", null ],
+    [ "_bookCacheKey", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a59fdd856fef3be3595368a196e08c071", null ],
+    [ "_labelCacheKey", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#ac22478473b5708fbbd21ea1f17fcad20", null ],
+    [ "_pageCacheKey", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a4b6b0a9e6fa24c542b5fc501744f64c9", null ],
     [ "bookRepository", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a3b961831dd12bdb02c3593f62861f759", null ],
     [ "cacheService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a8ad9120a45a14388a3dc0d28c06b162a", null ],
     [ "labelPageRepository", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a4448136f20e58bac4abfab13235d4c1b", null ],

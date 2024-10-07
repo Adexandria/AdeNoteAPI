@@ -1,6 +1,6 @@
 var classAdeNote_1_1Controllers_1_1LabelController =
 [
-    [ "LabelController", "classAdeNote_1_1Controllers_1_1LabelController.html#a54c498c9b651fc8d5bbee40b7b66fede", null ],
+    [ "LabelController", "classAdeNote_1_1Controllers_1_1LabelController.html#a4a304f21c3f0cab516000e88c7a021e2", null ],
     [ "CreateLabel", "classAdeNote_1_1Controllers_1_1LabelController.html#ac6e2bc544e337c91697eb50c26a3ec71", null ],
     [ "DeleteLabel", "classAdeNote_1_1Controllers_1_1LabelController.html#a8f8e18d2c85d59a44f35f0779d899c67", null ],
     [ "GetAllLabels", "classAdeNote_1_1Controllers_1_1LabelController.html#af7f09b63fc909d025b044a473bd13805", null ],

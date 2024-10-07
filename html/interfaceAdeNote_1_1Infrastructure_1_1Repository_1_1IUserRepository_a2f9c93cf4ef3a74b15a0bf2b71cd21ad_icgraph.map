@@ -1,20 +1,23 @@
 <map id="AdeNote.Infrastructure.Repository.IUserRepository.GetUser" name="AdeNote.Infrastructure.Repository.IUserRepository.GetUser">
-<area shape="rect" id="node1" title="Get existings of a user" alt="" coords="393,611,640,652"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a1973595c9a3167299cdddd294a4faf0a" title=" " alt="" coords="30,5,321,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a19d640d50cc2fc1f1bddecc2202d6d9e" title="Disables Multi factor authentication for a particular user" alt="" coords="49,71,301,127"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a94eabdb0de38c5d1b97725ce22fceffd" title=" " alt="" coords="53,151,297,207"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a87059ae3c1315c5973fc9dca183959fa" title=" " alt="" coords="44,231,307,287"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a9cfadde31812d4dbfe59a7a7529f0d04" title=" " alt="" coords="44,311,307,367"/>
-<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html#a3f53d8b1becfe788fabc8d4a23d7771d" title=" " alt="" coords="53,392,297,433"/>
-<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#af305181e4d48dcb89f95c73083cf3d02" title="Gets user&#39;s Qr code" alt="" coords="23,457,327,499"/>
-<area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#ab89dda9933e5cad85e55fffdb450773b" title="Checks if MFA has been enabled for the user using user id." alt="" coords="24,523,327,579"/>
-<area shape="rect" id="node10" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a87f008dcf3b9c3eb51335a39e8d809f9" title="Checks if a email has been verified" alt="" coords="50,603,301,659"/>
-<area shape="rect" id="node11" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html#a587045101b47bee1d9e46ad50b4784fe" title=" " alt="" coords="46,683,305,739"/>
-<area shape="rect" id="node12" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#af941d85b598d9c1872afb7b1ea56c80d" title="Sends otp to phone number" alt="" coords="31,764,320,805"/>
-<area shape="rect" id="node13" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#acbe3cd3f8622a1f358b1941b50fc1baa" title="Sets up MFA using google authenticator app" alt="" coords="19,829,331,871"/>
-<area shape="rect" id="node14" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#aaa425eea88ef45788924097c2fdc480f" title="Sets phone number verification" alt="" coords="17,895,333,936"/>
-<area shape="rect" id="node15" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a10e31c72b6362a2bdf7c27f5b5ed3a00" title="Sets up MFA using sms authentication" alt="" coords="5,960,345,1001"/>
-<area shape="rect" id="node16" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a050a13a2d63bc03ed6a7acd2d0d79d2a" title=" " alt="" coords="28,1025,323,1067"/>
-<area shape="rect" id="node17" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html#ad3466ddf6e724f440824dc78ec7c6917" title=" " alt="" coords="41,1091,309,1147"/>
-<area shape="rect" id="node18" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a7c838f7c258b7f55827b0c48bc6b379c" title="Sets up phone number" alt="" coords="9,1172,341,1213"/>
+<area shape="rect" id="node1" title="Get existings of a user" alt="" coords="404,721,651,763"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a1973595c9a3167299cdddd294a4faf0a" title=" " alt="" coords="35,5,326,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a19d640d50cc2fc1f1bddecc2202d6d9e" title="Disables Multi factor authentication for a particular user" alt="" coords="55,71,307,127"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a94eabdb0de38c5d1b97725ce22fceffd" title=" " alt="" coords="59,151,303,207"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a87059ae3c1315c5973fc9dca183959fa" title=" " alt="" coords="49,231,312,287"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a9cfadde31812d4dbfe59a7a7529f0d04" title=" " alt="" coords="49,311,312,367"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html#a3f53d8b1becfe788fabc8d4a23d7771d" title=" " alt="" coords="59,392,303,433"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#af305181e4d48dcb89f95c73083cf3d02" title="Gets user&#39;s Qr code" alt="" coords="29,457,333,499"/>
+<area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchTicketById_1_1FetchTicketByIdRequestHandler.html#a89b2163fc23012d7d86498ace3c4de26" title=" " alt="" coords="38,523,323,579"/>
+<area shape="rect" id="node10" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequestHandler.html#ae4b92d91ba73233971787cb0739048ca" title=" " alt="" coords="49,603,312,659"/>
+<area shape="rect" id="node11" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateTicket_1_1UpdateTicketRequestHandler.html#ad87db8b9305bde2d659b01f3aa15ef1b" title=" " alt="" coords="5,684,356,725"/>
+<area shape="rect" id="node12" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#ab89dda9933e5cad85e55fffdb450773b" title="Checks if MFA has been enabled for the user using user id." alt="" coords="29,750,332,806"/>
+<area shape="rect" id="node13" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a87f008dcf3b9c3eb51335a39e8d809f9" title="Checks if a email has been verified" alt="" coords="55,830,306,886"/>
+<area shape="rect" id="node14" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html#a587045101b47bee1d9e46ad50b4784fe" title=" " alt="" coords="51,910,310,966"/>
+<area shape="rect" id="node15" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#af941d85b598d9c1872afb7b1ea56c80d" title="Sends otp to phone number" alt="" coords="36,991,325,1032"/>
+<area shape="rect" id="node16" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#acbe3cd3f8622a1f358b1941b50fc1baa" title="Sets up MFA using google authenticator app" alt="" coords="25,1056,337,1097"/>
+<area shape="rect" id="node17" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#aaa425eea88ef45788924097c2fdc480f" title="Sets phone number verification" alt="" coords="23,1121,339,1163"/>
+<area shape="rect" id="node18" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a10e31c72b6362a2bdf7c27f5b5ed3a00" title="Sets up MFA using sms authentication" alt="" coords="11,1187,351,1228"/>
+<area shape="rect" id="node19" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a050a13a2d63bc03ed6a7acd2d0d79d2a" title=" " alt="" coords="33,1252,328,1293"/>
+<area shape="rect" id="node20" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html#ad3466ddf6e724f440824dc78ec7c6917" title=" " alt="" coords="47,1318,315,1374"/>
+<area shape="rect" id="node21" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a7c838f7c258b7f55827b0c48bc6b379c" title="Sets up phone number" alt="" coords="15,1399,347,1440"/>
 </map>

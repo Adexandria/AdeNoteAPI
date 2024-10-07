@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Requests.GetAllBooks.GetAllBooksRequestHandler.Handle" name="AdeNote.Infrastructure.Requests.GetAllBooks.GetAllBooksRequestHandler.Handle">
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,344,80"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#aa1ceea29022f2cc41c7a148c92a45410" title="Maps from book entity to book dto" alt="" coords="394,5,637,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#a78723e733a646d4c4307fcee749a94dc" title="Get all books that belong to a user" alt="" coords="392,71,639,112"/>
+</map>

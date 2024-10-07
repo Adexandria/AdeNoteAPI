@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['notedbcontext_2ecs_1212',['NoteDbContext.cs',['../NoteDbContext_8cs.html',1,'']]],
-  ['notedbcontextmodelsnapshot_2ecs_1213',['NoteDbContextModelSnapshot.cs',['../NoteDbContextModelSnapshot_8cs.html',1,'']]],
-  ['notificationservice_2ecs_1214',['NotificationService.cs',['../NotificationService_8cs.html',1,'']]]
+  ['mappingservice_2ecs_1596',['MappingService.cs',['../MappingService_8cs.html',1,'']]],
+  ['messaging_2ecs_1597',['Messaging.cs',['../Messaging_8cs.html',1,'']]],
+  ['mfatype_2ecs_1598',['MFAType.cs',['../MFAType_8cs.html',1,'']]],
+  ['mimetype_2ecs_1599',['MimeType.cs',['../MimeType_8cs.html',1,'']]]
 ];

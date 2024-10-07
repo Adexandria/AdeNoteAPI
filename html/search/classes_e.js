@@ -1,16 +1,20 @@
 var searchData=
 [
-  ['texttranslation_1017',['TextTranslation',['../classAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1TextTranslation.html',1,'AdeNote::Infrastructure::Services::TranslationAI']]],
-  ['ticket_1018',['Ticket',['../classAdeNote_1_1Models_1_1Ticket.html',1,'AdeNote::Models']]],
-  ['ticketcontroller_1019',['TicketController',['../classAdeNote_1_1Controllers_1_1TicketController.html',1,'AdeNote::Controllers']]],
-  ['ticketcreatedto_1020',['TicketCreateDto',['../classAdeNote_1_1Models_1_1DTOs_1_1TicketCreateDto.html',1,'AdeNote::Models::DTOs']]],
-  ['ticketdto_1021',['TicketDTO',['../classAdeNote_1_1Models_1_1DTOs_1_1TicketDTO.html',1,'AdeNote::Models::DTOs']]],
-  ['ticketevent_1022',['TicketEvent',['../classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketEvent.html',1,'AdeNote::Infrastructure::Services::TicketSettings']]],
-  ['ticketrepository_1023',['TicketRepository',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html',1,'AdeNote::Infrastructure::Repository']]],
-  ['ticketsdto_1024',['TicketsDTO',['../classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html',1,'AdeNote::Models::DTOs']]],
-  ['ticketservice_1025',['TicketService',['../classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html',1,'AdeNote::Infrastructure::Services::TicketSettings']]],
-  ['ticketstatusdto_1026',['TicketStatusDto',['../classAdeNote_1_1Models_1_1DTOs_1_1TicketStatusDto.html',1,'AdeNote::Models::DTOs']]],
-  ['ticketstreamdto_1027',['TicketStreamDto',['../classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto.html',1,'AdeNote::Models::DTOs']]],
-  ['translateconfiguration_1028',['TranslateConfiguration',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1TranslateConfiguration.html',1,'AdeNote::Infrastructure::Utilities::AI']]],
-  ['translationdto_1029',['TranslationDto',['../classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html',1,'AdeNote::Models::DTOs']]]
+  ['saltoptional_1293',['saltoptional',['../classAdeNote_1_1Migrations_1_1saltoptional.html',1,'AdeNote::Migrations']]],
+  ['scheduler_1294',['Scheduler',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1Scheduler.html',1,'AdeNote::Infrastructure::Utilities::EventSystem']]],
+  ['searchticketsbydaterequest_1295',['SearchTicketsByDateRequest',['../classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTicketsByDate_1_1SearchTicketsByDateRequest.html',1,'AdeNote::Infrastructure::Requests::SearchTicketsByDate']]],
+  ['searchticketsbydaterequesthandler_1296',['SearchTicketsByDateRequestHandler',['../classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTicketsByDate_1_1SearchTicketsByDateRequestHandler.html',1,'AdeNote::Infrastructure::Requests::SearchTicketsByDate']]],
+  ['searchticketsbydatevalidator_1297',['SearchTicketsByDateValidator',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1SearchTicketsByDateValidator.html',1,'AdeNote::Infrastructure::Utilities::Validations']]],
+  ['searchticketsrequest_1298',['SearchTicketsRequest',['../classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTickets_1_1SearchTicketsRequest.html',1,'AdeNote::Infrastructure::Requests::SearchTickets']]],
+  ['searchticketsrequesthandler_1299',['SearchTicketsRequestHandler',['../classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTickets_1_1SearchTicketsRequestHandler.html',1,'AdeNote::Infrastructure::Requests::SearchTickets']]],
+  ['searchticketsvalidator_1300',['SearchTicketsValidator',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1SearchTicketsValidator.html',1,'AdeNote::Infrastructure::Utilities::Validations']]],
+  ['secondmigration_1301',['secondmigration',['../classAdeNote_1_1Migrations_1_1secondmigration.html',1,'AdeNote::Migrations']]],
+  ['setuptexttranslation_1302',['setuptexttranslation',['../classAdeNote_1_1Migrations_1_1setuptexttranslation.html',1,'AdeNote::Migrations']]],
+  ['sms_1303',['Sms',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1Sms.html',1,'AdeNote::Infrastructure::Utilities::SmsConfig']]],
+  ['smsconfiguration_1304',['SmsConfiguration',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1SmsConfiguration.html',1,'AdeNote::Infrastructure::Utilities::SmsConfig']]],
+  ['smsservice_1305',['SmsService',['../classAdeNote_1_1Infrastructure_1_1Services_1_1SmsSettings_1_1SmsService.html',1,'AdeNote::Infrastructure::Services::SmsSettings']]],
+  ['solvedticketdto_1306',['SolvedTicketDto',['../classAdeNote_1_1Models_1_1DTOs_1_1SolvedTicketDto.html',1,'AdeNote::Models::DTOs']]],
+  ['statisticsdto_1307',['StatisticsDto',['../classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto.html',1,'AdeNote::Models::DTOs']]],
+  ['statisticservice_1308',['StatisticService',['../classAdeNote_1_1Infrastructure_1_1Services_1_1Statistics_1_1StatisticService.html',1,'AdeNote::Infrastructure::Services::Statistics']]],
+  ['swaggeroptions_1309',['SwaggerOptions',['../classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html',1,'AdeNote::Infrastructure::Extension']]]
 ];

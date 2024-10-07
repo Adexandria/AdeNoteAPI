@@ -57,12 +57,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "20240430084252__firstmigration_8Designer_8cs.html",
-"Label_8cs.html",
-"classAdeNote_1_1Controllers_1_1DashboardController.html#ab9a65029eb14bd638121f19329995dc5",
-"classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#acab109e87522ce3c152c7e69772824a3",
-"classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1Messaging.html",
-"classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html#a7c20be12e8357cbc7f58aff37021c448",
-"interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html"
+"GetLabelByIdRequestHandler_8cs.html",
+"SearchTicketsByDateValidator_8cs.html",
+"classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension.html#ae1ee8cf5d71569b3bd16f68adc239800",
+"classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllBooks_1_1GetAllBooksRequestHandler.html#a32afdac4b9edfd55ea9c3becb36a1f8f",
+"classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a41b68bf14e0a3a5c8e42cff968254469",
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExcelSettings_1_1ImportSheet.html#a7d48d67bc0f0532c34a9752b5d282f11",
+"classAdeNote_1_1Models_1_1DTOs_1_1SolvedTicketDto.html#ac45442d31b9a2f3b558064aabd9072ee",
+"functions_func.html",
+"namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateLabel.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

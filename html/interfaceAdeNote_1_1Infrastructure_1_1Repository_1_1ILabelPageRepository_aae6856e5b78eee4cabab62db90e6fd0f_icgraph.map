@@ -1,4 +1,5 @@
 <map id="AdeNote.Infrastructure.Repository.ILabelPageRepository.GetLabels" name="AdeNote.Infrastructure.Repository.ILabelPageRepository.GetLabels">
-<area shape="rect" id="node1" title="Gets all labels in a page" alt="" coords="317,13,564,54"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a3dd54d63edc37b4c680c502050919aca" title="Removes all labels from a page" alt="" coords="5,5,269,61"/>
+<area shape="rect" id="node1" title="Gets all labels in a page" alt="" coords="368,53,615,94"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels_1_1RemoveAllPageLabelsRequestHandler.html#affb0e19ce468b7ea4dddaabec407519c" title=" " alt="" coords="5,5,320,61"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a3dd54d63edc37b4c680c502050919aca" title="Removes all labels from a page" alt="" coords="31,85,295,141"/>
 </map>

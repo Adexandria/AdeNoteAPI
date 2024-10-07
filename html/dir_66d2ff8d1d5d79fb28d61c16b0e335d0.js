@@ -27,6 +27,9 @@ var dir_66d2ff8d1d5d79fb28d61c16b0e335d0 =
     [ "SwaggerOptions.cs", "SwaggerOptions_8cs.html", [
       [ "SwaggerOptions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions" ]
     ] ],
+    [ "ValidatorExtension.cs", "ValidatorExtension_8cs.html", [
+      [ "ValidatorExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ValidatorExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ValidatorExtension" ]
+    ] ],
     [ "ValidatorResult.cs", "ValidatorResult_8cs.html", [
       [ "ValidatorResult", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ValidatorResult.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ValidatorResult" ]
     ] ]

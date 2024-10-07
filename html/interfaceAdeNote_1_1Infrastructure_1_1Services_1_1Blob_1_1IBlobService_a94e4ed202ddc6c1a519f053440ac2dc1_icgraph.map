@@ -1,6 +1,7 @@
 <map id="AdeNote.Infrastructure.Services.Blob.IBlobService.UploadImage" name="AdeNote.Infrastructure.Services.Blob.IBlobService.UploadImage">
-<area shape="rect" id="node1" title="Uploads image" alt="" coords="365,71,599,112"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a07d99b135390bfc450eb3cef6c079939" title=" " alt="" coords="16,5,307,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1ExportService.html#ac955a7999ec6fe17b7b728229a15454e" title=" " alt="" coords="16,71,307,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#acbe3cd3f8622a1f358b1941b50fc1baa" title="Sets up MFA using google authenticator app" alt="" coords="5,136,317,177"/>
+<area shape="rect" id="node1" title="Uploads image" alt="" coords="396,104,629,145"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a07d99b135390bfc450eb3cef6c079939" title=" " alt="" coords="31,5,322,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1ExportService.html#ac955a7999ec6fe17b7b728229a15454e" title=" " alt="" coords="31,71,322,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateTicket_1_1CreateTicketRequestHandler.html#a529f72388b4794c7d82977940c3b4a13" title=" " alt="" coords="5,136,348,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#acbe3cd3f8622a1f358b1941b50fc1baa" title="Sets up MFA using google authenticator app" alt="" coords="21,201,333,243"/>
 </map>

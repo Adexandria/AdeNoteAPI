@@ -1,11 +1,15 @@
 <map id="AdeNote.Infrastructure.Repository.IRepository.Remove" name="AdeNote.Infrastructure.Repository.IRepository.Remove">
-<area shape="rect" id="node1" title="Remove an existing object" alt="" coords="417,263,664,304"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#ad56006099b1f8ed076adfb27d4a31663" title=" " alt="" coords="42,5,333,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a9cfadde31812d4dbfe59a7a7529f0d04" title=" " alt="" coords="56,71,319,127"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a2dbac0dc61d3924b102383a9af80fb82" title=" " alt="" coords="53,152,321,193"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a811177a417d7c00208466e7186c762a9" title=" " alt="" coords="53,218,321,274"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#acb860bb5d10ed2d7df3c431ae9851a62" title="Deletes an existing book" alt="" coords="65,299,309,340"/>
-<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a9eda296d25b2515b4f99ba303e2b215f" title="Removes a particular page" alt="" coords="64,364,311,405"/>
-<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a221c29b77985940b8beda2dea14a892d" title="Removes an existing label" alt="" coords="60,429,315,471"/>
-<area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a13062f2ff2f6d75b4b03954bf8354950" title=" " alt="" coords="5,495,369,536"/>
+<area shape="rect" id="node1" title="Remove an existing object" alt="" coords="419,381,665,423"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#ad56006099b1f8ed076adfb27d4a31663" title=" " alt="" coords="43,5,333,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a9cfadde31812d4dbfe59a7a7529f0d04" title=" " alt="" coords="57,71,319,127"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveBook_1_1RemoveBookRequestHandler.html#abb99f17360ac0e9d152dc556cf2e08f5" title=" " alt="" coords="11,152,365,193"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveLabel_1_1RemoveRequestHandler.html#abce1576bf05a03b76b995789e560f4cc" title=" " alt="" coords="27,217,349,259"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemovePage_1_1RemovePageRequestHandler.html#afe1263dedbbca2c86a63d0bfec1b0b39" title=" " alt="" coords="13,283,363,324"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveTicket_1_1RemoveTicketRequestHandler.html#aae13cc4accee5d232a5810db9b404726" title=" " alt="" coords="5,348,371,389"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a2dbac0dc61d3924b102383a9af80fb82" title=" " alt="" coords="54,413,322,455"/>
+<area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a811177a417d7c00208466e7186c762a9" title=" " alt="" coords="54,479,322,535"/>
+<area shape="rect" id="node10" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#acb860bb5d10ed2d7df3c431ae9851a62" title="Deletes an existing book" alt="" coords="66,560,310,601"/>
+<area shape="rect" id="node11" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a9eda296d25b2515b4f99ba303e2b215f" title="Removes a particular page" alt="" coords="65,625,311,667"/>
+<area shape="rect" id="node12" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a221c29b77985940b8beda2dea14a892d" title="Removes an existing label" alt="" coords="61,691,315,732"/>
+<area shape="rect" id="node13" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a13062f2ff2f6d75b4b03954bf8354950" title=" " alt="" coords="6,756,370,797"/>
 </map>

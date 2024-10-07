@@ -1,6 +1,10 @@
 <map id="AdeNote.Infrastructure.Repository.ITicketRepository.GetTicket" name="AdeNote.Infrastructure.Repository.ITicketRepository.GetTicket">
-<area shape="rect" id="node1" title=" " alt="" coords="348,79,595,120"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#ad56006099b1f8ed076adfb27d4a31663" title=" " alt="" coords="7,5,298,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a94eabdb0de38c5d1b97725ce22fceffd" title=" " alt="" coords="31,71,275,127"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a050a13a2d63bc03ed6a7acd2d0d79d2a" title=" " alt="" coords="5,152,300,193"/>
+<area shape="rect" id="node1" title=" " alt="" coords="419,239,665,280"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#ad56006099b1f8ed076adfb27d4a31663" title=" " alt="" coords="43,5,333,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a94eabdb0de38c5d1b97725ce22fceffd" title=" " alt="" coords="66,71,310,127"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchTicketById_1_1FetchTicketByIdRequestHandler.html#a89b2163fc23012d7d86498ace3c4de26" title=" " alt="" coords="45,151,331,207"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequestHandler.html#ae4b92d91ba73233971787cb0739048ca" title=" " alt="" coords="57,231,319,287"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveTicket_1_1RemoveTicketRequestHandler.html#aae13cc4accee5d232a5810db9b404726" title=" " alt="" coords="5,312,371,353"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateTicket_1_1UpdateTicketRequestHandler.html#ad87db8b9305bde2d659b01f3aa15ef1b" title=" " alt="" coords="13,377,363,419"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a050a13a2d63bc03ed6a7acd2d0d79d2a" title=" " alt="" coords="41,443,335,484"/>
 </map>

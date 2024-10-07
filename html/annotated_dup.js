@@ -29,6 +29,7 @@ var annotated_dup =
           [ "ProgramExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ProgramExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ProgramExtension" ],
           [ "ResultExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ResultExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ResultExtension" ],
           [ "SwaggerOptions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions" ],
+          [ "ValidatorExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ValidatorExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ValidatorExtension" ],
           [ "ValidatorResult", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ValidatorResult.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ValidatorResult" ]
         ] ],
         [ "Middlewares", "namespaceAdeNote_1_1Infrastructure_1_1Middlewares.html", [
@@ -57,6 +58,124 @@ var annotated_dup =
           [ "Repository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository" ],
           [ "TicketRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository" ],
           [ "UserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository" ]
+        ] ],
+        [ "Requests", "namespaceAdeNote_1_1Infrastructure_1_1Requests.html", [
+          [ "CreateBook", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBook.html", [
+            [ "CreateBookRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBook_1_1CreateBookRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBook_1_1CreateBookRequest" ],
+            [ "CreateBookRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBook_1_1CreateBookRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBook_1_1CreateBookRequestHandler" ]
+          ] ],
+          [ "CreateBooks", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBooks.html", [
+            [ "CreateBooksRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBooks_1_1CreateBooksRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBooks_1_1CreateBooksRequest" ],
+            [ "CreateBooksRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBooks_1_1CreateBooksRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBooks_1_1CreateBooksRequestHandler" ]
+          ] ],
+          [ "CreateLabel", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1CreateLabel.html", [
+            [ "CreateLabelRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateLabel_1_1CreateLabelRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateLabel_1_1CreateLabelRequest" ],
+            [ "CreateLabelRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateLabel_1_1CreateLabelRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateLabel_1_1CreateLabelRequestHandler" ]
+          ] ],
+          [ "CreatePage", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePage.html", [
+            [ "CreatePageRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePage_1_1CreatePageRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePage_1_1CreatePageRequest" ],
+            [ "CreatePageRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePage_1_1CreatePageRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePage_1_1CreatePageRequestHandler" ]
+          ] ],
+          [ "CreatePageLabels", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePageLabels.html", [
+            [ "CreatePageLabelsRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePageLabels_1_1CreatePageLabelsRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePageLabels_1_1CreatePageLabelsRequest" ],
+            [ "CreatePageLabelsRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePageLabels_1_1CreatePageLabelsRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePageLabels_1_1CreatePageLabelsRequestHandler" ]
+          ] ],
+          [ "CreateTicket", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1CreateTicket.html", [
+            [ "CreateTicketRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateTicket_1_1CreateTicketRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateTicket_1_1CreateTicketRequest" ],
+            [ "CreateTicketRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateTicket_1_1CreateTicketRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateTicket_1_1CreateTicketRequestHandler" ]
+          ] ],
+          [ "FetchAllTickets", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1FetchAllTickets.html", [
+            [ "FetchAllTicketsRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchAllTickets_1_1FetchAllTicketsRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchAllTickets_1_1FetchAllTicketsRequest" ],
+            [ "FetchAllTicketsRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchAllTickets_1_1FetchAllTicketsRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchAllTickets_1_1FetchAllTicketsRequestHandler" ]
+          ] ],
+          [ "FetchAllTicketsByName", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1FetchAllTicketsByName.html", [
+            [ "FetchAllTicketsByNameRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchAllTicketsByName_1_1FetchAllTicketsByNameRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchAllTicketsByName_1_1FetchAllTicketsByNameRequest" ],
+            [ "FetchAllTicketsByNameRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchAllTicketsByName_1_1FetchAllTicketsByNameRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchAllTicketsByName_1_1FetchAllTicketsByNameRequestHandler" ]
+          ] ],
+          [ "FetchTicketById", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1FetchTicketById.html", [
+            [ "FetchTicketByIdRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchTicketById_1_1FetchTicketByIdRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchTicketById_1_1FetchTicketByIdRequest" ],
+            [ "FetchTicketByIdRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchTicketById_1_1FetchTicketByIdRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchTicketById_1_1FetchTicketByIdRequestHandler" ]
+          ] ],
+          [ "FetchUserTicketById", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById.html", [
+            [ "FetchUserTicketByIdRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequest" ],
+            [ "FetchUserTicketByIdRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequestHandler" ]
+          ] ],
+          [ "GetAllBooks", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllBooks.html", [
+            [ "GetAllBooksRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllBooks_1_1GetAllBooksRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllBooks_1_1GetAllBooksRequest" ],
+            [ "GetAllBooksRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllBooks_1_1GetAllBooksRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllBooks_1_1GetAllBooksRequestHandler" ]
+          ] ],
+          [ "GetAllLabels", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllLabels.html", [
+            [ "GetAllLabelsRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllLabels_1_1GetAllLabelsRequest.html", null ],
+            [ "GetAllLabelsRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllLabels_1_1GetAllLabelsRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllLabels_1_1GetAllLabelsRequestHandler" ]
+          ] ],
+          [ "GetAllPages", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllPages.html", [
+            [ "GetAllPagesRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllPages_1_1GetAllPagesRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllPages_1_1GetAllPagesRequest" ],
+            [ "GetAllPagesRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllPages_1_1GetAllPagesRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllPages_1_1GetAllPagesRequestHandler" ]
+          ] ],
+          [ "GetBookdById", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetBookdById.html", [
+            [ "GetBookByIdRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetBookdById_1_1GetBookByIdRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetBookdById_1_1GetBookByIdRequest" ],
+            [ "GetBookByIdRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetBookdById_1_1GetBookByIdRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetBookdById_1_1GetBookByIdRequestHandler" ]
+          ] ],
+          [ "GetLabelById", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById.html", [
+            [ "GetLabelByIdRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById_1_1GetLabelByIdRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById_1_1GetLabelByIdRequest" ],
+            [ "GetLabelByIdRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById_1_1GetLabelByIdRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById_1_1GetLabelByIdRequestHandler" ]
+          ] ],
+          [ "GetPagesById", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetPagesById.html", [
+            [ "GetPageByIdRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetPagesById_1_1GetPageByIdRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetPagesById_1_1GetPageByIdRequest" ],
+            [ "GetPageByIdRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetPagesById_1_1GetPageByIdRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetPagesById_1_1GetPageByIdRequestHandler" ]
+          ] ],
+          [ "RemoveAllPageLabels", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels.html", [
+            [ "RemoveAllPageLabelsRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels_1_1RemoveAllPageLabelsRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels_1_1RemoveAllPageLabelsRequest" ],
+            [ "RemoveAllPageLabelsRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels_1_1RemoveAllPageLabelsRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels_1_1RemoveAllPageLabelsRequestHandler" ]
+          ] ],
+          [ "RemoveBook", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveBook.html", [
+            [ "RemoveBookRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveBook_1_1RemoveBookRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveBook_1_1RemoveBookRequest" ],
+            [ "RemoveBookRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveBook_1_1RemoveBookRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveBook_1_1RemoveBookRequestHandler" ]
+          ] ],
+          [ "RemoveLabel", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveLabel.html", [
+            [ "RemoveLabelRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveLabel_1_1RemoveLabelRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveLabel_1_1RemoveLabelRequest" ],
+            [ "RemoveRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveLabel_1_1RemoveRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveLabel_1_1RemoveRequestHandler" ]
+          ] ],
+          [ "RemovePage", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1RemovePage.html", [
+            [ "RemovePageRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemovePage_1_1RemovePageRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemovePage_1_1RemovePageRequest" ],
+            [ "RemovePageRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemovePage_1_1RemovePageRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemovePage_1_1RemovePageRequestHandler" ]
+          ] ],
+          [ "RemovePageLabel", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1RemovePageLabel.html", [
+            [ "RemovePageLabelRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemovePageLabel_1_1RemovePageLabelRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemovePageLabel_1_1RemovePageLabelRequest" ],
+            [ "RemovePageLabelRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemovePageLabel_1_1RemovePageLabelRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemovePageLabel_1_1RemovePageLabelRequestHandler" ]
+          ] ],
+          [ "RemoveTicket", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveTicket.html", [
+            [ "RemoveTicketRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveTicket_1_1RemoveTicketRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveTicket_1_1RemoveTicketRequest" ],
+            [ "RemoveTicketRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveTicket_1_1RemoveTicketRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveTicket_1_1RemoveTicketRequestHandler" ]
+          ] ],
+          [ "SearchTickets", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTickets.html", [
+            [ "SearchTicketsRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTickets_1_1SearchTicketsRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTickets_1_1SearchTicketsRequest" ],
+            [ "SearchTicketsRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTickets_1_1SearchTicketsRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTickets_1_1SearchTicketsRequestHandler" ]
+          ] ],
+          [ "SearchTicketsByDate", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTicketsByDate.html", [
+            [ "SearchTicketsByDateRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTicketsByDate_1_1SearchTicketsByDateRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTicketsByDate_1_1SearchTicketsByDateRequest" ],
+            [ "SearchTicketsByDateRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTicketsByDate_1_1SearchTicketsByDateRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTicketsByDate_1_1SearchTicketsByDateRequestHandler" ]
+          ] ],
+          [ "TranslatePage", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage.html", [
+            [ "TranslatePageRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequest" ],
+            [ "TranslatePageRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequestHandler" ]
+          ] ],
+          [ "UpdateBook", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateBook.html", [
+            [ "UpdateBookRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateBook_1_1UpdateBookRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateBook_1_1UpdateBookRequest" ],
+            [ "UpdateBookRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateBook_1_1UpdateBookRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateBook_1_1UpdateBookRequestHandler" ]
+          ] ],
+          [ "UpdateLabel", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateLabel.html", [
+            [ "UpdateLabelRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateLabel_1_1UpdateLabelRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateLabel_1_1UpdateLabelRequest" ],
+            [ "UpdateLabelRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateLabel_1_1UpdateLabelRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateLabel_1_1UpdateLabelRequestHandler" ]
+          ] ],
+          [ "UpdatePage", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1UpdatePage.html", [
+            [ "UpdatePageRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdatePage_1_1UpdatePageRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdatePage_1_1UpdatePageRequest" ],
+            [ "UpdatePageRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdatePage_1_1UpdatePageRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdatePage_1_1UpdatePageRequestHandler" ]
+          ] ],
+          [ "UpdateTicket", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateTicket.html", [
+            [ "UpdateTicketRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateTicket_1_1UpdateTicketRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateTicket_1_1UpdateTicketRequest" ],
+            [ "UpdateTicketRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateTicket_1_1UpdateTicketRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateTicket_1_1UpdateTicketRequestHandler" ]
+          ] ]
         ] ],
         [ "Services", "namespaceAdeNote_1_1Infrastructure_1_1Services.html", [
           [ "Authentication", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication.html", [
@@ -180,11 +299,40 @@ var annotated_dup =
             [ "ValidObjectAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidObjectAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidObjectAttribute" ],
             [ "ValidTicketIdAttribute", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidTicketIdAttribute.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidTicketIdAttribute" ]
           ] ],
+          [ "Validations", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations.html", [
+            [ "CreateBooksValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1CreateBooksValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1CreateBooksValidator" ],
+            [ "CreateBookValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1CreateBookValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1CreateBookValidator" ],
+            [ "CreatePageLabelsValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1CreatePageLabelsValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1CreatePageLabelsValidator" ],
+            [ "CreatePageValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1CreatePageValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1CreatePageValidator" ],
+            [ "CreateTicketValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1CreateTicketValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1CreateTicketValidator" ],
+            [ "FetchAllTicketValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1FetchAllTicketValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1FetchAllTicketValidator" ],
+            [ "FetchTicketByIdValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1FetchTicketByIdValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1FetchTicketByIdValidator" ],
+            [ "FetchTicketsByNameValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1FetchTicketsByNameValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1FetchTicketsByNameValidator" ],
+            [ "FetchUserTicketByIdValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1FetchUserTicketByIdValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1FetchUserTicketByIdValidator" ],
+            [ "GetAllBooksValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetAllBooksValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetAllBooksValidator" ],
+            [ "GetAllLabelsValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetAllLabelsValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetAllLabelsValidator" ],
+            [ "GetAllPagesValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetAllPagesValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetAllPagesValidator" ],
+            [ "GetBookByIdValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetBookByIdValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetBookByIdValidator" ],
+            [ "GetPageByIdValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetPageByIdValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetPageByIdValidator" ],
+            [ "RemoveAllPageLabelsValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveAllPageLabelsValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveAllPageLabelsValidator" ],
+            [ "RemoveBookValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveBookValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveBookValidator" ],
+            [ "RemovePageLabelValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemovePageLabelValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemovePageLabelValidator" ],
+            [ "RemovePageValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemovePageValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemovePageValidator" ],
+            [ "SearchTicketsByDateValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1SearchTicketsByDateValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1SearchTicketsByDateValidator" ],
+            [ "SearchTicketsValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1SearchTicketsValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1SearchTicketsValidator" ],
+            [ "TranslatePageValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1TranslatePageValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1TranslatePageValidator" ],
+            [ "UpdateBookValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1UpdateBookValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1UpdateBookValidator" ],
+            [ "UpdateLabelValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1UpdateLabelValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1UpdateLabelValidator" ],
+            [ "UpdatePageValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1UpdatePageValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1UpdatePageValidator" ],
+            [ "UpdateTicketValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1UpdateTicketValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1UpdateTicketValidator" ]
+          ] ],
           [ "ActionResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult" ],
           [ "PaginatedResponse", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse" ],
+          [ "Application", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Application.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Application" ],
           [ "ApplicationScheduler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationScheduler.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationScheduler" ],
           [ "ApplicationSetting", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting" ],
           [ "BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration" ],
+          [ "CachingKeys", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys" ],
           [ "DefaultConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration" ],
           [ "EntityDoc", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc" ]
         ] ]

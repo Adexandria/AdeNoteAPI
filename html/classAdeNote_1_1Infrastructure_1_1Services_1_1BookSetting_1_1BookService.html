@@ -117,9 +117,9 @@ Collaboration diagram for AdeNote.Infrastructure.Services.BookSetting.BookServic
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a829ce3bfd77a64dc14b1c8485c57dd01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a829ce3bfd77a64dc14b1c8485c57dd01">BookService</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html">IBookRepository</a> _bookRepository, ICacheService _cacheService)</td></tr>
-<tr class="memdesc:a829ce3bfd77a64dc14b1c8485c57dd01"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Constructor  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a829ce3bfd77a64dc14b1c8485c57dd01">More...</a><br /></td></tr>
-<tr class="separator:a829ce3bfd77a64dc14b1c8485c57dd01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa9084c175bb4fd9a7bb728b025d694a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#afa9084c175bb4fd9a7bb728b025d694a">BookService</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html">IBookRepository</a> _bookRepository, ICacheService _cacheService, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys.html">CachingKeys</a> cachingKeys)</td></tr>
+<tr class="memdesc:afa9084c175bb4fd9a7bb728b025d694a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Constructor  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#afa9084c175bb4fd9a7bb728b025d694a">More...</a><br /></td></tr>
+<tr class="separator:afa9084c175bb4fd9a7bb728b025d694a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82f4718c8a1ec0b8b43b7f0961418e62"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a82f4718c8a1ec0b8b43b7f0961418e62">Add</a> (Guid userId, <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1BookCreateDTO.html">BookCreateDTO</a> createBook)</td></tr>
 <tr class="memdesc:a82f4718c8a1ec0b8b43b7f0961418e62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new book  <a href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a82f4718c8a1ec0b8b43b7f0961418e62">More...</a><br /></td></tr>
 <tr class="separator:a82f4718c8a1ec0b8b43b7f0961418e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,7 +158,7 @@ Properties</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:acf470adf0cac45ebb69d3abbc6bfe5df"><td class="memItemLeft" align="right" valign="top">readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#acf470adf0cac45ebb69d3abbc6bfe5df">_cacheKey</a> = &quot;Books&quot;</td></tr>
+<tr class="memitem:acf470adf0cac45ebb69d3abbc6bfe5df"><td class="memItemLeft" align="right" valign="top">readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#acf470adf0cac45ebb69d3abbc6bfe5df">_cacheKey</a></td></tr>
 <tr class="separator:acf470adf0cac45ebb69d3abbc6bfe5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -195,8 +195,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a829ce3bfd77a64dc14b1c8485c57dd01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a829ce3bfd77a64dc14b1c8485c57dd01">&#9670;&nbsp;</a></span>BookService() <span class="overload">[2/2]</span></h2>
+<a id="afa9084c175bb4fd9a7bb728b025d694a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa9084c175bb4fd9a7bb728b025d694a">&#9670;&nbsp;</a></span>BookService() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -211,7 +211,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">ICacheService&#160;</td>
-          <td class="paramname"><em>_cacheService</em>&#160;</td>
+          <td class="paramname"><em>_cacheService</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys.html">CachingKeys</a>&#160;</td>
+          <td class="paramname"><em>cachingKeys</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -226,11 +232,12 @@ Private Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">_bookRepository</td><td>Handles the persisting and querying of book object</td></tr>
     <tr><td class="paramname">_cacheService</td><td>Handles cache operations</td></tr>
+    <tr><td class="paramname">cachingKeys</td><td>Handles caching keys</td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00031">31</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00032">32</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 
 </div>
 </div>
@@ -273,7 +280,7 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1IBookService.html#ae4d1ea28775213449e1d5d9386c2b3b6">AdeNote.Infrastructure.Services.BookSetting.IBookService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00043">43</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00046">46</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -326,7 +333,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1IBookService.html#a45b5e8b345aa8e6c7b1b656f7eadb75a">AdeNote.Infrastructure.Services.BookSetting.IBookService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00065">65</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00068">68</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -368,7 +375,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1IBookService.html#abfc5b8ec59d1638812b103282185e8cc">AdeNote.Infrastructure.Services.BookSetting.IBookService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00088">88</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00091">91</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -421,7 +428,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1IBookService.html#afe2a9bbfd6a54032199fd700c030348e">AdeNote.Infrastructure.Services.BookSetting.IBookService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00113">113</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00116">116</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -475,7 +482,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1IBookService.html#a8e1b507115c3f541f75e3f7860db12e8">AdeNote.Infrastructure.Services.BookSetting.IBookService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00139">139</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00142">142</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -536,7 +543,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1IBookService.html#a36ffbeaf96bb45baf34eab553def52a2">AdeNote.Infrastructure.Services.BookSetting.IBookService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00168">168</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00171">171</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -563,7 +570,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly string AdeNote.Infrastructure.Services.BookSetting.BookService._cacheKey = &quot;Books&quot;</td>
+          <td class="memname">readonly string AdeNote.Infrastructure.Services.BookSetting.BookService._cacheKey</td>
         </tr>
       </table>
   </td>
@@ -573,7 +580,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00200">200</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00203">203</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 
 </div>
 </div>
@@ -616,7 +623,7 @@ Here is the call graph for this function:</div>
 
 <p>Handles the persisting and querying of book object </p>
 
-<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00198">198</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BookService_8cs_source.html#l00201">201</a> of file <a class="el" href="BookService_8cs_source.html">BookService.cs</a>.</p>
 
 </div>
 </div>

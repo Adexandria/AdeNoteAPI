@@ -1,5 +1,4 @@
 <map id="AdeNote.Infrastructure.Services.BookSetting.IBookService.Add" name="AdeNote.Infrastructure.Services.BookSetting.IBookService.Add">
-<area shape="rect" id="node1" title="Adds a new book" alt="" coords="293,39,527,80"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1BookController.html#aa0216c66fac5f7c915aee30fe80ad795" title="Adds a new book" alt="" coords="30,5,221,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1ExcelService.html#ad54177d88d5165621e59e8f52fce2520" title=" " alt="" coords="5,71,245,112"/>
+<area shape="rect" id="node1" title="Adds a new book" alt="" coords="293,5,527,47"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1ExcelService.html#ad54177d88d5165621e59e8f52fce2520" title=" " alt="" coords="5,5,245,47"/>
 </map>
