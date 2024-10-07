@@ -9,7 +9,7 @@ using MediatR;
 
 namespace AdeNote.Infrastructure.Requests.GetAllPages
 {
-    public class GetAllPagesRequestHandler : IRequestHandler<GetAllPagesRequest, ActionResult>
+    public class GetAllPagesRequestHandler : IRequestHandler<GetAllPagesRequest, ActionResult<IEnumerable<PageDTO>>>
     {
         public GetAllPagesRequestHandler(IPageRepository _pageRepository,
     ICacheService _cacheService, CachingKeys cachingKeys)
@@ -19,7 +19,7 @@ namespace AdeNote.Infrastructure.Requests.GetAllPages
             _pageCacheKey = cachingKeys.PageCacheKey;
         }
 
-        public async Task<ActionResult> Handle(GetAllPagesRequest request, CancellationToken cancellationToken)
+        public async Task<ActionResult<IEnumerable<PageDTO>>> Handle(GetAllPagesRequest request, CancellationToken cancellationToken)
         {
             var currentPages = cacheService.Search<Page>(_pageCacheKey, "*");
 

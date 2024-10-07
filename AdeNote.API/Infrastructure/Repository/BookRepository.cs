@@ -96,7 +96,7 @@ namespace AdeNote.Infrastructure.Repository
 
             var result = await SaveChanges();
 
-            logger.LogInformation("Delete book to database: {result}", result);
+            logger.LogInformation("Delete book from database: {result}", result);
 
             return result;
         }
@@ -117,7 +117,7 @@ namespace AdeNote.Infrastructure.Repository
 
             var result = await SaveChanges();
 
-            logger.LogInformation("Update book to database: {result}", result);
+            logger.LogInformation("Update book in database: {result}", result);
 
             return result;
         }
@@ -135,7 +135,7 @@ namespace AdeNote.Infrastructure.Repository
 
             var result = await SaveChanges();
 
-            logger.LogInformation("Update book to database: {result}", result);
+            logger.LogInformation("Update book in database: {result}", result);
 
             return result;
         }

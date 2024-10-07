@@ -50,6 +50,7 @@ namespace AdeNote.Infrastructure.Extension
             serviceCollection.AddScoped<ILabelRepository, LabelRepository>();
             serviceCollection.AddScoped<IPageRepository, PageRepository>();
             serviceCollection.AddScoped<ILabelPageRepository, LabelPageRepository>();
+            serviceCollection.AddScoped<IVideoRepository, VideoRepository>();
             serviceCollection.AddScoped<IUserRepository, UserRepository>();
             serviceCollection.AddScoped<IRefreshTokenRepository, RefreshRepository>();
             serviceCollection.AddScoped<ITicketRepository, TicketRepository>();
@@ -85,6 +86,8 @@ namespace AdeNote.Infrastructure.Extension
             serviceCollection.AddSingleton<Application>();
 
             serviceCollection.AddSingleton((_) => applicationSettings.CachingKeys);
+
+            serviceCollection.AddSingleton((_) => applicationSettings.CdnEndpoint);
         }
 
         public static void RegisterAuthentication(this IServiceCollection serviceCollection, ApplicationSetting applicationSetting)

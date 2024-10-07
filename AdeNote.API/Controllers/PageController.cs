@@ -3,6 +3,7 @@ using AdeNote.Infrastructure.Requests.CreatePage;
 using AdeNote.Infrastructure.Requests.CreatePageLabels;
 using AdeNote.Infrastructure.Requests.GetAllPages;
 using AdeNote.Infrastructure.Requests.GetPagesById;
+using AdeNote.Infrastructure.Requests.InsertVideo;
 using AdeNote.Infrastructure.Requests.RemoveAllPageLabels;
 using AdeNote.Infrastructure.Requests.RemovePage;
 using AdeNote.Infrastructure.Requests.RemovePageLabel;
@@ -39,7 +40,7 @@ namespace AdeNote.Controllers
         /// </summary>
         /// <param name="pageService">An interface that interacts with the page table</param>
         /// <param name="userIdentity">An interface that interacts with the user. This fetches the current user details</param>
-        public PageController(IPageService pageService, IUserIdentity userIdentity, Application application) : base(userIdentity,application)
+        public PageController(IPageService pageService, IUserIdentity userIdentity, Application application) : base(userIdentity, application)
         {
             _pageService = pageService;
         }
@@ -63,9 +64,9 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<IEnumerable<PageDTO>>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpGet]
-        public async Task<IActionResult> GetAllPages([ValidGuid("Invalid book id")]Guid bookId)
+        public async Task<IActionResult> GetAllPages([ValidGuid("Invalid book id")] Guid bookId)
         {
-            var response = await Application.SendAsync(new GetAllPagesRequest()
+            var response = await Application.SendAsync<GetAllPagesRequest,IEnumerable<PageDTO>>(new GetAllPagesRequest()
             {
                 BookId = bookId
             });
@@ -98,7 +99,7 @@ namespace AdeNote.Controllers
         {
             var response = await Application.SendAsync<GetPageByIdRequest, PageDTO>(new GetPageByIdRequest()
             {
-                BookId = bookId, 
+                BookId = bookId,
                 PageId = pageId
             });
 
@@ -143,6 +144,38 @@ namespace AdeNote.Controllers
             });
             return response.Response();
         }
+
+        [Consumes("multipart/form-data")]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpPost("{pageId}/videos")]
+        public async Task<IActionResult> InsertVideo(Guid pageId,Guid bookId,[FromForm] InsertVideoDto newVideo)
+        {
+            if (newVideo.File.ContentType != MimeType.mp4.GetDescription())
+                return BadRequest("Incorrect video type");
+
+            var memoryStream = new MemoryStream();
+
+            newVideo?.File?.CopyToAsync(memoryStream);
+
+            memoryStream.Position = 0;
+
+            var response = await Application.SendAsync<InsertVideoRequest,string>(new InsertVideoRequest() 
+            { 
+                BookId = bookId,
+                PageId = pageId,
+                Description = newVideo?.Description,
+                Stream = memoryStream
+            });
+
+            return response.Response();
+        }
+
+
+
 
         /// <summary>
         /// Adds labels to a page

@@ -80,6 +80,8 @@ namespace AdeNote.Infrastructure.Extension
                 .Map(d => d.Labels.MapTo(s=>s.Label),
                  s => s.Labels.MapFrom(s=>s.Title))
                 .Map(d=>d.Labels.MapTo(s=>s.Id), s=>s.Labels.MapFrom(s=>s.Id))
+                .Map(d=>d.Videos.MapTo(s=>s.Url), s => s.Videos.MapFrom(s=>s.FileName))
+                .Map(d=>d.Videos.MapTo(s=>s.Transcript), s=>s.Videos.MapFrom(s=>s.Transcript))
                 .CreateConfig();
         }
 
