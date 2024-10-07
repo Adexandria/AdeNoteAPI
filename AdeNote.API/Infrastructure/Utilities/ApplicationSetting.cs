@@ -16,5 +16,6 @@ namespace AdeNote.Infrastructure.Utilities
         public string ConnectionString { get; set; }
         public DefaultConfiguration DefaultConfiguration { get; set; }
         public HangFireUserConfiguration HangFireUserConfiguration { get; set; }
+        public CachingKeys CachingKeys { get; set; }
     }
 }

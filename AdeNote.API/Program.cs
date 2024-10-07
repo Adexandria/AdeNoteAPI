@@ -14,10 +14,7 @@ using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using Twilio.AspNet.Core;
-
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration.AddEnvironmentVariables().Build();
@@ -63,6 +60,10 @@ builder.Services.AddHealthChecks()
 
 builder.Services.RegisterTypes(applicationSettings);
 builder.Services.RegisterAuthentication(applicationSettings);
+builder.Services.RegisterValidation();
+builder.Services.AddMediatR(cfg => {
+    cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);
+});
 builder.Services.RegisterSwaggerDocs();
 builder.Services.RegisterAuthorization();
 

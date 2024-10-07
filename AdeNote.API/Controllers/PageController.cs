@@ -1,5 +1,15 @@
 ﻿using AdeNote.Infrastructure.Extension;
+using AdeNote.Infrastructure.Requests.CreatePage;
+using AdeNote.Infrastructure.Requests.CreatePageLabels;
+using AdeNote.Infrastructure.Requests.GetAllPages;
+using AdeNote.Infrastructure.Requests.GetPagesById;
+using AdeNote.Infrastructure.Requests.RemoveAllPageLabels;
+using AdeNote.Infrastructure.Requests.RemovePage;
+using AdeNote.Infrastructure.Requests.RemovePageLabel;
+using AdeNote.Infrastructure.Requests.TranslatePage;
+using AdeNote.Infrastructure.Requests.UpdatePage;
 using AdeNote.Infrastructure.Services.PageSettings;
+using AdeNote.Infrastructure.Utilities;
 using AdeNote.Infrastructure.Utilities.UserConfiguation;
 using AdeNote.Infrastructure.Utilities.ValidationAttributes;
 using AdeNote.Models.DTOs;
@@ -29,7 +39,7 @@ namespace AdeNote.Controllers
         /// </summary>
         /// <param name="pageService">An interface that interacts with the page table</param>
         /// <param name="userIdentity">An interface that interacts with the user. This fetches the current user details</param>
-        public PageController(IPageService pageService, IUserIdentity userIdentity) : base(userIdentity)
+        public PageController(IPageService pageService, IUserIdentity userIdentity, Application application) : base(userIdentity,application)
         {
             _pageService = pageService;
         }
@@ -55,7 +65,10 @@ namespace AdeNote.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllPages([ValidGuid("Invalid book id")]Guid bookId)
         {
-            var response = await _pageService.GetAll(bookId);
+            var response = await Application.SendAsync(new GetAllPagesRequest()
+            {
+                BookId = bookId
+            });
             return response.Response();
         }
 
@@ -83,7 +96,12 @@ namespace AdeNote.Controllers
         [HttpGet("{pageId}")]
         public async Task<IActionResult> GetPage([ValidGuid("Invalid book id")] Guid bookId, [ValidGuid("Invalid page id")] Guid pageId)
         {
-            var response = await _pageService.GetById(bookId, pageId);
+            var response = await Application.SendAsync<GetPageByIdRequest, PageDTO>(new GetPageByIdRequest()
+            {
+                BookId = bookId, 
+                PageId = pageId
+            });
+
             return response.Response();
         }
 
@@ -116,7 +134,13 @@ namespace AdeNote.Controllers
         [HttpPost]
         public async Task<IActionResult> CreatePage([ValidGuid("Invalid book id")] Guid bookId, PageCreateDTO pageCreate)
         {
-            var response = await _pageService.Add(bookId, CurrentUser, pageCreate);
+            var response = await Application.SendAsync(new CreatePageRequest()
+            {
+                BookId = bookId,
+                Content = pageCreate.Content,
+                Title = pageCreate.Title,
+                UserId = CurrentUser
+            });
             return response.Response();
         }
 
@@ -151,7 +175,13 @@ namespace AdeNote.Controllers
         public async Task<IActionResult> AddLabelsToPage([ValidGuid("Invalid book id")] Guid bookId, [ValidGuid("Invalid page id")] Guid pageId, 
             [ValidCollection("Invalid labels")]List<string> labels)
         {
-            var response = await _pageService.AddLabels(bookId, CurrentUser, pageId, labels);
+            var response = await Application.SendAsync(new CreatePageLabelsRequest()
+            {
+                BookId = bookId,
+                PageId = pageId,
+                Labels = labels,
+                UserId= CurrentUser
+            });
             return response.Response();
         }
 
@@ -185,7 +215,14 @@ namespace AdeNote.Controllers
         [HttpPut("{pageId}")]
         public async Task<IActionResult> UpdatePage([ValidGuid("Invalid book id")] Guid bookId, [ValidGuid("Invalid page id")] Guid pageId,PageUpdateDTO pageUpdate)
         {
-            var response = await _pageService.Update(bookId, CurrentUser, pageId, pageUpdate);
+            var response = await Application.SendAsync(new UpdatePageRequest() 
+            { 
+                UserId = CurrentUser,
+                BookId = bookId,
+                PageId = pageId,
+                UpdatePage = pageUpdate
+            });
+
             return response.Response();
         }
 
@@ -212,7 +249,13 @@ namespace AdeNote.Controllers
         [HttpDelete("{pageId}/labels")]
         public async Task<IActionResult> RemoveAllLabels([ValidGuid("Invalid book id")] Guid bookId, [ValidGuid("Invalid page id")] Guid pageId)
         {
-            var response = await _pageService.RemoveAllPageLabels(bookId, CurrentUser, pageId);
+            var response = await Application.SendAsync(new RemoveAllPageLabelsRequest() 
+            { 
+                PageId= pageId,
+                BookId= bookId,
+                UserId = CurrentUser
+            });
+
             return response.Response();
         }
 
@@ -242,7 +285,14 @@ namespace AdeNote.Controllers
         [HttpDelete("{pageId}/labels/search")]
         public async Task<IActionResult> RemoveAllLabels([ValidGuid("Invalid book id")] Guid bookId, [ValidGuid("Invalid page id")] Guid pageId, string title)
         {
-            var response = await _pageService.RemovePageLabel(bookId, CurrentUser, pageId, title);
+            var response = await Application.SendAsync(new RemovePageLabelRequest() 
+            {
+                UserId = CurrentUser,
+                PageId = pageId,
+                BookId = bookId,
+                Title = title
+            });
+
             return response.Response();
         }
 
@@ -272,7 +322,12 @@ namespace AdeNote.Controllers
         [HttpDelete("{pageId}")]
         public async Task<IActionResult> DeletePage([ValidGuid("Invalid book id")] Guid bookId, [ValidGuid("Invalid page id")] Guid pageId)
         {
-            Infrastructure.Utilities.ActionResult response = await _pageService.Remove(bookId, CurrentUser, pageId);
+            Infrastructure.Utilities.ActionResult response = await Application.SendAsync(new RemovePageRequest()
+            {
+                PageId = pageId,
+                BookId=bookId,
+                UserId = CurrentUser
+            });
             return response.Response();
         }
 
@@ -304,7 +359,13 @@ namespace AdeNote.Controllers
         [HttpPost("{pageId}/translate")]
         public async Task<IActionResult> TranslatePage([ValidGuid("Invalid book id")] Guid bookId, [ValidGuid("Invalid page id")] Guid pageId, [Required]string to, CancellationToken cancellationToken)
         {
-            var response = await _pageService.TranslatePage(bookId, CurrentUser, pageId, to, cancellationToken);
+            var response = await Application.SendAsync(new TranslatePageRequest()
+            {
+                PageId = pageId,
+                BookId = bookId,
+                TranslatedLanguage = to,
+                UserId = CurrentUser
+            });
             return response.Response();
         }
 

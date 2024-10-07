@@ -28,10 +28,12 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
         /// A constructor
         /// </summary>
         /// <param name="_labelRepository">Handles persisting and querying</param>
-        public LabelService(ILabelRepository _labelRepository, ICacheService _cacheService)
+        public LabelService(ILabelRepository _labelRepository,
+            ICacheService _cacheService, CachingKeys cachingKeys)
         {
             labelRepository = _labelRepository;
             cacheService = _cacheService;
+            _cacheKey = cachingKeys.LabelCacheKey;
         }
 
         /// <summary>
@@ -64,7 +66,7 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
             if (currentLabels == null)
             {
                 currentLabels = labelRepository.GetAll().ToList();
-                currentLabels.ForEach(label => cacheService.Set($"{_cacheKey}:{label.Id}",label, DateTime.UtcNow.AddMinutes(30)));
+                currentLabels.Foreach(label => cacheService.Set($"{_cacheKey}:{label.Id}",label, DateTime.UtcNow.AddMinutes(30)));
             }
                
             var currentLabelsDTO = currentLabels.Map<IEnumerable<Label>,IEnumerable<LabelDTO>>(MappingService.LabelConfig());
@@ -154,6 +156,6 @@ namespace AdeNote.Infrastructure.Services.LabelSettings
         }
         public ILabelRepository labelRepository { get; set; }
 
-        private string _cacheKey = "Labels";
+        private readonly string _cacheKey;
     }
 }

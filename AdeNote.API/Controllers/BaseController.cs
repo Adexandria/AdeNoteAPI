@@ -1,4 +1,5 @@
-﻿using AdeNote.Infrastructure.Utilities.UserConfiguation;
+﻿using AdeNote.Infrastructure.Utilities;
+using AdeNote.Infrastructure.Utilities.UserConfiguation;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AdeNote.Controllers
@@ -25,7 +26,18 @@ namespace AdeNote.Controllers
         {
             CurrentUser = userIdentity.UserId;
             CurrentEmail = userIdentity.Email;
+        }
 
+        public BaseController(IUserIdentity userIdentity, Application application)
+        {
+            CurrentUser = userIdentity.UserId;
+            CurrentEmail = userIdentity.Email;
+            Application = application;
+        }
+
+        public BaseController(Application application)
+        {
+            Application = application;
         }
 
         /// <summary>
@@ -37,5 +49,10 @@ namespace AdeNote.Controllers
         /// Email of the authenticated user
         /// </summary>
         protected string CurrentEmail { get; set; }
+
+        /// <summary>
+        /// Manages request handlers
+        /// </summary>
+        protected Application Application { get; set; }
     }
 }
