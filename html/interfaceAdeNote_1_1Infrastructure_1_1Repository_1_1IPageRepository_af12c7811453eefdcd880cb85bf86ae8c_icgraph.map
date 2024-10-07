@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Repository.IPageRepository.GetBookPages" name="AdeNote.Infrastructure.Repository.IPageRepository.GetBookPages">
+<area shape="rect" id="node1" title="Gets all pages from a book" alt="" coords="388,39,635,80"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a465f011dbaa238246dfeb37707986acb" title="Gets all pages in a book" alt="" coords="56,5,289,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllPages_1_1GetAllPagesRequestHandler.html#aa78ce274537e3d723a5cbb353d449781" title=" " alt="" coords="5,71,340,112"/>
+</map>

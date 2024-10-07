@@ -1,0 +1,8 @@
+<map id="AdeNote.Controllers.AuthenticationController.VerifyTOTP" name="AdeNote.Controllers.AuthenticationController.VerifyTOTP">
+<area shape="rect" id="node1" title="Verifies time based One time password" alt="" coords="5,159,257,200"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#aaf76f4e77c5e74af2928f3296f7828ed" title="Add data to cookie" alt="" coords="323,5,575,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#abc0951c4ce938409b13fe298b16bbe17" title=" " alt="" coords="315,71,582,127"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#ae9f46cb92afbebc3a6192a3e014228ad" title="Reads the user details from the token" alt="" coords="305,151,592,207"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a5bc24a38f2a0d984148fd747b4d5c226" title=" " alt="" coords="323,232,575,273"/>
+<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a10e754e707c9b16719c82a932f3a85e8" title="Verifies authenticator otp" alt="" coords="327,298,571,354"/>
+</map>
