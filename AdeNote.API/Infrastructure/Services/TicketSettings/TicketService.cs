@@ -54,7 +54,7 @@ namespace AdeNote.Infrastructure.Services.TicketSettings
                 cancellationToken.ThrowIfCancellationRequested();
                 var url = await blobService.UploadImage($"T{Guid.NewGuid().ToString()[..4]}", newTicket.Image, cancellationToken) ?? $"T{Guid.NewGuid().ToString()[..4]}";
 
-                if (url != "Success")
+                if (string.IsNullOrEmpty(url))
                 {
                     return ActionResult<string>.Failed(url, 400);
                 }

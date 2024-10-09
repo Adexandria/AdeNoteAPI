@@ -30,6 +30,7 @@ namespace AdeNote.Infrastructure.Services.SmsSettings
         /// <param name="sms">An object that includes the phonenumber and message</param>
         public void SendSms(Sms sms)
         {
+
             new Thread(async () =>
             {
                 TwilioClient.Init(_smsConfig.AccountKey, _smsConfig.AccountSecret);

@@ -53,8 +53,7 @@ namespace AdeNote.Infrastructure.Services.Blob
             }
             catch (RequestFailedException)
             {
-                return fileService.UploadImage(fileName, file, mimeType);
-               
+                return fileService.UploadImage(fileName, file, mimeType);              
             }
         }
 

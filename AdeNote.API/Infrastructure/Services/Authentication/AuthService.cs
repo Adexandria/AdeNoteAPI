@@ -100,7 +100,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
 
             var imagePath = await blobService.UploadImage($"qrCode{imageName}", memoryStream,cancellationToken);
 
-            if( imagePath != "Success")
+            if(string.IsNullOrEmpty(imagePath))
             {
                 return ActionResult<AuthenticatorDTO>.Failed(imagePath, StatusCodes.Status400BadRequest);
             }
@@ -146,7 +146,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
 
             var message = $"Enter your authentication code {token} to verify your phone number";
 
-            smsService.SendSms(new Sms(phoneNumber, message));
+            //smsService.SendSms(new Sms(phoneNumber, message));
 
             return ActionResult.SuccessfulOperation();
 
@@ -247,7 +247,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
 
             var message = $"Hello, your AdeNote secure code is {generatedToken}. DO NOT SHARE this with anyone. Only valid for 3 minutes";
 
-            smsService.SendSms(new Sms(currentUser.PhoneNumber, message));
+            //smsService.SendSms(new Sms(currentUser.PhoneNumber, message));
 
             return ActionResult.SuccessfulOperation();
         }
@@ -444,9 +444,9 @@ namespace AdeNote.Infrastructure.Services.Authentication
             if (string.IsNullOrEmpty(refreshToken))
                 return ActionResult.Failed("Invalid refresh token", StatusCodes.Status404NotFound);
 
-            var currentRefreshToken = await refreshTokenRepository.GetRefreshToken(refreshToken);
+            var isRevoked = await refreshTokenRepository.IsTokenRevoked(refreshToken);
 
-            if (currentRefreshToken == null || currentRefreshToken.IsRevoked)
+            if (isRevoked)
                 return ActionResult.Failed("Invalid token", StatusCodes.Status400BadRequest);
 
             return ActionResult.SuccessfulOperation();
@@ -638,7 +638,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
 
             if (authenticatedUser.LockoutEnabled)
             {
-                return ActionResult<UserDTO>.Failed("Account has been disable. Please contact admin");
+                return ActionResult<UserDTO>.Failed("Account has been disabled. Please contact admin");
 
             }
 
@@ -650,8 +650,8 @@ namespace AdeNote.Infrastructure.Services.Authentication
 
                 var substitutions = new Dictionary<string, string>()
                     {
-                    {"[Token]" , emailConfirmationToken },
-                    {"[Name]" , $"{ authenticatedUser.FirstName} {authenticatedUser.LastName}" }
+                        {"[Token]" , emailConfirmationToken },
+                        {"[Name]" , $"{ authenticatedUser.FirstName} {authenticatedUser.LastName}" }
                     };
 
                 _notificationService.SendNotification(new Email(authenticatedUser.Email, "Confirm email"),
@@ -689,9 +689,7 @@ namespace AdeNote.Infrastructure.Services.Authentication
                 return ActionResult<string>.Failed("Invalid refresh token", StatusCodes.Status400BadRequest);
             }
 
-            var userId = await refreshTokenRepository.GetUserByRefreshToken(refreshToken);
-
-            var user = await userRepository.GetUser(userId);
+            var user = await refreshTokenRepository.GetUserByRefreshToken(refreshToken);
 
             if (user == null)
             {

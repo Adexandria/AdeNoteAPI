@@ -32,7 +32,7 @@ namespace AdeNote.Infrastructure.Services.Export
 
             if (mime == MimeType.docx)
             {
-                var template = await _blobService.DownloadStream("AdenoteLetterHead", cancellationToken, MimeType.docx);
+                var template = await _blobService.DownloadStream("AdenoteLetterHead", cancellationToken, MimeType.docx) ?? throw new NullReferenceException("AdenoteLetterHead");
                 file = _wordService.ExportToWord(name, entities, template);
             }
             else
@@ -44,7 +44,7 @@ namespace AdeNote.Infrastructure.Services.Export
 
             var url = await _blobService.UploadImage(name, file,cancellationToken ,mime);
 
-            if(url != "Success")
+            if(string.IsNullOrEmpty(url))
             {
                 return ActionResult<string>.Failed($"{url}, try {MimeType.docx} format",400);
             }

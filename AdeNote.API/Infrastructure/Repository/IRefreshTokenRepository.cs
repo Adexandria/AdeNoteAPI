@@ -4,7 +4,7 @@ namespace AdeNote.Infrastructure.Repository
 {
     public interface IRefreshTokenRepository :IRepository<RefreshToken>
     {
-        Task<Guid> GetUserByRefreshToken(string refreshToken);
+        Task<User> GetUserByRefreshToken(string refreshToken);
 
         /// <summary>
         /// Gets the refresh token of a user
@@ -20,5 +20,12 @@ namespace AdeNote.Infrastructure.Repository
         /// <param name="refreshToken">Refresh token</param>
         /// <returns>Refresh token object</returns>
         Task<RefreshToken> GetRefreshToken(string refreshToken);
+
+        /// <summary>
+        /// Checks if token has been revoked
+        /// </summary>
+        /// <param name="refreshToken">refresh token</param>
+        /// <returns>return true if it has revoked and false if otherwise</returns>
+        Task<bool> IsTokenRevoked(string refreshToken);
     }
 }

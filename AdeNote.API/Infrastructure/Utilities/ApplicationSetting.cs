@@ -15,7 +15,7 @@ namespace AdeNote.Infrastructure.Utilities
         public AzureAdConfiguration AzureAdConfiguration { get; set; }
         public string ConnectionString { get; set; }
         public DefaultConfiguration DefaultConfiguration { get; set; }
-        public HangFireUserConfiguration HangFireUserConfiguration { get; set; }
+        public UserConfiguration HangFireUserConfiguration { get; set; }
         public CachingKeys CachingKeys { get; set; }
     }
 }
