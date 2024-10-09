@@ -26,26 +26,26 @@ namespace AdeNote.Infrastructure.Repository
 
         public async Task<RefreshToken> GetRefreshToken(string refreshToken)
         {
-            var refreshTokens = await Db.RefreshTokens.ToListAsync();
-
-            var currentRefreshToken = refreshTokens.FirstOrDefault(s => s.Token == refreshToken);
+            var currentRefreshToken = await Db.RefreshTokens.FirstOrDefaultAsync(s => s.Token == refreshToken);
 
             return currentRefreshToken;
+        }
+
+        public async Task<bool> IsTokenRevoked(string refreshToken)
+        {
+           return Db.RefreshTokens.Any(s=>s.Token == refreshToken && s.IsRevoked);
         }
 
         public async Task<RefreshToken> GetRefreshTokenByUserId(Guid userId, string refreshToken)
         {
-            var refreshTokens = await Db.RefreshTokens.ToListAsync();
-
-            var currentRefreshToken = refreshTokens.FirstOrDefault(s => s.UserId == userId && s.Token == refreshToken);
-
+            var currentRefreshToken = await Db.RefreshTokens.FirstOrDefaultAsync(s => s.UserId == userId && s.Token == refreshToken);
             return currentRefreshToken;
         }
 
-        public async Task<Guid> GetUserByRefreshToken(string refreshToken)
+        public async Task<User> GetUserByRefreshToken(string refreshToken)
         {
-            return await Db.RefreshTokens.Where(s => s.Token == refreshToken).
-                Select(s => s.UserId).FirstOrDefaultAsync();
+            return await Db.RefreshTokens.Where(s => s.Token == refreshToken)
+                .Include(s=>s.User).Select(s=>s.User).FirstOrDefaultAsync();
         }
 
         public async Task<bool> Remove(RefreshToken entity)
@@ -54,7 +54,7 @@ namespace AdeNote.Infrastructure.Repository
 
             var result = await SaveChanges();
 
-            logger.LogInformation("Remove refresh token to database: {result}", result);
+            logger.LogInformation("Remove refresh token from database: {result}", result);
 
             return result;
         }
@@ -65,7 +65,7 @@ namespace AdeNote.Infrastructure.Repository
 
             var result = await SaveChanges();
 
-            logger.LogInformation("Update refresh token to database: {result}", result);
+            logger.LogInformation("Update refresh token in database: {result}", result);
 
             return result;
         }

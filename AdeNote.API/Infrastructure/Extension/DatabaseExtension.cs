@@ -28,6 +28,7 @@ namespace AdeNote.Infrastructure.Extension
 
             var databaseCreator = dbContext.GetService<IRelationalDatabaseCreator>();
 
+            // make the migration run if they are pending migrations. Do not use migration api
             if (databaseCreator.CanConnect())
             {
                 dbContext.Database.Migrate();
@@ -36,7 +37,7 @@ namespace AdeNote.Infrastructure.Extension
             logger.LogInformation("Tables have been created");
         }
 
-        public static void SeedHangFireUser(this WebApplication app, HangFireUserConfiguration config)
+        public static void SeedHangFireUser(this WebApplication app, UserConfiguration config)
         {
             if (config == null)
             {

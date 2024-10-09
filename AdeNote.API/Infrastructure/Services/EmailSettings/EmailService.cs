@@ -17,7 +17,6 @@ namespace AdeNote.Infrastructure.Services.EmailSettings
         }
         public void SendMessage<T>(T email) where T : Email
         {
-
            ThreadPool.QueueUserWorkItem(o => Send(email));
         }
 

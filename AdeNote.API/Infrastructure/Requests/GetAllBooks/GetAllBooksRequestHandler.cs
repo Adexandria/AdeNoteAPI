@@ -35,7 +35,7 @@ namespace AdeNote.Infrastructure.Requests.GetAllBooks
 
             var currentBooksDTO = currentBooks.Map<IEnumerable<Book>, IEnumerable<BookDTO>>(MappingService.BookConfig());
 
-            return await Task.FromResult(ActionResult<IEnumerable<BookDTO>>.SuccessfulOperation(currentBooksDTO));
+            return ActionResult<IEnumerable<BookDTO>>.SuccessfulOperation(currentBooksDTO);
         }
 
         private readonly IBookRepository bookRepository;
