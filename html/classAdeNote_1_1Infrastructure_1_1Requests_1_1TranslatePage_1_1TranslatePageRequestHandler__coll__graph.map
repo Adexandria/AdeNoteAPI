@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Requests.TranslatePage.TranslatePageRequestHandler" name="AdeNote.Infrastructure.Requests.TranslatePage.TranslatePageRequestHandler">
+<area shape="rect" id="node1" title=" " alt="" coords="615,101,873,157"/>
+<area shape="rect" id="node2" title=" " alt="" coords="231,5,442,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html" title="An interface to handles page object" alt="" coords="213,71,460,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="6,78,163,105"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html" title="An interface that includes the behaviour of a book object" alt="" coords="213,136,460,177"/>
+<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,143,164,170"/>
+<area shape="rect" id="node7" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1ITextTranslation.html" title=" " alt="" coords="220,201,453,243"/>
+</map>

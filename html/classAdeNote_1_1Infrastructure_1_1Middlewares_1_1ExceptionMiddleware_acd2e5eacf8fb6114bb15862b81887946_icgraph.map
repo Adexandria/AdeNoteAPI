@@ -1,0 +1,4 @@
+<map id="AdeNote.Infrastructure.Middlewares.ExceptionMiddleware.HandleExceptionAsync" name="AdeNote.Infrastructure.Middlewares.ExceptionMiddleware.HandleExceptionAsync">
+<area shape="rect" id="node1" title="Handles the error messages being displayed" alt="" coords="315,5,629,47"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Middlewares_1_1ExceptionMiddleware.html#a6b41d133e4f6a5908dcceab7e2b72060" title="Triggers when a request has been made and handles exceptions if any" alt="" coords="5,5,267,47"/>
+</map>

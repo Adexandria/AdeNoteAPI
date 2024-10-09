@@ -1,0 +1,6 @@
+<map id="AdeNote.Infrastructure.Repository.IBookRepository.Add" name="AdeNote.Infrastructure.Repository.IBookRepository.Add">
+<area shape="rect" id="node1" title=" " alt="" coords="399,71,645,112"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a82f4718c8a1ec0b8b43b7f0961418e62" title="Adds a new book" alt="" coords="61,5,295,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBook_1_1CreateBookRequestHandler.html#a593c09811e88c6a9f0fbabfa257b01ac" title=" " alt="" coords="13,71,343,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBooks_1_1CreateBooksRequestHandler.html#a5ed3a2a9accc32d80d4dc45ac635986b" title=" " alt="" coords="5,136,351,177"/>
+</map>

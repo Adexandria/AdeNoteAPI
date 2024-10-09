@@ -1,0 +1,6 @@
+<map id="AdeNote.Infrastructure.Requests.GetAllPages.GetAllPagesRequestHandler" name="AdeNote.Infrastructure.Requests.GetAllPages.GetAllPagesRequestHandler">
+<area shape="rect" id="node1" title=" " alt="" coords="629,49,916,90"/>
+<area shape="rect" id="node2" title=" " alt="" coords="212,5,475,61"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html" title="An interface to handles page object" alt="" coords="220,86,467,127"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,93,163,120"/>
+</map>

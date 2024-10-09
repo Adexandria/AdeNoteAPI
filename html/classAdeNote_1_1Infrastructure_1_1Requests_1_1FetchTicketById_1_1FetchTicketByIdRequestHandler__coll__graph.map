@@ -1,0 +1,10 @@
+<map id="AdeNote.Infrastructure.Requests.FetchTicketById.FetchTicketByIdRequestHandler" name="AdeNote.Infrastructure.Requests.FetchTicketById.FetchTicketByIdRequestHandler">
+<area shape="rect" id="node1" title=" " alt="" coords="644,144,929,200"/>
+<area shape="rect" id="node2" title=" " alt="" coords="234,5,453,61"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html" title="An interface that includes the behaviour of cloud storage" alt="" coords="227,86,460,127"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1EventConfiguration.html" title=" " alt="" coords="225,151,461,193"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html" title=" " alt="" coords="220,217,467,258"/>
+<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="10,224,166,251"/>
+<area shape="rect" id="node7" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html" title=" " alt="" coords="220,282,467,323"/>
+<area shape="rect" id="node8" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,289,171,316"/>
+</map>

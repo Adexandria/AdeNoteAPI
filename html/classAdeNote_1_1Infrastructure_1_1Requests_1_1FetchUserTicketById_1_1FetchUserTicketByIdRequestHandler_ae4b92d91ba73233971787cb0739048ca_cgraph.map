@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Requests.FetchUserTicketById.FetchUserTicketByIdRequestHandler.Handle" name="AdeNote.Infrastructure.Requests.FetchUserTicketById.FetchUserTicketByIdRequestHandler.Handle">
+<area shape="rect" id="node1" title=" " alt="" coords="5,162,268,218"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="327,5,557,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#a7e39627f289cb9a027fe1e901da790e8" title=" " alt="" coords="319,71,565,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a2f9c93cf4ef3a74b15a0bf2b71cd21ad" title="Get existings of a user" alt="" coords="319,136,565,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="321,201,563,243"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a849c3dcdfb5f595752d6c90222116ca5" title=" " alt="" coords="316,267,568,308"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#ac9f6ba0abcd310a85cd5f9193c4f31bc" title=" " alt="" coords="321,332,563,373"/>
+</map>
