@@ -81,7 +81,6 @@ var hierarchy =
       [ "AdeNote.Infrastructure.Exceptions.HealthCheckException", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1HealthCheckException.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Middlewares.ExceptionMiddleware", "classAdeNote_1_1Infrastructure_1_1Middlewares_1_1ExceptionMiddleware.html", null ],
-    [ "AdeNote.Infrastructure.Utilities.AuthenticationFilter.HangFireUserConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1HangFireUserConfiguration.html", null ],
     [ "IAuthorizationRequirement", null, [
       [ "AdeNote.Infrastructure.Utilities.AuthorisationHandler.RoleRequirement", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirement.html", null ]
     ] ],
@@ -203,7 +202,6 @@ var hierarchy =
       [ "AdeNote.Infrastructure.Requests.CreatePage.CreatePageRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePage_1_1CreatePageRequest.html", null ],
       [ "AdeNote.Infrastructure.Requests.CreatePageLabels.CreatePageLabelsRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePageLabels_1_1CreatePageLabelsRequest.html", null ],
       [ "AdeNote.Infrastructure.Requests.CreateTicket.CreateTicketRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateTicket_1_1CreateTicketRequest.html", null ],
-      [ "AdeNote.Infrastructure.Requests.GetAllPages.GetAllPagesRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllPages_1_1GetAllPagesRequest.html", null ],
       [ "AdeNote.Infrastructure.Requests.RemoveAllPageLabels.RemoveAllPageLabelsRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels_1_1RemoveAllPageLabelsRequest.html", null ],
       [ "AdeNote.Infrastructure.Requests.RemoveBook.RemoveBookRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveBook_1_1RemoveBookRequest.html", null ],
       [ "AdeNote.Infrastructure.Requests.RemoveLabel.RemoveLabelRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveLabel_1_1RemoveLabelRequest.html", null ],
@@ -224,6 +222,9 @@ var hierarchy =
     ] ],
     [ "IRequest< ActionResult< IEnumerable< LabelDTO >>>", null, [
       [ "AdeNote.Infrastructure.Requests.GetAllLabels.GetAllLabelsRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllLabels_1_1GetAllLabelsRequest.html", null ]
+    ] ],
+    [ "IRequest< ActionResult< IEnumerable< PageDTO >>>", null, [
+      [ "AdeNote.Infrastructure.Requests.GetAllPages.GetAllPagesRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllPages_1_1GetAllPagesRequest.html", null ]
     ] ],
     [ "IRequest< ActionResult< LabelDTO >>", null, [
       [ "AdeNote.Infrastructure.Requests.GetLabelById.GetLabelByIdRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById_1_1GetLabelByIdRequest.html", null ]
@@ -250,7 +251,6 @@ var hierarchy =
       [ "AdeNote.Infrastructure.Requests.CreatePage.CreatePageRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePage_1_1CreatePageRequestHandler.html", null ],
       [ "AdeNote.Infrastructure.Requests.CreatePageLabels.CreatePageLabelsRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePageLabels_1_1CreatePageLabelsRequestHandler.html", null ],
       [ "AdeNote.Infrastructure.Requests.CreateTicket.CreateTicketRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateTicket_1_1CreateTicketRequestHandler.html", null ],
-      [ "AdeNote.Infrastructure.Requests.GetAllPages.GetAllPagesRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllPages_1_1GetAllPagesRequestHandler.html", null ],
       [ "AdeNote.Infrastructure.Requests.GetLabelById.GetLabelByIdRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById_1_1GetLabelByIdRequestHandler.html", null ],
       [ "AdeNote.Infrastructure.Requests.RemoveAllPageLabels.RemoveAllPageLabelsRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels_1_1RemoveAllPageLabelsRequestHandler.html", null ],
       [ "AdeNote.Infrastructure.Requests.RemoveBook.RemoveBookRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveBook_1_1RemoveBookRequestHandler.html", null ],
@@ -281,6 +281,9 @@ var hierarchy =
     ] ],
     [ "IRequestHandler< GetAllLabelsRequest, ActionResult< IEnumerable< LabelDTO >>>", null, [
       [ "AdeNote.Infrastructure.Requests.GetAllLabels.GetAllLabelsRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllLabels_1_1GetAllLabelsRequestHandler.html", null ]
+    ] ],
+    [ "IRequestHandler< GetAllPagesRequest, ActionResult< IEnumerable< PageDTO >>>", null, [
+      [ "AdeNote.Infrastructure.Requests.GetAllPages.GetAllPagesRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllPages_1_1GetAllPagesRequestHandler.html", null ]
     ] ],
     [ "IRequestHandler< GetBookByIdRequest, ActionResult< BookDTO >>", null, [
       [ "AdeNote.Infrastructure.Requests.GetBookdById.GetBookByIdRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetBookdById_1_1GetBookByIdRequestHandler.html", null ]
@@ -345,6 +348,7 @@ var hierarchy =
       [ "AdeNote.Migrations.secondmigration", "classAdeNote_1_1Migrations_1_1secondmigration.html", null ],
       [ "AdeNote.Migrations.setuptexttranslation", "classAdeNote_1_1Migrations_1_1setuptexttranslation.html", null ]
     ] ],
+    [ "AdeNote.Infrastructure.Utilities.AuthenticationFilter.MiniProfilerAuthorization", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1MiniProfilerAuthorization.html", null ],
     [ "ModelSnapshot", null, [
       [ "AdeNote.Migrations.NoteDbContextModelSnapshot", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html", null ]
     ] ],
@@ -391,6 +395,7 @@ var hierarchy =
     [ "AdeNote.Models.DTOs.TicketStatusDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStatusDto.html", null ],
     [ "AdeNote.Models.DTOs.TicketStreamDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto.html", null ],
     [ "AdeNote.Models.DTOs.TranslationDto", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.AuthenticationFilter.UserConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1UserConfiguration.html", null ],
     [ "AdeNote.Infrastructure.Utilities.UserConfiguation.UserId", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1UserId.html", null ],
     [ "AdeNote.Models.DTOs.UsersDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO.html", [
       [ "AdeNote.Models.DTOs.UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", null ]

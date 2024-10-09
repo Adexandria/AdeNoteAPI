@@ -6,7 +6,7 @@ var classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension =
     [ "ExtractCachingKeys", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a369eeb578d531452f227172aff553c67", null ],
     [ "ExtractConnectionString", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#adc6f85db7e3e894b014079dd13593de2", null ],
     [ "ExtractDefaultConfiguration", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#ac78abc9e7d6ca2e4088b01e8784eecc4", null ],
-    [ "ExtractHangFireUserConfiguration", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a3dc5e43857efc2f7d9e6ca67eef16e71", null ],
+    [ "ExtractHangFireUserConfiguration", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a29230dbe07f810f4e3fd9c615c59a994", null ],
     [ "ExtractMessagingConfiguration", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a123e8423c8d621146a0a7b90ebb77c90", null ],
     [ "ExtractTokenSecret", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a9639e4eae20cf4ffec20544423e6399d", null ],
     [ "ExtractTranslateConfiguration", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#af07612e6cefae79df70cfdd22aefc3c1", null ]

@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"SearchTicketsByDateRequest_8cs.html":[2,0,0,2,4,23,0],
+"SearchTicketsByDateRequest_8cs_source.html":[2,0,0,2,4,23,0],
 "SearchTicketsByDateValidator_8cs.html":[2,0,0,2,6,12,18],
 "SearchTicketsByDateValidator_8cs_source.html":[2,0,0,2,6,12,18],
 "SearchTicketsRequestHandler_8cs.html":[2,0,0,2,4,22,1],
@@ -85,6 +87,8 @@ var NAVTREEINDEX2 =
 "UpdateTicketRequest_8cs_source.html":[2,0,0,2,4,28,0],
 "UpdateTicketValidator_8cs.html":[2,0,0,2,6,12,24],
 "UpdateTicketValidator_8cs_source.html":[2,0,0,2,6,12,24],
+"UserConfiguration_8cs.html":[2,0,0,2,6,1,2],
+"UserConfiguration_8cs_source.html":[2,0,0,2,6,1,2],
 "UserController_8cs.html":[2,0,0,0,7],
 "UserController_8cs_source.html":[2,0,0,0,7],
 "UserDTO_8cs.html":[2,0,0,4,0,25],
@@ -240,14 +244,10 @@ var NAVTREEINDEX2 =
 "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a1007fc200a56a8dd204995561a1e643e":[1,0,0,2,1,1,2],
 "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a123e8423c8d621146a0a7b90ebb77c90":[1,0,0,2,1,1,7],
 "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a2677736bfde1ed252a29a996c7154216":[1,0,0,2,1,1,1],
+"classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a29230dbe07f810f4e3fd9c615c59a994":[1,0,0,2,1,1,6],
 "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a30137810c4ad1720eacbf90d7a46f509":[1,0,0,2,1,1,0],
 "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a369eeb578d531452f227172aff553c67":[1,0,0,2,1,1,3],
-"classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a3dc5e43857efc2f7d9e6ca67eef16e71":[1,0,0,2,1,1,6],
 "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#a9639e4eae20cf4ffec20544423e6399d":[1,0,0,2,1,1,8],
 "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#ac78abc9e7d6ca2e4088b01e8784eecc4":[1,0,0,2,1,1,5],
-"classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#adc6f85db7e3e894b014079dd13593de2":[1,0,0,2,1,1,4],
-"classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#af07612e6cefae79df70cfdd22aefc3c1":[1,0,0,2,1,1,9],
-"classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension.html":[1,0,0,2,1,2],
-"classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension.html#a2702866601424bd99f83d54f0d1c92b2":[1,0,0,2,1,2,2],
-"classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension.html#aa7b8b172c2db4bf7992ed02369a2e27e":[1,0,0,2,1,2,1]
+"classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#adc6f85db7e3e894b014079dd13593de2":[1,0,0,2,1,1,4]
 };

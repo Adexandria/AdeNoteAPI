@@ -121,11 +121,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeffbfd96e26c725398d2908e55895ce4"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Models_1_1RefreshToken.html">RefreshToken</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#aeffbfd96e26c725398d2908e55895ce4">GetRefreshToken</a> (string refreshToken)</td></tr>
 <tr class="memdesc:aeffbfd96e26c725398d2908e55895ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the refresh token by using the id  <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#aeffbfd96e26c725398d2908e55895ce4">More...</a><br /></td></tr>
 <tr class="separator:aeffbfd96e26c725398d2908e55895ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62afd315ba99d63d74cb927a2b14ee55"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#a62afd315ba99d63d74cb927a2b14ee55">IsTokenRevoked</a> (string refreshToken)</td></tr>
+<tr class="memdesc:a62afd315ba99d63d74cb927a2b14ee55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if token has been revoked  <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#a62afd315ba99d63d74cb927a2b14ee55">More...</a><br /></td></tr>
+<tr class="separator:a62afd315ba99d63d74cb927a2b14ee55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ef5e39b299ccc16fd88da7074767ddd"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Models_1_1RefreshToken.html">RefreshToken</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#a4ef5e39b299ccc16fd88da7074767ddd">GetRefreshTokenByUserId</a> (Guid userId, string refreshToken)</td></tr>
 <tr class="memdesc:a4ef5e39b299ccc16fd88da7074767ddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the refresh token of a user  <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#a4ef5e39b299ccc16fd88da7074767ddd">More...</a><br /></td></tr>
 <tr class="separator:a4ef5e39b299ccc16fd88da7074767ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5fc307cbac4d2b04475d7079dfeea8f"><td class="memItemLeft" align="right" valign="top">async Task&lt; Guid &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#ad5fc307cbac4d2b04475d7079dfeea8f">GetUserByRefreshToken</a> (string refreshToken)</td></tr>
-<tr class="separator:ad5fc307cbac4d2b04475d7079dfeea8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59fe0879eb19195dd701bc6f0b00b6a0"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Models_1_1User.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#a59fe0879eb19195dd701bc6f0b00b6a0">GetUserByRefreshToken</a> (string refreshToken)</td></tr>
+<tr class="separator:a59fe0879eb19195dd701bc6f0b00b6a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcc2ebfdea5659c72c87dd2bf0b221ff"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#afcc2ebfdea5659c72c87dd2bf0b221ff">Remove</a> (<a class="el" href="classAdeNote_1_1Models_1_1RefreshToken.html">RefreshToken</a> entity)</td></tr>
 <tr class="separator:afcc2ebfdea5659c72c87dd2bf0b221ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7e9431a6a01490cebada8dbdd1f470b"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#ad7e9431a6a01490cebada8dbdd1f470b">Update</a> (<a class="el" href="classAdeNote_1_1Models_1_1RefreshToken.html">RefreshToken</a> entity)</td></tr>
@@ -294,18 +297,18 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html#aa52ce88ceb2190a9761c2e6727d58f4e">AdeNote.Infrastructure.Repository.IRefreshTokenRepository</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="RefreshRepository_8cs_source.html#l00036">36</a> of file <a class="el" href="RefreshRepository_8cs_source.html">RefreshRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RefreshRepository_8cs_source.html#l00039">39</a> of file <a class="el" href="RefreshRepository_8cs_source.html">RefreshRepository.cs</a>.</p>
 
 </div>
 </div>
-<a id="ad5fc307cbac4d2b04475d7079dfeea8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5fc307cbac4d2b04475d7079dfeea8f">&#9670;&nbsp;</a></span>GetUserByRefreshToken()</h2>
+<a id="a59fe0879eb19195dd701bc6f0b00b6a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59fe0879eb19195dd701bc6f0b00b6a0">&#9670;&nbsp;</a></span>GetUserByRefreshToken()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">async Task&lt;Guid&gt; AdeNote.Infrastructure.Repository.RefreshRepository.GetUserByRefreshToken </td>
+          <td class="memname">async Task&lt;<a class="el" href="classAdeNote_1_1Models_1_1User.html">User</a>&gt; AdeNote.Infrastructure.Repository.RefreshRepository.GetUserByRefreshToken </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>refreshToken</em></td><td>)</td>
@@ -314,9 +317,40 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html#a39fb6f09dce7bcd42f61ab624ba6d819">AdeNote.Infrastructure.Repository.IRefreshTokenRepository</a>.</p>
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html#a3e279971bb99409911bec9a097276160">AdeNote.Infrastructure.Repository.IRefreshTokenRepository</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="RefreshRepository_8cs_source.html#l00045">45</a> of file <a class="el" href="RefreshRepository_8cs_source.html">RefreshRepository.cs</a>.</p>
+
+</div>
+</div>
+<a id="a62afd315ba99d63d74cb927a2b14ee55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62afd315ba99d63d74cb927a2b14ee55">&#9670;&nbsp;</a></span>IsTokenRevoked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;bool&gt; AdeNote.Infrastructure.Repository.RefreshRepository.IsTokenRevoked </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>refreshToken</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if token has been revoked </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">refreshToken</td><td>refresh token</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>return true if it has revoked and false if otherwise</dd></dl>
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html#a852d766c6f9c6e51034ab330ffe2e554">AdeNote.Infrastructure.Repository.IRefreshTokenRepository</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="RefreshRepository_8cs_source.html#l00034">34</a> of file <a class="el" href="RefreshRepository_8cs_source.html">RefreshRepository.cs</a>.</p>
 
 </div>
 </div>

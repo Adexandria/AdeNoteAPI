@@ -106,6 +106,8 @@ Functions</h2></td></tr>
 <tr class="separator:a8d93252ec77847afcaad9fa1c113a728"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae40b2a77a8a01a818abec10d92c88cb4"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ae40b2a77a8a01a818abec10d92c88cb4">AddApiVersioning</a> (c=&gt; { c.DefaultApiVersion=new ApiVersion(1, 0);c.AssumeDefaultVersionWhenUnspecified=true;c.ReportApiVersions=true;c.ApiVersionReader=ApiVersionReader.Combine(new UrlSegmentApiVersionReader());}).AddApiExplorer(options</td></tr>
 <tr class="separator:ae40b2a77a8a01a818abec10d92c88cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0bf58ade80b24125e94e55adfe3e3b9"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ac0bf58ade80b24125e94e55adfe3e3b9">AddMiniProfiler</a> (options=&gt; { options.RouteBasePath=&quot;/profiler&quot;;options.ColorScheme=StackExchange.Profiling.ColorScheme.Auto;options.PopupRenderPosition=StackExchange.Profiling.RenderPosition.Left;}).AddEntityFramework()</td></tr>
+<tr class="separator:ac0bf58ade80b24125e94e55adfe3e3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d7859f9cad50e8e9fdf015100780e07"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a0d7859f9cad50e8e9fdf015100780e07">AddEndpointsApiExplorer</a> ()</td></tr>
 <tr class="separator:a0d7859f9cad50e8e9fdf015100780e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7e156d3784430b6365377b0f6335878"><td class="memItemLeft" align="right" valign="top">builder.Services.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#ab7e156d3784430b6365377b0f6335878">AddHangfire</a> (config=&gt; config .SetDataCompatibilityLevel(CompatibilityLevel.Version_180) .UseSimpleAssemblyNameTypeSerializer() .UseRecommendedSerializerSettings() .UseSqlServerStorage(configuration.GetConnectionString(&quot;NotesDB&quot;)))</td></tr>
@@ -146,6 +148,8 @@ Functions</h2></td></tr>
 <tr class="separator:af6f72d752b2e73aa0292f74bd13237ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d18ff9c088dd782ce0c230c3d0e3aed"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a1d18ff9c088dd782ce0c230c3d0e3aed">UseHangfireDashboard</a> (&quot;/hangfire&quot;, new DashboardOptions { Authorization=new[] { new <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1DashboardAuthenticationFilter.html">DashboardAuthenticationFilter</a>(applicationSettings.HangFireUserConfiguration, <a class="el" href="Program_8cs.html#a7c716252e481b0bc487cc1c33ac6e4c2">loggerFactory</a>) }, DashboardTitle=&quot;AdeNote API&quot;, DarkModeEnabled=true, FaviconPath=&quot;icon/download.ico&quot;, AppPath=&quot;/swagger/index.html&quot; })</td></tr>
 <tr class="separator:a1d18ff9c088dd782ce0c230c3d0e3aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18852fd574b7aa3ca019d3d83d9d09e0"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a18852fd574b7aa3ca019d3d83d9d09e0">UseMiniProfiler</a> ()</td></tr>
+<tr class="separator:a18852fd574b7aa3ca019d3d83d9d09e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abab263bbe4cd9214435aeacab5568d52"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#abab263bbe4cd9214435aeacab5568d52">MapHealthChecks</a> (&quot;/health&quot;, new HealthCheckOptions { ResponseWriter=UIResponseWriter.WriteHealthCheckUIResponse })</td></tr>
 <tr class="separator:abab263bbe4cd9214435aeacab5568d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e2ee3170aa6279b68eefd1651f7d96c"><td class="memItemLeft" align="right" valign="top">app.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Program_8cs.html#a9e2ee3170aa6279b68eefd1651f7d96c">MapControllers</a> ()</td></tr>
@@ -454,6 +458,34 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0bf58ade80b24125e94e55adfe3e3b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0bf58ade80b24125e94e55adfe3e3b9">&#9670;&nbsp;</a></span>AddMiniProfiler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">builder.Services. AddMiniProfiler </td>
+          <td>(</td>
+          <td class="paramtype">options&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">{ options.RouteBasePath=&quot;/profiler&quot;;options.ColorScheme=StackExchange.Profiling.ColorScheme.Auto;options.PopupRenderPosition=StackExchange.Profiling.RenderPosition.Left;}&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -857,6 +889,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a18852fd574b7aa3ca019d3d83d9d09e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18852fd574b7aa3ca019d3d83d9d09e0">&#9670;&nbsp;</a></span>UseMiniProfiler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">app. UseMiniProfiler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a9a5cfe7fee09f478241b98af703affea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9a5cfe7fee09f478241b98af703affea">&#9670;&nbsp;</a></span>UseSwagger()</h2>
 
@@ -915,7 +964,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00088">88</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00097">97</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -931,7 +980,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00082">82</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00091">91</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>
@@ -995,7 +1044,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00090">90</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Program_8cs_source.html#l00099">99</a> of file <a class="el" href="Program_8cs_source.html">Program.cs</a>.</p>
 
 </div>
 </div>

@@ -111,14 +111,17 @@ Collaboration diagram for AdeNote.Infrastructure.Repository.IRefreshTokenReposit
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a39fb6f09dce7bcd42f61ab624ba6d819"><td class="memItemLeft" align="right" valign="top">Task&lt; Guid &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html#a39fb6f09dce7bcd42f61ab624ba6d819">GetUserByRefreshToken</a> (string refreshToken)</td></tr>
-<tr class="separator:a39fb6f09dce7bcd42f61ab624ba6d819"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e279971bb99409911bec9a097276160"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Models_1_1User.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html#a3e279971bb99409911bec9a097276160">GetUserByRefreshToken</a> (string refreshToken)</td></tr>
+<tr class="separator:a3e279971bb99409911bec9a097276160"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa52ce88ceb2190a9761c2e6727d58f4e"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Models_1_1RefreshToken.html">RefreshToken</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html#aa52ce88ceb2190a9761c2e6727d58f4e">GetRefreshTokenByUserId</a> (Guid userId, string refreshToken)</td></tr>
 <tr class="memdesc:aa52ce88ceb2190a9761c2e6727d58f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the refresh token of a user  <a href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html#aa52ce88ceb2190a9761c2e6727d58f4e">More...</a><br /></td></tr>
 <tr class="separator:aa52ce88ceb2190a9761c2e6727d58f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3aaf93e5a24ea4340723093123ad516c"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="classAdeNote_1_1Models_1_1RefreshToken.html">RefreshToken</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html#a3aaf93e5a24ea4340723093123ad516c">GetRefreshToken</a> (string refreshToken)</td></tr>
 <tr class="memdesc:a3aaf93e5a24ea4340723093123ad516c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the refresh token by using the id  <a href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html#a3aaf93e5a24ea4340723093123ad516c">More...</a><br /></td></tr>
 <tr class="separator:a3aaf93e5a24ea4340723093123ad516c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a852d766c6f9c6e51034ab330ffe2e554"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html#a852d766c6f9c6e51034ab330ffe2e554">IsTokenRevoked</a> (string refreshToken)</td></tr>
+<tr class="memdesc:a852d766c6f9c6e51034ab330ffe2e554"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if token has been revoked  <a href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html#a852d766c6f9c6e51034ab330ffe2e554">More...</a><br /></td></tr>
+<tr class="separator:a852d766c6f9c6e51034ab330ffe2e554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html">AdeNote.Infrastructure.Repository.IRepository&lt; RefreshToken &gt;</a></td></tr>
 <tr class="memitem:af7cfac5b470f7e8886c0335122bdd817 inherit pub_methods_interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#af7cfac5b470f7e8886c0335122bdd817">Add</a> (T entity)</td></tr>
 <tr class="memdesc:af7cfac5b470f7e8886c0335122bdd817 inherit pub_methods_interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves a new entity  <a href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#af7cfac5b470f7e8886c0335122bdd817">More...</a><br /></td></tr>
@@ -160,15 +163,6 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Refresh token object</dd></dl>
 
 <p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#aeffbfd96e26c725398d2908e55895ce4">AdeNote.Infrastructure.Repository.RefreshRepository</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository_a3aaf93e5a24ea4340723093123ad516c_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository_a3aaf93e5a24ea4340723093123ad516c_icgraph" alt=""/></div>
-<map name="ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository_a3aaf93e5a24ea4340723093123ad516c_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository_a3aaf93e5a24ea4340723093123ad516c_icgraph">
-<area shape="rect" title="Gets the refresh token by using the id" alt="" coords="304,13,599,54"/>
-<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a576d4e8d6902d1dd169820a3f8c3ea82" title="Checks if refresh token is revoked" alt="" coords="5,5,256,61"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -221,14 +215,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a39fb6f09dce7bcd42f61ab624ba6d819"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39fb6f09dce7bcd42f61ab624ba6d819">&#9670;&nbsp;</a></span>GetUserByRefreshToken()</h2>
+<a id="a3e279971bb99409911bec9a097276160"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e279971bb99409911bec9a097276160">&#9670;&nbsp;</a></span>GetUserByRefreshToken()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Task&lt;Guid&gt; AdeNote.Infrastructure.Repository.IRefreshTokenRepository.GetUserByRefreshToken </td>
+          <td class="memname">Task&lt;<a class="el" href="classAdeNote_1_1Models_1_1User.html">User</a>&gt; AdeNote.Infrastructure.Repository.IRefreshTokenRepository.GetUserByRefreshToken </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>refreshToken</em></td><td>)</td>
@@ -237,14 +231,52 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#ad5fc307cbac4d2b04475d7079dfeea8f">AdeNote.Infrastructure.Repository.RefreshRepository</a>.</p>
+<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#a59fe0879eb19195dd701bc6f0b00b6a0">AdeNote.Infrastructure.Repository.RefreshRepository</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository_a39fb6f09dce7bcd42f61ab624ba6d819_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository_a39fb6f09dce7bcd42f61ab624ba6d819_icgraph" alt=""/></div>
-<map name="ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository_a39fb6f09dce7bcd42f61ab624ba6d819_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository_a39fb6f09dce7bcd42f61ab624ba6d819_icgraph">
+<div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository_a3e279971bb99409911bec9a097276160_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository_a3e279971bb99409911bec9a097276160_icgraph" alt=""/></div>
+<map name="ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository_a3e279971bb99409911bec9a097276160_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository_a3e279971bb99409911bec9a097276160_icgraph">
 <area shape="rect" title=" " alt="" coords="316,13,659,54"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a87059ae3c1315c5973fc9dca183959fa" title=" " alt="" coords="5,5,268,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a852d766c6f9c6e51034ab330ffe2e554"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a852d766c6f9c6e51034ab330ffe2e554">&#9670;&nbsp;</a></span>IsTokenRevoked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;bool&gt; AdeNote.Infrastructure.Repository.IRefreshTokenRepository.IsTokenRevoked </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>refreshToken</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if token has been revoked </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">refreshToken</td><td>refresh token</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>return true if it has revoked and false if otherwise</dd></dl>
+
+<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#a62afd315ba99d63d74cb927a2b14ee55">AdeNote.Infrastructure.Repository.RefreshRepository</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository_a852d766c6f9c6e51034ab330ffe2e554_icgraph.png" border="0" usemap="#ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository_a852d766c6f9c6e51034ab330ffe2e554_icgraph" alt=""/></div>
+<map name="ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository_a852d766c6f9c6e51034ab330ffe2e554_icgraph" id="ainterfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository_a852d766c6f9c6e51034ab330ffe2e554_icgraph">
+<area shape="rect" title="Checks if token has been revoked" alt="" coords="304,13,593,54"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a576d4e8d6902d1dd169820a3f8c3ea82" title="Checks if refresh token is revoked" alt="" coords="5,5,256,61"/>
 </map>
 </div>
 

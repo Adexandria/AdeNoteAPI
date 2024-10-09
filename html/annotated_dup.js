@@ -249,7 +249,8 @@ var annotated_dup =
           ] ],
           [ "AuthenticationFilter", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter.html", [
             [ "DashboardAuthenticationFilter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1DashboardAuthenticationFilter.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1DashboardAuthenticationFilter" ],
-            [ "HangFireUserConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1HangFireUserConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1HangFireUserConfiguration" ]
+            [ "MiniProfilerAuthorization", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1MiniProfilerAuthorization.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1MiniProfilerAuthorization" ],
+            [ "UserConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1UserConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1UserConfiguration" ]
           ] ],
           [ "AuthorisationHandler", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler.html", [
             [ "RoleRequirement", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirement.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirement" ],

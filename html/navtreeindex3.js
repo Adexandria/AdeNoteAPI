@@ -1,5 +1,9 @@
 var NAVTREEINDEX3 =
 {
+"classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#af07612e6cefae79df70cfdd22aefc3c1":[1,0,0,2,1,1,9],
+"classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension.html":[1,0,0,2,1,2],
+"classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension.html#a2702866601424bd99f83d54f0d1c92b2":[1,0,0,2,1,2,2],
+"classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension.html#ae0b0cf3e408d284df9b902b194415685":[1,0,0,2,1,2,1],
 "classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension.html#ae1ee8cf5d71569b3bd16f68adc239800":[1,0,0,2,1,2,0],
 "classAdeNote_1_1Infrastructure_1_1Extension_1_1EnumExtensions.html":[1,0,0,2,1,3],
 "classAdeNote_1_1Infrastructure_1_1Extension_1_1EnumExtensions.html#a6a54387dd32bf70cd3714ad08f797555":[1,0,0,2,1,3,0],
@@ -106,12 +110,13 @@ var NAVTREEINDEX3 =
 "classAdeNote_1_1Infrastructure_1_1Repository_1_1RecoveryCodeRepository.html#ae402c9191a5d760b31e6ef2254e5680a":[1,0,0,2,3,16,0],
 "classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html":[1,0,0,2,3,17],
 "classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#a4ef5e39b299ccc16fd88da7074767ddd":[1,0,0,2,3,17,3],
+"classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#a59fe0879eb19195dd701bc6f0b00b6a0":[1,0,0,2,3,17,4],
+"classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#a62afd315ba99d63d74cb927a2b14ee55":[1,0,0,2,3,17,5],
 "classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#a9b66e694077ed77c0965325fc6a07f0c":[1,0,0,2,3,17,1],
 "classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#aa213f431055415a2ecfe109089d42ad1":[1,0,0,2,3,17,0],
-"classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#ad5fc307cbac4d2b04475d7079dfeea8f":[1,0,0,2,3,17,4],
-"classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#ad7e9431a6a01490cebada8dbdd1f470b":[1,0,0,2,3,17,6],
+"classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#ad7e9431a6a01490cebada8dbdd1f470b":[1,0,0,2,3,17,7],
 "classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#aeffbfd96e26c725398d2908e55895ce4":[1,0,0,2,3,17,2],
-"classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#afcc2ebfdea5659c72c87dd2bf0b221ff":[1,0,0,2,3,17,5],
+"classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html#afcc2ebfdea5659c72c87dd2bf0b221ff":[1,0,0,2,3,17,6],
 "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html":[1,0,0,2,3,18],
 "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html#a05b5bf0051b6aa4a408d8c976d26c4c2":[1,0,0,2,3,18,0],
 "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html#a427dd02b48ebc358f2246cf8badb65fb":[1,0,0,2,3,18,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX3 =
 "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequestHandler.html":[1,0,0,2,4,9,1],
 "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequestHandler.html#a6bc5ea3124cf5997a079156826dbd123":[1,0,0,2,4,9,1,2],
 "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequestHandler.html#a71e5562d09774e5ddd82f0b69ec0102a":[1,0,0,2,4,9,1,0],
-"classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequestHandler.html#abd38f9c0f9b1d4ae38c8da50d33de8d4":[1,0,0,2,4,9,1,4],
-"classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequestHandler.html#ae4b92d91ba73233971787cb0739048ca":[1,0,0,2,4,9,1,1],
-"classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequestHandler.html#ae9345b0ea06461be6c7cf14a1ae5fc56":[1,0,0,2,4,9,1,3],
-"classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllBooks_1_1GetAllBooksRequest.html":[1,0,0,2,4,10,0],
-"classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllBooks_1_1GetAllBooksRequest.html#af1ec9b0519fc6216dc28e86e48515328":[1,0,0,2,4,10,0,0],
-"classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllBooks_1_1GetAllBooksRequestHandler.html":[1,0,0,2,4,10,1]
+"classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequestHandler.html#abd38f9c0f9b1d4ae38c8da50d33de8d4":[1,0,0,2,4,9,1,4]
 };
