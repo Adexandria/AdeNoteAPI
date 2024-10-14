@@ -10,6 +10,15 @@ services:
       - MSSQL_SA_PASSWORD=Xandriaisalovelygirl4
       - ACCEPT_EULA=Y
       - MSSQL_PID=Express
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+    - "5672:5672"
+    - "15672:15672"
+    container_name: rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
 
   api:
     build:
@@ -19,6 +28,11 @@ services:
     env_file: example.env
     depends_on:
       - db
+      - rabbitmq
     ports:
      - 8000:80
+
+networks:
+  default:
+    driver: bridge
 
