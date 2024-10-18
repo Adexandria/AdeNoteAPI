@@ -31,7 +31,7 @@ namespace AdeNote.Infrastructure.Requests.GetAllPages
 
             var currentBookPagesDTO = currentPages.Map<IEnumerable<Page>, IEnumerable<PageDTO>>(MappingService.PageLabelsConfig());
 
-            return await Task.FromResult(ActionResult<IEnumerable<PageDTO>>.SuccessfulOperation(currentBookPagesDTO));
+            return ActionResult<IEnumerable<PageDTO>>.SuccessfulOperation(currentBookPagesDTO);
         }
 
         private readonly IPageRepository pageRepository;

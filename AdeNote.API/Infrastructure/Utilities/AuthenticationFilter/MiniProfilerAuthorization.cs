@@ -1,33 +1,21 @@
-﻿using AdeAuth.Services;
-using AdeNote.Db;
-using AdeNote.Infrastructure.Repository;
-using AdeNote.Models;
-using Hangfire.Annotations;
-using Hangfire.Dashboard;
-using Microsoft.Extensions.Primitives;
-using System.Net.Http.Headers;
+﻿using System.Net.Http.Headers;
 using System.Text;
-
 
 namespace AdeNote.Infrastructure.Utilities.AuthenticationFilter
 {
-    public class DashboardAuthenticationFilter : IDashboardAuthorizationFilter
+    public class MiniProfilerAuthorization
     {
-
-        public DashboardAuthenticationFilter(UserConfiguration _hangFireUser,ILoggerFactory loggerFactory)
+        public MiniProfilerAuthorization(UserConfiguration _user)
         {
-            hangFireUser = _hangFireUser;
-            _logger = loggerFactory.CreateLogger<DashboardAuthenticationFilter>();
+            user = _user;
         }
-
-        public bool Authorize([NotNull] DashboardContext context)
+        public bool Authorize(HttpRequest request)
         {
-            var httpContext = context.GetHttpContext();
+            var httpContext = request.HttpContext;
             var values = httpContext.Request.Headers["Authorization"];
 
             if (string.IsNullOrEmpty(values) || string.IsNullOrWhiteSpace(values))
             {
-                _logger.LogInformation("Authorization header is missing");
                 SetChallengeResponse(httpContext);
                 return false;
             }
@@ -36,7 +24,6 @@ namespace AdeNote.Infrastructure.Utilities.AuthenticationFilter
 
             if (!_authenticationScheme.Equals(authValues.Scheme, StringComparison.InvariantCultureIgnoreCase))
             {
-                _logger.LogInformation("Invalid authorization scheme");
                 SetChallengeResponse(httpContext);
                 return false;
             }
@@ -45,7 +32,6 @@ namespace AdeNote.Infrastructure.Utilities.AuthenticationFilter
 
             if (string.IsNullOrEmpty(decodedToken) || string.IsNullOrWhiteSpace(decodedToken))
             {
-                _logger.LogInformation("Invalid username/password");
                 SetChallengeResponse(httpContext);
                 return false;
             }
@@ -56,20 +42,17 @@ namespace AdeNote.Infrastructure.Utilities.AuthenticationFilter
                 && string.IsNullOrEmpty(userCredentials[0])
                 && string.IsNullOrEmpty(userCredentials[1]))
             {
-                _logger.LogInformation("Invalid username/password");
                 SetChallengeResponse(httpContext);
                 return false;
             }
 
-            var currentUser = hangFireUser.Username == userCredentials[0] && hangFireUser.Password == userCredentials[1];
+            var currentUser = user.Username == userCredentials[0] && user.Password == userCredentials[1];
 
             if (currentUser)
             {
-                _logger.LogInformation("User has successfully authenticated");
                 httpContext.Response.StatusCode = 200;
                 return true;
             }
-            _logger.LogInformation("Invalid username/password");
             SetChallengeResponse(httpContext);
             return false;
         }
@@ -81,8 +64,8 @@ namespace AdeNote.Infrastructure.Utilities.AuthenticationFilter
             httpContext.Response.WriteAsync("Authentication is required.");
         }
 
-        private readonly UserConfiguration hangFireUser;
-        private readonly ILogger _logger;
+        private readonly UserConfiguration user;
         private const string _authenticationScheme = "Basic";
     }
 }
+

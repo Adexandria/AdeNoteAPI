@@ -46,6 +46,15 @@ builder.Services.AddApiVersioning(c =>
     options.SubstituteApiVersionInUrl = true;
 });
 
+
+builder.Services.AddMiniProfiler(options =>
+{
+    options.RouteBasePath = "/profiler";
+    options.ColorScheme = StackExchange.Profiling.ColorScheme.Auto;
+    options.PopupRenderPosition = StackExchange.Profiling.RenderPosition.Left;
+  //  options.ResultsListAuthorize = request => new MiniProfilerAuthorization(applicationSettings.HangFireUserConfiguration).Authorize(request);
+}).AddEntityFramework();
+
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddHangfire(config => config
@@ -119,6 +128,8 @@ app.UseHangfireDashboard("/hangfire",new DashboardOptions
   FaviconPath = "icon/download.ico",
   AppPath = "/swagger/index.html"
 });
+
+app.UseMiniProfiler();
 
 app.MapHealthChecks("/health", new HealthCheckOptions
 {

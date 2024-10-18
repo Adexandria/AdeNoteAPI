@@ -66,7 +66,7 @@ namespace AdeNote.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllPages([ValidGuid("Invalid book id")] Guid bookId)
         {
-            var response = await Application.SendAsync<GetAllPagesRequest,IEnumerable<PageDTO>>(new GetAllPagesRequest()
+            var response = await Application.SendAsync<GetAllPagesRequest, IEnumerable<PageDTO>>(new GetAllPagesRequest()
             {
                 BookId = bookId
             });

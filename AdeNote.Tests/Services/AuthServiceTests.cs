@@ -290,7 +290,7 @@ namespace AdeNote.Tests.Services
         [Test]
         public async Task ShouldFailToCheckIfTokenHasBeenRevokedIfTokenDoesNotExist()
         {
-            refreshTokenRepository.Setup(s => s.GetRefreshToken(It.IsAny<string>()));
+            refreshTokenRepository.Setup(s => s.IsTokenRevoked(It.IsAny<string>())).ReturnsAsync(true);
             var response = await authService.IsTokenRevoked("Token");
 
             Assert.That(response.IsSuccessful, Is.False);

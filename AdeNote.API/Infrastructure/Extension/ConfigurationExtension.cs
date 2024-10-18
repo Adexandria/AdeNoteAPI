@@ -20,9 +20,9 @@ namespace AdeNote.Infrastructure.Extension
             return configuration.GetSection("TextTranslationConfiguration").Get<TranslateConfiguration>() ?? throw new NullReferenceException(nameof(TranslateConfiguration));
         }
 
-        private static HangFireUserConfiguration ExtractHangFireUserConfiguration(IConfiguration configuration)
+        private static UserConfiguration ExtractHangFireUserConfiguration(IConfiguration configuration)
         {
-           return configuration.GetSection("HangfireUser").Get<HangFireUserConfiguration>() ?? throw new NullReferenceException(nameof(HangFireUserConfiguration));
+           return configuration.GetSection("User").Get<UserConfiguration>() ?? throw new NullReferenceException(nameof(UserConfiguration));
         }
 
         private static DefaultConfiguration ExtractDefaultConfiguration(IConfiguration configuration)
