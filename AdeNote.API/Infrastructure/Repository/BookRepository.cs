@@ -74,7 +74,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>Book object</returns>
         public async Task<Book> GetAsync(Guid bookId, Guid userId, bool isTracked)
         {
-            var book = Db.Books.Where(s => s.UserId == userId)
+            var book = Db.Books.Where(s => s.UserId == userId && s.Id == bookId)
                 .Include(s => s.Pages);
 
             if(!isTracked)

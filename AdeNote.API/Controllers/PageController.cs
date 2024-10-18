@@ -135,15 +135,18 @@ namespace AdeNote.Controllers
         [HttpPost]
         public async Task<IActionResult> CreatePage([ValidGuid("Invalid book id")] Guid bookId, [FromForm]PageCreateDTO pageCreate)
         {
-            if (pageCreate.File.ContentType != MimeType.mp4.GetDescription())
-                return BadRequest("Incorrect video type");
-
             var memoryStream = new MemoryStream();
 
-            await pageCreate?.File?.CopyToAsync(memoryStream);
+            if (pageCreate.File != null)
+            {
+                if (pageCreate.File?.ContentType != MimeType.mp4.GetDescription())
+                    return BadRequest("Incorrect video type");
 
-            memoryStream.Position = 0;
+                await pageCreate?.File?.CopyToAsync(memoryStream);
 
+                memoryStream.Position = 0;
+            }
+           
             var response = await Application.SendAsync(new CreatePageRequest()
             {
                 BookId = bookId,

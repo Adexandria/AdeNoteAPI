@@ -39,18 +39,21 @@ namespace AdeNote.Infrastructure.Requests.CreatePage
             if (!commitStatus)
                 return ActionResult.Failed("Failed to add page");
 
-            var response = await insertVideoRequestHandler.Handle(new InsertVideoRequest
+            if(request.Stream.Length  > 0)
             {
-                PageId = page.Id,
-                BookId = currentBook.Id,
-                Description = request.Description,
-                Stream = request.Stream
+                var response = await insertVideoRequestHandler.Handle(new InsertVideoRequest
+                {
+                    PageId = page.Id,
+                    BookId = currentBook.Id,
+                    Description = request.Description,
+                    Stream = request.Stream
 
-            },cancellationToken);
+                }, cancellationToken);
 
-            if (response.NotSuccessful)
-            {
-                return ActionResult.Failed("Failed to insert video");
+                if (response.NotSuccessful)
+                {
+                    return ActionResult.Failed("Failed to insert video");
+                }
             }
 
             cacheService.Set($"{_pageCacheKey}:{request.BookId}:{page.Id}", page, DateTime.UtcNow.AddMinutes(30));
