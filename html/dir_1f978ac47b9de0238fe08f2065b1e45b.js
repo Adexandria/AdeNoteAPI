@@ -30,6 +30,9 @@ var dir_1f978ac47b9de0238fe08f2065b1e45b =
     [ "ImportBookDto.cs", "ImportBookDto_8cs.html", [
       [ "ImportBookDto", "classAdeNote_1_1Models_1_1DTOs_1_1ImportBookDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1ImportBookDto" ]
     ] ],
+    [ "InsertVideoDto.cs", "InsertVideoDto_8cs.html", [
+      [ "InsertVideoDto", "classAdeNote_1_1Models_1_1DTOs_1_1InsertVideoDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1InsertVideoDto" ]
+    ] ],
     [ "LabelCreateDTO.cs", "LabelCreateDTO_8cs.html", [
       [ "LabelCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO" ]
     ] ],
@@ -83,5 +86,8 @@ var dir_1f978ac47b9de0238fe08f2065b1e45b =
     ] ],
     [ "UserTicketDto.cs", "UserTicketDto_8cs.html", [
       [ "UserTicketDto", "classAdeNote_1_1Models_1_1DTOs_1_1UserTicketDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1UserTicketDto" ]
+    ] ],
+    [ "VideoDTO.cs", "VideoDTO_8cs.html", [
+      [ "VideoDTO", "classAdeNote_1_1Models_1_1DTOs_1_1VideoDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1VideoDTO" ]
     ] ]
 ];

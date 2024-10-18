@@ -57,15 +57,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "20240430084252__firstmigration_8Designer_8cs.html",
-"GetLabelByIdRequestHandler_8cs.html",
-"SearchTicketsByDateRequest_8cs.html",
-"classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html#af07612e6cefae79df70cfdd22aefc3c1",
-"classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequestHandler.html#ae4b92d91ba73233971787cb0739048ca",
-"classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1FileService.html#a2604cfba47f9b6e88bdf9078f3fcd0ad",
-"classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1Messaging.html#aa698cee0d3f7ac423fc16c31ff5f05b3",
-"classAdeNote_1_1Models_1_1DTOs_1_1LoginDTO.html",
-"dir_f6fedf7121665af05f7ee82c362e6c7c.html",
-"namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllLabels.html"
+"GetBookByIdRequestHandler_8cs.html",
+"Repository_8cs_source.html",
+"classAdeNote_1_1Db_1_1NoteDbContext.html",
+"classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateTicket_1_1CreateTicketRequestHandler.html#a32cb2502f6bcd1bae6803e5d20d417da",
+"classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a231467f6c641b3d641221966f7e73b39",
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirement.html",
+"classAdeNote_1_1Models_1_1Book.html#a111fb0314baf79845e18fcb623e86e9b",
+"classAdeNote_1_1Models_1_1User.html#ae4a3729d9e9ec55b75c8a14805ad0e46",
+"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IFileService.html#a51861f71350a05868163b67fa5391ec1"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -14,6 +14,7 @@ var namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations =
     [ "GetAllPagesValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetAllPagesValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetAllPagesValidator" ],
     [ "GetBookByIdValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetBookByIdValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetBookByIdValidator" ],
     [ "GetPageByIdValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetPageByIdValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetPageByIdValidator" ],
+    [ "InsertVideoValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1InsertVideoValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1InsertVideoValidator" ],
     [ "RemoveAllPageLabelsValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveAllPageLabelsValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveAllPageLabelsValidator" ],
     [ "RemoveBookValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveBookValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveBookValidator" ],
     [ "RemovePageLabelValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemovePageLabelValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemovePageLabelValidator" ],

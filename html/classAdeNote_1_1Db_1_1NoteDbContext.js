@@ -10,5 +10,6 @@ var classAdeNote_1_1Db_1_1NoteDbContext =
     [ "RecoveryCodes", "classAdeNote_1_1Db_1_1NoteDbContext.html#a4cd4604a59ac03d3d1f688f990ca4bc9", null ],
     [ "RefreshTokens", "classAdeNote_1_1Db_1_1NoteDbContext.html#a16fcb633257a4267ea3971bcf109fe9d", null ],
     [ "Tickets", "classAdeNote_1_1Db_1_1NoteDbContext.html#a44f750499076655de3d8521065a843b6", null ],
-    [ "Users", "classAdeNote_1_1Db_1_1NoteDbContext.html#a44fc8b58f4dbdc66dbad60c0b2ada573", null ]
+    [ "Users", "classAdeNote_1_1Db_1_1NoteDbContext.html#a44fc8b58f4dbdc66dbad60c0b2ada573", null ],
+    [ "Videos", "classAdeNote_1_1Db_1_1NoteDbContext.html#a8be12dd2be6f4bec4817c7f51bb66800", null ]
 ];

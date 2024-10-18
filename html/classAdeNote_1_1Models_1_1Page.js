@@ -10,5 +10,6 @@ var classAdeNote_1_1Models_1_1Page =
     [ "Id", "classAdeNote_1_1Models_1_1Page.html#ace7e3cbf08ccffd13e18fd099eb14521", null ],
     [ "Labels", "classAdeNote_1_1Models_1_1Page.html#a1319c3f8dddcb38262e8785060518be7", null ],
     [ "Modified", "classAdeNote_1_1Models_1_1Page.html#a1a15ba72431ebe396017b922b51cb0fe", null ],
-    [ "Title", "classAdeNote_1_1Models_1_1Page.html#a8c7375e1d28534a095a0fb4cb82946b8", null ]
+    [ "Title", "classAdeNote_1_1Models_1_1Page.html#a8c7375e1d28534a095a0fb4cb82946b8", null ],
+    [ "Videos", "classAdeNote_1_1Models_1_1Page.html#ad52a96999a9dfd583cc09ee9e00bfce1", null ]
 ];

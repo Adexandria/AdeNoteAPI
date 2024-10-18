@@ -1,20 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,551,84,578"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBook_1_1CreateBookRequest.html" title=" " alt="" coords="172,5,411,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBooks_1_1CreateBooksRequest.html" title=" " alt="" coords="169,71,414,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateLabel_1_1CreateLabelRequest.html" title=" " alt="" coords="172,136,411,177"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePage_1_1CreatePageRequest.html" title=" " alt="" coords="172,201,411,243"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePageLabels_1_1CreatePageLabelsRequest.html" title=" " alt="" coords="136,267,447,308"/>
-<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateTicket_1_1CreateTicketRequest.html" title=" " alt="" coords="170,332,413,373"/>
-<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels_1_1RemoveAllPageLabelsRequest.html" title=" " alt="" coords="134,398,449,454"/>
-<area shape="rect" id="node9" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveBook_1_1RemoveBookRequest.html" title=" " alt="" coords="165,479,418,520"/>
-<area shape="rect" id="node10" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveLabel_1_1RemoveLabelRequest.html" title=" " alt="" coords="163,544,420,585"/>
-<area shape="rect" id="node11" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemovePage_1_1RemovePageRequest.html" title=" " alt="" coords="167,609,416,651"/>
-<area shape="rect" id="node12" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemovePageLabel_1_1RemovePageLabelRequest.html" title=" " alt="" coords="132,675,451,716"/>
-<area shape="rect" id="node13" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveTicket_1_1RemoveTicketRequest.html" title=" " alt="" coords="159,740,424,781"/>
-<area shape="rect" id="node14" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequest.html" title=" " alt="" coords="162,805,421,847"/>
-<area shape="rect" id="node15" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateBook_1_1UpdateBookRequest.html" title=" " alt="" coords="172,871,411,912"/>
-<area shape="rect" id="node16" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateLabel_1_1UpdateLabelRequest.html" title=" " alt="" coords="170,936,413,977"/>
-<area shape="rect" id="node17" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdatePage_1_1UpdatePageRequest.html" title=" " alt="" coords="172,1001,411,1043"/>
-<area shape="rect" id="node18" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateTicket_1_1UpdateTicketRequest.html" title=" " alt="" coords="166,1067,417,1108"/>
+<area shape="rect" id="node1" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title="Commits new and tracked changes in the objects" alt="" coords="5,5,252,47"/>
 </map>

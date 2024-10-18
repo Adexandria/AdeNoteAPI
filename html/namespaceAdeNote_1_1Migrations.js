@@ -12,5 +12,6 @@ var namespaceAdeNote_1_1Migrations =
     [ "addrecoverycode", "classAdeNote_1_1Migrations_1_1addrecoverycode.html", "classAdeNote_1_1Migrations_1_1addrecoverycode" ],
     [ "descriptionnullable", "classAdeNote_1_1Migrations_1_1descriptionnullable.html", "classAdeNote_1_1Migrations_1_1descriptionnullable" ],
     [ "addcreatedmodified", "classAdeNote_1_1Migrations_1_1addcreatedmodified.html", "classAdeNote_1_1Migrations_1_1addcreatedmodified" ],
+    [ "addvideos", "classAdeNote_1_1Migrations_1_1addvideos.html", "classAdeNote_1_1Migrations_1_1addvideos" ],
     [ "NoteDbContextModelSnapshot", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot" ]
 ];

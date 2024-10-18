@@ -32,6 +32,9 @@ var dir_ef5cfd776dbface43d78a691eb4c00b1 =
     [ "CachingKeys.cs", "CachingKeys_8cs.html", [
       [ "CachingKeys", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys" ]
     ] ],
+    [ "Cdn.cs", "Cdn_8cs.html", [
+      [ "Cdn", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Cdn.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Cdn" ]
+    ] ],
     [ "ContentType.cs", "ContentType_8cs.html", "ContentType_8cs" ],
     [ "DefaultConfiguration.cs", "DefaultConfiguration_8cs.html", [
       [ "DefaultConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration" ]

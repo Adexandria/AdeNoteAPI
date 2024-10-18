@@ -16,6 +16,7 @@ var namespaceAdeNote_1_1Infrastructure_1_1Requests =
     [ "GetBookdById", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetBookdById.html", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetBookdById" ],
     [ "GetLabelById", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById.html", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById" ],
     [ "GetPagesById", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetPagesById.html", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetPagesById" ],
+    [ "InsertVideo", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1InsertVideo.html", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1InsertVideo" ],
     [ "RemoveAllPageLabels", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels.html", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels" ],
     [ "RemoveBook", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveBook.html", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveBook" ],
     [ "RemoveLabel", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveLabel.html", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveLabel" ],

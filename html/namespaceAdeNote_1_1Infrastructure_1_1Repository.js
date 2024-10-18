@@ -13,6 +13,7 @@ var namespaceAdeNote_1_1Infrastructure_1_1Repository =
     [ "IRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository" ],
     [ "ITicketRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository" ],
     [ "IUserRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository" ],
+    [ "IVideoRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IVideoRepository.html", null ],
     [ "LabelPageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository" ],
     [ "LabelRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository" ],
     [ "PageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository" ],
@@ -20,5 +21,6 @@ var namespaceAdeNote_1_1Infrastructure_1_1Repository =
     [ "RefreshRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository" ],
     [ "Repository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository" ],
     [ "TicketRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository" ],
-    [ "UserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository" ]
+    [ "UserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository" ],
+    [ "VideoRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1VideoRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1VideoRepository" ]
 ];

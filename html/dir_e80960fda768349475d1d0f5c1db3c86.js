@@ -39,6 +39,9 @@ var dir_e80960fda768349475d1d0f5c1db3c86 =
     [ "IUserRepository.cs", "IUserRepository_8cs.html", [
       [ "IUserRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository" ]
     ] ],
+    [ "IVideoRepository.cs", "IVideoRepository_8cs.html", [
+      [ "IVideoRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IVideoRepository.html", null ]
+    ] ],
     [ "LabelPageRepository.cs", "LabelPageRepository_8cs.html", [
       [ "LabelPageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository" ]
     ] ],
@@ -62,5 +65,8 @@ var dir_e80960fda768349475d1d0f5c1db3c86 =
     ] ],
     [ "UserRepository.cs", "UserRepository_8cs.html", [
       [ "UserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository" ]
+    ] ],
+    [ "VideoRepository.cs", "VideoRepository_8cs.html", [
+      [ "VideoRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1VideoRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1VideoRepository" ]
     ] ]
 ];

@@ -42,6 +42,9 @@ var dir_acc1230cf0f6a94710e2054215a050f1 =
     [ "GetPageByIdValidator.cs", "GetPageByIdValidator_8cs.html", [
       [ "GetPageByIdValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetPageByIdValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetPageByIdValidator" ]
     ] ],
+    [ "InsertVideoValidator.cs", "InsertVideoValidator_8cs.html", [
+      [ "InsertVideoValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1InsertVideoValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1InsertVideoValidator" ]
+    ] ],
     [ "RemoveAllPageLabelsValidator.cs", "RemoveAllPageLabelsValidator_8cs.html", [
       [ "RemoveAllPageLabelsValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveAllPageLabelsValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveAllPageLabelsValidator" ]
     ] ],

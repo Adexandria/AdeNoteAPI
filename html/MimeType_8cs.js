@@ -7,6 +7,7 @@ var MimeType_8cs =
       [ "xlsx", "MimeType_8cs.html#a5dbb47479f072858ae359006d49caee8abf3e2924dcba1c52da01b5eda1111b2b", null ],
       [ "xls", "MimeType_8cs.html#a5dbb47479f072858ae359006d49caee8a018e2a13e58c535167ed37cf44316005", null ],
       [ "csv", "MimeType_8cs.html#a5dbb47479f072858ae359006d49caee8a628cb5675ff524f3e719b7aa2e88fe3f", null ],
-      [ "docx", "MimeType_8cs.html#a5dbb47479f072858ae359006d49caee8a0bbe36a9d5e37a03354db0aa6a94dd29", null ]
+      [ "docx", "MimeType_8cs.html#a5dbb47479f072858ae359006d49caee8a0bbe36a9d5e37a03354db0aa6a94dd29", null ],
+      [ "mp4", "MimeType_8cs.html#a5dbb47479f072858ae359006d49caee8a4866d635ea7b0ed8e2452da897143528", null ]
     ] ]
 ];

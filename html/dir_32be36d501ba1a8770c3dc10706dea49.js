@@ -72,6 +72,12 @@ var dir_32be36d501ba1a8770c3dc10706dea49 =
     [ "20240722121647_add-created-modified.Designer.cs", "20240722121647__add-created-modified_8Designer_8cs.html", [
       [ "addcreatedmodified", "classAdeNote_1_1Migrations_1_1addcreatedmodified.html", "classAdeNote_1_1Migrations_1_1addcreatedmodified" ]
     ] ],
+    [ "20241007103820_add-videos.cs", "20241007103820__add-videos_8cs.html", [
+      [ "addvideos", "classAdeNote_1_1Migrations_1_1addvideos.html", "classAdeNote_1_1Migrations_1_1addvideos" ]
+    ] ],
+    [ "20241007103820_add-videos.Designer.cs", "20241007103820__add-videos_8Designer_8cs.html", [
+      [ "addvideos", "classAdeNote_1_1Migrations_1_1addvideos.html", "classAdeNote_1_1Migrations_1_1addvideos" ]
+    ] ],
     [ "NoteDbContextModelSnapshot.cs", "NoteDbContextModelSnapshot_8cs.html", [
       [ "NoteDbContextModelSnapshot", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot" ]
     ] ]

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['key_2140',['key',['../classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a32d2a938205fdab7ac49db5972ad952c',1,'AdeNote::Infrastructure::Services::Authentication::AuthService']]]
+  ['insertvideorequesthandler_2210',['insertVideoRequestHandler',['../classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePage_1_1CreatePageRequestHandler.html#a41f43e4d926c63a546fe099941196a86',1,'AdeNote::Infrastructure::Requests::CreatePage::CreatePageRequestHandler']]]
 ];

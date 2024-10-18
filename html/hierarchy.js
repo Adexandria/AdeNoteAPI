@@ -15,6 +15,7 @@ var hierarchy =
       [ "AdeNote.Infrastructure.Utilities.Validations.GetAllPagesValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetAllPagesValidator.html", null ],
       [ "AdeNote.Infrastructure.Utilities.Validations.GetBookByIdValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetBookByIdValidator.html", null ],
       [ "AdeNote.Infrastructure.Utilities.Validations.GetPageByIdValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetPageByIdValidator.html", null ],
+      [ "AdeNote.Infrastructure.Utilities.Validations.InsertVideoValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1InsertVideoValidator.html", null ],
       [ "AdeNote.Infrastructure.Utilities.Validations.RemoveAllPageLabelsValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveAllPageLabelsValidator.html", null ],
       [ "AdeNote.Infrastructure.Utilities.Validations.RemoveBookValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveBookValidator.html", null ],
       [ "AdeNote.Infrastructure.Utilities.Validations.RemovePageLabelValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemovePageLabelValidator.html", null ],
@@ -49,6 +50,7 @@ var hierarchy =
     ] ],
     [ "AdeNote.Models.DTOs.BookUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1BookUpdateDTO.html", null ],
     [ "AdeNote.Infrastructure.Utilities.CachingKeys", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.Cdn", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Cdn.html", null ],
     [ "AdeNote.Models.DTOs.ChangePasswordDTO", "classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO.html", null ],
     [ "AdeNote.Infrastructure.Extension.CollectionExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1CollectionExtension.html", null ],
     [ "AdeNote.Infrastructure.Extension.ConfigurationExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html", null ],
@@ -96,7 +98,8 @@ var hierarchy =
       [ "AdeNote.Models.RecoveryCode", "classAdeNote_1_1Models_1_1RecoveryCode.html", null ],
       [ "AdeNote.Models.RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", null ],
       [ "AdeNote.Models.Ticket", "classAdeNote_1_1Models_1_1Ticket.html", null ],
-      [ "AdeNote.Models.User", "classAdeNote_1_1Models_1_1User.html", null ]
+      [ "AdeNote.Models.User", "classAdeNote_1_1Models_1_1User.html", null ],
+      [ "AdeNote.Models.Video", "classAdeNote_1_1Models_1_1Video.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Services.Blob.IBlobService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html", [
       [ "AdeNote.Infrastructure.Services.Blob.BlobService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html", null ]
@@ -151,6 +154,7 @@ var hierarchy =
     [ "AdeNote.Infrastructure.Services.Notification.INotificationService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1INotificationService.html", [
       [ "AdeNote.Infrastructure.Services.Notification.NotificationService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1NotificationService.html", null ]
     ] ],
+    [ "AdeNote.Models.DTOs.InsertVideoDto", "classAdeNote_1_1Models_1_1DTOs_1_1InsertVideoDto.html", null ],
     [ "AdeNote.Infrastructure.Services.PageSettings.IPageService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html", [
       [ "AdeNote.Infrastructure.Services.PageSettings.PageService", "classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html", null ]
     ] ],
@@ -195,6 +199,11 @@ var hierarchy =
         [ "AdeNote.Infrastructure.Repository.UserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html", null ]
       ] ]
     ] ],
+    [ "AdeNote.Infrastructure.Repository.IRepository< Video >", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html", [
+      [ "AdeNote.Infrastructure.Repository.IVideoRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IVideoRepository.html", [
+        [ "AdeNote.Infrastructure.Repository.VideoRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1VideoRepository.html", null ]
+      ] ]
+    ] ],
     [ "IRequest", null, [
       [ "AdeNote.Infrastructure.Requests.CreateBook.CreateBookRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBook_1_1CreateBookRequest.html", null ],
       [ "AdeNote.Infrastructure.Requests.CreateBooks.CreateBooksRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBooks_1_1CreateBooksRequest.html", null ],
@@ -237,6 +246,9 @@ var hierarchy =
       [ "AdeNote.Infrastructure.Requests.FetchAllTicketsByName.FetchAllTicketsByNameRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchAllTicketsByName_1_1FetchAllTicketsByNameRequest.html", null ],
       [ "AdeNote.Infrastructure.Requests.SearchTickets.SearchTicketsRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTickets_1_1SearchTicketsRequest.html", null ],
       [ "AdeNote.Infrastructure.Requests.SearchTicketsByDate.SearchTicketsByDateRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTicketsByDate_1_1SearchTicketsByDateRequest.html", null ]
+    ] ],
+    [ "IRequest< ActionResult< string >>", null, [
+      [ "AdeNote.Infrastructure.Requests.InsertVideo.InsertVideoRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1InsertVideo_1_1InsertVideoRequest.html", null ]
     ] ],
     [ "IRequest< ActionResult< TicketDTO >>", null, [
       [ "AdeNote.Infrastructure.Requests.FetchTicketById.FetchTicketByIdRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchTicketById_1_1FetchTicketByIdRequest.html", null ]
@@ -291,6 +303,9 @@ var hierarchy =
     [ "IRequestHandler< GetPageByIdRequest, ActionResult< PageDTO >>", null, [
       [ "AdeNote.Infrastructure.Requests.GetPagesById.GetPageByIdRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetPagesById_1_1GetPageByIdRequestHandler.html", null ]
     ] ],
+    [ "IRequestHandler< InsertVideoRequest, ActionResult< string >>", null, [
+      [ "AdeNote.Infrastructure.Requests.InsertVideo.InsertVideoRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1InsertVideo_1_1InsertVideoRequestHandler.html", null ]
+    ] ],
     [ "IRequestHandler< SearchTicketsByDateRequest, ActionResult< PaginatedResponse< TicketsDTO >>>", null, [
       [ "AdeNote.Infrastructure.Requests.SearchTicketsByDate.SearchTicketsByDateRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTicketsByDate_1_1SearchTicketsByDateRequestHandler.html", null ]
     ] ],
@@ -342,6 +357,7 @@ var hierarchy =
       [ "AdeNote.Migrations.addrole", "classAdeNote_1_1Migrations_1_1addrole.html", null ],
       [ "AdeNote.Migrations.addsalt", "classAdeNote_1_1Migrations_1_1addsalt.html", null ],
       [ "AdeNote.Migrations.addticket", "classAdeNote_1_1Migrations_1_1addticket.html", null ],
+      [ "AdeNote.Migrations.addvideos", "classAdeNote_1_1Migrations_1_1addvideos.html", null ],
       [ "AdeNote.Migrations.descriptionnullable", "classAdeNote_1_1Migrations_1_1descriptionnullable.html", null ],
       [ "AdeNote.Migrations.firstmigration", "classAdeNote_1_1Migrations_1_1firstmigration.html", null ],
       [ "AdeNote.Migrations.saltoptional", "classAdeNote_1_1Migrations_1_1saltoptional.html", null ],
@@ -382,6 +398,9 @@ var hierarchy =
     [ "AdeNote.Infrastructure.Repository.Repository< Ticket >", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html", [
       [ "AdeNote.Infrastructure.Repository.TicketRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html", null ]
     ] ],
+    [ "AdeNote.Infrastructure.Repository.Repository< Video >", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html", [
+      [ "AdeNote.Infrastructure.Repository.VideoRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1VideoRepository.html", null ]
+    ] ],
     [ "AdeNote.Infrastructure.Extension.ResultExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ResultExtension.html", null ],
     [ "AdeNote.Infrastructure.Utilities.EventSystem.Scheduler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1Scheduler.html", null ],
     [ "AdeNote.Infrastructure.Utilities.SmsConfig.Sms", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1Sms.html", null ],
@@ -394,6 +413,7 @@ var hierarchy =
     [ "AdeNote.Models.DTOs.TicketsDTO", "classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html", null ],
     [ "AdeNote.Models.DTOs.TicketStatusDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStatusDto.html", null ],
     [ "AdeNote.Models.DTOs.TicketStreamDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto.html", null ],
+    [ "AdeNote.Models.Transcript", "classAdeNote_1_1Models_1_1Transcript.html", null ],
     [ "AdeNote.Models.DTOs.TranslationDto", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html", null ],
     [ "AdeNote.Infrastructure.Utilities.AuthenticationFilter.UserConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1UserConfiguration.html", null ],
     [ "AdeNote.Infrastructure.Utilities.UserConfiguation.UserId", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1UserId.html", null ],
@@ -418,5 +438,6 @@ var hierarchy =
     [ "AdeNote.Infrastructure.Extension.ValidatorExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ValidatorExtension.html", null ],
     [ "ValueConverter", null, [
       [ "AdeNote.Infrastructure.Utilities.UserConfiguation.UserIdConverter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1UserIdConverter.html", null ]
-    ] ]
+    ] ],
+    [ "AdeNote.Models.DTOs.VideoDTO", "classAdeNote_1_1Models_1_1DTOs_1_1VideoDTO.html", null ]
 ];

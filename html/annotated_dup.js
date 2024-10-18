@@ -50,6 +50,7 @@ var annotated_dup =
           [ "IRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository" ],
           [ "ITicketRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository" ],
           [ "IUserRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository" ],
+          [ "IVideoRepository", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IVideoRepository.html", null ],
           [ "LabelPageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository" ],
           [ "LabelRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelRepository" ],
           [ "PageRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1PageRepository" ],
@@ -57,7 +58,8 @@ var annotated_dup =
           [ "RefreshRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1RefreshRepository" ],
           [ "Repository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository" ],
           [ "TicketRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository" ],
-          [ "UserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository" ]
+          [ "UserRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository" ],
+          [ "VideoRepository", "classAdeNote_1_1Infrastructure_1_1Repository_1_1VideoRepository.html", "classAdeNote_1_1Infrastructure_1_1Repository_1_1VideoRepository" ]
         ] ],
         [ "Requests", "namespaceAdeNote_1_1Infrastructure_1_1Requests.html", [
           [ "CreateBook", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBook.html", [
@@ -123,6 +125,10 @@ var annotated_dup =
           [ "GetPagesById", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetPagesById.html", [
             [ "GetPageByIdRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetPagesById_1_1GetPageByIdRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetPagesById_1_1GetPageByIdRequest" ],
             [ "GetPageByIdRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetPagesById_1_1GetPageByIdRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetPagesById_1_1GetPageByIdRequestHandler" ]
+          ] ],
+          [ "InsertVideo", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1InsertVideo.html", [
+            [ "InsertVideoRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1InsertVideo_1_1InsertVideoRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1InsertVideo_1_1InsertVideoRequest" ],
+            [ "InsertVideoRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1InsertVideo_1_1InsertVideoRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1InsertVideo_1_1InsertVideoRequestHandler" ]
           ] ],
           [ "RemoveAllPageLabels", "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels.html", [
             [ "RemoveAllPageLabelsRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels_1_1RemoveAllPageLabelsRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels_1_1RemoveAllPageLabelsRequest" ],
@@ -315,6 +321,7 @@ var annotated_dup =
             [ "GetAllPagesValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetAllPagesValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetAllPagesValidator" ],
             [ "GetBookByIdValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetBookByIdValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetBookByIdValidator" ],
             [ "GetPageByIdValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetPageByIdValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1GetPageByIdValidator" ],
+            [ "InsertVideoValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1InsertVideoValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1InsertVideoValidator" ],
             [ "RemoveAllPageLabelsValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveAllPageLabelsValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveAllPageLabelsValidator" ],
             [ "RemoveBookValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveBookValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveBookValidator" ],
             [ "RemovePageLabelValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemovePageLabelValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemovePageLabelValidator" ],
@@ -334,6 +341,7 @@ var annotated_dup =
           [ "ApplicationSetting", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting" ],
           [ "BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration" ],
           [ "CachingKeys", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys" ],
+          [ "Cdn", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Cdn.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Cdn" ],
           [ "DefaultConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration" ],
           [ "EntityDoc", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc" ]
         ] ]
@@ -351,6 +359,7 @@ var annotated_dup =
         [ "addrecoverycode", "classAdeNote_1_1Migrations_1_1addrecoverycode.html", "classAdeNote_1_1Migrations_1_1addrecoverycode" ],
         [ "descriptionnullable", "classAdeNote_1_1Migrations_1_1descriptionnullable.html", "classAdeNote_1_1Migrations_1_1descriptionnullable" ],
         [ "addcreatedmodified", "classAdeNote_1_1Migrations_1_1addcreatedmodified.html", "classAdeNote_1_1Migrations_1_1addcreatedmodified" ],
+        [ "addvideos", "classAdeNote_1_1Migrations_1_1addvideos.html", "classAdeNote_1_1Migrations_1_1addvideos" ],
         [ "NoteDbContextModelSnapshot", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot" ]
       ] ],
       [ "Models", "namespaceAdeNote_1_1Models.html", [
@@ -365,6 +374,7 @@ var annotated_dup =
           [ "CreateUserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO" ],
           [ "DetailsDTO", "classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO" ],
           [ "ImportBookDto", "classAdeNote_1_1Models_1_1DTOs_1_1ImportBookDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1ImportBookDto" ],
+          [ "InsertVideoDto", "classAdeNote_1_1Models_1_1DTOs_1_1InsertVideoDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1InsertVideoDto" ],
           [ "LabelCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1LabelCreateDTO" ],
           [ "LabelDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1LabelDTO" ],
           [ "LabelUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelUpdateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1LabelUpdateDTO" ],
@@ -382,7 +392,8 @@ var annotated_dup =
           [ "TranslationDto", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto" ],
           [ "UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO" ],
           [ "UsersDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO" ],
-          [ "UserTicketDto", "classAdeNote_1_1Models_1_1DTOs_1_1UserTicketDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1UserTicketDto" ]
+          [ "UserTicketDto", "classAdeNote_1_1Models_1_1DTOs_1_1UserTicketDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1UserTicketDto" ],
+          [ "VideoDTO", "classAdeNote_1_1Models_1_1DTOs_1_1VideoDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1VideoDTO" ]
         ] ],
         [ "BaseClass", "classAdeNote_1_1Models_1_1BaseClass.html", "classAdeNote_1_1Models_1_1BaseClass" ],
         [ "Book", "classAdeNote_1_1Models_1_1Book.html", "classAdeNote_1_1Models_1_1Book" ],
@@ -395,7 +406,9 @@ var annotated_dup =
         [ "RecoveryCode", "classAdeNote_1_1Models_1_1RecoveryCode.html", "classAdeNote_1_1Models_1_1RecoveryCode" ],
         [ "RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", "classAdeNote_1_1Models_1_1RefreshToken" ],
         [ "Ticket", "classAdeNote_1_1Models_1_1Ticket.html", "classAdeNote_1_1Models_1_1Ticket" ],
-        [ "User", "classAdeNote_1_1Models_1_1User.html", "classAdeNote_1_1Models_1_1User" ]
+        [ "Transcript", "classAdeNote_1_1Models_1_1Transcript.html", null ],
+        [ "User", "classAdeNote_1_1Models_1_1User.html", "classAdeNote_1_1Models_1_1User" ],
+        [ "Video", "classAdeNote_1_1Models_1_1Video.html", "classAdeNote_1_1Models_1_1Video" ]
       ] ]
     ] ]
 ];

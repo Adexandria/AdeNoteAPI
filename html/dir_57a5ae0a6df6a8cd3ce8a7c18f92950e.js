@@ -16,6 +16,7 @@ var dir_57a5ae0a6df6a8cd3ce8a7c18f92950e =
     [ "GetBookdById", "dir_764f870dc5cef9584902d33c2fa1255c.html", "dir_764f870dc5cef9584902d33c2fa1255c" ],
     [ "GetLabelById", "dir_9fde3a68d884b7569a5399b17b3065a6.html", "dir_9fde3a68d884b7569a5399b17b3065a6" ],
     [ "GetPagesById", "dir_f6fedf7121665af05f7ee82c362e6c7c.html", "dir_f6fedf7121665af05f7ee82c362e6c7c" ],
+    [ "InsertVideo", "dir_8e72f9ec617a34720349776274eed04c.html", "dir_8e72f9ec617a34720349776274eed04c" ],
     [ "RemoveAllPageLabels", "dir_28041e92a64e201582ee2beb514ac045.html", "dir_28041e92a64e201582ee2beb514ac045" ],
     [ "RemoveBook", "dir_1abf7fe3df87c2d1ebbd96090d0e22da.html", "dir_1abf7fe3df87c2d1ebbd96090d0e22da" ],
     [ "RemoveLabel", "dir_e31931a57b1faef297172b23835041fd.html", "dir_e31931a57b1faef297172b23835041fd" ],

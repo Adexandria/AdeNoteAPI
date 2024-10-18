@@ -38,7 +38,13 @@ var dir_fab80d2647e49d0e675ea0809587eea2 =
     [ "Ticket.cs", "Ticket_8cs.html", [
       [ "Ticket", "classAdeNote_1_1Models_1_1Ticket.html", "classAdeNote_1_1Models_1_1Ticket" ]
     ] ],
+    [ "Transcript.cs", "Transcript_8cs.html", [
+      [ "Transcript", "classAdeNote_1_1Models_1_1Transcript.html", null ]
+    ] ],
     [ "User.cs", "User_8cs.html", [
       [ "User", "classAdeNote_1_1Models_1_1User.html", "classAdeNote_1_1Models_1_1User" ]
+    ] ],
+    [ "Video.cs", "Video_8cs.html", [
+      [ "Video", "classAdeNote_1_1Models_1_1Video.html", "classAdeNote_1_1Models_1_1Video" ]
     ] ]
 ];
