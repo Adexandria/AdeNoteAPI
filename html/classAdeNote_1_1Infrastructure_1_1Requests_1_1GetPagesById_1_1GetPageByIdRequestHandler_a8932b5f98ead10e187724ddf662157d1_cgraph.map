@@ -1,0 +1,6 @@
+<map id="AdeNote.Infrastructure.Requests.GetPagesById.GetPageByIdRequestHandler.Handle" name="AdeNote.Infrastructure.Requests.GetPagesById.GetPageByIdRequestHandler.Handle">
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,357,112"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html#a770e88bd6d67b6ff4bac64138f515bab" title="Gets an individual page from a particular book" alt="" coords="405,5,652,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a970597c6f3e586d64bfc44315d114220" title="Maps from page to PageDTO" alt="" coords="407,71,651,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="408,136,649,177"/>
+</map>

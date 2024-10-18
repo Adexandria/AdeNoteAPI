@@ -1,0 +1,5 @@
+var namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1FetchAllTickets =
+[
+    [ "FetchAllTicketsRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchAllTickets_1_1FetchAllTicketsRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchAllTickets_1_1FetchAllTicketsRequest" ],
+    [ "FetchAllTicketsRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchAllTickets_1_1FetchAllTicketsRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchAllTickets_1_1FetchAllTicketsRequestHandler" ]
+];

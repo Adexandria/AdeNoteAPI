@@ -1,0 +1,7 @@
+<map id="AdeNote.Infrastructure.Requests.GetLabelById.GetLabelByIdRequestHandler.Handle" name="AdeNote.Infrastructure.Requests.GetLabelById.GetLabelByIdRequestHandler.Handle">
+<area shape="rect" id="node1" title=" " alt="" coords="5,104,359,145"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="425,5,655,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html#a6506bd2a906f28b5d432adc056c3c3af" title="Get a particular label with no tracking" alt="" coords="407,71,673,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a4a72d00573a170e6e1e5bc3736135280" title="Maps from label to label dto" alt="" coords="419,136,661,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="419,201,661,243"/>
+</map>

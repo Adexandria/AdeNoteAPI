@@ -1,0 +1,5 @@
+var namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById =
+[
+    [ "FetchUserTicketByIdRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequest" ],
+    [ "FetchUserTicketByIdRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequestHandler" ]
+];

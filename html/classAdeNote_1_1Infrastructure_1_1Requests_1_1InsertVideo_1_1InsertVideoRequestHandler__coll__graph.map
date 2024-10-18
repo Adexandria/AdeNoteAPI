@@ -1,0 +1,10 @@
+<map id="AdeNote.Infrastructure.Requests.InsertVideo.InsertVideoRequestHandler" name="AdeNote.Infrastructure.Requests.InsertVideo.InsertVideoRequestHandler">
+<area shape="rect" id="node1" title=" " alt="" coords="631,136,909,177"/>
+<area shape="rect" id="node2" title=" " alt="" coords="223,5,466,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html" title="An interface that includes the behaviour of cloud storage" alt="" coords="228,71,461,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html" title="An interface to handles page object" alt="" coords="221,136,468,177"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="8,143,165,170"/>
+<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IVideoRepository.html" title=" " alt="" coords="221,201,468,243"/>
+<area shape="rect" id="node7" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,209,168,235"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1Cdn.html" title=" " alt="" coords="217,267,472,294"/>
+</map>
