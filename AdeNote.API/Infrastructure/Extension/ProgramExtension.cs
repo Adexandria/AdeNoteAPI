@@ -38,6 +38,8 @@ using System.Reflection;
 using System.Text;
 using Excelify.Services;
 using FluentValidation;
+using AdeNote.Infrastructure.Services.ChatService;
+using AdeNote.Infrastructure.Services;
 
 namespace AdeNote.Infrastructure.Extension
 {
@@ -62,6 +64,7 @@ namespace AdeNote.Infrastructure.Extension
             serviceCollection.AddScoped<IAuthService, AuthService>();
             serviceCollection.AddScoped<IBlobService, BlobService>();
             serviceCollection.AddScoped<IEmailService, EmailService>();
+            serviceCollection.AddScoped<IChatService,ChatService>();
             serviceCollection.AddScoped<ISmsService, SmsService>();
             serviceCollection.AddScoped<INotificationService, NotificationService>();
             serviceCollection.AddScoped<IUserService, UserService>();
@@ -77,6 +80,7 @@ namespace AdeNote.Infrastructure.Extension
             serviceCollection.AddSingleton((x) => MessagingFactory.CreateServices(applicationSettings.Messaging, x.GetRequiredService<ILoggerFactory>()));
             serviceCollection.AddSingleton<LanguageScheduler>();
             serviceCollection.AddSingleton<Scheduler>();
+            serviceCollection.AddScoped<ThreadMapper>();
             serviceCollection.AddScoped<IUserIdentity, UserIdentity>();
             serviceCollection.AddSingleton((_) => new ExcelifyFactory());
             serviceCollection.AddSingleton((x) => new CacheFactory().CreateService(applicationSettings.CacheConfiguration

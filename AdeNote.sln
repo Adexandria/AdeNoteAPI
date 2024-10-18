@@ -24,7 +24,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdeCache", "AdeCache\AdeCac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdeMessaging", "AdeMessaging\AdeMessaging.csproj", "{74740885-2452-4E9B-B966-6B8EBDD46C56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdeAuth.Tests", "AdeAuth.Tests\AdeAuth.Tests.csproj", "{B5ED79BA-EBEB-48CB-85E2-D6CE6E2E36CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdeAuth.Tests", "AdeAuth.Tests\AdeAuth.Tests.csproj", "{B5ED79BA-EBEB-48CB-85E2-D6CE6E2E36CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChattyPie", "ChattyPie\ChattyPie.csproj", "{5EE04CD2-11E7-4D27-AD8E-3C2C4A9AFB48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +70,10 @@ Global
 		{B5ED79BA-EBEB-48CB-85E2-D6CE6E2E36CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5ED79BA-EBEB-48CB-85E2-D6CE6E2E36CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5ED79BA-EBEB-48CB-85E2-D6CE6E2E36CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EE04CD2-11E7-4D27-AD8E-3C2C4A9AFB48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EE04CD2-11E7-4D27-AD8E-3C2C4A9AFB48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EE04CD2-11E7-4D27-AD8E-3C2C4A9AFB48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EE04CD2-11E7-4D27-AD8E-3C2C4A9AFB48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

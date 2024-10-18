@@ -37,6 +37,7 @@
     <ProjectReference Include="..\AdeCache\AdeCache.csproj" />
     <ProjectReference Include="..\AdeMessaging\AdeMessaging.csproj" />
     <ProjectReference Include="..\AdeText\AdeText.csproj" />
+    <ProjectReference Include="..\ChattyPie\ChattyPie.csproj" />
     <ProjectReference Include="..\DocBuilder\DocBuilder.csproj" />
     <ProjectReference Include="..\Excelify\Excelify.csproj" />
   </ItemGroup>
