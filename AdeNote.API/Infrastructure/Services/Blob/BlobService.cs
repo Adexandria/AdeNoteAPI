@@ -48,6 +48,7 @@ namespace AdeNote.Infrastructure.Services.Blob
                 await blobClient.SetHttpHeadersAsync(new BlobHttpHeaders
                 {
                     ContentType = mimeType.GetDescription()
+                    
                 });
                 return blobUri.AbsoluteUri;
             }

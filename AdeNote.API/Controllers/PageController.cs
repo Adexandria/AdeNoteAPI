@@ -126,21 +126,32 @@ namespace AdeNote.Controllers
         ///  <response code ="500"> Returns if experiencing server issues</response>
         ///  <response code ="404"> Returns if not found</response>
         /// <response code ="401"> Returns if unauthorised</response>
-        [Consumes("application/json")]
+        [Consumes("multipart/form-data")]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost]
-        public async Task<IActionResult> CreatePage([ValidGuid("Invalid book id")] Guid bookId, PageCreateDTO pageCreate)
+        public async Task<IActionResult> CreatePage([ValidGuid("Invalid book id")] Guid bookId, [FromForm]PageCreateDTO pageCreate)
         {
+            if (pageCreate.File.ContentType != MimeType.mp4.GetDescription())
+                return BadRequest("Incorrect video type");
+
+            var memoryStream = new MemoryStream();
+
+            await pageCreate?.File?.CopyToAsync(memoryStream);
+
+            memoryStream.Position = 0;
+
             var response = await Application.SendAsync(new CreatePageRequest()
             {
                 BookId = bookId,
                 Content = pageCreate.Content,
                 Title = pageCreate.Title,
-                UserId = CurrentUser
+                UserId = CurrentUser,
+                Description = pageCreate.Description,
+                Stream = memoryStream
             });
             return response.Response();
         }
@@ -159,7 +170,7 @@ namespace AdeNote.Controllers
 
             var memoryStream = new MemoryStream();
 
-            newVideo?.File?.CopyToAsync(memoryStream);
+            await newVideo?.File?.CopyToAsync(memoryStream);
 
             memoryStream.Position = 0;
 
@@ -167,7 +178,7 @@ namespace AdeNote.Controllers
             { 
                 BookId = bookId,
                 PageId = pageId,
-                Description = newVideo?.Description,
+                Description = newVideo.Description,
                 Stream = memoryStream
             });
 

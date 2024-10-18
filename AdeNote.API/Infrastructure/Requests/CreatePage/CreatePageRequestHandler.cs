@@ -5,6 +5,7 @@ using AdeNote.Models;
 using MediatR;
 using System.Net;
 using Automappify.Services;
+using AdeNote.Infrastructure.Requests.InsertVideo;
 
 namespace AdeNote.Infrastructure.Requests.CreatePage
 {
@@ -12,11 +13,13 @@ namespace AdeNote.Infrastructure.Requests.CreatePage
     {
         public CreatePageRequestHandler(IPageRepository _pageRepository,
             IBookRepository _bookRepository,
-            ICacheService _cacheService, CachingKeys cachingKeys)
+            ICacheService _cacheService, CachingKeys cachingKeys,
+            InsertVideoRequestHandler _insertVideoRequestHandler)
         {
             pageRepository = _pageRepository;
             bookRepository = _bookRepository;
             cacheService = _cacheService;
+            insertVideoRequestHandler = _insertVideoRequestHandler;
             _bookCacheKey = cachingKeys.BookCacheKey;
             _pageCacheKey = cachingKeys.PageCacheKey;
         }
@@ -36,11 +39,25 @@ namespace AdeNote.Infrastructure.Requests.CreatePage
             if (!commitStatus)
                 return ActionResult.Failed("Failed to add page");
 
+            var response = await insertVideoRequestHandler.Handle(new InsertVideoRequest
+            {
+                PageId = page.Id,
+                BookId = currentBook.Id,
+                Description = request.Description,
+                Stream = request.Stream
+
+            },cancellationToken);
+
+            if (response.NotSuccessful)
+            {
+                return ActionResult.Failed("Failed to insert video");
+            }
+
             cacheService.Set($"{_pageCacheKey}:{request.BookId}:{page.Id}", page, DateTime.UtcNow.AddMinutes(30));
 
             return ActionResult.SuccessfulOperation();
         }
-
+        private readonly InsertVideoRequestHandler insertVideoRequestHandler;
         private readonly IPageRepository pageRepository;
         private readonly IBookRepository bookRepository;
         private readonly ICacheService cacheService;

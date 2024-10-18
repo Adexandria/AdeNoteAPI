@@ -1,4 +1,5 @@
-﻿using AdeCache.Services;
+﻿using AdeAuth.Services.Extensions;
+using AdeCache.Services;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Services.Blob;
 using AdeNote.Infrastructure.Utilities;
@@ -34,7 +35,7 @@ namespace AdeNote.Infrastructure.Requests.InsertVideo
 
             _ = await blobService.UploadImage(fileName, request.Stream, mimeType: MimeType.mp4);
 
-            var url = cdn.Endpoint + fileName;
+            var url = cdn.Endpoint + fileName +"." + MimeType.mp4.ToString();
 
             var video = new Video(request.Description, request.PageId, url);
 
