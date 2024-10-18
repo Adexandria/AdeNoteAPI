@@ -81,6 +81,13 @@ namespace AdeNote.Infrastructure.Repository
             return isPhoneNumberVerified;
         }
 
+        public List<string> GetUserEmails(List<string> userIds)
+        {
+            return Db.Users.Where(s => userIds.Contains(s.Id.ToString())).AsNoTracking().Select(s => s.Email).ToList();
+        }
+
+
+
         public async Task<bool> Remove(User entity)
         {
             Db.Users.Remove(entity);
@@ -161,6 +168,9 @@ namespace AdeNote.Infrastructure.Repository
             return saved;
 
         }
+
+
+
         private readonly IdentityDbContext Db;
 
         private readonly ILogger<UserRepository> logger;

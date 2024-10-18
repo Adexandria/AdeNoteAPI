@@ -3,6 +3,7 @@ using AdeNote.Models.DTOs;
 using Automapify.Services;
 using Automapify.Services.Extensions;
 using Automappify.Services;
+using ChattyPie.Models.DTOs;
 
 namespace AdeNote.Infrastructure.Extension
 {
@@ -91,6 +92,16 @@ namespace AdeNote.Infrastructure.Extension
                 .Map(d=>d.FirstName, s=>s.User.FirstName)
                 .Map(d=>d.LastName, s=>s.User.LastName)
                 .Map(d=>d.Created, s=>s.Created.ToLongDateString())
+                .CreateConfig();
+        }
+
+        public static MapifyConfiguration ThreadConfig()
+        {
+            return new MapifyConfigurationBuilder<ThreadDto, TweetThreadDto>()
+                .Map(d=>d.Id, s => new Guid(s.Id))
+                .Map(d=>d.Message, s =>s.Message)
+                .Map(d=>d.Messages.MapTo(s=>s.Id), s=>s.SubThreads.MapFrom(s=> new Guid(s.Id)))
+                .Map(d => d.Messages.MapTo(s=>s.Message), s => s.SubThreads.MapFrom(s=>s.Message))
                 .CreateConfig();
         }
     }

@@ -9,6 +9,7 @@ using AdeNote.Infrastructure.Utilities.HealthChecks;
 using AdeNote.Models;
 using Asp.Versioning;
 using Asp.Versioning.ApiExplorer;
+using ChattyPie.Application;
 using Hangfire;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
@@ -56,6 +57,8 @@ builder.Services.AddMiniProfiler(options =>
 }).AddEntityFramework();
 
 builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.RegisterChattyPie(applicationSettings.CosmosConfiguration);
 
 builder.Services.AddHangfire(config => config
     .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)

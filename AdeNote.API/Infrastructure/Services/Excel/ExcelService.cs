@@ -17,7 +17,7 @@ namespace AdeNote.Infrastructure.Services.Excel
         public Stream ExportEntities<T>(string extensionType, string name, IEnumerable<T> entities) where T : class
         {
             var excelService = _excelifyFactory.CreateService(extensionType);
-            Stream file;
+
             if (excelService is ExcelifyService && string.IsNullOrEmpty(name))
             {
                 throw new ArgumentException("Sheet name is invalid");
@@ -29,7 +29,7 @@ namespace AdeNote.Infrastructure.Services.Excel
                 SheetName = name
             };
 
-            file = excelService.ExportToStream(exportEntity);
+            Stream file = excelService.ExportToStream(exportEntity);
 
             return file;
 
