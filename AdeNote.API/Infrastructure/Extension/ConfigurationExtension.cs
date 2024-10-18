@@ -57,6 +57,12 @@ namespace AdeNote.Infrastructure.Extension
             return  configuration.GetSection("CachingKeys").Get<CachingKeys>() ?? throw new NullReferenceException("Invalid host name");
         }
 
+        public static Cdn ExtractCdnConfiguration(IConfiguration configuration)
+        {
+            var endpoint = configuration["CdnEndpoint"] ?? throw new NullReferenceException("Invalid host name");
+
+            return new Cdn(endpoint) ?? throw new NullReferenceException(nameof(endpoint));
+        }
         public static ApplicationSetting ExtractApplicationSetting(this IConfiguration configuration)
         {
             return new ApplicationSetting
@@ -69,7 +75,8 @@ namespace AdeNote.Infrastructure.Extension
                 ConnectionString = ExtractConnectionString(configuration),
                 DefaultConfiguration = ExtractDefaultConfiguration(configuration),
                 HangFireUserConfiguration = ExtractHangFireUserConfiguration(configuration),
-                CachingKeys = ExtractCachingKeys(configuration)
+                CachingKeys = ExtractCachingKeys(configuration),
+                CdnEndpoint = ExtractCdnConfiguration(configuration)
             };
         }
     }

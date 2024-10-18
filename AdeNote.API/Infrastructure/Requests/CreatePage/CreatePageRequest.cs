@@ -12,5 +12,9 @@ namespace AdeNote.Infrastructure.Requests.CreatePage
         public Guid BookId { get; set; }
 
         public Guid UserId { get; set; }
+
+        public Stream Stream { get; set; }
+
+        public string Description { get; set; }
     }
 }

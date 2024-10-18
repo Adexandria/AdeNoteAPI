@@ -16,6 +16,8 @@ namespace AdeNote.Infrastructure.Utilities
         [Description("text/csv")]
         csv,
         [Description("application/vnd.openxmlformats-officedocument.wordprocessingml.document")]
-        docx
+        docx,
+        [Description("video/mp4")]
+        mp4
     }
 }

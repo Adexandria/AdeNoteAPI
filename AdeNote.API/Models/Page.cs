@@ -67,5 +67,6 @@ namespace AdeNote.Models
 
         public DateTime Modified { get; set; }
 
+        public IList<Video> Videos { get; set; }
     }
 }

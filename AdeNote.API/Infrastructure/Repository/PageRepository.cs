@@ -50,7 +50,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>a page object</returns>
         public async Task<Page> GetBookPage(Guid bookId, Guid pageId, bool isTracked)
         {
-            var page = Db.Pages.Include(s => s.Book)
+            var page = Db.Pages.Include(s => s.Book).Include(s=>s.Videos)
                 .Include(s => s.Labels);
 
             if(!isTracked) 
@@ -69,7 +69,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>A list of pages</returns>
         public IQueryable<Page> GetBookPages(Guid bookId)
         {
-            return Db.Pages.Include(s => s.Book)
+            return Db.Pages.Include(s => s.Book).Include(s => s.Videos)
                 .Include(s => s.Labels).Where(s=>s.BookId == bookId).AsNoTracking();
         }
 

@@ -3,6 +3,7 @@ using AdeNote.Infrastructure.Requests.CreatePage;
 using AdeNote.Infrastructure.Requests.CreatePageLabels;
 using AdeNote.Infrastructure.Requests.GetAllPages;
 using AdeNote.Infrastructure.Requests.GetPagesById;
+using AdeNote.Infrastructure.Requests.InsertVideo;
 using AdeNote.Infrastructure.Requests.RemoveAllPageLabels;
 using AdeNote.Infrastructure.Requests.RemovePage;
 using AdeNote.Infrastructure.Requests.RemovePageLabel;
@@ -39,7 +40,7 @@ namespace AdeNote.Controllers
         /// </summary>
         /// <param name="pageService">An interface that interacts with the page table</param>
         /// <param name="userIdentity">An interface that interacts with the user. This fetches the current user details</param>
-        public PageController(IPageService pageService, IUserIdentity userIdentity, Application application) : base(userIdentity,application)
+        public PageController(IPageService pageService, IUserIdentity userIdentity, Application application) : base(userIdentity, application)
         {
             _pageService = pageService;
         }
@@ -63,7 +64,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<IEnumerable<PageDTO>>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpGet]
-        public async Task<IActionResult> GetAllPages([ValidGuid("Invalid book id")]Guid bookId)
+        public async Task<IActionResult> GetAllPages([ValidGuid("Invalid book id")] Guid bookId)
         {
             var response = await Application.SendAsync<GetAllPagesRequest, IEnumerable<PageDTO>>(new GetAllPagesRequest()
             {
@@ -98,7 +99,7 @@ namespace AdeNote.Controllers
         {
             var response = await Application.SendAsync<GetPageByIdRequest, PageDTO>(new GetPageByIdRequest()
             {
-                BookId = bookId, 
+                BookId = bookId,
                 PageId = pageId
             });
 
@@ -125,24 +126,70 @@ namespace AdeNote.Controllers
         ///  <response code ="500"> Returns if experiencing server issues</response>
         ///  <response code ="404"> Returns if not found</response>
         /// <response code ="401"> Returns if unauthorised</response>
-        [Consumes("application/json")]
+        [Consumes("multipart/form-data")]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost]
-        public async Task<IActionResult> CreatePage([ValidGuid("Invalid book id")] Guid bookId, PageCreateDTO pageCreate)
+        public async Task<IActionResult> CreatePage([ValidGuid("Invalid book id")] Guid bookId, [FromForm]PageCreateDTO pageCreate)
         {
+            var memoryStream = new MemoryStream();
+
+            if (pageCreate.File != null)
+            {
+                if (pageCreate.File?.ContentType != MimeType.mp4.GetDescription())
+                    return BadRequest("Incorrect video type");
+
+                await pageCreate?.File?.CopyToAsync(memoryStream);
+
+                memoryStream.Position = 0;
+            }
+           
             var response = await Application.SendAsync(new CreatePageRequest()
             {
                 BookId = bookId,
                 Content = pageCreate.Content,
                 Title = pageCreate.Title,
-                UserId = CurrentUser
+                UserId = CurrentUser,
+                Description = pageCreate.Description,
+                Stream = memoryStream
             });
             return response.Response();
         }
+
+        [Consumes("multipart/form-data")]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpPost("{pageId}/videos")]
+        public async Task<IActionResult> InsertVideo(Guid pageId,Guid bookId,[FromForm] InsertVideoDto newVideo)
+        {
+            if (newVideo.File.ContentType != MimeType.mp4.GetDescription())
+                return BadRequest("Incorrect video type");
+
+            var memoryStream = new MemoryStream();
+
+            await newVideo?.File?.CopyToAsync(memoryStream);
+
+            memoryStream.Position = 0;
+
+            var response = await Application.SendAsync<InsertVideoRequest,string>(new InsertVideoRequest() 
+            { 
+                BookId = bookId,
+                PageId = pageId,
+                Description = newVideo.Description,
+                Stream = memoryStream
+            });
+
+            return response.Response();
+        }
+
+
+
 
         /// <summary>
         /// Adds labels to a page

@@ -36,6 +36,7 @@ namespace AdeNote.Infrastructure.Services.PageSettings
         /// <param name="updatePage">An object to update an existing page</param>
         /// <returns>An action result</returns>
         Task<ActionResult> Update(Guid bookId, Guid userId, Guid pageId, PageUpdateDTO updatePage);
+
         /// <summary>
         /// Removes a particular page
         /// </summary>
