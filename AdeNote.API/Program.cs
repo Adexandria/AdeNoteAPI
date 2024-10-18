@@ -52,7 +52,7 @@ builder.Services.AddMiniProfiler(options =>
     options.RouteBasePath = "/profiler";
     options.ColorScheme = StackExchange.Profiling.ColorScheme.Auto;
     options.PopupRenderPosition = StackExchange.Profiling.RenderPosition.Left;
-  //  options.ResultsListAuthorize = request => new MiniProfilerAuthorization(applicationSettings.HangFireUserConfiguration).Authorize(request);
+    // options.ResultsListAuthorize = request => new MiniProfilerAuthorization(applicationSettings.HangFireUserConfiguration).Authorize(request);
 }).AddEntityFramework();
 
 builder.Services.AddEndpointsApiExplorer();
@@ -81,12 +81,12 @@ builder.Services.AddHangfireServer();
 builder.Services.AddDbContext<NoteDbContext>(options => options
 .UseSqlServer(applicationSettings.ConnectionString));
 
-builder.Services.UseIdentityService<IdentityDbContext, User>((s) => s.UseSqlServer(applicationSettings.ConnectionString), 
-    assembly: Assembly.GetExecutingAssembly(),dependencies: (x) =>
-    {
-        var currentTypes = x.GetTypes().Where(s=>!s.IsInterface && !s.IsAbstract).Where(p=> p.BaseType == typeof(IdentityService<User>)).ToList();
-        return currentTypes;
-    });
+builder.Services.UseIdentityService<IdentityDbContext, User>(
+(cfg) => 
+{
+    cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);
+    cfg.UseSqlServer(applicationSettings.ConnectionString);
+});
 
 var app = builder.Build();
 
