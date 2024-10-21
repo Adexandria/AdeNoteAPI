@@ -84,8 +84,7 @@ namespace AdeNote.Infrastructure.Extension
                 DefaultConfiguration = ExtractDefaultConfiguration(configuration),
                 HangFireUserConfiguration = ExtractHangFireUserConfiguration(configuration),
                 CachingKeys = ExtractCachingKeys(configuration),
-                CosmosConfiguration = ExtractCosmosConfiguration(configuration)
-                CachingKeys = ExtractCachingKeys(configuration),
+                CosmosConfiguration = ExtractCosmosConfiguration(configuration),
                 CdnEndpoint = ExtractCdnConfiguration(configuration)
             };
         }
