@@ -1,0 +1,6 @@
+<map id="AdeNote.Infrastructure.Requests.UpdateBook.UpdateBookRequestHandler" name="AdeNote.Infrastructure.Requests.UpdateBook.UpdateBookRequestHandler">
+<area shape="rect" id="node1" title=" " alt="" coords="615,37,905,79"/>
+<area shape="rect" id="node2" title=" " alt="" coords="224,5,449,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html" title="An interface that includes the behaviour of a book object" alt="" coords="213,71,460,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,78,164,105"/>
+</map>

@@ -1,0 +1,5 @@
+var namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1CreateLabel =
+[
+    [ "CreateLabelRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateLabel_1_1CreateLabelRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateLabel_1_1CreateLabelRequest" ],
+    [ "CreateLabelRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateLabel_1_1CreateLabelRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateLabel_1_1CreateLabelRequestHandler" ]
+];

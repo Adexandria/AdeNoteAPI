@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Requests.CreatePage.CreatePageRequestHandler.Handle" name="AdeNote.Infrastructure.Requests.CreatePage.CreatePageRequestHandler.Handle">
+<area shape="rect" id="node1" title=" " alt="" coords="5,105,332,147"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#af7cfac5b470f7e8886c0335122bdd817" title="Saves a new entity" alt="" coords="755,5,1001,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="763,71,993,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1InsertVideo_1_1InsertVideoRequestHandler.html#a2dc1a49f9ef982b98a272993074190c3" title=" " alt="" coords="380,135,707,176"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="757,267,999,308"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html#a770e88bd6d67b6ff4bac64138f515bab" title="Gets an individual page from a particular book" alt="" coords="755,201,1001,243"/>
+<area shape="rect" id="node7" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html#a94e4ed202ddc6c1a519f053440ac2dc1" title="Uploads image" alt="" coords="761,136,995,177"/>
+</map>

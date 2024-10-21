@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['texttranslation_2ecs_1725',['TextTranslation.cs',['../TextTranslation_8cs.html',1,'']]],
+  ['ticket_2ecs_1726',['Ticket.cs',['../Ticket_8cs.html',1,'']]],
+  ['ticketcontroller_2ecs_1727',['TicketController.cs',['../TicketController_8cs.html',1,'']]],
+  ['ticketcreatedto_2ecs_1728',['TicketCreateDto.cs',['../TicketCreateDto_8cs.html',1,'']]],
+  ['ticketdto_2ecs_1729',['TicketDTO.cs',['../TicketDTO_8cs.html',1,'']]],
+  ['ticketevent_2ecs_1730',['TicketEvent.cs',['../TicketEvent_8cs.html',1,'']]],
+  ['ticketrepository_2ecs_1731',['TicketRepository.cs',['../TicketRepository_8cs.html',1,'']]],
+  ['ticketsdto_2ecs_1732',['TicketsDTO.cs',['../TicketsDTO_8cs.html',1,'']]],
+  ['ticketservice_2ecs_1733',['TicketService.cs',['../TicketService_8cs.html',1,'']]],
+  ['ticketstatusdto_2ecs_1734',['TicketStatusDto.cs',['../TicketStatusDto_8cs.html',1,'']]],
+  ['ticketstreamdto_2ecs_1735',['TicketStreamDto.cs',['../TicketStreamDto_8cs.html',1,'']]],
+  ['transcript_2ecs_1736',['Transcript.cs',['../Transcript_8cs.html',1,'']]],
+  ['translateconfiguration_2ecs_1737',['TranslateConfiguration.cs',['../TranslateConfiguration_8cs.html',1,'']]],
+  ['translatepagerequest_2ecs_1738',['TranslatePageRequest.cs',['../TranslatePageRequest_8cs.html',1,'']]],
+  ['translatepagerequesthandler_2ecs_1739',['TranslatePageRequestHandler.cs',['../TranslatePageRequestHandler_8cs.html',1,'']]],
+  ['translatepagevalidator_2ecs_1740',['TranslatePageValidator.cs',['../TranslatePageValidator_8cs.html',1,'']]],
+  ['translationdto_2ecs_1741',['TranslationDto.cs',['../TranslationDto_8cs.html',1,'']]]
+];

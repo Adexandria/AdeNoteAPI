@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Services.Blob.IBlobService.DownloadImage" name="AdeNote.Infrastructure.Services.Blob.IBlobService.DownloadImage">
+<area shape="rect" id="node1" title="Downloads image" alt="" coords="649,13,896,54"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1NotificationService.html#acd4fefac0cc53e75089c10cd4f49a339" title="Generates content template using template type" alt="" coords="313,5,601,61"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1NotificationService.html#a99ce5b254a97518708c15c954c3b9901" title="Send notification based on template type" alt="" coords="5,5,265,61"/>
+</map>
