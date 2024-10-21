@@ -1,14 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace AdeAuth.Services.Extensions
 {
+    /// <summary>
+    /// Manages enum extensions
+    /// </summary>
     public static class EnumExtensions
     {
+        /// <summary>
+        /// Get description in an enum
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
         public static string GetDescription(this Enum source)
         {
             var enumField = source.GetType().GetField(source.ToString());

@@ -10,7 +10,6 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using System.Reflection;
 using System.Security.Claims;
 using System.Text;
 
@@ -23,7 +22,7 @@ namespace AdeAuth.Infrastructure
         /// </summary>
         /// <typeparam name="TDbContext">Identity context</typeparam>
         /// <param name="serviceCollection">Manages dependencies of services</param>
-        /// <param name="actionBuilder">Registers db context dependencies</param>
+        /// <param name="configurationBuilder">Build identity service configuration</param>
         public static IServiceCollection AddIdentityService<TDbContext>(this IServiceCollection serviceCollection,
             Action<AuthConfiguration> configurationBuilder)
             where TDbContext : IdentityContext
@@ -52,9 +51,9 @@ namespace AdeAuth.Infrastructure
         /// <typeparam name="TUser">User model</typeparam>
         /// <typeparam name="TDbContext">Identity context</typeparam>
         /// <param name="serviceCollection">Manages dependencies of services</param>
-        /// <param name="actionBuilder">Registers db context dependencies</param>
+        /// <param name="configurationBuilder">Build identity service configuration</param>
         public static IServiceCollection AddIdentityService<TDbContext,TUser>(this IServiceCollection serviceCollection, 
-            Action<AuthConfiguration> configurationBuilder = null) 
+            Action<AuthConfiguration> configurationBuilder) 
             where TDbContext : IdentityContext<TUser>
             where TUser : ApplicationUser, new()
         {
@@ -83,8 +82,9 @@ namespace AdeAuth.Infrastructure
         /// <typeparam name="TUser">User model</typeparam>
         /// <typeparam name="TDbContext">Identity context</typeparam>
         /// <param name="serviceCollection">Manages dependencies of services</param>
+        /// <param name="configurationBuilder">Build identity service configuration</param>
         public static IServiceCollection AddIdentityService<TDbContext, TUser, TRole>(this IServiceCollection serviceCollection,
-            Action<AuthConfiguration> configurationBuilder = null)
+            Action<AuthConfiguration> configurationBuilder)
          where TDbContext : IdentityContext<TUser,TRole>
          where TUser : ApplicationUser, new()
          where TRole: ApplicationRole, new()
@@ -106,6 +106,12 @@ namespace AdeAuth.Infrastructure
             return serviceCollection;
         }
 
+        /// <summary>
+        /// Sets up jwt bearer authentication scheme
+        /// </summary>
+        /// <param name="authenticationBuilder">Configuration authentication</param>
+        /// <param name="actionBuilder">Build token configuration</param>
+        /// <returns>Configuration authentication</returns>
         public static AuthenticationBuilder AddJwtBearer(this AuthenticationBuilder authenticationBuilder, Action<TokenConfiguration> actionBuilder)
         {
             var tokenConfiguration = new TokenConfiguration();
@@ -133,6 +139,12 @@ namespace AdeAuth.Infrastructure
             return authenticationBuilder;
         }
 
+        /// <summary>
+        /// Sets up microsoft account for single sign on
+        /// </summary>
+        /// <param name="authenticationBuilder">Configuration authentication</param>
+        /// <param name="actionBuilder">Builds microsoft single sign on</param>
+        /// <returns>Configuration authentication</returns>
         public static AuthenticationBuilder AddMicrosoftAccount(this AuthenticationBuilder authenticationBuilder, Action<AzureConfiguration> actionBuilder)
         {
            var azureConfiguration = new AzureConfiguration();
