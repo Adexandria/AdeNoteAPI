@@ -24,7 +24,7 @@ namespace AdeAuth.Infrastructure
         /// <typeparam name="TDbContext">Identity context</typeparam>
         /// <param name="serviceCollection">Manages dependencies of services</param>
         /// <param name="actionBuilder">Registers db context dependencies</param>
-        public static IServiceCollection UseIdentityService<TDbContext>(this IServiceCollection serviceCollection,
+        public static IServiceCollection AddIdentityService<TDbContext>(this IServiceCollection serviceCollection,
             Action<AuthConfiguration> configurationBuilder)
             where TDbContext : IdentityContext
         {
@@ -32,7 +32,7 @@ namespace AdeAuth.Infrastructure
 
             configurationBuilder(authConfiguration);
 
-            RegisterDbContext<TDbContext>(serviceCollection, authConfiguration.ActionBuilder);
+            RegisterDbContext<TDbContext>(serviceCollection, authConfiguration.ConnectionString);
 
             if(authConfiguration.DependencyTypes.Any())
             {
@@ -53,7 +53,7 @@ namespace AdeAuth.Infrastructure
         /// <typeparam name="TDbContext">Identity context</typeparam>
         /// <param name="serviceCollection">Manages dependencies of services</param>
         /// <param name="actionBuilder">Registers db context dependencies</param>
-        public static IServiceCollection UseIdentityService<TDbContext,TUser>(this IServiceCollection serviceCollection, 
+        public static IServiceCollection AddIdentityService<TDbContext,TUser>(this IServiceCollection serviceCollection, 
             Action<AuthConfiguration> configurationBuilder = null) 
             where TDbContext : IdentityContext<TUser>
             where TUser : ApplicationUser, new()
@@ -62,7 +62,7 @@ namespace AdeAuth.Infrastructure
 
             configurationBuilder(authConfiguration);
 
-            RegisterDbContext<TDbContext>(serviceCollection, authConfiguration.ActionBuilder);
+            RegisterDbContext<TDbContext>(serviceCollection, authConfiguration.ConnectionString);
 
             if (!authConfiguration.DependencyTypes.Any())
             {
@@ -83,8 +83,7 @@ namespace AdeAuth.Infrastructure
         /// <typeparam name="TUser">User model</typeparam>
         /// <typeparam name="TDbContext">Identity context</typeparam>
         /// <param name="serviceCollection">Manages dependencies of services</param>
-        /// <param name="actionBuilder">Registers db context dependencies</param>
-        public static IServiceCollection UseIdentityService<TDbContext, TUser, TRole>(this IServiceCollection serviceCollection, Action<DbContextOptionsBuilder> actionBuilder,
+        public static IServiceCollection AddIdentityService<TDbContext, TUser, TRole>(this IServiceCollection serviceCollection,
             Action<AuthConfiguration> configurationBuilder = null)
          where TDbContext : IdentityContext<TUser,TRole>
          where TUser : ApplicationUser, new()
@@ -94,7 +93,7 @@ namespace AdeAuth.Infrastructure
 
             configurationBuilder(authConfiguration);
 
-            RegisterDbContext<TDbContext>(serviceCollection, authConfiguration.ActionBuilder);
+            RegisterDbContext<TDbContext>(serviceCollection, authConfiguration.ConnectionString);
 
             if (!authConfiguration.DependencyTypes.Any())
             {
@@ -193,15 +192,17 @@ namespace AdeAuth.Infrastructure
         /// </summary>
         /// <typeparam name="TDbContext">Identity context</typeparam>
         /// <param name="services">Manages dependencies of services</param>
-        /// <param name="actionBuilder">Registers db context dependencies</param>
-        private static void RegisterDbContext<TDbContext>(IServiceCollection services, Action<DbContextOptionsBuilder> actionBuilder)
+        /// <param name="connectionString">Connection string of sql server</param>
+        private static void RegisterDbContext<TDbContext>(IServiceCollection services, string connectionString)
             where TDbContext: DbContext
         {
-            services.AddDbContext<TDbContext>(actionBuilder);
+            services.AddDbContext<TDbContext>((s) => s.UseSqlServer(connectionString));
 
             var provider = services.BuildServiceProvider();
 
-            RunMigration(provider.GetRequiredService<TDbContext>());
+            var scope = provider.CreateScope();
+
+            RunMigration(scope.ServiceProvider.GetService<TDbContext>());
 
             RegisterDependencies(services);
         }

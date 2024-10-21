@@ -61,7 +61,7 @@ builder.Services.AddHangfire(config => config
     .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
     .UseSimpleAssemblyNameTypeSerializer()
     .UseRecommendedSerializerSettings()
-    .UseSqlServerStorage(configuration.GetConnectionString("NotesDB")));
+    .UseSqlServerStorage(applicationSettings.ConnectionString));
 
 builder.Services.AddHealthChecks()
     .AddCheck<DatabaseHealthCheck>("CheckDatabase")
@@ -81,7 +81,7 @@ builder.Services.AddHangfireServer();
 builder.Services.AddDbContext<NoteDbContext>(options => options
 .UseSqlServer(applicationSettings.ConnectionString));
 
-builder.Services.UseIdentityService<IdentityDbContext, User>(
+builder.Services.AddIdentityService<IdentityDbContext, User>(
 (cfg) => 
 {
     cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);

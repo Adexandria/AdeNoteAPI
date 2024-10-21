@@ -75,7 +75,7 @@ namespace AdeNote.Controllers
         [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<CreateUserDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         [HttpPost("sign-up")]
-        public async Task<IActionResult> SignUp(CreateUserDTO newUser, CancellationToken cancellationToken)
+        public async Task<IActionResult> SignUp(CreateUserDTO newUser)
         {
             var response = await _authService.SignUser(newUser);
             return response.Response();

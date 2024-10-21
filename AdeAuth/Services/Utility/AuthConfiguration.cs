@@ -1,5 +1,4 @@
-﻿using AdeAuth.Db;
-using AdeAuth.Models;
+﻿using AdeAuth.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -9,17 +8,13 @@ namespace AdeAuth.Services.Utility
     {
         public AuthConfiguration()
         {
-            builder = new DbContextOptionsBuilder();
             DependencyTypes = new List<Type>();
         }
 
         public void RegisterServicesFromAssembly(Assembly assembly)
         {
-            var type = assembly.GetTypes()
-                .Where(s => s.BaseType.IsGenericType && s.BaseType.GetGenericArguments()
-                .Any(p => p == typeof(ApplicationUser))).ToList();
-
-            DependencyTypes = type;
+            DependencyTypes = assembly.GetTypes()
+                .Where(s => GetGenericArguments(s) && !s.IsAbstract).ToList();
         }
 
         public void RegisterUserService(Type type)
@@ -34,11 +29,20 @@ namespace AdeAuth.Services.Utility
 
         public void UseSqlServer(string connectionString)
         {
-            ActionBuilder += (_) => builder.UseSqlServer(connectionString);
+            ConnectionString = connectionString;
         }
 
-        private readonly DbContextOptionsBuilder builder;
-        public Action<DbContextOptionsBuilder> ActionBuilder { get; set; }
+        private bool GetGenericArguments(Type type)
+        {
+            if(type  == null) return false;
+
+            var hasServices = type.BaseType?.GetGenericArguments()
+                .Any(s => s.BaseType == typeof(ApplicationUser) || s.BaseType == typeof(ApplicationRole));
+
+            return hasServices.GetValueOrDefault();
+        }
+
+        public string ConnectionString { get; set; }
         public List<Type> DependencyTypes { get; private set; }
     }
 }
