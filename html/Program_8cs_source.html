@@ -140,16 +140,16 @@ $(document).ready(function(){initNavTree('Program_8cs_source.html',''); initResi
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    options.RouteBasePath = <span class="stringliteral">&quot;/profiler&quot;</span>;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    options.ColorScheme = StackExchange.Profiling.ColorScheme.Auto;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    options.PopupRenderPosition = StackExchange.Profiling.RenderPosition.Left;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="comment">//  options.ResultsListAuthorize = request =&gt; new MiniProfilerAuthorization(applicationSettings.HangFireUserConfiguration).Authorize(request);</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// options.ResultsListAuthorize = request =&gt; new MiniProfilerAuthorization(applicationSettings.HangFireUserConfiguration).Authorize(request);</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}).AddEntityFramework();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="Program_8cs.html#a0d7859f9cad50e8e9fdf015100780e07">   58</a></span>&#160;<a class="code" href="Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5">builder</a>.Services.AddEndpointsApiExplorer();</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="Program_8cs.html#ab7e156d3784430b6365377b0f6335878">   60</a></span>&#160;<a class="code" href="Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5">builder</a>.Services.AddHangfire(config =&gt; config</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="Program_8cs.html#a4b3b52ac98a16e808b9dc214f5d2c98b">   60</a></span>&#160;<a class="code" href="Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5">builder</a>.Services.AddHangfire(config =&gt; config</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    .UseSimpleAssemblyNameTypeSerializer()</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    .UseRecommendedSerializerSettings()</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    .UseSqlServerStorage(<a class="code" href="Program_8cs.html#a1c05573df94c1c7e9a635ed02e41281e">configuration</a>.GetConnectionString(<span class="stringliteral">&quot;NotesDB&quot;</span>)));</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    .UseSqlServerStorage(<a class="code" href="Program_8cs.html#ac39d823c7f04c21e4f132c57660bf1ae">applicationSettings</a>.ConnectionString));</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="Program_8cs.html#aa5e25467bdefcfb6b652d72bfaf2f283">   66</a></span>&#160;<a class="code" href="Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5">builder</a>.Services.AddHealthChecks()</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    .AddCheck&lt;<a class="code" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1HealthChecks_1_1DatabaseHealthCheck.html">DatabaseHealthCheck</a>&gt;(<span class="stringliteral">&quot;CheckDatabase&quot;</span>)</div>
@@ -169,12 +169,12 @@ $(document).ready(function(){initNavTree('Program_8cs_source.html',''); initResi
 <div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="Program_8cs.html#a61f02687456af0cc06aed2ed6528bb13">   81</a></span>&#160;<a class="code" href="Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5">builder</a>.Services.AddDbContext&lt;<a class="code" href="classAdeNote_1_1Db_1_1NoteDbContext.html">NoteDbContext</a>&gt;(options =&gt; options</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;.UseSqlServer(<a class="code" href="Program_8cs.html#ac39d823c7f04c21e4f132c57660bf1ae">applicationSettings</a>.ConnectionString));</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="Program_8cs.html#a33b72695bce04da30a10565e9ef610e7">   84</a></span>&#160;<a class="code" href="Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5">builder</a>.Services.UseIdentityService&lt;<a class="code" href="classAdeNote_1_1Db_1_1IdentityDbContext.html">IdentityDbContext</a>, <a class="code" href="classAdeNote_1_1Models_1_1User.html">User</a>&gt;((s) =&gt; s.UseSqlServer(<a class="code" href="Program_8cs.html#ac39d823c7f04c21e4f132c57660bf1ae">applicationSettings</a>.ConnectionString), </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    assembly: Assembly.GetExecutingAssembly(),dependencies: (x) =&gt;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        var currentTypes = x.GetTypes().Where(s=&gt;!s.IsInterface &amp;&amp; !s.IsAbstract).Where(p=&gt; p.BaseType == typeof(IdentityService&lt;User&gt;)).ToList();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> currentTypes;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    });</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="Program_8cs.html#adfb7fc97798375d56b57680915f9583f">   84</a></span>&#160;<a class="code" href="Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5">builder</a>.Services.AddIdentityService&lt;<a class="code" href="classAdeNote_1_1Db_1_1IdentityDbContext.html">IdentityDbContext</a>, <a class="code" href="classAdeNote_1_1Models_1_1User.html">User</a>&gt;(</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;(cfg) =&gt; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    cfg.UseSqlServer(<a class="code" href="Program_8cs.html#ac39d823c7f04c21e4f132c57660bf1ae">applicationSettings</a>.ConnectionString);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;});</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
 <div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">   91</a></span>&#160;var <a class="code" href="Program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> = <a class="code" href="Program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5">builder</a>.Build();</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>

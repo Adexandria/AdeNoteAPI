@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['authtype_2236',['AuthType',['../namespaceAdeNote_1_1Models.html#a0ad63207f9f4ee5ba4893989f6321597',1,'AdeNote::Models']]]
+  ['authtype_2237',['AuthType',['../namespaceAdeNote_1_1Models.html#a0ad63207f9f4ee5ba4893989f6321597',1,'AdeNote::Models']]]
 ];

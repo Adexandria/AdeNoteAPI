@@ -19,7 +19,7 @@ var classAdeNote_1_1Controllers_1_1AuthenticationController =
     [ "ResetPassword", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a38657acae468e2089141488fbed64fe3", null ],
     [ "SendNotification", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a5bc24a38f2a0d984148fd747b4d5c226", null ],
     [ "SendOTP", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3b1635ec52b83ce1ff5a6f008130a66c", null ],
-    [ "SignUp", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9ba73d7cb87d834b5d25d6a3b32f9474", null ],
+    [ "SignUp", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#ad2b8a71a38f4772afb8a1fee1df06d24", null ],
     [ "Verifyemail", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#af802a5e82a3a494e6267946e119d7813", null ],
     [ "VerifyPasswordlessToken", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3194efae2091c141a13a085de9072ac8", null ],
     [ "VerifySmsOTP", "classAdeNote_1_1Controllers_1_1AuthenticationController.html#a8d610717757937c399997cffac62b060", null ],
