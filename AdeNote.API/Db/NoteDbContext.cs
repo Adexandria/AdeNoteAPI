@@ -34,6 +34,9 @@ namespace AdeNote.Db
         public DbSet<Page> Pages { get; set; }
 
         public virtual DbSet<User> Users {  get; set; }
+
+        public DbSet<Video> Videos { get; set; }
+
         public DbSet<Ticket> Tickets { get; set; }
 
         /// <summary>
@@ -94,6 +97,11 @@ namespace AdeNote.Db
                 .UsingEntity<LabelPage>(
                 l => l.HasOne<Label>().WithMany().HasForeignKey(s => s.LabelId),
                 r=>r.HasOne<Page>().WithMany().HasForeignKey(s=>s.PageId));
+
+            modelBuilder.Entity<Video>().
+                HasOne(s => s.Page)
+                .WithMany(s => s.Videos)
+            .HasForeignKey(s => s.PageId);
         }
     }
 }

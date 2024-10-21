@@ -74,7 +74,7 @@ namespace AdeNote.Infrastructure.Repository
         /// <returns>Book object</returns>
         public async Task<Book> GetAsync(Guid bookId, Guid userId, bool isTracked)
         {
-            var book = Db.Books.Where(s => s.UserId == userId)
+            var book = Db.Books.Where(s => s.UserId == userId && s.Id == bookId)
                 .Include(s => s.Pages);
 
             if(!isTracked)
@@ -96,7 +96,7 @@ namespace AdeNote.Infrastructure.Repository
 
             var result = await SaveChanges();
 
-            logger.LogInformation("Delete book to database: {result}", result);
+            logger.LogInformation("Delete book from database: {result}", result);
 
             return result;
         }
@@ -117,7 +117,7 @@ namespace AdeNote.Infrastructure.Repository
 
             var result = await SaveChanges();
 
-            logger.LogInformation("Update book to database: {result}", result);
+            logger.LogInformation("Update book in database: {result}", result);
 
             return result;
         }
@@ -135,7 +135,7 @@ namespace AdeNote.Infrastructure.Repository
 
             var result = await SaveChanges();
 
-            logger.LogInformation("Update book to database: {result}", result);
+            logger.LogInformation("Update book in database: {result}", result);
 
             return result;
         }

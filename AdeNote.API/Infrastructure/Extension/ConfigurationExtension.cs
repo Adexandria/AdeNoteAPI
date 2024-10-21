@@ -65,6 +65,12 @@ namespace AdeNote.Infrastructure.Extension
         }
 
 
+        public static Cdn ExtractCdnConfiguration(IConfiguration configuration)
+        {
+            var endpoint = configuration["CdnEndpoint"] ?? throw new NullReferenceException("Invalid host name");
+
+            return new Cdn(endpoint) ?? throw new NullReferenceException(nameof(endpoint));
+        }
         public static ApplicationSetting ExtractApplicationSetting(this IConfiguration configuration)
         {
             return new ApplicationSetting
@@ -79,6 +85,8 @@ namespace AdeNote.Infrastructure.Extension
                 HangFireUserConfiguration = ExtractHangFireUserConfiguration(configuration),
                 CachingKeys = ExtractCachingKeys(configuration),
                 CosmosConfiguration = ExtractCosmosConfiguration(configuration)
+                CachingKeys = ExtractCachingKeys(configuration),
+                CdnEndpoint = ExtractCdnConfiguration(configuration)
             };
         }
     }

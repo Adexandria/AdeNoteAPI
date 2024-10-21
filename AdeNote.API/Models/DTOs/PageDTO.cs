@@ -11,6 +11,8 @@
         /// </summary>
         public string Content { get; set; }
 
+        public IList<VideoDTO> Videos { get; set; }
+
         /// <summary>
         /// A list of labels
         /// </summary>

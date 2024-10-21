@@ -1,17 +1,15 @@
 ﻿using AdeAuth.Db;
 using AdeAuth.Models;
 using AdeAuth.Services;
-using AdeAuth.Services.Extensions;
 using AdeAuth.Services.Interfaces;
+using AdeAuth.Services.Utility;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using System.Reflection;
 using System.Security.Claims;
 using System.Text;
 
@@ -24,21 +22,21 @@ namespace AdeAuth.Infrastructure
         /// </summary>
         /// <typeparam name="TDbContext">Identity context</typeparam>
         /// <param name="serviceCollection">Manages dependencies of services</param>
-        /// <param name="actionBuilder">Registers db context dependencies</param>
-        /// <param name="dependencies">Type of dependencies to register</param>
-        /// <param name="assembly">Dependencies assembly </param>
-        public static IServiceCollection UseIdentityService<TDbContext>(this IServiceCollection serviceCollection,
-            Action<DbContextOptionsBuilder> actionBuilder,
-            Func<Assembly, List<Type>> dependencies = null, Assembly assembly = null)
+        /// <param name="configurationBuilder">Build identity service configuration</param>
+        public static IServiceCollection AddIdentityService<TDbContext>(this IServiceCollection serviceCollection,
+            Action<AuthConfiguration> configurationBuilder)
             where TDbContext : IdentityContext
         {
-            RegisterDbContext<TDbContext>(serviceCollection, actionBuilder);
+            var authConfiguration = new AuthConfiguration();
 
-            if(assembly != null)
+            configurationBuilder(authConfiguration);
+
+            RegisterDbContext<TDbContext>(serviceCollection, authConfiguration.ConnectionString);
+
+            if(authConfiguration.DependencyTypes.Any())
             {
-                var dependencyTypes = dependencies(assembly);
-
-                RegisterServices<TDbContext>(serviceCollection, dependencyTypes);
+               
+                RegisterServices<TDbContext>(serviceCollection, authConfiguration.DependencyTypes);
             }
             else
             {
@@ -53,23 +51,25 @@ namespace AdeAuth.Infrastructure
         /// <typeparam name="TUser">User model</typeparam>
         /// <typeparam name="TDbContext">Identity context</typeparam>
         /// <param name="serviceCollection">Manages dependencies of services</param>
-        /// <param name="actionBuilder">Registers db context dependencies</param>
-        /// <param name="dependencies">Type of dependencies to register</param>
-        /// <param name="assembly">Dependencies assembly </param>
-        public static IServiceCollection UseIdentityService<TDbContext,TUser>(this IServiceCollection serviceCollection, 
-            Action<DbContextOptionsBuilder> actionBuilder, Func<Assembly, List<Type>> dependencies = null, Assembly assembly = null) 
+        /// <param name="configurationBuilder">Build identity service configuration</param>
+        public static IServiceCollection AddIdentityService<TDbContext,TUser>(this IServiceCollection serviceCollection, 
+            Action<AuthConfiguration> configurationBuilder) 
             where TDbContext : IdentityContext<TUser>
             where TUser : ApplicationUser, new()
         {
-            RegisterDbContext<TDbContext>(serviceCollection, actionBuilder);
+            var authConfiguration = new AuthConfiguration();
 
-            if (assembly == null)
+            configurationBuilder(authConfiguration);
+
+            RegisterDbContext<TDbContext>(serviceCollection, authConfiguration.ConnectionString);
+
+            if (!authConfiguration.DependencyTypes.Any())
             {
                 RegisterDependencies<TDbContext,TUser>(serviceCollection);
             }
             else
             {
-                RegisterServices<TDbContext,TUser>(serviceCollection, dependencies(assembly));
+                RegisterServices<TDbContext,TUser>(serviceCollection, authConfiguration.DependencyTypes);
             }
 
             return serviceCollection;
@@ -82,28 +82,36 @@ namespace AdeAuth.Infrastructure
         /// <typeparam name="TUser">User model</typeparam>
         /// <typeparam name="TDbContext">Identity context</typeparam>
         /// <param name="serviceCollection">Manages dependencies of services</param>
-        /// <param name="actionBuilder">Registers db context dependencies</param>
-        /// <param name="dependencies">Type of dependencies to register</param>
-        /// <param name="assembly">Dependencies assembly </param>
-        public static IServiceCollection UseIdentityService<TDbContext, TUser, TRole>(this IServiceCollection serviceCollection, Action<DbContextOptionsBuilder> actionBuilder,
-            Func<Assembly, List<Type>> dependencies = null, Assembly assembly = null)
+        /// <param name="configurationBuilder">Build identity service configuration</param>
+        public static IServiceCollection AddIdentityService<TDbContext, TUser, TRole>(this IServiceCollection serviceCollection,
+            Action<AuthConfiguration> configurationBuilder)
          where TDbContext : IdentityContext<TUser,TRole>
          where TUser : ApplicationUser, new()
          where TRole: ApplicationRole, new()
         {
-            RegisterDbContext<TDbContext>(serviceCollection, actionBuilder);
+            var authConfiguration = new AuthConfiguration();
 
-            if (assembly == null)
+            configurationBuilder(authConfiguration);
+
+            RegisterDbContext<TDbContext>(serviceCollection, authConfiguration.ConnectionString);
+
+            if (!authConfiguration.DependencyTypes.Any())
             {
                 RegisterDependencies<TDbContext, TUser, TRole>(serviceCollection);
             }
             else
             {
-                RegisterServices<TDbContext, TUser, TRole>(serviceCollection, dependencies(assembly));
+                RegisterServices<TDbContext, TUser, TRole>(serviceCollection, authConfiguration.DependencyTypes);
             }
             return serviceCollection;
         }
 
+        /// <summary>
+        /// Sets up jwt bearer authentication scheme
+        /// </summary>
+        /// <param name="authenticationBuilder">Configuration authentication</param>
+        /// <param name="actionBuilder">Build token configuration</param>
+        /// <returns>Configuration authentication</returns>
         public static AuthenticationBuilder AddJwtBearer(this AuthenticationBuilder authenticationBuilder, Action<TokenConfiguration> actionBuilder)
         {
             var tokenConfiguration = new TokenConfiguration();
@@ -131,6 +139,12 @@ namespace AdeAuth.Infrastructure
             return authenticationBuilder;
         }
 
+        /// <summary>
+        /// Sets up microsoft account for single sign on
+        /// </summary>
+        /// <param name="authenticationBuilder">Configuration authentication</param>
+        /// <param name="actionBuilder">Builds microsoft single sign on</param>
+        /// <returns>Configuration authentication</returns>
         public static AuthenticationBuilder AddMicrosoftAccount(this AuthenticationBuilder authenticationBuilder, Action<AzureConfiguration> actionBuilder)
         {
            var azureConfiguration = new AzureConfiguration();
@@ -190,13 +204,17 @@ namespace AdeAuth.Infrastructure
         /// </summary>
         /// <typeparam name="TDbContext">Identity context</typeparam>
         /// <param name="services">Manages dependencies of services</param>
-        /// <param name="actionBuilder">Registers db context dependencies</param>
-        private static void RegisterDbContext<TDbContext>(IServiceCollection services, Action<DbContextOptionsBuilder> actionBuilder)
+        /// <param name="connectionString">Connection string of sql server</param>
+        private static void RegisterDbContext<TDbContext>(IServiceCollection services, string connectionString)
             where TDbContext: DbContext
         {
-            services.AddDbContext<TDbContext>(actionBuilder);
+            services.AddDbContext<TDbContext>((s) => s.UseSqlServer(connectionString));
 
-            RunMigration(services,(s) => s.GetRequiredService<TDbContext>());
+            var provider = services.BuildServiceProvider();
+
+            var scope = provider.CreateScope();
+
+            RunMigration(scope.ServiceProvider.GetService<TDbContext>());
 
             RegisterDependencies(services);
         }
@@ -207,11 +225,9 @@ namespace AdeAuth.Infrastructure
         /// <typeparam name="TDbContext">Identity context</typeparam>
         /// <param name="services">Manages dependencies of services</param>
         /// <param name="action">Registers db context dependencies</param>
-        private static void RunMigration<TDbContext>(IServiceCollection services, Func<IServiceProvider,TDbContext> action) 
+        private static void RunMigration<TDbContext>(TDbContext dbContext) 
             where TDbContext : DbContext
         {
-            TDbContext dbContext = action(services.BuildServiceProvider());
-
             var databaseCreator = dbContext.GetService<IRelationalDatabaseCreator>();
 
             if (databaseCreator.CanConnect())

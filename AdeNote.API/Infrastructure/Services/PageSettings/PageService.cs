@@ -412,6 +412,7 @@ namespace AdeNote.Infrastructure.Services.PageSettings
             return ActionResult<TranslationDto>.SuccessfulOperation(translatedPage);
         }
 
+
         public ICacheService cacheService;
         public ITextTranslation textTranslation;
         public IPageRepository pageRepository;

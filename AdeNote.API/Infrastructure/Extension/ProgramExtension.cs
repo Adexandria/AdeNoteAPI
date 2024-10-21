@@ -38,6 +38,7 @@ using System.Reflection;
 using System.Text;
 using Excelify.Services;
 using FluentValidation;
+using AdeNote.Infrastructure.Requests.InsertVideo;
 using AdeNote.Infrastructure.Services.ChatService;
 using AdeNote.Infrastructure.Services;
 
@@ -52,6 +53,7 @@ namespace AdeNote.Infrastructure.Extension
             serviceCollection.AddScoped<ILabelRepository, LabelRepository>();
             serviceCollection.AddScoped<IPageRepository, PageRepository>();
             serviceCollection.AddScoped<ILabelPageRepository, LabelPageRepository>();
+            serviceCollection.AddScoped<IVideoRepository, VideoRepository>();
             serviceCollection.AddScoped<IUserRepository, UserRepository>();
             serviceCollection.AddScoped<IRefreshTokenRepository, RefreshRepository>();
             serviceCollection.AddScoped<ITicketRepository, TicketRepository>();
@@ -80,6 +82,7 @@ namespace AdeNote.Infrastructure.Extension
             serviceCollection.AddSingleton((x) => MessagingFactory.CreateServices(applicationSettings.Messaging, x.GetRequiredService<ILoggerFactory>()));
             serviceCollection.AddSingleton<LanguageScheduler>();
             serviceCollection.AddSingleton<Scheduler>();
+            serviceCollection.AddScoped<InsertVideoRequestHandler>();
             serviceCollection.AddScoped<ThreadMapper>();
             serviceCollection.AddScoped<IUserIdentity, UserIdentity>();
             serviceCollection.AddSingleton((_) => new ExcelifyFactory());
@@ -89,6 +92,8 @@ namespace AdeNote.Infrastructure.Extension
             serviceCollection.AddSingleton<Application>();
 
             serviceCollection.AddSingleton((_) => applicationSettings.CachingKeys);
+
+            serviceCollection.AddSingleton((_) => applicationSettings.CdnEndpoint);
         }
 
         public static void RegisterAuthentication(this IServiceCollection serviceCollection, ApplicationSetting applicationSetting)

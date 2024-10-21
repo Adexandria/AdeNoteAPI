@@ -3,6 +3,7 @@ using AdeNote.Infrastructure.Utilities.AuthenticationFilter;
 using AdeNote.Infrastructure.Utilities.CacheModel;
 using AdeNote.Infrastructure.Utilities.EventSystem;
 using AdeNote.Infrastructure.Utilities.SSO;
+using NPOI.OpenXmlFormats.Wordprocessing;
 using ChattyPie.Utilities;
 
 namespace AdeNote.Infrastructure.Utilities
@@ -18,6 +19,7 @@ namespace AdeNote.Infrastructure.Utilities
         public DefaultConfiguration DefaultConfiguration { get; set; }
         public UserConfiguration HangFireUserConfiguration { get; set; }
         public CachingKeys CachingKeys { get; set; }
+        public Cdn CdnEndpoint {  get; set; } 
         public ICosmosConfiguration CosmosConfiguration { get; set; }
     }
 }
