@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1IExportService.html" title=" " alt="" coords="5,5,239,47"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1ExportService.html" title=" " alt="" coords="287,5,520,47"/>
+<area shape="rect" id="node1" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1IExcel.html" title=" " alt="" coords="5,5,239,47"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1ExcelService.html" title=" " alt="" coords="287,5,520,47"/>
 </map>

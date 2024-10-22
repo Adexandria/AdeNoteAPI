@@ -118,8 +118,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a55dd7183d32d0018bf035dc8128b55e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1DashboardController.html#a55dd7183d32d0018bf035dc8128b55e2">DashboardController</a> (<a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1IUserService.html">IUserService</a> _userService, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Statistics_1_1IStatisticsService.html">IStatisticsService</a> _statisticsService, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1IUserIdentity.html">IUserIdentity</a> userIdentity)</td></tr>
 <tr class="separator:a55dd7183d32d0018bf035dc8128b55e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b3d7c0323e3a42f0ba857b475032802"><td class="memItemLeft" align="right" valign="top">IActionResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1DashboardController.html#a9b3d7c0323e3a42f0ba857b475032802">GetStatistics</a> ()</td></tr>
+<tr class="memdesc:a9b3d7c0323e3a42f0ba857b475032802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get dashboard for admin  <a href="classAdeNote_1_1Controllers_1_1DashboardController.html#a9b3d7c0323e3a42f0ba857b475032802">More...</a><br /></td></tr>
 <tr class="separator:a9b3d7c0323e3a42f0ba857b475032802"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c10a1c455e5e0c2d2ea168db9cd8a28"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1DashboardController.html#a5c10a1c455e5e0c2d2ea168db9cd8a28">GetUser</a> ()</td></tr>
+<tr class="memdesc:a5c10a1c455e5e0c2d2ea168db9cd8a28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetches dashboard for users  <a href="classAdeNote_1_1Controllers_1_1DashboardController.html#a5c10a1c455e5e0c2d2ea168db9cd8a28">More...</a><br /></td></tr>
 <tr class="separator:a5c10a1c455e5e0c2d2ea168db9cd8a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAdeNote_1_1Controllers_1_1BaseController')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html">AdeNote.Controllers.BaseController</a></td></tr>
 <tr class="memitem:a5f361e89da9d1716605fb2c9a0dab893 inherit pub_methods_classAdeNote_1_1Controllers_1_1BaseController"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Controllers_1_1BaseController.html#a5f361e89da9d1716605fb2c9a0dab893">BaseController</a> ()</td></tr>
@@ -155,7 +157,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="DashboardController_8cs_source.html#l00014">14</a> of file <a class="el" href="DashboardController_8cs_source.html">DashboardController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DashboardController_8cs_source.html#l00015">15</a> of file <a class="el" href="DashboardController_8cs_source.html">DashboardController.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a55dd7183d32d0018bf035dc8128b55e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55dd7183d32d0018bf035dc8128b55e2">&#9670;&nbsp;</a></span>DashboardController()</h2>
@@ -189,7 +191,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DashboardController_8cs_source.html#l00019">19</a> of file <a class="el" href="DashboardController_8cs_source.html">DashboardController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DashboardController_8cs_source.html#l00020">20</a> of file <a class="el" href="DashboardController_8cs_source.html">DashboardController.cs</a>.</p>
 
 </div>
 </div>
@@ -209,13 +211,18 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DashboardController_8cs_source.html#l00030">30</a> of file <a class="el" href="DashboardController_8cs_source.html">DashboardController.cs</a>.</p>
+<p>Get dashboard for admin </p>
+<p>Sample request: </p><pre class="fragment">        GET /dashboard/admin
+</pre> <p><br  />
+ </p>
+
+<p class="definition">Definition at line <a class="el" href="DashboardController_8cs_source.html#l00043">43</a> of file <a class="el" href="DashboardController_8cs_source.html">DashboardController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Controllers_1_1DashboardController_a9b3d7c0323e3a42f0ba857b475032802_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1DashboardController_a9b3d7c0323e3a42f0ba857b475032802_cgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Controllers_1_1DashboardController_a9b3d7c0323e3a42f0ba857b475032802_cgraph" id="aclassAdeNote_1_1Controllers_1_1DashboardController_a9b3d7c0323e3a42f0ba857b475032802_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,232,47"/>
+<area shape="rect" title="Get dashboard for admin" alt="" coords="5,5,232,47"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Statistics_1_1IStatisticsService.html#aeeb907e7ee6802ccadaab34c01441782" title=" " alt="" coords="280,5,565,47"/>
 </map>
 </div>
@@ -237,13 +244,18 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DashboardController_8cs_source.html#l00038">38</a> of file <a class="el" href="DashboardController_8cs_source.html">DashboardController.cs</a>.</p>
+<p>Fetches dashboard for users </p>
+<p>Sample request: </p><pre class="fragment">        GET /dashboard
+</pre> <p><br  />
+ </p>
+
+<p class="definition">Definition at line <a class="el" href="DashboardController_8cs_source.html#l00065">65</a> of file <a class="el" href="DashboardController_8cs_source.html">DashboardController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Controllers_1_1DashboardController_a5c10a1c455e5e0c2d2ea168db9cd8a28_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Controllers_1_1DashboardController_a5c10a1c455e5e0c2d2ea168db9cd8a28_cgraph" alt=""/></div>
 <map name="aclassAdeNote_1_1Controllers_1_1DashboardController_a5c10a1c455e5e0c2d2ea168db9cd8a28_cgraph" id="aclassAdeNote_1_1Controllers_1_1DashboardController_a5c10a1c455e5e0c2d2ea168db9cd8a28_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,232,47"/>
+<area shape="rect" title="Fetches dashboard for users" alt="" coords="5,5,232,47"/>
 <area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1IUserService.html#a9844c3f0643c2cd49d53138d05fe7808" title=" " alt="" coords="280,5,528,47"/>
 </map>
 </div>
@@ -271,7 +283,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DashboardController_8cs_source.html#l00017">17</a> of file <a class="el" href="DashboardController_8cs_source.html">DashboardController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DashboardController_8cs_source.html#l00018">18</a> of file <a class="el" href="DashboardController_8cs_source.html">DashboardController.cs</a>.</p>
 
 </div>
 </div>
@@ -295,7 +307,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DashboardController_8cs_source.html#l00016">16</a> of file <a class="el" href="DashboardController_8cs_source.html">DashboardController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DashboardController_8cs_source.html#l00017">17</a> of file <a class="el" href="DashboardController_8cs_source.html">DashboardController.cs</a>.</p>
 
 </div>
 </div>

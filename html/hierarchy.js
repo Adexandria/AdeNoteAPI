@@ -58,14 +58,17 @@ var hierarchy =
       [ "AdeNote.Controllers.BaseController", "classAdeNote_1_1Controllers_1_1BaseController.html", [
         [ "AdeNote.Controllers.AuthenticationController", "classAdeNote_1_1Controllers_1_1AuthenticationController.html", null ],
         [ "AdeNote.Controllers.BookController", "classAdeNote_1_1Controllers_1_1BookController.html", null ],
+        [ "AdeNote.Controllers.ChatController", "classAdeNote_1_1Controllers_1_1ChatController.html", null ],
         [ "AdeNote.Controllers.DashboardController", "classAdeNote_1_1Controllers_1_1DashboardController.html", null ],
         [ "AdeNote.Controllers.LabelController", "classAdeNote_1_1Controllers_1_1LabelController.html", null ],
         [ "AdeNote.Controllers.PageController", "classAdeNote_1_1Controllers_1_1PageController.html", null ],
+        [ "AdeNote.Controllers.SubChatsController", "classAdeNote_1_1Controllers_1_1SubChatsController.html", null ],
         [ "AdeNote.Controllers.TicketController", "classAdeNote_1_1Controllers_1_1TicketController.html", null ],
         [ "AdeNote.Controllers.UserController", "classAdeNote_1_1Controllers_1_1UserController.html", null ]
       ] ]
     ] ],
     [ "AdeNote.Models.DTOs.CreateNoteDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO.html", null ],
+    [ "AdeNote.Models.DTOs.CreateThreadDto", "classAdeNote_1_1Models_1_1DTOs_1_1CreateThreadDto.html", null ],
     [ "AdeNote.Models.DTOs.CreateUserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO.html", null ],
     [ "AdeNote.Infrastructure.Middlewares.CustomProblemDetail", "classAdeNote_1_1Infrastructure_1_1Middlewares_1_1CustomProblemDetail.html", null ],
     [ "AdeNote.Infrastructure.Extension.DatabaseExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1DatabaseExtension.html", null ],
@@ -110,8 +113,14 @@ var hierarchy =
     [ "ICache", null, [
       [ "AdeNote.Infrastructure.Utilities.CacheModel.Cache", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CacheModel_1_1Cache.html", null ]
     ] ],
+    [ "AdeNote.Infrastructure.Services.ChatService.IChatService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html", [
+      [ "AdeNote.Infrastructure.Services.ChatService.ChatService", "classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html", null ]
+    ] ],
     [ "IConfigureNamedOptions", null, [
       [ "AdeNote.Infrastructure.Extension.SwaggerOptions", "classAdeNote_1_1Infrastructure_1_1Extension_1_1SwaggerOptions.html", null ]
+    ] ],
+    [ "ICosmosConfiguration", null, [
+      [ "AdeNote.Infrastructure.Utilities.CosmosConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CosmosConfiguration.html", null ]
     ] ],
     [ "IDashboardAuthorizationFilter", null, [
       [ "AdeNote.Infrastructure.Utilities.AuthenticationFilter.DashboardAuthenticationFilter", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1DashboardAuthenticationFilter.html", null ]
@@ -407,6 +416,14 @@ var hierarchy =
     [ "AdeNote.Infrastructure.Utilities.SmsConfig.SmsConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1SmsConfiguration.html", null ],
     [ "AdeNote.Models.DTOs.SolvedTicketDto", "classAdeNote_1_1Models_1_1DTOs_1_1SolvedTicketDto.html", null ],
     [ "AdeNote.Models.DTOs.StatisticsDto", "classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto.html", null ],
+    [ "SubThread", null, [
+      [ "AdeNote.Models.TweetSubThread", "classAdeNote_1_1Models_1_1TweetSubThread.html", null ]
+    ] ],
+    [ "AdeNote.Models.DTOs.SubThreadDto", "classAdeNote_1_1Models_1_1DTOs_1_1SubThreadDto.html", null ],
+    [ "Thread", null, [
+      [ "AdeNote.Models.TweetThread", "classAdeNote_1_1Models_1_1TweetThread.html", null ]
+    ] ],
+    [ "AdeNote.Infrastructure.Services.ThreadMapper", "classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html", null ],
     [ "AdeNote.Models.DTOs.TicketCreateDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketCreateDto.html", null ],
     [ "AdeNote.Models.DTOs.TicketDTO", "classAdeNote_1_1Models_1_1DTOs_1_1TicketDTO.html", null ],
     [ "AdeNote.Infrastructure.Services.TicketSettings.TicketEvent", "classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketEvent.html", null ],
@@ -415,6 +432,9 @@ var hierarchy =
     [ "AdeNote.Models.DTOs.TicketStreamDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto.html", null ],
     [ "AdeNote.Models.Transcript", "classAdeNote_1_1Models_1_1Transcript.html", null ],
     [ "AdeNote.Models.DTOs.TranslationDto", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html", null ],
+    [ "AdeNote.Models.DTOs.TweetThreadDto", "classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDto.html", null ],
+    [ "AdeNote.Models.DTOs.TweetThreadDtos", "classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDtos.html", null ],
+    [ "AdeNote.Models.DTOs.UpdateThreadDto", "classAdeNote_1_1Models_1_1DTOs_1_1UpdateThreadDto.html", null ],
     [ "AdeNote.Infrastructure.Utilities.AuthenticationFilter.UserConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1UserConfiguration.html", null ],
     [ "AdeNote.Infrastructure.Utilities.UserConfiguation.UserId", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1UserConfiguation_1_1UserId.html", null ],
     [ "AdeNote.Models.DTOs.UsersDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO.html", [

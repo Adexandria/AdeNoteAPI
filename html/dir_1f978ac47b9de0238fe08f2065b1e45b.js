@@ -21,6 +21,9 @@ var dir_1f978ac47b9de0238fe08f2065b1e45b =
     [ "CreateNoteDTO.cs", "CreateNoteDTO_8cs.html", [
       [ "CreateNoteDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO" ]
     ] ],
+    [ "CreateThreadDto.cs", "CreateThreadDto_8cs.html", [
+      [ "CreateThreadDto", "classAdeNote_1_1Models_1_1DTOs_1_1CreateThreadDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1CreateThreadDto" ]
+    ] ],
     [ "CreateUserDTO.cs", "CreateUserDTO_8cs.html", [
       [ "CreateUserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO" ]
     ] ],
@@ -60,6 +63,9 @@ var dir_1f978ac47b9de0238fe08f2065b1e45b =
     [ "StatisticsDto.cs", "StatisticsDto_8cs.html", [
       [ "StatisticsDto", "classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto" ]
     ] ],
+    [ "SubThreadDto.cs", "SubThreadDto_8cs.html", [
+      [ "SubThreadDto", "classAdeNote_1_1Models_1_1DTOs_1_1SubThreadDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1SubThreadDto" ]
+    ] ],
     [ "TicketCreateDto.cs", "TicketCreateDto_8cs.html", [
       [ "TicketCreateDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketCreateDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketCreateDto" ]
     ] ],
@@ -77,6 +83,15 @@ var dir_1f978ac47b9de0238fe08f2065b1e45b =
     ] ],
     [ "TranslationDto.cs", "TranslationDto_8cs.html", [
       [ "TranslationDto", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto" ]
+    ] ],
+    [ "TweetThreadDto.cs", "TweetThreadDto_8cs.html", [
+      [ "TweetThreadDto", "classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDto" ]
+    ] ],
+    [ "TweetThreadDtos.cs", "TweetThreadDtos_8cs.html", [
+      [ "TweetThreadDtos", "classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDtos.html", "classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDtos" ]
+    ] ],
+    [ "UpdateThreadDto.cs", "UpdateThreadDto_8cs.html", [
+      [ "UpdateThreadDto", "classAdeNote_1_1Models_1_1DTOs_1_1UpdateThreadDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1UpdateThreadDto" ]
     ] ],
     [ "UserDTO.cs", "UserDTO_8cs.html", [
       [ "UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO" ]

@@ -41,6 +41,10 @@ var dir_fab80d2647e49d0e675ea0809587eea2 =
     [ "Transcript.cs", "Transcript_8cs.html", [
       [ "Transcript", "classAdeNote_1_1Models_1_1Transcript.html", null ]
     ] ],
+    [ "TweetSubThread.cs", "TweetSubThread_8cs.html", [
+      [ "TweetSubThread", "classAdeNote_1_1Models_1_1TweetSubThread.html", "classAdeNote_1_1Models_1_1TweetSubThread" ]
+    ] ],
+    [ "TweetThread.cs", "TweetThread_8cs.html", "TweetThread_8cs" ],
     [ "User.cs", "User_8cs.html", [
       [ "User", "classAdeNote_1_1Models_1_1User.html", "classAdeNote_1_1Models_1_1User" ]
     ] ],

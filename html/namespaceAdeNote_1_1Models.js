@@ -13,6 +13,8 @@ var namespaceAdeNote_1_1Models =
     [ "RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", "classAdeNote_1_1Models_1_1RefreshToken" ],
     [ "Ticket", "classAdeNote_1_1Models_1_1Ticket.html", "classAdeNote_1_1Models_1_1Ticket" ],
     [ "Transcript", "classAdeNote_1_1Models_1_1Transcript.html", null ],
+    [ "TweetSubThread", "classAdeNote_1_1Models_1_1TweetSubThread.html", "classAdeNote_1_1Models_1_1TweetSubThread" ],
+    [ "TweetThread", "classAdeNote_1_1Models_1_1TweetThread.html", "classAdeNote_1_1Models_1_1TweetThread" ],
     [ "User", "classAdeNote_1_1Models_1_1User.html", "classAdeNote_1_1Models_1_1User" ],
     [ "Video", "classAdeNote_1_1Models_1_1Video.html", "classAdeNote_1_1Models_1_1Video" ],
     [ "AuthType", "namespaceAdeNote_1_1Models.html#a0ad63207f9f4ee5ba4893989f6321597", [

@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('ExcelService_8cs_source.html',''); ini
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1ExcelService.html#a70df9be94b866a856de288fa18a423e9">   17</a></span>&#160;        <span class="keyword">public</span> Stream <a class="code" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1ExcelService.html#a70df9be94b866a856de288fa18a423e9">ExportEntities&lt;T&gt;</a>(<span class="keywordtype">string</span> extensionType, <span class="keywordtype">string</span> name, IEnumerable&lt;T&gt; entities) where T : <span class="keyword">class</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            var excelService = <a class="code" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1ExcelService.html#aa38393936195067521271fff6c08c7ec">_excelifyFactory</a>.CreateService(extensionType);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            Stream file;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">if</span> (excelService is ExcelifyService &amp;&amp; <span class="keywordtype">string</span>.IsNullOrEmpty(name))</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentException(<span class="stringliteral">&quot;Sheet name is invalid&quot;</span>);</div>
@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('ExcelService_8cs_source.html',''); ini
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                SheetName = name</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            };</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            file = excelService.ExportToStream(exportEntity);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            Stream file = excelService.ExportToStream(exportEntity);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">return</span> file;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>

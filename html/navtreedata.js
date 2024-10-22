@@ -39,7 +39,7 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
-        [ "Variables", "functions_vars.html", null ],
+        [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Properties", "functions_prop.html", "functions_prop" ]
       ] ]
     ] ],
@@ -48,7 +48,8 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ]
+        [ "Variables", "globals_vars.html", null ],
+        [ "Typedefs", "globals_type.html", null ]
       ] ]
     ] ]
   ] ]
@@ -57,15 +58,16 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "20240430084252__firstmigration_8Designer_8cs.html",
-"GetBookByIdRequestHandler_8cs.html",
-"Repository_8cs_source.html",
-"classAdeNote_1_1Db_1_1NoteDbContext.html",
-"classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateTicket_1_1CreateTicketRequestHandler.html#a32cb2502f6bcd1bae6803e5d20d417da",
-"classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a231467f6c641b3d641221966f7e73b39",
-"classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirement.html",
-"classAdeNote_1_1Models_1_1Book.html#a111fb0314baf79845e18fcb623e86e9b",
-"classAdeNote_1_1Models_1_1User.html#ae4a3729d9e9ec55b75c8a14805ad0e46",
-"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IFileService.html#a51861f71350a05868163b67fa5391ec1"
+"GetAllLabelsRequest_8cs.html",
+"RemovePageRequestHandler_8cs.html",
+"classAdeNote_1_1Controllers_1_1LabelController.html#a8f8e18d2c85d59a44f35f0779d899c67",
+"classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBooks_1_1CreateBooksRequestHandler.html#af0aa7899a350dfb10d7dc209b4c45d2c",
+"classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateBook_1_1UpdateBookRequest.html#afb963145537d2ff6ead2a89c42fc0704",
+"classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html#abf86061b7b03c1d19a5eac2ac2c923ca",
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveBookValidator.html",
+"classAdeNote_1_1Models_1_1HangfireUser.html#a56e4b7f27b7e4cd78d6724e2fc5799c2",
+"functions_prop_q.html",
+"namespaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -6,6 +6,7 @@ var classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository =
     [ "GetNumberOfUsers", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#aaa69b21eb3ce37adfccdf4e34100dd7a", null ],
     [ "GetUser", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#aa3db8e941c5a035f08aa799556322d98", null ],
     [ "GetUserByEmail", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#a0663673c6e122093f4557aa6069ced82", null ],
+    [ "GetUserEmails", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#a76655e2dfb423621b4b67309755be935", null ],
     [ "IsExist", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#a8483b44812f23946ff60efb847b44124", null ],
     [ "IsPhoneNumberVerified", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#ab76339a6ba6f1f8dd5e295f4cb788cf9", null ],
     [ "Remove", "classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#a6857b6eddf586d8605f67e5009f66715", null ],

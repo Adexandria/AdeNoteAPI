@@ -19,6 +19,7 @@ var Program_8cs =
     [ "MapHealthChecks", "Program_8cs.html#abab263bbe4cd9214435aeacab5568d52", null ],
     [ "RegisterAuthentication", "Program_8cs.html#ae7797e89925c7532b4a31f5220e4976e", null ],
     [ "RegisterAuthorization", "Program_8cs.html#a4e0128ea52b7e9382eddfac19a27d098", null ],
+    [ "RegisterChattyPie", "Program_8cs.html#a9386ef1f280819a9c2136610a8d25f2d", null ],
     [ "RegisterSwaggerDocs", "Program_8cs.html#a8eb51d2eb73a2e22edf7b15ae4a8432b", null ],
     [ "RegisterTypes", "Program_8cs.html#a6d731c4248bf0da1ffe4fa620186f75f", null ],
     [ "RegisterValidation", "Program_8cs.html#a080cc8b750136f83954bf525732bfcbc", null ],

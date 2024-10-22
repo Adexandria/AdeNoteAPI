@@ -5,9 +5,11 @@ var annotated_dup =
         [ "AuthenticationController", "classAdeNote_1_1Controllers_1_1AuthenticationController.html", "classAdeNote_1_1Controllers_1_1AuthenticationController" ],
         [ "BaseController", "classAdeNote_1_1Controllers_1_1BaseController.html", "classAdeNote_1_1Controllers_1_1BaseController" ],
         [ "BookController", "classAdeNote_1_1Controllers_1_1BookController.html", "classAdeNote_1_1Controllers_1_1BookController" ],
+        [ "ChatController", "classAdeNote_1_1Controllers_1_1ChatController.html", "classAdeNote_1_1Controllers_1_1ChatController" ],
         [ "DashboardController", "classAdeNote_1_1Controllers_1_1DashboardController.html", "classAdeNote_1_1Controllers_1_1DashboardController" ],
         [ "LabelController", "classAdeNote_1_1Controllers_1_1LabelController.html", "classAdeNote_1_1Controllers_1_1LabelController" ],
         [ "PageController", "classAdeNote_1_1Controllers_1_1PageController.html", "classAdeNote_1_1Controllers_1_1PageController" ],
+        [ "SubChatsController", "classAdeNote_1_1Controllers_1_1SubChatsController.html", "classAdeNote_1_1Controllers_1_1SubChatsController" ],
         [ "TicketController", "classAdeNote_1_1Controllers_1_1TicketController.html", "classAdeNote_1_1Controllers_1_1TicketController" ],
         [ "UserController", "classAdeNote_1_1Controllers_1_1UserController.html", "classAdeNote_1_1Controllers_1_1UserController" ]
       ] ],
@@ -198,6 +200,10 @@ var annotated_dup =
             [ "BookService", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService" ],
             [ "IBookService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1IBookService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1IBookService" ]
           ] ],
+          [ "ChatService", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService.html", [
+            [ "ChatService", "classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService" ],
+            [ "IChatService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService" ]
+          ] ],
           [ "EmailSettings", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings.html", [
             [ "EmailService", "classAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1EmailService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1EmailService" ],
             [ "IEmailService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1IEmailService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1IEmailService" ]
@@ -246,7 +252,8 @@ var annotated_dup =
           [ "Word", "namespaceAdeNote_1_1Infrastructure_1_1Services_1_1Word.html", [
             [ "IWordService", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1IWordService.html", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1IWordService" ],
             [ "WordService", "classAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1WordService.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1Word_1_1WordService" ]
-          ] ]
+          ] ],
+          [ "ThreadMapper", "classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html", "classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper" ]
         ] ],
         [ "Utilities", "namespaceAdeNote_1_1Infrastructure_1_1Utilities.html", [
           [ "AI", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1AI.html", [
@@ -342,6 +349,7 @@ var annotated_dup =
           [ "BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration" ],
           [ "CachingKeys", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys" ],
           [ "Cdn", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Cdn.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Cdn" ],
+          [ "CosmosConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CosmosConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CosmosConfiguration" ],
           [ "DefaultConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration" ],
           [ "EntityDoc", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc" ]
         ] ]
@@ -371,6 +379,7 @@ var annotated_dup =
           [ "BookUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1BookUpdateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1BookUpdateDTO" ],
           [ "ChangePasswordDTO", "classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO" ],
           [ "CreateNoteDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO" ],
+          [ "CreateThreadDto", "classAdeNote_1_1Models_1_1DTOs_1_1CreateThreadDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1CreateThreadDto" ],
           [ "CreateUserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO" ],
           [ "DetailsDTO", "classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1DetailsDTO" ],
           [ "ImportBookDto", "classAdeNote_1_1Models_1_1DTOs_1_1ImportBookDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1ImportBookDto" ],
@@ -384,12 +393,16 @@ var annotated_dup =
           [ "PageUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO" ],
           [ "SolvedTicketDto", "classAdeNote_1_1Models_1_1DTOs_1_1SolvedTicketDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1SolvedTicketDto" ],
           [ "StatisticsDto", "classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1StatisticsDto" ],
+          [ "SubThreadDto", "classAdeNote_1_1Models_1_1DTOs_1_1SubThreadDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1SubThreadDto" ],
           [ "TicketCreateDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketCreateDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketCreateDto" ],
           [ "TicketDTO", "classAdeNote_1_1Models_1_1DTOs_1_1TicketDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketDTO" ],
           [ "TicketsDTO", "classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO" ],
           [ "TicketStatusDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStatusDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStatusDto" ],
           [ "TicketStreamDto", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto" ],
           [ "TranslationDto", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto" ],
+          [ "TweetThreadDto", "classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDto" ],
+          [ "TweetThreadDtos", "classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDtos.html", "classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDtos" ],
+          [ "UpdateThreadDto", "classAdeNote_1_1Models_1_1DTOs_1_1UpdateThreadDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1UpdateThreadDto" ],
           [ "UserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UserDTO" ],
           [ "UsersDTO", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1UsersDTO" ],
           [ "UserTicketDto", "classAdeNote_1_1Models_1_1DTOs_1_1UserTicketDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1UserTicketDto" ],
@@ -407,6 +420,8 @@ var annotated_dup =
         [ "RefreshToken", "classAdeNote_1_1Models_1_1RefreshToken.html", "classAdeNote_1_1Models_1_1RefreshToken" ],
         [ "Ticket", "classAdeNote_1_1Models_1_1Ticket.html", "classAdeNote_1_1Models_1_1Ticket" ],
         [ "Transcript", "classAdeNote_1_1Models_1_1Transcript.html", null ],
+        [ "TweetSubThread", "classAdeNote_1_1Models_1_1TweetSubThread.html", "classAdeNote_1_1Models_1_1TweetSubThread" ],
+        [ "TweetThread", "classAdeNote_1_1Models_1_1TweetThread.html", "classAdeNote_1_1Models_1_1TweetThread" ],
         [ "User", "classAdeNote_1_1Models_1_1User.html", "classAdeNote_1_1Models_1_1User" ],
         [ "Video", "classAdeNote_1_1Models_1_1Video.html", "classAdeNote_1_1Models_1_1Video" ]
       ] ]
