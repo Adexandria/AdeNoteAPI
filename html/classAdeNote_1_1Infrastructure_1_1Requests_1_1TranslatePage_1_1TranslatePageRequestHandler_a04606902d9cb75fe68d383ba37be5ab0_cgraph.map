@@ -1,0 +1,10 @@
+<map id="AdeNote.Infrastructure.Requests.TranslatePage.TranslatePageRequestHandler.Handle" name="AdeNote.Infrastructure.Requests.TranslatePage.TranslatePageRequestHandler.Handle">
+<area shape="rect" id="node1" title=" " alt="" coords="5,202,264,258"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="361,5,591,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#ab18880eba0d7d3571eb09ccf7d7070dc" title="Get a particular book that belongs to a user" alt="" coords="353,71,599,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html#a770e88bd6d67b6ff4bac64138f515bab" title="Gets an individual page from a particular book" alt="" coords="353,136,599,177"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1ITextTranslation.html#adf06de038c80e117601c874b71c75b93" title=" " alt="" coords="357,202,595,258"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="355,283,597,324"/>
+<area shape="rect" id="node7" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1ITextTranslation.html#a4544f572080d1ed07a44a4c309c79f09" title=" " alt="" coords="323,348,629,389"/>
+<area shape="rect" id="node8" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1ITextTranslation.html#ad940c417006df897bcd0dad391c1ec44" title=" " alt="" coords="312,413,640,455"/>
+</map>

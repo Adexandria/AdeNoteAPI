@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Services.Blob.IBlobService.UploadImage" name="AdeNote.Infrastructure.Services.Blob.IBlobService.UploadImage">
+<area shape="rect" id="node1" title="Uploads image" alt="" coords="771,136,1004,177"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a07d99b135390bfc450eb3cef6c079939" title=" " alt="" coords="406,5,697,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Export_1_1ExportService.html#ac955a7999ec6fe17b7b728229a15454e" title=" " alt="" coords="406,71,697,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateTicket_1_1CreateTicketRequestHandler.html#a529f72388b4794c7d82977940c3b4a13" title=" " alt="" coords="380,136,723,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1InsertVideo_1_1InsertVideoRequestHandler.html#a2dc1a49f9ef982b98a272993074190c3" title=" " alt="" coords="388,201,715,243"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#acbe3cd3f8622a1f358b1941b50fc1baa" title="Sets up MFA using google authenticator app" alt="" coords="395,267,707,308"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePage_1_1CreatePageRequestHandler.html#a3432fcb61c944601095d963156533a6d" title=" " alt="" coords="5,201,332,243"/>
+</map>
