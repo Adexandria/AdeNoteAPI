@@ -4,6 +4,7 @@ using AdeNote.Infrastructure.Utilities.AuthenticationFilter;
 using AdeNote.Infrastructure.Utilities.CacheModel;
 using AdeNote.Infrastructure.Utilities.EventSystem;
 using AdeNote.Infrastructure.Utilities.SSO;
+using ChattyPie.Utilities;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace AdeNote.Infrastructure.Extension
@@ -57,6 +58,13 @@ namespace AdeNote.Infrastructure.Extension
             return  configuration.GetSection("CachingKeys").Get<CachingKeys>() ?? throw new NullReferenceException("Invalid host name");
         }
 
+        private static ICosmosConfiguration ExtractCosmosConfiguration(IConfiguration configuration)
+        {
+            return configuration.GetSection("CosmosDb").Get<CosmosConfiguration>() 
+                ?? throw new NullReferenceException("Invalid cosmos db configuration");
+        }
+
+
         public static Cdn ExtractCdnConfiguration(IConfiguration configuration)
         {
             var endpoint = configuration["CdnEndpoint"] ?? throw new NullReferenceException("Invalid host name");
@@ -76,6 +84,7 @@ namespace AdeNote.Infrastructure.Extension
                 DefaultConfiguration = ExtractDefaultConfiguration(configuration),
                 HangFireUserConfiguration = ExtractHangFireUserConfiguration(configuration),
                 CachingKeys = ExtractCachingKeys(configuration),
+                CosmosConfiguration = ExtractCosmosConfiguration(configuration),
                 CdnEndpoint = ExtractCdnConfiguration(configuration)
             };
         }

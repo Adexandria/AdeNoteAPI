@@ -210,11 +210,7 @@ namespace AdeAuth.Infrastructure
         {
             services.AddDbContext<TDbContext>((s) => s.UseSqlServer(connectionString));
 
-            var provider = services.BuildServiceProvider();
-
-            var scope = provider.CreateScope();
-
-            RunMigration(scope.ServiceProvider.GetService<TDbContext>());
+            services.RunMigration<TDbContext>();
 
             RegisterDependencies(services);
         }
@@ -225,9 +221,15 @@ namespace AdeAuth.Infrastructure
         /// <typeparam name="TDbContext">Identity context</typeparam>
         /// <param name="services">Manages dependencies of services</param>
         /// <param name="action">Registers db context dependencies</param>
-        private static void RunMigration<TDbContext>(TDbContext dbContext) 
+        private static void RunMigration<TDbContext>(this IServiceCollection services) 
             where TDbContext : DbContext
         {
+            var provider = services.BuildServiceProvider();
+
+            var scope = provider.CreateScope();
+
+            var dbContext = scope.ServiceProvider.GetRequiredService<TDbContext>();
+
             var databaseCreator = dbContext.GetService<IRelationalDatabaseCreator>();
 
             if (databaseCreator.CanConnect())
