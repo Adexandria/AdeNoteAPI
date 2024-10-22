@@ -13,19 +13,59 @@ namespace ChattyPie.Application
            _subThreadRepository = subThreadRepository;
         }
 
-        public async Task<bool> CreateThread(Thread newThread)
+        public async Task<ThreadDtos> CreateThread(Thread newThread)
         {
             return await _threadRepository.Add(newThread);
         }
 
-        public async Task<ThreadDto> FetchThread(string threadId)
+        public async Task<ThreadDtos> FetchThread(string threadId)
         {
             return await _threadRepository.GetThread(threadId);
         }
 
-        public async Task<bool> CreateSubThread(SubThread newSubThread)
+        public async Task<SubThreadDtos> CreateSubThread(SubThread newSubThread)
         {
             return await _subThreadRepository.Add(newSubThread);
+        }
+
+        public async Task<SubThreadDtos> FetchSubThread(string subThreadId, string parentId)
+        {
+           return await _subThreadRepository.GetSubThreadAsync(subThreadId, parentId);
+        }
+
+        public async Task<List<ThreadDto>> FetchAllParentThread()
+        {
+            return await _threadRepository.GetThreads();
+        }
+
+        public async Task<bool> DeleteThread(string threadId)
+        {
+           return await _threadRepository.Delete(threadId);
+        }
+
+        public async Task<bool> DeleteSubThread(string subThreadId, string parentId)
+        {
+           return await _subThreadRepository.Delete(subThreadId, parentId);
+        }
+
+        public async Task<ThreadDtos> UpdateThread(Thread thread)
+        {
+           return await _threadRepository.Update(thread);
+        }
+
+        public async Task<SubThreadDtos> UpdateSubThread(SubThread subThread)
+        {
+           return await _subThreadRepository.Update(subThread);
+        }
+
+        public async Task<Thread> FetchSingleThread(string threadId)
+        {
+            return await _threadRepository.GetSingleThread(threadId);
+        }
+
+        public async Task<SubThread> FetchSingleSubThread(string subThreadId, string parentId)
+        {
+            return await _subThreadRepository.GetSingleSubThread(subThreadId, parentId); 
         }
 
         private readonly ISubThreadRepository _subThreadRepository;

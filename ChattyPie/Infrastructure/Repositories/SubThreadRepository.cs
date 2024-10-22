@@ -1,5 +1,6 @@
 ﻿using ChattyPie.Infrastructure.Interfaces;
 using ChattyPie.Models;
+using ChattyPie.Models.DTOs;
 using Microsoft.Azure.Cosmos;
 using System.Net;
 
@@ -8,47 +9,122 @@ namespace ChattyPie.Infrastructure.Repositories
 {
     internal class SubThreadRepository : ISubThreadRepository
     {
-        public SubThreadRepository(Database database)
+        public SubThreadRepository(Database database, SubThreadQuery _subThreadQuery)
         {
             container = database.CreateContainerIfNotExistsAsync("subthreads", "/threadId").Result;
+            subThreadQuery = _subThreadQuery;
         }
-        public async Task<bool> Add(SubThread thread)
+        public async Task<SubThreadDtos> Add(SubThread thread)
         {
-            var response = await container.CreateItemAsync(thread, new PartitionKey(thread.ThreadId));
-            if (response.StatusCode != HttpStatusCode.Created)
+            try
             {
-                return false;
+                var response = await container.CreateItemAsync(thread, new PartitionKey(thread.ThreadId));
+
+                var subThread = response.Resource;
+
+                var subThreadDto = new SubThreadDtos()
+                {
+                    Id = subThread.Id,
+                    Message = subThread.Message,
+                    UserIds = subThread.UserIds,
+                    SubUserIds = subThread.SubUserIds,
+                    ThreadId = subThread.ThreadId,
+                    Date = subThread.Created
+                };
+
+                return subThreadDto;
             }
-            return true;
+            catch (Exception)
+            {
+                return default;
+            }
+            
         }
 
         public async Task<bool> Delete(string threadId, string parentThreadId)
         {
-            var response = await container.DeleteAllItemsByPartitionKeyStreamAsync(new PartitionKey(threadId));
-            if(response.StatusCode != HttpStatusCode.OK)
+            try
             {
-                return false;
-            }
+                _  = await container.DeleteAllItemsByPartitionKeyStreamAsync(new PartitionKey(threadId));
 
-            var threadResponse = await container.DeleteItemAsync<SubThread>(threadId, new PartitionKey(parentThreadId));
-            if(threadResponse.StatusCode != HttpStatusCode.OK)
+                var r = await container.DeleteItemAsync<SubThread>(threadId, new PartitionKey(parentThreadId));
+
+                return true;
+            }
+            catch (Exception)
             {
                 return false;
             }
-            return true;
         }
 
-        public async Task<bool> Update(SubThread thread)
+        public async Task<SubThreadDtos> Update(SubThread subThread)
         {
-            var response = await container.ReplaceItemAsync(thread, thread.ThreadId, new PartitionKey(thread.Id));
-            if (response.StatusCode != HttpStatusCode.OK)
+            try
             {
-                return false;
-            }
+                 var response = await container.ReplaceItemAsync(subThread, subThread.Id, new PartitionKey(subThread.ThreadId));
 
-            return true;
+                var subThreadDto = new SubThreadDtos()
+                {
+                    Id = subThread.Id,
+                    Message = subThread.Message,
+                    UserIds = subThread.UserIds,
+                    SubUserIds = subThread.SubUserIds,
+                    ThreadId = subThread.ThreadId,
+                    Date = subThread.Created
+                };
+
+                return subThreadDto;
+            }
+            catch (Exception)
+            {
+                return default;
+            }
+            
         }
 
+        public async Task<SubThreadDtos> GetSubThreadAsync(string subThreadId, string parentThreadId)
+        {
+            try
+            {
+                var response = await container.ReadItemAsync<SubThread>(subThreadId, new PartitionKey(parentThreadId));
+
+                var subThread = response.Resource;
+
+                var subThreadDto = new SubThreadDtos()
+                {
+                    Id = subThread.Id,
+                    Message = subThread.Message,
+                    UserIds = subThread.UserIds,
+                    SubUserIds = subThread.SubUserIds,
+                    ThreadId = subThread.ThreadId,
+                    Date = subThread.Created,
+                    SubThreads = await subThreadQuery.GetSubThread(subThread.Id, "SELECT * FROM c ORDER BY c.created")
+                };
+
+                return subThreadDto;
+            }
+            catch (Exception)
+            {
+                return default;
+            }
+        }
+
+        public async Task<SubThread> GetSingleSubThread(string subThreadId, string parentThreadId)
+        {
+            try
+            {
+                var response = await container.ReadItemAsync<SubThread>(subThreadId, new PartitionKey(parentThreadId));
+
+                return response.Resource;
+            }
+            catch (Exception)
+            {
+                return default;
+            }
+           
+        }
+
+        private readonly SubThreadQuery subThreadQuery;
         private readonly Container container;
     }
 }

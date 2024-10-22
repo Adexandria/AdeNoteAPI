@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace ChattyPie.Models.DTOs
 {
-    public class ThreadDto
+    public class ThreadDtos : IThreadDto
     {
-        public string Id { get; set; }
+        public string Id { get; set ; }
         public List<string> UserIds { get; set; }
-        public string Message { get; set; }
+        public string Message { get; set ; }
         public DateTime Date { get; set; }
+        public List<SubThreadDtos> SubThreads { get; set; }
     }
 }

@@ -1,118 +1,153 @@
 ﻿using ChattyPie.Infrastructure.Interfaces;
-using ChattyPie.Models;
 using ChattyPie.Models.DTOs;
 using Microsoft.Azure.Cosmos;
-using System.Net;
 using Thread = ChattyPie.Models.Thread;
 
 namespace ChattyPie.Infrastructure.Repositories
 {
     internal class ThreadRepository : IThreadRepository
     {
-        public ThreadRepository(Database _database)
+        public ThreadRepository(Database _database, SubThreadQuery _subThreadQuery)
         {
             container = _database.CreateContainerIfNotExistsAsync("threads", "/id").Result;
-            subThreadContainer = _database.CreateContainerIfNotExistsAsync("subthreads", "/threadId").Result;
+            subThreadQuery = _subThreadQuery;
         }
 
-        public async Task<bool> Add(Thread thread)
+        public async Task<ThreadDtos> Add(Thread thread)
         {
-            var response = await container.CreateItemAsync(thread);
-            if (response.StatusCode != HttpStatusCode.Created)
+            try
             {
-                return false;
+                _ = await container.CreateItemAsync(thread);
+                var threadDto = new ThreadDtos()
+                {
+                    Id = thread.Id,
+                    Message = thread.Message,
+                    UserIds = thread.UserIds,
+                    Date = thread.Created
+                };
+                return threadDto;
             }
-            return true;
+            catch (Exception)
+            {
+                return default;
+            }
         }
 
         public async Task<bool> Delete(string threadId)
         {
-            var response = await container.DeleteAllItemsByPartitionKeyStreamAsync(new PartitionKey(threadId));
-            if (response.StatusCode != HttpStatusCode.BadRequest)
+            try
             {
-                return false;
-            }
+                _ = await container.DeleteAllItemsByPartitionKeyStreamAsync(new PartitionKey(threadId));
 
-            var threadResponse = await container.DeleteItemAsync<Thread>(threadId, new PartitionKey(threadId));
-            if (threadResponse.StatusCode != HttpStatusCode.OK)
+                return true;
+            }
+            catch (Exception)
             {
                 return false;
             }
-            return true;
         }
 
-        public async Task<ThreadDto> GetThread(string threadId)
+        public async Task<ThreadDtos> GetThread(string threadId)
         {
-            var response = await container.ReadItemAsync<Thread>(threadId, new PartitionKey(threadId));
+            try
+            {
+                var response = await container.ReadItemAsync<Thread>(threadId, new PartitionKey(threadId));
+                var thread = response.Resource;
 
-            if (response.StatusCode == HttpStatusCode.BadRequest)
+                var threadDto = new ThreadDtos()
+                {
+                    Id = thread.Id,
+                    Message = thread.Message,
+                    UserIds = thread.UserIds,
+                    Date = thread.Created,
+                    SubThreads = await subThreadQuery.GetSubThread(threadId,
+                    "SELECT * FROM c ORDER BY c.created")
+                };
+
+                return threadDto;
+            }
+            catch (Exception)
             {
                 return default;
             }
-
-            var thread = response.Resource;
-            // using mapping tool kekeke
-
-            var threadDto = new ThreadDto()
-            {
-                Id = thread.Id,
-                Message = thread.Message,
-                UserIds = thread.UserIds,
-                Date = thread.Created,
-                SubThreads = await GetSubThread(threadId,
-                "SELECT * FROM c ORDER BY c.created")
-            };
-
-            return threadDto;
+            
         }
 
-        public async Task<List<SubThreadDtos>> GetSubThread(string threadId, string query)
+        public async Task<ThreadDtos> Update(Thread thread)
         {
-            var iterator = subThreadContainer.GetItemQueryIterator<SubThread>(query,requestOptions: new QueryRequestOptions()
+            try
             {
-                PartitionKey = new PartitionKey(threadId)
-            });
+                _ = await container.ReplaceItemAsync(thread, thread.Id, new PartitionKey(thread.Id));
 
-            var subThreadDtos = new List<SubThreadDtos>();
-            while (iterator.HasMoreResults)
-            {
-                var subThreads = await iterator.ReadNextAsync();
-                foreach (var subThread in subThreads)
+                var threadDto = new ThreadDtos()
                 {
-                    var subThreadDto = new SubThreadDtos()
-                    {
-                        Id = subThread.Id,
-                        Message = subThread.Message,
-                        UserIds = subThread.UserIds,
-                        SubUserIds = subThread.SubUserIds,
-                        ThreadId = subThread.ThreadId,
-                        Date = subThread.Created,
-                        SubThreads = await GetSubThread(subThread.Id, query)
-                    };
+                    Id = thread.Id,
+                    Message = thread.Message,
+                    UserIds = thread.UserIds,
+                    Date = thread.Created
+                };
 
-                    subThreadDtos.Add(subThreadDto);
-                }
+                return threadDto;
             }
-            if (subThreadDtos.Any())
+            catch (Exception)
             {
-                return subThreadDtos;
+                return default;
             }
-
-            return default;
+           
+           
         }
 
-        public async Task<bool> Update(Thread thread)
+        public async Task<List<ThreadDto>> GetThreads()
         {
-          var response = await container.ReplaceItemAsync(thread, thread.Id, new PartitionKey(thread.Id));
-            if (response.StatusCode != HttpStatusCode.OK)
+            try
             {
-                return false;
-            }
+                var iterator = container.GetItemQueryIterator<Thread>("SELECT * FROM c ORDER BY c.created");
 
-            return true;
+                var threadDtos = new List<ThreadDto>();
+                while (iterator.HasMoreResults)
+                {
+                    var threads = await iterator.ReadNextAsync();
+                    foreach (var thread in threads)
+                    {
+                        var threadDto = new ThreadDto()
+                        {
+                            Date = thread.Created,
+                            Id = thread.Id,
+                            Message = thread.Message,
+                            UserIds = thread.UserIds
+                        };
+                        threadDtos.Add(threadDto);
+                    }
+                }
+
+                if (threadDtos.Count < 0)
+                {
+                    return default;
+                }
+
+                return threadDtos;
+            }
+            catch (Exception)
+            {
+                return default;
+            }
         }
 
-        private readonly Container subThreadContainer;
+        public async Task<Thread> GetSingleThread(string threadId)
+        {
+            try
+            {
+                var response = await container.ReadItemAsync<Thread>(threadId, new PartitionKey(threadId));
+
+                return response.Resource;
+            }
+            catch (Exception)
+            {
+                return default;
+            }
+        }
+
+        private readonly SubThreadQuery subThreadQuery;
         private readonly Container container;
     }
 }

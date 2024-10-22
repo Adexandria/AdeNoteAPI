@@ -20,6 +20,8 @@ namespace ChattyPie.Application
             serviceCollection.AddScoped<ISubThreadRepository, SubThreadRepository>();
 
             serviceCollection.AddTransient<IChatApplication, ChatApplication>();
+
+            serviceCollection.AddScoped<SubThreadQuery>();
         }
 
     }

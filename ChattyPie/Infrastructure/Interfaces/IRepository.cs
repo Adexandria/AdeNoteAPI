@@ -10,6 +10,7 @@ namespace ChattyPie.Infrastructure.Interfaces
     public interface IRepository<T> where T : BaseClass
     {
         Task<bool> Add(T thread);
+
         Task<bool> Update(T thread);
     }
 }

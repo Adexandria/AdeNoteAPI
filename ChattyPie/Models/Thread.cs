@@ -52,6 +52,12 @@ namespace ChattyPie.Models
             Modified = DateTime.UtcNow;
         }
 
+        public void UpdateMessage(string message)
+        {
+            Message = message;
+            Modified = DateTime.UtcNow;
+        }
+
         [JsonProperty("userIds")]
         public List<string> UserIds { get; set; }
 
