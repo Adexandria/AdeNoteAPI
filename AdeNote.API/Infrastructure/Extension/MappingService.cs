@@ -99,11 +99,11 @@ namespace AdeNote.Infrastructure.Extension
 
         public static MapifyConfiguration ThreadConfig()
         {
-            return new MapifyConfigurationBuilder<ThreadDto, TweetThreadDto>()
+            return new MapifyConfigurationBuilder<ThreadDtos, TweetThreadDto>()
                 .Map(d=>d.Id, s => new Guid(s.Id))
                 .Map(d=>d.Message, s =>s.Message)
-                .Map(d=>d.Messages.MapTo(s=>s.Id), s=>s.SubThreads.MapFrom(s=> new Guid(s.Id)))
-                .Map(d => d.Messages.MapTo(s=>s.Message), s => s.SubThreads.MapFrom(s=>s.Message))
+                .Map(d=>d.Comments.MapTo(s=>s.Id), s=>s.SubThreads.MapFrom(s=> new Guid(s.Id)))
+                .Map(d => d.Comments.MapTo(s=>s.Message), s => s.SubThreads.MapFrom(s=>s.Message))
                 .CreateConfig();
         }
     }
