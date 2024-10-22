@@ -6,6 +6,6 @@
         public List<string> Usernames { get; set; }
         public List<string> ReplyUsernames { get; set; }
         public string Message { get; set; }
-        public List<SubThreadDto> Messages {  get; set; }
+        public List<SubThreadDto> Comments {  get; set; }
     }
 }

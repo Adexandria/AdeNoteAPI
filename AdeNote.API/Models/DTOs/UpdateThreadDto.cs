@@ -2,7 +2,7 @@
 
 namespace AdeNote.Models.DTOs
 {
-    public class CreateThreadDto
+    public class UpdateThreadDto
     {
         [Required]
         public string Message { get; set; }
