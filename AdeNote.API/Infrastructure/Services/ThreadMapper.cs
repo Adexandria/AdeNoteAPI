@@ -1,6 +1,4 @@
-﻿using AdeNote.Db;
-using AdeNote.Infrastructure.Repository;
-using AdeNote.Models;
+﻿using AdeNote.Infrastructure.Repository;
 using AdeNote.Models.DTOs;
 using ChattyPie.Models;
 using ChattyPie.Models.DTOs;
@@ -20,11 +18,41 @@ namespace AdeNote.Infrastructure.Services
             {
                  Id = new Guid(thread.Id),
                  Message = thread.Message,
-                 UserNames = _userRepository.GetUserEmails(thread.UserIds),
+                 UserNames = _userRepository.GetUserEmailsByUserIds(thread.UserIds),
+                 Date = thread.Date.ToLongDateString(),
+                 LastModified = thread.LastModified.ToLongDateString(),
                  Comments = MapTo(thread.SubThreads)
             };
 
             return tweetThreadDto;
+        }
+
+        public TweetThreadDtos MapTo(Thread thread)
+        {
+            var twitterThreadDto = new TweetThreadDtos()
+            {
+                Id = new Guid(thread.Id),
+                Message = thread.Message,
+                UserNames = _userRepository.GetUserEmailsByUserIds(thread.UserIds),
+                Date = thread.Created.ToLongDateString(),
+                LastModified = thread.Modified.ToLongDateString()
+            };
+
+            return twitterThreadDto;
+        }
+
+        public TweetThreadDtos MapToTweet(ThreadDtos thread)
+        {
+            var twitterThreadDto = new TweetThreadDtos()
+            {
+                Id = new Guid(thread.Id),
+                Message = thread.Message,
+                UserNames = _userRepository.GetUserEmailsByUserIds(thread.UserIds),
+                Date = thread.Date.ToLongDateString(),
+                LastModified = thread.LastModified.ToLongDateString()
+            };
+
+            return twitterThreadDto;
         }
 
         public List<TweetThreadDtos> MapTo(List<ThreadDto> threads)
@@ -33,7 +61,9 @@ namespace AdeNote.Infrastructure.Services
             {
                 Id = new Guid(s.Id),
                 Message = s.Message,
-                UserNames = _userRepository.GetUserEmails(s.UserIds)
+                UserNames = _userRepository.GetUserEmailsByUserIds(s.UserIds),
+                Date = s.Date.ToLongDateString(),
+                LastModified = s.LastModified.ToLongDateString()
             }).ToList();
 
             return threadDtos;
@@ -45,7 +75,9 @@ namespace AdeNote.Infrastructure.Services
             {
                 Id = new Guid(s.Id),
                 Message = s.Message,
-                UserNames = _userRepository.GetUserEmails(s.UserIds)
+                UserNames = _userRepository.GetUserEmailsByUserIds(s.UserIds),
+                Date = s.Date.ToLongDateString(),
+                LastModified = s.LastModified.ToLongDateString()
             }).ToList();
 
             return threadDtos;
@@ -58,9 +90,11 @@ namespace AdeNote.Infrastructure.Services
             {
                 Message = subThread.Message,
                 Id = new Guid(subThread.Id),
-                ReplyUsernames = _userRepository.GetUserEmails(subThread.SubUserIds),
-                Usernames = _userRepository.GetUserEmails(subThread.UserIds),
-                Comments = MapTo(subThread.SubThreads)
+                ReplyUsernames = _userRepository.GetUserEmailsByUserIds(subThread.SubUserIds),
+                Usernames = _userRepository.GetUserEmailsByUserIds(subThread.UserIds),
+                Comments = MapTo(subThread.SubThreads),
+                Date = subThread.Date.ToLongDateString(),
+                LastModified = subThread.LastModified.ToLongDateString()
             };
 
             return subThreadDto;
@@ -71,7 +105,6 @@ namespace AdeNote.Infrastructure.Services
             var thread = new Thread(threadDtos.UserIds, threadDtos.Message)
             {
                 Id = threadDtos.Id,
-
                 Created = threadDtos.Date
             };
 
@@ -85,7 +118,6 @@ namespace AdeNote.Infrastructure.Services
             var subThread = new SubThread(subThreadDto.ThreadId, subThreadDto.UserIds, subThreadDto.SubUserIds, subThreadDto.ThreadId)
             {
                 Id = subThreadDto.Id,
-
                 Created = subThreadDto.Date
             };
 
@@ -103,9 +135,11 @@ namespace AdeNote.Infrastructure.Services
             { 
                 Message = x.Message,
                 Id = new Guid(x.Id),
-                ReplyUsernames = _userRepository.GetUserEmails(x.SubUserIds),
-                Usernames = _userRepository.GetUserEmails(x.UserIds),
-                Comments = MapTo(x.SubThreads)
+                ReplyUsernames = _userRepository.GetUserEmailsByUserIds(x.SubUserIds),
+                Usernames = _userRepository.GetUserEmailsByUserIds(x.UserIds),
+                Comments = MapTo(x.SubThreads),
+                Date = x.Date.ToLongDateString(),
+                LastModified = x.Date.ToLongDateString()
             }).ToList();
 
             return subThreadDto;

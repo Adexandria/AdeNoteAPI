@@ -36,12 +36,54 @@ namespace AdeNote.Controllers
         [HttpPost()]
         public async Task<IActionResult> SendTweet(CreateThreadDto newThread)
         {
-            var response = await _chatService.CreateThread(newThread, CurrentUser.ToString());
+            var response = await _chatService.CreateThread(newThread, CurrentEmail);
 
             return response.Response();
         }
 
+        /// <summary>
+        /// Searches tweets by messages
+        /// </summary>
+        /// <remarks> 
+        /// Sample request:
+        /// 
+        ///             POST /chats/search?message="Adeola"
+        ///             
+        /// </remarks>  
+        /// <param name="message"></param>
+        /// <returns></returns>
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<List<TweetThreadDtos>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchTweetByMessage(string message)
+        {
+            var response = await _chatService.SearchThreadsByMessage(message);
 
+            return response.Response();
+        }
+
+        /// <summary>
+        /// Searches tweets by email
+        /// </summary>
+        /// <remarks>/ 
+        /// Sample request:
+        /// 
+        ///             POST /chats/search/emails?email=adeolaaderibigbe09@gmail.com
+        ///             
+        /// </remarks>  
+        /// <param name="email"></param>
+        /// <returns></returns>
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<List<TweetThreadDtos>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [HttpGet("search/emails")]
+        public async Task<IActionResult> SearchTweetsByEmail(string email)
+        {
+            var response = await _chatService.SearchThreadsByEmail(email);
+
+            return response.Response();
+        }
         /// <summary>
         ///  Fetches tweet by id
         /// </summary>
@@ -64,6 +106,31 @@ namespace AdeNote.Controllers
 
             return response.Response();
         }
+
+        /// <summary>
+        ///  Fetches a single tweet by id
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// 
+        ///             GET /chats/2b170ff4-0615-4794-b9bb-8d2af76398e7
+        ///             
+        /// </remarks>
+        /// <param name="threadId">Thread id</param>
+        /// 
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(Infrastructure.Utilities.ActionResult<TweetThreadDtos>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
+        [AllowAnonymous]
+        [HttpGet("threads/{threadId}")]
+        public async Task<IActionResult> GetTweetbyId(string threadId)
+        {
+            var response = await _chatService.GetSingleThread(threadId);
+
+            return response.Response();
+        }
+
 
         /// <summary>
         /// Fetches all tweets

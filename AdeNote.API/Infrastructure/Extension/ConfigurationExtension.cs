@@ -71,6 +71,12 @@ namespace AdeNote.Infrastructure.Extension
 
             return new Cdn(endpoint) ?? throw new NullReferenceException(nameof(endpoint));
         }
+
+        public static ClientUrl ExtractClientUrlConfiguration(IConfiguration configuration)
+        {
+            var client = configuration["client"] ?? throw new NullReferenceException("Invalid client url");
+            return new ClientUrl(client);
+        }
         public static ApplicationSetting ExtractApplicationSetting(this IConfiguration configuration)
         {
             return new ApplicationSetting
@@ -85,7 +91,8 @@ namespace AdeNote.Infrastructure.Extension
                 HangFireUserConfiguration = ExtractHangFireUserConfiguration(configuration),
                 CachingKeys = ExtractCachingKeys(configuration),
                 CosmosConfiguration = ExtractCosmosConfiguration(configuration),
-                CdnEndpoint = ExtractCdnConfiguration(configuration)
+                CdnEndpoint = ExtractCdnConfiguration(configuration),
+                Url = ExtractClientUrlConfiguration(configuration)
             };
         }
     }

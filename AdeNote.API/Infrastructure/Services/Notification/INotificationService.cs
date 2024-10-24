@@ -17,5 +17,15 @@ namespace AdeNote.Infrastructure.Services.Notification
         /// <param name="template">Email template</param>
         /// <param name="contentType">Content type of message</param>
         void SendNotification<T>(T email, EmailTemplate template, ContentType contentType, Dictionary<string, string> substitutions = null) where T : Email;
+
+        /// <summary>
+        /// Send notifications based on template type
+        /// </summary>
+        /// <typeparam name="T">Email type</typeparam>
+        /// <param name="email">Hold email details</param>
+        /// <param name="substitutions">User's details</param>
+        /// <param name="template">Email template</param>
+        /// <param name="contentType">Content type of message</param>
+        void SendNotification<T>(List<T> emails, EmailTemplate template, ContentType contentType, List<Dictionary<string, string>> substitutions = null) where T : Email;
     }
 }

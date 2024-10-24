@@ -91,9 +91,11 @@ namespace AdeNote.Infrastructure.Extension
 
             serviceCollection.AddSingleton<Application>();
 
-            serviceCollection.AddSingleton((_) => applicationSettings.CachingKeys);
+            serviceCollection.AddSingleton(applicationSettings.Url);
 
-            serviceCollection.AddSingleton((_) => applicationSettings.CdnEndpoint);
+            serviceCollection.AddSingleton(applicationSettings.CachingKeys);
+
+            serviceCollection.AddSingleton(applicationSettings.CdnEndpoint);
         }
 
         public static void RegisterAuthentication(this IServiceCollection serviceCollection, ApplicationSetting applicationSetting)

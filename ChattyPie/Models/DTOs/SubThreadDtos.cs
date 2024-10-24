@@ -14,6 +14,7 @@ namespace ChattyPie.Models.DTOs
         public List<string> UserIds { get; set; }
         public string Message { get; set; }
         public DateTime Date { get; set; }
+        public DateTime LastModified { get; set; }
         public List<SubThreadDtos> SubThreads { get; set; }
     }
 }

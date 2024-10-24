@@ -7,7 +7,7 @@ namespace ChattyPie.Infrastructure.Repositories
 {
     internal class ThreadRepository : IThreadRepository
     {
-        public ThreadRepository(Database _database, SubThreadQuery _subThreadQuery)
+        public ThreadRepository(Database _database, ThreadQuery _subThreadQuery)
         {
             container = _database.CreateContainerIfNotExistsAsync("threads", "/id").Result;
             subThreadQuery = _subThreadQuery;
@@ -23,7 +23,8 @@ namespace ChattyPie.Infrastructure.Repositories
                     Id = thread.Id,
                     Message = thread.Message,
                     UserIds = thread.UserIds,
-                    Date = thread.Created
+                    Date = thread.Created,
+                    LastModified = thread.Modified
                 };
                 return threadDto;
             }
@@ -60,6 +61,7 @@ namespace ChattyPie.Infrastructure.Repositories
                     Message = thread.Message,
                     UserIds = thread.UserIds,
                     Date = thread.Created,
+                    LastModified = thread.Modified,
                     SubThreads = await subThreadQuery.GetSubThread(threadId,
                     "SELECT * FROM c ORDER BY c.created")
                 };
@@ -84,7 +86,8 @@ namespace ChattyPie.Infrastructure.Repositories
                     Id = thread.Id,
                     Message = thread.Message,
                     UserIds = thread.UserIds,
-                    Date = thread.Created
+                    Date = thread.Created,
+                    LastModified = thread.Modified
                 };
 
                 return threadDto;
@@ -114,7 +117,8 @@ namespace ChattyPie.Infrastructure.Repositories
                             Date = thread.Created,
                             Id = thread.Id,
                             Message = thread.Message,
-                            UserIds = thread.UserIds
+                            UserIds = thread.UserIds,
+                            LastModified = thread.Modified
                         };
                         threadDtos.Add(threadDto);
                     }
@@ -147,7 +151,7 @@ namespace ChattyPie.Infrastructure.Repositories
             }
         }
 
-        private readonly SubThreadQuery subThreadQuery;
+        private readonly ThreadQuery subThreadQuery;
         private readonly Container container;
     }
 }

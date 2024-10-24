@@ -3,7 +3,7 @@ using ChattyPie.Models.DTOs;
 
 namespace ChattyPie.Infrastructure.Interfaces
 {
-    public interface ISubThreadRepository
+    internal interface ISubThreadRepository
     {
         Task<SubThreadDtos> GetSubThreadAsync(string threadId, string parentThreadId);
         Task<SubThread> GetSingleSubThread(string subThreadId, string parentThreadId);

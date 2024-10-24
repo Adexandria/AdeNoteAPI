@@ -7,9 +7,12 @@ namespace ChattyPie.Application
 {
     internal class ChatApplication : IChatApplication
     {
-        public ChatApplication(IThreadRepository threadRepository, ISubThreadRepository subThreadRepository)
+        public ChatApplication(IThreadRepository threadRepository, 
+            ISearchRepository searchRepository,
+            ISubThreadRepository subThreadRepository)
         { 
            _threadRepository = threadRepository;
+            _searchRepository = searchRepository;
            _subThreadRepository = subThreadRepository;
         }
 
@@ -38,6 +41,15 @@ namespace ChattyPie.Application
             return await _threadRepository.GetThreads();
         }
 
+        public async Task<List<ThreadDto>> SearchThreadsByMessage(string message)
+        {
+            return await _searchRepository.SearchThreadByMessage(message);
+        }
+
+        public async Task<List<ThreadDto>> SearchThreadsByUserId(string userId)
+        {
+            return await _searchRepository.SearchThreadByUserId(userId);
+        }
         public async Task<bool> DeleteThread(string threadId)
         {
            return await _threadRepository.Delete(threadId);
@@ -69,6 +81,7 @@ namespace ChattyPie.Application
         }
 
         private readonly ISubThreadRepository _subThreadRepository;
+        private readonly ISearchRepository _searchRepository;
         private readonly IThreadRepository _threadRepository;
     }
 }
