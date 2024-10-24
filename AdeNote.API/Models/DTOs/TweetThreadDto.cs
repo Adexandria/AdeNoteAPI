@@ -8,6 +8,10 @@
 
         public string Message { get; set; }
 
+        public string Date {  get; set; }
+
+        public string LastModified { get; set; }
+
         public List<SubThreadDto> Comments { get; set; }
     }
 }

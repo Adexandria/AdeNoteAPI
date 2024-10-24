@@ -29,7 +29,7 @@ namespace AdeNote.Infrastructure.Services.Notification
         /// <param name="substitutions">User's details</param>
         /// <param name="template">Email template</param>
         /// <param name="contentType">Content type of message</param> 
-        public void SendNotification<T>(T email, EmailTemplate template, ContentType contentType, Dictionary<string, string> substitutions = null) where T : Email
+        public void SendNotification<T>(T email, EmailTemplate template, ContentType contentType, Dictionary<string, string> substitutions) where T : Email
         {
             var contentTemplate = GenerateContentTemplate(template);
 
@@ -49,6 +49,31 @@ namespace AdeNote.Infrastructure.Services.Notification
             }
 
             _emailService.SendMessage(email);
+        }
+
+        public void SendNotification<T>(List<T> emails, EmailTemplate template, ContentType contentType, List<Dictionary<string,string>> substitutions) where T: Email
+        {
+            var contentTemplate = GenerateContentTemplate(template);
+
+            if (string.IsNullOrEmpty(contentTemplate))
+            {
+                return;
+            }
+
+            for (int i = 0; i < emails.Count; i++)
+            {
+                var content = substitutions == null ? contentTemplate : CreatePersonalisedMessage(substitutions[i],contentTemplate);
+                if (contentType == ContentType.html)
+                {
+                    emails[i].SetHtmlContent(content);
+                }
+                else
+                {
+                    emails[i].SetPlainContent(content);
+                }
+            }
+
+            _emailService.SendMessages(emails);
         }
 
         /// <summary>

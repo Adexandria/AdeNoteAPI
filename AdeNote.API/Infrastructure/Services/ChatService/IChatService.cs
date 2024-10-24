@@ -6,13 +6,18 @@ namespace AdeNote.Infrastructure.Services.ChatService
 {
     public interface IChatService
     {
-        Task<ActionResult> CreateThread(CreateThreadDto message, string userId);
+        Task<ActionResult> CreateThread(CreateThreadDto message, string email);
 
-        Task<ActionResult> CreateSubThread(CreateThreadDto message, string userId, string[] replyUserIds, string threadId);
+        Task<ActionResult> CreateSubThread(CreateThreadDto message, string email, string[] replyEmails, string threadId);
 
         Task<ActionResult<TweetThreadDto>> GetThread(string threadId);
 
+        Task<ActionResult<TweetThreadDtos>> GetSingleThread(string threadId);
+
         Task<ActionResult<List<TweetThreadDtos>>> GetThreads();
+        Task<ActionResult<List<TweetThreadDtos>>> SearchThreadsByMessage(string message);
+
+        Task<ActionResult<List<TweetThreadDtos>>> SearchThreadsByEmail(string email);
 
         Task<ActionResult<SubThreadDto>> GetSubThread(string subThreadId, string parentId);
 

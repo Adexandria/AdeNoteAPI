@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweet Reply Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #1DA1F2;
+            color: #ffffff;
+        }
+        .header img {
+            max-width: 150px;
+            height: auto;
+        }
+        .content {
+            padding: 20px;
+            text-align: left;
+        }
+        .content p {
+            margin: 10px 0;
+            line-height: 1.5;
+            color: #333333;
+        }
+        .tweet {
+            background-color: #f9f9f9;
+            border-left: 4px solid #1DA1F2;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-style: italic;
+        }
+        .reply {
+            background-color: #eef9ff;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #d3e2f5;
+        }
+        .reply strong {
+            color: #1DA1F2;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #666666;
+            background-color: #f4f4f4;
+            border-top: 1px solid #dddddd;
+        }
+        .footer a {
+            color: #1DA1F2;
+            text-decoration: none;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .content {
+                padding: 10px;
+            }
+            .header img {
+                max-width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://adenote.blob.core.windows.net/files/adenote-logog.jpg" alt="Adenote Logo">
+        </div>
+        <div class="content">
+            <p>Hello [Recipient's Name],</p>
+            <p>You have a new reply to your tweet:</p>
+            <div class="tweet">
+                <p>[Original Tweet Content]</p>
+            </div>
+            <p>Here is the reply:</p>
+            <div class="reply">
+                <p><strong>[Replier's Name]</strong> replied:</p>
+                <p>[Reply Content]</p>
+            </div>
+            <p>Click <a href="[Tweet URL]">here</a> to view the conversation on AdeNote.</p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 Adenote. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

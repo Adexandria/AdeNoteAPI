@@ -1,6 +1,7 @@
 ﻿using AdeAuth.Services.Interfaces;
 using AdeNote.Db;
 using AdeNote.Models;
+using AdeNote.Models.DTOs;
 using Microsoft.EntityFrameworkCore;
 using NPOI.SS.Formula.Functions;
 
@@ -64,6 +65,11 @@ namespace AdeNote.Infrastructure.Repository
             return user;
         }
 
+        public List<NotifyUser> GetFullNamesById(List<string> ids)
+        {
+            return Db.Users.Where(s => ids.Contains(s.Id.ToString())).Select(s => new NotifyUser(s.Email, s.FirstName, s.LastName)).ToList();
+        }
+
         public async Task<User> GetUser(Guid userId)
         {
             return await Db.Users.Include(s => s.RecoveryCode)
@@ -81,12 +87,20 @@ namespace AdeNote.Infrastructure.Repository
             return isPhoneNumberVerified;
         }
 
-        public List<string> GetUserEmails(List<string> userIds)
+        public List<string> GetUserEmailsByUserIds(List<string> userIds)
         {
             return Db.Users.Where(s => userIds.Contains(s.Id.ToString())).AsNoTracking().Select(s => s.Email).ToList();
         }
 
+        public List<string> GetUserIdsByEmails(string[] emails)
+        {
+            return Db.Users.Where(s => emails.Contains(s.Email)).AsNoTracking().Select(s => s.Id.ToString()).ToList();
+        }
 
+        public async Task<string> GetUserIdByEmail(string email)
+        {
+            return await Db.Users.Where(s=>s.Email == email).Select(s => s.Id.ToString("D")).FirstOrDefaultAsync();
+        }
 
         public async Task<bool> Remove(User entity)
         {
@@ -168,8 +182,6 @@ namespace AdeNote.Infrastructure.Repository
             return saved;
 
         }
-
-
 
         private readonly IdentityDbContext Db;
 

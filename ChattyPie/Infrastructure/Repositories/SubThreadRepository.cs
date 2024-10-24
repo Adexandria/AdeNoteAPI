@@ -9,7 +9,7 @@ namespace ChattyPie.Infrastructure.Repositories
 {
     internal class SubThreadRepository : ISubThreadRepository
     {
-        public SubThreadRepository(Database database, SubThreadQuery _subThreadQuery)
+        public SubThreadRepository(Database database, ThreadQuery _subThreadQuery)
         {
             container = database.CreateContainerIfNotExistsAsync("subthreads", "/threadId").Result;
             subThreadQuery = _subThreadQuery;
@@ -29,7 +29,8 @@ namespace ChattyPie.Infrastructure.Repositories
                     UserIds = subThread.UserIds,
                     SubUserIds = subThread.SubUserIds,
                     ThreadId = subThread.ThreadId,
-                    Date = subThread.Created
+                    Date = subThread.Created,
+                    LastModified = subThread.Modified
                 };
 
                 return subThreadDto;
@@ -70,7 +71,8 @@ namespace ChattyPie.Infrastructure.Repositories
                     UserIds = subThread.UserIds,
                     SubUserIds = subThread.SubUserIds,
                     ThreadId = subThread.ThreadId,
-                    Date = subThread.Created
+                    Date = subThread.Created,
+                    LastModified= subThread.Modified
                 };
 
                 return subThreadDto;
@@ -98,6 +100,7 @@ namespace ChattyPie.Infrastructure.Repositories
                     SubUserIds = subThread.SubUserIds,
                     ThreadId = subThread.ThreadId,
                     Date = subThread.Created,
+                    LastModified = subThread.Modified,
                     SubThreads = await subThreadQuery.GetSubThread(subThread.Id, "SELECT * FROM c ORDER BY c.created")
                 };
 
@@ -124,7 +127,7 @@ namespace ChattyPie.Infrastructure.Repositories
            
         }
 
-        private readonly SubThreadQuery subThreadQuery;
+        private readonly ThreadQuery subThreadQuery;
         private readonly Container container;
     }
 }

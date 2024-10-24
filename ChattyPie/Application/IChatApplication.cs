@@ -27,5 +27,9 @@ namespace ChattyPie.Application
         Task<ThreadDtos> UpdateThread(Thread thread);
 
         Task<SubThreadDtos> UpdateSubThread(SubThread subThread);
+
+        Task<List<ThreadDto>> SearchThreadsByMessage(string message);
+
+        Task<List<ThreadDto>> SearchThreadsByUserId(string userId);
     }
 }

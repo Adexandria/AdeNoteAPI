@@ -21,5 +21,7 @@ namespace AdeNote.Infrastructure.Utilities
         public CachingKeys CachingKeys { get; set; }
         public Cdn CdnEndpoint {  get; set; } 
         public ICosmosConfiguration CosmosConfiguration { get; set; }
+
+        public ClientUrl Url { get; set; }
     }
 }

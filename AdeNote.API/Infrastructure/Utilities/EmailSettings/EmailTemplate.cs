@@ -28,7 +28,9 @@ namespace AdeNote.Infrastructure.Utilities.EmailSettings
         
         TicketUpdateNotification,
 
-        SolvedTicketNotification
+        SolvedTicketNotification,
+
+        TweetNotification,
 
     }
 }
