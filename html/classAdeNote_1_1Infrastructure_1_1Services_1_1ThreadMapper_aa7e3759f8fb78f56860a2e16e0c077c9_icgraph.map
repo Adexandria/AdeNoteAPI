@@ -1,7 +1,10 @@
 <map id="AdeNote.Infrastructure.Services.ThreadMapper.MapTo" name="AdeNote.Infrastructure.Services.ThreadMapper.MapTo">
-<area shape="rect" id="node1" title=" " alt="" coords="332,104,565,145"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a85182155b7dafa6c6d40d095c8fb6b7b" title=" " alt="" coords="5,5,284,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a2bc27b0cfa9990887cc821376366e283" title=" " alt="" coords="17,71,272,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#aad666b4693242cdeba8358fd45ba5ea4" title=" " alt="" coords="14,136,275,177"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#a3ae517aa52f56746a9a73a1146741a25" title=" " alt="" coords="28,201,261,243"/>
+<area shape="rect" id="node1" title=" " alt="" coords="348,201,581,243"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a633e9191a1daf94fd443bb428c1d16ed" title=" " alt="" coords="5,5,300,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a85182155b7dafa6c6d40d095c8fb6b7b" title=" " alt="" coords="13,71,292,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a2bc27b0cfa9990887cc821376366e283" title=" " alt="" coords="25,136,280,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#aad666b4693242cdeba8358fd45ba5ea4" title=" " alt="" coords="22,201,283,243"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#a3ae517aa52f56746a9a73a1146741a25" title=" " alt="" coords="36,267,269,308"/>
+<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#acaa81e32651dc5aa80aeab3caa26c593" title=" " alt="" coords="11,333,294,389"/>
+<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#ad7ee727d29c9444d40945035fb6d9aa4" title=" " alt="" coords="11,413,294,469"/>
 </map>

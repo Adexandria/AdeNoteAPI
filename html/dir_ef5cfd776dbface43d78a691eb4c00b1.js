@@ -35,6 +35,9 @@ var dir_ef5cfd776dbface43d78a691eb4c00b1 =
     [ "Cdn.cs", "Cdn_8cs.html", [
       [ "Cdn", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Cdn.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Cdn" ]
     ] ],
+    [ "ClientUrl.cs", "ClientUrl_8cs.html", [
+      [ "ClientUrl", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ClientUrl.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ClientUrl" ]
+    ] ],
     [ "ContentType.cs", "ContentType_8cs.html", "ContentType_8cs" ],
     [ "CosmosConfiguration.cs", "CosmosConfiguration_8cs.html", [
       [ "CosmosConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CosmosConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CosmosConfiguration" ]

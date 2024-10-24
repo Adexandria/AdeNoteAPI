@@ -124,14 +124,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1c2768a4787c43f29492083980cc2de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0663673c6e122093f4557aa6069ced82"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Models_1_1User.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#a0663673c6e122093f4557aa6069ced82">GetUserByEmail</a> (string email)</td></tr>
 <tr class="separator:a0663673c6e122093f4557aa6069ced82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe78228493dc31c02a9c7a631854a39c"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1NotifyUser.html">NotifyUser</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#afe78228493dc31c02a9c7a631854a39c">GetFullNamesById</a> (List&lt; string &gt; ids)</td></tr>
+<tr class="separator:afe78228493dc31c02a9c7a631854a39c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3db8e941c5a035f08aa799556322d98"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Models_1_1User.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#aa3db8e941c5a035f08aa799556322d98">GetUser</a> (Guid userId)</td></tr>
 <tr class="memdesc:aa3db8e941c5a035f08aa799556322d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get existings of a user  <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#aa3db8e941c5a035f08aa799556322d98">More...</a><br /></td></tr>
 <tr class="separator:aa3db8e941c5a035f08aa799556322d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab76339a6ba6f1f8dd5e295f4cb788cf9"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#ab76339a6ba6f1f8dd5e295f4cb788cf9">IsPhoneNumberVerified</a> (Guid userId)</td></tr>
 <tr class="memdesc:ab76339a6ba6f1f8dd5e295f4cb788cf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if user's phone number has been verified  <a href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#ab76339a6ba6f1f8dd5e295f4cb788cf9">More...</a><br /></td></tr>
 <tr class="separator:ab76339a6ba6f1f8dd5e295f4cb788cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76655e2dfb423621b4b67309755be935"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#a76655e2dfb423621b4b67309755be935">GetUserEmails</a> (List&lt; string &gt; userIds)</td></tr>
-<tr class="separator:a76655e2dfb423621b4b67309755be935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d3d89492dc64558f9540ffe84b379ae"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#a2d3d89492dc64558f9540ffe84b379ae">GetUserEmailsByUserIds</a> (List&lt; string &gt; userIds)</td></tr>
+<tr class="separator:a2d3d89492dc64558f9540ffe84b379ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfe246d3b7d94753c4c2c94cae477a14"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#abfe246d3b7d94753c4c2c94cae477a14">GetUserIdsByEmails</a> (string[] emails)</td></tr>
+<tr class="separator:abfe246d3b7d94753c4c2c94cae477a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1c8dc67a1650e8a63705df250ad2e10"><td class="memItemLeft" align="right" valign="top">async Task&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#ab1c8dc67a1650e8a63705df250ad2e10">GetUserIdByEmail</a> (string email)</td></tr>
+<tr class="separator:ab1c8dc67a1650e8a63705df250ad2e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6857b6eddf586d8605f67e5009f66715"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#a6857b6eddf586d8605f67e5009f66715">Remove</a> (<a class="el" href="classAdeNote_1_1Models_1_1User.html">User</a> entity)</td></tr>
 <tr class="separator:a6857b6eddf586d8605f67e5009f66715"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f5f24337996a644484a156e818f04fb"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#a2f5f24337996a644484a156e818f04fb">Update</a> (<a class="el" href="classAdeNote_1_1Models_1_1User.html">User</a> entity)</td></tr>
@@ -167,7 +173,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00009">9</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00010">10</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad529a3288c71e7ab0e1c9a19071cc61a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad529a3288c71e7ab0e1c9a19071cc61a">&#9670;&nbsp;</a></span>UserRepository()</h2>
@@ -201,7 +207,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00011">11</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00012">12</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -222,7 +228,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00020">20</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00021">21</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -269,7 +275,29 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#afa85a048c3e6537a827575c4b2d3c8b1">AdeNote.Infrastructure.Repository.IUserRepository</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00033">33</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00034">34</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+
+</div>
+</div>
+<a id="afe78228493dc31c02a9c7a631854a39c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe78228493dc31c02a9c7a631854a39c">&#9670;&nbsp;</a></span>GetFullNamesById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1NotifyUser.html">NotifyUser</a>&gt; AdeNote.Infrastructure.Repository.UserRepository.GetFullNamesById </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>ids</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a4704e18e5de56d21c5f525f4f4397750">AdeNote.Infrastructure.Repository.IUserRepository</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00068">68</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -290,7 +318,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a3730d3f52e532c9fcd221472602f754d">AdeNote.Infrastructure.Repository.IUserRepository</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00119">119</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00133">133</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -321,7 +349,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a2f9c93cf4ef3a74b15a0bf2b71cd21ad">AdeNote.Infrastructure.Repository.IUserRepository</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00067">67</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00073">73</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -343,18 +371,18 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#afcdbd770c4d741913a1942030b8ab65e">AdeNote.Infrastructure.Repository.IUserRepository</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00059">59</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00060">60</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
 
 </div>
 </div>
-<a id="a76655e2dfb423621b4b67309755be935"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76655e2dfb423621b4b67309755be935">&#9670;&nbsp;</a></span>GetUserEmails()</h2>
+<a id="a2d3d89492dc64558f9540ffe84b379ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d3d89492dc64558f9540ffe84b379ae">&#9670;&nbsp;</a></span>GetUserEmailsByUserIds()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;string&gt; AdeNote.Infrastructure.Repository.UserRepository.GetUserEmails </td>
+          <td class="memname">List&lt;string&gt; AdeNote.Infrastructure.Repository.UserRepository.GetUserEmailsByUserIds </td>
           <td>(</td>
           <td class="paramtype">List&lt; string &gt;&#160;</td>
           <td class="paramname"><em>userIds</em></td><td>)</td>
@@ -363,9 +391,53 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a6b135c38fc93ebae2dbdb4b108ee40fb">AdeNote.Infrastructure.Repository.IUserRepository</a>.</p>
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#ab5aab11805f40b0e46c447f20d3e616a">AdeNote.Infrastructure.Repository.IUserRepository</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00084">84</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00090">90</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab1c8dc67a1650e8a63705df250ad2e10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1c8dc67a1650e8a63705df250ad2e10">&#9670;&nbsp;</a></span>GetUserIdByEmail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;string&gt; AdeNote.Infrastructure.Repository.UserRepository.GetUserIdByEmail </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>email</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a2a4078c36d73a1471f0a842d04721c72">AdeNote.Infrastructure.Repository.IUserRepository</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00100">100</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+
+</div>
+</div>
+<a id="abfe246d3b7d94753c4c2c94cae477a14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfe246d3b7d94753c4c2c94cae477a14">&#9670;&nbsp;</a></span>GetUserIdsByEmails()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;string&gt; AdeNote.Infrastructure.Repository.UserRepository.GetUserIdsByEmails </td>
+          <td>(</td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>emails</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a0aee5a465b6bc57820ad0f8bc7c3b7d1">AdeNote.Infrastructure.Repository.IUserRepository</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00095">95</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -387,7 +459,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a8325a5a7a398ece0bf109379613d9bd4">AdeNote.Infrastructure.Repository.IUserRepository</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00114">114</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00128">128</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -418,7 +490,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#adb7781cc5e6e97c18da947669b2deabe">AdeNote.Infrastructure.Repository.IUserRepository</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00075">75</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00081">81</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -438,7 +510,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00091">91</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00105">105</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -474,7 +546,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00127">127</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00141">141</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -505,7 +577,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00102">102</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00116">116</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -539,7 +611,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00174">174</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00186">186</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -563,7 +635,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00176">176</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00188">188</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -579,7 +651,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00178">178</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserRepository_8cs_source.html#l00190">190</a> of file <a class="el" href="UserRepository_8cs_source.html">UserRepository.cs</a>.</p>
 
 </div>
 </div>

@@ -52,6 +52,7 @@ var hierarchy =
     [ "AdeNote.Infrastructure.Utilities.CachingKeys", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys.html", null ],
     [ "AdeNote.Infrastructure.Utilities.Cdn", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Cdn.html", null ],
     [ "AdeNote.Models.DTOs.ChangePasswordDTO", "classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO.html", null ],
+    [ "AdeNote.Infrastructure.Utilities.ClientUrl", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ClientUrl.html", null ],
     [ "AdeNote.Infrastructure.Extension.CollectionExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1CollectionExtension.html", null ],
     [ "AdeNote.Infrastructure.Extension.ConfigurationExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html", null ],
     [ "ControllerBase", null, [
@@ -83,7 +84,8 @@ var hierarchy =
     [ "AdeNote.Infrastructure.Utilities.EventSystem.EventConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1EventConfiguration.html", null ],
     [ "AdeNote.Infrastructure.Extension.EventExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1EventExtension.html", null ],
     [ "Exception", null, [
-      [ "AdeNote.Infrastructure.Exceptions.HealthCheckException", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1HealthCheckException.html", null ]
+      [ "AdeNote.Infrastructure.Exceptions.HealthCheckException", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1HealthCheckException.html", null ],
+      [ "AdeNote.Infrastructure.Exceptions.MailGunException", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1MailGunException.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Middlewares.ExceptionMiddleware", "classAdeNote_1_1Infrastructure_1_1Middlewares_1_1ExceptionMiddleware.html", null ],
     [ "IAuthorizationRequirement", null, [
@@ -377,6 +379,7 @@ var hierarchy =
     [ "ModelSnapshot", null, [
       [ "AdeNote.Migrations.NoteDbContextModelSnapshot", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html", null ]
     ] ],
+    [ "AdeNote.Models.DTOs.NotifyUser", "classAdeNote_1_1Models_1_1DTOs_1_1NotifyUser.html", null ],
     [ "AdeNote.Models.DTOs.PageCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO.html", null ],
     [ "AdeNote.Models.DTOs.PageUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO.html", null ],
     [ "AdeNote.Infrastructure.Utilities.PaginatedResponse< T >", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html", null ],

@@ -117,11 +117,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac486d0c55236f984d229e0fde4c095c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ec03d10988c420e61172ba96f457515"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1EmailService.html#a7ec03d10988c420e61172ba96f457515">SendMessage&lt; T &gt;</a> (T email)</td></tr>
 <tr class="separator:a7ec03d10988c420e61172ba96f457515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aeeb97aae5f78988731b419ab5980ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1EmailService.html#a3aeeb97aae5f78988731b419ab5980ff">SendMessages&lt; T &gt;</a> (List&lt; T &gt; emails)</td></tr>
+<tr class="separator:a3aeeb97aae5f78988731b419ab5980ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a14682fe45079cb668910b57366ff0fa4"><td class="memItemLeft" align="right" valign="top">async void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1EmailService.html#a14682fe45079cb668910b57366ff0fa4">Send&lt; T &gt;</a> (T email)</td></tr>
-<tr class="separator:a14682fe45079cb668910b57366ff0fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac613086ebc874788197489d7d57f5a96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1EmailService.html#ac613086ebc874788197489d7d57f5a96">Send&lt; T &gt;</a> (T email)</td></tr>
+<tr class="separator:ac613086ebc874788197489d7d57f5a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -129,10 +131,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a7a332cb802ed5fe5dc67a7021a848e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66dceb29489e7b501be5584a67824124"><td class="memItemLeft" align="right" valign="top">ILogger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1EmailService.html#a66dceb29489e7b501be5584a67824124">logger</a></td></tr>
 <tr class="separator:a66dceb29489e7b501be5584a67824124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a557b10dc8dc23a6279c09f7d13b2107c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1EmailService.html#a557b10dc8dc23a6279c09f7d13b2107c">retryConfiguration</a></td></tr>
+<tr class="separator:a557b10dc8dc23a6279c09f7d13b2107c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="EmailService_8cs_source.html#l00007">7</a> of file <a class="el" href="EmailService_8cs_source.html">EmailService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EmailService_8cs_source.html#l00009">9</a> of file <a class="el" href="EmailService_8cs_source.html">EmailService.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac486d0c55236f984d229e0fde4c095c9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac486d0c55236f984d229e0fde4c095c9">&#9670;&nbsp;</a></span>EmailService()</h2>
@@ -160,13 +164,13 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EmailService_8cs_source.html#l00009">9</a> of file <a class="el" href="EmailService_8cs_source.html">EmailService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EmailService_8cs_source.html#l00011">11</a> of file <a class="el" href="EmailService_8cs_source.html">EmailService.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a14682fe45079cb668910b57366ff0fa4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14682fe45079cb668910b57366ff0fa4">&#9670;&nbsp;</a></span>Send&lt; T &gt;()</h2>
+<a id="ac613086ebc874788197489d7d57f5a96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac613086ebc874788197489d7d57f5a96">&#9670;&nbsp;</a></span>Send&lt; T &gt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,7 +179,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">async void AdeNote.Infrastructure.Services.EmailSettings.EmailService.Send&lt; T &gt; </td>
+          <td class="memname">void AdeNote.Infrastructure.Services.EmailSettings.EmailService.Send&lt; T &gt; </td>
           <td>(</td>
           <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>email</em></td><td>)</td>
@@ -197,7 +201,7 @@ Private Attributes</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="EmailService_8cs_source.html#l00023">23</a> of file <a class="el" href="EmailService_8cs_source.html">EmailService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EmailService_8cs_source.html#l00033">33</a> of file <a class="el" href="EmailService_8cs_source.html">EmailService.cs</a>.</p>
 
 </div>
 </div>
@@ -227,7 +231,37 @@ Private Attributes</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="EmailService_8cs_source.html#l00018">18</a> of file <a class="el" href="EmailService_8cs_source.html">EmailService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EmailService_8cs_source.html#l00021">21</a> of file <a class="el" href="EmailService_8cs_source.html">EmailService.cs</a>.</p>
+
+</div>
+</div>
+<a id="a3aeeb97aae5f78988731b419ab5980ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aeeb97aae5f78988731b419ab5980ff">&#9670;&nbsp;</a></span>SendMessages&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AdeNote.Infrastructure.Services.EmailSettings.EmailService.SendMessages&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>emails</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1EmailSettings_1_1IEmailService.html#a2b592e1e3ecf8f0ab2a2a3b1c48a9f65">AdeNote.Infrastructure.Services.EmailSettings.IEmailService</a>.</p>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>Email</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+<p class="definition">Definition at line <a class="el" href="EmailService_8cs_source.html#l00027">27</a> of file <a class="el" href="EmailService_8cs_source.html">EmailService.cs</a>.</p>
 
 </div>
 </div>
@@ -252,7 +286,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EmailService_8cs_source.html#l00048">48</a> of file <a class="el" href="EmailService_8cs_source.html">EmailService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EmailService_8cs_source.html#l00085">85</a> of file <a class="el" href="EmailService_8cs_source.html">EmailService.cs</a>.</p>
 
 </div>
 </div>
@@ -276,7 +310,31 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EmailService_8cs_source.html#l00049">49</a> of file <a class="el" href="EmailService_8cs_source.html">EmailService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EmailService_8cs_source.html#l00086">86</a> of file <a class="el" href="EmailService_8cs_source.html">EmailService.cs</a>.</p>
+
+</div>
+</div>
+<a id="a557b10dc8dc23a6279c09f7d13b2107c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a557b10dc8dc23a6279c09f7d13b2107c">&#9670;&nbsp;</a></span>retryConfiguration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AdeNote.Infrastructure.Services.EmailSettings.EmailService.retryConfiguration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="EmailService_8cs_source.html#l00087">87</a> of file <a class="el" href="EmailService_8cs_source.html">EmailService.cs</a>.</p>
 
 </div>
 </div>

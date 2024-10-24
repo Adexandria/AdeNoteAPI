@@ -104,28 +104,35 @@ Collaboration diagram for AdeNote.Infrastructure.Services.ChatService.ChatServic
 <div class="dyncontent">
 <div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService__coll__graph.png" border="0" usemap="#aAdeNote_8Infrastructure_8Services_8ChatService_8ChatService_coll__map" alt="Collaboration graph"/></div>
 <map name="aAdeNote_8Infrastructure_8Services_8ChatService_8ChatService_coll__map" id="aAdeNote_8Infrastructure_8Services_8ChatService_8ChatService_coll__map">
-<area shape="rect" title=" " alt="" coords="5,289,239,331"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html" title=" " alt="" coords="49,193,153,219"/>
-<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html" title=" " alt="" coords="177,185,411,227"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html" title=" " alt="" coords="171,81,417,123"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="216,5,372,32"/>
+<area shape="rect" title=" " alt="" coords="1029,67,1263,109"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html" title=" " alt="" coords="679,5,783,32"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html" title=" " alt="" coords="615,119,848,161"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html" title=" " alt="" coords="211,85,457,126"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,92,161,119"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1INotificationService.html" title="Manages the email notification using template" alt="" coords="615,185,848,226"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6a2e8e24117142c878bcc6dee8543fed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a6a2e8e24117142c878bcc6dee8543fed">ChatService</a> (IChatApplication chatApplication, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html">ThreadMapper</a> threadMapper, ICacheService cacheService, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys.html">CachingKeys</a> cachingKeys)</td></tr>
-<tr class="separator:a6a2e8e24117142c878bcc6dee8543fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c3cf813a874768a687944ebf55e37d5"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a1c3cf813a874768a687944ebf55e37d5">CreateSubThread</a> (<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1CreateThreadDto.html">CreateThreadDto</a> message, string userId, string[] replyUserIds, string threadId)</td></tr>
-<tr class="separator:a1c3cf813a874768a687944ebf55e37d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4c06cc8e131fa83cb4713f0c9b2a2fa"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#af4c06cc8e131fa83cb4713f0c9b2a2fa">CreateThread</a> (<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1CreateThreadDto.html">CreateThreadDto</a> message, string userId)</td></tr>
-<tr class="separator:af4c06cc8e131fa83cb4713f0c9b2a2fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65fde6022e524c7d4975ab0651dc467f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a65fde6022e524c7d4975ab0651dc467f">ChatService</a> (IChatApplication chatApplication, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html">ThreadMapper</a> threadMapper, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html">IUserRepository</a> userRepository, ICacheService cacheService, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ClientUrl.html">ClientUrl</a> clientUrl, <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1INotificationService.html">INotificationService</a> notificationService, <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys.html">CachingKeys</a> cachingKeys)</td></tr>
+<tr class="separator:a65fde6022e524c7d4975ab0651dc467f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acae2bfe5b2e352a405bcba8aa3f24e43"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#acae2bfe5b2e352a405bcba8aa3f24e43">CreateSubThread</a> (<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1CreateThreadDto.html">CreateThreadDto</a> message, string email, string[] replyEmails, string threadId)</td></tr>
+<tr class="separator:acae2bfe5b2e352a405bcba8aa3f24e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48d751e0ed7934350cb2f79e0e01a6fe"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a48d751e0ed7934350cb2f79e0e01a6fe">CreateThread</a> (<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1CreateThreadDto.html">CreateThreadDto</a> message, string email)</td></tr>
+<tr class="separator:a48d751e0ed7934350cb2f79e0e01a6fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bc27b0cfa9990887cc821376366e283"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDto.html">TweetThreadDto</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a2bc27b0cfa9990887cc821376366e283">GetThread</a> (string threadId)</td></tr>
 <tr class="separator:a2bc27b0cfa9990887cc821376366e283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a633e9191a1daf94fd443bb428c1d16ed"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDtos.html">TweetThreadDtos</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a633e9191a1daf94fd443bb428c1d16ed">GetSingleThread</a> (string threadId)</td></tr>
+<tr class="separator:a633e9191a1daf94fd443bb428c1d16ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad666b4693242cdeba8358fd45ba5ea4"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; List&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDtos.html">TweetThreadDtos</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#aad666b4693242cdeba8358fd45ba5ea4">GetThreads</a> ()</td></tr>
 <tr class="separator:aad666b4693242cdeba8358fd45ba5ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85182155b7dafa6c6d40d095c8fb6b7b"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1SubThreadDto.html">SubThreadDto</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a85182155b7dafa6c6d40d095c8fb6b7b">GetSubThread</a> (string subThreadId, string parentId)</td></tr>
 <tr class="separator:a85182155b7dafa6c6d40d095c8fb6b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7ee727d29c9444d40945035fb6d9aa4"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; List&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDtos.html">TweetThreadDtos</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#ad7ee727d29c9444d40945035fb6d9aa4">SearchThreadsByMessage</a> (string message)</td></tr>
+<tr class="separator:ad7ee727d29c9444d40945035fb6d9aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa81e32651dc5aa80aeab3caa26c593"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt; List&lt; <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDtos.html">TweetThreadDtos</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#acaa81e32651dc5aa80aeab3caa26c593">SearchThreadsByEmail</a> (string email)</td></tr>
+<tr class="separator:acaa81e32651dc5aa80aeab3caa26c593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a718c342a5ceea6d016915128399b2fda"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a718c342a5ceea6d016915128399b2fda">UpdateThread</a> (string threadId, <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1UpdateThreadDto.html">UpdateThreadDto</a> updateThread)</td></tr>
 <tr class="separator:a718c342a5ceea6d016915128399b2fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af825b8872894a056de616625ed90c444"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#af825b8872894a056de616625ed90c444">UpdateSubThread</a> (string subThreadId, string parentId, <a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1UpdateThreadDto.html">UpdateThreadDto</a> updateThread)</td></tr>
@@ -139,19 +146,25 @@ Public Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a59c21bb6f748a86ca2aa5974a20af050"><td class="memItemLeft" align="right" valign="top">readonly ICacheService&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a59c21bb6f748a86ca2aa5974a20af050">_cacheService</a></td></tr>
 <tr class="separator:a59c21bb6f748a86ca2aa5974a20af050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57fbf0433444a1d632317030d872dc3e"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1INotificationService.html">INotificationService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a57fbf0433444a1d632317030d872dc3e">_notificationService</a></td></tr>
+<tr class="separator:a57fbf0433444a1d632317030d872dc3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a9c0b10d78af727dcfeaf2675fc3f57"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html">ThreadMapper</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a7a9c0b10d78af727dcfeaf2675fc3f57">_threadMapper</a></td></tr>
 <tr class="separator:a7a9c0b10d78af727dcfeaf2675fc3f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af221a3ed64d8ea195fe0f9837a73ec1d"><td class="memItemLeft" align="right" valign="top">readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#af221a3ed64d8ea195fe0f9837a73ec1d">_threadCacheKey</a></td></tr>
 <tr class="separator:af221a3ed64d8ea195fe0f9837a73ec1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb0daadcb51e7d7216ab67e900bb8bee"><td class="memItemLeft" align="right" valign="top">readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#adb0daadcb51e7d7216ab67e900bb8bee">_clientUrl</a></td></tr>
+<tr class="separator:adb0daadcb51e7d7216ab67e900bb8bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67f0c9e29b658b83dd558ff16bdff30"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html">IUserRepository</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#ae67f0c9e29b658b83dd558ff16bdff30">_userRepository</a></td></tr>
+<tr class="separator:ae67f0c9e29b658b83dd558ff16bdff30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42faa77b59e8d6cf860a63d5c299ba1f"><td class="memItemLeft" align="right" valign="top">readonly IChatApplication&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a42faa77b59e8d6cf860a63d5c299ba1f">_chatApplication</a></td></tr>
 <tr class="separator:a42faa77b59e8d6cf860a63d5c299ba1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00013">13</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00016">16</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a6a2e8e24117142c878bcc6dee8543fed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a2e8e24117142c878bcc6dee8543fed">&#9670;&nbsp;</a></span>ChatService()</h2>
+<a id="a65fde6022e524c7d4975ab0651dc467f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65fde6022e524c7d4975ab0651dc467f">&#9670;&nbsp;</a></span>ChatService()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,8 +184,26 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html">IUserRepository</a>&#160;</td>
+          <td class="paramname"><em>userRepository</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">ICacheService&#160;</td>
           <td class="paramname"><em>cacheService</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ClientUrl.html">ClientUrl</a>&#160;</td>
+          <td class="paramname"><em>clientUrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1INotificationService.html">INotificationService</a>&#160;</td>
+          <td class="paramname"><em>notificationService</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -188,13 +219,13 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00015">15</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00018">18</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1c3cf813a874768a687944ebf55e37d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c3cf813a874768a687944ebf55e37d5">&#9670;&nbsp;</a></span>CreateSubThread()</h2>
+<a id="acae2bfe5b2e352a405bcba8aa3f24e43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acae2bfe5b2e352a405bcba8aa3f24e43">&#9670;&nbsp;</a></span>CreateSubThread()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,13 +240,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>userId</em>, </td>
+          <td class="paramname"><em>email</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string[]&#160;</td>
-          <td class="paramname"><em>replyUserIds</em>, </td>
+          <td class="paramname"><em>replyEmails</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -231,24 +262,27 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html#aa56fca4c5b95e3a2bc8b741f16a27b11">AdeNote.Infrastructure.Services.ChatService.IChatService</a>.</p>
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html#a6c802fe0bb7a6bd98dda13b542efbd22">AdeNote.Infrastructure.Services.ChatService.IChatService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00023">23</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00031">31</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_a1c3cf813a874768a687944ebf55e37d5_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_a1c3cf813a874768a687944ebf55e37d5_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_a1c3cf813a874768a687944ebf55e37d5_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_a1c3cf813a874768a687944ebf55e37d5_cgraph">
-<area shape="rect" title=" " alt="" coords="5,39,304,80"/>
-<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="358,5,587,47"/>
-<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="352,71,593,112"/>
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_acae2bfe5b2e352a405bcba8aa3f24e43_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_acae2bfe5b2e352a405bcba8aa3f24e43_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_acae2bfe5b2e352a405bcba8aa3f24e43_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_acae2bfe5b2e352a405bcba8aa3f24e43_cgraph">
+<area shape="rect" title=" " alt="" coords="5,136,304,177"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="368,5,597,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a4704e18e5de56d21c5f525f4f4397750" title=" " alt="" coords="358,71,607,112"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#afcdbd770c4d741913a1942030b8ab65e" title=" " alt="" coords="359,136,606,177"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a0aee5a465b6bc57820ad0f8bc7c3b7d1" title=" " alt="" coords="352,201,613,243"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="362,267,603,308"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="af4c06cc8e131fa83cb4713f0c9b2a2fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4c06cc8e131fa83cb4713f0c9b2a2fa">&#9670;&nbsp;</a></span>CreateThread()</h2>
+<a id="a48d751e0ed7934350cb2f79e0e01a6fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48d751e0ed7934350cb2f79e0e01a6fe">&#9670;&nbsp;</a></span>CreateThread()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -263,7 +297,7 @@ Here is the call graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>userId</em>&#160;</td>
+          <td class="paramname"><em>email</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -273,17 +307,18 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html#a645d5936d4854bd0edb89ca6fd0d7f30">AdeNote.Infrastructure.Services.ChatService.IChatService</a>.</p>
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html#a8476239fe467d719a61026eebc481dde">AdeNote.Infrastructure.Services.ChatService.IChatService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00048">48</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00080">80</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_af4c06cc8e131fa83cb4713f0c9b2a2fa_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_af4c06cc8e131fa83cb4713f0c9b2a2fa_cgraph" alt=""/></div>
-<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_af4c06cc8e131fa83cb4713f0c9b2a2fa_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_af4c06cc8e131fa83cb4713f0c9b2a2fa_cgraph">
-<area shape="rect" title=" " alt="" coords="5,39,280,80"/>
-<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="334,5,563,47"/>
-<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="328,71,569,112"/>
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_a48d751e0ed7934350cb2f79e0e01a6fe_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_a48d751e0ed7934350cb2f79e0e01a6fe_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_a48d751e0ed7934350cb2f79e0e01a6fe_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_a48d751e0ed7934350cb2f79e0e01a6fe_cgraph">
+<area shape="rect" title=" " alt="" coords="5,71,280,112"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="337,5,566,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a2a4078c36d73a1471f0a842d04721c72" title=" " alt="" coords="328,71,575,112"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="331,136,572,177"/>
 </map>
 </div>
 
@@ -317,7 +352,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html#aadf2d736bb4fbff9984b872cc4c8a5d0">AdeNote.Infrastructure.Services.ChatService.IChatService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00233">233</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00336">336</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -349,7 +384,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html#ac16a209a5c804e6207c7743fd76d27d3">AdeNote.Infrastructure.Services.ChatService.IChatService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00213">213</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00316">316</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -358,6 +393,41 @@ Here is the call graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="5,39,280,80"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="334,5,563,47"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="328,71,569,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a633e9191a1daf94fd443bb428c1d16ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a633e9191a1daf94fd443bb428c1d16ed">&#9670;&nbsp;</a></span>GetSingleThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt;<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDtos.html">TweetThreadDtos</a>&gt; &gt; AdeNote.Infrastructure.Services.ChatService.ChatService.GetSingleThread </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>threadId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html#af6068ed6864efe8dbbb47bf0816b1be5">AdeNote.Infrastructure.Services.ChatService.IChatService</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00120">120</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_a633e9191a1daf94fd443bb428c1d16ed_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_a633e9191a1daf94fd443bb428c1d16ed_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_a633e9191a1daf94fd443bb428c1d16ed_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_a633e9191a1daf94fd443bb428c1d16ed_cgraph">
+<area shape="rect" title=" " alt="" coords="5,104,300,145"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="354,5,583,47"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#aa7e3759f8fb78f56860a2e16e0c077c9" title=" " alt="" coords="352,71,585,112"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#a98fdda6865de259e632f9a202de6b19f" title=" " alt="" coords="352,136,585,177"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="348,201,589,243"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#ab5aab11805f40b0e46c447f20d3e616a" title=" " alt="" coords="637,104,928,145"/>
 </map>
 </div>
 
@@ -391,7 +461,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html#a18634732a5e16ae1775b9539ca12a7f2">AdeNote.Infrastructure.Services.ChatService.IChatService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00104">104</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00160">160</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -401,7 +471,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="338,5,567,47"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#aa7e3759f8fb78f56860a2e16e0c077c9" title=" " alt="" coords="336,71,569,112"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="332,136,573,177"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a6b135c38fc93ebae2dbdb4b108ee40fb" title=" " alt="" coords="621,71,868,112"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#ab5aab11805f40b0e46c447f20d3e616a" title=" " alt="" coords="621,71,912,112"/>
 </map>
 </div>
 
@@ -425,7 +495,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html#a4b7d464b8b406756355553977c117153">AdeNote.Infrastructure.Services.ChatService.IChatService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00062">62</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00101">101</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -435,7 +505,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="314,5,543,47"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#aa7e3759f8fb78f56860a2e16e0c077c9" title=" " alt="" coords="312,71,545,112"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="308,136,549,177"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a6b135c38fc93ebae2dbdb4b108ee40fb" title=" " alt="" coords="597,71,844,112"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#ab5aab11805f40b0e46c447f20d3e616a" title=" " alt="" coords="597,71,888,112"/>
 </map>
 </div>
 
@@ -458,7 +528,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html#a28b8ea488c581cf92a10f5a785d80219">AdeNote.Infrastructure.Services.ChatService.IChatService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00081">81</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00140">140</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -467,7 +537,76 @@ Here is the call graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="5,39,267,80"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#aa7e3759f8fb78f56860a2e16e0c077c9" title=" " alt="" coords="319,5,552,47"/>
 <area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="315,71,556,112"/>
-<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a6b135c38fc93ebae2dbdb4b108ee40fb" title=" " alt="" coords="604,5,851,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#ab5aab11805f40b0e46c447f20d3e616a" title=" " alt="" coords="604,5,895,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acaa81e32651dc5aa80aeab3caa26c593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa81e32651dc5aa80aeab3caa26c593">&#9670;&nbsp;</a></span>SearchThreadsByEmail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt;List&lt;<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDtos.html">TweetThreadDtos</a>&gt; &gt; &gt; AdeNote.Infrastructure.Services.ChatService.ChatService.SearchThreadsByEmail </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>email</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html#a99aa245db82a2dee720f0716d8ff75f7">AdeNote.Infrastructure.Services.ChatService.IChatService</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00205">205</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_acaa81e32651dc5aa80aeab3caa26c593_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_acaa81e32651dc5aa80aeab3caa26c593_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_acaa81e32651dc5aa80aeab3caa26c593_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_acaa81e32651dc5aa80aeab3caa26c593_cgraph">
+<area shape="rect" title=" " alt="" coords="5,97,288,153"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="345,5,574,47"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a2a4078c36d73a1471f0a842d04721c72" title=" " alt="" coords="336,71,583,112"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#aa7e3759f8fb78f56860a2e16e0c077c9" title=" " alt="" coords="343,136,576,177"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="339,201,580,243"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#ab5aab11805f40b0e46c447f20d3e616a" title=" " alt="" coords="631,136,921,177"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad7ee727d29c9444d40945035fb6d9aa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7ee727d29c9444d40945035fb6d9aa4">&#9670;&nbsp;</a></span>SearchThreadsByMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;<a class="el" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html">ActionResult</a>&lt;List&lt;<a class="el" href="classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDtos.html">TweetThreadDtos</a>&gt; &gt; &gt; AdeNote.Infrastructure.Services.ChatService.ChatService.SearchThreadsByMessage </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html#a995c33dcefced5de92848e0b7961bb75">AdeNote.Infrastructure.Services.ChatService.IChatService</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00185">185</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_ad7ee727d29c9444d40945035fb6d9aa4_cgraph.png" border="0" usemap="#aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_ad7ee727d29c9444d40945035fb6d9aa4_cgraph" alt=""/></div>
+<map name="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_ad7ee727d29c9444d40945035fb6d9aa4_cgraph" id="aclassAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService_ad7ee727d29c9444d40945035fb6d9aa4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,63,288,119"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="342,5,571,47"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#aa7e3759f8fb78f56860a2e16e0c077c9" title=" " alt="" coords="340,71,573,112"/>
+<area shape="rect" href="classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="336,136,577,177"/>
+<area shape="rect" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#ab5aab11805f40b0e46c447f20d3e616a" title=" " alt="" coords="625,71,916,112"/>
 </map>
 </div>
 
@@ -507,7 +646,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html#aaa86aa85e9e04d368c8887d7cb4d153d">AdeNote.Infrastructure.Services.ChatService.IChatService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00168">168</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00271">271</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -550,7 +689,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html#aff45d624e74838cd7d389b8cbb7a5ad9">AdeNote.Infrastructure.Services.ChatService.IChatService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00129">129</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00232">232</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -586,7 +725,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00266">266</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00368">368</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
 
 </div>
 </div>
@@ -610,7 +749,55 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00269">269</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00374">374</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+
+</div>
+</div>
+<a id="adb0daadcb51e7d7216ab67e900bb8bee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb0daadcb51e7d7216ab67e900bb8bee">&#9670;&nbsp;</a></span>_clientUrl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string AdeNote.Infrastructure.Services.ChatService.ChatService._clientUrl</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00372">372</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+
+</div>
+</div>
+<a id="a57fbf0433444a1d632317030d872dc3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57fbf0433444a1d632317030d872dc3e">&#9670;&nbsp;</a></span>_notificationService</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1INotificationService.html">INotificationService</a> AdeNote.Infrastructure.Services.ChatService.ChatService._notificationService</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00369">369</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
 
 </div>
 </div>
@@ -634,7 +821,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00268">268</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00371">371</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
 
 </div>
 </div>
@@ -658,7 +845,31 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00267">267</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00370">370</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae67f0c9e29b658b83dd558ff16bdff30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae67f0c9e29b658b83dd558ff16bdff30">&#9670;&nbsp;</a></span>_userRepository</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html">IUserRepository</a> AdeNote.Infrastructure.Services.ChatService.ChatService._userRepository</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ChatService_8cs_source.html#l00373">373</a> of file <a class="el" href="ChatService_8cs_source.html">ChatService.cs</a>.</p>
 
 </div>
 </div>

@@ -9,6 +9,7 @@ var namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings =
       [ "EmailConfirmationNotification", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings.html#ace774701098407f69ff33ec4f9c25274a0d50352249b36028bf80fda901528980", null ],
       [ "PasswordlessNotification", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings.html#ace774701098407f69ff33ec4f9c25274a3dbcaddbf945ee2160afe98597e1a345", null ],
       [ "TicketUpdateNotification", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings.html#ace774701098407f69ff33ec4f9c25274a24df33726f725193549c7b43f1240c3a", null ],
-      [ "SolvedTicketNotification", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings.html#ace774701098407f69ff33ec4f9c25274a419e15f46c1cd1d053cbfff93eb440ea", null ]
+      [ "SolvedTicketNotification", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings.html#ace774701098407f69ff33ec4f9c25274a419e15f46c1cd1d053cbfff93eb440ea", null ],
+      [ "TweetNotification", "namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings.html#ace774701098407f69ff33ec4f9c25274ac5b768558ab30aa58a54377a3cce01fb", null ]
     ] ]
 ];

@@ -10,5 +10,6 @@ var classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting =
     [ "HangFireUserConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting.html#a8d015605533f6f2c0d49c1bcd1333c80", null ],
     [ "Messaging", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting.html#ad4550a33e80ed01837de9eca5743a1c3", null ],
     [ "TokenSecret", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting.html#ae37a5fc9b7adca2c06432727505cb27d", null ],
-    [ "TranslateConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting.html#af2f8e92f38b8af9220f92813cf06e61a", null ]
+    [ "TranslateConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting.html#af2f8e92f38b8af9220f92813cf06e61a", null ],
+    [ "Url", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting.html#ad2af0aef172580ea55843d6b8bcc14bc", null ]
 ];

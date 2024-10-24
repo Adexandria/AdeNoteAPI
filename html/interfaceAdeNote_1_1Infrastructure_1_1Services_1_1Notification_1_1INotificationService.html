@@ -107,14 +107,84 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adf4af05d00f8223e44d6183c28083fcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1INotificationService.html#adf4af05d00f8223e44d6183c28083fcb">SendNotification&lt; T &gt;</a> (T email, <a class="el" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings.html#ace774701098407f69ff33ec4f9c25274">EmailTemplate</a> template, <a class="el" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a8b7d2f18ee1f790b13de05879712203c">ContentType</a> contentType, Dictionary&lt; string, string &gt; substitutions=null)</td></tr>
 <tr class="memdesc:adf4af05d00f8223e44d6183c28083fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send notification based on template type  <a href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1INotificationService.html#adf4af05d00f8223e44d6183c28083fcb">More...</a><br /></td></tr>
 <tr class="separator:adf4af05d00f8223e44d6183c28083fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb2f4e8a438eac52aa299ca2bd159e41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1INotificationService.html#acb2f4e8a438eac52aa299ca2bd159e41">SendNotification&lt; T &gt;</a> (List&lt; T &gt; emails, <a class="el" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings.html#ace774701098407f69ff33ec4f9c25274">EmailTemplate</a> template, <a class="el" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a8b7d2f18ee1f790b13de05879712203c">ContentType</a> contentType, List&lt; Dictionary&lt; string, string &gt;&gt; substitutions=null)</td></tr>
+<tr class="memdesc:acb2f4e8a438eac52aa299ca2bd159e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send notifications based on template type  <a href="interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1INotificationService.html#acb2f4e8a438eac52aa299ca2bd159e41">More...</a><br /></td></tr>
+<tr class="separator:acb2f4e8a438eac52aa299ca2bd159e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages the email notification using template </p>
 
 <p class="definition">Definition at line <a class="el" href="INotificationService_8cs_source.html#l00009">9</a> of file <a class="el" href="INotificationService_8cs_source.html">INotificationService.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="acb2f4e8a438eac52aa299ca2bd159e41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb2f4e8a438eac52aa299ca2bd159e41">&#9670;&nbsp;</a></span>SendNotification&lt; T &gt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AdeNote.Infrastructure.Services.Notification.INotificationService.SendNotification&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>emails</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities_1_1EmailSettings.html#ace774701098407f69ff33ec4f9c25274">EmailTemplate</a>&#160;</td>
+          <td class="paramname"><em>template</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceAdeNote_1_1Infrastructure_1_1Utilities.html#a8b7d2f18ee1f790b13de05879712203c">ContentType</a>&#160;</td>
+          <td class="paramname"><em>contentType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Dictionary&lt; string, string &gt;&gt;&#160;</td>
+          <td class="paramname"><em>substitutions</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send notifications based on template type </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Email type</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>Hold email details</td></tr>
+    <tr><td class="paramname">substitutions</td><td>User's details</td></tr>
+    <tr><td class="paramname">template</td><td>Email template</td></tr>
+    <tr><td class="paramname">contentType</td><td>Content type of message</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1NotificationService.html#a9a4e724eda45db76f6246d5854d35405">AdeNote.Infrastructure.Services.Notification.NotificationService</a>.</p>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>Email</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
 <a id="adf4af05d00f8223e44d6183c28083fcb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf4af05d00f8223e44d6183c28083fcb">&#9670;&nbsp;</a></span>SendNotification&lt; T &gt;()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adf4af05d00f8223e44d6183c28083fcb">&#9670;&nbsp;</a></span>SendNotification&lt; T &gt;() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,7 +238,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1NotificationService.html#a99ce5b254a97518708c15c954c3b9901">AdeNote.Infrastructure.Services.Notification.NotificationService</a>.</p>
+<p>Implemented in <a class="el" href="classAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1NotificationService.html#ab85df5c7a7706c3dd6208a225cfa3f11">AdeNote.Infrastructure.Services.Notification.NotificationService</a>.</p>
 <div class="typeconstraint">
 <dl><dt><b>Type Constraints</b></dt><dd>
 <table border="0" cellspacing="2" cellpadding="0">

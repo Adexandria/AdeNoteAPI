@@ -58,16 +58,16 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "20240430084252__firstmigration_8Designer_8cs.html",
-"GetAllLabelsRequest_8cs.html",
-"RemovePageRequestHandler_8cs.html",
-"classAdeNote_1_1Controllers_1_1LabelController.html#a8f8e18d2c85d59a44f35f0779d899c67",
-"classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBooks_1_1CreateBooksRequestHandler.html#af0aa7899a350dfb10d7dc209b4c45d2c",
-"classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateBook_1_1UpdateBookRequest.html#afb963145537d2ff6ead2a89c42fc0704",
-"classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html#abf86061b7b03c1d19a5eac2ac2c923ca",
-"classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1RemoveBookValidator.html",
-"classAdeNote_1_1Models_1_1HangfireUser.html#a56e4b7f27b7e4cd78d6724e2fc5799c2",
-"functions_prop_q.html",
-"namespaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification.html"
+"GetAllBooksValidator_8cs_source.html",
+"RemoveLabelRequest_8cs_source.html",
+"classAdeNote_1_1Controllers_1_1DashboardController.html",
+"classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBook_1_1CreateBookRequest.html#a08e485da71d0cf97ffd5faa87c46477d",
+"classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequest.html",
+"classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a07d99b135390bfc450eb3cef6c079939",
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1CreateBookValidator.html",
+"classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDto.html#a68f5c6405e1fe1df291fe6a551d06770",
+"functions_func_d.html",
+"interfaceAdeNote_1_1Models_1_1IBaseEntity.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

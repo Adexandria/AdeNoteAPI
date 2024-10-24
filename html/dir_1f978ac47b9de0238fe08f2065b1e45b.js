@@ -48,6 +48,9 @@ var dir_1f978ac47b9de0238fe08f2065b1e45b =
     [ "LoginDTO.cs", "LoginDTO_8cs.html", [
       [ "LoginDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LoginDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1LoginDTO" ]
     ] ],
+    [ "NotifyUser.cs", "NotifyUser_8cs.html", [
+      [ "NotifyUser", "classAdeNote_1_1Models_1_1DTOs_1_1NotifyUser.html", "classAdeNote_1_1Models_1_1DTOs_1_1NotifyUser" ]
+    ] ],
     [ "PageCreateDTO.cs", "PageCreateDTO_8cs.html", [
       [ "PageCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO" ]
     ] ],

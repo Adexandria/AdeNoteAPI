@@ -19,7 +19,8 @@ var annotated_dup =
       ] ],
       [ "Infrastructure", "namespaceAdeNote_1_1Infrastructure.html", [
         [ "Exceptions", "namespaceAdeNote_1_1Infrastructure_1_1Exceptions.html", [
-          [ "HealthCheckException", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1HealthCheckException.html", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1HealthCheckException" ]
+          [ "HealthCheckException", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1HealthCheckException.html", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1HealthCheckException" ],
+          [ "MailGunException", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1MailGunException.html", "classAdeNote_1_1Infrastructure_1_1Exceptions_1_1MailGunException" ]
         ] ],
         [ "Extension", "namespaceAdeNote_1_1Infrastructure_1_1Extension.html", [
           [ "CollectionExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1CollectionExtension.html", "classAdeNote_1_1Infrastructure_1_1Extension_1_1CollectionExtension" ],
@@ -349,6 +350,7 @@ var annotated_dup =
           [ "BlobConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration" ],
           [ "CachingKeys", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CachingKeys" ],
           [ "Cdn", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Cdn.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Cdn" ],
+          [ "ClientUrl", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ClientUrl.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ClientUrl" ],
           [ "CosmosConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CosmosConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CosmosConfiguration" ],
           [ "DefaultConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration" ],
           [ "EntityDoc", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc" ]
@@ -388,6 +390,7 @@ var annotated_dup =
           [ "LabelDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1LabelDTO" ],
           [ "LabelUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LabelUpdateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1LabelUpdateDTO" ],
           [ "LoginDTO", "classAdeNote_1_1Models_1_1DTOs_1_1LoginDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1LoginDTO" ],
+          [ "NotifyUser", "classAdeNote_1_1Models_1_1DTOs_1_1NotifyUser.html", "classAdeNote_1_1Models_1_1DTOs_1_1NotifyUser" ],
           [ "PageCreateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1PageCreateDTO" ],
           [ "PageDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1PageDTO" ],
           [ "PageUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1PageUpdateDTO" ],

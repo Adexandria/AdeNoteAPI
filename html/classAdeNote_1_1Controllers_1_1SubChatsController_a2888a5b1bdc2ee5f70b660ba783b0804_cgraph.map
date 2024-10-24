@@ -1,0 +1,4 @@
+<map id="AdeNote.Controllers.SubChatsController.SendSubTweet" name="AdeNote.Controllers.SubChatsController.SendSubTweet">
+<area shape="rect" id="node1" title="Creates sub thread in an existing thread" alt="" coords="5,5,224,47"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html#a6c802fe0bb7a6bd98dda13b542efbd22" title=" " alt="" coords="272,5,575,47"/>
+</map>

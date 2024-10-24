@@ -1,7 +1,8 @@
 <map id="AdeNote.Infrastructure.Services.ChatService.ChatService" name="AdeNote.Infrastructure.Services.ChatService.ChatService">
-<area shape="rect" id="node1" title=" " alt="" coords="5,289,239,331"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html" title=" " alt="" coords="49,193,153,219"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html" title=" " alt="" coords="177,185,411,227"/>
-<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html" title=" " alt="" coords="171,81,417,123"/>
-<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="216,5,372,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1029,67,1263,109"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html" title=" " alt="" coords="679,5,783,32"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html" title=" " alt="" coords="615,119,848,161"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html" title=" " alt="" coords="211,85,457,126"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,92,161,119"/>
+<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1INotificationService.html" title="Manages the email notification using template" alt="" coords="615,185,848,226"/>
 </map>
