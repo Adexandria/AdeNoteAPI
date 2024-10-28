@@ -6,6 +6,7 @@ var namespaceAdeNote_1_1Models_1_1DTOs =
     [ "BookPages", "classAdeNote_1_1Models_1_1DTOs_1_1BookPages.html", "classAdeNote_1_1Models_1_1DTOs_1_1BookPages" ],
     [ "BookUpdateDTO", "classAdeNote_1_1Models_1_1DTOs_1_1BookUpdateDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1BookUpdateDTO" ],
     [ "ChangePasswordDTO", "classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO" ],
+    [ "ConfirmationToken", "classAdeNote_1_1Models_1_1DTOs_1_1ConfirmationToken.html", "classAdeNote_1_1Models_1_1DTOs_1_1ConfirmationToken" ],
     [ "CreateNoteDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO" ],
     [ "CreateThreadDto", "classAdeNote_1_1Models_1_1DTOs_1_1CreateThreadDto.html", "classAdeNote_1_1Models_1_1DTOs_1_1CreateThreadDto" ],
     [ "CreateUserDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO" ],

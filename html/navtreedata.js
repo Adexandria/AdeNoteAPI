@@ -58,16 +58,16 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "20240430084252__firstmigration_8Designer_8cs.html",
-"GetAllBooksValidator_8cs_source.html",
-"RemoveLabelRequest_8cs_source.html",
-"classAdeNote_1_1Controllers_1_1DashboardController.html",
-"classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBook_1_1CreateBookRequest.html#a08e485da71d0cf97ffd5faa87c46477d",
-"classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequest.html",
-"classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a07d99b135390bfc450eb3cef6c079939",
-"classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1CreateBookValidator.html",
-"classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDto.html#a68f5c6405e1fe1df291fe6a551d06770",
-"functions_func_d.html",
-"interfaceAdeNote_1_1Models_1_1IBaseEntity.html"
+"GetBookByIdRequestHandler_8cs_source.html",
+"RemoveRequestHandler_8cs_source.html",
+"classAdeNote_1_1Controllers_1_1PageController.html",
+"classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBooks_1_1CreateBooksRequestHandler.html#a242c590ee5535ad0afaa4bfe212f896a",
+"classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateBook_1_1UpdateBookRequest.html",
+"classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#adced04eec2e52b0a724d2f60c244d98a",
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1FetchTicketsByNameValidator.html",
+"classAdeNote_1_1Models_1_1DTOs_1_1UserTicketDto.html#ac0f5b39b796636cfbaa0792e41c4fdac",
+"functions_prop.html",
+"namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetPagesById.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

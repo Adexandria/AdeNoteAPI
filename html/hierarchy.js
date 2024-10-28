@@ -55,6 +55,7 @@ var hierarchy =
     [ "AdeNote.Infrastructure.Utilities.ClientUrl", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ClientUrl.html", null ],
     [ "AdeNote.Infrastructure.Extension.CollectionExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1CollectionExtension.html", null ],
     [ "AdeNote.Infrastructure.Extension.ConfigurationExtension", "classAdeNote_1_1Infrastructure_1_1Extension_1_1ConfigurationExtension.html", null ],
+    [ "AdeNote.Models.DTOs.ConfirmationToken", "classAdeNote_1_1Models_1_1DTOs_1_1ConfirmationToken.html", null ],
     [ "ControllerBase", null, [
       [ "AdeNote.Controllers.BaseController", "classAdeNote_1_1Controllers_1_1BaseController.html", [
         [ "AdeNote.Controllers.AuthenticationController", "classAdeNote_1_1Controllers_1_1AuthenticationController.html", null ],
@@ -365,14 +366,10 @@ var hierarchy =
       [ "AdeNote.Migrations.addissue", "classAdeNote_1_1Migrations_1_1addissue.html", null ],
       [ "AdeNote.Migrations.addrecoverycode", "classAdeNote_1_1Migrations_1_1addrecoverycode.html", null ],
       [ "AdeNote.Migrations.addrecoverycodes", "classAdeNote_1_1Migrations_1_1addrecoverycodes.html", null ],
-      [ "AdeNote.Migrations.addrole", "classAdeNote_1_1Migrations_1_1addrole.html", null ],
-      [ "AdeNote.Migrations.addsalt", "classAdeNote_1_1Migrations_1_1addsalt.html", null ],
       [ "AdeNote.Migrations.addticket", "classAdeNote_1_1Migrations_1_1addticket.html", null ],
       [ "AdeNote.Migrations.addvideos", "classAdeNote_1_1Migrations_1_1addvideos.html", null ],
       [ "AdeNote.Migrations.descriptionnullable", "classAdeNote_1_1Migrations_1_1descriptionnullable.html", null ],
       [ "AdeNote.Migrations.firstmigration", "classAdeNote_1_1Migrations_1_1firstmigration.html", null ],
-      [ "AdeNote.Migrations.saltoptional", "classAdeNote_1_1Migrations_1_1saltoptional.html", null ],
-      [ "AdeNote.Migrations.secondmigration", "classAdeNote_1_1Migrations_1_1secondmigration.html", null ],
       [ "AdeNote.Migrations.setuptexttranslation", "classAdeNote_1_1Migrations_1_1setuptexttranslation.html", null ]
     ] ],
     [ "AdeNote.Infrastructure.Utilities.AuthenticationFilter.MiniProfilerAuthorization", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1MiniProfilerAuthorization.html", null ],

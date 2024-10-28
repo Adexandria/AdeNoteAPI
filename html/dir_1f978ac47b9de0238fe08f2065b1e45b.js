@@ -18,6 +18,9 @@ var dir_1f978ac47b9de0238fe08f2065b1e45b =
     [ "ChangePasswordDTO.cs", "ChangePasswordDTO_8cs.html", [
       [ "ChangePasswordDTO", "classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1ChangePasswordDTO" ]
     ] ],
+    [ "ConfirmationToken.cs", "ConfirmationToken_8cs.html", [
+      [ "ConfirmationToken", "classAdeNote_1_1Models_1_1DTOs_1_1ConfirmationToken.html", "classAdeNote_1_1Models_1_1DTOs_1_1ConfirmationToken" ]
+    ] ],
     [ "CreateNoteDTO.cs", "CreateNoteDTO_8cs.html", [
       [ "CreateNoteDTO", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO.html", "classAdeNote_1_1Models_1_1DTOs_1_1CreateNoteDTO" ]
     ] ],
