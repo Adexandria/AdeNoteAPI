@@ -1,0 +1,8 @@
+<map id="AdeNote.Infrastructure.Services.ChatService.ChatService.SearchThreadsByEmail" name="AdeNote.Infrastructure.Services.ChatService.ChatService.SearchThreadsByEmail">
+<area shape="rect" id="node1" title=" " alt="" coords="5,97,288,153"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="345,5,574,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a2a4078c36d73a1471f0a842d04721c72" title=" " alt="" coords="336,71,583,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#aa7e3759f8fb78f56860a2e16e0c077c9" title=" " alt="" coords="343,136,576,177"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="339,201,580,243"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#ab5aab11805f40b0e46c447f20d3e616a" title=" " alt="" coords="631,136,921,177"/>
+</map>

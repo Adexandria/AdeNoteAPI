@@ -1,0 +1,4 @@
+var classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirementHandler =
+[
+    [ "HandleRequirementAsync", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthorisationHandler_1_1RoleRequirementHandler.html#aa7c19a0ad45c0ce8e6f02557de2a6643", null ]
+];

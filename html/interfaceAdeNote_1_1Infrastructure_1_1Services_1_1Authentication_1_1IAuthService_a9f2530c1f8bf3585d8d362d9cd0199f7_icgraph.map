@@ -1,0 +1,4 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.IAuthService.IsTokenRevoked" name="AdeNote.Infrastructure.Services.Authentication.IAuthService.IsTokenRevoked">
+<area shape="rect" id="node1" title="Checks if refresh token is revoked" alt="" coords="305,5,560,61"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#ab1451bf02058a8d84a3a3c5c07928463" title="Gets access token using refresh token" alt="" coords="5,13,257,54"/>
+</map>

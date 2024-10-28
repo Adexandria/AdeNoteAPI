@@ -1,0 +1,8 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.AuthService.DisableUserMFA" name="AdeNote.Infrastructure.Services.Authentication.AuthService.DisableUserMFA">
+<area shape="rect" id="node1" title=" " alt="" coords="5,129,257,185"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html#aee6d1dfb1379b7d77df4f5b2977fb054" title="Deletes image" alt="" coords="312,5,545,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="314,71,543,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a2f9c93cf4ef3a74b15a0bf2b71cd21ad" title="Get existings of a user" alt="" coords="305,136,552,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="308,201,549,243"/>
+<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#ae451c2bb0462a873a4e0f8c0d3a9b721" title="Updates an existing object" alt="" coords="305,267,552,308"/>
+</map>
