@@ -1,5 +1,6 @@
 var NAVTREEINDEX10 =
 {
+"namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById.html":[0,0,0,2,4,14],
 "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetPagesById.html":[0,0,0,2,4,15],
 "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1InsertVideo.html":[0,0,0,2,4,16],
 "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels.html":[0,0,0,2,4,17],

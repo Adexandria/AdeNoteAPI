@@ -1,7 +1,8 @@
 var NAVTREEINDEX9 =
 {
-"functions_prop.html":[1,3,3],
+"functions_p.html":[1,3,0,15],
 "functions_prop.html":[1,3,3,0],
+"functions_prop.html":[1,3,3],
 "functions_prop_a.html":[1,3,3,1],
 "functions_prop_b.html":[1,3,3,2],
 "functions_prop_c.html":[1,3,3,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllBooks.html":[0,0,0,2,4,10],
 "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllLabels.html":[0,0,0,2,4,11],
 "namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllPages.html":[0,0,0,2,4,12],
-"namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetBookdById.html":[0,0,0,2,4,13],
-"namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById.html":[0,0,0,2,4,14]
+"namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetBookdById.html":[0,0,0,2,4,13]
 };
