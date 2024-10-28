@@ -1,4 +1,5 @@
 ﻿using AdeCache.Services;
+using AdeNote.Infrastructure.Extension;
 using AdeNote.Infrastructure.Repository;
 using AdeNote.Infrastructure.Services.Notification;
 using AdeNote.Infrastructure.Utilities;
@@ -8,6 +9,7 @@ using AdeNote.Models.DTOs;
 using ChattyPie.Application;
 using ChattyPie.Models;
 using ChattyPie.Models.DTOs;
+using System.Threading;
 using TweetThreadDto = AdeNote.Models.DTOs.TweetThreadDto;
 using UpdateThreadDto = AdeNote.Models.DTOs.UpdateThreadDto;
 
@@ -192,20 +194,24 @@ namespace AdeNote.Infrastructure.Services.ChatService
 
         public async Task<ActionResult<List<TweetThreadDtos>>> SearchThreadsByMessage(string message)
         {
-            List<ThreadDto> cachedThreads = _cacheService.Search<ThreadDto>(_threadCacheKey, "*")?.ToList();
+            List<TweetThreadDtos> threadDtos = null;
 
-            if(cachedThreads == null)
+            var cachedThreads = _cacheService.Search<ThreadDtos>(_threadCacheKey, "*")?
+                .Where(s => s.Message.Contains(message, StringComparison.CurrentCultureIgnoreCase)).ToList();
+
+            if (!cachedThreads.IsEmpty())
             {
-                cachedThreads = await _chatApplication.SearchThreadsByMessage(message);
-                if (cachedThreads == null)
+                var threads = await _chatApplication.SearchThreadsByMessage(message);
+                if (threads == null)
                     return ActionResult<List<TweetThreadDtos>>.Failed("Tweets not found", StatusCodes.Status400BadRequest);
+
+                threadDtos = _threadMapper.MapTo(threads);
+
             }
             else
             {
-                cachedThreads = cachedThreads.Where(s => s.Message.Contains(message,StringComparison.CurrentCultureIgnoreCase)).ToList();
+                threadDtos = _threadMapper.MapTo(cachedThreads);  
             }
-
-            var threadDtos = _threadMapper.MapTo(cachedThreads);
 
             return ActionResult<List<TweetThreadDtos>>.SuccessfulOperation(threadDtos);
         }
@@ -219,20 +225,22 @@ namespace AdeNote.Infrastructure.Services.ChatService
                 return ActionResult<List<TweetThreadDtos>>.Failed("Failed create tweet", StatusCodes.Status400BadRequest);
             }
 
-            List<ThreadDto> cachedThreads = _cacheService.Search<ThreadDto>(_threadCacheKey, "*")?.ToList();
+            List<TweetThreadDtos> threadDtos = null;
 
-            if (cachedThreads == null)
-            {
-                cachedThreads = await _chatApplication.SearchThreadsByUserId(userId);
-                if (cachedThreads == null)
-                    return ActionResult<List<TweetThreadDtos>>.Failed("Tweets not found", StatusCodes.Status400BadRequest);
-            }
-            else
-            {
-                cachedThreads = cachedThreads.Where(s=>s.UserIds.Contains(userId)).ToList();
-            }
+            var cachedThreads = _cacheService.Search<ThreadDtos>(_threadCacheKey, "*")?.Where(s => s.UserIds.Contains(userId)).ToList();
 
-            var threadDtos = _threadMapper.MapTo(cachedThreads);
+            if (!cachedThreads.IsEmpty())
+            {
+              var threads = await _chatApplication.SearchThreadsByUserId(userId);
+              if (threads == null)
+               return ActionResult<List<TweetThreadDtos>>.Failed("Tweets not found", StatusCodes.Status400BadRequest);
+
+              threadDtos = _threadMapper.MapTo(threads);
+
+            }else
+            {
+               threadDtos = _threadMapper.MapTo(cachedThreads);
+            }
 
             return ActionResult<List<TweetThreadDtos>>.SuccessfulOperation(threadDtos);
         }
@@ -372,6 +380,7 @@ namespace AdeNote.Infrastructure.Services.ChatService
 
             return ActionResult.SuccessfulOperation();
         }
+
 
         private readonly ICacheService _cacheService;
         private readonly INotificationService _notificationService;

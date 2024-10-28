@@ -11,5 +11,13 @@
                 action(item);
             }
         }
+
+        public static bool IsEmpty<T>(this IEnumerable<T> collection)
+        {
+            if (collection == null)
+                return false;
+
+            return collection.Any();
+        }
     }
 }
