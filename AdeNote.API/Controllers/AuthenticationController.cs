@@ -78,6 +78,13 @@ namespace AdeNote.Controllers
         public async Task<IActionResult> SignUp(CreateUserDTO newUser)
         {
             var response = await _authService.SignUser(newUser);
+            if(response.Data != "Successfully registered" && response.IsSuccessful)
+            {
+                return Ok(new
+                {
+                    emailConfirmationToken = response.Data
+                });
+            }
             return response.Response();
         }
 
@@ -853,13 +860,13 @@ namespace AdeNote.Controllers
             AddToCookie("AdeNote-RefreshToken", loginResponse.Data.RefreshToken, DateTime.UtcNow.AddMonths(2));
 
             return Ok(new 
-            { 
-                accessToken = loginResponse.Data.AccessToken,
-                email = loginResponse.Data.Email,
-                recoveryCodes = loginResponse.Data.Codes,
+            {
+                userId = loginResponse.Data.UserId,
                 firstName = loginResponse.Data.FirstName,
                 lastName = loginResponse.Data.LastName,
-                userId = loginResponse.Data.UserId
+                email = loginResponse.Data.Email,
+                accessToken = loginResponse.Data.AccessToken,
+                recoveryCodes = loginResponse.Data.Codes
             });
         }
     }

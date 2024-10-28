@@ -54,10 +54,18 @@ namespace AdeNote.Infrastructure.Services.ChatService
             }
             else
             {
-                cachedThread.SubThreads.Add(response);
+                if (cachedThread.SubThreads == null)
+                {
+                    cachedThread.SubThreads = new List<SubThreadDtos>() { response };
+                }
+                else
+                {
+                    cachedThread.SubThreads.Add(response);
+                }
+
             }
 
-            _cacheService.Set($"{_threadCacheKey}:{response.ThreadId}", cachedThread);
+                _cacheService.Set($"{_threadCacheKey}:{response.ThreadId}", cachedThread);
 
             var threadOwners = _userRepository.GetFullNamesById(cachedThread.UserIds);
 

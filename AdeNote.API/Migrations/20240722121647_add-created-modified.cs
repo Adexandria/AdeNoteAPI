@@ -40,22 +40,6 @@ namespace AdeNote.Migrations
                 nullable: false,
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
-
-            migrationBuilder.AddColumn<DateTime>(
-                   name: "Created",
-                   table: "Users",
-                   type: "datetime2",
-                   nullable: false,
-                   defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
-
-            migrationBuilder.AddColumn<DateTime>(
-                name: "Modified",
-                table: "Users",
-                type: "datetime2",
-                nullable: false,
-                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
-
-
             migrationBuilder.AddColumn<DateTime>(
                    name: "Created",
                    table: "Labels",
