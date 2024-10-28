@@ -39,7 +39,7 @@ namespace AdeNote.Infrastructure.Requests.CreateTicket
 
             ticket.Issuer = currentUser.Id;
 
-            if (request.Image.Length != 0)
+            if (request.Image?.Length != 0 || request.Image == null)
             {
                 cancellationToken.ThrowIfCancellationRequested();
                 var url = await blobService.UploadImage($"T{Guid.NewGuid().ToString()[..4]}", request.Image, cancellationToken) ?? $"T{Guid.NewGuid().ToString()[..4]}";
