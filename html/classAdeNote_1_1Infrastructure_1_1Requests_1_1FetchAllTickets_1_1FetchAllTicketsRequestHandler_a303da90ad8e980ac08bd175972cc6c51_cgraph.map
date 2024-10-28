@@ -1,0 +1,7 @@
+<map id="AdeNote.Infrastructure.Requests.FetchAllTickets.FetchAllTicketsRequestHandler.Handle" name="AdeNote.Infrastructure.Requests.FetchAllTickets.FetchAllTicketsRequestHandler.Handle">
+<area shape="rect" id="node1" title=" " alt="" coords="5,97,280,153"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="337,5,566,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#afc4136b978c438ed02b5b2a9220d1424" title=" " alt="" coords="328,71,575,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="331,136,572,177"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a9a67eaba1da32f08039a49896db59a10" title=" " alt="" coords="330,201,573,243"/>
+</map>

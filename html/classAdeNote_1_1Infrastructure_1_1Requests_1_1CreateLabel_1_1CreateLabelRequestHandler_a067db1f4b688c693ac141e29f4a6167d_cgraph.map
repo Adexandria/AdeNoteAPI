@@ -1,0 +1,6 @@
+<map id="AdeNote.Infrastructure.Requests.CreateLabel.CreateLabelRequestHandler.Handle" name="AdeNote.Infrastructure.Requests.CreateLabel.CreateLabelRequestHandler.Handle">
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,340,112"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#af7cfac5b470f7e8886c0335122bdd817" title="Saves a new entity" alt="" coords="388,5,635,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a0cb90d855fb5f5f5f4723e47e8ab5c06" title=" " alt="" coords="397,71,626,112"/>
+<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="391,136,632,177"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="AdeNote.Controllers.ChatController.GetTweetsbyId" name="AdeNote.Controllers.ChatController.GetTweetsbyId">
+<area shape="rect" id="node1" title="Fetches tweet by id" alt="" coords="5,5,192,47"/>
+<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html#a4b7d464b8b406756355553977c117153" title=" " alt="" coords="240,5,499,47"/>
+</map>
