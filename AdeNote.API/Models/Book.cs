@@ -65,7 +65,7 @@ namespace AdeNote.Models
         /// <summary>
         /// An id of the user
         /// </summary>
-        [ForeignKey("User")]
+        [ForeignKey("Users")]
         public Guid UserId{ get; set; }
 
         /// <summary>

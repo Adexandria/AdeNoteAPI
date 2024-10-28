@@ -613,18 +613,18 @@ namespace AdeNote.Infrastructure.Services.Authentication
             var claims = new Dictionary<string, object>() { { "id", user.Id.ToString("N") },
                 { ClaimTypes.Email,user.Email} };
 
-            var emailConfirmationToken = tokenProvider.GenerateToken(claims, 30);
+            var emailToken = tokenProvider.GenerateToken(claims, 30);
 
             var substitutions = new Dictionary<string, string>()
                 {
-                    {"[Token]" , emailConfirmationToken },
+                    {"[Token]" , emailToken },
                     {"[Name]" , $"{ user.FirstName} {user.LastName}" }
                 };
 
             _notificationService.SendNotification(new Email(user.Email, "Confirm email"),
             EmailTemplate.EmailConfirmationNotification, ContentType.html, substitutions);
 
-            return ActionResult<string>.SuccessfulOperation(emailConfirmationToken);
+            return ActionResult<string>.SuccessfulOperation(emailToken);
         }
 
         public async Task<ActionResult<UserDTO>> LoginUser(LoginDTO login, AuthType authType)

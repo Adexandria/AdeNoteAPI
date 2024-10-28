@@ -139,7 +139,8 @@ namespace AdeNote.Controllers
             {
                 Description = newTicket.Description,
                 Image = ms,
-                Issue = newTicket.Issue
+                Issue = newTicket.Issue,
+                Email = email
             });
 
             return response.Response();
