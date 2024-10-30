@@ -1,0 +1,7 @@
+<map id="AdeNote.Infrastructure.Requests.RemoveTicket.RemoveTicketRequestHandler" name="AdeNote.Infrastructure.Requests.RemoveTicket.RemoveTicketRequestHandler">
+<area shape="rect" id="node1" title=" " alt="" coords="644,71,960,112"/>
+<area shape="rect" id="node2" title=" " alt="" coords="224,5,463,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1EventConfiguration.html" title=" " alt="" coords="225,71,461,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html" title=" " alt="" coords="220,136,467,177"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,143,171,170"/>
+</map>

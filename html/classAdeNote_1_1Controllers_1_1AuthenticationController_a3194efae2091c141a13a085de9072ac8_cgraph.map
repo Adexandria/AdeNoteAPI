@@ -1,0 +1,9 @@
+<map id="AdeNote.Controllers.AuthenticationController.VerifyPasswordlessToken" name="AdeNote.Controllers.AuthenticationController.VerifyPasswordlessToken">
+<area shape="rect" id="node1" title="Logins user using passwordless method" alt="" coords="5,196,257,237"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#aaf76f4e77c5e74af2928f3296f7828ed" title="Add data to cookie" alt="" coords="333,5,585,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a16f0fab35e143dc859418eae87729007" title=" " alt="" coords="325,71,592,127"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#aaf94eb652fece547262e34ca1b5edbb3" title="Checks if MFA has been enabled for the user using user id." alt="" coords="305,151,612,207"/>
+<area shape="rect" id="node5" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a5bc24a38f2a0d984148fd747b4d5c226" title=" " alt="" coords="333,232,585,273"/>
+<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="338,297,579,339"/>
+<area shape="rect" id="node7" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a0c036527224b3235178c8f7b37635851" title=" " alt="" coords="337,363,581,419"/>
+</map>

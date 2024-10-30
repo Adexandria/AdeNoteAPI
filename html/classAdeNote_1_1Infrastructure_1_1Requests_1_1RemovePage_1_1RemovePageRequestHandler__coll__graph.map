@@ -1,0 +1,8 @@
+<map id="AdeNote.Infrastructure.Requests.RemovePage.RemovePageRequestHandler" name="AdeNote.Infrastructure.Requests.RemovePage.RemovePageRequestHandler">
+<area shape="rect" id="node1" title=" " alt="" coords="615,71,915,112"/>
+<area shape="rect" id="node2" title=" " alt="" coords="221,5,452,47"/>
+<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html" title="An interface to handles page object" alt="" coords="213,71,460,112"/>
+<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="6,78,163,105"/>
+<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html" title="An interface that includes the behaviour of a book object" alt="" coords="213,136,460,177"/>
+<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,143,164,170"/>
+</map>

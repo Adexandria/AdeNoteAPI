@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Services.UserSettings.IUserService.GetUser" name="AdeNote.Infrastructure.Services.UserSettings.IUserService.GetUser">
+<area shape="rect" id="node1" title=" " alt="" coords="337,39,585,80"/>
+<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#ad01cba35f65ccdb8d14a460abfbbc78c" title="Generate reset password token" alt="" coords="5,5,289,47"/>
+<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1DashboardController.html#a5c10a1c455e5e0c2d2ea168db9cd8a28" title="Fetches dashboard for users" alt="" coords="34,71,261,112"/>
+</map>

@@ -1,0 +1,5 @@
+var namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTicketsByDate =
+[
+    [ "SearchTicketsByDateRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTicketsByDate_1_1SearchTicketsByDateRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTicketsByDate_1_1SearchTicketsByDateRequest" ],
+    [ "SearchTicketsByDateRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTicketsByDate_1_1SearchTicketsByDateRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTicketsByDate_1_1SearchTicketsByDateRequestHandler" ]
+];
