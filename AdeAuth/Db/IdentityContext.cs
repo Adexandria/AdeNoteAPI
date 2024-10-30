@@ -29,6 +29,8 @@ namespace AdeAuth.Db
                 .UsingEntity<UserRole>
                 (l=> l.HasOne<ApplicationUser>().WithMany().HasForeignKey("UserId"),
                  r => r.HasOne<ApplicationRole>().WithMany().HasForeignKey("RoleId"));
+
+            modelBuilder.Entity<ApplicationRole>().HasIndex(s=>s.Name).IsUnique();
         }
     }
 
@@ -57,6 +59,8 @@ namespace AdeAuth.Db
                 .WithMany()
                 .UsingEntity<UserRole>(l => l.HasOne<TUser>().WithMany().HasForeignKey("UserId"),
                  r => r.HasOne<ApplicationRole>().WithMany().HasForeignKey("RoleId"));
+
+            modelBuilder.Entity<ApplicationRole>().HasIndex(s => s.Name).IsUnique();
         }
     }
 
