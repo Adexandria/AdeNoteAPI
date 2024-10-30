@@ -42,7 +42,7 @@ namespace AdeAuth.Services.Interfaces
         /// <param name="userId">User id</param>
         /// <param name="role">Existing role name</param>
         /// <returns>Boolean value</returns>
-        Task<bool> AddUserRole(Guid userId, string role);
+        Task<bool> AddUserRoleAsync(Guid userId, string role);
 
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace AdeAuth.Services.Interfaces
         /// <param name="email">User email address</param>
         /// <param name="role">Existing role name</param>
         /// <returns>Boolean value</returns>
-        Task<bool> AddUserRole(string email, string role);
+        Task<bool> AddUserRoleAsync(string email, string role);
 
         /// <summary>
         /// Removes user role
@@ -59,6 +59,6 @@ namespace AdeAuth.Services.Interfaces
         /// <param name="userId">User id</param>
         /// <param name="role">Existing role name</param>
         /// <returns>Boolean value</returns>
-        Task<bool> RemoveUserRole(Guid userId, string role);
+        Task<bool> RemoveUserRoleAsync(Guid userId, string role);
     }
 }
