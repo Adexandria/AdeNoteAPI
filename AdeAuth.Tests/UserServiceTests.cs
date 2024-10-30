@@ -12,7 +12,7 @@ namespace AdeAuth.Tests
         public override void Setup()
         {
             base.Setup();
-            IdentityContext identityContext = new(dbOptions);
+            identityContext = new(dbOptions);
             passwordManager = new Mock<IPasswordManager>();
             userService = new UserService<IdentityContext,ApplicationUser>
                 (identityContext,passwordManager.Object);
@@ -55,7 +55,7 @@ namespace AdeAuth.Tests
             passwordManager.Setup(s => s.VerifyPassword(It.IsAny<string>(),
                 It.IsAny<string>(), It.IsAny<string>())).Returns(true);
 
-           await userService.CreateUserAsync(user);
+           _ =  await userService.CreateUserAsync(user);
 
            var response = await  userService.AuthenticateUsingEmailAsync("adeolaaderibigbe09@gmail.com", "1234567");
 
@@ -86,6 +86,13 @@ namespace AdeAuth.Tests
             Assert.That(response, Is.Not.Null);
         }
 
+        [TearDown]
+        public void TearDown()
+        {
+            identityContext.Database.EnsureDeleted();
+        }
+
+        private IdentityContext identityContext;
 
         private IUserService<ApplicationUser> userService;
 
