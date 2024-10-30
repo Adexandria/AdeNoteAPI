@@ -17,7 +17,7 @@ namespace AdeAuth.Services
         /// <param name="userId">User id</param>
         /// <param name="role">Existing role name</param>
         /// <returns>Boolean value</returns>
-        public abstract Task<bool> AddUserRole(Guid userId, string role);
+        public abstract Task<bool> AddUserRoleAsync(Guid userId, string role);
 
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace AdeAuth.Services
         /// <param name="email">User email address</param>
         /// <param name="role">Existing role name</param>
         /// <returns>Boolean value</returns>
-        public abstract Task<bool> AddUserRole(string email, string role);
+        public abstract Task<bool> AddUserRoleAsync(string email, string role);
 
         /// <summary>
         /// Creates role
@@ -62,6 +62,6 @@ namespace AdeAuth.Services
         /// <param name="userId">User id</param>
         /// <param name="role">Existing role name</param>
         /// <returns>Boolean value</returns>
-        public abstract Task<bool> RemoveUserRole(Guid userId, string role);
+        public abstract Task<bool> RemoveUserRoleAsync(Guid userId, string role);
     }
 }

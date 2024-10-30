@@ -7,7 +7,7 @@ namespace AdeAuth.Services
     /// Manages role services
     /// </summary>
     /// <typeparam name="TRole">Application role</typeparam>
-    internal class RoleService<TDbContext,TUser,TModel> : RoleManager<TModel>
+    public class RoleService<TDbContext,TUser,TModel> : RoleManager<TModel>
         where TDbContext : DbContext
         where TUser : ApplicationUser
         where TModel : ApplicationRole
@@ -91,7 +91,7 @@ namespace AdeAuth.Services
         /// <param name="userId">User id</param>
         /// <param name="role">Existing role name</param>
         /// <returns>Boolean value</returns>
-        public override async Task<bool> AddUserRole(Guid userId, string role)
+        public override async Task<bool> AddUserRoleAsync(Guid userId, string role)
         {
             var currentRole = await GetRole(role); 
             if (currentRole == null)
@@ -119,7 +119,7 @@ namespace AdeAuth.Services
         /// <param name="userId">User id</param>
         /// <param name="role">Existing role name</param>
         /// <returns>Boolean value</returns>
-        public override async Task<bool> RemoveUserRole(Guid userId, string role)
+        public override async Task<bool> RemoveUserRoleAsync(Guid userId, string role)
         {
             var currentRole = await GetRole(role);
             if (currentRole == null)
@@ -134,6 +134,10 @@ namespace AdeAuth.Services
 
             var userRole = await _userRoles.Where(s=>s.UserId == userId && s.RoleId ==  currentRole.Id).FirstOrDefaultAsync();
 
+            if(userRole == null)
+            {
+                return false; 
+            }
             _userRoles.Remove(userRole);
             
             return await SaveChangesAsync();
@@ -146,7 +150,7 @@ namespace AdeAuth.Services
         /// <param name="email">User email address</param>
         /// <param name="role">Existing role name</param>
         /// <returns>Boolean value</returns>
-        public override async Task<bool> AddUserRole(string email, string role)
+        public override async Task<bool> AddUserRoleAsync(string email, string role)
         {
             var currentRole = await GetRole(role);
             if (currentRole == null)
