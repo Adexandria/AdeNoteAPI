@@ -1,0 +1,5 @@
+var namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateTicket =
+[
+    [ "UpdateTicketRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateTicket_1_1UpdateTicketRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateTicket_1_1UpdateTicketRequest" ],
+    [ "UpdateTicketRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateTicket_1_1UpdateTicketRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateTicket_1_1UpdateTicketRequestHandler" ]
+];

@@ -1,0 +1,4 @@
+var CreatePageLabelsRequestHandler_8cs =
+[
+    [ "AdeNote.Infrastructure.Requests.CreatePageLabels.CreatePageLabelsRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePageLabels_1_1CreatePageLabelsRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePageLabels_1_1CreatePageLabelsRequestHandler" ]
+];

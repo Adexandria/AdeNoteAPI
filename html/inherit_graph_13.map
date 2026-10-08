@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html" title="An Interface that includes the behaviour of the page labels object." alt="" coords="5,5,252,45"/>
+<area shape="rect" id="Node000001" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html" title="Handles persisting and querying for page labels." alt="" coords="300,37,547,77"/>
+<area shape="poly" id="edge28_Node000000_Node000001" title=" " alt="" coords="266,38,300,41,300,47,265,43"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title=" " alt="" coords="5,69,252,109"/>
+<area shape="poly" id="edge29_Node000002_Node000001" title=" " alt="" coords="265,72,300,68,300,73,266,77"/>
+</map>

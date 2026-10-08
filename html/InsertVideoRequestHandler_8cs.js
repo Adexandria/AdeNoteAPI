@@ -1,0 +1,4 @@
+var InsertVideoRequestHandler_8cs =
+[
+    [ "AdeNote.Infrastructure.Requests.InsertVideo.InsertVideoRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1InsertVideo_1_1InsertVideoRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1InsertVideo_1_1InsertVideoRequestHandler" ]
+];

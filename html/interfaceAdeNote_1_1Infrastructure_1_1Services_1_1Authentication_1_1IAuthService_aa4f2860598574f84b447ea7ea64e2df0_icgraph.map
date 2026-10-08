@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.IAuthService.SetAuthenticator" name="AdeNote.Infrastructure.Services.Authentication.IAuthService.SetAuthenticator">
+<area shape="rect" id="Node000001" title="Sets up MFA using google authenticator app." alt="" coords="316,5,632,45"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Controllers_1_1UserController.html#a28aec2b9e6837acc9bba3025583b3bea" title="Sets up two factor authentication using google authenticator app." alt="" coords="5,5,268,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="302,28,268,28,268,23,302,23"/>
+</map>

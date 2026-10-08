@@ -1,0 +1,12 @@
+<map id="AdeNote.Infrastructure.Services.ChatService.ChatService.GetSubThread" name="AdeNote.Infrastructure.Services.ChatService.ChatService.GetSubThread">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,93,284,133"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="338,5,567,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,91,331,55,361,46,362,52,333,60,212,96"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#aa7e3759f8fb78f56860a2e16e0c077c9" title=" " alt="" coords="336,93,569,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="284,111,322,111,322,116,284,116"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="332,157,573,197"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="242,131,343,152,342,157,241,136"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="396,94,393,84,402,74,422,69,453,67,488,69,507,77,505,82,487,75,453,72,423,74,405,79,398,85,401,92"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a9b9d0cf9a51b57518aead30a872705aa" title=" " alt="" coords="621,93,912,133"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="569,111,608,111,608,116,569,116"/>
+</map>

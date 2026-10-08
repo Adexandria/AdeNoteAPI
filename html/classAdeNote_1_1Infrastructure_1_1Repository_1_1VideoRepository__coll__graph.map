@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Repository.VideoRepository" name="AdeNote.Infrastructure.Repository.VideoRepository">
+<area shape="rect" id="Node000001" title=" " alt="" coords="47,152,293,192"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title=" " alt="" coords="5,79,164,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,111,151,150,148,154,106,115"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IVideoRepository.html" title=" " alt="" coords="189,79,322,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="234,115,192,154,189,150,231,111"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="174,5,337,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="258,44,258,79,253,79,253,44"/>
+</map>

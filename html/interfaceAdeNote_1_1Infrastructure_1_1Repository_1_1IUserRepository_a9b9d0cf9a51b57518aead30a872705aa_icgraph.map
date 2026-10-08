@@ -1,0 +1,33 @@
+<map id="AdeNote.Infrastructure.Repository.IUserRepository.GetUserEmailsByUserIds" name="AdeNote.Infrastructure.Repository.IUserRepository.GetUserEmailsByUserIds">
+<area shape="rect" id="Node000001" title=" " alt="" coords="629,215,920,255"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#a4bc646feafe9a257a0bcdb6afe290a4d" title=" " alt="" coords="36,5,269,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="744,206,675,141,629,108,580,81,502,55,421,38,341,29,269,25,270,20,342,24,422,33,504,50,582,76,632,103,678,136,748,202"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#a22e89ddfda46420b083390ac78f8fe62" title=" " alt="" coords="348,279,581,319"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="664,260,563,281,562,276,663,255"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#adc9da1147737efd6f00df5012bbba493" title=" " alt="" coords="348,343,581,383"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="728,264,660,299,582,333,547,345,545,340,580,328,658,294,725,259"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#a3ae517aa52f56746a9a73a1146741a25" title=" " alt="" coords="36,69,269,109"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="738,208,668,159,625,135,581,117,502,98,420,87,341,83,270,84,270,78,341,78,420,82,503,93,582,112,628,131,671,154,741,204"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#a7e34c8bc80c1efb3e44e61055f48a8df" title=" " alt="" coords="348,407,581,447"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="747,267,676,333,631,367,583,397,555,409,553,404,580,392,628,363,673,328,743,263"/>
+<area shape="rect" id="Node000007" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#aa7e3759f8fb78f56860a2e16e0c077c9" title=" " alt="" coords="348,215,581,255"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="616,237,582,237,582,232,616,232"/>
+<area shape="rect" id="Node000014" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#a98fdda6865de259e632f9a202de6b19f" title=" " alt="" coords="348,127,581,167"/>
+<area shape="poly" id="edge16_Node000001_Node000014" title=" " alt="" coords="692,213,581,181,539,169,540,164,582,176,693,208"/>
+<area shape="poly" id="edge11_Node000007_Node000002" title=" " alt="" coords="388,211,366,197,346,180,334,164,327,148,323,117,318,87,311,73,298,59,268,41,271,37,302,55,315,70,323,85,328,116,333,146,339,161,350,177,369,193,390,206"/>
+<area shape="poly" id="edge12_Node000007_Node000005" title=" " alt="" coords="396,211,346,181,331,165,323,150,314,136,299,124,268,109,271,105,301,119,318,133,327,147,336,162,350,177,399,206"/>
+<area shape="poly" id="edge13_Node000007_Node000007" title=" " alt="" coords="518,203,499,196,465,193,435,195,416,200,409,206,413,213,408,215,404,205,414,196,434,190,465,188,500,191,520,198"/>
+<area shape="rect" id="Node000008" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a63455fd393f4f07bd35f58b638bf25b9" title=" " alt="" coords="5,133,300,173"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="387,213,299,188,250,176,251,171,301,183,389,208"/>
+<area shape="rect" id="Node000009" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#abdba176acded2d6cf3f39fb99e08d2f6" title=" " alt="" coords="13,484,292,524"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="354,265,350,268,332,293,325,318,325,344,327,370,330,396,329,422,321,448,302,474,286,486,283,482,298,470,316,446,324,421,325,396,322,370,319,344,320,318,328,291,346,265,350,261"/>
+<area shape="rect" id="Node000010" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a243a2a44400669890387dd608729c578" title=" " alt="" coords="25,197,280,237"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="334,230,280,227,281,222,334,225"/>
+<area shape="rect" id="Node000011" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a74f1c2dcb48d47cad9998299625348fc" title=" " alt="" coords="22,261,283,301"/>
+<area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="335,257,284,264,283,259,334,251"/>
+<area shape="rect" id="Node000012" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a7b294e7bd7896404213274b1f8fbef4d" title=" " alt="" coords="11,326,294,381"/>
+<area shape="poly" id="edge14_Node000007_Node000012" title=" " alt="" coords="362,262,349,269,335,280,326,292,317,304,301,316,275,328,273,323,299,311,313,300,322,288,331,276,347,264,360,258"/>
+<area shape="rect" id="Node000013" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#abb01d7f6c43802b326dbefe82b7458df" title=" " alt="" coords="11,405,294,459"/>
+<area shape="poly" id="edge15_Node000007_Node000013" title=" " alt="" coords="355,264,350,269,337,284,331,299,327,330,323,363,315,379,302,395,287,407,284,402,298,391,311,377,318,362,321,330,325,297,333,281,346,265,352,260"/>
+<area shape="poly" id="edge17_Node000014_Node000008" title=" " alt="" coords="334,152,300,153,300,148,334,147"/>
+</map>

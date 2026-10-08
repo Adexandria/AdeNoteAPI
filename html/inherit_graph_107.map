@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,45,92,70"/>
+<area shape="rect" id="Node000001" href="$classAdeNote_1_1Infrastructure_1_1Exceptions_1_1HealthCheckException.html" title=" " alt="" coords="140,5,389,45"/>
+<area shape="poly" id="edge99_Node000000_Node000001" title=" " alt="" coords="105,46,139,41,140,46,106,52"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Exceptions_1_1MailGunException.html" title=" " alt="" coords="140,69,389,109"/>
+<area shape="poly" id="edge100_Node000000_Node000002" title=" " alt="" coords="106,63,140,68,139,73,105,68"/>
+</map>

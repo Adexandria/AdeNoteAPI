@@ -1,0 +1,7 @@
+<map id="AdeNote.Infrastructure.Services.Blob.IBlobService.DeleteImage" name="AdeNote.Infrastructure.Services.Blob.IBlobService.DeleteImage">
+<area shape="rect" id="Node000001" title="Deletes image." alt="" coords="305,53,539,93"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a8d07369c2b17018f09fc45be77d75089" title="Disables Multi factor authentication for a particular user." alt="" coords="5,5,257,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="292,57,257,53,258,47,292,52"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#ac8fe413b63058248815029ee707ff92a" title=" " alt="" coords="5,84,257,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="292,93,258,97,257,92,292,87"/>
+</map>

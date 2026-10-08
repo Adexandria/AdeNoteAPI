@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.IAuthService.VerifyPhoneNumber" name="AdeNote.Infrastructure.Services.Authentication.IAuthService.VerifyPhoneNumber">
+<area shape="rect" id="Node000001" title="Sets up phone number." alt="" coords="272,5,516,60"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Controllers_1_1UserController.html#ad8492028da0309856d8da0db61b7da06" title="Verifies phone number." alt="" coords="5,13,224,53"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="258,35,224,35,224,30,258,30"/>
+</map>

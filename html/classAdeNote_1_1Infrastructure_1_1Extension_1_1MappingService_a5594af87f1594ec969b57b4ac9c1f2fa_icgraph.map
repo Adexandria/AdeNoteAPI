@@ -1,0 +1,7 @@
+<map id="AdeNote.Infrastructure.Extension.MappingService.TicketConfig" name="AdeNote.Infrastructure.Extension.MappingService.TicketConfig">
+<area shape="rect" id="Node000001" title=" " alt="" coords="339,53,581,93"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a2526af09f457bd9532f9afbe81f3a157" title=" " alt="" coords="26,5,270,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="325,58,270,51,271,46,326,53"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchTicketById_1_1FetchTicketByIdRequestHandler.html#ad3b789b504136be80dd662bc5ab3cbba" title=" " alt="" coords="5,84,291,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="326,92,291,96,291,91,325,87"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="AdeNote.Infrastructure.Repository.IBookRepository.Add" name="AdeNote.Infrastructure.Repository.IBookRepository.Add">
+<area shape="rect" id="Node000001" title=" " alt="" coords="399,101,645,141"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a7888565766d1598cb168c4d226265772" title="Adds a new book." alt="" coords="61,5,295,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="461,99,350,60,294,47,295,41,351,55,463,94"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a1829f4a0e9379260f181a3936dcaf768" title="Adds new books." alt="" coords="61,69,295,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="385,111,295,103,295,98,385,106"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBook_1_1CreateBookRequestHandler.html#a15135909d3c7d7ff9ac2bfa697b3f357" title=" " alt="" coords="13,133,343,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="385,137,344,141,343,135,385,131"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBooks_1_1CreateBooksRequestHandler.html#a49358c7c4ee44a852593e3e828eaf4c4" title=" " alt="" coords="5,197,351,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="463,149,351,188,302,200,301,195,350,183,461,144"/>
+</map>

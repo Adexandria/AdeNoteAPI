@@ -1,0 +1,15 @@
+<map id="AdeNote.Infrastructure.Requests.RemovePageLabel.RemovePageLabelRequestHandler" name="AdeNote.Infrastructure.Requests.RemovePageLabel.RemovePageLabelRequestHandler">
+<area shape="rect" id="Node000001" title=" " alt="" coords="645,98,964,153"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="221,5,452,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="459,45,622,79,694,95,693,101,621,84,458,51"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html" title="An interface to handles page object." alt="" coords="213,69,460,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="474,97,645,110,645,116,474,102"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="6,77,163,102"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="177,87,213,87,213,92,177,92"/>
+<area shape="rect" id="Node000005" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html" title="An interface that includes the behaviour of a book object." alt="" coords="213,133,460,173"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="474,147,621,140,645,138,645,144,621,145,474,152"/>
+<area shape="rect" id="Node000006" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,141,164,166"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="178,151,213,151,213,156,178,156"/>
+<area shape="rect" id="Node000007" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html" title="An Interface that includes the behaviour of the page labels object." alt="" coords="213,197,460,237"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="473,194,621,167,695,150,696,155,622,172,474,199"/>
+</map>

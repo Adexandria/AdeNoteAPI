@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.IAuthService.SendSmsOTP" name="AdeNote.Infrastructure.Services.Authentication.IAuthService.SendSmsOTP">
+<area shape="rect" id="Node000001" title="Sends otp to phone number." alt="" coords="305,5,599,45"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#acaa5f87507dfb79ece675c094804521f" title="Sends one time password via sms." alt="" coords="5,5,257,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="292,28,258,28,258,23,292,23"/>
+</map>

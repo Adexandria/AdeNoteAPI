@@ -1,0 +1,7 @@
+<map id="AdeNote.Infrastructure.Services.Notification.NotificationService.GenerateContentTemplate" name="AdeNote.Infrastructure.Services.Notification.NotificationService.GenerateContentTemplate">
+<area shape="rect" id="Node000001" title="Generates content template using template type." alt="" coords="313,45,601,100"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1NotificationService.html#a29ebda8d0fce7e37f192cce8595564bf" title="Send notifications based on template type." alt="" coords="5,5,265,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="299,56,265,51,266,46,300,50"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1NotificationService.html#ab85df5c7a7706c3dd6208a225cfa3f11" title="Send notification based on template type." alt="" coords="5,84,265,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="300,94,266,98,265,93,299,89"/>
+</map>

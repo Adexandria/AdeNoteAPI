@@ -1,0 +1,4 @@
+var RemoveAllPageLabelsRequestHandler_8cs =
+[
+    [ "AdeNote.Infrastructure.Requests.RemoveAllPageLabels.RemoveAllPageLabelsRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels_1_1RemoveAllPageLabelsRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels_1_1RemoveAllPageLabelsRequestHandler" ]
+];

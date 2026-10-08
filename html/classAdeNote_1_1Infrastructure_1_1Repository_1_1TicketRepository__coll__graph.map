@@ -1,0 +1,13 @@
+<map id="AdeNote.Infrastructure.Repository.TicketRepository" name="AdeNote.Infrastructure.Repository.TicketRepository">
+<area shape="rect" id="Node000001" title=" " alt="" coords="135,168,381,208"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title=" " alt="" coords="5,80,167,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,109,224,165,222,170,118,114"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html" title=" " alt="" coords="191,80,325,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="261,119,261,168,255,168,255,119"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="175,5,341,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="261,45,261,80,255,80,255,45"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Db_1_1IdentityDbContext.html" title=" " alt="" coords="349,80,572,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="425,113,300,170,298,166,423,108"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="369,5,552,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="463,45,463,80,458,80,458,45"/>
+</map>

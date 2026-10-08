@@ -1,0 +1,5 @@
+<map id="AdeNote.Controllers.AuthenticationController.RemoveAuthenicator" name="AdeNote.Controllers.AuthenticationController.RemoveAuthenicator">
+<area shape="rect" id="Node000001" title="Removes google or sms authenticator." alt="" coords="5,13,257,53"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#aa7d09099bad08345791c4e1a1a6a04f6" title="Disables authentication for a user." alt="" coords="305,5,561,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="257,30,292,30,292,35,257,35"/>
+</map>

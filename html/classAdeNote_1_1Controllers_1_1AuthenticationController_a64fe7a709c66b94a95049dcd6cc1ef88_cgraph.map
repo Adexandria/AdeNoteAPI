@@ -1,0 +1,7 @@
+<map id="AdeNote.Controllers.AuthenticationController.GetAccessToken" name="AdeNote.Controllers.AuthenticationController.GetAccessToken">
+<area shape="rect" id="Node000001" title="Gets access token using refresh token." alt="" coords="5,53,257,93"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a46a0b36bf55eef31bdbac51acf7d76a6" title=" " alt="" coords="305,5,572,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="257,54,292,49,292,54,258,59"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#aa603687f0f8dfc8649c995c3c4871b37" title="Checks if refresh token is revoked." alt="" coords="311,84,566,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="258,86,298,91,298,96,257,91"/>
+</map>

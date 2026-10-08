@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['20240430084252_5ffirstmigration_2ecs_0',['20240430084252_firstmigration.cs',['../20240430084252__firstmigration_8cs.html',1,'']]],
+  ['20240430084252_5ffirstmigration_2edesigner_2ecs_1',['20240430084252_firstmigration.Designer.cs',['../20240430084252__firstmigration_8Designer_8cs.html',1,'']]],
+  ['20240521125950_5fsetup_2dtext_2dtranslation_2ecs_2',['20240521125950_setup-text-translation.cs',['../20240521125950__setup-text-translation_8cs.html',1,'']]],
+  ['20240521125950_5fsetup_2dtext_2dtranslation_2edesigner_2ecs_3',['20240521125950_setup-text-translation.Designer.cs',['../20240521125950__setup-text-translation_8Designer_8cs.html',1,'']]],
+  ['20240529074328_5fadd_2drecovery_2dcodes_2ecs_4',['20240529074328_add-recovery-codes.cs',['../20240529074328__add-recovery-codes_8cs.html',1,'']]],
+  ['20240529074328_5fadd_2drecovery_2dcodes_2edesigner_2ecs_5',['20240529074328_add-recovery-codes.Designer.cs',['../20240529074328__add-recovery-codes_8Designer_8cs.html',1,'']]],
+  ['20240529091647_5fadd_2dticket_2ecs_6',['20240529091647_add-ticket.cs',['../20240529091647__add-ticket_8cs.html',1,'']]],
+  ['20240529091647_5fadd_2dticket_2edesigner_2ecs_7',['20240529091647_add-ticket.Designer.cs',['../20240529091647__add-ticket_8Designer_8cs.html',1,'']]],
+  ['20240529145504_5fadd_2dissue_2ecs_8',['20240529145504_add-issue.cs',['../20240529145504__add-issue_8cs.html',1,'']]],
+  ['20240529145504_5fadd_2dissue_2edesigner_2ecs_9',['20240529145504_add-issue.Designer.cs',['../20240529145504__add-issue_8Designer_8cs.html',1,'']]],
+  ['20240530074224_5fadd_2drecovery_2dcode_2ecs_10',['20240530074224_add-recovery-code.cs',['../20240530074224__add-recovery-code_8cs.html',1,'']]],
+  ['20240530074224_5fadd_2drecovery_2dcode_2edesigner_2ecs_11',['20240530074224_add-recovery-code.Designer.cs',['../20240530074224__add-recovery-code_8Designer_8cs.html',1,'']]],
+  ['20240530125352_5fdescription_2dnullable_2ecs_12',['20240530125352_description-nullable.cs',['../20240530125352__description-nullable_8cs.html',1,'']]],
+  ['20240530125352_5fdescription_2dnullable_2edesigner_2ecs_13',['20240530125352_description-nullable.Designer.cs',['../20240530125352__description-nullable_8Designer_8cs.html',1,'']]],
+  ['20240722121647_5fadd_2dcreated_2dmodified_2ecs_14',['20240722121647_add-created-modified.cs',['../20240722121647__add-created-modified_8cs.html',1,'']]],
+  ['20240722121647_5fadd_2dcreated_2dmodified_2edesigner_2ecs_15',['20240722121647_add-created-modified.Designer.cs',['../20240722121647__add-created-modified_8Designer_8cs.html',1,'']]],
+  ['20241007103820_5fadd_2dvideos_2ecs_16',['20241007103820_add-videos.cs',['../20241007103820__add-videos_8cs.html',1,'']]],
+  ['20241007103820_5fadd_2dvideos_2edesigner_2ecs_17',['20241007103820_add-videos.Designer.cs',['../20241007103820__add-videos_8Designer_8cs.html',1,'']]]
+];

@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.IAuthService.GenerateAccessToken" name="AdeNote.Infrastructure.Services.Authentication.IAuthService.GenerateAccessToken">
+<area shape="rect" id="Node000001" title=" " alt="" coords="305,62,572,117"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a64fe7a709c66b94a95049dcd6cc1ef88" title="Gets access token using refresh token." alt="" coords="5,5,257,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="293,62,227,48,228,43,294,57"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a2d92fff538cd050f6612ff1a1e716c4b" title="Verifies sms code." alt="" coords="5,69,257,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="291,92,258,92,258,87,291,87"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#af70d9c5aee8794cdeaa32e00565b7b04" title="Verifies time based One time password." alt="" coords="5,133,257,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="294,122,228,136,227,131,293,117"/>
+</map>

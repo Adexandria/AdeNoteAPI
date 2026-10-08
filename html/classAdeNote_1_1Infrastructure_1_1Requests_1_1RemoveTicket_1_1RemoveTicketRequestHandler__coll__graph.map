@@ -1,0 +1,11 @@
+<map id="AdeNote.Infrastructure.Requests.RemoveTicket.RemoveTicketRequestHandler" name="AdeNote.Infrastructure.Requests.RemoveTicket.RemoveTicketRequestHandler">
+<area shape="rect" id="Node000001" title=" " alt="" coords="644,69,960,109"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="224,5,463,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="477,41,658,67,658,72,476,46"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html" title=" " alt="" coords="220,69,467,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="480,87,644,87,644,92,480,92"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,77,171,102"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="184,87,220,87,220,92,184,92"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1EventConfiguration.html" title=" " alt="" coords="225,133,461,173"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="475,132,658,107,658,112,475,138"/>
+</map>

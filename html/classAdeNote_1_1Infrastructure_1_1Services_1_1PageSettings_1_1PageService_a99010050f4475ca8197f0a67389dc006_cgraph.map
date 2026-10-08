@@ -1,0 +1,15 @@
+<map id="AdeNote.Infrastructure.Services.PageSettings.PageService.Update" name="AdeNote.Infrastructure.Services.PageSettings.PageService.Update">
+<area shape="rect" id="Node000001" title="Updates an existing page." alt="" coords="5,163,245,203"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="317,5,546,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,160,208,108,249,79,292,55,310,47,312,52,294,60,252,84,211,112,149,164"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#aaad00fb34e9d5819f94401fba82556d7" title="Get a particular book that belongs to a user." alt="" coords="308,69,555,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="176,160,293,119,323,110,325,115,294,124,177,165"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html#a2bd2bfe8b1098e7d4c3b795362ffaa28" title="Gets an individual page from a particular book." alt="" coords="308,133,555,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="245,169,294,164,295,169,246,174"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Models_1_1Page.html#ae75aaa33db8703d4de85f2cb9031c448" title=" " alt="" coords="293,198,569,223"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="246,191,280,194,280,199,245,196"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="311,248,552,288"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="189,200,294,232,332,242,330,247,293,237,187,205"/>
+<area shape="rect" id="Node000007" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html#a787dda87f2a9a2f4ba1755ac65af3d42" title=" " alt="" coords="308,312,555,352"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="151,201,213,250,253,276,294,298,314,305,312,310,292,302,250,280,210,254,148,205"/>
+</map>

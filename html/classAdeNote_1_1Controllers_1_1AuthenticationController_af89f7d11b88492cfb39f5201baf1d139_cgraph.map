@@ -1,0 +1,15 @@
+<map id="AdeNote.Controllers.AuthenticationController.LoginByRecoveryCodes" name="AdeNote.Controllers.AuthenticationController.LoginByRecoveryCodes">
+<area shape="rect" id="Node000001" title="Logins user using recovery codes." alt="" coords="5,196,257,236"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#aaf76f4e77c5e74af2928f3296f7828ed" title="Add data to cookie." alt="" coords="333,5,585,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,194,210,125,254,87,304,55,320,48,322,53,307,60,258,91,214,129,150,198"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#ada25ea4d4b922729a55e1ff31d91baa1" title=" " alt="" coords="325,70,592,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,194,232,163,304,133,327,126,328,131,306,139,234,168,172,198"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#ae344d9491ec91504dd03947fb2a5d6cc" title="Checks if MFA has been enabled for the user using user id." alt="" coords="305,149,612,203"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="257,198,291,194,292,199,258,203"/>
+<area shape="rect" id="Node000005" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#adf1b88e3cd49ad68e439a751a705915f" title=" " alt="" coords="323,227,595,282"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="258,228,309,234,309,240,257,234"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a5bc24a38f2a0d984148fd747b4d5c226" title=" " alt="" coords="333,307,585,347"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="172,234,234,263,306,291,340,301,339,306,304,296,232,268,170,238"/>
+<area shape="rect" id="Node000007" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="338,371,579,411"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="153,234,217,295,260,329,307,356,326,364,324,369,304,361,257,333,213,300,149,238"/>
+</map>

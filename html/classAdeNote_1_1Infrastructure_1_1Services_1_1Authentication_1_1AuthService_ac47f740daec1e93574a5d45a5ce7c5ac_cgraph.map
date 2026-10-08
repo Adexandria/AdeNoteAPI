@@ -1,0 +1,11 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.AuthService.RevokeRefreshToken" name="AdeNote.Infrastructure.Services.Authentication.AuthService.RevokeRefreshToken">
+<area shape="rect" id="Node000001" title="Revokes existing refresh token." alt="" coords="5,113,344,153"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="425,5,654,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,111,304,83,391,55,425,46,426,51,393,60,305,88,228,116"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html#a0493c13e7acf167ad9313426647a43f1" title="Gets the refresh token of a user." alt="" coords="392,70,687,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="344,114,378,111,379,116,345,119"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="419,149,660,189"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="345,147,405,153,405,159,344,153"/>
+<area shape="rect" id="Node000005" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#ad399a2e717d857d4bfeba63bc704e94d" title="Updates an existing object." alt="" coords="416,213,663,253"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="235,151,393,199,428,208,427,213,391,204,234,156"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="AdeNote.Infrastructure.Services.TranslationAI.ITextTranslation.GetSupportedLanguages" name="AdeNote.Infrastructure.Services.TranslationAI.ITextTranslation.GetSupportedLanguages">
+<area shape="rect" id="Node000001" title=" " alt="" coords="336,41,575,96"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequestHandler.html#a9da36682a147f8fd64b1fd0dc0528484" title=" " alt="" coords="17,5,276,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="322,56,276,50,276,45,323,51"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a78c5b5d8a721cf94ddf53efdbebc30cb" title=" " alt="" coords="5,85,288,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="322,87,289,91,288,85,322,82"/>
+</map>

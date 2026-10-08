@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Repository.LabelRepository.Update" name="AdeNote.Infrastructure.Repository.LabelRepository.Update">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,252,45"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html#a04bff427cbb3ea8a94bf2e03d8148646" title="Save changes. &#160;This will catch conflict exception and update the entity with the database entity." alt="" coords="300,5,553,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,23,286,23,286,28,252,28"/>
+</map>

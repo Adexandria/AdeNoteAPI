@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['texttranslation_0',['TextTranslation',['../classAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1TextTranslation.html',1,'AdeNote::Infrastructure::Services::TranslationAI']]],
+  ['threadmapper_1',['ThreadMapper',['../classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html',1,'AdeNote::Infrastructure::Services']]],
+  ['ticket_2',['Ticket',['../classAdeNote_1_1Models_1_1Ticket.html',1,'AdeNote::Models']]],
+  ['ticketcontroller_3',['TicketController',['../classAdeNote_1_1Controllers_1_1TicketController.html',1,'AdeNote::Controllers']]],
+  ['ticketcreatedto_4',['TicketCreateDto',['../classAdeNote_1_1Models_1_1DTOs_1_1TicketCreateDto.html',1,'AdeNote::Models::DTOs']]],
+  ['ticketdto_5',['TicketDTO',['../classAdeNote_1_1Models_1_1DTOs_1_1TicketDTO.html',1,'AdeNote::Models::DTOs']]],
+  ['ticketevent_6',['TicketEvent',['../classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketEvent.html',1,'AdeNote::Infrastructure::Services::TicketSettings']]],
+  ['ticketrepository_7',['TicketRepository',['../classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html',1,'AdeNote::Infrastructure::Repository']]],
+  ['ticketsdto_8',['TicketsDTO',['../classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html',1,'AdeNote::Models::DTOs']]],
+  ['ticketservice_9',['TicketService',['../classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html',1,'AdeNote::Infrastructure::Services::TicketSettings']]],
+  ['ticketstatusdto_10',['TicketStatusDto',['../classAdeNote_1_1Models_1_1DTOs_1_1TicketStatusDto.html',1,'AdeNote::Models::DTOs']]],
+  ['ticketstreamdto_11',['TicketStreamDto',['../classAdeNote_1_1Models_1_1DTOs_1_1TicketStreamDto.html',1,'AdeNote::Models::DTOs']]],
+  ['transcript_12',['Transcript',['../classAdeNote_1_1Models_1_1Transcript.html',1,'AdeNote::Models']]],
+  ['translateconfiguration_13',['TranslateConfiguration',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1AI_1_1TranslateConfiguration.html',1,'AdeNote::Infrastructure::Utilities::AI']]],
+  ['translatepagerequest_14',['TranslatePageRequest',['../classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequest.html',1,'AdeNote::Infrastructure::Requests::TranslatePage']]],
+  ['translatepagerequesthandler_15',['TranslatePageRequestHandler',['../classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequestHandler.html',1,'AdeNote::Infrastructure::Requests::TranslatePage']]],
+  ['translatepagevalidator_16',['TranslatePageValidator',['../classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1TranslatePageValidator.html',1,'AdeNote::Infrastructure::Utilities::Validations']]],
+  ['translationdto_17',['TranslationDto',['../classAdeNote_1_1Models_1_1DTOs_1_1TranslationDto.html',1,'AdeNote::Models::DTOs']]],
+  ['tweetsubthread_18',['TweetSubThread',['../classAdeNote_1_1Models_1_1TweetSubThread.html',1,'AdeNote::Models']]],
+  ['tweetthread_19',['TweetThread',['../classAdeNote_1_1Models_1_1TweetThread.html',1,'AdeNote::Models']]],
+  ['tweetthreaddto_20',['TweetThreadDto',['../classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDto.html',1,'AdeNote::Models::DTOs']]],
+  ['tweetthreaddtos_21',['TweetThreadDtos',['../classAdeNote_1_1Models_1_1DTOs_1_1TweetThreadDtos.html',1,'AdeNote::Models::DTOs']]]
+];

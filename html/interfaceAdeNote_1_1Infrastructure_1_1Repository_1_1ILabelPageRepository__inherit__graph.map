@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Repository.ILabelPageRepository" name="AdeNote.Infrastructure.Repository.ILabelPageRepository">
+<area shape="rect" id="Node000001" title="An Interface that includes the behaviour of the page labels object." alt="" coords="5,5,252,45"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1LabelPageRepository.html" title="Handles persisting and querying for page labels." alt="" coords="5,93,252,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,59,131,93,126,93,126,59"/>
+</map>

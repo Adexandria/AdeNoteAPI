@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.IAuthService.VerifyPasswordlessToken" name="AdeNote.Infrastructure.Services.Authentication.IAuthService.VerifyPasswordlessToken">
+<area shape="rect" id="Node000001" title=" " alt="" coords="305,5,549,60"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a35eed64a9ab6173c277a62e717692ac0" title="Logins user using passwordless method." alt="" coords="5,13,257,53"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="291,35,258,35,258,30,291,30"/>
+</map>

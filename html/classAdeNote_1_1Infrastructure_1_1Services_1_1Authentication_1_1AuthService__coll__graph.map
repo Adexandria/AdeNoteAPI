@@ -1,0 +1,23 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.AuthService" name="AdeNote.Infrastructure.Services.Authentication.AuthService">
+<area shape="rect" id="Node000001" title="Implementation of the interface." alt="" coords="735,183,968,223"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html" title="An authentication interface that with the controller." alt="" coords="346,5,450,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="464,19,519,25,583,36,649,53,712,78,750,101,784,129,835,181,831,185,780,133,747,106,709,83,647,58,581,41,518,30,463,24"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1SmsSettings_1_1ISmsService.html" title="A sms service used to send message via sms." alt="" coords="281,55,515,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="529,93,619,113,712,138,765,159,812,181,810,186,763,164,710,143,618,118,528,99"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html" title=" " alt="" coords="275,119,521,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="535,156,711,181,735,184,734,189,710,186,535,161"/>
+<area shape="rect" id="Node000005" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="37,127,193,152"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="207,137,274,137,274,142,207,142"/>
+<area shape="rect" id="Node000006" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html" title="An interface that includes the behaviour of cloud storage." alt="" coords="281,183,515,223"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="528,201,734,201,734,206,528,206"/>
+<area shape="rect" id="Node000007" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html" title=" " alt="" coords="275,247,521,287"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="535,246,710,221,734,217,735,223,711,226,535,251"/>
+<area shape="rect" id="Node000008" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="9,255,222,280"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="236,265,274,265,274,270,236,270"/>
+<area shape="rect" id="Node000009" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Notification_1_1INotificationService.html" title="Manages the email notification using template." alt="" coords="281,311,515,351"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="528,309,618,290,710,265,764,244,811,221,814,226,766,249,712,270,619,295,529,314"/>
+<area shape="rect" id="Node000010" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRecoveryCodeRepository.html" title=" " alt="" coords="275,375,521,415"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="534,379,623,358,667,344,709,325,747,302,780,274,831,222,835,225,784,278,750,306,712,330,669,349,624,363,535,384"/>
+<area shape="rect" id="Node000011" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,383,225,408"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="239,393,274,393,274,398,239,398"/>
+</map>

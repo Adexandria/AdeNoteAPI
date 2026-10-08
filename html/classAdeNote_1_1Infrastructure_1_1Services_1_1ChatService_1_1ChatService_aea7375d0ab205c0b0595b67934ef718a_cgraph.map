@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Services.ChatService.ChatService.UpdateSubThread" name="AdeNote.Infrastructure.Services.ChatService.ChatService.UpdateSubThread">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,308,109"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="362,5,591,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="257,67,362,45,363,51,258,72"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#a7b4e4d349e58f1db158a982ee246c96b" title=" " alt="" coords="360,69,593,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="308,87,346,87,346,92,308,92"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="356,133,597,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="258,107,363,128,362,133,257,112"/>
+</map>

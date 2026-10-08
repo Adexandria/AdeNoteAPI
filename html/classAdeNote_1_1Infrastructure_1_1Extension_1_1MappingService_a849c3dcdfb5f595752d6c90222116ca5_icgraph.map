@@ -1,0 +1,11 @@
+<map id="AdeNote.Infrastructure.Extension.MappingService.TicketAdminConfig" name="AdeNote.Infrastructure.Extension.MappingService.TicketAdminConfig">
+<area shape="rect" id="Node000001" title=" " alt="" coords="339,131,591,171"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a2526af09f457bd9532f9afbe81f3a157" title=" " alt="" coords="26,5,270,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="412,128,354,100,290,74,256,63,258,58,292,69,356,95,414,123"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a29ce4b0eace056911fa8f2f095861660" title=" " alt="" coords="26,84,270,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="324,136,270,129,271,124,325,131"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchTicketById_1_1FetchTicketByIdRequestHandler.html#ad3b789b504136be80dd662bc5ab3cbba" title=" " alt="" coords="5,163,291,217"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="325,171,291,175,291,170,324,166"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequestHandler.html#ae66915792ac71901d08b60d70f351c03" title=" " alt="" coords="17,241,279,296"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="412,180,292,231,254,244,252,239,290,226,409,175"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Repository.LabelPageRepository.DeleteLabelFromPage" name="AdeNote.Infrastructure.Repository.LabelPageRepository.DeleteLabelFromPage">
+<area shape="rect" id="Node000001" title="Deletes a particular label from a page." alt="" coords="5,5,308,45"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html#a04bff427cbb3ea8a94bf2e03d8148646" title="Save changes. &#160;This will catch conflict exception and update the entity with the database entity." alt="" coords="356,5,640,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="308,23,343,23,343,28,308,28"/>
+</map>

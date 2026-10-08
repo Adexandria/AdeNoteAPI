@@ -1,0 +1,7 @@
+<map id="AdeNote.Infrastructure.Services.SmsSettings.SmsService" name="AdeNote.Infrastructure.Services.SmsSettings.SmsService">
+<area shape="rect" id="Node000001" title="A sms service used to send message via sms." alt="" coords="35,108,268,148"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1SmsSettings_1_1ISmsService.html" title="A sms service used to send message via sms." alt="" coords="5,13,108,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,46,135,106,132,110,75,50"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1SmsConfig_1_1SmsConfiguration.html" title=" " alt="" coords="133,5,362,45"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="222,57,171,110,167,106,218,54"/>
+</map>

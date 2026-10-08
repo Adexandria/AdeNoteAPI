@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Services.LabelSettings.LabelService.GetAll" name="AdeNote.Infrastructure.Services.LabelSettings.LabelService.GetAll">
+<area shape="rect" id="Node000001" title="Gets all the labels." alt="" coords="5,69,247,109"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html#a7e5531f9ca7b83a215bc1737299ef63d" title="Get all labels." alt="" coords="295,5,541,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,67,313,46,314,51,219,72"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a4a72d00573a170e6e1e5bc3736135280" title="Maps from label to label dto." alt="" coords="297,69,539,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="247,87,283,87,283,92,247,92"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="297,133,539,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="219,107,314,128,313,133,218,112"/>
+</map>

@@ -1,0 +1,21 @@
+<map id="AdeNote.Infrastructure.Repository.IUserRepository.GetUserByEmail" name="AdeNote.Infrastructure.Repository.IUserRepository.GetUserByEmail">
+<area shape="rect" id="Node000001" title=" " alt="" coords="417,277,664,317"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#ac66196fed26108789ec413b9b1a73c53" title=" " alt="" coords="38,5,337,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="524,266,501,219,467,162,423,106,396,81,368,60,336,44,338,39,371,55,400,77,426,102,471,159,506,216,529,264"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a98c983d7f9bc9a086db180f791cd2785" title=" " alt="" coords="42,69,333,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="517,268,490,233,456,193,415,155,368,124,332,109,334,104,371,119,418,151,460,190,495,230,521,264"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#aa578280cccead45dfbac3925c5a5cbce" title=" " alt="" coords="56,134,319,189"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="497,272,438,236,368,204,318,188,320,183,370,199,440,232,500,267"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html#ae86d272b619dcc2a0f9bcc7884197d3b" title=" " alt="" coords="65,213,309,253"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="420,277,369,268,302,256,303,251,370,263,421,272"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateTicket_1_1CreateTicketRequestHandler.html#a63c66ebe22de251bdfef52dcf4f9e111" title=" " alt="" coords="16,277,359,317"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="404,300,359,300,359,295,404,295"/>
+<area shape="rect" id="Node000007" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a10c72bb038b5d05917125b02bd4800c2" title="Checks if MFA has been enabled for the user using user id." alt="" coords="36,342,339,397"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="429,323,322,345,321,339,428,318"/>
+<area shape="rect" id="Node000008" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a346456b9b4bea754c153717e136765ee" title="Checks if MFA has been enabled for the user." alt="" coords="36,421,339,475"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="505,328,444,371,370,410,335,423,333,418,368,406,441,366,502,324"/>
+<area shape="rect" id="Node000009" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a712ddef9cfb2ee96a2ce884808c1cd45" title=" " alt="" coords="53,499,321,554"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="522,331,496,368,461,411,419,454,371,489,323,510,321,505,368,484,416,449,457,408,492,365,518,328"/>
+<area shape="rect" id="Node000010" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a593efac9d5974e31295722dcffe4af3d" title=" " alt="" coords="5,579,369,619"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="531,331,509,384,476,449,430,514,402,543,371,568,347,581,344,576,368,563,398,539,426,510,471,446,505,382,526,329"/>
+</map>

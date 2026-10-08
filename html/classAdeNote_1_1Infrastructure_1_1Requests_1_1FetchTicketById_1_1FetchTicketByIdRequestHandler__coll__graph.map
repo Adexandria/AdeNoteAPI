@@ -1,0 +1,17 @@
+<map id="AdeNote.Infrastructure.Requests.FetchTicketById.FetchTicketByIdRequestHandler" name="AdeNote.Infrastructure.Requests.FetchTicketById.FetchTicketByIdRequestHandler">
+<area shape="rect" id="Node000001" title=" " alt="" coords="644,141,929,196"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="234,5,453,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="467,61,621,105,717,139,715,144,619,110,466,66"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html" title=" " alt="" coords="220,85,467,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="481,122,644,145,643,151,480,127"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,92,171,117"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="184,102,220,102,220,107,184,107"/>
+<area shape="rect" id="Node000005" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html" title=" " alt="" coords="220,149,467,189"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="481,166,644,166,644,171,481,171"/>
+<area shape="rect" id="Node000006" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="10,156,166,181"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="180,166,220,166,220,171,180,171"/>
+<area shape="rect" id="Node000007" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html" title="An interface that includes the behaviour of cloud storage." alt="" coords="227,213,460,253"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="473,211,644,187,644,192,474,217"/>
+<area shape="rect" id="Node000008" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1EventConfiguration.html" title=" " alt="" coords="225,277,461,317"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="456,271,619,229,718,194,720,199,621,234,457,276"/>
+</map>

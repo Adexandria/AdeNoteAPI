@@ -1,0 +1,11 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.AuthService.LoginUser" name="AdeNote.Infrastructure.Services.Authentication.AuthService.LoginUser">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,101,273,141"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#a2fc1c06d8251d676033b5ace0f5262f5" title="Saves a new entity." alt="" coords="321,5,568,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,99,321,55,349,46,351,52,322,60,195,104"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="330,69,559,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="273,105,316,100,316,105,274,110"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#a84a23bc85f97a76d890f1e847e540f58" title="Remove an existing object." alt="" coords="321,133,568,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="274,133,308,136,308,142,273,138"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="324,197,565,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="195,139,322,183,351,191,349,196,321,188,193,144"/>
+</map>

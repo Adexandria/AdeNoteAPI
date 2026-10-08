@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['getallbooksrequest_2ecs_0',['GetAllBooksRequest.cs',['../GetAllBooksRequest_8cs.html',1,'']]],
+  ['getallbooksrequesthandler_2ecs_1',['GetAllBooksRequestHandler.cs',['../GetAllBooksRequestHandler_8cs.html',1,'']]],
+  ['getallbooksvalidator_2ecs_2',['GetAllBooksValidator.cs',['../GetAllBooksValidator_8cs.html',1,'']]],
+  ['getalllabelsrequest_2ecs_3',['GetAllLabelsRequest.cs',['../GetAllLabelsRequest_8cs.html',1,'']]],
+  ['getalllabelsrequesthandler_2ecs_4',['GetAllLabelsRequestHandler.cs',['../GetAllLabelsRequestHandler_8cs.html',1,'']]],
+  ['getalllabelsvalidator_2ecs_5',['GetAllLabelsValidator.cs',['../GetAllLabelsValidator_8cs.html',1,'']]],
+  ['getallpagesrequest_2ecs_6',['GetAllPagesRequest.cs',['../GetAllPagesRequest_8cs.html',1,'']]],
+  ['getallpagesrequesthandler_2ecs_7',['GetAllPagesRequestHandler.cs',['../GetAllPagesRequestHandler_8cs.html',1,'']]],
+  ['getallpagesvalidator_2ecs_8',['GetAllPagesValidator.cs',['../GetAllPagesValidator_8cs.html',1,'']]],
+  ['getbookbyidrequest_2ecs_9',['GetBookByIdRequest.cs',['../GetBookByIdRequest_8cs.html',1,'']]],
+  ['getbookbyidrequesthandler_2ecs_10',['GetBookByIdRequestHandler.cs',['../GetBookByIdRequestHandler_8cs.html',1,'']]],
+  ['getbookbyidvalidator_2ecs_11',['GetBookByIdValidator.cs',['../GetBookByIdValidator_8cs.html',1,'']]],
+  ['getlabelbyidrequest_2ecs_12',['GetLabelByIdRequest.cs',['../GetLabelByIdRequest_8cs.html',1,'']]],
+  ['getlabelbyidrequesthandler_2ecs_13',['GetLabelByIdRequestHandler.cs',['../GetLabelByIdRequestHandler_8cs.html',1,'']]],
+  ['getpagebyidrequest_2ecs_14',['GetPageByIdRequest.cs',['../GetPageByIdRequest_8cs.html',1,'']]],
+  ['getpagebyidrequesthandler_2ecs_15',['GetPageByIdRequestHandler.cs',['../GetPageByIdRequestHandler_8cs.html',1,'']]],
+  ['getpagebyidvalidator_2ecs_16',['GetPageByIdValidator.cs',['../GetPageByIdValidator_8cs.html',1,'']]]
+];

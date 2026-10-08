@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.AuthService.GenerateMFAToken" name="AdeNote.Infrastructure.Services.Authentication.AuthService.GenerateMFAToken">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,62,268,117"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="325,5,554,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="266,59,330,46,331,51,267,65"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#adbab2b02f8b3505259a6ab7d99b79177" title=" " alt="" coords="316,69,563,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="268,87,302,87,302,92,268,92"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="319,133,560,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="267,114,331,128,330,133,266,119"/>
+</map>

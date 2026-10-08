@@ -1,0 +1,18 @@
+<map id="AdeNote.Infrastructure.Requests.CreatePage.CreatePageRequestHandler.Handle" name="AdeNote.Infrastructure.Requests.CreatePage.CreatePageRequestHandler.Handle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,103,332,143"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#a2fc1c06d8251d676033b5ace0f5262f5" title="Saves a new entity." alt="" coords="755,5,1001,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="281,100,380,84,740,38,741,43,380,89,281,105"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="763,69,993,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="332,112,749,93,750,98,332,118"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1InsertVideo_1_1InsertVideoRequestHandler.html#a350ce8946e4021b0d41e67a6c1125cb7" title=" " alt="" coords="380,131,707,171"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="332,132,367,135,366,140,332,138"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="757,261,999,301"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="236,140,381,180,574,223,749,256,748,261,573,228,379,185,234,145"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="583,128,661,92,754,55,779,47,780,52,756,60,663,97,586,133"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="653,128,755,109,756,114,654,133"/>
+<area shape="rect" id="Node000005" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html#a2bd2bfe8b1098e7d4c3b795362ffaa28" title="Gets an individual page from a particular book." alt="" coords="755,197,1001,237"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="645,168,764,192,763,197,644,173"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="592,168,708,222,732,235,756,247,778,255,776,260,754,252,729,240,705,226,590,173"/>
+<area shape="rect" id="Node000007" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html#a8d9162e50af49fc232368f245e8f6b7f" title="Uploads image." alt="" coords="761,133,995,173"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="707,149,747,150,747,155,707,155"/>
+</map>

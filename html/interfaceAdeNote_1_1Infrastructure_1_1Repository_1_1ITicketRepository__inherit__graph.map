@@ -1,0 +1,7 @@
+<map id="AdeNote.Infrastructure.Repository.ITicketRepository" name="AdeNote.Infrastructure.Repository.ITicketRepository">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,252,119"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1TicketRepository.html" title=" " alt="" coords="5,167,252,207"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,133,131,166,126,166,126,133"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="46,5,211,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,44,131,79,126,79,126,44"/>
+</map>

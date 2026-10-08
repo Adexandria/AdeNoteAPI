@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Repository.RecoveryCodeRepository" name="AdeNote.Infrastructure.Repository.RecoveryCodeRepository">
+<area shape="rect" id="Node000001" title=" " alt="" coords="103,152,350,192"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title=" " alt="" coords="5,79,221,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,110,201,150,198,154,140,114"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRecoveryCodeRepository.html" title=" " alt="" coords="246,79,437,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="314,114,256,154,253,150,311,110"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="231,5,451,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="344,44,344,79,339,79,339,44"/>
+</map>

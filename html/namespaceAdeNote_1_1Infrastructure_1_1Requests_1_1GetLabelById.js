@@ -1,0 +1,5 @@
+var namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById =
+[
+    [ "GetLabelByIdRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById_1_1GetLabelByIdRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById_1_1GetLabelByIdRequest" ],
+    [ "GetLabelByIdRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById_1_1GetLabelByIdRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById_1_1GetLabelByIdRequestHandler" ]
+];

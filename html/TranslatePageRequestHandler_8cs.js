@@ -1,0 +1,4 @@
+var TranslatePageRequestHandler_8cs =
+[
+    [ "AdeNote.Infrastructure.Requests.TranslatePage.TranslatePageRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequestHandler" ]
+];

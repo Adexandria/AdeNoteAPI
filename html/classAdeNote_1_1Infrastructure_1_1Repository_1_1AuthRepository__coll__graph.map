@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Repository.AuthRepository" name="AdeNote.Infrastructure.Repository.AuthRepository">
+<area shape="rect" id="Node000001" title=" " alt="" coords="39,168,285,208"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,185,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,115,151,166,146,169,109,118"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Db_1_1IdentityDbContext.html" title=" " alt="" coords="209,80,432,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="291,114,196,170,193,166,288,110"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="229,5,412,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="323,45,323,80,318,80,318,45"/>
+</map>

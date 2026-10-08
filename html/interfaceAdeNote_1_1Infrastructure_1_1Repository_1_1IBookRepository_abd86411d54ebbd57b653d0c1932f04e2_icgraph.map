@@ -1,0 +1,7 @@
+<map id="AdeNote.Infrastructure.Repository.IBookRepository.Update" name="AdeNote.Infrastructure.Repository.IBookRepository.Update">
+<area shape="rect" id="Node000001" title=" " alt="" coords="392,37,639,77"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateBook_1_1UpdateBookRequestHandler.html#a455db76810d603fcd5b09a016b05f6e5" title=" " alt="" coords="5,5,344,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="378,47,344,44,345,39,379,42"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#aa4549e4b1fb750fda6d39125832d48d1" title="Updates an existing book." alt="" coords="56,69,293,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="379,73,294,81,294,76,378,68"/>
+</map>

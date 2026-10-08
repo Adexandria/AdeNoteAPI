@@ -1,0 +1,5 @@
+var namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllPages =
+[
+    [ "GetAllPagesRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllPages_1_1GetAllPagesRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllPages_1_1GetAllPagesRequest" ],
+    [ "GetAllPagesRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllPages_1_1GetAllPagesRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllPages_1_1GetAllPagesRequestHandler" ]
+];

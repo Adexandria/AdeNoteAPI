@@ -1,0 +1,5 @@
+<map id="AdeNote.Controllers.BookController.ImportBooks" name="AdeNote.Controllers.BookController.ImportBooks">
+<area shape="rect" id="Node000001" title="Imports books into database." alt="" coords="5,5,196,45"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1IExcel.html#ad27783e12ffd0f783e61fdb63227639b" title=" " alt="" coords="244,5,477,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,23,231,23,231,28,196,28"/>
+</map>

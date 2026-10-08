@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.AuthService.GetUserQrCode" name="AdeNote.Infrastructure.Services.Authentication.AuthService.GetUserQrCode">
+<area shape="rect" id="Node000001" title="Gets user&#39;s Qr code." alt="" coords="5,69,309,109"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="366,5,595,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,67,365,45,366,51,260,72"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a66dce4af59c83bf41ad18a99676f9747" title="Get existings of a user." alt="" coords="357,69,604,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="310,87,344,87,344,92,310,92"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="360,133,601,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="260,107,366,128,365,133,259,112"/>
+</map>

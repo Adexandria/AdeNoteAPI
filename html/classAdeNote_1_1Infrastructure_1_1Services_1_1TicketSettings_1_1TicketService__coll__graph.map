@@ -1,0 +1,17 @@
+<map id="AdeNote.Infrastructure.Services.TicketSettings.TicketService" name="AdeNote.Infrastructure.Services.TicketSettings.TicketService">
+<area shape="rect" id="Node000001" title=" " alt="" coords="644,119,877,159"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1ITicketService.html" title=" " alt="" coords="287,5,400,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="414,29,467,41,545,57,621,78,718,117,716,122,619,83,543,62,466,46,413,34"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html" title=" " alt="" coords="220,55,467,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="481,94,644,119,643,124,480,99"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,63,171,88"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="184,73,220,73,220,78,184,78"/>
+<area shape="rect" id="Node000005" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html" title=" " alt="" coords="220,119,467,159"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="480,137,644,137,644,142,480,142"/>
+<area shape="rect" id="Node000006" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="10,127,166,152"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="180,137,220,137,220,142,180,142"/>
+<area shape="rect" id="Node000007" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html" title="An interface that includes the behaviour of cloud storage." alt="" coords="227,183,460,223"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="473,181,643,155,644,160,474,186"/>
+<area shape="rect" id="Node000008" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1EventSystem_1_1EventConfiguration.html" title=" " alt="" coords="225,247,461,287"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="455,242,536,222,619,197,716,157,718,162,621,202,538,227,457,247"/>
+</map>

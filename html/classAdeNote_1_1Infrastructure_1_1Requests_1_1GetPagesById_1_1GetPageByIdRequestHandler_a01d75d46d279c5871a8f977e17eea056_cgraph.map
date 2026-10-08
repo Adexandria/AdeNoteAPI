@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Requests.GetPagesById.GetPageByIdRequestHandler.Handle" name="AdeNote.Infrastructure.Requests.GetPagesById.GetPageByIdRequestHandler.Handle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,357,109"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html#a2bd2bfe8b1098e7d4c3b795362ffaa28" title="Gets an individual page from a particular book." alt="" coords="405,5,652,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="290,67,406,45,407,50,291,72"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a970597c6f3e586d64bfc44315d114220" title="Maps from page to PageDTO." alt="" coords="407,69,651,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="358,87,393,87,393,92,358,92"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="408,133,649,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="291,107,407,128,406,134,290,112"/>
+</map>

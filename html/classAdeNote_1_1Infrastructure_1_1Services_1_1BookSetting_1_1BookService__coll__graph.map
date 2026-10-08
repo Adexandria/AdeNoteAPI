@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Services.BookSetting.BookService" name="AdeNote.Infrastructure.Services.BookSetting.BookService">
+<area shape="rect" id="Node000001" title="Implementation of the interface." alt="" coords="5,79,239,119"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1IBookService.html" title="An interface that interacts with the controller." alt="" coords="69,5,175,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,44,125,79,119,79,119,44"/>
+</map>
