@@ -1,0 +1,15 @@
+<map id="AdeNote.Infrastructure.Services.ChatService.ChatService.GetSingleThread" name="AdeNote.Infrastructure.Services.ChatService.ChatService.GetSingleThread">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,125,300,165"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="354,5,583,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,123,263,89,347,55,371,47,373,52,349,60,266,94,194,128"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#aa7e3759f8fb78f56860a2e16e0c077c9" title=" " alt="" coords="352,93,585,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="300,128,338,124,339,129,300,133"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#a98fdda6865de259e632f9a202de6b19f" title=" " alt="" coords="352,157,585,197"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="300,158,339,162,338,167,300,163"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="348,221,589,261"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="213,163,349,207,378,215,376,220,347,212,211,168"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="411,94,408,84,417,74,437,69,469,67,505,69,524,77,522,82,503,75,469,72,438,74,420,79,413,85,416,92"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a9b9d0cf9a51b57518aead30a872705aa" title=" " alt="" coords="637,125,928,165"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="586,123,624,126,623,132,585,128"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="585,163,623,159,624,164,586,168"/>
+</map>

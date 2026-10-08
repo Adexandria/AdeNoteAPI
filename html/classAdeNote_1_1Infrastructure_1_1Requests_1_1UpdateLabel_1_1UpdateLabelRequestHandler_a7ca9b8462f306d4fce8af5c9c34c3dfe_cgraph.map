@@ -1,0 +1,11 @@
+<map id="AdeNote.Infrastructure.Requests.UpdateLabel.UpdateLabelRequestHandler.Handle" name="AdeNote.Infrastructure.Requests.UpdateLabel.UpdateLabelRequestHandler.Handle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,101,348,141"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="405,5,634,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="244,99,395,55,426,46,427,52,397,60,245,104"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html#a6db29659952c245758a98630401180f4" title="Get a particular label." alt="" coords="396,69,643,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="348,103,382,99,382,105,349,108"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="399,133,640,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="349,135,385,138,385,143,348,140"/>
+<area shape="rect" id="Node000005" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html#a35b8546fe0c8193d472377b516960473" title=" " alt="" coords="396,197,643,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="245,139,397,183,427,191,426,196,395,188,244,144"/>
+</map>

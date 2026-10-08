@@ -1,0 +1,11 @@
+<map id="AdeNote.Infrastructure.Requests.UpdateBook.UpdateBookRequestHandler.Handle" name="AdeNote.Infrastructure.Requests.UpdateBook.UpdateBookRequestHandler.Handle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,101,344,141"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="401,5,630,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="241,99,391,55,422,46,423,52,393,60,242,104"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#aaad00fb34e9d5819f94401fba82556d7" title="Get a particular book that belongs to a user." alt="" coords="392,69,639,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="344,103,378,100,378,105,344,108"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="395,133,636,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="344,135,381,138,381,143,344,140"/>
+<area shape="rect" id="Node000005" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#abd86411d54ebbd57b653d0c1932f04e2" title=" " alt="" coords="392,197,639,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="242,139,393,183,423,191,422,196,391,188,241,144"/>
+</map>

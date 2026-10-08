@@ -1,4 +1,5 @@
 <map id="AdeNote.Infrastructure.Requests.CreateLabel.CreateLabelRequestHandler" name="AdeNote.Infrastructure.Requests.CreateLabel.CreateLabelRequestHandler">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,292,136"/>
-<area shape="rect" id="node2" title=" " alt="" coords="37,5,260,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,93,292,133"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="37,5,260,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,59,151,93,146,93,146,59"/>
 </map>

@@ -1,6 +1,9 @@
 <map id="AdeNote.Infrastructure.Services.Blob.BlobService" name="AdeNote.Infrastructure.Services.Blob.BlobService">
-<area shape="rect" id="node1" title="Handles the implementation of cloud storage" alt="" coords="368,57,601,98"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html" title="An interface that includes the behaviour of cloud storage" alt="" coords="71,5,173,32"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IFileService.html" title=" " alt="" coords="5,57,239,98"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html" title="Contains configuration for blob storage" alt="" coords="7,122,237,163"/>
+<area shape="rect" id="Node000001" title="Handles the implementation of cloud storage." alt="" coords="368,55,601,95"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html" title="An interface that includes the behaviour of cloud storage." alt="" coords="71,5,173,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,25,368,54,367,60,186,31"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1BlobConfiguration.html" title="Contains configuration for blob storage." alt="" coords="7,55,237,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="250,73,367,73,367,78,250,78"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IFileService.html" title=" " alt="" coords="5,119,239,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="249,114,370,93,371,98,250,120"/>
 </map>

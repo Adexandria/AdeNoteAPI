@@ -1,3 +1,21 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classAdeNote_1_1Models_1_1DTOs_1_1LoginDTO.html" title=" " alt="" coords="5,5,240,32"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,285,149,310"/>
+<area shape="rect" id="Node000001" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1AllowAttribute.html" title=" " alt="" coords="227,5,475,45"/>
+<area shape="poly" id="edge187_Node000000_Node000001" title=" " alt="" coords="81,270,94,223,116,165,149,105,171,78,196,55,226,38,228,43,199,59,174,82,153,108,121,167,99,225,86,272"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ExpectedAttribute.html" title=" " alt="" coords="215,69,487,109"/>
+<area shape="poly" id="edge188_Node000000_Node000002" title=" " alt="" coords="86,271,102,236,126,195,157,154,196,119,218,107,221,112,199,124,161,157,130,198,107,239,91,273"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1PasswordAttribute.html" title=" " alt="" coords="215,133,488,173"/>
+<area shape="poly" id="edge189_Node000000_Node000003" title=" " alt="" coords="95,272,137,226,165,203,196,183,224,171,226,176,199,188,169,207,141,230,99,276"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidCollectionAttribute.html" title=" " alt="" coords="225,198,477,253"/>
+<area shape="poly" id="edge190_Node000000_Node000004" title=" " alt="" coords="138,278,197,263,245,250,246,255,198,268,139,284"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidDateTimeAttribute.html" title=" " alt="" coords="197,277,505,317"/>
+<area shape="poly" id="edge191_Node000000_Node000005" title=" " alt="" coords="163,295,197,295,197,300,163,300"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidGuidAttribute.html" title=" " alt="" coords="214,341,489,381"/>
+<area shape="poly" id="edge192_Node000000_Node000006" title=" " alt="" coords="137,311,198,327,251,339,250,344,197,332,136,316"/>
+<area shape="rect" id="Node000007" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidIntAttribute.html" title=" " alt="" coords="221,405,482,445"/>
+<area shape="poly" id="edge193_Node000000_Node000007" title=" " alt="" coords="102,318,144,356,171,375,198,391,229,403,227,408,196,396,168,380,141,360,98,322"/>
+<area shape="rect" id="Node000008" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidObjectAttribute.html" title=" " alt="" coords="208,469,495,509"/>
+<area shape="poly" id="edge194_Node000000_Node000008" title=" " alt="" coords="92,321,109,353,133,389,163,425,199,455,222,467,219,472,196,460,159,429,128,392,104,355,88,324"/>
+<area shape="rect" id="Node000009" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1ValidTicketIdAttribute.html" title=" " alt="" coords="204,533,499,573"/>
+<area shape="poly" id="edge195_Node000000_Node000009" title=" " alt="" coords="87,323,101,367,123,420,155,474,176,498,199,519,218,531,215,536,196,523,172,502,151,477,118,423,96,369,82,325"/>
 </map>

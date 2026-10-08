@@ -1,7 +1,11 @@
 <map id="AdeNote.Infrastructure.Extension.MappingService.BookConfig" name="AdeNote.Infrastructure.Extension.MappingService.BookConfig">
-<area shape="rect" id="node1" title="Maps from book entity to book dto" alt="" coords="411,104,653,145"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a70a77b72e449bc1c9ff03741737f30db" title="Get all books" alt="" coords="67,5,301,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a41b68bf14e0a3a5c8e42cff968254469" title="Get book by id" alt="" coords="63,71,305,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllBooks_1_1GetAllBooksRequestHandler.html#ace7dd94511ca7167956655b2867d904b" title=" " alt="" coords="15,136,353,177"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1GetBookdById_1_1GetBookByIdRequestHandler.html#ae19edb0d93c9bf29d3e80d8f342d923a" title=" " alt="" coords="5,201,363,243"/>
+<area shape="rect" id="Node000001" title="Maps from book entity to book dto." alt="" coords="411,101,653,141"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a827f4b940471aae6da656ae5848ea510" title="Get all books." alt="" coords="67,5,301,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="472,99,362,60,300,46,302,40,363,55,473,94"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a38f65c4486b187c6b2fca1f7865dacee" title="Get book by id." alt="" coords="63,69,305,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="396,112,306,103,306,98,397,106"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1GetAllBooks_1_1GetAllBooksRequestHandler.html#a9441dc04aae6d0a1480ee75cfbd99456" title=" " alt="" coords="15,133,353,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="397,136,354,140,354,135,397,131"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1GetBookdById_1_1GetBookByIdRequestHandler.html#a44a3d5a4fcbbf6f439e44d1f8da2e309" title=" " alt="" coords="5,197,363,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="473,149,363,188,313,200,312,195,362,183,472,144"/>
 </map>

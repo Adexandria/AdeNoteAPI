@@ -1,0 +1,5 @@
+<map id="AdeNote.Controllers.SubChatsController.DeleteSubTweet" name="AdeNote.Controllers.SubChatsController.DeleteSubTweet">
+<area shape="rect" id="Node000001" title="Deletes an existing thread." alt="" coords="5,5,224,45"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1IChatService.html#a1d13fcd18b51cc0ab3d4a6a57fd8579a" title=" " alt="" coords="272,5,575,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,23,258,23,258,28,224,28"/>
+</map>

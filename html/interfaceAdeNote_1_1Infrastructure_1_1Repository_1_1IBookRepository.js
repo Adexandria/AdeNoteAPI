@@ -1,7 +1,7 @@
 var interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository =
 [
-    [ "Add", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#abe1438c61f27c10033e8311dd50e1895", null ],
-    [ "GetAll", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#a78723e733a646d4c4307fcee749a94dc", null ],
-    [ "GetAsync", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#ab18880eba0d7d3571eb09ccf7d7070dc", null ],
-    [ "Update", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#a6885eed7854db14e541e2e3d8d06a883", null ]
+    [ "Add", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#a1d47bf202e62ad713309a9abb76445fd", null ],
+    [ "GetAll", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#a780fc8db1a1bd6598055e95e7408205c", null ],
+    [ "GetAsync", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#aaad00fb34e9d5819f94401fba82556d7", null ],
+    [ "Update", "interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#abd86411d54ebbd57b653d0c1932f04e2", null ]
 ];

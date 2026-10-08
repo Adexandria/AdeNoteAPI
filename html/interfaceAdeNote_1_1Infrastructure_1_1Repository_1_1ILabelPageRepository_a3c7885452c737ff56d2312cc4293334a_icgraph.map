@@ -1,0 +1,7 @@
+<map id="AdeNote.Infrastructure.Repository.ILabelPageRepository.GetLabel" name="AdeNote.Infrastructure.Repository.ILabelPageRepository.GetLabel">
+<area shape="rect" id="Node000001" title="Gets a particular label of a page." alt="" coords="372,49,619,89"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemovePageLabel_1_1RemovePageLabelRequestHandler.html#ae41676836f38e1b24c409df97f0f1576" title=" " alt="" coords="5,5,324,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="358,56,324,53,325,47,359,51"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a8c1e00a31fff5fc606ed83cb1cca12a5" title="Removes a particular label from a page." alt="" coords="8,85,321,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="359,86,322,90,321,85,358,81"/>
+</map>

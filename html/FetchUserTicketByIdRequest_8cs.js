@@ -1,0 +1,4 @@
+var FetchUserTicketByIdRequest_8cs =
+[
+    [ "AdeNote.Infrastructure.Requests.FetchUserTicketById.FetchUserTicketByIdRequest", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequest.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequest" ]
+];

@@ -1,5 +1,7 @@
 <map id="AdeNote.Infrastructure.Extension.MappingService.TicketStreamConfig" name="AdeNote.Infrastructure.Extension.MappingService.TicketStreamConfig">
-<area shape="rect" id="node1" title=" " alt="" coords="396,39,653,80"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a07d99b135390bfc450eb3cef6c079939" title=" " alt="" coords="31,5,322,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateTicket_1_1CreateTicketRequestHandler.html#a529f72388b4794c7d82977940c3b4a13" title=" " alt="" coords="5,71,348,112"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="396,37,653,77"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a98c983d7f9bc9a086db180f791cd2785" title=" " alt="" coords="31,5,322,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="382,47,322,41,323,36,382,42"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateTicket_1_1CreateTicketRequestHandler.html#a63c66ebe22de251bdfef52dcf4f9e111" title=" " alt="" coords="5,69,348,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="382,73,348,76,348,71,382,68"/>
 </map>

@@ -1,0 +1,11 @@
+<map id="AdeNote.Infrastructure.Requests.RemoveBook.RemoveBookRequestHandler.Handle" name="AdeNote.Infrastructure.Requests.RemoveBook.RemoveBookRequestHandler.Handle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,101,359,141"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="415,5,645,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,99,406,55,438,46,439,51,407,60,252,104"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#aaad00fb34e9d5819f94401fba82556d7" title="Get a particular book that belongs to a user." alt="" coords="407,69,653,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="359,102,393,99,393,105,359,108"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#a84a23bc85f97a76d890f1e847e540f58" title="Remove an existing object." alt="" coords="407,133,653,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="359,135,393,138,393,143,359,140"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="409,197,651,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="252,139,407,183,439,191,438,196,406,188,251,144"/>
+</map>

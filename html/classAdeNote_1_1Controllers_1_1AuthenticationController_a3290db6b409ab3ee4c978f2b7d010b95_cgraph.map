@@ -1,9 +1,15 @@
 <map id="AdeNote.Controllers.AuthenticationController.LoginUser" name="AdeNote.Controllers.AuthenticationController.LoginUser">
-<area shape="rect" id="node1" title=" " alt="" coords="5,196,257,237"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#aaf76f4e77c5e74af2928f3296f7828ed" title="Add data to cookie" alt="" coords="333,5,585,47"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a16f0fab35e143dc859418eae87729007" title=" " alt="" coords="325,71,592,127"/>
-<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#aaf94eb652fece547262e34ca1b5edbb3" title="Checks if MFA has been enabled for the user using user id." alt="" coords="305,151,612,207"/>
-<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#af9faa7aced51916bf533fdfd0fbbad21" title=" " alt="" coords="323,232,595,273"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a5bc24a38f2a0d984148fd747b4d5c226" title=" " alt="" coords="333,297,585,339"/>
-<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a25598edc4b5b0b7d8d2e2e92dc50273c" title=" " alt="" coords="338,363,579,404"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,192,257,232"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#aaf76f4e77c5e74af2928f3296f7828ed" title="Add data to cookie." alt="" coords="333,5,585,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,190,211,123,255,86,304,55,321,48,323,52,307,60,258,90,214,127,151,194"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#ada25ea4d4b922729a55e1ff31d91baa1" title=" " alt="" coords="325,70,592,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="172,190,234,161,304,133,327,126,329,131,306,139,236,166,174,194"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#ae344d9491ec91504dd03947fb2a5d6cc" title="Checks if MFA has been enabled for the user using user id." alt="" coords="305,149,612,203"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="257,195,291,192,292,197,258,201"/>
+<area shape="rect" id="Node000005" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#ac293f35bc28371be6916db211ebea56c" title=" " alt="" coords="323,228,595,268"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="258,223,309,229,309,234,257,229"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a5bc24a38f2a0d984148fd747b4d5c226" title=" " alt="" coords="333,292,585,332"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="178,230,239,254,306,277,339,286,337,291,305,283,237,259,176,234"/>
+<area shape="rect" id="Node000007" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="338,356,579,396"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="154,230,219,286,261,316,306,342,326,349,324,354,304,346,258,321,215,290,151,234"/>
 </map>

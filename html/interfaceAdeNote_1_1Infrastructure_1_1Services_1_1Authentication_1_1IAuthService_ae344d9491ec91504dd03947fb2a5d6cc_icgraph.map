@@ -1,0 +1,21 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.IAuthService.IsAuthenticatorEnabled" name="AdeNote.Infrastructure.Services.Authentication.IAuthService.IsAuthenticatorEnabled">
+<area shape="rect" id="Node000001" title="Checks if MFA has been enabled for the user using user id." alt="" coords="616,190,923,245"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#af89f7d11b88492cfb39f5201baf1d139" title="Logins user using recovery codes." alt="" coords="311,5,563,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="730,182,658,119,614,87,567,60,538,48,540,43,569,55,617,82,661,115,733,178"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="311,69,563,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="705,186,639,154,567,124,529,112,530,107,569,119,642,149,707,181"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#acaa5f87507dfb79ece675c094804521f" title="Sends one time password via sms." alt="" coords="311,133,563,173"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="613,190,541,176,542,171,614,185"/>
+<area shape="rect" id="Node000007" href="$classAdeNote_1_1Controllers_1_1UserController.html#a28aec2b9e6837acc9bba3025583b3bea" title="Sets up two factor authentication using google authenticator app." alt="" coords="305,197,568,237"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="602,220,568,220,568,215,602,215"/>
+<area shape="rect" id="Node000008" href="$classAdeNote_1_1Controllers_1_1UserController.html#a1e52f1adf9d7f4447c858b444737dd1d" title="Sets up two factor authentication using sms." alt="" coords="315,261,559,301"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="614,250,542,264,541,259,613,245"/>
+<area shape="rect" id="Node000009" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a35eed64a9ab6173c277a62e717692ac0" title="Logins user using passwordless method." alt="" coords="311,325,563,365"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="707,254,642,286,569,316,530,328,529,323,567,311,639,281,705,249"/>
+<area shape="rect" id="Node000010" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a2d92fff538cd050f6612ff1a1e716c4b" title="Verifies sms code." alt="" coords="311,389,563,429"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="733,257,661,320,617,352,569,380,540,392,538,387,567,375,614,348,658,316,730,253"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user." alt="" coords="5,37,257,77"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="297,77,257,73,258,68,297,72"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a4dff5edd84fdf52b1f6f78c853ad7fe4" title="Logins user." alt="" coords="5,101,257,141"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="297,107,258,111,257,105,297,101"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="AdeNote.Infrastructure.Repository.ILabelRepository.Update" name="AdeNote.Infrastructure.Repository.ILabelRepository.Update">
+<area shape="rect" id="Node000001" title=" " alt="" coords="396,37,643,77"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdateLabel_1_1UpdateLabelRequestHandler.html#a7ca9b8462f306d4fce8af5c9c34c3dfe" title=" " alt="" coords="5,5,348,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="382,47,348,44,349,39,382,42"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a404d636c57c31fe160dc33dd0a0ef11a" title="Updates an existing label." alt="" coords="53,69,301,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="382,73,301,80,301,75,382,67"/>
+</map>

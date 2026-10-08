@@ -1,6 +1,9 @@
 <map id="AdeNote.Infrastructure.Requests.CreateLabel.CreateLabelRequestHandler" name="AdeNote.Infrastructure.Requests.CreateLabel.CreateLabelRequestHandler">
-<area shape="rect" id="node1" title=" " alt="" coords="617,37,904,79"/>
-<area shape="rect" id="node2" title=" " alt="" coords="228,5,451,47"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html" title="An interface that includes label object" alt="" coords="216,71,463,112"/>
-<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,78,167,105"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="617,37,904,77"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="228,5,451,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="465,32,618,44,617,49,464,37"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html" title="An interface that includes label object." alt="" coords="216,69,463,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="476,76,617,66,617,71,477,82"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,77,167,102"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="180,87,216,87,216,92,180,92"/>
 </map>

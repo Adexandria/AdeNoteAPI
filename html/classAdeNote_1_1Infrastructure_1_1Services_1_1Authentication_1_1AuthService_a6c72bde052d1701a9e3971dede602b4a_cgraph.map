@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.AuthService.IsTokenRevoked" name="AdeNote.Infrastructure.Services.Authentication.AuthService.IsTokenRevoked">
+<area shape="rect" id="Node000001" title="Checks if refresh token is revoked." alt="" coords="5,62,256,117"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="334,5,563,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="256,62,335,45,336,51,257,67"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRefreshTokenRepository.html#a7954bd922182de1a23271918cf9ed0b7" title="Checks if token has been revoked." alt="" coords="304,69,593,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="256,87,290,87,290,92,256,92"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="328,133,569,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="257,112,336,128,335,133,256,117"/>
+</map>

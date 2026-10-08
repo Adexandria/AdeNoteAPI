@@ -1,7 +1,11 @@
 <map id="AdeNote.Controllers.DashboardController" name="AdeNote.Controllers.DashboardController">
-<area shape="rect" id="node1" title=" " alt="" coords="567,57,793,98"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1BaseController.html" title="A base controller" alt="" coords="231,5,349,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,124,32"/>
-<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Statistics_1_1IStatisticsService.html" title=" " alt="" coords="173,57,407,98"/>
-<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1IUserService.html" title=" " alt="" coords="173,122,407,163"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="567,55,793,95"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Controllers_1_1BaseController.html" title="A base controller." alt="" coords="231,5,349,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="363,26,567,56,566,61,363,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,124,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="138,15,231,15,231,21,138,21"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1IUserService.html" title=" " alt="" coords="173,55,407,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="421,73,566,73,566,78,421,78"/>
+<area shape="rect" id="Node000005" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Statistics_1_1IStatisticsService.html" title=" " alt="" coords="173,119,407,159"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="420,115,566,91,567,97,421,121"/>
 </map>

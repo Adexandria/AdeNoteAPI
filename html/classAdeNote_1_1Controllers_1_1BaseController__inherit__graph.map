@@ -1,13 +1,23 @@
 <map id="AdeNote.Controllers.BaseController" name="AdeNote.Controllers.BaseController">
-<area shape="rect" id="node1" title="A base controller" alt="" coords="172,267,361,308"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html" title="This handles the authentication." alt="" coords="409,5,661,47"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Controllers_1_1BookController.html" title="Handles all the end points for book. User can create,update,fetch and delete books" alt="" coords="440,71,631,112"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Controllers_1_1ChatController.html" title=" " alt="" coords="442,136,629,177"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Controllers_1_1DashboardController.html" title=" " alt="" coords="422,201,649,243"/>
-<area shape="rect" id="node7" href="$classAdeNote_1_1Controllers_1_1LabelController.html" title="Handles creating, updating and deleting a label" alt="" coords="439,267,631,308"/>
-<area shape="rect" id="node8" href="$classAdeNote_1_1Controllers_1_1PageController.html" title="Handles the page management for a particular book." alt="" coords="441,332,629,373"/>
-<area shape="rect" id="node9" href="$classAdeNote_1_1Controllers_1_1SubChatsController.html" title=" " alt="" coords="426,397,645,439"/>
-<area shape="rect" id="node10" href="$classAdeNote_1_1Controllers_1_1TicketController.html" title=" " alt="" coords="437,463,633,504"/>
-<area shape="rect" id="node11" href="$classAdeNote_1_1Controllers_1_1UserController.html" title=" " alt="" coords="442,528,629,569"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,274,124,301"/>
+<area shape="rect" id="Node000001" title="A base controller." alt="" coords="172,261,361,301"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html" title="This handles the authentication." alt="" coords="409,5,661,45"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="277,248,296,204,324,152,361,99,383,76,408,55,428,43,431,48,411,60,387,80,365,103,328,154,301,206,282,250"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Controllers_1_1BookController.html" title="Handles all the end points for book. User can create,update,fetch and delete books." alt="" coords="440,69,631,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="285,248,335,182,369,148,408,119,438,105,441,109,411,124,373,152,339,186,290,251"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Controllers_1_1ChatController.html" title=" " alt="" coords="442,133,629,173"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="301,251,350,215,408,183,441,171,442,176,410,188,353,220,304,255"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Controllers_1_1DashboardController.html" title=" " alt="" coords="422,197,649,237"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="364,255,450,235,451,240,365,261"/>
+<area shape="rect" id="Node000007" href="$classAdeNote_1_1Controllers_1_1LabelController.html" title="Handles creating, updating and deleting a label." alt="" coords="439,261,631,301"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="375,279,439,279,439,284,375,284"/>
+<area shape="rect" id="Node000008" href="$classAdeNote_1_1Controllers_1_1PageController.html" title="Handles the page management for a particular book." alt="" coords="441,325,629,365"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="365,302,451,323,450,328,364,307"/>
+<area shape="rect" id="Node000009" href="$classAdeNote_1_1Controllers_1_1SubChatsController.html" title=" " alt="" coords="426,389,645,429"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="304,308,353,343,410,375,442,387,440,392,408,380,350,347,301,312"/>
+<area shape="rect" id="Node000010" href="$classAdeNote_1_1Controllers_1_1TicketController.html" title=" " alt="" coords="437,453,633,493"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="290,311,339,377,373,411,411,439,438,452,436,457,408,444,369,415,335,380,285,315"/>
+<area shape="rect" id="Node000011" href="$classAdeNote_1_1Controllers_1_1UserController.html" title=" " alt="" coords="442,517,629,557"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="282,313,301,357,328,408,365,460,387,483,411,503,443,520,441,525,408,508,383,487,361,463,324,411,296,359,277,315"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,269,124,294"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,279,172,279,172,284,138,284"/>
 </map>

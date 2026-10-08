@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Services.Blob.BlobService.UploadImage" name="AdeNote.Infrastructure.Services.Blob.BlobService.UploadImage">
+<area shape="rect" id="Node000001" title="Uploads image." alt="" coords="5,69,239,109"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#a2b58d9e2f0a9f1620098091f29101f9f" title="Generates uri." alt="" coords="325,5,569,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,67,331,45,332,51,225,72"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#aab00a6c42eda5e5780ae66f1a25d3938" title="Creates a shared key for the account." alt="" coords="287,69,607,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="239,87,273,87,273,92,239,92"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IFileService.html#a51861f71350a05868163b67fa5391ec1" title="Uploads image." alt="" coords="330,133,563,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="225,107,332,128,331,133,224,112"/>
+</map>

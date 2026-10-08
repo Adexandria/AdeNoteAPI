@@ -1,0 +1,11 @@
+<map id="AdeNote.Infrastructure.Requests.GetBookdById.GetBookByIdRequestHandler.Handle" name="AdeNote.Infrastructure.Requests.GetBookdById.GetBookByIdRequestHandler.Handle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,101,363,141"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#aa1ceea29022f2cc41c7a148c92a45410" title="Maps from book entity to book dto." alt="" coords="413,5,655,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="254,99,410,55,442,46,443,51,411,60,255,104"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="419,69,649,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="363,102,405,98,406,104,363,108"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#aaad00fb34e9d5819f94401fba82556d7" title="Get a particular book that belongs to a user." alt="" coords="411,133,657,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="363,135,397,138,397,143,363,140"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="413,197,655,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="255,139,411,183,443,191,442,196,410,188,254,144"/>
+</map>

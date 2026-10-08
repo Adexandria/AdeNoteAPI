@@ -1,0 +1,15 @@
+<map id="AdeNote.Infrastructure.Services.PageSettings.PageService.RemoveAllPageLabels" name="AdeNote.Infrastructure.Services.PageSettings.PageService.RemoveAllPageLabels">
+<area shape="rect" id="Node000001" title="Removes all labels from a page." alt="" coords="5,158,269,213"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html#a2cdfdef2ec9d9626466893fcd0581e75" title="Deletes labels from a page." alt="" coords="317,5,631,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,156,232,104,273,77,316,55,336,47,338,52,318,60,276,82,235,108,170,160"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="359,69,589,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="207,155,317,119,351,110,353,115,318,124,209,160"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#aaad00fb34e9d5819f94401fba82556d7" title="Get a particular book that belongs to a user." alt="" coords="351,133,597,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="269,170,336,164,337,169,270,175"/>
+<area shape="rect" id="Node000005" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html#a2bd2bfe8b1098e7d4c3b795362ffaa28" title="Gets an individual page from a particular book." alt="" coords="351,197,597,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="270,195,337,202,336,207,269,201"/>
+<area shape="rect" id="Node000006" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelPageRepository.html#a63bdc1fdda96f3ac69b7a092ec95949e" title="Gets all labels in a page." alt="" coords="351,261,597,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="209,210,318,247,353,256,351,261,317,252,207,215"/>
+<area shape="rect" id="Node000007" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="353,325,595,365"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="170,211,235,262,276,289,318,311,341,319,339,324,316,316,273,293,232,267,167,215"/>
+</map>

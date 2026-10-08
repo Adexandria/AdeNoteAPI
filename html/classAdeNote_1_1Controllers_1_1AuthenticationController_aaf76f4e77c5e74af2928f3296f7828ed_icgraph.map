@@ -1,10 +1,17 @@
 <map id="AdeNote.Controllers.AuthenticationController.AddToCookie" name="AdeNote.Controllers.AuthenticationController.AddToCookie">
-<area shape="rect" id="node1" title="Add data to cookie" alt="" coords="605,136,857,177"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9cd1153f2138c6bbf15d6e8b888d77b2" title="Logins user using recovery codes" alt="" coords="305,5,557,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="305,71,557,112"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3194efae2091c141a13a085de9072ac8" title="Logins user using passwordless method" alt="" coords="305,136,557,177"/>
-<area shape="rect" id="node7" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a8d610717757937c399997cffac62b060" title="Verifies sms code" alt="" coords="305,201,557,243"/>
-<area shape="rect" id="node8" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a9ff673c8d9c0ed05e50eba0bd702f6fe" title="Verifies time based One time password" alt="" coords="305,267,557,308"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user" alt="" coords="5,39,257,80"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,104,257,145"/>
+<area shape="rect" id="Node000001" title="Add data to cookie." alt="" coords="605,133,857,173"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#af89f7d11b88492cfb39f5201baf1d139" title="Logins user using recovery codes." alt="" coords="305,5,557,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="687,128,626,93,556,60,522,48,523,43,558,55,629,88,689,124"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="305,69,557,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="623,133,525,112,526,107,624,128"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a35eed64a9ab6173c277a62e717692ac0" title="Logins user using passwordless method." alt="" coords="305,133,557,173"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="592,156,558,156,558,151,592,151"/>
+<area shape="rect" id="Node000007" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a2d92fff538cd050f6612ff1a1e716c4b" title="Verifies sms code." alt="" coords="305,197,557,237"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="624,179,526,200,525,195,623,174"/>
+<area shape="rect" id="Node000008" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#af70d9c5aee8794cdeaa32e00565b7b04" title="Verifies time based One time password." alt="" coords="305,261,557,301"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="689,183,629,218,558,252,523,264,522,259,556,247,626,214,687,178"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user." alt="" coords="5,37,257,77"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="292,77,257,73,258,68,292,72"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a4dff5edd84fdf52b1f6f78c853ad7fe4" title="Logins user." alt="" coords="5,101,257,141"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="292,107,258,111,257,105,292,102"/>
 </map>

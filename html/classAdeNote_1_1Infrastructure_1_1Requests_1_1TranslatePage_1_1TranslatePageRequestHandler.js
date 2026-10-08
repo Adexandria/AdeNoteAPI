@@ -1,7 +1,7 @@
 var classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequestHandler =
 [
     [ "TranslatePageRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequestHandler.html#add362537ea164b5f53e13dcc7c214b4e", null ],
-    [ "Handle", "classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequestHandler.html#a04606902d9cb75fe68d383ba37be5ab0", null ],
+    [ "Handle", "classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequestHandler.html#a9da36682a147f8fd64b1fd0dc0528484", null ],
     [ "_bookCacheKey", "classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequestHandler.html#aaa2a78c78c5741511eb11536e92417d7", null ],
     [ "_pageCacheKey", "classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequestHandler.html#afa485a9239429ed3459227dc7dd8167e", null ],
     [ "bookRepository", "classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequestHandler.html#a0e91e6b59dc070b9b2469e2178b1eb34", null ],

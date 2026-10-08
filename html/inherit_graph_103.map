@@ -1,3 +1,25 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1SSO_1_1AzureAdConfiguration.html" title=" " alt="" coords="5,5,235,47"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="46,5,171,31"/>
+<area shape="rect" id="Node000001" href="$classAdeNote_1_1Models_1_1User.html" title=" " alt="" coords="292,5,455,31"/>
+<area shape="poly" id="edge76_Node000000_Node000001" title=" " alt="" coords="185,15,292,15,292,21,185,21"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Models_1_1IBaseEntity.html" title=" " alt="" coords="5,227,212,252"/>
+<area shape="poly" id="edge85_Node000002_Node000001" title=" " alt="" coords="119,213,140,174,171,127,211,79,259,40,290,26,293,30,261,44,215,83,175,130,145,176,124,215"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Models_1_1BaseClass.html" title="A base class that includes the id." alt="" coords="273,55,473,80"/>
+<area shape="poly" id="edge77_Node000002_Node000003" title=" " alt="" coords="125,214,179,151,217,117,259,89,286,78,288,83,261,94,220,121,183,155,129,217"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Models_1_1Book.html" title="A book object." alt="" coords="290,104,457,129"/>
+<area shape="poly" id="edge78_Node000002_Node000004" title=" " alt="" coords="134,216,189,176,259,138,293,127,295,132,261,143,192,181,137,220"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Models_1_1HangfireUser.html" title=" " alt="" coords="264,153,483,179"/>
+<area shape="poly" id="edge79_Node000002_Node000005" title=" " alt="" coords="157,219,259,187,306,176,307,181,261,193,159,225"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Models_1_1Label.html" title="A label model." alt="" coords="289,203,457,228"/>
+<area shape="poly" id="edge80_Node000002_Node000006" title=" " alt="" coords="225,226,289,220,289,226,226,231"/>
+<area shape="rect" id="Node000007" href="$classAdeNote_1_1Models_1_1Page.html" title="Page model." alt="" coords="291,252,455,277"/>
+<area shape="poly" id="edge81_Node000002_Node000007" title=" " alt="" coords="226,248,292,254,291,260,225,253"/>
+<area shape="rect" id="Node000008" href="$classAdeNote_1_1Models_1_1RecoveryCode.html" title=" " alt="" coords="260,301,487,327"/>
+<area shape="poly" id="edge82_Node000002_Node000008" title=" " alt="" coords="159,254,261,286,311,299,310,304,259,291,157,259"/>
+<area shape="rect" id="Node000009" href="$classAdeNote_1_1Models_1_1RefreshToken.html" title=" " alt="" coords="263,351,483,376"/>
+<area shape="poly" id="edge83_Node000002_Node000009" title=" " alt="" coords="137,258,192,298,261,336,299,348,297,353,259,340,190,302,134,263"/>
+<area shape="rect" id="Node000010" href="$classAdeNote_1_1Models_1_1Ticket.html" title=" " alt="" coords="287,400,459,425"/>
+<area shape="poly" id="edge84_Node000002_Node000010" title=" " alt="" coords="129,261,183,324,220,357,261,385,292,397,289,402,259,390,217,361,179,328,125,265"/>
+<area shape="rect" id="Node000011" href="$classAdeNote_1_1Models_1_1Video.html" title=" " alt="" coords="288,449,459,475"/>
+<area shape="poly" id="edge86_Node000002_Node000011" title=" " alt="" coords="124,263,145,302,176,349,215,395,261,434,289,447,286,452,259,439,211,399,171,352,141,305,119,266"/>
 </map>

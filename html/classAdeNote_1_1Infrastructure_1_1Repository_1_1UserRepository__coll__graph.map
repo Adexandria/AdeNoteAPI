@@ -1,7 +1,11 @@
 <map id="AdeNote.Infrastructure.Repository.UserRepository" name="AdeNote.Infrastructure.Repository.UserRepository">
-<area shape="rect" id="node1" title=" " alt="" coords="59,171,305,212"/>
-<area shape="rect" id="node2" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html" title=" " alt="" coords="20,81,147,108"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,5,161,32"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Db_1_1IdentityDbContext.html" title=" " alt="" coords="171,81,393,108"/>
-<area shape="rect" id="node5" title=" " alt="" coords="191,5,373,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="59,168,305,208"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html" title=" " alt="" coords="20,80,147,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,113,164,166,160,170,104,117"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,5,161,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="86,45,86,80,81,80,81,45"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Db_1_1IdentityDbContext.html" title=" " alt="" coords="171,80,393,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="261,117,204,170,201,166,258,113"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="191,5,373,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="285,45,285,80,279,80,279,45"/>
 </map>

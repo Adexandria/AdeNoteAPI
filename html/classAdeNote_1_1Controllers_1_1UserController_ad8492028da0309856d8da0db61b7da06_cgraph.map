@@ -1,0 +1,7 @@
+<map id="AdeNote.Controllers.UserController.VerifyPhoneNumber" name="AdeNote.Controllers.UserController.VerifyPhoneNumber">
+<area shape="rect" id="Node000001" title="Verifies phone number." alt="" coords="5,53,224,93"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a954bb36d128c5d8e63f59e391bbaa0e3" title="Checks if a phone number has been verified." alt="" coords="272,5,531,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,55,258,50,259,55,225,60"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#acffe0cc2f1ea746da62b1923d2d159f1" title="Sets up phone number." alt="" coords="279,84,523,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="225,85,266,90,266,96,224,90"/>
+</map>

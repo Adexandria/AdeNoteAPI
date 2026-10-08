@@ -1,0 +1,11 @@
+<map id="AdeNote.Infrastructure.Requests.GetLabelById.GetLabelByIdRequestHandler.Handle" name="AdeNote.Infrastructure.Requests.GetLabelById.GetLabelByIdRequestHandler.Handle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,101,359,141"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="425,5,655,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="250,99,406,55,440,46,441,51,407,60,251,104"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ILabelRepository.html#a19a11b5f241d3434288657785c388799" title="Get a particular label with no tracking." alt="" coords="407,69,673,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="359,103,392,100,393,105,359,108"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a4a72d00573a170e6e1e5bc3736135280" title="Maps from label to label dto." alt="" coords="419,133,661,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="359,134,405,139,404,144,359,140"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="419,197,661,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="251,139,407,183,441,191,440,197,406,188,250,144"/>
+</map>

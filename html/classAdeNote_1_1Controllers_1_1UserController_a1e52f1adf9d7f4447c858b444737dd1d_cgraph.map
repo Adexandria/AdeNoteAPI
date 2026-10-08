@@ -1,0 +1,9 @@
+<map id="AdeNote.Controllers.UserController.SetUpSmsAuthenticator" name="AdeNote.Controllers.UserController.SetUpSmsAuthenticator">
+<area shape="rect" id="Node000001" title="Sets up two factor authentication using sms." alt="" coords="5,91,249,131"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#ae344d9491ec91504dd03947fb2a5d6cc" title="Checks if MFA has been enabled for the user using user id." alt="" coords="297,5,604,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,89,323,61,325,66,211,94"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a954bb36d128c5d8e63f59e391bbaa0e3" title="Checks if a phone number has been verified." alt="" coords="321,84,580,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="249,109,308,109,308,114,249,114"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a8e5f1f950133b3e64afdc0a11212c017" title="Sets up MFA using sms authentication." alt="" coords="323,163,579,217"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="211,129,325,157,323,162,210,134"/>
+</map>

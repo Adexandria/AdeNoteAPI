@@ -1,7 +1,11 @@
 <map id="AdeNote.Infrastructure.Services.Blob.BlobService.GenerateStorageCredentials" name="AdeNote.Infrastructure.Services.Blob.BlobService.GenerateStorageCredentials">
-<area shape="rect" id="node1" title="Creates a shared key for the account" alt="" coords="301,104,621,145"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#a223eccf657966a2ca46ec3cac523b45b" title="Deletes Image" alt="" coords="13,5,246,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#a884ca17d313521ae1aee777688f5e23f" title="Downloads image" alt="" coords="8,71,251,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#a7132b5bd25ca50c037521c469a868e5f" title="Downloads image" alt="" coords="5,136,253,177"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#a4b677a50e60fdd5621674537f536e7ce" title="Uploads image" alt="" coords="13,201,246,243"/>
+<area shape="rect" id="Node000001" title="Creates a shared key for the account." alt="" coords="301,101,621,141"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#a363228405ba7cb2008d498164a744fae" title="Deletes Image." alt="" coords="13,5,246,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="384,100,253,60,209,48,211,43,254,55,386,95"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#a9a95011811ff707dbf66768f7762a974" title="Downloads image." alt="" coords="8,69,251,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="287,107,251,104,251,98,288,102"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#a474f3d7a132e6007189cbc9c23498028" title="Downloads image." alt="" coords="5,133,253,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="288,141,254,144,253,139,287,135"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#af08e539a43a707519a0f65922a66bb43" title="Uploads image." alt="" coords="13,197,246,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="386,148,254,188,211,200,209,195,253,183,384,143"/>
 </map>

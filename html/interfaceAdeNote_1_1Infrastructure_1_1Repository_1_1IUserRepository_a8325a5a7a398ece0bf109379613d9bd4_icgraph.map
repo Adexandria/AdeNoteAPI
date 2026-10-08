@@ -1,5 +1,7 @@
 <map id="AdeNote.Infrastructure.Repository.IUserRepository.IsExist" name="AdeNote.Infrastructure.Repository.IUserRepository.IsExist">
-<area shape="rect" id="node1" title=" " alt="" coords="317,39,564,80"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html#aae173c5cd92dd8a883fc015f62e4cd55" title=" " alt="" coords="5,5,269,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#ac2faafb896337c6592083798c6a3c610" title=" " alt="" coords="7,71,268,112"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="317,37,564,77"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1UserService.html#a43e9fdde7f04fcd1f8d4fcdd1d58f81b" title=" " alt="" coords="5,5,269,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="303,46,269,42,270,37,304,40"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a43aa2924e4b09bacb2956f4e578cf5cc" title=" " alt="" coords="7,69,268,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="304,74,268,78,268,73,303,69"/>
 </map>

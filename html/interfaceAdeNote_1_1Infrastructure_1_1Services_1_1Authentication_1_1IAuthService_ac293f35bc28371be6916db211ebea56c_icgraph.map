@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.IAuthService.LoginUser" name="AdeNote.Infrastructure.Services.Authentication.IAuthService.LoginUser">
+<area shape="rect" id="Node000001" title=" " alt="" coords="605,37,877,77"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="305,37,557,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="592,60,558,60,558,55,592,55"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user." alt="" coords="5,5,257,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="292,45,257,41,258,36,292,40"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a4dff5edd84fdf52b1f6f78c853ad7fe4" title="Logins user." alt="" coords="5,69,257,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="292,75,258,79,257,73,292,70"/>
+</map>

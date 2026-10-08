@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classAdeNote_1_1Models_1_1DTOs_1_1CreateUserDTO.html" title=" " alt="" coords="5,5,220,47"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,13,111,38"/>
+<area shape="rect" id="Node000001" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ExcelSettings_1_1ExportEntity.html" title=" " alt="" coords="159,5,391,45"/>
+<area shape="poly" id="edge172_Node000000_Node000001" title=" " alt="" coords="124,23,159,23,159,28,124,28"/>
 </map>

@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Services.Excel.ExcelService.ImportEntities" name="AdeNote.Infrastructure.Services.Excel.ExcelService.ImportEntities">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,245,109"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1IBookService.html#a6d79e61246c600f3f8cc998261ead997" title="Adds a new book." alt="" coords="297,5,531,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,67,309,46,310,51,217,72"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="299,69,529,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="245,87,286,87,286,92,245,92"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="293,133,535,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="217,107,310,128,309,133,216,112"/>
+</map>

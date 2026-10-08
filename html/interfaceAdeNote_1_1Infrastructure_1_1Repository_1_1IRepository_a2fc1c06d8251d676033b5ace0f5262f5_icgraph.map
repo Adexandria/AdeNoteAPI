@@ -1,0 +1,28 @@
+<map id="AdeNote.Infrastructure.Repository.IRepository.Add" name="AdeNote.Infrastructure.Repository.IRepository.Add">
+<area shape="rect" id="Node000001" title="Saves a new entity." alt="" coords="792,364,1039,404"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#ad326f4867a0751325140061e0b3a01e1" title="Adds a new page to a book." alt="" coords="445,5,679,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="904,351,886,287,855,207,833,166,808,126,777,90,742,60,712,43,678,32,680,27,714,38,746,55,781,87,812,123,838,163,860,205,891,286,909,350"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a51219de29974fa04f3dd94dba296779b" title="Adds new label." alt="" coords="445,69,679,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="900,352,879,300,845,238,800,175,773,147,743,124,712,108,678,98,680,93,714,103,745,119,776,143,804,171,850,235,883,298,905,350"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a98c983d7f9bc9a086db180f791cd2785" title=" " alt="" coords="417,133,707,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="894,353,869,314,835,269,792,224,743,188,707,172,709,167,745,183,796,220,839,265,873,311,899,351"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#ac2a21717774cacaa37b802400934b706" title=" " alt="" coords="431,198,693,253"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="880,357,818,311,782,288,743,268,693,250,694,245,745,263,784,283,821,306,883,353"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateLabel_1_1CreateLabelRequestHandler.html#ab6715dc3835aa8bcca0c50dedc26126e" title=" " alt="" coords="395,277,729,317"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="833,363,743,339,662,320,663,315,745,333,834,358"/>
+<area shape="rect" id="Node000007" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreatePage_1_1CreatePageRequestHandler.html#a07ba433b9af571cd37fc5f7cffbe92f6" title=" " alt="" coords="5,396,332,436"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="778,383,744,383,562,377,482,377,380,383,267,399,266,393,380,377,482,371,562,371,744,377,778,378"/>
+<area shape="rect" id="Node000008" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateTicket_1_1CreateTicketRequestHandler.html#a63c66ebe22de251bdfef52dcf4f9e111" title=" " alt="" coords="391,392,733,432"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="779,397,734,401,734,396,778,392"/>
+<area shape="rect" id="Node000009" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1InsertVideo_1_1InsertVideoRequestHandler.html#a350ce8946e4021b0d41e67a6c1125cb7" title=" " alt="" coords="399,456,725,496"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="852,411,745,447,692,459,691,453,743,441,851,406"/>
+<area shape="rect" id="Node000010" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a481b1587c1cc0eacf2b4e0e4502ccfe5" title=" " alt="" coords="428,520,696,560"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="885,416,823,465,785,490,745,510,697,526,695,521,743,506,783,485,820,461,881,412"/>
+<area shape="rect" id="Node000011" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#ae99ef2cd65793c22ef4a5c7a1fe11079" title=" " alt="" coords="428,585,696,639"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="897,417,871,454,836,497,794,539,745,574,697,595,695,590,743,570,790,535,832,493,866,451,892,414"/>
+<area shape="rect" id="Node000012" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a43aa2924e4b09bacb2956f4e578cf5cc" title=" " alt="" coords="431,664,693,704"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="905,418,884,471,850,535,804,599,777,628,745,653,721,666,694,676,692,671,718,662,743,648,773,624,800,596,846,532,879,468,901,416"/>
+<area shape="rect" id="Node000013" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a593efac9d5974e31295722dcffe4af3d" title=" " alt="" coords="380,728,744,768"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="910,418,892,483,861,565,839,607,813,649,782,686,746,718,726,730,723,726,742,714,778,682,808,645,834,605,856,563,887,481,905,416"/>
+<area shape="poly" id="edge9_Node000009_Node000007" title=" " alt="" coords="416,457,300,439,301,433,417,451"/>
+</map>

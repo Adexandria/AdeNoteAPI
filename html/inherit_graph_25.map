@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title="An interface to perform add,update and remove actions for objects" alt="" coords="5,5,252,47"/>
+<area shape="rect" id="Node000000" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html" title="An authentication interface that with the controller." alt="" coords="5,5,239,45"/>
+<area shape="rect" id="Node000001" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html" title="Implementation of the interface." alt="" coords="287,5,520,45"/>
+<area shape="poly" id="edge56_Node000000_Node000001" title=" " alt="" coords="252,23,286,23,286,28,252,28"/>
 </map>

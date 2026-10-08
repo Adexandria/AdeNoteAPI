@@ -1,6 +1,9 @@
 <map id="AdeNote.Infrastructure.Requests.GetBookdById.GetBookByIdRequestHandler" name="AdeNote.Infrastructure.Requests.GetBookdById.GetBookByIdRequestHandler">
-<area shape="rect" id="node1" title=" " alt="" coords="615,49,923,90"/>
-<area shape="rect" id="node2" title=" " alt="" coords="236,5,437,61"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html" title="An interface that includes the behaviour of a book object" alt="" coords="213,86,460,127"/>
-<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,93,164,120"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="615,49,923,89"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="236,5,437,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="452,40,615,53,614,59,451,45"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html" title="An interface that includes the behaviour of a book object." alt="" coords="213,85,460,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="474,91,614,79,615,84,474,96"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,92,164,117"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="178,102,213,102,213,107,178,107"/>
 </map>

@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Services.ChatService.IChatService.DeleteThread" name="AdeNote.Infrastructure.Services.ChatService.IChatService.DeleteThread">
+<area shape="rect" id="Node000001" title=" " alt="" coords="240,5,519,45"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Controllers_1_1ChatController.html#a863403fb025e7748fb73a9311d4e3b34" title="Deletes parent and all subthreads." alt="" coords="5,5,192,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,28,192,28,192,23,226,23"/>
+</map>

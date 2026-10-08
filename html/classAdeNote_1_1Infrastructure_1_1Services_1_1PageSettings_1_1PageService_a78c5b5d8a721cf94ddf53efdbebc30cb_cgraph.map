@@ -1,0 +1,17 @@
+<map id="AdeNote.Infrastructure.Services.PageSettings.PageService.TranslatePage" name="AdeNote.Infrastructure.Services.PageSettings.PageService.TranslatePage">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,205,288,245"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="385,5,615,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,203,191,170,232,130,280,89,335,55,371,41,373,46,337,60,284,93,235,134,195,174,166,207"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#aaad00fb34e9d5819f94401fba82556d7" title="Get a particular book that belongs to a user." alt="" coords="377,69,623,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="176,203,247,160,290,138,335,119,362,110,364,115,337,124,292,143,250,165,179,207"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html#a2bd2bfe8b1098e7d4c3b795362ffaa28" title="Gets an individual page from a particular book." alt="" coords="377,133,623,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="240,203,335,183,381,173,382,179,337,188,241,208"/>
+<area shape="rect" id="Node000005" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1ITextTranslation.html#a9519322a769d3401dca236debd97e404" title=" " alt="" coords="381,198,619,253"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="288,223,367,223,367,228,288,228"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="379,277,621,317"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="246,243,337,261,388,272,387,277,335,267,245,248"/>
+<area shape="rect" id="Node000007" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1ITextTranslation.html#a967c1da98bc1eff8dee433a4b1a57781" title=" " alt="" coords="347,341,653,381"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="179,243,250,286,292,308,337,327,363,335,361,340,335,332,290,313,247,291,176,248"/>
+<area shape="rect" id="Node000008" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1TranslationAI_1_1ITextTranslation.html#a596d99710a4bcf3a49195857cfa66b5b" title=" " alt="" coords="336,405,664,445"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="166,244,195,277,235,317,284,358,337,391,354,398,352,403,335,396,280,362,232,321,191,281,162,247"/>
+</map>

@@ -1,6 +1,9 @@
 <map id="AdeNote.Infrastructure.Services.Blob.BlobService.GenerateBlobUri" name="AdeNote.Infrastructure.Services.Blob.BlobService.GenerateBlobUri">
-<area shape="rect" id="node1" title="Generates uri" alt="" coords="301,71,545,112"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#a884ca17d313521ae1aee777688f5e23f" title="Downloads image" alt="" coords="8,5,251,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#a7132b5bd25ca50c037521c469a868e5f" title="Downloads image" alt="" coords="5,71,253,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#a4b677a50e60fdd5621674537f536e7ce" title="Uploads image" alt="" coords="13,136,246,177"/>
+<area shape="rect" id="Node000001" title="Generates uri." alt="" coords="301,69,545,109"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#a9a95011811ff707dbf66768f7762a974" title="Downloads image." alt="" coords="8,5,251,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="317,69,221,48,222,43,318,64"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#a474f3d7a132e6007189cbc9c23498028" title="Downloads image." alt="" coords="5,69,253,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="287,92,254,92,254,87,287,87"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1BlobService.html#af08e539a43a707519a0f65922a66bb43" title="Uploads image." alt="" coords="13,133,246,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="318,115,222,136,221,131,317,110"/>
 </map>

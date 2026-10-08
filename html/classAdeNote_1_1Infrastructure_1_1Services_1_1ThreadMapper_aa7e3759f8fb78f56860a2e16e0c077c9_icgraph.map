@@ -1,10 +1,20 @@
 <map id="AdeNote.Infrastructure.Services.ThreadMapper.MapTo" name="AdeNote.Infrastructure.Services.ThreadMapper.MapTo">
-<area shape="rect" id="node1" title=" " alt="" coords="348,201,581,243"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a633e9191a1daf94fd443bb428c1d16ed" title=" " alt="" coords="5,5,300,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a85182155b7dafa6c6d40d095c8fb6b7b" title=" " alt="" coords="13,71,292,112"/>
-<area shape="rect" id="node4" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a2bc27b0cfa9990887cc821376366e283" title=" " alt="" coords="25,136,280,177"/>
-<area shape="rect" id="node5" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#aad666b4693242cdeba8358fd45ba5ea4" title=" " alt="" coords="22,201,283,243"/>
-<area shape="rect" id="node6" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#a3ae517aa52f56746a9a73a1146741a25" title=" " alt="" coords="36,267,269,308"/>
-<area shape="rect" id="node7" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#acaa81e32651dc5aa80aeab3caa26c593" title=" " alt="" coords="11,333,294,389"/>
-<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#ad7ee727d29c9444d40945035fb6d9aa4" title=" " alt="" coords="11,413,294,469"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="348,229,581,269"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="518,218,499,211,465,208,434,210,416,215,409,221,412,228,407,230,404,220,413,210,433,205,465,203,501,205,520,213"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a63455fd393f4f07bd35f58b638bf25b9" title=" " alt="" coords="5,5,300,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="443,219,419,181,386,138,345,95,299,60,274,48,277,43,301,55,349,91,390,134,423,178,448,216"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#abdba176acded2d6cf3f39fb99e08d2f6" title=" " alt="" coords="13,69,292,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="432,222,374,171,337,145,299,124,268,112,270,107,301,119,340,141,377,167,436,218"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a243a2a44400669890387dd608729c578" title=" " alt="" coords="25,133,280,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="404,226,299,188,255,176,256,171,301,183,406,221"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a74f1c2dcb48d47cad9998299625348fc" title=" " alt="" coords="22,197,283,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="334,239,283,233,284,228,335,233"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#a4bc646feafe9a257a0bcdb6afe290a4d" title=" " alt="" coords="36,261,269,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="335,265,270,272,269,267,334,260"/>
+<area shape="rect" id="Node000007" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#a3ae517aa52f56746a9a73a1146741a25" title=" " alt="" coords="36,325,269,365"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="406,277,301,316,256,328,255,323,299,311,404,272"/>
+<area shape="rect" id="Node000008" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a7b294e7bd7896404213274b1f8fbef4d" title=" " alt="" coords="11,390,294,445"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="435,281,376,331,340,357,301,380,272,392,270,387,299,375,337,353,373,327,432,277"/>
+<area shape="rect" id="Node000009" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#abb01d7f6c43802b326dbefe82b7458df" title=" " alt="" coords="11,469,294,523"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="449,283,425,323,391,371,350,418,302,458,279,471,276,466,298,454,346,414,387,367,420,321,444,280"/>
 </map>

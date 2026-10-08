@@ -1,0 +1,11 @@
+<map id="AdeNote.Infrastructure.Requests.RemoveTicket.RemoveTicketRequestHandler.Handle" name="AdeNote.Infrastructure.Requests.RemoveTicket.RemoveTicketRequestHandler.Handle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,101,371,141"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="427,5,657,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,99,418,55,450,46,451,51,419,60,261,104"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1ITicketRepository.html#a064b53b86dff34ed9105d9518c00d041" title=" " alt="" coords="419,69,665,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="371,102,405,99,405,104,371,107"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#a84a23bc85f97a76d890f1e847e540f58" title="Remove an existing object." alt="" coords="419,133,665,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="371,135,405,138,405,144,371,141"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="421,197,663,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="261,139,419,183,451,191,450,196,418,188,259,144"/>
+</map>

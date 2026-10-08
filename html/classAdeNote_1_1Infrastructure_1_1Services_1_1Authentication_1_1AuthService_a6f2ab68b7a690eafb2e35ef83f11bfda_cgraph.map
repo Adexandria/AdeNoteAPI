@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.AuthService.IsPhoneNumberVerified" name="AdeNote.Infrastructure.Services.Authentication.AuthService.IsPhoneNumberVerified">
+<area shape="rect" id="Node000001" title="Checks if a phone number has been verified." alt="" coords="5,62,260,117"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="333,5,563,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="260,61,335,45,336,51,261,66"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#aadd41dd813e03e90fb87b24ee4c17d95" title="Checks if user&#39;s phone number has been verified." alt="" coords="308,69,588,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="260,87,294,87,294,92,260,92"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="327,133,569,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="261,113,336,128,335,133,260,118"/>
+</map>

@@ -1,6 +1,9 @@
 <map id="AdeNote.Infrastructure.Repository.BookRepository" name="AdeNote.Infrastructure.Repository.BookRepository">
-<area shape="rect" id="node1" title="Handles the persisting and querying of Book objects" alt="" coords="42,155,289,196"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title=" " alt="" coords="5,80,160,107"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html" title="An interface that includes the behaviour of a book object" alt="" coords="185,80,314,107"/>
-<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="170,5,329,32"/>
+<area shape="rect" id="Node000001" title="Handles the persisting and querying of Book objects." alt="" coords="42,152,289,192"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Repository_1_1Repository.html" title=" " alt="" coords="5,79,160,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,111,147,150,144,154,103,115"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html" title="An interface that includes the behaviour of a book object." alt="" coords="185,79,314,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,115,187,154,184,150,225,111"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="170,5,329,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="252,44,252,79,247,79,247,44"/>
 </map>

@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Services.BookSetting.BookService.GetAll" name="AdeNote.Infrastructure.Services.BookSetting.BookService.GetAll">
+<area shape="rect" id="Node000001" title="Get all books." alt="" coords="5,69,239,109"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#aa1ceea29022f2cc41c7a148c92a45410" title="Maps from book entity to book dto." alt="" coords="289,5,531,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,67,306,46,307,51,213,72"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="295,69,525,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="239,87,282,87,282,92,239,92"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#a780fc8db1a1bd6598055e95e7408205c" title="Get all books that belong to a user." alt="" coords="287,133,533,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="213,107,307,128,306,133,212,112"/>
+</map>

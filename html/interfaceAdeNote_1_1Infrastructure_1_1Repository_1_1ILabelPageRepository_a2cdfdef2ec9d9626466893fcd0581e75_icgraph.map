@@ -1,0 +1,7 @@
+<map id="AdeNote.Infrastructure.Repository.ILabelPageRepository.DeleteLabelsFromPage" name="AdeNote.Infrastructure.Repository.ILabelPageRepository.DeleteLabelsFromPage">
+<area shape="rect" id="Node000001" title="Deletes labels from a page." alt="" coords="368,53,681,93"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveAllPageLabels_1_1RemoveAllPageLabelsRequestHandler.html#a9a2132443699a7daa6c4376e8c71345c" title=" " alt="" coords="5,5,320,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="354,57,320,53,321,47,355,51"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a4dc11063d7b035c57d0a58ad26174310" title="Removes all labels from a page." alt="" coords="31,84,295,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="354,94,295,100,295,95,354,88"/>
+</map>

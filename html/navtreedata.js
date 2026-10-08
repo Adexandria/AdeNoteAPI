@@ -26,8 +26,8 @@ var NAVTREE =
 [
   [ "AdeNote API", "index.html", [
     [ "Packages", "namespaces.html", [
-      [ "Packages", "namespaces.html", "namespaces_dup" ],
-      [ "Package Functions", "namespacemembers.html", [
+      [ "Package List", "namespaces.html", "namespaces_dup" ],
+      [ "Package Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
         [ "Enumerations", "namespacemembers_enum.html", null ]
       ] ]
@@ -60,14 +60,20 @@ var NAVTREEINDEX =
 "20240430084252__firstmigration_8Designer_8cs.html",
 "GetBookByIdRequestHandler_8cs_source.html",
 "RemoveRequestHandler_8cs_source.html",
-"classAdeNote_1_1Controllers_1_1PageController.html",
-"classAdeNote_1_1Infrastructure_1_1Requests_1_1CreateBooks_1_1CreateBooksRequestHandler.html#a16da0fa8ee42cbc6b0331d69ce49894b",
-"classAdeNote_1_1Infrastructure_1_1Requests_1_1TranslatePage_1_1TranslatePageRequestHandler.html#afa485a9239429ed3459227dc7dd8167e",
-"classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#ad8bb895b0847c3f4e2bc773ea8510f71",
-"classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1FetchTicketByIdValidator.html#ad93b4d89c0dd9df1b501676c0ed2624a",
-"classAdeNote_1_1Models_1_1DTOs_1_1UserTicketDto.html#a95ac38aa3d7a164beb60ed1b08278309",
-"functions_p.html",
-"namespaceAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById.html"
+"classAdeNote_1_1Controllers_1_1BookController.html",
+"classAdeNote_1_1Infrastructure_1_1Extension_1_1MappingService.html#a5594af87f1594ec969b57b4ac9c1f2fa",
+"classAdeNote_1_1Infrastructure_1_1Repository_1_1UserRepository.html#a0a1a8ef432769e67c9d560abfd5dbe60",
+"classAdeNote_1_1Infrastructure_1_1Requests_1_1FetchUserTicketById_1_1FetchUserTicketByIdRequestHandler.html#abd38f9c0f9b1d4ae38c8da50d33de8d4",
+"classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveTicket_1_1RemoveTicketRequestHandler.html#a0e1f30763f7d5da2ad27bec3fcfa13aa",
+"classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#aefdc35379e25b55b19a0f765273049fa",
+"classAdeNote_1_1Infrastructure_1_1Services_1_1ThreadMapper.html#a0e8799f943ee2a0e03f8c6d1ad08913b",
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1AuthenticationFilter_1_1UserConfiguration.html",
+"classAdeNote_1_1Infrastructure_1_1Utilities_1_1ValidationAttributes_1_1PasswordAttribute.html",
+"classAdeNote_1_1Models_1_1Book.html#a6ace71a6b0133f064be1c279c2501ba8",
+"classAdeNote_1_1Models_1_1DTOs_1_1TicketsDTO.html#a7c20be12e8357cbc7f58aff37021c448",
+"classAdeNote_1_1Models_1_1TweetSubThread.html#af19c6cd0077b21fd64f9a69383c1f5a9",
+"functions_vars_k.html",
+"interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Excel_1_1IExcel.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

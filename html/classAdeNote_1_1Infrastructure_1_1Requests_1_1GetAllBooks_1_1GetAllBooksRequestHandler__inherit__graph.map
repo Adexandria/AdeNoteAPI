@@ -1,4 +1,5 @@
 <map id="AdeNote.Infrastructure.Requests.GetAllBooks.GetAllBooksRequestHandler" name="AdeNote.Infrastructure.Requests.GetAllBooks.GetAllBooksRequestHandler">
-<area shape="rect" id="node1" title=" " alt="" coords="5,109,296,151"/>
-<area shape="rect" id="node2" title=" " alt="" coords="19,5,282,61"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,108,296,148"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="19,5,282,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,74,153,108,148,108,148,74"/>
 </map>

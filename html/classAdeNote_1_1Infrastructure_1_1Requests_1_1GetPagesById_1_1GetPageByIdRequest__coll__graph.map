@@ -1,4 +1,5 @@
 <map id="AdeNote.Infrastructure.Requests.GetPagesById.GetPageByIdRequest" name="AdeNote.Infrastructure.Requests.GetPagesById.GetPageByIdRequest">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,257,136"/>
-<area shape="rect" id="node2" title=" " alt="" coords="43,5,219,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,93,257,133"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="43,5,219,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,59,134,93,129,93,129,59"/>
 </map>

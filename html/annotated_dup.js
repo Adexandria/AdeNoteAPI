@@ -343,7 +343,6 @@ var annotated_dup =
             [ "UpdateTicketValidator", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1UpdateTicketValidator.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Validations_1_1UpdateTicketValidator" ]
           ] ],
           [ "ActionResult", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult" ],
-          [ "PaginatedResponse", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse" ],
           [ "Application", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Application.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1Application" ],
           [ "ApplicationScheduler", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationScheduler.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationScheduler" ],
           [ "ApplicationSetting", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ApplicationSetting" ],
@@ -353,20 +352,21 @@ var annotated_dup =
           [ "ClientUrl", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ClientUrl.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1ClientUrl" ],
           [ "CosmosConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CosmosConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1CosmosConfiguration" ],
           [ "DefaultConfiguration", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1DefaultConfiguration" ],
-          [ "EntityDoc", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc" ]
+          [ "EntityDoc", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1EntityDoc" ],
+          [ "PaginatedResponse", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse.html", "classAdeNote_1_1Infrastructure_1_1Utilities_1_1PaginatedResponse" ]
         ] ]
       ] ],
       [ "Migrations", "namespaceAdeNote_1_1Migrations.html", [
-        [ "firstmigration", "classAdeNote_1_1Migrations_1_1firstmigration.html", "classAdeNote_1_1Migrations_1_1firstmigration" ],
-        [ "setuptexttranslation", "classAdeNote_1_1Migrations_1_1setuptexttranslation.html", "classAdeNote_1_1Migrations_1_1setuptexttranslation" ],
-        [ "addrecoverycodes", "classAdeNote_1_1Migrations_1_1addrecoverycodes.html", "classAdeNote_1_1Migrations_1_1addrecoverycodes" ],
-        [ "addticket", "classAdeNote_1_1Migrations_1_1addticket.html", "classAdeNote_1_1Migrations_1_1addticket" ],
+        [ "addcreatedmodified", "classAdeNote_1_1Migrations_1_1addcreatedmodified.html", "classAdeNote_1_1Migrations_1_1addcreatedmodified" ],
         [ "addissue", "classAdeNote_1_1Migrations_1_1addissue.html", "classAdeNote_1_1Migrations_1_1addissue" ],
         [ "addrecoverycode", "classAdeNote_1_1Migrations_1_1addrecoverycode.html", "classAdeNote_1_1Migrations_1_1addrecoverycode" ],
-        [ "descriptionnullable", "classAdeNote_1_1Migrations_1_1descriptionnullable.html", "classAdeNote_1_1Migrations_1_1descriptionnullable" ],
-        [ "addcreatedmodified", "classAdeNote_1_1Migrations_1_1addcreatedmodified.html", "classAdeNote_1_1Migrations_1_1addcreatedmodified" ],
+        [ "addrecoverycodes", "classAdeNote_1_1Migrations_1_1addrecoverycodes.html", "classAdeNote_1_1Migrations_1_1addrecoverycodes" ],
+        [ "addticket", "classAdeNote_1_1Migrations_1_1addticket.html", "classAdeNote_1_1Migrations_1_1addticket" ],
         [ "addvideos", "classAdeNote_1_1Migrations_1_1addvideos.html", "classAdeNote_1_1Migrations_1_1addvideos" ],
-        [ "NoteDbContextModelSnapshot", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot" ]
+        [ "descriptionnullable", "classAdeNote_1_1Migrations_1_1descriptionnullable.html", "classAdeNote_1_1Migrations_1_1descriptionnullable" ],
+        [ "firstmigration", "classAdeNote_1_1Migrations_1_1firstmigration.html", "classAdeNote_1_1Migrations_1_1firstmigration" ],
+        [ "NoteDbContextModelSnapshot", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot.html", "classAdeNote_1_1Migrations_1_1NoteDbContextModelSnapshot" ],
+        [ "setuptexttranslation", "classAdeNote_1_1Migrations_1_1setuptexttranslation.html", "classAdeNote_1_1Migrations_1_1setuptexttranslation" ]
       ] ],
       [ "Models", "namespaceAdeNote_1_1Models.html", [
         [ "DTOs", "namespaceAdeNote_1_1Models_1_1DTOs.html", [

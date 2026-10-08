@@ -1,0 +1,15 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.IAuthService.GenerateMFAToken" name="AdeNote.Infrastructure.Services.Authentication.IAuthService.GenerateMFAToken">
+<area shape="rect" id="Node000001" title=" " alt="" coords="624,94,891,149"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a068a78c90547340919742782a0889330" title="Generates token to removes google or sms authenticator." alt="" coords="305,5,576,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="671,92,575,60,531,48,532,43,577,55,673,87"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#af89f7d11b88492cfb39f5201baf1d139" title="Logins user using recovery codes." alt="" coords="315,69,567,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="610,109,567,105,567,99,610,104"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a3290db6b409ab3ee4c978f2b7d010b95" title=" " alt="" coords="315,133,567,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="610,139,567,143,567,138,610,134"/>
+<area shape="rect" id="Node000007" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a35eed64a9ab6173c277a62e717692ac0" title="Logins user using passwordless method." alt="" coords="315,197,567,237"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="673,156,577,188,532,200,531,195,575,183,671,151"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user." alt="" coords="5,101,257,141"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="301,142,258,137,258,132,301,136"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a4dff5edd84fdf52b1f6f78c853ad7fe4" title="Logins user." alt="" coords="5,165,257,205"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="301,170,258,175,258,170,301,165"/>
+</map>

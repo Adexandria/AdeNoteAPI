@@ -1,5 +1,7 @@
 <map id="AdeNote.Controllers.AuthenticationController.LoginUser" name="AdeNote.Controllers.AuthenticationController.LoginUser">
-<area shape="rect" id="node1" title=" " alt="" coords="305,39,557,80"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user" alt="" coords="5,5,257,47"/>
-<area shape="rect" id="node3" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#afc6cbaaa9dd5257966347c086be6aa6e" title="Logins user" alt="" coords="5,71,257,112"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="305,37,557,77"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a69b35d627d7ed8fb1519152236986063" title="Logins user." alt="" coords="5,5,257,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="292,45,257,41,258,36,292,40"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a4dff5edd84fdf52b1f6f78c853ad7fe4" title="Logins user." alt="" coords="5,69,257,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="292,75,258,79,257,73,292,70"/>
 </map>

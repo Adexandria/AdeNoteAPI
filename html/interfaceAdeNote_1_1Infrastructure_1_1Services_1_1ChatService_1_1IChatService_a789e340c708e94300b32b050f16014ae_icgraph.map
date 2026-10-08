@@ -1,0 +1,5 @@
+<map id="AdeNote.Infrastructure.Services.ChatService.IChatService.GetSubThread" name="AdeNote.Infrastructure.Services.ChatService.IChatService.GetSubThread">
+<area shape="rect" id="Node000001" title=" " alt="" coords="272,5,555,45"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Controllers_1_1SubChatsController.html#a3207e000c8be4faa122ac36586ba5f10" title="Fetches a subthread from an existing thread." alt="" coords="5,5,224,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="258,28,224,28,224,23,258,23"/>
+</map>

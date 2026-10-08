@@ -1,0 +1,34 @@
+<map id="AdeNote.API/Infrastructure/Requests" name="AdeNote.API/Infrastructure/Requests">
+<area shape="rect" id="node2" href="dir_b65956a75f5e14b3f50806f8e6cb87bd.html" title="CreateBook" alt="" coords="4152,63,4251,88"/>
+<area shape="rect" id="node3" href="dir_1cfc4ea14ab6f77a911ff626de47226f.html" title="CreateBooks" alt="" coords="4022,63,4127,88"/>
+<area shape="rect" id="node4" href="dir_4ffe96dc19c258e46a2dc9f0685ba39e.html" title="CreateLabel" alt="" coords="3898,63,3998,88"/>
+<area shape="rect" id="node5" href="dir_c0ce7dc2b2981064eb926cda49468b26.html" title="CreatePage" alt="" coords="3777,63,3873,88"/>
+<area shape="rect" id="node6" href="dir_edfad7f3bbda215dd1f7fe1b6a85a845.html" title="CreatePageLabels" alt="" coords="3615,63,3753,88"/>
+<area shape="rect" id="node7" href="dir_bdbf49ca90527e62bd065d0f33f49890.html" title="CreateTicket" alt="" coords="3487,63,3591,88"/>
+<area shape="rect" id="node8" href="dir_dd3c6d3cb24570c044ff2a26c5c73bd0.html" title="FetchAllTickets" alt="" coords="3343,63,3463,88"/>
+<area shape="rect" id="node9" href="dir_8dceda6806e1cffedd39ca90d77bd385.html" title="FetchAllTicketsByName" alt="" coords="3143,63,3319,88"/>
+<area shape="rect" id="node10" href="dir_83100a45339bc954cb1b60d94be303fe.html" title="FetchTicketById" alt="" coords="2993,63,3119,88"/>
+<area shape="rect" id="node11" href="dir_d8fc05e5f6025ee2561613a054a59457.html" title="FetchUserTicketById" alt="" coords="2815,63,2969,88"/>
+<area shape="rect" id="node12" href="dir_efe554a67908c08225da26ba8c41cde4.html" title="GetAllBooks" alt="" coords="2687,63,2790,88"/>
+<area shape="rect" id="node13" href="dir_517f19591ceecae6f09b9707c3124870.html" title="GetAllLabels" alt="" coords="2559,63,2663,88"/>
+<area shape="rect" id="node14" href="dir_1e1e5db6925169a04c6b1d6976f2e478.html" title="GetAllPages" alt="" coords="2434,63,2534,88"/>
+<area shape="rect" id="node15" href="dir_764f870dc5cef9584902d33c2fa1255c.html" title="GetBookdById" alt="" coords="2295,63,2409,88"/>
+<area shape="rect" id="node16" href="dir_9fde3a68d884b7569a5399b17b3065a6.html" title="GetLabelById" alt="" coords="2161,63,2271,88"/>
+<area shape="rect" id="node17" href="dir_f6fedf7121665af05f7ee82c362e6c7c.html" title="GetPagesById" alt="" coords="2025,63,2137,88"/>
+<area shape="rect" id="node18" href="dir_8e72f9ec617a34720349776274eed04c.html" title="InsertVideo" alt="" coords="1905,63,2001,88"/>
+<area shape="rect" id="node19" href="dir_28041e92a64e201582ee2beb514ac045.html" title="RemoveAllPageLabels" alt="" coords="1714,63,1881,88"/>
+<area shape="rect" id="node20" href="dir_1abf7fe3df87c2d1ebbd96090d0e22da.html" title="RemoveBook" alt="" coords="1580,63,1689,88"/>
+<area shape="rect" id="node21" href="dir_e31931a57b1faef297172b23835041fd.html" title="RemoveLabel" alt="" coords="1445,63,1555,88"/>
+<area shape="rect" id="node22" href="dir_30ece8c591de567a26f375d80eb8913a.html" title="RemovePage" alt="" coords="1313,63,1420,88"/>
+<area shape="rect" id="node23" href="dir_a2f475c1e1cf466a2f93d4ee4a6261cf.html" title="RemovePageLabel" alt="" coords="1146,63,1289,88"/>
+<area shape="rect" id="node24" href="dir_205326e71c1c4aa74d69d8dd1cec0fbe.html" title="RemoveTicket" alt="" coords="1007,63,1121,88"/>
+<area shape="rect" id="node25" href="dir_3e09aa67283e9e614febdddde5c8bef7.html" title="SearchTickets" alt="" coords="871,63,983,88"/>
+<area shape="rect" id="node26" href="dir_e3a254931921b216032868dc0006c307.html" title="SearchTicketsByDate" alt="" coords="687,63,847,88"/>
+<area shape="rect" id="node27" href="dir_1728cfbc554f72f8c4bc59e268db6522.html" title="TranslatePage" alt="" coords="551,63,663,88"/>
+<area shape="rect" id="node28" href="dir_71cb7a7f8d29a9f17b8047742ef76f98.html" title="UpdateBook" alt="" coords="423,63,526,88"/>
+<area shape="rect" id="node29" href="dir_53736c07c395d8f077c3e3b33c90ec29.html" title="UpdateLabel" alt="" coords="295,63,399,88"/>
+<area shape="rect" id="node30" href="dir_e741a71af6b33072e1a0d76e3da6f5da.html" title="UpdatePage" alt="" coords="170,63,270,88"/>
+<area shape="rect" id="node31" href="dir_8d8c68059abe058ca5d33e7af3bd6bf8.html" title="UpdateTicket" alt="" coords="38,63,146,88"/>
+<area shape="rect" id="clust2" href="dir_57a5ae0a6df6a8cd3ce8a7c18f92950e.html" alt="" coords="27,52,4368,99"/>
+<area shape="rect" id="clust1" href="dir_b71eec9eca2bbdf66529551c49f21604.html" title="Infrastructure" alt="" coords="16,16,4379,109"/>
+</map>

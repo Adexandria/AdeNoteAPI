@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Requests.CreateBooks.CreateBooksRequestHandler.Handle" name="AdeNote.Infrastructure.Requests.CreateBooks.CreateBooksRequestHandler.Handle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,351,109"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IBookRepository.html#a1d47bf202e62ad713309a9abb76445fd" title=" " alt="" coords="399,5,645,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="286,67,400,45,401,50,287,72"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="407,69,637,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="351,87,394,87,394,92,351,92"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="401,133,643,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="287,107,401,128,400,133,286,112"/>
+</map>

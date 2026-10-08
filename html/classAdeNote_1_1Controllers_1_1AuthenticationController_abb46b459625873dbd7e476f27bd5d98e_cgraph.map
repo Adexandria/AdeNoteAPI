@@ -1,0 +1,7 @@
+<map id="AdeNote.Controllers.AuthenticationController.GenerateResetPasswordToken" name="AdeNote.Controllers.AuthenticationController.GenerateResetPasswordToken">
+<area shape="rect" id="Node000001" title="Generate reset password token." alt="" coords="5,49,289,89"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a364c285b3daf4f3c8bf933b0735a4bca" title=" " alt="" coords="337,5,604,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="289,50,324,46,324,52,290,55"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1UserSettings_1_1IUserService.html#acda35c2a71ca13908d811337df4c909d" title=" " alt="" coords="347,85,595,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="290,82,333,87,332,92,289,87"/>
+</map>

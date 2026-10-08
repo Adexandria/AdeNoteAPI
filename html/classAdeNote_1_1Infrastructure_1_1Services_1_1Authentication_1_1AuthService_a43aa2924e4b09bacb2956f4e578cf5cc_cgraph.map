@@ -1,0 +1,11 @@
+<map id="AdeNote.Infrastructure.Services.Authentication.AuthService.SignUser" name="AdeNote.Infrastructure.Services.Authentication.AuthService.SignUser">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,101,267,141"/>
+<area shape="rect" id="Node000002" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html#a2fc1c06d8251d676033b5ace0f5262f5" title="Saves a new entity." alt="" coords="315,5,561,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,99,314,55,342,47,343,52,315,60,190,104"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="323,69,553,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="267,105,309,100,310,106,267,110"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a8325a5a7a398ece0bf109379613d9bd4" title=" " alt="" coords="315,133,561,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="267,133,301,136,301,141,267,138"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="317,197,559,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="190,139,315,183,343,191,342,196,314,188,188,144"/>
+</map>

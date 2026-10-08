@@ -1,10 +1,17 @@
 <map id="AdeNote.Infrastructure.Requests.InsertVideo.InsertVideoRequestHandler" name="AdeNote.Infrastructure.Requests.InsertVideo.InsertVideoRequestHandler">
-<area shape="rect" id="node1" title=" " alt="" coords="631,136,909,177"/>
-<area shape="rect" id="node2" title=" " alt="" coords="223,5,466,47"/>
-<area shape="rect" id="node3" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html" title="An interface that includes the behaviour of cloud storage" alt="" coords="228,71,461,112"/>
-<area shape="rect" id="node4" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html" title="An interface to handles page object" alt="" coords="221,136,468,177"/>
-<area shape="rect" id="node5" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="8,143,165,170"/>
-<area shape="rect" id="node6" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IVideoRepository.html" title=" " alt="" coords="221,201,468,243"/>
-<area shape="rect" id="node7" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,209,168,235"/>
-<area shape="rect" id="node8" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1Cdn.html" title=" " alt="" coords="217,267,472,294"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="631,133,909,173"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="221,5,468,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="440,46,473,55,607,92,717,131,716,136,606,97,471,60,438,51"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IPageRepository.html" title="An interface to handles page object." alt="" coords="221,69,468,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="482,107,637,131,636,136,482,113"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="8,77,165,102"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="179,87,221,87,221,92,179,92"/>
+<area shape="rect" id="Node000005" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IVideoRepository.html" title=" " alt="" coords="221,133,468,173"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="482,151,630,151,630,156,482,156"/>
+<area shape="rect" id="Node000006" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IRepository.html" title=" " alt="" coords="5,141,168,166"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="182,151,221,151,221,156,182,156"/>
+<area shape="rect" id="Node000007" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1Cdn.html" title=" " alt="" coords="217,198,472,223"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="453,193,630,169,631,175,454,199"/>
+<area shape="rect" id="Node000008" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Blob_1_1IBlobService.html" title="An interface that includes the behaviour of cloud storage." alt="" coords="228,248,461,288"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="460,242,606,207,715,171,716,176,607,212,461,248"/>
 </map>

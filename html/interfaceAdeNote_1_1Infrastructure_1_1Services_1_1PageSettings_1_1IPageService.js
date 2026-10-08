@@ -1,12 +1,12 @@
 var interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService =
 [
-    [ "Add", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#ae9bc40760e1425722d4130717d76e371", null ],
-    [ "AddLabels", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#aa67f930bf60c952afd5f436735f62cef", null ],
-    [ "GetAll", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#af77622099f1a52f1727618aa76f3f870", null ],
-    [ "GetById", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#ae93554aba136ec10c395a6c13cd6d516", null ],
-    [ "Remove", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#acf58236b74915e24c9d47056351d43d2", null ],
-    [ "RemoveAllPageLabels", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#ad8c960c2fe3b13b1b5a820c77e0732f0", null ],
-    [ "RemovePageLabel", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#ad1073dd1289af39a362d25eea7fe7646", null ],
-    [ "TranslatePage", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#a29f815e76543d608f04d23a7a9dc302e", null ],
-    [ "Update", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#ab22d64a4179f24a54e9ffa3aa8830afa", null ]
+    [ "Add", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#a6a6d530cd8b5a4fa0792e417ca93575b", null ],
+    [ "AddLabels", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#a633f4f67b79f499480d27dae29e04c98", null ],
+    [ "GetAll", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#a1cfcb265e3aa58a5dac469721518de82", null ],
+    [ "GetById", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#ae9e541d909e4d4ee67a45f37a47ba486", null ],
+    [ "Remove", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#a4d2bc81eca3ce8fd4a54901423d12da7", null ],
+    [ "RemoveAllPageLabels", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#ad09e36b5b72f192cae3008a560af96f9", null ],
+    [ "RemovePageLabel", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#aab355e20a707b27a7fc7cff9a4369920", null ],
+    [ "TranslatePage", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#a8af3e468fd75f41745d34e6a9b384ddb", null ],
+    [ "Update", "interfaceAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1IPageService.html#aed32aff11f275fc556f921eee9735975", null ]
 ];

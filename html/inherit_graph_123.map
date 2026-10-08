@@ -1,3 +1,21 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classAdeNote_1_1Models_1_1DTOs_1_1InsertVideoDto.html" title=" " alt="" coords="5,5,215,47"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,203,89,228"/>
+<area shape="rect" id="Node000001" href="$classAdeNote_1_1Migrations_1_1addcreatedmodified.html" title=" " alt="" coords="138,5,423,31"/>
+<area shape="poly" id="edge175_Node000000_Node000001" title=" " alt="" coords="52,188,62,154,78,114,103,73,136,40,156,28,158,33,139,44,107,77,83,116,67,156,57,190"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Migrations_1_1addissue.html" title=" " alt="" coords="174,55,387,80"/>
+<area shape="poly" id="edge176_Node000000_Node000002" title=" " alt="" coords="57,189,87,137,109,111,136,89,173,73,175,78,139,94,113,115,91,141,62,192"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Migrations_1_1addrecoverycode.html" title=" " alt="" coords="147,104,414,129"/>
+<area shape="poly" id="edge177_Node000000_Node000003" title=" " alt="" coords="67,191,98,163,136,138,168,127,170,132,139,143,101,167,71,195"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Migrations_1_1addrecoverycodes.html" title=" " alt="" coords="143,153,418,179"/>
+<area shape="poly" id="edge178_Node000000_Node000004" title=" " alt="" coords="102,196,137,187,194,176,195,181,138,193,103,201"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Migrations_1_1addticket.html" title=" " alt="" coords="173,203,388,228"/>
+<area shape="poly" id="edge179_Node000000_Node000005" title=" " alt="" coords="103,213,173,213,173,218,103,218"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Migrations_1_1addvideos.html" title=" " alt="" coords="169,252,392,277"/>
+<area shape="poly" id="edge180_Node000000_Node000006" title=" " alt="" coords="103,228,138,237,201,249,200,255,137,242,102,233"/>
+<area shape="rect" id="Node000007" href="$classAdeNote_1_1Migrations_1_1descriptionnullable.html" title=" " alt="" coords="141,301,420,327"/>
+<area shape="poly" id="edge181_Node000000_Node000007" title=" " alt="" coords="71,236,102,263,138,286,174,299,172,304,136,291,98,267,68,240"/>
+<area shape="rect" id="Node000008" href="$classAdeNote_1_1Migrations_1_1firstmigration.html" title=" " alt="" coords="159,351,402,376"/>
+<area shape="poly" id="edge182_Node000000_Node000008" title=" " alt="" coords="62,239,92,290,113,315,139,336,165,348,163,353,136,340,110,319,88,293,57,242"/>
+<area shape="rect" id="Node000009" href="$classAdeNote_1_1Migrations_1_1setuptexttranslation.html" title=" " alt="" coords="137,400,424,425"/>
+<area shape="poly" id="edge183_Node000000_Node000009" title=" " alt="" coords="57,241,67,275,84,314,107,353,139,385,161,398,158,402,136,389,103,356,79,317,62,277,52,242"/>
 </map>

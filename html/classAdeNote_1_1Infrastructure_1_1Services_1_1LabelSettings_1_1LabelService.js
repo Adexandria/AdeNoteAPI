@@ -2,11 +2,11 @@ var classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService 
 [
     [ "LabelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a8a54fc92d6e1269db6f36d0f3790d94b", null ],
     [ "LabelService", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a08026763f1b201dc6172b3f0d51c7be2", null ],
-    [ "Add", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a827a75ca62f2c6c2173e922fec77cf81", null ],
-    [ "GetAll", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a4033fad07858843bde18f6e9fd63b3b8", null ],
-    [ "GetById", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#ab872821c87a30d86966f717606d139c4", null ],
-    [ "Remove", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a221c29b77985940b8beda2dea14a892d", null ],
-    [ "Update", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a09dab4d345407e734beda1f60147c967", null ],
+    [ "Add", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a51219de29974fa04f3dd94dba296779b", null ],
+    [ "GetAll", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a09c757200352e02bc6c173f597eb1469", null ],
+    [ "GetById", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#afe07aa24b202dfeac56ba0ace2941e14", null ],
+    [ "Remove", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#afc78ed82b887bf5b4d80ab3bf5808427", null ],
+    [ "Update", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a404d636c57c31fe160dc33dd0a0ef11a", null ],
     [ "_cacheKey", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#a51fdb626734b6bf90534055f06d7c0fe", null ],
     [ "cacheService", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#aba253ad3bb30f889f856180a25fdcf0e", null ],
     [ "labelRepository", "classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#af43cd74dab0b44b5d0b74ead769dfdeb", null ]

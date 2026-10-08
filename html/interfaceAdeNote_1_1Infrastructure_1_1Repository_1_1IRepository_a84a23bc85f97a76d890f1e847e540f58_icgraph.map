@@ -1,0 +1,27 @@
+<map id="AdeNote.Infrastructure.Repository.IRepository.Remove" name="AdeNote.Infrastructure.Repository.IRepository.Remove">
+<area shape="rect" id="Node000001" title="Remove an existing object." alt="" coords="419,373,665,413"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1TicketSettings_1_1TicketService.html#a4100cb351c9d9ad2e2a16da9e9ad1fb7" title=" " alt="" coords="43,5,333,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="532,360,514,295,483,213,461,170,435,129,405,91,369,60,332,40,335,35,372,55,409,88,440,126,466,167,488,210,519,293,537,359"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#ac2a21717774cacaa37b802400934b706" title=" " alt="" coords="57,70,319,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="526,362,504,312,470,251,425,190,399,163,369,140,345,126,319,116,321,111,347,121,372,135,402,159,429,187,475,248,509,309,531,360"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveBook_1_1RemoveBookRequestHandler.html#a0b0e5eafbb36881b04cc1b703f101127" title=" " alt="" coords="11,149,365,189"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="520,363,494,325,460,281,418,238,369,204,344,192,346,187,372,199,421,234,464,278,499,322,524,360"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveLabel_1_1RemoveRequestHandler.html#a5a2d8c82c79d03bb1b2cc94f9fa6d99c" title=" " alt="" coords="27,213,349,253"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="509,366,448,314,410,289,370,268,337,256,338,251,372,263,413,284,451,310,512,362"/>
+<area shape="rect" id="Node000006" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemovePage_1_1RemovePageRequestHandler.html#a8ea0d167fda9182a427fe1517f04ca2a" title=" " alt="" coords="13,277,363,317"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="481,371,428,350,370,332,319,320,320,315,371,327,429,345,483,366"/>
+<area shape="rect" id="Node000007" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveTicket_1_1RemoveTicketRequestHandler.html#a220f8af880f59b6005e26801435e841b" title=" " alt="" coords="5,341,371,381"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="405,384,371,381,372,375,405,378"/>
+<area shape="rect" id="Node000008" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a481b1587c1cc0eacf2b4e0e4502ccfe5" title=" " alt="" coords="54,405,322,445"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="405,408,322,416,322,411,404,403"/>
+<area shape="rect" id="Node000009" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#ae99ef2cd65793c22ef4a5c7a1fe11079" title=" " alt="" coords="54,470,322,525"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="481,421,371,460,323,473,321,468,370,455,479,416"/>
+<area shape="rect" id="Node000010" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1BookSetting_1_1BookService.html#a035be3ad66993281a14d354d9bca22cf" title="Deletes an existing book." alt="" coords="66,549,310,589"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="516,426,454,484,415,514,372,538,311,559,309,554,370,534,412,509,451,480,512,422"/>
+<area shape="rect" id="Node000011" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#ab47a0e808d2a9a51f5f3b574f544a16e" title="Removes a particular page." alt="" coords="65,613,311,653"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="526,427,502,468,467,517,424,564,372,604,343,617,312,627,311,621,341,612,369,599,420,560,463,513,497,465,522,424"/>
+<area shape="rect" id="Node000012" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#afc78ed82b887bf5b4d80ab3bf5808427" title="Removes an existing label." alt="" coords="61,677,315,717"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="533,427,511,481,478,547,432,613,404,642,372,668,345,682,316,692,315,687,343,677,369,663,400,638,428,610,473,544,507,479,528,425"/>
+<area shape="rect" id="Node000013" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1AuthService.html#a593efac9d5974e31295722dcffe4af3d" title=" " alt="" coords="6,741,370,781"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="537,428,519,493,488,576,466,619,440,661,409,699,372,731,353,743,350,739,369,727,405,695,435,658,461,617,483,574,514,492,532,426"/>
+</map>

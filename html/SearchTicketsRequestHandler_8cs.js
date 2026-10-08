@@ -1,0 +1,4 @@
+var SearchTicketsRequestHandler_8cs =
+[
+    [ "AdeNote.Infrastructure.Requests.SearchTickets.SearchTicketsRequestHandler", "classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTickets_1_1SearchTicketsRequestHandler.html", "classAdeNote_1_1Infrastructure_1_1Requests_1_1SearchTickets_1_1SearchTicketsRequestHandler" ]
+];

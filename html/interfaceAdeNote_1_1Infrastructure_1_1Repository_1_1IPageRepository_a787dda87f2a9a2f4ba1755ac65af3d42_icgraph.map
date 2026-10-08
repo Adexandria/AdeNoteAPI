@@ -1,0 +1,7 @@
+<map id="AdeNote.Infrastructure.Repository.IPageRepository.Update" name="AdeNote.Infrastructure.Repository.IPageRepository.Update">
+<area shape="rect" id="Node000001" title=" " alt="" coords="388,37,635,77"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1UpdatePage_1_1UpdatePageRequestHandler.html#a2d2dc215a481a051197a81a58da5bcc2" title=" " alt="" coords="5,5,340,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="374,47,340,44,341,39,375,42"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1PageSettings_1_1PageService.html#a99010050f4475ca8197f0a67389dc006" title="Updates an existing page." alt="" coords="53,69,293,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="374,73,293,81,293,75,374,68"/>
+</map>

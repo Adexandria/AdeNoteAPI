@@ -1,0 +1,11 @@
+<map id="AdeNote.Infrastructure.Repository.ILabelRepository.GetNoTrackingAsync" name="AdeNote.Infrastructure.Repository.ILabelRepository.GetNoTrackingAsync">
+<area shape="rect" id="Node000001" title="Get a particular label with no tracking." alt="" coords="407,101,673,141"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#afe07aa24b202dfeac56ba0ace2941e14" title="Gets a particular label by id." alt="" coords="55,5,309,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="475,99,358,60,307,48,308,43,359,55,477,94"/>
+<area shape="rect" id="Node000003" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1GetLabelById_1_1GetLabelByIdRequestHandler.html#a30bfbf7a218634f9def77a646c0192c9" title=" " alt="" coords="5,69,359,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="393,111,359,108,359,103,393,106"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Requests_1_1RemoveLabel_1_1RemoveRequestHandler.html#a5a2d8c82c79d03bb1b2cc94f9fa6d99c" title=" " alt="" coords="21,133,343,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="393,137,344,142,343,136,393,132"/>
+<area shape="rect" id="Node000005" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1LabelSettings_1_1LabelService.html#afc78ed82b887bf5b4d80ab3bf5808427" title="Removes an existing label." alt="" coords="55,197,309,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="477,149,359,188,308,200,307,195,358,183,475,144"/>
+</map>

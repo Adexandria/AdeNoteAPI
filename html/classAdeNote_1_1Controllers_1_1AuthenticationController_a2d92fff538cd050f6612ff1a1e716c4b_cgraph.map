@@ -1,0 +1,17 @@
+<map id="AdeNote.Controllers.AuthenticationController.VerifySmsOTP" name="AdeNote.Controllers.AuthenticationController.VerifySmsOTP">
+<area shape="rect" id="Node000001" title="Verifies sms code." alt="" coords="5,235,257,275"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#aaf76f4e77c5e74af2928f3296f7828ed" title="Add data to cookie." alt="" coords="333,5,585,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,233,166,195,203,146,249,96,304,55,319,47,321,52,307,60,253,100,207,149,171,198,146,236"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a46a0b36bf55eef31bdbac51acf7d76a6" title=" " alt="" coords="325,70,592,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,232,219,183,261,156,304,134,320,127,322,132,306,138,263,161,222,187,158,237"/>
+<area shape="rect" id="Node000004" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#ae344d9491ec91504dd03947fb2a5d6cc" title="Checks if MFA has been enabled for the user using user id." alt="" coords="305,149,612,203"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="215,232,330,204,332,209,216,237"/>
+<area shape="rect" id="Node000005" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a954bb36d128c5d8e63f59e391bbaa0e3" title="Checks if a phone number has been verified." alt="" coords="329,227,588,282"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="258,252,315,252,315,257,258,257"/>
+<area shape="rect" id="Node000006" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a8c2a135a691058426e9773dfff17d725" title="Reads the user details from the token." alt="" coords="315,306,602,361"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="216,272,332,300,330,305,215,277"/>
+<area shape="rect" id="Node000007" href="$classAdeNote_1_1Controllers_1_1AuthenticationController.html#a5bc24a38f2a0d984148fd747b4d5c226" title=" " alt="" coords="333,385,585,425"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="158,273,222,322,263,348,306,370,331,379,329,384,304,374,261,352,219,326,154,277"/>
+<area shape="rect" id="Node000008" href="$interfaceAdeNote_1_1Infrastructure_1_1Services_1_1Authentication_1_1IAuthService.html#a10e754e707c9b16719c82a932f3a85e8" title="Verifies authenticator otp." alt="" coords="337,450,581,505"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="148,274,174,309,210,353,255,397,307,435,325,445,323,449,304,440,252,401,207,356,170,312,144,277"/>
+</map>

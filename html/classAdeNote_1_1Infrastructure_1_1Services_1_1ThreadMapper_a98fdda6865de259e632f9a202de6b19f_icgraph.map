@@ -1,4 +1,5 @@
 <map id="AdeNote.Infrastructure.Services.ThreadMapper.MapToTweet" name="AdeNote.Infrastructure.Services.ThreadMapper.MapToTweet">
-<area shape="rect" id="node1" title=" " alt="" coords="348,5,581,47"/>
-<area shape="rect" id="node2" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a633e9191a1daf94fd443bb428c1d16ed" title=" " alt="" coords="5,5,300,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="348,5,581,45"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Services_1_1ChatService_1_1ChatService.html#a63455fd393f4f07bd35f58b638bf25b9" title=" " alt="" coords="5,5,300,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="334,28,300,28,300,23,334,23"/>
 </map>

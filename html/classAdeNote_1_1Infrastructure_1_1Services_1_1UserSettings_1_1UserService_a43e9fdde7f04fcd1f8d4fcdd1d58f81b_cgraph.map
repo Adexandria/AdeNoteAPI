@@ -1,0 +1,9 @@
+<map id="AdeNote.Infrastructure.Services.UserSettings.UserService.IsUserExist" name="AdeNote.Infrastructure.Services.UserSettings.UserService.IsUserExist">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,269,109"/>
+<area shape="rect" id="Node000002" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a49d406208f4ea4b59d39557916de811e" title=" " alt="" coords="326,5,555,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,67,332,46,333,51,234,72"/>
+<area shape="rect" id="Node000003" href="$interfaceAdeNote_1_1Infrastructure_1_1Repository_1_1IUserRepository.html#a8325a5a7a398ece0bf109379613d9bd4" title=" " alt="" coords="317,69,564,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="270,87,304,87,304,92,270,92"/>
+<area shape="rect" id="Node000004" href="$classAdeNote_1_1Infrastructure_1_1Utilities_1_1ActionResult.html#a59f2725a1c1adda587f46ffb5fd26238" title=" " alt="" coords="320,133,561,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="234,107,333,128,332,133,232,112"/>
+</map>
